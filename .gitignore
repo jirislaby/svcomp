@@ -1,0 +1,7 @@
+*.ll
+*.llvm
+*.o
+*.prepared
+*.swp
+klee-*/
+klee-last
