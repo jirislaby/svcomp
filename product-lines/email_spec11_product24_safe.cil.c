@@ -3563,7 +3563,7 @@ int prompt(char *msg )
 #line 1 "DecryptAutoResponder_spec.o"
 #pragma merger(0,"DecryptAutoResponder_spec.i","")
 #line 11 "DecryptAutoResponder_spec.c"
-__inline void __utac_acc__DecryptAutoResponder_spec__1(int client , int msg ) 
+ void __utac_acc__DecryptAutoResponder_spec__1(int client , int msg ) 
 { int tmp ;
 
   {

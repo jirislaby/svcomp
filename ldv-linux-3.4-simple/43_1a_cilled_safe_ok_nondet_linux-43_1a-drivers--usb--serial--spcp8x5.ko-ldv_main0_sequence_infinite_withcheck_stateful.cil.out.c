@@ -4198,7 +4198,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -4222,7 +4222,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void) 
+ static struct task_struct *get_current(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -4287,7 +4287,7 @@ __inline static struct task_struct *get_current(void)
 }
 }
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4316,7 +4316,7 @@ extern void __raw_spin_lock_init(raw_spinlock_t * , char const   * , struct lock
 #line 43 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -4325,7 +4325,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 350 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
+ static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -4340,7 +4340,7 @@ __inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned lo
 }
 }
 #line 350
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 79 "include/linux/wait.h"
 extern void __init_waitqueue_head(wait_queue_head_t * , char const   * , struct lock_class_key * ) ;
 #line 155
@@ -4356,7 +4356,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -4369,9 +4369,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1832/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/spcp8x5.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -4405,7 +4405,7 @@ extern int tty_insert_flip_string_flags(struct tty_struct * , unsigned char cons
 extern int tty_insert_flip_string_fixed_flag(struct tty_struct * , unsigned char const   * ,
                                              char  , size_t  ) ;
 #line 11 "include/linux/tty_flip.h"
-__inline static int tty_insert_flip_char(struct tty_struct *tty , unsigned char ch ,
+ static int tty_insert_flip_char(struct tty_struct *tty , unsigned char ch ,
                                          char flag ) 
 { struct tty_buffer *tb ;
   int tmp ;
@@ -4561,7 +4561,7 @@ __inline static int tty_insert_flip_char(struct tty_struct *tty , unsigned char 
 }
 }
 #line 2563 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4586,7 +4586,7 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2589 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp ;
   long tmp___0 ;
   int __cil_tmp4 ;
@@ -4613,7 +4613,7 @@ extern int usb_control_msg(struct usb_device * , unsigned int  , __u8  , __u8  ,
 #line 1461
 extern int usb_clear_halt(struct usb_device * , int  ) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -4635,7 +4635,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 124 "include/linux/usb/serial.h"
-__inline static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
+ static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4660,7 +4660,7 @@ __inline static void *usb_get_serial_port_data(struct usb_serial_port *port )
 }
 }
 #line 129 "include/linux/usb/serial.h"
-__inline static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
+ static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -8480,7 +8480,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 2756 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1832/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/spcp8x5.c.p"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {
@@ -8495,7 +8495,7 @@ __inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long fla
 }
 }
 #line 2802 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1832/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/spcp8x5.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -8525,7 +8525,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 2858 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1832/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/spcp8x5.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

@@ -5025,7 +5025,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void) 
+ static struct task_struct *get_current(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -5098,7 +5098,7 @@ extern void warn_slowpath_fmt(char    * , int     , char const   *  , ...) ;
 #line 70
 extern void warn_slowpath_null(char    * , int     ) ;
 #line 861 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt.h"
-__inline static unsigned long arch_local_save_flags(void) 
+ static unsigned long arch_local_save_flags(void) 
 { unsigned long __ret ;
   unsigned long __edi ;
   unsigned long __esi ;
@@ -5162,7 +5162,7 @@ __inline static unsigned long arch_local_save_flags(void)
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void    *ptr ) 
+ static long IS_ERR(void    *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -5184,7 +5184,7 @@ __inline static long IS_ERR(void    *ptr )
 }
 }
 #line 155 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/irqflags.h"
-__inline static int arch_irqs_disabled_flags(unsigned long flags ) 
+ static int arch_irqs_disabled_flags(unsigned long flags ) 
 { unsigned long __cil_tmp2 ;
 
   {
@@ -5211,7 +5211,7 @@ extern void _raw_spin_unlock_irq(raw_spinlock_t * ) ;
 #line 43
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -5220,7 +5220,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 283 "include/linux/spinlock.h"
-__inline static void ldv_spin_lock_1(spinlock_t *lock ) 
+ static void ldv_spin_lock_1(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -5235,9 +5235,9 @@ __inline static void ldv_spin_lock_1(spinlock_t *lock )
 }
 }
 #line 283
-__inline static void spin_lock(spinlock_t *lock ) ;
+ static void spin_lock(spinlock_t *lock ) ;
 #line 308 "include/linux/spinlock.h"
-__inline static void ldv_spin_lock_irq_4(spinlock_t *lock ) 
+ static void ldv_spin_lock_irq_4(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -5252,9 +5252,9 @@ __inline static void ldv_spin_lock_irq_4(spinlock_t *lock )
 }
 }
 #line 308
-__inline static void spin_lock_irq(spinlock_t *lock ) ;
+ static void spin_lock_irq(spinlock_t *lock ) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_5(spinlock_t *lock ) 
+ static void ldv_spin_unlock_5(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -5269,9 +5269,9 @@ __inline static void ldv_spin_unlock_5(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock ) ;
+ static void spin_unlock(spinlock_t *lock ) ;
 #line 341 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_irq_7(spinlock_t *lock ) 
+ static void ldv_spin_unlock_irq_7(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -5286,9 +5286,9 @@ __inline static void ldv_spin_unlock_irq_7(spinlock_t *lock )
 }
 }
 #line 341
-__inline static void spin_unlock_irq(spinlock_t *lock ) ;
+ static void spin_unlock_irq(spinlock_t *lock ) ;
 #line 350 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
+ static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -5303,7 +5303,7 @@ __inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned lo
 }
 }
 #line 350
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 29 "include/linux/wait.h"
 extern int default_wake_function(wait_queue_t * , unsigned int  , int  , void * ) ;
 #line 79
@@ -5321,7 +5321,7 @@ extern void mutex_unlock(struct mutex * ) ;
 #line 82 "include/linux/jiffies.h"
 extern unsigned long volatile   jiffies ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void  volatile   *addr ) 
+ static unsigned char readb(void  volatile   *addr ) 
 { unsigned char ret ;
   unsigned char volatile   *__cil_tmp3 ;
 
@@ -5335,7 +5335,7 @@ __inline static unsigned char readb(void  volatile   *addr )
 }
 }
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned int readl(void  volatile   *addr ) 
+ static unsigned int readl(void  volatile   *addr ) 
 { unsigned int ret ;
   unsigned int volatile   *__cil_tmp3 ;
 
@@ -5349,7 +5349,7 @@ __inline static unsigned int readl(void  volatile   *addr )
 }
 }
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writel(unsigned int val , void volatile   *addr ) 
+ static void writel(unsigned int val , void volatile   *addr ) 
 { unsigned int volatile   *__cil_tmp3 ;
 
   {
@@ -5362,7 +5362,7 @@ __inline static void writel(unsigned int val , void volatile   *addr )
 }
 }
 #line 129 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *phys_to_virt(phys_addr_t address ) 
+ static void *phys_to_virt(phys_addr_t address ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -5380,7 +5380,7 @@ __inline static void *phys_to_virt(phys_addr_t address )
 #line 174
 extern void *ioremap_nocache(resource_size_t  , unsigned long  ) ;
 #line 182 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *ioremap(resource_size_t offset , unsigned long size ) 
+ static void *ioremap(resource_size_t offset , unsigned long size ) 
 { void *tmp ;
 
   {
@@ -5395,7 +5395,7 @@ __inline static void *ioremap(resource_size_t offset , unsigned long size )
 #line 187
 extern void iounmap(void volatile   * ) ;
 #line 209 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memcpy_fromio(void *dst , void  volatile   *src , size_t count ) 
+ static void memcpy_fromio(void *dst , void  volatile   *src , size_t count ) 
 { size_t __len ;
   void *__ret ;
   void    *__cil_tmp6 ;
@@ -5414,7 +5414,7 @@ __inline static void memcpy_fromio(void *dst , void  volatile   *src , size_t co
 }
 }
 #line 215 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memcpy_toio(void volatile   *dst , void    *src , size_t count ) 
+ static void memcpy_toio(void volatile   *dst , void    *src , size_t count ) 
 { size_t __len ;
   void *__ret ;
   void *__cil_tmp6 ;
@@ -5443,7 +5443,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -5456,9 +5456,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3986/dscv_tempdir/dscv/ri/43_1a/drivers/scsi/dpt_i2o.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -5472,7 +5472,7 @@ extern unsigned long _copy_to_user(void * , void    * , unsigned int  ) ;
 #line 42
 extern unsigned long _copy_from_user(void * , void    * , unsigned int  ) ;
 #line 46 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long copy_from_user(void *to , void    *from , unsigned long n ) 
+ static unsigned long copy_from_user(void *to , void    *from , unsigned long n ) 
 { int sz ;
   unsigned long tmp ;
   int __ret_warn_on ;
@@ -5578,7 +5578,7 @@ __inline static unsigned long copy_from_user(void *to , void    *from , unsigned
 }
 }
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void    *src , unsigned int size ) 
+ static int copy_to_user(void *dst , void    *src , unsigned int size ) 
 { unsigned long tmp ;
 
   {
@@ -5618,7 +5618,7 @@ extern void pci_release_regions(struct pci_dev * ) ;
 #line 204 "include/linux/scatterlist.h"
 extern struct scatterlist *sg_next(struct scatterlist * ) ;
 #line 67 "include/linux/dma-mapping.h"
-__inline static int is_device_dma_capable(struct device *dev ) 
+ static int is_device_dma_capable(struct device *dev ) 
 { int tmp ;
   u64 *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5683,7 +5683,7 @@ extern struct device x86_dma_fallback_dev ;
 #line 29
 extern struct dma_map_ops *dma_ops ;
 #line 31 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/dma-mapping.h"
-__inline static struct dma_map_ops *get_dma_ops(struct device *dev ) 
+ static struct dma_map_ops *get_dma_ops(struct device *dev ) 
 { long tmp ;
   struct device *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5761,7 +5761,7 @@ extern int dma_supported(struct device * , u64  ) ;
 #line 59
 extern int dma_set_mask(struct device * , u64  ) ;
 #line 90 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/dma-mapping.h"
-__inline static unsigned long dma_alloc_coherent_mask(struct device *dev , gfp_t gfp ) 
+ static unsigned long dma_alloc_coherent_mask(struct device *dev , gfp_t gfp ) 
 { unsigned long dma_mask ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -5801,7 +5801,7 @@ __inline static unsigned long dma_alloc_coherent_mask(struct device *dev , gfp_t
 }
 }
 #line 102 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/dma-mapping.h"
-__inline static gfp_t dma_alloc_coherent_gfp_flags(struct device *dev , gfp_t gfp ) 
+ static gfp_t dma_alloc_coherent_gfp_flags(struct device *dev , gfp_t gfp ) 
 { unsigned long dma_mask ;
   unsigned long tmp ;
   unsigned long long __cil_tmp5 ;
@@ -5851,7 +5851,7 @@ __inline static gfp_t dma_alloc_coherent_gfp_flags(struct device *dev , gfp_t gf
 }
 }
 #line 118 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/dma-mapping.h"
-__inline static void *dma_alloc_attrs(struct device *dev , size_t size , dma_addr_t *dma_handle ,
+ static void *dma_alloc_attrs(struct device *dev , size_t size , dma_addr_t *dma_handle ,
                                       gfp_t gfp , struct dma_attrs *attrs ) 
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
@@ -5939,7 +5939,7 @@ __inline static void *dma_alloc_attrs(struct device *dev , size_t size , dma_add
 }
 }
 #line 147 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/dma-mapping.h"
-__inline static void dma_free_attrs(struct device *dev , size_t size , void *vaddr ,
+ static void dma_free_attrs(struct device *dev , size_t size , void *vaddr ,
                                     dma_addr_t bus , struct dma_attrs *attrs ) 
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
@@ -6038,7 +6038,7 @@ __inline static void dma_free_attrs(struct device *dev , size_t size , void *vad
 }
 }
 #line 88 "include/linux/dma-mapping.h"
-__inline static int dma_set_coherent_mask(struct device *dev , u64 mask ) 
+ static int dma_set_coherent_mask(struct device *dev , u64 mask ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -6068,7 +6068,7 @@ __inline static int dma_set_coherent_mask(struct device *dev , u64 mask )
 #line 97
 extern u64 dma_get_required_mask(struct device * ) ;
 #line 105 "include/asm-generic/pci-dma-compat.h"
-__inline static int pci_set_dma_mask(struct pci_dev *dev , u64 mask ) 
+ static int pci_set_dma_mask(struct pci_dev *dev , u64 mask ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -6090,7 +6090,7 @@ __inline static int pci_set_dma_mask(struct pci_dev *dev , u64 mask )
 }
 }
 #line 110 "include/asm-generic/pci-dma-compat.h"
-__inline static int pci_set_consistent_dma_mask(struct pci_dev *dev , u64 mask ) 
+ static int pci_set_consistent_dma_mask(struct pci_dev *dev , u64 mask ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -6112,7 +6112,7 @@ __inline static int pci_set_consistent_dma_mask(struct pci_dev *dev , u64 mask )
 }
 }
 #line 930 "include/linux/fs.h"
-__inline static unsigned int iminor(struct inode    *inode ) 
+ static unsigned int iminor(struct inode    *inode ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   dev_t    __cil_tmp4 ;
@@ -6139,7 +6139,7 @@ extern int __register_chrdev(unsigned int  , unsigned int  , unsigned int  , cha
 #line 2119
 extern void __unregister_chrdev(unsigned int  , unsigned int  , unsigned int  , char    * ) ;
 #line 2124 "include/linux/fs.h"
-__inline static int register_chrdev(unsigned int major , char    *name , struct file_operations    *fops ) 
+ static int register_chrdev(unsigned int major , char    *name , struct file_operations    *fops ) 
 { int tmp ;
 
   {
@@ -6152,7 +6152,7 @@ __inline static int register_chrdev(unsigned int major , char    *name , struct 
 }
 }
 #line 2130 "include/linux/fs.h"
-__inline static void unregister_chrdev(unsigned int major , char    *name ) 
+ static void unregister_chrdev(unsigned int major , char    *name ) 
 { 
 
   {
@@ -6177,7 +6177,7 @@ extern int request_threaded_irq(unsigned int  , irqreturn_t (*)(int  , void * ) 
                                 irqreturn_t (*)(int  , void * ) , unsigned long  ,
                                 char    * , void * ) ;
 #line 132 "include/linux/interrupt.h"
-__inline static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
+ static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
                                 unsigned long flags , char    *name , void *dev ) 
 { int tmp ;
   irqreturn_t (*__cil_tmp7)(int  , void * ) ;
@@ -6200,7 +6200,7 @@ extern int scsi_dma_map(struct scsi_cmnd * ) ;
 #line 158
 extern void scsi_dma_unmap(struct scsi_cmnd * ) ;
 #line 168 "include/scsi/scsi_cmnd.h"
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -6216,7 +6216,7 @@ __inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )
 }
 }
 #line 173 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6235,7 +6235,7 @@ __inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )
 }
 }
 #line 178 "include/scsi/scsi_cmnd.h"
-__inline static void scsi_set_resid(struct scsi_cmnd *cmd , int resid ) 
+ static void scsi_set_resid(struct scsi_cmnd *cmd , int resid ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -6262,7 +6262,7 @@ extern void scsi_adjust_queue_depth(struct scsi_device * , int  , int  ) ;
 #line 360
 extern int scsi_device_set_state(struct scsi_device * , enum scsi_device_state  ) ;
 #line 420 "include/scsi/scsi_device.h"
-__inline static int scsi_device_online(struct scsi_device *sdev ) 
+ static int scsi_device_online(struct scsi_device *sdev ) 
 { int tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6323,7 +6323,7 @@ extern void scsi_remove_host(struct Scsi_Host * ) ;
 #line 789
 extern void scsi_cmd_get_serial(struct Scsi_Host * , struct scsi_cmnd * ) ;
 #line 793 "include/scsi/scsi_host.h"
-__inline static int scsi_add_host(struct Scsi_Host *host , struct device *dev ) 
+ static int scsi_add_host(struct Scsi_Host *host , struct device *dev ) 
 { int tmp ;
 
   {
@@ -6530,7 +6530,7 @@ static spinlock_t adpt_post_wait_lock  =    {{{{{0U}}, 3735899821U, 4294967295U,
                                                                        "adpt_post_wait_lock",
                                                                        0, 0UL}}}};
 #line 168 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3986/dscv_tempdir/dscv/ri/43_1a/drivers/scsi/dpt_i2o.c.p"
-__inline static int dpt_dma64(adpt_hba *pHba ) 
+ static int dpt_dma64(adpt_hba *pHba ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   u8 __cil_tmp4 ;
@@ -6552,7 +6552,7 @@ __inline static int dpt_dma64(adpt_hba *pHba )
 }
 }
 #line 173 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3986/dscv_tempdir/dscv/ri/43_1a/drivers/scsi/dpt_i2o.c.p"
-__inline static u32 dma_high(dma_addr_t addr ) 
+ static u32 dma_high(dma_addr_t addr ) 
 { dma_addr_t __cil_tmp2 ;
 
   {
@@ -6565,7 +6565,7 @@ __inline static u32 dma_high(dma_addr_t addr )
 }
 }
 #line 178 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3986/dscv_tempdir/dscv/ri/43_1a/drivers/scsi/dpt_i2o.c.p"
-__inline static u32 dma_low(dma_addr_t addr ) 
+ static u32 dma_low(dma_addr_t addr ) 
 { 
 
   {
@@ -28161,7 +28161,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 5607 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3986/dscv_tempdir/dscv/ri/43_1a/drivers/scsi/dpt_i2o.c.p"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { 
 
   {
@@ -28176,7 +28176,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 5639 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3986/dscv_tempdir/dscv/ri/43_1a/drivers/scsi/dpt_i2o.c.p"
-__inline static void spin_lock_irq(spinlock_t *lock ) 
+ static void spin_lock_irq(spinlock_t *lock ) 
 { 
 
   {
@@ -28191,7 +28191,7 @@ __inline static void spin_lock_irq(spinlock_t *lock )
 }
 }
 #line 5649 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3986/dscv_tempdir/dscv/ri/43_1a/drivers/scsi/dpt_i2o.c.p"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { 
 
   {
@@ -28206,7 +28206,7 @@ __inline static void spin_unlock(spinlock_t *lock )
 }
 }
 #line 5669 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3986/dscv_tempdir/dscv/ri/43_1a/drivers/scsi/dpt_i2o.c.p"
-__inline static void spin_unlock_irq(spinlock_t *lock ) 
+ static void spin_unlock_irq(spinlock_t *lock ) 
 { 
 
   {
@@ -28221,7 +28221,7 @@ __inline static void spin_unlock_irq(spinlock_t *lock )
 }
 }
 #line 5679 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3986/dscv_tempdir/dscv/ri/43_1a/drivers/scsi/dpt_i2o.c.p"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {
@@ -28236,7 +28236,7 @@ __inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long fla
 }
 }
 #line 5725 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3986/dscv_tempdir/dscv/ri/43_1a/drivers/scsi/dpt_i2o.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -28266,7 +28266,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 5781 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3986/dscv_tempdir/dscv/ri/43_1a/drivers/scsi/dpt_i2o.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

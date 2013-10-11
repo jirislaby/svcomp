@@ -1153,7 +1153,7 @@ extern void _raw_spin_lock(raw_spinlock_t * ) ;
 #line 39
 extern void _raw_spin_unlock(raw_spinlock_t * ) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void ldv_spin_lock_1(spinlock_t *lock ) 
+ static void ldv_spin_lock_1(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -1168,9 +1168,9 @@ __inline static void ldv_spin_lock_1(spinlock_t *lock )
 }
 }
 #line 283
-__inline static void spin_lock(spinlock_t *lock ) ;
+ static void spin_lock(spinlock_t *lock ) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_5(spinlock_t *lock ) 
+ static void ldv_spin_unlock_5(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -1185,7 +1185,7 @@ __inline static void ldv_spin_unlock_5(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock ) ;
+ static void spin_unlock(spinlock_t *lock ) ;
 #line 137 "include/linux/ioport.h"
 extern struct resource ioport_resource ;
 #line 181
@@ -1194,7 +1194,7 @@ extern struct resource *__request_region(struct resource * , resource_size_t  , 
 #line 192
 extern void __release_region(struct resource * , resource_size_t  , resource_size_t  ) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr ) 
+ static unsigned char readb(void const volatile   *addr ) 
 { unsigned char ret ;
   unsigned char volatile   *__cil_tmp3 ;
 
@@ -1208,7 +1208,7 @@ __inline static unsigned char readb(void const volatile   *addr )
 }
 }
 #line 61 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writeb(unsigned char val , void volatile   *addr ) 
+ static void writeb(unsigned char val , void volatile   *addr ) 
 { unsigned char volatile   *__cil_tmp3 ;
 
   {
@@ -1223,7 +1223,7 @@ __inline static void writeb(unsigned char val , void volatile   *addr )
 #line 174
 extern void *ioremap_nocache(resource_size_t  , unsigned long  ) ;
 #line 182 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *ioremap(resource_size_t offset , unsigned long size ) 
+ static void *ioremap(resource_size_t offset , unsigned long size ) 
 { void *tmp ;
 
   {
@@ -1238,7 +1238,7 @@ __inline static void *ioremap(resource_size_t offset , unsigned long size )
 #line 187
 extern void iounmap(void volatile   * ) ;
 #line 209 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memcpy_fromio(void *dst , void const volatile   *src , size_t count ) 
+ static void memcpy_fromio(void *dst , void const volatile   *src , size_t count ) 
 { size_t __len ;
   void *__ret ;
   void const   *__cil_tmp6 ;
@@ -1257,7 +1257,7 @@ __inline static void memcpy_fromio(void *dst , void const volatile   *src , size
 }
 }
 #line 215 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memcpy_toio(void volatile   *dst , void const   *src , size_t count ) 
+ static void memcpy_toio(void volatile   *dst , void const   *src , size_t count ) 
 { size_t __len ;
   void *__ret ;
   void *__cil_tmp6 ;
@@ -1276,7 +1276,7 @@ __inline static void memcpy_toio(void volatile   *dst , void const   *src , size
 }
 }
 #line 309 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outw(unsigned short value , int port ) 
+ static void outw(unsigned short value , int port ) 
 { 
 
   {
@@ -1323,7 +1323,7 @@ static struct mtd_partition partition_info[3U]  = {      {(char *)"SBC-GXx flash
       1310720ULL, 786432ULL, 0U, (struct nand_ecclayout *)0}, 
         {(char *)"SBC-GXx flash application partition", 0ULL, 2097152ULL, 0U, (struct nand_ecclayout *)0}};
 #line 118 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11644/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/maps/sbc_gxx.c.p"
-__inline static void sbc_gxx_page(struct map_info *map , unsigned long ofs ) 
+ static void sbc_gxx_page(struct map_info *map , unsigned long ofs ) 
 { unsigned long page ;
   unsigned long __cil_tmp4 ;
   unsigned short __cil_tmp5 ;
@@ -2059,7 +2059,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 648 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11644/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/maps/sbc_gxx.c.p"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { 
 
   {
@@ -2074,7 +2074,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 690 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11644/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/maps/sbc_gxx.c.p"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { 
 
   {

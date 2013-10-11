@@ -3069,7 +3069,7 @@ extern int printk(char const   *  , ...) ;
 #line 320 "include/linux/kernel.h"
 extern int sprintf(char * , char const   *  , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -3122,7 +3122,7 @@ struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 2403 "include/linux/fs.h"
 extern loff_t generic_file_llseek(struct file * , loff_t  , int  ) ;
 #line 2634 "include/linux/fs.h"
-__inline static void __simple_attr_check_format(char const   *fmt  , ...) 
+ static void __simple_attr_check_format(char const   *fmt  , ...) 
 { 
 
   {
@@ -3181,7 +3181,7 @@ extern acpi_status acpi_get_table(acpi_string  , u32  , struct acpi_table_header
 extern void apei_exec_ctx_init(struct apei_exec_context * , struct apei_exec_ins_type * ,
                                u32  , struct acpi_whea_header * , u32  ) ;
 #line 42 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/acpi/apei/apei-internal.h"
-__inline static void apei_exec_ctx_set_input(struct apei_exec_context *ctx , u64 input ) 
+ static void apei_exec_ctx_set_input(struct apei_exec_context *ctx , u64 input ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
 
@@ -3197,7 +3197,7 @@ __inline static void apei_exec_ctx_set_input(struct apei_exec_context *ctx , u64
 }
 }
 #line 48 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/acpi/apei/apei-internal.h"
-__inline static u64 apei_exec_ctx_get_output(struct apei_exec_context *ctx ) 
+ static u64 apei_exec_ctx_get_output(struct apei_exec_context *ctx ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -3215,7 +3215,7 @@ __inline static u64 apei_exec_ctx_get_output(struct apei_exec_context *ctx )
 #line 53
 extern int __apei_exec_run(struct apei_exec_context * , u8  , bool  ) ;
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/acpi/apei/apei-internal.h"
-__inline static int apei_exec_run(struct apei_exec_context *ctx , u8 action ) 
+ static int apei_exec_run(struct apei_exec_context *ctx , u8 action ) 
 { int tmp ;
   int __cil_tmp4 ;
   u8 __cil_tmp5 ;
@@ -3237,7 +3237,7 @@ __inline static int apei_exec_run(struct apei_exec_context *ctx , u8 action )
 }
 }
 #line 61 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/acpi/apei/apei-internal.h"
-__inline static int apei_exec_run_optional(struct apei_exec_context *ctx , u8 action ) 
+ static int apei_exec_run_optional(struct apei_exec_context *ctx , u8 action ) 
 { int tmp ;
   int __cil_tmp4 ;
   u8 __cil_tmp5 ;
@@ -3273,7 +3273,7 @@ extern int apei_exec_pre_map_gars(struct apei_exec_context * ) ;
 #line 87
 extern int apei_exec_post_unmap_gars(struct apei_exec_context * ) ;
 #line 94 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/acpi/apei/apei-internal.h"
-__inline static void apei_resources_init(struct apei_resources *resources ) 
+ static void apei_resources_init(struct apei_resources *resources ) 
 { struct list_head *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;

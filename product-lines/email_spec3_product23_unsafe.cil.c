@@ -2225,7 +2225,7 @@ int isKeyPairValid(int publicKey , int privateKey ) ;
 #line 9 "SignVerify_spec.c"
 int sent_signed  =    -1;
 #line 13 "SignVerify_spec.c"
-__inline void __utac_acc__SignVerify_spec__1(int msg ) 
+ void __utac_acc__SignVerify_spec__1(int msg ) 
 { char const   * __restrict  __cil_tmp2 ;
 
   {
@@ -2244,7 +2244,7 @@ __inline void __utac_acc__SignVerify_spec__1(int msg )
 }
 }
 #line 21 "SignVerify_spec.c"
-__inline void __utac_acc__SignVerify_spec__2(int client , int msg ) 
+ void __utac_acc__SignVerify_spec__2(int client , int msg ) 
 { int pubkey ;
   int tmp ;
   int tmp___0 ;

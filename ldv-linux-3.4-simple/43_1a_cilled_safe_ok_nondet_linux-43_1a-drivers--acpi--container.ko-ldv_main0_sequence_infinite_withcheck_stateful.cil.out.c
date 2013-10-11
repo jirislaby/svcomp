@@ -3593,7 +3593,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4603/dscv_tempdir/dscv/ri/43_1a/drivers/acpi/container.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -3631,7 +3631,7 @@ extern void acpi_debug_print(u32  , u32  , char const   * , char const   * , u32
 extern acpi_status acpi_evaluate_integer(acpi_handle  , acpi_string  , struct acpi_object_list * ,
                                          unsigned long long * ) ;
 #line 279 "include/acpi/acpi_bus.h"
-__inline static void *acpi_driver_data(struct acpi_device *d ) 
+ static void *acpi_driver_data(struct acpi_device *d ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -4735,7 +4735,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 729 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4603/dscv_tempdir/dscv/ri/43_1a/drivers/acpi/container.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

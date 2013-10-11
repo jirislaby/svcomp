@@ -1566,9 +1566,9 @@ struct __anonstruct_cpu5wdt_device_218 {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 97 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 97 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -1587,9 +1587,9 @@ __inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , un
 }
 }
 #line 195
-__inline static int test_and_set_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static int test_and_set_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 195 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -1617,9 +1617,9 @@ extern int ( /* format attribute */  __dynamic_pr_debug)(struct _ddebug *descrip
 #line 147 "include/linux/kernel.h"
 extern void __might_sleep(char const   *file , int line , int preempt_offset ) ;
 #line 194
-__inline static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
+ static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
 #line 194 "include/linux/kernel.h"
-__inline static void might_fault(void) 
+ static void might_fault(void) 
 { 
 
   {
@@ -1658,9 +1658,9 @@ extern void _raw_spin_unlock(raw_spinlock_t *lock )  __attribute__((__section__(
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -1669,9 +1669,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 283
-__inline static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -1686,9 +1686,9 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -1703,9 +1703,9 @@ __inline static void spin_unlock(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -1745,9 +1745,9 @@ int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 76 "include/linux/completion.h"
 static struct lock_class_key __key  ;
 #line 73
-__inline static void init_completion(struct completion *x )  __attribute__((__no_instrument_function__)) ;
+ static void init_completion(struct completion *x )  __attribute__((__no_instrument_function__)) ;
 #line 73 "include/linux/completion.h"
-__inline static void init_completion(struct completion *x ) 
+ static void init_completion(struct completion *x ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   wait_queue_head_t *__cil_tmp4 ;
@@ -1795,11 +1795,11 @@ extern unsigned long volatile   jiffies  __attribute__((__section__(".data"))) ;
 #line 91 "include/linux/timer.h"
 extern void init_timer_key(struct timer_list *timer , char const   *name , struct lock_class_key *key ) ;
 #line 166
-__inline static void setup_timer_key(struct timer_list *timer , char const   *name ,
+ static void setup_timer_key(struct timer_list *timer , char const   *name ,
                                      struct lock_class_key *key , void (*function)(unsigned long  ) ,
                                      unsigned long data )  __attribute__((__no_instrument_function__)) ;
 #line 166 "include/linux/timer.h"
-__inline static void setup_timer_key(struct timer_list *timer , char const   *name ,
+ static void setup_timer_key(struct timer_list *timer , char const   *name ,
                                      struct lock_class_key *key , void (*function)(unsigned long  ) ,
                                      unsigned long data ) 
 { unsigned long __cil_tmp6 ;
@@ -1831,9 +1831,9 @@ __inline static void setup_timer_key(struct timer_list *timer , char const   *na
 #line 211
 extern int mod_timer(struct timer_list *timer , unsigned long expires ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -1848,9 +1848,9 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308
-__inline static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -1885,11 +1885,11 @@ extern unsigned long __attribute__((__warn_unused_result__))  _copy_to_user(void
                                                                             void const   *from ,
                                                                             unsigned int len ) ;
 #line 62
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void const   *src ,
                                                                                                                 unsigned int size )  __attribute__((__no_instrument_function__)) ;
 #line 62 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void const   *src ,
                                                                                                                 unsigned int size ) 
 { unsigned long tmp ;

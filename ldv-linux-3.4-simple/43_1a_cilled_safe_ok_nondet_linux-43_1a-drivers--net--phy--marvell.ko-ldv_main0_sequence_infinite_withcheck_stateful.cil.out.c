@@ -5212,7 +5212,7 @@ extern int mdiobus_read(struct mii_bus * , int  , u32  ) ;
 #line 145
 extern int mdiobus_write(struct mii_bus * , int  , u32  , u16  ) ;
 #line 460 "include/linux/phy.h"
-__inline static int phy_read(struct phy_device *phydev , u32 regnum ) 
+ static int phy_read(struct phy_device *phydev , u32 regnum ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -5243,7 +5243,7 @@ __inline static int phy_read(struct phy_device *phydev , u32 regnum )
 }
 }
 #line 475 "include/linux/phy.h"
-__inline static int phy_write(struct phy_device *phydev , u32 regnum , u16 val ) 
+ static int phy_write(struct phy_device *phydev , u32 regnum , u16 val ) 
 { int tmp ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;

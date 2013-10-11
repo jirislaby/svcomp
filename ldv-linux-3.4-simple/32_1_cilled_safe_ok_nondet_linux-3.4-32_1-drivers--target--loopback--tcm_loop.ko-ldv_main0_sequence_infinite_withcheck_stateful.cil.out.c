@@ -8163,9 +8163,9 @@ struct tcm_loop_hba {
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -8183,10 +8183,10 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 }
 }
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -8224,9 +8224,9 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -8328,9 +8328,9 @@ extern int strncmp(char const   * , char const   * , __kernel_size_t  ) ;
 #line 75
 extern char *strstr(char const   * , char const   * ) ;
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )  __attribute__((__no_instrument_function__)) ;
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )  __attribute__((__no_instrument_function__)) ;
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
 { 
 
   {
@@ -8339,9 +8339,9 @@ __inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long erro
 }
 }
 #line 27
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -8350,9 +8350,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -8380,9 +8380,9 @@ __inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const 
 }
 }
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const   *v )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_read(atomic_t const   *v )  __attribute__((__no_instrument_function__)) ;
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const   *v ) 
+ static int atomic_read(atomic_t const   *v ) 
 { int const   *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -8401,9 +8401,9 @@ __inline static int atomic_read(atomic_t const   *v )
 }
 }
 #line 35
-__inline static void atomic_set(atomic_t *v , int i )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_set(atomic_t *v , int i )  __attribute__((__no_instrument_function__)) ;
 #line 35 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i ) 
+ static void atomic_set(atomic_t *v , int i ) 
 { 
 
   {
@@ -8414,9 +8414,9 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 #line 93
-__inline static void atomic_inc(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_inc(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 93 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v ) 
+ static void atomic_inc(atomic_t *v ) 
 { 
 
   {
@@ -8433,9 +8433,9 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 #line 105
-__inline static void atomic_dec(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_dec(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 105 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v ) 
+ static void atomic_dec(atomic_t *v ) 
 { 
 
   {
@@ -8507,10 +8507,10 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 221
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -8524,9 +8524,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 339 "include/linux/slab.h"
-__inline static void *kmem_cache_zalloc(struct kmem_cache *k , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kmem_cache_zalloc(struct kmem_cache *k , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 339 "include/linux/slab.h"
-__inline static void *kmem_cache_zalloc(struct kmem_cache *k , gfp_t flags ) 
+ static void *kmem_cache_zalloc(struct kmem_cache *k , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -8542,9 +8542,9 @@ __inline static void *kmem_cache_zalloc(struct kmem_cache *k , gfp_t flags )
 }
 }
 #line 349
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -8560,9 +8560,9 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 #line 69 "include/linux/configfs.h"
-__inline static char *config_item_name(struct config_item *item )  __attribute__((__no_instrument_function__)) ;
+ static char *config_item_name(struct config_item *item )  __attribute__((__no_instrument_function__)) ;
 #line 69 "include/linux/configfs.h"
-__inline static char *config_item_name(struct config_item *item ) 
+ static char *config_item_name(struct config_item *item ) 
 { 
 
   {
@@ -8571,9 +8571,9 @@ __inline static char *config_item_name(struct config_item *item )
 }
 }
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page )  __attribute__((__no_instrument_function__)) ;
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page )  __attribute__((__no_instrument_function__)) ;
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page ) 
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page ) 
 { struct page *__cil_tmp2 ;
   struct page  const  *__cil_tmp3 ;
   int __cil_tmp4 ;
@@ -8607,9 +8607,9 @@ __inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(
 }
 }
 #line 95 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg )  __attribute__((__no_instrument_function__)) ;
+ static struct page *sg_page(struct scatterlist *sg )  __attribute__((__no_instrument_function__)) ;
 #line 95 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg ) 
+ static struct page *sg_page(struct scatterlist *sg ) 
 { long tmp ;
   long tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -8778,9 +8778,9 @@ extern void root_device_unregister(struct device *root ) ;
 extern int ( /* format attribute */  dev_printk)(char const   *level , struct device  const  *dev ,
                                                  char const   *fmt  , ...) ;
 #line 49 "include/linux/highmem.h"
-__inline static void *kmap(struct page *page )  __attribute__((__no_instrument_function__)) ;
+ static void *kmap(struct page *page )  __attribute__((__no_instrument_function__)) ;
 #line 49 "include/linux/highmem.h"
-__inline static void *kmap(struct page *page ) 
+ static void *kmap(struct page *page ) 
 { void *tmp___7 ;
   struct page  const  *__cil_tmp3 ;
 
@@ -8818,9 +8818,9 @@ __inline static void *kmap(struct page *page )
 }
 }
 #line 55
-__inline static void kunmap(struct page *page )  __attribute__((__no_instrument_function__)) ;
+ static void kunmap(struct page *page )  __attribute__((__no_instrument_function__)) ;
 #line 55 "include/linux/highmem.h"
-__inline static void kunmap(struct page *page ) 
+ static void kunmap(struct page *page ) 
 { 
 
   {
@@ -8829,9 +8829,9 @@ __inline static void kunmap(struct page *page )
 }
 }
 #line 163 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 163 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -8853,9 +8853,9 @@ __inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )
 }
 }
 #line 168
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 168 "include/scsi/scsi_cmnd.h"
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -8871,9 +8871,9 @@ __inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )
 }
 }
 #line 173
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 173 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -8892,9 +8892,9 @@ __inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )
 }
 }
 #line 178
-__inline static void scsi_set_resid(struct scsi_cmnd *cmd , int resid )  __attribute__((__no_instrument_function__)) ;
+ static void scsi_set_resid(struct scsi_cmnd *cmd , int resid )  __attribute__((__no_instrument_function__)) ;
 #line 178 "include/scsi/scsi_cmnd.h"
-__inline static void scsi_set_resid(struct scsi_cmnd *cmd , int resid ) 
+ static void scsi_set_resid(struct scsi_cmnd *cmd , int resid ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -8913,9 +8913,9 @@ __inline static void scsi_set_resid(struct scsi_cmnd *cmd , int resid )
 }
 }
 #line 191
-__inline static int scsi_bidi_cmnd(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static int scsi_bidi_cmnd(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 191 "include/scsi/scsi_cmnd.h"
-__inline static int scsi_bidi_cmnd(struct scsi_cmnd *cmd ) 
+ static int scsi_bidi_cmnd(struct scsi_cmnd *cmd ) 
 { int tmp___7 ;
   void *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -9005,9 +9005,9 @@ __inline static int scsi_bidi_cmnd(struct scsi_cmnd *cmd )
 }
 }
 #line 197
-__inline static struct scsi_data_buffer *scsi_in(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static struct scsi_data_buffer *scsi_in(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 197 "include/scsi/scsi_cmnd.h"
-__inline static struct scsi_data_buffer *scsi_in(struct scsi_cmnd *cmd ) 
+ static struct scsi_data_buffer *scsi_in(struct scsi_cmnd *cmd ) 
 { struct scsi_data_buffer *tmp___8 ;
   int tmp___9 ;
   unsigned long __cil_tmp5 ;
@@ -9062,9 +9062,9 @@ __inline static struct scsi_data_buffer *scsi_in(struct scsi_cmnd *cmd )
 }
 }
 #line 304
-__inline static void set_host_byte(struct scsi_cmnd *cmd , char status )  __attribute__((__no_instrument_function__)) ;
+ static void set_host_byte(struct scsi_cmnd *cmd , char status )  __attribute__((__no_instrument_function__)) ;
 #line 304 "include/scsi/scsi_cmnd.h"
-__inline static void set_host_byte(struct scsi_cmnd *cmd , char status ) 
+ static void set_host_byte(struct scsi_cmnd *cmd , char status ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -9107,9 +9107,9 @@ __inline static void set_host_byte(struct scsi_cmnd *cmd , char status )
 }
 }
 #line 309
-__inline static void set_driver_byte(struct scsi_cmnd *cmd , char status )  __attribute__((__no_instrument_function__)) ;
+ static void set_driver_byte(struct scsi_cmnd *cmd , char status )  __attribute__((__no_instrument_function__)) ;
 #line 309 "include/scsi/scsi_cmnd.h"
-__inline static void set_driver_byte(struct scsi_cmnd *cmd , char status ) 
+ static void set_driver_byte(struct scsi_cmnd *cmd , char status ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -9156,9 +9156,9 @@ extern void scsi_adjust_queue_depth(struct scsi_device * , int  , int  ) ;
 #line 343
 extern int scsi_track_queue_full(struct scsi_device * , int  ) ;
 #line 750 "include/scsi/scsi_host.h"
-__inline static void *shost_priv(struct Scsi_Host *shost )  __attribute__((__no_instrument_function__)) ;
+ static void *shost_priv(struct Scsi_Host *shost )  __attribute__((__no_instrument_function__)) ;
 #line 750 "include/scsi/scsi_host.h"
-__inline static void *shost_priv(struct Scsi_Host *shost ) 
+ static void *shost_priv(struct Scsi_Host *shost ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -9193,10 +9193,10 @@ extern void scsi_remove_host(struct Scsi_Host * ) ;
 #line 786
 extern void scsi_host_put(struct Scsi_Host *t ) ;
 #line 793
-__inline static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
+ static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
                                                                            struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 793 "include/scsi/scsi_host.h"
-__inline static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
+ static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
                                                                            struct device *dev ) 
 { int tmp___7 ;
 
@@ -9210,9 +9210,9 @@ __inline static int __attribute__((__warn_unused_result__))  scsi_add_host(struc
 }
 }
 #line 27 "include/scsi/scsi_tcq.h"
-__inline static int scsi_get_tag_type(struct scsi_device *sdev )  __attribute__((__no_instrument_function__)) ;
+ static int scsi_get_tag_type(struct scsi_device *sdev )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/scsi/scsi_tcq.h"
-__inline static int scsi_get_tag_type(struct scsi_device *sdev ) 
+ static int scsi_get_tag_type(struct scsi_device *sdev ) 
 { unsigned int __cil_tmp2 ;
 
   {

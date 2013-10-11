@@ -6217,7 +6217,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 60 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
+ static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -6230,7 +6230,7 @@ __inline static void set_bit(unsigned int nr , unsigned long volatile   *addr )
 }
 }
 #line 98 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void clear_bit(int nr , unsigned long volatile   *addr ) 
+ static void clear_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -6243,7 +6243,7 @@ __inline static void clear_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 246 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -6258,7 +6258,7 @@ __inline static int test_and_clear_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 309 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int ant_test_bit(unsigned int nr , unsigned long  volatile   *addr ) 
+ static int ant_test_bit(unsigned int nr , unsigned long  volatile   *addr ) 
 { int __cil_tmp3 ;
   int __cil_tmp4 ;
   unsigned int __cil_tmp5 ;
@@ -6295,7 +6295,7 @@ __inline static int ant_test_bit(unsigned int nr , unsigned long  volatile   *ad
 }
 }
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long  volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long  volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -6310,7 +6310,7 @@ __inline static int variable_test_bit(int nr , unsigned long  volatile   *addr )
 }
 }
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   short __cil_tmp4 ;
@@ -6347,7 +6347,7 @@ __inline static __u16 __fswab16(__u16 val )
 }
 }
 #line 148 "include/linux/swab.h"
-__inline static __u16 __swab16p(__u16    *p ) 
+ static __u16 __swab16p(__u16    *p ) 
 { __u16 tmp ;
   __u16    __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -6369,7 +6369,7 @@ __inline static __u16 __swab16p(__u16    *p )
 }
 }
 #line 87 "include/linux/byteorder/little_endian.h"
-__inline static __u16 __be16_to_cpup(__be16    *p ) 
+ static __u16 __be16_to_cpup(__be16    *p ) 
 { __u16 tmp ;
 
   {
@@ -6386,7 +6386,7 @@ extern int printk(char    *  , ...) ;
 #line 45 "include/linux/dynamic_debug.h"
 extern int __dynamic_pr_debug(struct _ddebug * , char    *  , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -6406,7 +6406,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -6429,7 +6429,7 @@ __inline static void list_add_tail(struct list_head *new , struct list_head *hea
 #line 111
 extern void __list_del_entry(struct list_head * ) ;
 #line 142 "include/linux/list.h"
-__inline static void list_del_init(struct list_head *entry ) 
+ static void list_del_init(struct list_head *entry ) 
 { 
 
   {
@@ -6444,7 +6444,7 @@ __inline static void list_del_init(struct list_head *entry )
 }
 }
 #line 164 "include/linux/list.h"
-__inline static void list_move_tail(struct list_head *list , struct list_head *head ) 
+ static void list_move_tail(struct list_head *list , struct list_head *head ) 
 { 
 
   {
@@ -6459,7 +6459,7 @@ __inline static void list_move_tail(struct list_head *list , struct list_head *h
 }
 }
 #line 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head    *head ) 
+ static int list_empty(struct list_head    *head ) 
 { unsigned long __cil_tmp2 ;
   struct list_head *   __cil_tmp3 ;
   struct list_head    *__cil_tmp4 ;
@@ -6485,7 +6485,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void) 
+ static struct task_struct *get_current(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -6556,7 +6556,7 @@ extern void *memset(void * , int  , size_t  ) ;
 #line 70 "include/asm-generic/bug.h"
 extern void warn_slowpath_null(char    * , int     ) ;
 #line 35 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i ) 
+ static void atomic_set(atomic_t *v , int i ) 
 { 
 
   {
@@ -6567,7 +6567,7 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 #line 93 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v ) 
+ static void atomic_inc(atomic_t *v ) 
 { 
 
   {
@@ -6578,7 +6578,7 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 #line 119 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_dec_and_test(atomic_t *v ) 
+ static int atomic_dec_and_test(atomic_t *v ) 
 { unsigned char c ;
   unsigned int __cil_tmp3 ;
 
@@ -6597,7 +6597,7 @@ __inline static int atomic_dec_and_test(atomic_t *v )
 #line 220 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
 extern unsigned long kernel_stack ;
 #line 222 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
-__inline static struct thread_info *current_thread_info(void) 
+ static struct thread_info *current_thread_info(void) 
 { struct thread_info *ti ;
   unsigned long pfo_ret__ ;
   unsigned long __cil_tmp3 ;
@@ -6668,7 +6668,7 @@ __inline static struct thread_info *current_thread_info(void)
 }
 }
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -6701,7 +6701,7 @@ extern void _raw_spin_unlock_bh(raw_spinlock_t * ) ;
 #line 43
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -6710,7 +6710,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 292 "include/linux/spinlock.h"
-__inline static void ldv_spin_lock_bh_2(spinlock_t *lock ) 
+ static void ldv_spin_lock_bh_2(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -6725,9 +6725,9 @@ __inline static void ldv_spin_lock_bh_2(spinlock_t *lock )
 }
 }
 #line 292
-__inline static void spin_lock_bh(spinlock_t *lock ) ;
+ static void spin_lock_bh(spinlock_t *lock ) ;
 #line 332 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_bh_6(spinlock_t *lock ) 
+ static void ldv_spin_unlock_bh_6(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -6742,9 +6742,9 @@ __inline static void ldv_spin_unlock_bh_6(spinlock_t *lock )
 }
 }
 #line 332
-__inline static void spin_unlock_bh(spinlock_t *lock ) ;
+ static void spin_unlock_bh(spinlock_t *lock ) ;
 #line 350 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
+ static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -6759,7 +6759,7 @@ __inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned lo
 }
 }
 #line 350
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 79 "include/linux/wait.h"
 extern void __init_waitqueue_head(wait_queue_head_t * , char    * , struct lock_class_key * ) ;
 #line 584
@@ -6775,7 +6775,7 @@ extern void mutex_lock_nested(struct mutex * , unsigned int  ) ;
 #line 169
 extern void mutex_unlock(struct mutex * ) ;
 #line 73 "include/linux/completion.h"
-__inline static void init_completion(struct completion *x ) 
+ static void init_completion(struct completion *x ) 
 { struct lock_class_key __key ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6807,7 +6807,7 @@ extern unsigned long volatile   jiffies ;
 #line 91 "include/linux/timer.h"
 extern void init_timer_key(struct timer_list * , char    * , struct lock_class_key * ) ;
 #line 204 "include/linux/timer.h"
-__inline static int timer_pending(struct timer_list    *timer ) 
+ static int timer_pending(struct timer_list    *timer ) 
 { struct list_head *   __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct list_head *   __cil_tmp4 ;
@@ -6845,7 +6845,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -6858,9 +6858,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/13883/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/orinoco/orinoco_usb.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -6872,7 +6872,7 @@ struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 362 "include/linux/sched.h"
 extern void schedule(void) ;
 #line 2563 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -6897,7 +6897,7 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2589 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp ;
   long tmp___0 ;
   int __cil_tmp4 ;
@@ -6925,7 +6925,7 @@ extern void *dev_get_drvdata(struct device    * ) ;
 #line 793
 extern int dev_set_drvdata(struct device * , void * ) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) 
+ static void *usb_get_intfdata(struct usb_interface *intf ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6950,7 +6950,7 @@ __inline static void *usb_get_intfdata(struct usb_interface *intf )
 }
 }
 #line 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -6971,7 +6971,7 @@ __inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
 }
 }
 #line 523 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
 { struct device    *__mptr ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6996,7 +6996,7 @@ __inline static struct usb_device *interface_to_usbdev(struct usb_interface *int
 }
 }
 #line 1309 "include/linux/usb.h"
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context ) 
@@ -7076,7 +7076,7 @@ extern void usb_kill_urb(struct urb * ) ;
 extern int usb_control_msg(struct usb_device * , unsigned int  , __u8  , __u8  , __u16  ,
                            __u16  , void * , __u16  , int  ) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -7123,7 +7123,7 @@ struct sk_buff *ldv___netdev_alloc_skb_25(struct net_device *ldv_func_arg1 , uns
 struct sk_buff *ldv___netdev_alloc_skb_26(struct net_device *ldv_func_arg1 , unsigned int ldv_func_arg2 ,
                                           gfp_t ldv_func_arg3 ) ;
 #line 1360 "include/linux/netdevice.h"
-__inline static struct netdev_queue *netdev_get_tx_queue(struct net_device    *dev ,
+ static struct netdev_queue *netdev_get_tx_queue(struct net_device    *dev ,
                                                          unsigned int index ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -7149,7 +7149,7 @@ __inline static struct netdev_queue *netdev_get_tx_queue(struct net_device    *d
 }
 }
 #line 1422 "include/linux/netdevice.h"
-__inline static void *netdev_priv(struct net_device    *dev ) 
+ static void *netdev_priv(struct net_device    *dev ) 
 { void *__cil_tmp2 ;
 
   {
@@ -7166,7 +7166,7 @@ extern int netpoll_trap(void) ;
 #line 1756
 extern void __netif_schedule(struct Qdisc * ) ;
 #line 1772 "include/linux/netdevice.h"
-__inline static void netif_tx_start_queue(struct netdev_queue *dev_queue ) 
+ static void netif_tx_start_queue(struct netdev_queue *dev_queue ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long *__cil_tmp4 ;
@@ -7190,7 +7190,7 @@ __inline static void netif_tx_start_queue(struct netdev_queue *dev_queue )
 }
 }
 #line 1783 "include/linux/netdevice.h"
-__inline static void netif_start_queue(struct net_device *dev ) 
+ static void netif_start_queue(struct net_device *dev ) 
 { struct netdev_queue *tmp ;
   struct net_device    *__cil_tmp3 ;
 
@@ -7208,7 +7208,7 @@ __inline static void netif_start_queue(struct net_device *dev )
 }
 }
 #line 1798 "include/linux/netdevice.h"
-__inline static void netif_tx_wake_queue(struct netdev_queue *dev_queue ) 
+ static void netif_tx_wake_queue(struct netdev_queue *dev_queue ) 
 { int tmp ;
   int tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -7267,7 +7267,7 @@ __inline static void netif_tx_wake_queue(struct netdev_queue *dev_queue )
 }
 }
 #line 1817 "include/linux/netdevice.h"
-__inline static void netif_wake_queue(struct net_device *dev ) 
+ static void netif_wake_queue(struct net_device *dev ) 
 { struct netdev_queue *tmp ;
   struct net_device    *__cil_tmp3 ;
 
@@ -7285,7 +7285,7 @@ __inline static void netif_wake_queue(struct net_device *dev )
 }
 }
 #line 1832 "include/linux/netdevice.h"
-__inline static void netif_tx_stop_queue(struct netdev_queue *dev_queue ) 
+ static void netif_tx_stop_queue(struct netdev_queue *dev_queue ) 
 { int __ret_warn_on ;
   long tmp ;
   long tmp___0 ;
@@ -7366,7 +7366,7 @@ __inline static void netif_tx_stop_queue(struct netdev_queue *dev_queue )
 }
 }
 #line 1848 "include/linux/netdevice.h"
-__inline static void netif_stop_queue(struct net_device *dev ) 
+ static void netif_stop_queue(struct net_device *dev ) 
 { struct netdev_queue *tmp ;
   struct net_device    *__cil_tmp3 ;
 
@@ -7384,7 +7384,7 @@ __inline static void netif_stop_queue(struct net_device *dev )
 }
 }
 #line 1863 "include/linux/netdevice.h"
-__inline static bool netif_tx_queue_stopped(struct netdev_queue    *dev_queue ) 
+ static bool netif_tx_queue_stopped(struct netdev_queue    *dev_queue ) 
 { int tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -7414,7 +7414,7 @@ __inline static bool netif_tx_queue_stopped(struct netdev_queue    *dev_queue )
 }
 }
 #line 1874 "include/linux/netdevice.h"
-__inline static bool netif_queue_stopped(struct net_device    *dev ) 
+ static bool netif_queue_stopped(struct net_device    *dev ) 
 { struct netdev_queue *tmp ;
   bool tmp___0 ;
   struct netdev_queue    *__cil_tmp4 ;
@@ -7433,7 +7433,7 @@ __inline static bool netif_queue_stopped(struct net_device    *dev )
 }
 }
 #line 1967 "include/linux/netdevice.h"
-__inline static bool netif_running(struct net_device    *dev ) 
+ static bool netif_running(struct net_device    *dev ) 
 { int tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -7463,7 +7463,7 @@ __inline static bool netif_running(struct net_device    *dev )
 }
 }
 #line 2201 "include/linux/netdevice.h"
-__inline static bool netif_carrier_ok(struct net_device    *dev ) 
+ static bool netif_carrier_ok(struct net_device    *dev ) 
 { int tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -7501,7 +7501,7 @@ extern int request_firmware(struct firmware    ** , char    * , struct device * 
 #line 46
 extern void release_firmware(struct firmware    * ) ;
 #line 2131 "include/net/cfg80211.h"
-__inline static void *wiphy_priv(struct wiphy *wiphy ) 
+ static void *wiphy_priv(struct wiphy *wiphy ) 
 { long tmp ;
   struct wiphy *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -7551,7 +7551,7 @@ __inline static void *wiphy_priv(struct wiphy *wiphy )
 }
 }
 #line 2319 "include/net/cfg80211.h"
-__inline static void *wdev_priv(struct wireless_dev *wdev ) 
+ static void *wdev_priv(struct wireless_dev *wdev ) 
 { long tmp ;
   void *tmp___0 ;
   struct wireless_dev *__cil_tmp4 ;
@@ -7630,7 +7630,7 @@ extern int orinoco_change_mtu(struct net_device * , int  ) ;
 #line 215
 extern void orinoco_tx_timeout(struct net_device * ) ;
 #line 221 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/net/wireless/orinoco/orinoco.h"
-__inline static int orinoco_lock(struct orinoco_private *priv , unsigned long *flags ) 
+ static int orinoco_lock(struct orinoco_private *priv , unsigned long *flags ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -7730,7 +7730,7 @@ __inline static int orinoco_lock(struct orinoco_private *priv , unsigned long *f
 }
 }
 #line 234 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/net/wireless/orinoco/orinoco.h"
-__inline static void orinoco_unlock(struct orinoco_private *priv , unsigned long *flags ) 
+ static void orinoco_unlock(struct orinoco_private *priv , unsigned long *flags ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -7775,7 +7775,7 @@ __inline static void orinoco_unlock(struct orinoco_private *priv , unsigned long
 }
 }
 #line 251 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/net/wireless/orinoco/orinoco.h"
-__inline static struct orinoco_private *ndev_priv(struct net_device *dev ) 
+ static struct orinoco_private *ndev_priv(struct net_device *dev ) 
 { struct wireless_dev *wdev ;
   void *tmp ;
   void *tmp___0 ;
@@ -7809,7 +7809,7 @@ static void ezusb_req_queue_run(struct ezusb_priv *upriv ) ;
 #line 319
 static void ezusb_bulk_in_callback(struct urb *urb ) ;
 #line 321 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/13883/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/orinoco/orinoco_usb.c.p"
-__inline static u8 ezusb_reply_inc(u8 count ) 
+ static u8 ezusb_reply_inc(u8 count ) 
 { unsigned int __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -8018,7 +8018,7 @@ static void ezusb_request_context_put(struct request_context *ctx )
 }
 }
 #line 342 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/13883/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/orinoco/orinoco_usb.c.p"
-__inline static void ezusb_mod_timer(struct ezusb_priv *upriv , struct timer_list *timer ,
+ static void ezusb_mod_timer(struct ezusb_priv *upriv , struct timer_list *timer ,
                                      unsigned long expire ) 
 { struct usb_device *__cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -8401,7 +8401,7 @@ static struct request_context *ezusb_alloc_ctx(struct ezusb_priv *upriv , u16 ou
 }
 }
 #line 406 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/13883/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/orinoco/orinoco_usb.c.p"
-__inline static void ezusb_complete_all(struct completion *comp ) 
+ static void ezusb_complete_all(struct completion *comp ) 
 { 
 
   {
@@ -10217,7 +10217,7 @@ static void ezusb_req_ctx_wait(struct ezusb_priv *upriv , struct request_context
 }
 }
 #line 742 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/13883/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/orinoco/orinoco_usb.c.p"
-__inline static u16 build_crc(struct ezusb_packet *data ) 
+ static u16 build_crc(struct ezusb_packet *data ) 
 { u16 crc ;
   u8 *bytes ;
   int i ;
@@ -10580,7 +10580,7 @@ static int ezusb_submit_in_urb(struct ezusb_priv *upriv )
 }
 }
 #line 803 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/13883/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/orinoco/orinoco_usb.c.p"
-__inline static int ezusb_8051_cpucs(struct ezusb_priv *upriv , int reset ) 
+ static int ezusb_8051_cpucs(struct ezusb_priv *upriv , int reset ) 
 { u8 res_val ;
   unsigned int tmp ;
   int tmp___0 ;
@@ -14259,7 +14259,7 @@ static void ezusb_bulk_in_callback(struct urb *urb )
 }
 }
 #line 1472 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/13883/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/orinoco/orinoco_usb.c.p"
-__inline static void ezusb_delete(struct ezusb_priv *upriv ) 
+ static void ezusb_delete(struct ezusb_priv *upriv ) 
 { struct net_device *dev ;
   struct list_head *item ;
   struct list_head *tmp_item ;
@@ -16552,7 +16552,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 5150 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/13883/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/orinoco/orinoco_usb.c.p"
-__inline static void spin_lock_bh(spinlock_t *lock ) 
+ static void spin_lock_bh(spinlock_t *lock ) 
 { 
 
   {
@@ -16567,7 +16567,7 @@ __inline static void spin_lock_bh(spinlock_t *lock )
 }
 }
 #line 5192 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/13883/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/orinoco/orinoco_usb.c.p"
-__inline static void spin_unlock_bh(spinlock_t *lock ) 
+ static void spin_unlock_bh(spinlock_t *lock ) 
 { 
 
   {
@@ -16582,7 +16582,7 @@ __inline static void spin_unlock_bh(spinlock_t *lock )
 }
 }
 #line 5212 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/13883/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/orinoco/orinoco_usb.c.p"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {
@@ -16597,7 +16597,7 @@ __inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long fla
 }
 }
 #line 5258 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/13883/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/orinoco/orinoco_usb.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -16627,7 +16627,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 5314 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/13883/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/orinoco/orinoco_usb.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

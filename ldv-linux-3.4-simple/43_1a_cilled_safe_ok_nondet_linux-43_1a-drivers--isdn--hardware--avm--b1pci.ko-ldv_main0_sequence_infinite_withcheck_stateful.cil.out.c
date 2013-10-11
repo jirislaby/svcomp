@@ -1802,7 +1802,7 @@ extern void __release_region(struct resource * , resource_size_t  , resource_siz
 #line 174 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
 extern void *ioremap_nocache(resource_size_t  , unsigned long  ) ;
 #line 182 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *ioremap(resource_size_t offset , unsigned long size ) 
+ static void *ioremap(resource_size_t offset , unsigned long size ) 
 { void *tmp ;
 
   {
@@ -1817,7 +1817,7 @@ __inline static void *ioremap(resource_size_t offset , unsigned long size )
 #line 187
 extern void iounmap(void volatile   * ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -1828,7 +1828,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -1882,7 +1882,7 @@ extern int request_threaded_irq(unsigned int  , irqreturn_t (*)(int  , void * ) 
                                 irqreturn_t (*)(int  , void * ) , unsigned long  ,
                                 char const   * , void * ) ;
 #line 132 "include/linux/interrupt.h"
-__inline static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
+ static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
                                 unsigned long flags , char const   *name , void *dev ) 
 { int tmp ;
   irqreturn_t (*__cil_tmp7)(int  , void * ) ;
@@ -1909,7 +1909,7 @@ extern int __pci_register_driver(struct pci_driver * , struct module * , char co
 #line 949
 extern void pci_unregister_driver(struct pci_driver * ) ;
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -1934,7 +1934,7 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1363 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -1963,7 +1963,7 @@ extern void register_capi_driver(struct capi_driver * ) ;
 #line 101
 extern void unregister_capi_driver(struct capi_driver * ) ;
 #line 219 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/isdn/hardware/avm/avmcard.h"
-__inline static unsigned char b1outp(unsigned int base , unsigned short offset , unsigned char value ) 
+ static unsigned char b1outp(unsigned int base , unsigned short offset , unsigned char value ) 
 { unsigned char tmp ;
   int __cil_tmp5 ;
   unsigned char __cil_tmp6 ;
@@ -1999,7 +1999,7 @@ __inline static unsigned char b1outp(unsigned int base , unsigned short offset ,
 }
 }
 #line 318 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/isdn/hardware/avm/avmcard.h"
-__inline static void b1_reset(unsigned int base ) 
+ static void b1_reset(unsigned int base ) 
 { unsigned long __ms ;
   unsigned long tmp ;
   unsigned long __ms___0 ;

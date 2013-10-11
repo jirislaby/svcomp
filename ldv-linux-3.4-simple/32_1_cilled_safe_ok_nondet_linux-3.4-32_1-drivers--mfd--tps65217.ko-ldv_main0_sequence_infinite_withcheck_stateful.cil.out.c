@@ -2928,9 +2928,9 @@ struct tps65217 {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2939,9 +2939,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3008,9 +3008,9 @@ extern int platform_device_add_data(struct platform_device *pdev , void const   
 #line 160
 extern int platform_device_add(struct platform_device *pdev ) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3032,9 +3032,9 @@ __inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )
 }
 }
 #line 247
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;

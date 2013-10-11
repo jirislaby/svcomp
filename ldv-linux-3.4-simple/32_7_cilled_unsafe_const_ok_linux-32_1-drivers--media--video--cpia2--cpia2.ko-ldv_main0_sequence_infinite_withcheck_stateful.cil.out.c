@@ -4689,9 +4689,9 @@ struct firmware {
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long  volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static int variable_test_bit(int nr , unsigned long  volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long  volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long  volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -4715,9 +4715,9 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -4817,9 +4817,9 @@ extern char *strcpy(char *dest , char    *src ) ;
 #line 63
 extern char *strcat(char *dest , char    *src ) ;
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp___0 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -4866,9 +4866,9 @@ void mutex_unlock(struct mutex *lock ) ;
 #line 170
 int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 80 "include/linux/kobject.h"
-__inline static char    *kobject_name(struct kobject    *kobj )  __attribute__((__no_instrument_function__)) ;
+ static char    *kobject_name(struct kobject    *kobj )  __attribute__((__no_instrument_function__)) ;
 #line 80 "include/linux/kobject.h"
-__inline static char    *kobject_name(struct kobject    *kobj ) 
+ static char    *kobject_name(struct kobject    *kobj ) 
 { char    *   __cil_tmp2 ;
 
   {
@@ -4893,9 +4893,9 @@ extern long schedule_timeout(long timeout ) ;
 #line 362
 extern void schedule(void) ;
 #line 2563
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 2563 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp___7 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4920,9 +4920,9 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2589
-__inline static int signal_pending(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
+ static int signal_pending(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
 #line 2589 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp___7 ;
   int tmp___8 ;
   long tmp___9 ;
@@ -4956,10 +4956,10 @@ extern void kfree(void    * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -4975,9 +4975,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 #line 333 "include/media/v4l2-ioctl.h"
 extern long video_ioctl2(struct file *file , unsigned int cmd , unsigned long arg ) ;
 #line 685 "include/linux/device.h"
-__inline static char    *dev_name(struct device    *dev )  __attribute__((__no_instrument_function__)) ;
+ static char    *dev_name(struct device    *dev )  __attribute__((__no_instrument_function__)) ;
 #line 685 "include/linux/device.h"
-__inline static char    *dev_name(struct device    *dev ) 
+ static char    *dev_name(struct device    *dev ) 
 { char    *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5048,11 +5048,11 @@ extern int __attribute__((__warn_unused_result__))  __video_register_device(stru
                                                                             int warn_if_nr_in_use ,
                                                                             struct module *owner ) ;
 #line 146
-__inline static int __attribute__((__warn_unused_result__))  video_register_device(struct video_device *vdev ,
+ static int __attribute__((__warn_unused_result__))  video_register_device(struct video_device *vdev ,
                                                                                    int type ,
                                                                                    int nr )  __attribute__((__no_instrument_function__)) ;
 #line 146 "include/media/v4l2-dev.h"
-__inline static int __attribute__((__warn_unused_result__))  video_register_device(struct video_device *vdev ,
+ static int __attribute__((__warn_unused_result__))  video_register_device(struct video_device *vdev ,
                                                                                    int type ,
                                                                                    int nr ) 
 { int tmp___7 ;
@@ -5088,9 +5088,9 @@ extern struct video_device * __attribute__((__warn_unused_result__)) video_devic
 #line 169
 extern void video_device_release(struct video_device *vdev ) ;
 #line 177
-__inline static void *video_get_drvdata(struct video_device *vdev )  __attribute__((__no_instrument_function__)) ;
+ static void *video_get_drvdata(struct video_device *vdev )  __attribute__((__no_instrument_function__)) ;
 #line 177 "include/media/v4l2-dev.h"
-__inline static void *video_get_drvdata(struct video_device *vdev ) 
+ static void *video_get_drvdata(struct video_device *vdev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5115,9 +5115,9 @@ __inline static void *video_get_drvdata(struct video_device *vdev )
 }
 }
 #line 182
-__inline static void video_set_drvdata(struct video_device *vdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void video_set_drvdata(struct video_device *vdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 182 "include/media/v4l2-dev.h"
-__inline static void video_set_drvdata(struct video_device *vdev , void *data ) 
+ static void video_set_drvdata(struct video_device *vdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -5140,9 +5140,9 @@ __inline static void video_set_drvdata(struct video_device *vdev , void *data )
 #line 187
 extern struct video_device *video_devdata(struct file *file ) ;
 #line 191
-__inline static void *video_drvdata(struct file *file )  __attribute__((__no_instrument_function__)) ;
+ static void *video_drvdata(struct file *file )  __attribute__((__no_instrument_function__)) ;
 #line 191 "include/media/v4l2-dev.h"
-__inline static void *video_drvdata(struct file *file ) 
+ static void *video_drvdata(struct file *file ) 
 { struct video_device *tmp___7 ;
   void *tmp___8 ;
 
@@ -5158,9 +5158,9 @@ __inline static void *video_drvdata(struct file *file )
 }
 }
 #line 196
-__inline static char    *video_device_node_name(struct video_device *vdev )  __attribute__((__no_instrument_function__)) ;
+ static char    *video_device_node_name(struct video_device *vdev )  __attribute__((__no_instrument_function__)) ;
 #line 196 "include/media/v4l2-dev.h"
-__inline static char    *video_device_node_name(struct video_device *vdev ) 
+ static char    *video_device_node_name(struct video_device *vdev ) 
 { char    *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5185,9 +5185,9 @@ __inline static char    *video_device_node_name(struct video_device *vdev )
 }
 }
 #line 663 "include/linux/usb.h"
-__inline static int usb_make_path(struct usb_device *dev , char *buf , size_t size )  __attribute__((__no_instrument_function__)) ;
+ static int usb_make_path(struct usb_device *dev , char *buf , size_t size )  __attribute__((__no_instrument_function__)) ;
 #line 663 "include/linux/usb.h"
-__inline static int usb_make_path(struct usb_device *dev , char *buf , size_t size ) 
+ static int usb_make_path(struct usb_device *dev , char *buf , size_t size ) 
 { int actual ;
   int tmp___7 ;
   unsigned long __cil_tmp6 ;
@@ -14802,9 +14802,9 @@ long s__builtin_expect(long val , long res )
 }
 }
 #line 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head    *head )  __attribute__((__no_instrument_function__)) ;
+ static int list_empty(struct list_head    *head )  __attribute__((__no_instrument_function__)) ;
 #line 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head    *head ) 
+ static int list_empty(struct list_head    *head ) 
 { unsigned long __cil_tmp2 ;
   struct list_head *   __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -14823,9 +14823,9 @@ __inline static int list_empty(struct list_head    *head )
 }
 }
 #line 112 "include/linux/wait.h"
-__inline static int waitqueue_active(wait_queue_head_t *q )  __attribute__((__no_instrument_function__)) ;
+ static int waitqueue_active(wait_queue_head_t *q )  __attribute__((__no_instrument_function__)) ;
 #line 112 "include/linux/wait.h"
-__inline static int waitqueue_active(wait_queue_head_t *q ) 
+ static int waitqueue_active(wait_queue_head_t *q ) 
 { int tmp ;
   int tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -14863,9 +14863,9 @@ extern void __wake_up(wait_queue_head_t *q , unsigned int mode , int nr , void *
 #line 148 "include/linux/time.h"
 extern void do_gettimeofday(struct timeval *tv ) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) 
+ static void *usb_get_intfdata(struct usb_interface *intf ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -14890,9 +14890,9 @@ __inline static void *usb_get_intfdata(struct usb_interface *intf )
 }
 }
 #line 196
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -14913,9 +14913,9 @@ __inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
 }
 }
 #line 523
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
 #line 523 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
 { struct device    *__mptr ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -14978,9 +14978,9 @@ extern int usb_control_msg(struct usb_device *dev , unsigned int pipe , __u8 req
 #line 1463
 extern int usb_set_interface(struct usb_device *dev , int ifnum , int alternate ) ;
 #line 1567
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -21229,10 +21229,10 @@ void ldv_main1_sequence_infinite_withcheck_stateful(void)
 }
 }
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -21252,9 +21252,9 @@ __inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int 
 }
 }
 #line 97
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 97 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -21275,9 +21275,9 @@ __inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , un
 #line 147 "include/linux/kernel.h"
 extern void __might_sleep(char    *file , int line , int preempt_offset ) ;
 #line 194
-__inline static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
+ static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
 #line 194 "include/linux/kernel.h"
-__inline static void might_fault(void) 
+ static void might_fault(void) 
 { 
 
   {
@@ -21324,11 +21324,11 @@ extern unsigned long __attribute__((__warn_unused_result__))  _copy_to_user(void
                                                                             void    *from ,
                                                                             unsigned int len ) ;
 #line 62
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void    *src ,
                                                                                                                 unsigned int size )  __attribute__((__no_instrument_function__)) ;
 #line 62 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void    *src ,
                                                                                                                 unsigned int size ) 
 { unsigned long tmp ;
@@ -21345,10 +21345,10 @@ __inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__
 }
 }
 #line 44 "include/linux/poll.h"
-__inline static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
+ static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
                                poll_table *p )  __attribute__((__no_instrument_function__)) ;
 #line 44 "include/linux/poll.h"
-__inline static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
+ static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
                                poll_table *p ) 
 { void (*__cil_tmp4)(struct file * , wait_queue_head_t * , struct poll_table_struct * ) ;
 
@@ -21379,9 +21379,9 @@ __inline static void poll_wait(struct file *filp , wait_queue_head_t *wait_addre
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -21401,9 +21401,9 @@ extern long schedule_timeout_interruptible(long timeout ) ;
 #line 436 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/video/cpia2/cpia2.h"
 void cpia2_set_color_params(struct camera_data *cam ) ;
 #line 208 "include/linux/page-flags.h"
-__inline static void SetPageReserved(struct page *page )  __attribute__((__no_instrument_function__)) ;
+ static void SetPageReserved(struct page *page )  __attribute__((__no_instrument_function__)) ;
 #line 208 "include/linux/page-flags.h"
-__inline static void SetPageReserved(struct page *page ) 
+ static void SetPageReserved(struct page *page ) 
 { unsigned long *__cil_tmp2 ;
   unsigned long volatile   *__cil_tmp3 ;
 
@@ -21421,9 +21421,9 @@ __inline static void SetPageReserved(struct page *page )
 }
 }
 #line 208
-__inline static void ClearPageReserved(struct page *page )  __attribute__((__no_instrument_function__)) ;
+ static void ClearPageReserved(struct page *page )  __attribute__((__no_instrument_function__)) ;
 #line 208 "include/linux/page-flags.h"
-__inline static void ClearPageReserved(struct page *page ) 
+ static void ClearPageReserved(struct page *page ) 
 { unsigned long *__cil_tmp2 ;
   unsigned long volatile   *__cil_tmp3 ;
 
@@ -21443,9 +21443,9 @@ __inline static void ClearPageReserved(struct page *page )
 #line 293 "include/linux/mm.h"
 extern struct page *vmalloc_to_page(void    *addr ) ;
 #line 737
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page )  __attribute__((__no_instrument_function__)) ;
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page )  __attribute__((__no_instrument_function__)) ;
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page ) 
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page ) 
 { struct page *__cil_tmp2 ;
   struct page    *__cil_tmp3 ;
   int __cil_tmp4 ;
@@ -21512,9 +21512,9 @@ static void reset_camera_struct(struct camera_data *cam ) ;
 #line 73
 static int cpia2_set_high_power(struct camera_data *cam ) ;
 #line 79
-__inline static unsigned long kvirt_to_pa(unsigned long adr )  __attribute__((__no_instrument_function__)) ;
+ static unsigned long kvirt_to_pa(unsigned long adr )  __attribute__((__no_instrument_function__)) ;
 #line 79 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/14330/dscv_tempdir/dscv/ri/32_1/drivers/media/video/cpia2/cpia2_core.c"
-__inline static unsigned long kvirt_to_pa(unsigned long adr ) 
+ static unsigned long kvirt_to_pa(unsigned long adr ) 
 { unsigned long kva ;
   unsigned long ret ;
   struct page *tmp___7 ;

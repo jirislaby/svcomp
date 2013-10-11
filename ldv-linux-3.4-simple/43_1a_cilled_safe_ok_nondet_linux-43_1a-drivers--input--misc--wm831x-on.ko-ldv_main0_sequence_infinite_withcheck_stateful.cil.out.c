@@ -2200,7 +2200,7 @@ int ldv_spin_trylock(void) ;
 extern int __dynamic_dev_dbg(struct _ddebug * , struct device  const  * , char const   * 
                              , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2233,7 +2233,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3039/dscv_tempdir/dscv/ri/43_1a/drivers/input/misc/wm831x-on.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2257,7 +2257,7 @@ extern int input_register_device(struct input_dev * ) ;
 #line 1502
 extern void input_event(struct input_dev * , unsigned int  , unsigned int  , int  ) ;
 #line 1505 "include/linux/input.h"
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { int __cil_tmp4 ;
 
@@ -2273,7 +2273,7 @@ __inline static void input_report_key(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {
@@ -2294,7 +2294,7 @@ extern void free_irq(unsigned int  , void * ) ;
 #line 47 "include/linux/platform_device.h"
 extern int platform_get_irq(struct platform_device * , unsigned int  ) ;
 #line 188 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
+ static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -3131,7 +3131,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 557 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3039/dscv_tempdir/dscv/ri/43_1a/drivers/input/misc/wm831x-on.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

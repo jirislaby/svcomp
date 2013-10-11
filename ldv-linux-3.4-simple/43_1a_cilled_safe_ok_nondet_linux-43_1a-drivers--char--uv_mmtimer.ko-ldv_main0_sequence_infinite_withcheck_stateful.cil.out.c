@@ -3421,7 +3421,7 @@ extern int misc_register(struct miscdevice * ) ;
 #line 40 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_to_user(void * , void const   * , unsigned int  ) ;
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
+ static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
 { unsigned long tmp ;
 
   {
@@ -3438,7 +3438,7 @@ __inline static int copy_to_user(void *dst , void const   *src , unsigned int si
 #line 166 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
 extern struct uv_hub_info_s __uv_hub_info ;
 #line 179 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static int is_uv1_hub(void) 
+ static int is_uv1_hub(void) 
 { unsigned long tcp_ptr__ ;
   void const   *__vpp_verify ;
   struct uv_hub_info_s *__cil_tmp3 ;
@@ -3469,7 +3469,7 @@ __inline static int is_uv1_hub(void)
 }
 }
 #line 444 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static unsigned long *uv_local_mmr_address(unsigned long offset ) 
+ static unsigned long *uv_local_mmr_address(unsigned long offset ) 
 { unsigned long tmp___0 ;
   int tmp___1 ;
   unsigned long __cil_tmp5 ;
@@ -3499,7 +3499,7 @@ __inline static unsigned long *uv_local_mmr_address(unsigned long offset )
 }
 }
 #line 487 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static int uv_blade_processor_id(void) 
+ static int uv_blade_processor_id(void) 
 { unsigned long tcp_ptr__ ;
   void const   *__vpp_verify ;
   struct uv_hub_info_s *__cil_tmp3 ;
@@ -3527,7 +3527,7 @@ __inline static int uv_blade_processor_id(void)
 }
 }
 #line 603 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static int uv_get_min_hub_revision_id(void) 
+ static int uv_get_min_hub_revision_id(void) 
 { unsigned long tcp_ptr__ ;
   void const   *__vpp_verify ;
   struct uv_hub_info_s *__cil_tmp3 ;

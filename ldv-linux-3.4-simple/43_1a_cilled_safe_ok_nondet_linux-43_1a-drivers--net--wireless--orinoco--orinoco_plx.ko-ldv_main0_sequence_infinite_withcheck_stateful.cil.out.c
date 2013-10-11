@@ -5947,7 +5947,7 @@ extern int __pci_register_driver(struct pci_driver * , struct module * , char co
 #line 949
 extern void pci_unregister_driver(struct pci_driver * ) ;
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5972,7 +5972,7 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1363 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -5997,7 +5997,7 @@ extern int request_threaded_irq(unsigned int  , irqreturn_t (*)(int  , void * ) 
                                 irqreturn_t (*)(int  , void * ) , unsigned long  ,
                                 char const   * , void * ) ;
 #line 132 "include/linux/interrupt.h"
-__inline static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
+ static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
                                 unsigned long flags , char const   *name , void *dev ) 
 { int tmp ;
   irqreturn_t (*__cil_tmp7)(int  , void * ) ;

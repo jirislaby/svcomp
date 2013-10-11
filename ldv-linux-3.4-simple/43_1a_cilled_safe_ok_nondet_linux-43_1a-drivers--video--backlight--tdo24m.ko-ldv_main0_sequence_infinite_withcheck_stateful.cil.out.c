@@ -4091,7 +4091,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -4111,7 +4111,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -4134,7 +4134,7 @@ __inline static void list_add_tail(struct list_head *new , struct list_head *hea
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern void *memset(void * , int  , size_t  ) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -4143,7 +4143,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4173,7 +4173,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -4186,9 +4186,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1341/dscv_tempdir/dscv/ri/43_1a/drivers/video/backlight/tdo24m.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -4204,7 +4204,7 @@ extern int dev_set_drvdata(struct device * , void * ) ;
 #line 892
 extern int dev_err(struct device  const  * , char const   *  , ...) ;
 #line 573 "include/linux/spi/spi.h"
-__inline static void spi_message_init(struct spi_message *m ) 
+ static void spi_message_init(struct spi_message *m ) 
 { void *__cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
 
@@ -4224,7 +4224,7 @@ __inline static void spi_message_init(struct spi_message *m )
 }
 }
 #line 580 "include/linux/spi/spi.h"
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -4257,7 +4257,7 @@ extern struct lcd_device *lcd_device_register(char const   * , struct device * ,
 #line 105
 extern void lcd_device_unregister(struct lcd_device * ) ;
 #line 109 "include/linux/lcd.h"
-__inline static void *lcd_get_data(struct lcd_device *ld_dev ) 
+ static void *lcd_get_data(struct lcd_device *ld_dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5850,7 +5850,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1143 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1341/dscv_tempdir/dscv/ri/43_1a/drivers/video/backlight/tdo24m.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -5880,7 +5880,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1199 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1341/dscv_tempdir/dscv/ri/43_1a/drivers/video/backlight/tdo24m.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

@@ -2524,11 +2524,11 @@ extern int __attribute__((__warn_unused_result__))  _kstrtoul(char const   *s , 
 extern int __attribute__((__warn_unused_result__))  kstrtoull(char const   *s , unsigned int base ,
                                                               unsigned long long *res ) ;
 #line 220
-__inline static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
+ static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
                                                                       unsigned int base ,
                                                                       unsigned long *res )  __attribute__((__no_instrument_function__)) ;
 #line 220 "include/linux/kernel.h"
-__inline static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
+ static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
                                                                       unsigned int base ,
                                                                       unsigned long *res ) 
 { int tmp ;
@@ -2571,9 +2571,9 @@ extern int ( /* format attribute */  sprintf)(char *buf , char const   *fmt  , .
 #line 13 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/cmpxchg.h"
 extern void __cmpxchg_wrong_size(void) ;
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const   *v )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_read(atomic_t const   *v )  __attribute__((__no_instrument_function__)) ;
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const   *v ) 
+ static int atomic_read(atomic_t const   *v ) 
 { int const   *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -2592,9 +2592,9 @@ __inline static int atomic_read(atomic_t const   *v )
 }
 }
 #line 209
-__inline static int atomic_cmpxchg(atomic_t *v , int old , int new )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_cmpxchg(atomic_t *v , int old , int new )  __attribute__((__no_instrument_function__)) ;
 #line 209 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_cmpxchg(atomic_t *v , int old , int new ) 
+ static int atomic_cmpxchg(atomic_t *v , int old , int new ) 
 { int __ret ;
   int __old ;
   int __new ;
@@ -2716,9 +2716,9 @@ __inline static int atomic_cmpxchg(atomic_t *v , int old , int new )
 }
 }
 #line 228
-__inline static int __atomic_add_unless(atomic_t *v , int a , int u )  __attribute__((__no_instrument_function__)) ;
+ static int __atomic_add_unless(atomic_t *v , int a , int u )  __attribute__((__no_instrument_function__)) ;
 #line 228 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int __atomic_add_unless(atomic_t *v , int a , int u ) 
+ static int __atomic_add_unless(atomic_t *v , int a , int u ) 
 { int c ;
   int old ;
   long tmp ;
@@ -2797,9 +2797,9 @@ __inline static int __atomic_add_unless(atomic_t *v , int a , int u )
 }
 }
 #line 15 "include/linux/atomic.h"
-__inline static int atomic_add_unless(atomic_t *v , int a , int u )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_add_unless(atomic_t *v , int a , int u )  __attribute__((__no_instrument_function__)) ;
 #line 15 "include/linux/atomic.h"
-__inline static int atomic_add_unless(atomic_t *v , int a , int u ) 
+ static int atomic_add_unless(atomic_t *v , int a , int u ) 
 { int tmp ;
 
   {
@@ -2841,10 +2841,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -2858,9 +2858,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -2896,9 +2896,9 @@ extern s32 i2c_smbus_read_byte_data(struct i2c_client  const  *client , u8 comma
 extern s32 i2c_smbus_write_byte_data(struct i2c_client  const  *client , u8 command ,
                                      u8 value ) ;
 #line 242
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2920,9 +2920,9 @@ __inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )
 }
 }
 #line 247
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2959,9 +2959,9 @@ extern void pm_runtime_enable(struct device *dev ) ;
 #line 37
 extern void __pm_runtime_disable(struct device *dev , bool check_resume ) ;
 #line 62
-__inline static void pm_runtime_put_noidle(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static void pm_runtime_put_noidle(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 62 "include/linux/pm_runtime.h"
-__inline static void pm_runtime_put_noidle(struct device *dev ) 
+ static void pm_runtime_put_noidle(struct device *dev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2985,9 +2985,9 @@ __inline static void pm_runtime_put_noidle(struct device *dev )
 }
 }
 #line 198
-__inline static int pm_runtime_get_sync(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static int pm_runtime_get_sync(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 198 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_get_sync(struct device *dev ) 
+ static int pm_runtime_get_sync(struct device *dev ) 
 { int tmp___7 ;
 
   {
@@ -3000,9 +3000,9 @@ __inline static int pm_runtime_get_sync(struct device *dev )
 }
 }
 #line 214
-__inline static int pm_runtime_put_sync(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static int pm_runtime_put_sync(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 214 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_put_sync(struct device *dev ) 
+ static int pm_runtime_put_sync(struct device *dev ) 
 { int tmp___7 ;
 
   {
@@ -3015,9 +3015,9 @@ __inline static int pm_runtime_put_sync(struct device *dev )
 }
 }
 #line 229
-__inline static int pm_runtime_set_active(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static int pm_runtime_set_active(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 229 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_set_active(struct device *dev ) 
+ static int pm_runtime_set_active(struct device *dev ) 
 { int tmp___7 ;
 
   {
@@ -3030,9 +3030,9 @@ __inline static int pm_runtime_set_active(struct device *dev )
 }
 }
 #line 234
-__inline static void pm_runtime_set_suspended(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static void pm_runtime_set_suspended(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 234 "include/linux/pm_runtime.h"
-__inline static void pm_runtime_set_suspended(struct device *dev ) 
+ static void pm_runtime_set_suspended(struct device *dev ) 
 { 
 
   {
@@ -3045,9 +3045,9 @@ __inline static void pm_runtime_set_suspended(struct device *dev )
 }
 }
 #line 239
-__inline static void pm_runtime_disable(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static void pm_runtime_disable(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 239 "include/linux/pm_runtime.h"
-__inline static void pm_runtime_disable(struct device *dev ) 
+ static void pm_runtime_disable(struct device *dev ) 
 { bool __cil_tmp2 ;
 
   {

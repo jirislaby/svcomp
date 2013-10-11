@@ -3696,7 +3696,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 60 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
+ static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -3716,7 +3716,7 @@ extern int __dynamic_pr_debug(struct _ddebug * , char const   *  , ...) ;
 extern int __dynamic_dev_dbg(struct _ddebug * , struct device  const  * , char const   * 
                              , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -3741,7 +3741,7 @@ extern void __init_work(struct work_struct * , int  ) ;
 #line 380
 extern int schedule_work(struct work_struct * ) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr ) 
+ static unsigned char readb(void const volatile   *addr ) 
 { unsigned char ret ;
   unsigned char volatile   *__cil_tmp3 ;
 
@@ -3757,7 +3757,7 @@ __inline static unsigned char readb(void const volatile   *addr )
 #line 174
 extern void *ioremap_nocache(resource_size_t  , unsigned long  ) ;
 #line 182 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *ioremap(resource_size_t offset , unsigned long size ) 
+ static void *ioremap(resource_size_t offset , unsigned long size ) 
 { void *tmp ;
 
   {
@@ -3794,7 +3794,7 @@ extern int dev_warn(struct device  const  * , char const   *  , ...) ;
 #line 1502 "include/linux/input.h"
 extern void input_event(struct input_dev * , unsigned int  , unsigned int  , int  ) ;
 #line 1505 "include/linux/input.h"
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { int __cil_tmp4 ;
 
@@ -3810,7 +3810,7 @@ __inline static void input_report_key(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {
@@ -3835,7 +3835,7 @@ extern s32 i2c_smbus_read_word_data(struct i2c_client  const  * , u8  ) ;
 #line 92
 extern s32 i2c_smbus_write_word_data(struct i2c_client  const  * , u8  , u16  ) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3857,7 +3857,7 @@ __inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )
 }
 }
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;

@@ -188,7 +188,7 @@ int isPumpRunning(void) ;
 #line 7 "Specification5_spec.c"
 int switchedOnBeforeTS  ;
 #line 11 "Specification5_spec.c"
-__inline void __utac_acc__Specification5_spec__1(void) 
+ void __utac_acc__Specification5_spec__1(void) 
 { 
 
   {
@@ -199,7 +199,7 @@ __inline void __utac_acc__Specification5_spec__1(void)
 }
 }
 #line 17 "Specification5_spec.c"
-__inline void __utac_acc__Specification5_spec__2(void) 
+ void __utac_acc__Specification5_spec__2(void) 
 { 
 
   {
@@ -212,7 +212,7 @@ __inline void __utac_acc__Specification5_spec__2(void)
 }
 }
 #line 23 "Specification5_spec.c"
-__inline void __utac_acc__Specification5_spec__3(void) 
+ void __utac_acc__Specification5_spec__3(void) 
 { int tmp ;
   int tmp___0 ;
 

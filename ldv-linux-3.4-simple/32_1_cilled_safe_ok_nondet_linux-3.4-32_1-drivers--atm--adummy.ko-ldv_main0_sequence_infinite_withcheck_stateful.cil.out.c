@@ -6138,9 +6138,9 @@ long __builtin_expect(long val , long res ) ;
 #line 47 "include/linux/list.h"
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 60
-__inline static void list_add(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head ) 
+ static void list_add(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -6155,10 +6155,10 @@ __inline static void list_add(struct list_head *new , struct list_head *head )
 }
 }
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -6178,9 +6178,9 @@ __inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int 
 }
 }
 #line 97
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 97 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -6205,9 +6205,9 @@ extern int ( /* format attribute */  sprintf)(char *buf , char const   *fmt  , .
 #line 334
 extern int ( /* format attribute */  sscanf)(char const   * , char const   *  , ...) ;
 #line 93 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_inc(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 93 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v ) 
+ static void atomic_inc(atomic_t *v ) 
 { 
 
   {
@@ -6249,10 +6249,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -6266,9 +6266,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 

@@ -3426,7 +3426,7 @@ extern int sprintf(char * , char const   *  , ...) ;
 #line 355 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt_types.h"
 extern struct pv_cpu_ops pv_cpu_ops ;
 #line 349 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt.h"
-__inline static void slow_down_io(void) 
+ static void slow_down_io(void) 
 { unsigned long __cil_tmp1 ;
   void (*__cil_tmp2)(void) ;
 
@@ -3444,7 +3444,7 @@ __inline static void slow_down_io(void)
 }
 }
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3453,7 +3453,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3490,7 +3490,7 @@ extern void __release_region(struct resource * , resource_size_t  , resource_siz
 #line 82 "include/linux/jiffies.h"
 extern unsigned long volatile   jiffies ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -3501,7 +3501,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -3512,7 +3512,7 @@ __inline static unsigned char inb(int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb_p(int port ) 
+ static unsigned char inb_p(int port ) 
 { unsigned char value ;
   unsigned char tmp ;
 
@@ -3542,7 +3542,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11116/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/smsc47b397.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -3576,7 +3576,7 @@ extern int platform_driver_register(struct platform_driver * ) ;
 #line 175
 extern void platform_driver_unregister(struct platform_driver * ) ;
 #line 183 "include/linux/platform_device.h"
-__inline static void *platform_get_drvdata(struct platform_device  const  *pdev ) 
+ static void *platform_get_drvdata(struct platform_device  const  *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3598,7 +3598,7 @@ __inline static void *platform_get_drvdata(struct platform_device  const  *pdev 
 }
 }
 #line 188 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
+ static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -3629,7 +3629,7 @@ static unsigned short force_id  ;
 #line 63 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11116/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/smsc47b397.c.p"
 static struct platform_device *pdev  ;
 #line 72 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11116/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/smsc47b397.c.p"
-__inline static void superio_outb(int reg , int val ) 
+ static void superio_outb(int reg , int val ) 
 { unsigned char __cil_tmp3 ;
   int __cil_tmp4 ;
   unsigned char __cil_tmp5 ;
@@ -3661,7 +3661,7 @@ __inline static void superio_outb(int reg , int val )
 }
 }
 #line 78 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11116/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/smsc47b397.c.p"
-__inline static int superio_inb(int reg ) 
+ static int superio_inb(int reg ) 
 { unsigned char tmp ;
   unsigned char __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3685,7 +3685,7 @@ __inline static int superio_inb(int reg )
 }
 }
 #line 85 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11116/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/smsc47b397.c.p"
-__inline static void superio_select(int ld ) 
+ static void superio_select(int ld ) 
 { 
 
   {
@@ -3698,7 +3698,7 @@ __inline static void superio_select(int ld )
 }
 }
 #line 90 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11116/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/smsc47b397.c.p"
-__inline static void superio_enter(void) 
+ static void superio_enter(void) 
 { 
 
   {
@@ -3711,7 +3711,7 @@ __inline static void superio_enter(void)
 }
 }
 #line 95 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11116/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/smsc47b397.c.p"
-__inline static void superio_exit(void) 
+ static void superio_exit(void) 
 { 
 
   {
@@ -5372,7 +5372,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 868 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11116/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/smsc47b397.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

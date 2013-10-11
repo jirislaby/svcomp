@@ -7251,9 +7251,9 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock )  __attribute_
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -7262,9 +7262,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -7302,9 +7302,9 @@ int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 368 "include/linux/workqueue.h"
 extern int queue_work(struct workqueue_struct *wq , struct work_struct *work ) ;
 #line 111 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static phys_addr_t virt_to_phys(void volatile   *address )  __attribute__((__no_instrument_function__)) ;
+ static phys_addr_t virt_to_phys(void volatile   *address )  __attribute__((__no_instrument_function__)) ;
 #line 111 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static phys_addr_t virt_to_phys(void volatile   *address ) 
+ static phys_addr_t virt_to_phys(void volatile   *address ) 
 { unsigned long tmp ;
   unsigned long __cil_tmp3 ;
 
@@ -7332,10 +7332,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -7349,9 +7349,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -7381,9 +7381,9 @@ extern int dma_supported(struct device *hwdev , u64 mask ) ;
 #line 59
 extern int dma_set_mask(struct device *dev , u64 mask ) ;
 #line 88 "include/linux/dma-mapping.h"
-__inline static int dma_set_coherent_mask(struct device *dev , u64 mask )  __attribute__((__no_instrument_function__)) ;
+ static int dma_set_coherent_mask(struct device *dev , u64 mask )  __attribute__((__no_instrument_function__)) ;
 #line 88 "include/linux/dma-mapping.h"
-__inline static int dma_set_coherent_mask(struct device *dev , u64 mask ) 
+ static int dma_set_coherent_mask(struct device *dev , u64 mask ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -7425,9 +7425,9 @@ extern void __const_udelay(unsigned long xloops ) ;
 #line 48 "include/linux/delay.h"
 extern void usleep_range(unsigned long min , unsigned long max ) ;
 #line 32 "include/linux/semaphore.h"
-__inline static void sema_init(struct semaphore *sem , int val )  __attribute__((__no_instrument_function__)) ;
+ static void sema_init(struct semaphore *sem , int val )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/semaphore.h"
-__inline static void sema_init(struct semaphore *sem , int val ) 
+ static void sema_init(struct semaphore *sem , int val ) 
 { struct semaphore __constr_expr_0 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -7502,9 +7502,9 @@ extern void netif_carrier_on(struct net_device *dev ) ;
 #line 2212
 extern void netif_carrier_off(struct net_device *dev ) ;
 #line 33 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/net/wireless/mwifiex/util.h"
-__inline static phys_addr_t *MWIFIEX_SKB_PACB(struct sk_buff *skb )  __attribute__((__no_instrument_function__)) ;
+ static phys_addr_t *MWIFIEX_SKB_PACB(struct sk_buff *skb )  __attribute__((__no_instrument_function__)) ;
 #line 33 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/net/wireless/mwifiex/util.h"
-__inline static phys_addr_t *MWIFIEX_SKB_PACB(struct sk_buff *skb ) 
+ static phys_addr_t *MWIFIEX_SKB_PACB(struct sk_buff *skb ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -7554,9 +7554,9 @@ extern int __attribute__((__warn_unused_result__))  __pci_register_driver(struct
 #line 949
 extern void pci_unregister_driver(struct pci_driver *dev ) ;
 #line 105 "include/asm-generic/pci-dma-compat.h"
-__inline static int pci_set_dma_mask(struct pci_dev *dev , u64 mask )  __attribute__((__no_instrument_function__)) ;
+ static int pci_set_dma_mask(struct pci_dev *dev , u64 mask )  __attribute__((__no_instrument_function__)) ;
 #line 105 "include/asm-generic/pci-dma-compat.h"
-__inline static int pci_set_dma_mask(struct pci_dev *dev , u64 mask ) 
+ static int pci_set_dma_mask(struct pci_dev *dev , u64 mask ) 
 { int tmp___7 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -7578,9 +7578,9 @@ __inline static int pci_set_dma_mask(struct pci_dev *dev , u64 mask )
 }
 }
 #line 110
-__inline static int pci_set_consistent_dma_mask(struct pci_dev *dev , u64 mask )  __attribute__((__no_instrument_function__)) ;
+ static int pci_set_consistent_dma_mask(struct pci_dev *dev , u64 mask )  __attribute__((__no_instrument_function__)) ;
 #line 110 "include/asm-generic/pci-dma-compat.h"
-__inline static int pci_set_consistent_dma_mask(struct pci_dev *dev , u64 mask ) 
+ static int pci_set_consistent_dma_mask(struct pci_dev *dev , u64 mask ) 
 { int tmp___7 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -7602,9 +7602,9 @@ __inline static int pci_set_consistent_dma_mask(struct pci_dev *dev , u64 mask )
 }
 }
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
+ static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -7629,9 +7629,9 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1363
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 1363 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -7661,14 +7661,14 @@ extern int __attribute__((__warn_unused_result__))  request_threaded_irq(unsigne
                                                                          char const   *name ,
                                                                          void *dev ) ;
 #line 131
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
                                                                          char const   *name ,
                                                                          void *dev )  __attribute__((__no_instrument_function__)) ;
 #line 131 "include/linux/interrupt.h"
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
@@ -7700,10 +7700,10 @@ extern void mwifiex_process_sleep_confirm_resp(struct mwifiex_adapter * , u8 * ,
 #line 760
 extern int mwifiex_deauthenticate(struct mwifiex_private *priv , u8 *mac ) ;
 #line 856
-__inline static struct mwifiex_private *mwifiex_get_priv(struct mwifiex_adapter *adapter ,
+ static struct mwifiex_private *mwifiex_get_priv(struct mwifiex_adapter *adapter ,
                                                          enum mwifiex_bss_role bss_role )  __attribute__((__no_instrument_function__)) ;
 #line 856 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/net/wireless/mwifiex/main.h"
-__inline static struct mwifiex_private *mwifiex_get_priv(struct mwifiex_adapter *adapter ,
+ static struct mwifiex_private *mwifiex_get_priv(struct mwifiex_adapter *adapter ,
                                                          enum mwifiex_bss_role bss_role ) 
 { int i ;
   struct mwifiex_private *tmp___7 ;

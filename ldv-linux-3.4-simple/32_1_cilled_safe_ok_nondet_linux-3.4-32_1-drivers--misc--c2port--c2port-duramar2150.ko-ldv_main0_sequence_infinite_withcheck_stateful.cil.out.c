@@ -164,9 +164,9 @@ extern struct resource *__request_region(struct resource * , resource_size_t sta
 #line 192
 extern void __release_region(struct resource * , resource_size_t  , resource_size_t  ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -181,9 +181,9 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308
-__inline static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {

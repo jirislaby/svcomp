@@ -2277,7 +2277,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 98 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void clear_bit(int nr , unsigned long volatile   *addr ) 
+ static void clear_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -2312,7 +2312,7 @@ extern void hid_unregister_driver(struct hid_driver * ) ;
 #line 739
 extern int hid_connect(struct hid_device * , unsigned int  ) ;
 #line 754 "include/linux/hid.h"
-__inline static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
+ static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
                                    unsigned long **bit , int *max , __u8 type , __u16 c ) 
 { struct input_dev *input ;
   unsigned long __cil_tmp8 ;
@@ -2436,7 +2436,7 @@ __inline static void hid_map_usage(struct hid_input *hidinput , struct hid_usage
 }
 }
 #line 789 "include/linux/hid.h"
-__inline static void hid_map_usage_clear(struct hid_input *hidinput , struct hid_usage *usage ,
+ static void hid_map_usage_clear(struct hid_input *hidinput , struct hid_usage *usage ,
                                          unsigned long **bit , int *max , __u8 type ,
                                          __u16 c ) 
 { int __cil_tmp7 ;
@@ -2473,7 +2473,7 @@ __inline static void hid_map_usage_clear(struct hid_input *hidinput , struct hid
 }
 }
 #line 806 "include/linux/hid.h"
-__inline static int hid_parse(struct hid_device *hdev ) 
+ static int hid_parse(struct hid_device *hdev ) 
 { int ret ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2547,7 +2547,7 @@ __inline static int hid_parse(struct hid_device *hdev )
 }
 }
 #line 830 "include/linux/hid.h"
-__inline static int hid_hw_start(struct hid_device *hdev , unsigned int connect_mask ) 
+ static int hid_hw_start(struct hid_device *hdev , unsigned int connect_mask ) 
 { int ret ;
   int tmp ;
   unsigned long __cil_tmp5 ;

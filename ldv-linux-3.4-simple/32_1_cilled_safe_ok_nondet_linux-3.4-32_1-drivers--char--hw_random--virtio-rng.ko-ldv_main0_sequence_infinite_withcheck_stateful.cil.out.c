@@ -1276,9 +1276,9 @@ struct module {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )  __attribute__((__no_instrument_function__)) ;
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )  __attribute__((__no_instrument_function__)) ;
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
 { 
 
   {
@@ -1287,9 +1287,9 @@ __inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long erro
 }
 }
 #line 27
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -1298,9 +1298,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -1348,9 +1348,9 @@ int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 76 "include/linux/completion.h"
 static struct lock_class_key __key  ;
 #line 73
-__inline static void init_completion(struct completion *x )  __attribute__((__no_instrument_function__)) ;
+ static void init_completion(struct completion *x )  __attribute__((__no_instrument_function__)) ;
 #line 73 "include/linux/completion.h"
-__inline static void init_completion(struct completion *x ) 
+ static void init_completion(struct completion *x ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   wait_queue_head_t *__cil_tmp4 ;
@@ -1399,10 +1399,10 @@ extern int register_virtio_driver(struct virtio_driver *drv ) ;
 #line 104
 extern void unregister_virtio_driver(struct virtio_driver *drv ) ;
 #line 181 "include/linux/virtio_config.h"
-__inline static struct virtqueue *virtio_find_single_vq(struct virtio_device *vdev ,
+ static struct virtqueue *virtio_find_single_vq(struct virtio_device *vdev ,
                                                         vq_callback_t *c , char const   *n )  __attribute__((__no_instrument_function__)) ;
 #line 181 "include/linux/virtio_config.h"
-__inline static struct virtqueue *virtio_find_single_vq(struct virtio_device *vdev ,
+ static struct virtqueue *virtio_find_single_vq(struct virtio_device *vdev ,
                                                         vq_callback_t *c , char const   *n ) 
 { vq_callback_t *callbacks[1] ;
   char const   *names[1] ;

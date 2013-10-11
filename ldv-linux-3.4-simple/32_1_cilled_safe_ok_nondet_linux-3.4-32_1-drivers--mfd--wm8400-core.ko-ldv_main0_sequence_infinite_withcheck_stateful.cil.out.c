@@ -2806,10 +2806,10 @@ struct __anonstruct_251 {
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__,
+ static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__,
 __const__)) ;
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2842,9 +2842,9 @@ __inline static __u16 __fswab16(__u16 val )
 #line 100 "include/linux/printk.h"
 extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2853,9 +2853,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2918,9 +2918,9 @@ extern int ( /* format attribute */  dev_warn)(struct device  const  *dev , char
 extern int ( /* format attribute */  _dev_info)(struct device  const  *dev , char const   *fmt 
                                                 , ...) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2942,9 +2942,9 @@ __inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )
 }
 }
 #line 247
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;

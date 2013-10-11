@@ -3776,7 +3776,7 @@ int landingButtons_spc1_3  ;
 #line 11 "Specification1_spec.c"
 int landingButtons_spc1_4  ;
 #line 15 "Specification1_spec.c"
-__inline void __utac_acc__Specification1_spec__1(void) 
+ void __utac_acc__Specification1_spec__1(void) 
 { 
 
   {
@@ -3961,7 +3961,7 @@ void __utac_acc__Specification1_spec__3(void)
 }
 }
 #line 52 "Specification1_spec.c"
-__inline void __utac_acc__Specification1_spec__4(void) 
+ void __utac_acc__Specification1_spec__4(void) 
 { 
 
   {

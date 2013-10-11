@@ -7287,7 +7287,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -7300,9 +7300,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8632/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/bt8xx/dvb-bt8xx.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -7380,7 +7380,7 @@ extern int bttv_sub_register(struct bttv_sub_driver * , char * ) ;
 #line 343
 extern int bttv_sub_unregister(struct bttv_sub_driver * ) ;
 #line 66 "drivers/media/dvb/frontends/mt352.h"
-__inline static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len ) 
+ static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len ) 
 { int r ;
   int (*__cil_tmp5)(struct dvb_frontend * , u8 const   * , int  ) ;
   unsigned long __cil_tmp6 ;
@@ -7449,7 +7449,7 @@ extern void bt878_start(struct bt878 * , u32  , u32  , u32  ) ;
 #line 143
 extern void bt878_stop(struct bt878 * ) ;
 #line 36 "drivers/media/dvb/frontends/cx24110.h"
-__inline static int cx24110_pll_write(struct dvb_frontend *fe , u32 val ) 
+ static int cx24110_pll_write(struct dvb_frontend *fe , u32 val ) 
 { u8 buf[3U] ;
   int tmp ;
   unsigned long __cil_tmp5 ;
@@ -15623,7 +15623,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1686 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8632/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/bt8xx/dvb-bt8xx.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -15653,7 +15653,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1742 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8632/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/bt8xx/dvb-bt8xx.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

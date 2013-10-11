@@ -1557,7 +1557,7 @@ int ldv_spin_trylock(void) ;
 #line 101 "include/linux/printk.h"
 extern int printk(char const   *  , ...) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr ) 
+ static unsigned char readb(void const volatile   *addr ) 
 { unsigned char ret ;
   unsigned char volatile   *__cil_tmp3 ;
 
@@ -1571,7 +1571,7 @@ __inline static unsigned char readb(void const volatile   *addr )
 }
 }
 #line 61 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writeb(unsigned char val , void volatile   *addr ) 
+ static void writeb(unsigned char val , void volatile   *addr ) 
 { unsigned char volatile   *__cil_tmp3 ;
 
   {
@@ -1596,7 +1596,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4895/dscv_tempdir/dscv/ri/43_1a/drivers/w1/masters/matrox_w1.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -1618,7 +1618,7 @@ extern int __pci_register_driver(struct pci_driver * , struct module * , char co
 #line 949
 extern void pci_unregister_driver(struct pci_driver * ) ;
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -1643,7 +1643,7 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1363 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -1698,7 +1698,7 @@ static u8 matrox_w1_read_ddc_bit(void *data ) ;
 #line 108
 static void matrox_w1_write_ddc_bit(void *data , u8 bit ) ;
 #line 121 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4895/dscv_tempdir/dscv/ri/43_1a/drivers/w1/masters/matrox_w1.c.p"
-__inline static u8 matrox_w1_read_reg(struct matrox_device *dev , u8 reg ) 
+ static u8 matrox_w1_read_reg(struct matrox_device *dev , u8 reg ) 
 { u8 ret ;
   int __cil_tmp4 ;
   unsigned char __cil_tmp5 ;
@@ -1745,7 +1745,7 @@ __inline static u8 matrox_w1_read_reg(struct matrox_device *dev , u8 reg )
 }
 }
 #line 132 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4895/dscv_tempdir/dscv/ri/43_1a/drivers/w1/masters/matrox_w1.c.p"
-__inline static void matrox_w1_write_reg(struct matrox_device *dev , u8 reg , u8 val ) 
+ static void matrox_w1_write_reg(struct matrox_device *dev , u8 reg , u8 val ) 
 { int __cil_tmp4 ;
   unsigned char __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -2786,7 +2786,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 679 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4895/dscv_tempdir/dscv/ri/43_1a/drivers/w1/masters/matrox_w1.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

@@ -1708,9 +1708,9 @@ long __builtin_expect(long val , long res ) ;
 #line 100 "include/linux/printk.h"
 extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -1771,10 +1771,10 @@ extern int i2o_driver_register(struct i2o_driver * ) ;
 #line 712
 extern void i2o_driver_unregister(struct i2o_driver * ) ;
 #line 890
-__inline static int i2o_msg_post_wait(struct i2o_controller *c , struct i2o_message *msg ,
+ static int i2o_msg_post_wait(struct i2o_controller *c , struct i2o_message *msg ,
                                       unsigned long timeout )  __attribute__((__no_instrument_function__)) ;
 #line 890 "include/linux/i2o.h"
-__inline static int i2o_msg_post_wait(struct i2o_controller *c , struct i2o_message *msg ,
+ static int i2o_msg_post_wait(struct i2o_controller *c , struct i2o_message *msg ,
                                       unsigned long timeout ) 
 { int tmp ;
   void *__cil_tmp5 ;

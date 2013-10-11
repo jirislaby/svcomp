@@ -3868,9 +3868,9 @@ extern int misc_register(struct miscdevice *misc ) ;
 #line 62
 extern int misc_deregister(struct miscdevice *misc ) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -3889,9 +3889,9 @@ extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 #line 147 "include/linux/kernel.h"
 extern void __might_sleep(char const   *file , int line , int preempt_offset ) ;
 #line 194
-__inline static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
+ static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
 #line 194 "include/linux/kernel.h"
-__inline static void might_fault(void) 
+ static void might_fault(void) 
 { 
 
   {
@@ -3933,9 +3933,9 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -4029,9 +4029,9 @@ __inline static struct task_struct *( __attribute__((__always_inline__)) get_cur
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern void *memset(void *s , int c , size_t n ) ;
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp___0 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -4063,9 +4063,9 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock )  __attribute_
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -4074,9 +4074,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -4123,11 +4123,11 @@ extern unsigned long __attribute__((__warn_unused_result__))  _copy_to_user(void
                                                                             void const   *from ,
                                                                             unsigned int len ) ;
 #line 62
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void const   *src ,
                                                                                                                 unsigned int size )  __attribute__((__no_instrument_function__)) ;
 #line 62 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void const   *src ,
                                                                                                                 unsigned int size ) 
 { unsigned long tmp ;
@@ -4144,10 +4144,10 @@ __inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__
 }
 }
 #line 44 "include/linux/poll.h"
-__inline static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
+ static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
                                poll_table *p )  __attribute__((__no_instrument_function__)) ;
 #line 44 "include/linux/poll.h"
-__inline static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
+ static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
                                poll_table *p ) 
 { void (*__cil_tmp4)(struct file * , wait_queue_head_t * , struct poll_table_struct * ) ;
 
@@ -4180,9 +4180,9 @@ __inline static void poll_wait(struct file *filp , wait_queue_head_t *wait_addre
 #line 362 "include/linux/sched.h"
 extern void schedule(void) ;
 #line 2563
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 2563 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp___7 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4207,9 +4207,9 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2589
-__inline static int signal_pending(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
+ static int signal_pending(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
 #line 2589 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp___7 ;
   int tmp___8 ;
   long tmp___9 ;

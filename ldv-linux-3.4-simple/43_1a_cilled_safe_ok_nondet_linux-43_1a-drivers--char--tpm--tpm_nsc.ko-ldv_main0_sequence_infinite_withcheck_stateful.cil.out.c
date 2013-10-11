@@ -3377,7 +3377,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 7 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/swab.h"
-__inline static __u32 __arch_swab32(__u32 val ) 
+ static __u32 __arch_swab32(__u32 val ) 
 { 
 
   {
@@ -3388,7 +3388,7 @@ __inline static __u32 __arch_swab32(__u32 val )
 }
 }
 #line 55 "include/linux/swab.h"
-__inline static __u32 __fswab32(__u32 val ) 
+ static __u32 __fswab32(__u32 val ) 
 { __u32 tmp ;
 
   {
@@ -3413,7 +3413,7 @@ extern void __release_region(struct resource * , resource_size_t  , resource_siz
 #line 82 "include/linux/jiffies.h"
 extern unsigned long volatile   jiffies ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -3424,7 +3424,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -3480,7 +3480,7 @@ extern ssize_t tpm_show_caps(struct device * , struct device_attribute * , char 
 extern ssize_t tpm_store_cancel(struct device * , struct device_attribute * , char const   * ,
                                 size_t  ) ;
 #line 135 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/char/tpm/tpm.h"
-__inline static int tpm_read_index(int base , int index ) 
+ static int tpm_read_index(int base , int index ) 
 { unsigned char tmp ;
   unsigned char __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -3507,7 +3507,7 @@ __inline static int tpm_read_index(int base , int index )
 }
 }
 #line 141 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/char/tpm/tpm.h"
-__inline static void tpm_write_index(int base , int index , int value ) 
+ static void tpm_write_index(int base , int index , int value ) 
 { unsigned char __cil_tmp4 ;
   int __cil_tmp5 ;
   unsigned char __cil_tmp6 ;

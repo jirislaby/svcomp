@@ -5165,7 +5165,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   short __cil_tmp4 ;
@@ -5218,7 +5218,7 @@ struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 563 "include/linux/skbuff.h"
 extern struct sk_buff *__alloc_skb(unsigned int  , gfp_t  , int  , int  ) ;
 #line 566 "include/linux/skbuff.h"
-__inline static struct sk_buff *ldv_alloc_skb_19(unsigned int size , gfp_t priority ) 
+ static struct sk_buff *ldv_alloc_skb_19(unsigned int size , gfp_t priority ) 
 { struct sk_buff *tmp ;
 
   {
@@ -5231,7 +5231,7 @@ __inline static struct sk_buff *ldv_alloc_skb_19(unsigned int size , gfp_t prior
 }
 }
 #line 566
-__inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority ) ;
+ static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority ) ;
 #line 591
 extern struct sk_buff *skb_clone(struct sk_buff * , gfp_t  ) ;
 #line 595
@@ -5252,7 +5252,7 @@ extern unsigned char *skb_push(struct sk_buff * , unsigned int  ) ;
 #line 1310
 extern unsigned char *skb_pull(struct sk_buff * , unsigned int  ) ;
 #line 1445 "include/linux/skbuff.h"
-__inline static void skb_reset_mac_header(struct sk_buff *skb ) 
+ static void skb_reset_mac_header(struct sk_buff *skb ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5306,7 +5306,7 @@ struct sk_buff *ldv___netdev_alloc_skb_25(struct net_device *ldv_func_arg1 , uns
 struct sk_buff *ldv___netdev_alloc_skb_26(struct net_device *ldv_func_arg1 , unsigned int ldv_func_arg2 ,
                                           gfp_t ldv_func_arg3 ) ;
 #line 1422 "include/linux/netdevice.h"
-__inline static void *netdev_priv(struct net_device  const  *dev ) 
+ static void *netdev_priv(struct net_device  const  *dev ) 
 { void *__cil_tmp2 ;
 
   {
@@ -9055,7 +9055,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1046 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/13852/dscv_tempdir/dscv/ri/43_1a/drivers/net/arcnet/rfc1201.c.p"
-__inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority ) 
+ static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority ) 
 { struct sk_buff *tmp ;
 
   {

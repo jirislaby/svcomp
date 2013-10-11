@@ -1303,7 +1303,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 22 "include/linux/err.h"
-__inline static void *ERR_PTR(long error ) 
+ static void *ERR_PTR(long error ) 
 { 
 
   {
@@ -1312,7 +1312,7 @@ __inline static void *ERR_PTR(long error )
 }
 }
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -1321,7 +1321,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -1345,7 +1345,7 @@ __inline static long IS_ERR(void const   *ptr )
 #line 79 "include/linux/wait.h"
 extern void __init_waitqueue_head(wait_queue_head_t * , char const   * , struct lock_class_key * ) ;
 #line 73 "include/linux/completion.h"
-__inline static void init_completion(struct completion *x ) 
+ static void init_completion(struct completion *x ) 
 { struct lock_class_key __key ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -1402,7 +1402,7 @@ extern int register_virtio_driver(struct virtio_driver * ) ;
 #line 104
 extern void unregister_virtio_driver(struct virtio_driver * ) ;
 #line 182 "include/linux/virtio_config.h"
-__inline static struct virtqueue *virtio_find_single_vq(struct virtio_device *vdev ,
+ static struct virtqueue *virtio_find_single_vq(struct virtio_device *vdev ,
                                                         vq_callback_t *c , char const   *n ) 
 { vq_callback_t *callbacks[1U] ;
   char const   *names[1U] ;

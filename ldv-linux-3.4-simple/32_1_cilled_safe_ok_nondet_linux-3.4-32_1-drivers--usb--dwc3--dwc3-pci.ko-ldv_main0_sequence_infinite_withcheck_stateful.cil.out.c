@@ -2603,9 +2603,9 @@ extern void pci_unregister_driver(struct pci_driver *dev ) ;
 #line 58 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/dma-mapping.h"
 extern int dma_supported(struct device *hwdev , u64 mask ) ;
 #line 88 "include/linux/dma-mapping.h"
-__inline static int dma_set_coherent_mask(struct device *dev , u64 mask )  __attribute__((__no_instrument_function__)) ;
+ static int dma_set_coherent_mask(struct device *dev , u64 mask )  __attribute__((__no_instrument_function__)) ;
 #line 88 "include/linux/dma-mapping.h"
-__inline static int dma_set_coherent_mask(struct device *dev , u64 mask ) 
+ static int dma_set_coherent_mask(struct device *dev , u64 mask ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -2633,9 +2633,9 @@ __inline static int dma_set_coherent_mask(struct device *dev , u64 mask )
 }
 }
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
+ static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2660,9 +2660,9 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1363
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 1363 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;

@@ -2152,7 +2152,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 60 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
+ static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -2175,7 +2175,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2868/dscv_tempdir/dscv/ri/43_1a/drivers/input/joystick/magellan.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2199,7 +2199,7 @@ extern void input_unregister_device(struct input_dev * ) ;
 #line 1502
 extern void input_event(struct input_dev * , unsigned int  , unsigned int  , int  ) ;
 #line 1505 "include/linux/input.h"
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { int __cil_tmp4 ;
 
@@ -2215,7 +2215,7 @@ __inline static void input_report_key(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1515 "include/linux/input.h"
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { 
 
@@ -2229,7 +2229,7 @@ __inline static void input_report_abs(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {
@@ -2253,7 +2253,7 @@ extern int __serio_register_driver(struct serio_driver * , struct module * , cha
 #line 97
 extern void serio_unregister_driver(struct serio_driver * ) ;
 #line 117 "include/linux/serio.h"
-__inline static void *serio_get_drvdata(struct serio *serio ) 
+ static void *serio_get_drvdata(struct serio *serio ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2278,7 +2278,7 @@ __inline static void *serio_get_drvdata(struct serio *serio )
 }
 }
 #line 122 "include/linux/serio.h"
-__inline static void serio_set_drvdata(struct serio *serio , void *data ) 
+ static void serio_set_drvdata(struct serio *serio , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -3654,7 +3654,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 697 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2868/dscv_tempdir/dscv/ri/43_1a/drivers/input/joystick/magellan.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

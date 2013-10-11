@@ -5043,7 +5043,7 @@ int ldv_spin_trylock(void) ;
 #line 101 "include/linux/printk.h"
 extern int printk(char const   *  , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -5063,7 +5063,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -5096,7 +5096,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/704/dscv_tempdir/dscv/ri/43_1a/drivers/gpu/drm/drm_usb.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -5122,7 +5122,7 @@ extern int drm_fill_in_dev(struct drm_device * , struct pci_device_id  const  * 
 #line 1738
 extern int drm_get_minor(struct drm_device * , struct drm_minor ** , int  ) ;
 #line 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -5143,7 +5143,7 @@ __inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
 }
 }
 #line 523 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
 { struct device  const  *__mptr ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5829,7 +5829,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 529 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/704/dscv_tempdir/dscv/ri/43_1a/drivers/gpu/drm/drm_usb.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

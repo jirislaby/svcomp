@@ -2480,7 +2480,7 @@ extern int memcmp(void const   * , void const   * , size_t  ) ;
 #line 62
 extern char *strcpy(char * , char const   * ) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2489,7 +2489,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2519,7 +2519,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -2532,9 +2532,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11604/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/tests/mtd_pagetest.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2556,7 +2556,7 @@ extern struct mtd_info *get_mtd_device(struct mtd_info * , int  ) ;
 #line 374
 extern void put_mtd_device(struct mtd_info * ) ;
 #line 390 "include/linux/mtd/mtd.h"
-__inline static int mtd_is_bitflip(int err ) 
+ static int mtd_is_bitflip(int err ) 
 { 
 
   {
@@ -2591,7 +2591,7 @@ static int errcnt  ;
 #line 63 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11604/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/tests/mtd_pagetest.c.p"
 static unsigned long next  =    1UL;
 #line 65 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11604/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/tests/mtd_pagetest.c.p"
-__inline static unsigned int simple_rand(void) 
+ static unsigned int simple_rand(void) 
 { unsigned long __cil_tmp1 ;
   unsigned long __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
@@ -2612,7 +2612,7 @@ __inline static unsigned int simple_rand(void)
 }
 }
 #line 71 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11604/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/tests/mtd_pagetest.c.p"
-__inline static void simple_srand(unsigned long seed ) 
+ static void simple_srand(unsigned long seed ) 
 { 
 
   {
@@ -5912,7 +5912,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 940 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11604/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/tests/mtd_pagetest.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -5942,7 +5942,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 996 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11604/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/tests/mtd_pagetest.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

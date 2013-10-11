@@ -550,7 +550,7 @@ static void inspect(struct list_head const *head )
   return;
 }
 }
-__inline static void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next )
+ static void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next )
 { unsigned int __cil_tmp4 ;
   unsigned int __cil_tmp5 ;
   unsigned int __cil_tmp6 ;
@@ -567,7 +567,7 @@ __inline static void __list_add(struct list_head *new , struct list_head *prev ,
   return;
 }
 }
-__inline static void __list_del(struct list_head *prev , struct list_head *next )
+ static void __list_del(struct list_head *prev , struct list_head *next )
 { unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
   {
@@ -578,7 +578,7 @@ __inline static void __list_del(struct list_head *prev , struct list_head *next 
   return;
 }
 }
-__inline static void list_add(struct list_head *new , struct list_head *head )
+ static void list_add(struct list_head *new , struct list_head *head )
 { struct list_head *__cil_tmp3 ;
   {
   {
@@ -588,7 +588,7 @@ __inline static void list_add(struct list_head *new , struct list_head *head )
   return;
 }
 }
-__inline static void list_move(struct list_head *list , struct list_head *head )
+ static void list_move(struct list_head *list , struct list_head *head )
 { unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;

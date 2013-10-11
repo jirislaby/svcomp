@@ -3804,9 +3804,9 @@ struct __anonstruct_261 {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 82 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void __set_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 82 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile   *addr ) 
+ static void __set_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -3852,10 +3852,10 @@ extern void input_unregister_device(struct input_dev * ) ;
 extern void input_event(struct input_dev *dev , unsigned int type , unsigned int code ,
                         int value ) ;
 #line 1505
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value )  __attribute__((__no_instrument_function__)) ;
 #line 1505 "include/linux/input.h"
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -3874,9 +3874,9 @@ __inline static void input_report_key(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1530
-__inline static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
+ static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {

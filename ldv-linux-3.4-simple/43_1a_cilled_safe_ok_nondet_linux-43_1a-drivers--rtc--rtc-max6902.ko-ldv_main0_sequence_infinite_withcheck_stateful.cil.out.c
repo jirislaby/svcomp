@@ -3456,7 +3456,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3465,7 +3465,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3506,7 +3506,7 @@ extern int rtc_valid_tm(struct rtc_time * ) ;
 extern struct rtc_device *rtc_device_register(char const   * , struct device * , struct rtc_class_ops  const  * ,
                                               struct module * ) ;
 #line 105 "include/linux/spi/spi.h"
-__inline static struct spi_device *to_spi_device(struct device *dev ) 
+ static struct spi_device *to_spi_device(struct device *dev ) 
 { struct device  const  *__mptr ;
   struct spi_device *tmp ;
   struct device *__cil_tmp4 ;

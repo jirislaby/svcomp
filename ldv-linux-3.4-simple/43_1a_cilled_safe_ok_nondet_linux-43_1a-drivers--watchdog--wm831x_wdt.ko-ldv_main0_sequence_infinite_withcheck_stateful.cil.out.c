@@ -1182,7 +1182,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 60 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
+ static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -1223,7 +1223,7 @@ extern int dev_err(struct device  const  * , char const   *  , ...) ;
 #line 894
 extern int dev_warn(struct device  const  * , char const   *  , ...) ;
 #line 132 "include/linux/watchdog.h"
-__inline static void watchdog_set_nowayout(struct watchdog_device *wdd , bool nowayout ) 
+ static void watchdog_set_nowayout(struct watchdog_device *wdd , bool nowayout ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long *__cil_tmp5 ;
@@ -1252,7 +1252,7 @@ __inline static void watchdog_set_nowayout(struct watchdog_device *wdd , bool no
 }
 }
 #line 139 "include/linux/watchdog.h"
-__inline static void watchdog_set_drvdata(struct watchdog_device *wdd , void *data ) 
+ static void watchdog_set_drvdata(struct watchdog_device *wdd , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
 
@@ -1268,7 +1268,7 @@ __inline static void watchdog_set_drvdata(struct watchdog_device *wdd , void *da
 }
 }
 #line 144 "include/linux/watchdog.h"
-__inline static void *watchdog_get_drvdata(struct watchdog_device *wdd ) 
+ static void *watchdog_get_drvdata(struct watchdog_device *wdd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 

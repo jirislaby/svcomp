@@ -4495,7 +4495,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 7 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/swab.h"
-__inline static __u32 __arch_swab32(__u32 val ) 
+ static __u32 __arch_swab32(__u32 val ) 
 { 
 
   {
@@ -4506,7 +4506,7 @@ __inline static __u32 __arch_swab32(__u32 val )
 }
 }
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   short __cil_tmp4 ;
@@ -4543,7 +4543,7 @@ __inline static __u16 __fswab16(__u16 val )
 }
 }
 #line 55 "include/linux/swab.h"
-__inline static __u32 __fswab32(__u32 val ) 
+ static __u32 __fswab32(__u32 val ) 
 { __u32 tmp ;
 
   {
@@ -4570,7 +4570,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -4583,9 +4583,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2014/dscv_tempdir/dscv/ri/43_1a/drivers/usb/storage/datafab.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -4677,7 +4677,7 @@ static struct us_unusual_dev datafab_unusual_dev_list[11U]  =
         {"Acomdata", "CF", (__u8 )6U, (__u8 )242U, (int (*)(struct us_data * ))0}, 
         {(char const   *)0, (char const   *)0, (unsigned char)0, (unsigned char)0, (int (*)(struct us_data * ))0}};
 #line 137 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2014/dscv_tempdir/dscv/ri/43_1a/drivers/usb/storage/datafab.c.p"
-__inline static int datafab_bulk_read(struct us_data *us , unsigned char *data , unsigned int len ) 
+ static int datafab_bulk_read(struct us_data *us , unsigned char *data , unsigned int len ) 
 { int tmp ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -4714,7 +4714,7 @@ __inline static int datafab_bulk_read(struct us_data *us , unsigned char *data ,
 }
 }
 #line 148 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2014/dscv_tempdir/dscv/ri/43_1a/drivers/usb/storage/datafab.c.p"
-__inline static int datafab_bulk_write(struct us_data *us , unsigned char *data ,
+ static int datafab_bulk_write(struct us_data *us , unsigned char *data ,
                                        unsigned int len ) 
 { int tmp ;
   unsigned long __cil_tmp5 ;
@@ -8912,7 +8912,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1116 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2014/dscv_tempdir/dscv/ri/43_1a/drivers/usb/storage/datafab.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -8942,7 +8942,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1172 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2014/dscv_tempdir/dscv/ri/43_1a/drivers/usb/storage/datafab.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

@@ -1635,9 +1635,9 @@ extern void _raw_spin_lock(raw_spinlock_t *lock )  __attribute__((__section__(".
 #line 39
 extern void _raw_spin_unlock(raw_spinlock_t *lock )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -1646,9 +1646,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 283
-__inline static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -1663,9 +1663,9 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -1739,9 +1739,9 @@ extern struct device *get_device(struct device *dev ) ;
 #line 856
 extern void put_device(struct device *dev ) ;
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page )  __attribute__((__no_instrument_function__)) ;
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page )  __attribute__((__no_instrument_function__)) ;
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page ) 
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page ) 
 { struct page *__cil_tmp2 ;
   struct page  const  *__cil_tmp3 ;
   int __cil_tmp4 ;
@@ -1779,10 +1779,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -1796,9 +1796,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -1814,9 +1814,9 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 #line 95 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg )  __attribute__((__no_instrument_function__)) ;
+ static struct page *sg_page(struct scatterlist *sg )  __attribute__((__no_instrument_function__)) ;
 #line 95 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg ) 
+ static struct page *sg_page(struct scatterlist *sg ) 
 { long tmp ;
   long tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -1960,9 +1960,9 @@ __inline static struct page *sg_page(struct scatterlist *sg )
 }
 }
 #line 199
-__inline static void *sg_virt(struct scatterlist *sg )  __attribute__((__no_instrument_function__)) ;
+ static void *sg_virt(struct scatterlist *sg )  __attribute__((__no_instrument_function__)) ;
 #line 199 "include/linux/scatterlist.h"
-__inline static void *sg_virt(struct scatterlist *sg ) 
+ static void *sg_virt(struct scatterlist *sg ) 
 { struct page *tmp ;
   void *tmp___0 ;
   struct page  const  *__cil_tmp4 ;
@@ -1994,9 +1994,9 @@ __inline static void *sg_virt(struct scatterlist *sg )
 #line 204
 extern struct scatterlist *sg_next(struct scatterlist * ) ;
 #line 60 "include/linux/dma-mapping.h"
-__inline static int valid_dma_direction(int dma_direction )  __attribute__((__no_instrument_function__)) ;
+ static int valid_dma_direction(int dma_direction )  __attribute__((__no_instrument_function__)) ;
 #line 60 "include/linux/dma-mapping.h"
-__inline static int valid_dma_direction(int dma_direction ) 
+ static int valid_dma_direction(int dma_direction ) 
 { int tmp ;
 
   {
@@ -2023,9 +2023,9 @@ __inline static int valid_dma_direction(int dma_direction )
 }
 }
 #line 131 "include/linux/kmemcheck.h"
-__inline static void kmemcheck_mark_initialized(void *address , unsigned int n )  __attribute__((__no_instrument_function__)) ;
+ static void kmemcheck_mark_initialized(void *address , unsigned int n )  __attribute__((__no_instrument_function__)) ;
 #line 131 "include/linux/kmemcheck.h"
-__inline static void kmemcheck_mark_initialized(void *address , unsigned int n ) 
+ static void kmemcheck_mark_initialized(void *address , unsigned int n ) 
 { 
 
   {
@@ -2042,9 +2042,9 @@ extern void debug_dma_unmap_sg(struct device *dev , struct scatterlist *sglist ,
 #line 29 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/dma-mapping.h"
 extern struct dma_map_ops *dma_ops ;
 #line 31
-__inline static struct dma_map_ops *get_dma_ops(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static struct dma_map_ops *get_dma_ops(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 31 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/dma-mapping.h"
-__inline static struct dma_map_ops *get_dma_ops(struct device *dev ) 
+ static struct dma_map_ops *get_dma_ops(struct device *dev ) 
 { long tmp ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2106,10 +2106,10 @@ __inline static struct dma_map_ops *get_dma_ops(struct device *dev )
 }
 }
 #line 42 "include/asm-generic/dma-mapping-common.h"
-__inline static int dma_map_sg_attrs(struct device *dev , struct scatterlist *sg ,
+ static int dma_map_sg_attrs(struct device *dev , struct scatterlist *sg ,
                                      int nents , enum dma_data_direction dir , struct dma_attrs *attrs )  __attribute__((__no_instrument_function__)) ;
 #line 42 "include/asm-generic/dma-mapping-common.h"
-__inline static int dma_map_sg_attrs(struct device *dev , struct scatterlist *sg ,
+ static int dma_map_sg_attrs(struct device *dev , struct scatterlist *sg ,
                                      int nents , enum dma_data_direction dir , struct dma_attrs *attrs ) 
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
@@ -2250,11 +2250,11 @@ __inline static int dma_map_sg_attrs(struct device *dev , struct scatterlist *sg
 }
 }
 #line 59
-__inline static void dma_unmap_sg_attrs(struct device *dev , struct scatterlist *sg ,
+ static void dma_unmap_sg_attrs(struct device *dev , struct scatterlist *sg ,
                                         int nents , enum dma_data_direction dir ,
                                         struct dma_attrs *attrs )  __attribute__((__no_instrument_function__)) ;
 #line 59 "include/asm-generic/dma-mapping-common.h"
-__inline static void dma_unmap_sg_attrs(struct device *dev , struct scatterlist *sg ,
+ static void dma_unmap_sg_attrs(struct device *dev , struct scatterlist *sg ,
                                         int nents , enum dma_data_direction dir ,
                                         struct dma_attrs *attrs ) 
 { struct dma_map_ops *ops ;
@@ -2371,10 +2371,10 @@ __inline static void dma_unmap_sg_attrs(struct device *dev , struct scatterlist 
 }
 }
 #line 56 "include/asm-generic/pci-dma-compat.h"
-__inline static int pci_map_sg(struct pci_dev *hwdev , struct scatterlist *sg , int nents ,
+ static int pci_map_sg(struct pci_dev *hwdev , struct scatterlist *sg , int nents ,
                                int direction )  __attribute__((__no_instrument_function__)) ;
 #line 56 "include/asm-generic/pci-dma-compat.h"
-__inline static int pci_map_sg(struct pci_dev *hwdev , struct scatterlist *sg , int nents ,
+ static int pci_map_sg(struct pci_dev *hwdev , struct scatterlist *sg , int nents ,
                                int direction ) 
 { struct device *tmp ;
   int tmp___0 ;
@@ -2426,10 +2426,10 @@ __inline static int pci_map_sg(struct pci_dev *hwdev , struct scatterlist *sg , 
 }
 }
 #line 63
-__inline static void pci_unmap_sg(struct pci_dev *hwdev , struct scatterlist *sg ,
+ static void pci_unmap_sg(struct pci_dev *hwdev , struct scatterlist *sg ,
                                   int nents , int direction )  __attribute__((__no_instrument_function__)) ;
 #line 63 "include/asm-generic/pci-dma-compat.h"
-__inline static void pci_unmap_sg(struct pci_dev *hwdev , struct scatterlist *sg ,
+ static void pci_unmap_sg(struct pci_dev *hwdev , struct scatterlist *sg ,
                                   int nents , int direction ) 
 { struct device *tmp ;
   void *__cil_tmp6 ;

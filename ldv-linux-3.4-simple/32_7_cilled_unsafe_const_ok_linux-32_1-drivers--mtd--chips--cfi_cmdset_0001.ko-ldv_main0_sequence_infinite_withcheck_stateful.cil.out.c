@@ -2794,10 +2794,10 @@ struct fwh_xxlock_thunk {
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -2817,9 +2817,9 @@ __inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int 
 }
 }
 #line 97
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 97 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -2838,9 +2838,9 @@ __inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , un
 }
 }
 #line 347
-__inline static unsigned long __ffs(unsigned long word )  __attribute__((__no_instrument_function__)) ;
+ static unsigned long __ffs(unsigned long word )  __attribute__((__no_instrument_function__)) ;
 #line 347 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static unsigned long __ffs(unsigned long word ) 
+ static unsigned long __ffs(unsigned long word ) 
 { 
 
   {
@@ -2856,10 +2856,10 @@ extern unsigned long find_next_zero_bit(unsigned long    *addr , unsigned long s
 #line 45
 extern unsigned long find_first_zero_bit(unsigned long    *addr , unsigned long size ) ;
 #line 7 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/swab.h"
-__inline static __u32 __arch_swab32(__u32 val )  __attribute__((__no_instrument_function__)) ;
+ static __u32 __arch_swab32(__u32 val )  __attribute__((__no_instrument_function__)) ;
 
 #line 7 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/swab.h"
-__inline static __u32 __arch_swab32(__u32 val ) 
+ static __u32 __arch_swab32(__u32 val ) 
 { 
 
   {
@@ -2870,10 +2870,10 @@ __inline static __u32 __arch_swab32(__u32 val )
 }
 }
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__)) ;
+ static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__)) ;
 
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2904,10 +2904,10 @@ __inline static __u16 __fswab16(__u16 val )
 }
 }
 #line 55
-__inline static __u32 __fswab32(__u32 val )  __attribute__((__no_instrument_function__)) ;
+ static __u32 __fswab32(__u32 val )  __attribute__((__no_instrument_function__)) ;
 
 #line 55 "include/linux/swab.h"
-__inline static __u32 __fswab32(__u32 val ) 
+ static __u32 __fswab32(__u32 val ) 
 { __u32 tmp ;
 
   {
@@ -2920,9 +2920,9 @@ __inline static __u32 __fswab32(__u32 val )
 }
 }
 #line 47 "include/linux/byteorder/little_endian.h"
-__inline static __u64 __le64_to_cpup(__le64    *p )  __attribute__((__no_instrument_function__)) ;
+ static __u64 __le64_to_cpup(__le64    *p )  __attribute__((__no_instrument_function__)) ;
 #line 47 "include/linux/byteorder/little_endian.h"
-__inline static __u64 __le64_to_cpup(__le64    *p ) 
+ static __u64 __le64_to_cpup(__le64    *p ) 
 { __le64    __cil_tmp2 ;
 
   {
@@ -2935,9 +2935,9 @@ __inline static __u64 __le64_to_cpup(__le64    *p )
 }
 }
 #line 55
-__inline static __u32 __le32_to_cpup(__le32    *p )  __attribute__((__no_instrument_function__)) ;
+ static __u32 __le32_to_cpup(__le32    *p )  __attribute__((__no_instrument_function__)) ;
 #line 55 "include/linux/byteorder/little_endian.h"
-__inline static __u32 __le32_to_cpup(__le32    *p ) 
+ static __u32 __le32_to_cpup(__le32    *p ) 
 { __le32    __cil_tmp2 ;
 
   {
@@ -2950,9 +2950,9 @@ __inline static __u32 __le32_to_cpup(__le32    *p )
 }
 }
 #line 63
-__inline static __u16 __le16_to_cpup(__le16    *p )  __attribute__((__no_instrument_function__)) ;
+ static __u16 __le16_to_cpup(__le16    *p )  __attribute__((__no_instrument_function__)) ;
 #line 63 "include/linux/byteorder/little_endian.h"
-__inline static __u16 __le16_to_cpup(__le16    *p ) 
+ static __u16 __le16_to_cpup(__le16    *p ) 
 { __le16    __cil_tmp2 ;
 
   {
@@ -2976,9 +2976,9 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -3115,10 +3115,10 @@ extern void kfree(void    * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -3132,9 +3132,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -3160,9 +3160,9 @@ extern int register_reboot_notifier(struct notifier_block * ) ;
 #line 48
 extern int unregister_reboot_notifier(struct notifier_block * ) ;
 #line 7 "include/linux/unaligned/access_ok.h"
-__inline static u16 get_unaligned_le16(void    *p )  __attribute__((__no_instrument_function__)) ;
+ static u16 get_unaligned_le16(void    *p )  __attribute__((__no_instrument_function__)) ;
 #line 7 "include/linux/unaligned/access_ok.h"
-__inline static u16 get_unaligned_le16(void    *p ) 
+ static u16 get_unaligned_le16(void    *p ) 
 { __u16 tmp___7 ;
   __le16 *__cil_tmp3 ;
   __le16    *__cil_tmp4 ;
@@ -3181,9 +3181,9 @@ __inline static u16 get_unaligned_le16(void    *p )
 }
 }
 #line 12
-__inline static u32 get_unaligned_le32(void    *p )  __attribute__((__no_instrument_function__)) ;
+ static u32 get_unaligned_le32(void    *p )  __attribute__((__no_instrument_function__)) ;
 #line 12 "include/linux/unaligned/access_ok.h"
-__inline static u32 get_unaligned_le32(void    *p ) 
+ static u32 get_unaligned_le32(void    *p ) 
 { __u32 tmp___7 ;
   __le32 *__cil_tmp3 ;
   __le32    *__cil_tmp4 ;
@@ -3202,9 +3202,9 @@ __inline static u32 get_unaligned_le32(void    *p )
 }
 }
 #line 17
-__inline static u64 get_unaligned_le64(void    *p )  __attribute__((__no_instrument_function__)) ;
+ static u64 get_unaligned_le64(void    *p )  __attribute__((__no_instrument_function__)) ;
 #line 17 "include/linux/unaligned/access_ok.h"
-__inline static u64 get_unaligned_le64(void    *p ) 
+ static u64 get_unaligned_le64(void    *p ) 
 { __u64 tmp___7 ;
   __le64 *__cil_tmp3 ;
   __le64    *__cil_tmp4 ;
@@ -3223,9 +3223,9 @@ __inline static u64 get_unaligned_le64(void    *p )
 }
 }
 #line 273 "include/linux/mtd/map.h"
-__inline static int map_word_equal(struct map_info *map , map_word val1 , map_word val2 )  __attribute__((__no_instrument_function__)) ;
+ static int map_word_equal(struct map_info *map , map_word val1 , map_word val2 )  __attribute__((__no_instrument_function__)) ;
 #line 273 "include/linux/mtd/map.h"
-__inline static int map_word_equal(struct map_info *map , map_word val1 , map_word val2 ) 
+ static int map_word_equal(struct map_info *map , map_word val1 , map_word val2 ) 
 { int i ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -3311,9 +3311,9 @@ __inline static int map_word_equal(struct map_info *map , map_word val1 , map_wo
 }
 }
 #line 283
-__inline static map_word map_word_and(struct map_info *map , map_word val1 , map_word val2 )  __attribute__((__no_instrument_function__)) ;
+ static map_word map_word_and(struct map_info *map , map_word val1 , map_word val2 )  __attribute__((__no_instrument_function__)) ;
 #line 283 "include/linux/mtd/map.h"
-__inline static map_word map_word_and(struct map_info *map , map_word val1 , map_word val2 ) 
+ static map_word map_word_and(struct map_info *map , map_word val1 , map_word val2 ) 
 { map_word r ;
   int i ;
   unsigned long __cil_tmp6 ;
@@ -3407,9 +3407,9 @@ __inline static map_word map_word_and(struct map_info *map , map_word val1 , map
 }
 }
 #line 294
-__inline static map_word map_word_clr(struct map_info *map , map_word val1 , map_word val2 )  __attribute__((__no_instrument_function__)) ;
+ static map_word map_word_clr(struct map_info *map , map_word val1 , map_word val2 )  __attribute__((__no_instrument_function__)) ;
 #line 294 "include/linux/mtd/map.h"
-__inline static map_word map_word_clr(struct map_info *map , map_word val1 , map_word val2 ) 
+ static map_word map_word_clr(struct map_info *map , map_word val1 , map_word val2 ) 
 { map_word r ;
   int i ;
   unsigned long __cil_tmp6 ;
@@ -3506,9 +3506,9 @@ __inline static map_word map_word_clr(struct map_info *map , map_word val1 , map
 }
 }
 #line 318
-__inline static int map_word_bitsset(struct map_info *map , map_word val1 , map_word val2 )  __attribute__((__no_instrument_function__)) ;
+ static int map_word_bitsset(struct map_info *map , map_word val1 , map_word val2 )  __attribute__((__no_instrument_function__)) ;
 #line 318 "include/linux/mtd/map.h"
-__inline static int map_word_bitsset(struct map_info *map , map_word val1 , map_word val2 ) 
+ static int map_word_bitsset(struct map_info *map , map_word val1 , map_word val2 ) 
 { int i ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -3594,9 +3594,9 @@ __inline static int map_word_bitsset(struct map_info *map , map_word val1 , map_
 }
 }
 #line 329
-__inline static map_word map_word_load(struct map_info *map , void    *ptr )  __attribute__((__no_instrument_function__)) ;
+ static map_word map_word_load(struct map_info *map , void    *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 329 "include/linux/mtd/map.h"
-__inline static map_word map_word_load(struct map_info *map , void    *ptr ) 
+ static map_word map_word_load(struct map_info *map , void    *ptr ) 
 { map_word r ;
   u16 tmp___10 ;
   u32 tmp___13 ;
@@ -3807,11 +3807,11 @@ __inline static map_word map_word_load(struct map_info *map , void    *ptr )
 }
 }
 #line 349
-__inline static map_word map_word_load_partial(struct map_info *map , map_word orig ,
+ static map_word map_word_load_partial(struct map_info *map , map_word orig ,
                                                unsigned char    *buf , int start ,
                                                int len )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/mtd/map.h"
-__inline static map_word map_word_load_partial(struct map_info *map , map_word orig ,
+ static map_word map_word_load_partial(struct map_info *map , map_word orig ,
                                                unsigned char    *buf , int start ,
                                                int len ) 
 { int i ;
@@ -3961,9 +3961,9 @@ __inline static map_word map_word_load_partial(struct map_info *map , map_word o
 }
 }
 #line 377
-__inline static map_word map_word_ff(struct map_info *map )  __attribute__((__no_instrument_function__)) ;
+ static map_word map_word_ff(struct map_info *map )  __attribute__((__no_instrument_function__)) ;
 #line 377 "include/linux/mtd/map.h"
-__inline static map_word map_word_ff(struct map_info *map ) 
+ static map_word map_word_ff(struct map_info *map ) 
 { map_word r ;
   int i ;
   int bw ;
@@ -4079,9 +4079,9 @@ __inline static map_word map_word_ff(struct map_info *map )
 #line 388 "include/linux/mtd/mtd.h"
 extern void mtd_erase_callback(struct erase_info *instr ) ;
 #line 328 "include/linux/mtd/cfi.h"
-__inline static map_word cfi_build_cmd(u_long cmd , struct map_info *map , struct cfi_private *cfi )  __attribute__((__no_instrument_function__)) ;
+ static map_word cfi_build_cmd(u_long cmd , struct map_info *map , struct cfi_private *cfi )  __attribute__((__no_instrument_function__)) ;
 #line 328 "include/linux/mtd/cfi.h"
-__inline static map_word cfi_build_cmd(u_long cmd , struct map_info *map , struct cfi_private *cfi ) 
+ static map_word cfi_build_cmd(u_long cmd , struct map_info *map , struct cfi_private *cfi ) 
 { map_word val ;
   int wordwidth ;
   int words_per_bus ;
@@ -4522,10 +4522,10 @@ __inline static map_word cfi_build_cmd(u_long cmd , struct map_info *map , struc
 }
 }
 #line 392
-__inline static unsigned long cfi_merge_status(map_word val , struct map_info *map ,
+ static unsigned long cfi_merge_status(map_word val , struct map_info *map ,
                                                struct cfi_private *cfi )  __attribute__((__no_instrument_function__)) ;
 #line 392 "include/linux/mtd/cfi.h"
-__inline static unsigned long cfi_merge_status(map_word val , struct map_info *map ,
+ static unsigned long cfi_merge_status(map_word val , struct map_info *map ,
                                                struct cfi_private *cfi ) 
 { int wordwidth ;
   int words_per_bus ;
@@ -4928,9 +4928,9 @@ __inline static unsigned long cfi_merge_status(map_word val , struct map_info *m
 }
 }
 #line 477
-__inline static uint8_t cfi_read_query(struct map_info *map , uint32_t addr )  __attribute__((__no_instrument_function__)) ;
+ static uint8_t cfi_read_query(struct map_info *map , uint32_t addr )  __attribute__((__no_instrument_function__)) ;
 #line 477 "include/linux/mtd/cfi.h"
-__inline static uint8_t cfi_read_query(struct map_info *map , uint32_t addr ) 
+ static uint8_t cfi_read_query(struct map_info *map , uint32_t addr ) 
 { map_word val ;
   map_word tmp___7 ;
   __u16 tmp___10 ;
@@ -5194,9 +5194,9 @@ __inline static uint8_t cfi_read_query(struct map_info *map , uint32_t addr )
 }
 }
 #line 509
-__inline static void cfi_udelay(int us )  __attribute__((__no_instrument_function__)) ;
+ static void cfi_udelay(int us )  __attribute__((__no_instrument_function__)) ;
 #line 509 "include/linux/mtd/cfi.h"
-__inline static void cfi_udelay(int us ) 
+ static void cfi_udelay(int us ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -6513,10 +6513,10 @@ static void cfi_fixup_major_minor(struct cfi_private *cfi , struct cfi_pri_intel
 }
 }
 #line 343
-__inline static struct cfi_pri_intelext *read_pri_intelext(struct map_info *map ,
+ static struct cfi_pri_intelext *read_pri_intelext(struct map_info *map ,
                                                            __u16 adr )  __attribute__((__no_instrument_function__)) ;
 #line 343 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5348/dscv_tempdir/dscv/ri/32_1/drivers/mtd/chips/cfi_cmdset_0001.c.common.c"
-__inline static struct cfi_pri_intelext *read_pri_intelext(struct map_info *map ,
+ static struct cfi_pri_intelext *read_pri_intelext(struct map_info *map ,
                                                            __u16 adr ) 
 { struct cfi_private *cfi ;
   struct cfi_pri_intelext *extp ;
@@ -13147,10 +13147,10 @@ static int cfi_intelext_unpoint(struct mtd_info *mtd , loff_t from , size_t len 
 }
 }
 #line 1417
-__inline static int do_read_onechip(struct map_info *map , struct flchip *chip , loff_t adr ,
+ static int do_read_onechip(struct map_info *map , struct flchip *chip , loff_t adr ,
                                     size_t len , u_char *buf )  __attribute__((__no_instrument_function__)) ;
 #line 1417 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5348/dscv_tempdir/dscv/ri/32_1/drivers/mtd/chips/cfi_cmdset_0001.c.common.c"
-__inline static int do_read_onechip(struct map_info *map , struct flchip *chip , loff_t adr ,
+ static int do_read_onechip(struct map_info *map , struct flchip *chip , loff_t adr ,
                                     size_t len , u_char *buf ) 
 { unsigned long cmd_addr ;
   struct cfi_private *cfi ;

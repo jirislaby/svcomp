@@ -1464,7 +1464,7 @@ extern char *strncat(char * , char const   * , __kernel_size_t  ) ;
 #line 93 "include/linux/spinlock.h"
 extern void __raw_spin_lock_init(raw_spinlock_t * , char const   * , struct lock_class_key * ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -1483,7 +1483,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -1496,9 +1496,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 243 "include/linux/slab.h"
-__inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
+ static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned long __cil_tmp5 ;
   size_t __cil_tmp6 ;
@@ -1531,7 +1531,7 @@ __inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 256 "include/linux/slab.h"
-__inline static void *ldv_kcalloc_14(size_t n , size_t size , gfp_t flags ) 
+ static void *ldv_kcalloc_14(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp5 ;
 
@@ -1547,9 +1547,9 @@ __inline static void *ldv_kcalloc_14(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 256
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags ) ;
+ static void *kcalloc(size_t n , size_t size , gfp_t flags ) ;
 #line 353
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5918/dscv_tempdir/dscv/ri/43_1a/drivers/staging/comedi/drivers/comedi_bond.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -1579,7 +1579,7 @@ extern int comedi_driver_unregister(struct comedi_driver * ) ;
 #line 336
 extern struct comedi_lrange  const  range_unipolar5 ;
 #line 354 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/comedi/drivers/../comedidev.h"
-__inline static int alloc_subdevices(struct comedi_device *dev , unsigned int num_subdevices ) 
+ static int alloc_subdevices(struct comedi_device *dev , unsigned int num_subdevices ) 
 { unsigned int i ;
   void *tmp ;
   struct lock_class_key __key ;
@@ -1774,7 +1774,7 @@ __inline static int alloc_subdevices(struct comedi_device *dev , unsigned int nu
 }
 }
 #line 374 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/comedi/drivers/../comedidev.h"
-__inline static int alloc_private(struct comedi_device *dev , int size ) 
+ static int alloc_private(struct comedi_device *dev , int size ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   size_t __cil_tmp5 ;
@@ -4326,7 +4326,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 974 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5918/dscv_tempdir/dscv/ri/43_1a/drivers/staging/comedi/drivers/comedi_bond.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -4341,7 +4341,7 @@ __inline static void *kmalloc(size_t size , gfp_t flags )
 }
 }
 #line 997 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5918/dscv_tempdir/dscv/ri/43_1a/drivers/staging/comedi/drivers/comedi_bond.c.p"
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
+ static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
 { 
 
   {
@@ -4371,7 +4371,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1030 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5918/dscv_tempdir/dscv/ri/43_1a/drivers/staging/comedi/drivers/comedi_bond.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

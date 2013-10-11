@@ -3751,10 +3751,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -3768,9 +3768,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -3809,9 +3809,9 @@ extern void platform_device_del(struct platform_device *pdev ) ;
 #line 162
 extern void platform_device_put(struct platform_device *pdev ) ;
 #line 115 "include/linux/ucb1400.h"
-__inline static u16 ucb1400_reg_read(struct snd_ac97 *ac97 , u16 reg )  __attribute__((__no_instrument_function__)) ;
+ static u16 ucb1400_reg_read(struct snd_ac97 *ac97 , u16 reg )  __attribute__((__no_instrument_function__)) ;
 #line 115 "include/linux/ucb1400.h"
-__inline static u16 ucb1400_reg_read(struct snd_ac97 *ac97 , u16 reg ) 
+ static u16 ucb1400_reg_read(struct snd_ac97 *ac97 , u16 reg ) 
 { unsigned short tmp___7 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -3845,9 +3845,9 @@ __inline static u16 ucb1400_reg_read(struct snd_ac97 *ac97 , u16 reg )
 }
 }
 #line 120
-__inline static void ucb1400_reg_write(struct snd_ac97 *ac97 , u16 reg , u16 val )  __attribute__((__no_instrument_function__)) ;
+ static void ucb1400_reg_write(struct snd_ac97 *ac97 , u16 reg , u16 val )  __attribute__((__no_instrument_function__)) ;
 #line 120 "include/linux/ucb1400.h"
-__inline static void ucb1400_reg_write(struct snd_ac97 *ac97 , u16 reg , u16 val ) 
+ static void ucb1400_reg_write(struct snd_ac97 *ac97 , u16 reg , u16 val ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
   struct snd_ac97_bus *__cil_tmp6 ;

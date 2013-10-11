@@ -3771,9 +3771,9 @@ long __builtin_expect(long val , long res ) ;
 #line 47 "include/linux/list.h"
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 74
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -3826,9 +3826,9 @@ extern void *dev_get_drvdata(struct device  const  *dev ) ;
 #line 793
 extern int dev_set_drvdata(struct device *dev , void *data ) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) 
+ static void *usb_get_intfdata(struct usb_interface *intf ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3853,9 +3853,9 @@ __inline static void *usb_get_intfdata(struct usb_interface *intf )
 }
 }
 #line 196
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -3876,9 +3876,9 @@ __inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
 }
 }
 #line 523
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
 #line 523 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
 { struct device  const  *__mptr ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3942,9 +3942,9 @@ extern int usb_reset_configuration(struct usb_device *dev ) ;
 #line 1463
 extern int usb_set_interface(struct usb_device *dev , int ifnum , int alternate ) ;
 #line 1567
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -3970,10 +3970,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -4457,9 +4457,9 @@ static int ds_recv_status_nodump(struct ds_device *dev , struct ds_status *st , 
 }
 }
 #line 262
-__inline static void ds_print_msg(unsigned char *buf , unsigned char *str , int off )  __attribute__((__no_instrument_function__)) ;
+ static void ds_print_msg(unsigned char *buf , unsigned char *str , int off )  __attribute__((__no_instrument_function__)) ;
 #line 262 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12370/dscv_tempdir/dscv/ri/32_1/drivers/w1/masters/ds2490.c.common.c"
-__inline static void ds_print_msg(unsigned char *buf , unsigned char *str , int off ) 
+ static void ds_print_msg(unsigned char *buf , unsigned char *str , int off ) 
 { unsigned char *__cil_tmp4 ;
   unsigned char __cil_tmp5 ;
   int __cil_tmp6 ;

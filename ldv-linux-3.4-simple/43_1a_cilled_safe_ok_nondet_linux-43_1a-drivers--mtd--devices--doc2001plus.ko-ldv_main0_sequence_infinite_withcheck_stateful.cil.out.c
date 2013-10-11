@@ -2536,7 +2536,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 397 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int ffs(int x ) 
+ static int ffs(int x ) 
 { int r ;
   long tmp ;
 
@@ -2554,7 +2554,7 @@ extern int printk(char const   *  , ...) ;
 #line 45 "include/linux/dynamic_debug.h"
 extern int __dynamic_pr_debug(struct _ddebug * , char const   *  , ...) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr ) 
+ static unsigned char readb(void const volatile   *addr ) 
 { unsigned char ret ;
   unsigned char volatile   *__cil_tmp3 ;
 
@@ -2568,7 +2568,7 @@ __inline static unsigned char readb(void const volatile   *addr )
 }
 }
 #line 61 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writeb(unsigned char val , void volatile   *addr ) 
+ static void writeb(unsigned char val , void volatile   *addr ) 
 { unsigned char volatile   *__cil_tmp3 ;
 
   {
@@ -2593,7 +2593,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -2606,7 +2606,7 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 11 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11713/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/devices/doc2001plus.c.p"
 void ldv_check_alloc_flags(gfp_t flags ) ;
 #line 12
@@ -2847,7 +2847,7 @@ static int _DoC_WaitReady(void *docptr )
 }
 }
 #line 91 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11713/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/devices/doc2001plus.c.p"
-__inline static int DoC_WaitReady(void *docptr ) 
+ static int DoC_WaitReady(void *docptr ) 
 { int ret ;
   unsigned char tmp ;
   void const volatile   *__cil_tmp4 ;
@@ -2888,7 +2888,7 @@ __inline static int DoC_WaitReady(void *docptr )
 }
 }
 #line 112 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11713/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/devices/doc2001plus.c.p"
-__inline static void DoC_CheckASIC(void *docptr ) 
+ static void DoC_CheckASIC(void *docptr ) 
 { unsigned char tmp ;
   void const volatile   *__cil_tmp3 ;
   void const volatile   *__cil_tmp4 ;
@@ -2990,7 +2990,7 @@ static void DoC_Command(void *docptr , unsigned char command , unsigned char xtr
 }
 }
 #line 135 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11713/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/devices/doc2001plus.c.p"
-__inline static void DoC_Address(struct DiskOnChip *doc , int numbytes , unsigned long ofs ,
+ static void DoC_Address(struct DiskOnChip *doc , int numbytes , unsigned long ofs ,
                                  unsigned char xtraflags1 , unsigned char xtraflags2 ) 
 { void *docptr ;
   unsigned long __cil_tmp7 ;
@@ -3472,7 +3472,7 @@ static unsigned int DoC_GetHdrOffset(struct mtd_info *mtd , loff_t *from )
 }
 }
 #line 259 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11713/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/devices/doc2001plus.c.p"
-__inline static void MemReadDOC(void *docptr , unsigned char *buf , int len ) 
+ static void MemReadDOC(void *docptr , unsigned char *buf , int len ) 
 { int i ;
   unsigned long __cil_tmp5 ;
   unsigned char *__cil_tmp6 ;
@@ -3520,7 +3520,7 @@ __inline static void MemReadDOC(void *docptr , unsigned char *buf , int len )
 }
 }
 #line 270 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11713/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/devices/doc2001plus.c.p"
-__inline static void MemWriteDOC(void *docptr , unsigned char *buf , int len ) 
+ static void MemWriteDOC(void *docptr , unsigned char *buf , int len ) 
 { int i ;
   unsigned long __cil_tmp5 ;
   unsigned char *__cil_tmp6 ;
@@ -7925,7 +7925,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1406 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11713/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/devices/doc2001plus.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {

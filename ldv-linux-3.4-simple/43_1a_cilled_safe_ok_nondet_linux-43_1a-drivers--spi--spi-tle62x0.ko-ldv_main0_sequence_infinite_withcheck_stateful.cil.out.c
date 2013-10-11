@@ -2473,7 +2473,7 @@ extern int sprintf(char * , char const   *  , ...) ;
 #line 323
 extern int snprintf(char * , size_t  , char const   *  , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2493,7 +2493,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -2530,7 +2530,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2801/dscv_tempdir/dscv/ri/43_1a/drivers/spi/spi-tle62x0.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2552,7 +2552,7 @@ extern int dev_set_drvdata(struct device * , void * ) ;
 #line 892
 extern int dev_err(struct device  const  * , char const   *  , ...) ;
 #line 135 "include/linux/spi/spi.h"
-__inline static void spi_set_drvdata(struct spi_device *spi , void *data ) 
+ static void spi_set_drvdata(struct spi_device *spi , void *data ) 
 { struct device *__cil_tmp3 ;
 
   {
@@ -2567,7 +2567,7 @@ __inline static void spi_set_drvdata(struct spi_device *spi , void *data )
 }
 }
 #line 140 "include/linux/spi/spi.h"
-__inline static void *spi_get_drvdata(struct spi_device *spi ) 
+ static void *spi_get_drvdata(struct spi_device *spi ) 
 { void *tmp ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -2588,7 +2588,7 @@ __inline static void *spi_get_drvdata(struct spi_device *spi )
 #line 191
 extern int spi_register_driver(struct spi_driver * ) ;
 #line 198 "include/linux/spi/spi.h"
-__inline static void spi_unregister_driver(struct spi_driver *sdrv ) 
+ static void spi_unregister_driver(struct spi_driver *sdrv ) 
 { struct spi_driver *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2625,7 +2625,7 @@ __inline static void spi_unregister_driver(struct spi_driver *sdrv )
 }
 }
 #line 573 "include/linux/spi/spi.h"
-__inline static void spi_message_init(struct spi_message *m ) 
+ static void spi_message_init(struct spi_message *m ) 
 { void *__cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
 
@@ -2645,7 +2645,7 @@ __inline static void spi_message_init(struct spi_message *m )
 }
 }
 #line 580 "include/linux/spi/spi.h"
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -2671,7 +2671,7 @@ __inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_me
 #line 630
 extern int spi_sync(struct spi_device * , struct spi_message * ) ;
 #line 646 "include/linux/spi/spi.h"
-__inline static int spi_write(struct spi_device *spi , void const   *buf , size_t len ) 
+ static int spi_write(struct spi_device *spi , void const   *buf , size_t len ) 
 { struct spi_transfer t ;
   struct spi_message m ;
   int tmp ;
@@ -2750,7 +2750,7 @@ __inline static int spi_write(struct spi_device *spi , void const   *buf , size_
 #line 54 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2801/dscv_tempdir/dscv/ri/43_1a/drivers/spi/spi-tle62x0.c.p"
 static int to_gpio_num(struct device_attribute *attr ) ;
 #line 56 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2801/dscv_tempdir/dscv/ri/43_1a/drivers/spi/spi-tle62x0.c.p"
-__inline static int tle62x0_write(struct tle62x0_state *st ) 
+ static int tle62x0_write(struct tle62x0_state *st ) 
 { unsigned char *buff ;
   unsigned int gpio_state ;
   struct _ddebug descriptor ;
@@ -2936,7 +2936,7 @@ __inline static int tle62x0_write(struct tle62x0_state *st )
 }
 }
 #line 76 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2801/dscv_tempdir/dscv/ri/43_1a/drivers/spi/spi-tle62x0.c.p"
-__inline static int tle62x0_read(struct tle62x0_state *st ) 
+ static int tle62x0_read(struct tle62x0_state *st ) 
 { unsigned char *txbuff ;
   struct spi_transfer xfer ;
   struct spi_message msg ;
@@ -4539,7 +4539,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 753 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2801/dscv_tempdir/dscv/ri/43_1a/drivers/spi/spi-tle62x0.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

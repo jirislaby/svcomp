@@ -4395,7 +4395,7 @@ int ldv_spin_trylock(void) ;
 #line 101 "include/linux/printk.h"
 extern int printk(char const   *  , ...) ;
 #line 651 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/processor.h"
-__inline static void rep_nop(void) 
+ static void rep_nop(void) 
 { 
 
   {
@@ -4406,7 +4406,7 @@ __inline static void rep_nop(void)
 }
 }
 #line 656 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/processor.h"
-__inline static void cpu_relax(void) 
+ static void cpu_relax(void) 
 { 
 
   {
@@ -4421,7 +4421,7 @@ __inline static void cpu_relax(void)
 #line 43 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 350 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
+ static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -4436,11 +4436,11 @@ __inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned lo
 }
 }
 #line 350
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 82 "include/linux/jiffies.h"
 extern unsigned long volatile   jiffies ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -4451,7 +4451,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -4462,7 +4462,7 @@ __inline static unsigned char inb(int port )
 }
 }
 #line 310 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outsl(int port , void const   *addr , unsigned long count ) 
+ static void outsl(int port , void const   *addr , unsigned long count ) 
 { 
 
   {
@@ -4473,7 +4473,7 @@ __inline static void outsl(int port , void const   *addr , unsigned long count )
 }
 }
 #line 310 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void insl(int port , void *addr , unsigned long count ) 
+ static void insl(int port , void *addr , unsigned long count ) 
 { 
 
   {
@@ -4494,7 +4494,7 @@ void ldv_check_alloc_nonatomic(void) ;
 #line 14
 struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 737 "include/linux/mm.h"
-__inline static void *lowmem_page_address(struct page  const  *page ) 
+ static void *lowmem_page_address(struct page  const  *page ) 
 { long __cil_tmp2 ;
   long __cil_tmp3 ;
   long __cil_tmp4 ;
@@ -4525,7 +4525,7 @@ __inline static void *lowmem_page_address(struct page  const  *page )
 }
 }
 #line 95 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg ) 
+ static struct page *sg_page(struct scatterlist *sg ) 
 { long tmp ;
   long tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -4606,7 +4606,7 @@ __inline static struct page *sg_page(struct scatterlist *sg )
 }
 }
 #line 199 "include/linux/scatterlist.h"
-__inline static void *sg_virt(struct scatterlist *sg ) 
+ static void *sg_virt(struct scatterlist *sg ) 
 { struct page *tmp ;
   void *tmp___0 ;
   struct page  const  *__cil_tmp4 ;
@@ -4641,7 +4641,7 @@ __inline static void *sg_virt(struct scatterlist *sg )
 #line 204
 extern struct scatterlist *sg_next(struct scatterlist * ) ;
 #line 163 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4663,7 +4663,7 @@ __inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )
 }
 }
 #line 168 "include/scsi/scsi_cmnd.h"
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -4679,7 +4679,7 @@ __inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )
 }
 }
 #line 173 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4698,7 +4698,7 @@ __inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )
 }
 }
 #line 409 "include/scsi/scsi_device.h"
-__inline static unsigned int sdev_id(struct scsi_device *sdev ) 
+ static unsigned int sdev_id(struct scsi_device *sdev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -8090,7 +8090,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 941 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4011/dscv_tempdir/dscv/ri/43_1a/drivers/scsi/qlogicfas408.c.p"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {

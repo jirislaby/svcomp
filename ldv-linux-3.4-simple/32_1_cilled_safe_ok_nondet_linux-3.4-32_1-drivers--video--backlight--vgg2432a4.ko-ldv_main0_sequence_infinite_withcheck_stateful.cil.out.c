@@ -4327,9 +4327,9 @@ void cleanup_module(void) ;
 #line 191 "include/linux/spi/spi.h"
 extern int spi_register_driver(struct spi_driver *sdrv ) ;
 #line 198
-__inline static void spi_unregister_driver(struct spi_driver *sdrv )  __attribute__((__no_instrument_function__)) ;
+ static void spi_unregister_driver(struct spi_driver *sdrv )  __attribute__((__no_instrument_function__)) ;
 #line 198 "include/linux/spi/spi.h"
-__inline static void spi_unregister_driver(struct spi_driver *sdrv ) 
+ static void spi_unregister_driver(struct spi_driver *sdrv ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct device_driver *__cil_tmp4 ;

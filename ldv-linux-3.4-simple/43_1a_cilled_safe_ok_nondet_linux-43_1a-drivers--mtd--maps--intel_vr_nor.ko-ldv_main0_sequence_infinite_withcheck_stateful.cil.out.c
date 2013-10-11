@@ -2828,7 +2828,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned int readl(void const volatile   *addr ) 
+ static unsigned int readl(void const volatile   *addr ) 
 { unsigned int ret ;
   unsigned int volatile   *__cil_tmp3 ;
 
@@ -2842,7 +2842,7 @@ __inline static unsigned int readl(void const volatile   *addr )
 }
 }
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writel(unsigned int val , void volatile   *addr ) 
+ static void writel(unsigned int val , void volatile   *addr ) 
 { unsigned int volatile   *__cil_tmp3 ;
 
   {
@@ -2867,7 +2867,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11634/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/maps/intel_vr_nor.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2895,7 +2895,7 @@ extern int __pci_register_driver(struct pci_driver * , struct module * , char co
 #line 949
 extern void pci_unregister_driver(struct pci_driver * ) ;
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2920,7 +2920,7 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1363 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -4558,7 +4558,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 719 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11634/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/maps/intel_vr_nor.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

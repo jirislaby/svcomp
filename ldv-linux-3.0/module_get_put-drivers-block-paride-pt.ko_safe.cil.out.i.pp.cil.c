@@ -3751,7 +3751,7 @@ extern void might_fault(void) ;
 #line 295
 extern int snprintf(char * , size_t  , char const   *  , ...) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3760,7 +3760,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3782,7 +3782,7 @@ __inline static long IS_ERR(void const   *ptr )
 }
 }
 #line 23 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const   *v ) 
+ static int atomic_read(atomic_t const   *v ) 
 { int const   *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -3801,7 +3801,7 @@ __inline static int atomic_read(atomic_t const   *v )
 }
 }
 #line 35 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i ) 
+ static void atomic_set(atomic_t *v , int i ) 
 { 
 
   {
@@ -3812,7 +3812,7 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 #line 93 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v ) 
+ static void atomic_inc(atomic_t *v ) 
 { 
 
   {
@@ -3823,7 +3823,7 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 #line 119 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_dec_and_test(atomic_t *v ) 
+ static int atomic_dec_and_test(atomic_t *v ) 
 { unsigned char c ;
   unsigned int __cil_tmp3 ;
 
@@ -3880,7 +3880,7 @@ static int drive3[6U]  = {      0,      0,      0,      -1,
 #line 136 "/anthill/stuff/tacas-comp/work/current--X--drivers/block/paride/pt.ko--X--safelinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/block/paride/pt.c.p"
 static int (*drives[4U])[6U]  = {      & drive0,      & drive1,      & drive2,      & drive3};
 #line 891 "include/linux/fs.h"
-__inline static unsigned int iminor(struct inode  const  *inode ) 
+ static unsigned int iminor(struct inode  const  *inode ) 
 { dev_t __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
 
@@ -3901,7 +3901,7 @@ extern int __register_chrdev(unsigned int  , unsigned int  , unsigned int  , cha
 #line 2092
 extern void __unregister_chrdev(unsigned int  , unsigned int  , unsigned int  , char const   * ) ;
 #line 2097 "include/linux/fs.h"
-__inline static int register_chrdev(unsigned int major___0 , char const   *name___0 ,
+ static int register_chrdev(unsigned int major___0 , char const   *name___0 ,
                                     struct file_operations  const  *fops ) 
 { int tmp ;
 
@@ -3915,7 +3915,7 @@ __inline static int register_chrdev(unsigned int major___0 , char const   *name_
 }
 }
 #line 2103 "include/linux/fs.h"
-__inline static void unregister_chrdev(unsigned int major___0 , char const   *name___0 ) 
+ static void unregister_chrdev(unsigned int major___0 , char const   *name___0 ) 
 { 
 
   {
@@ -3934,7 +3934,7 @@ extern void __const_udelay(unsigned long  ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 255 "include/linux/slub_def.h"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -3962,7 +3962,7 @@ extern unsigned long _copy_to_user(void * , void const   * , unsigned int  ) ;
 #line 42
 extern unsigned long _copy_from_user(void * , void const   * , unsigned int  ) ;
 #line 46 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long copy_from_user(void *to , void const   *from , unsigned long n ) 
+ static unsigned long copy_from_user(void *to , void const   *from , unsigned long n ) 
 { int sz ;
   unsigned long tmp ;
   int __ret_warn_on ;
@@ -4071,7 +4071,7 @@ __inline static unsigned long copy_from_user(void *to , void const   *from , uns
 }
 }
 #line 63 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
+ static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
 { unsigned long tmp ;
 
   {
@@ -4161,7 +4161,7 @@ static struct file_operations  const  pt_fops  =
 #line 255 "/anthill/stuff/tacas-comp/work/current--X--drivers/block/paride/pt.ko--X--safelinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/block/paride/pt.c.p"
 static struct class *pt_class  ;
 #line 257 "/anthill/stuff/tacas-comp/work/current--X--drivers/block/paride/pt.ko--X--safelinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/block/paride/pt.c.p"
-__inline static int status_reg(struct pi_adapter *pi ) 
+ static int status_reg(struct pi_adapter *pi ) 
 { int tmp ;
 
   {
@@ -4174,7 +4174,7 @@ __inline static int status_reg(struct pi_adapter *pi )
 }
 }
 #line 262 "/anthill/stuff/tacas-comp/work/current--X--drivers/block/paride/pt.ko--X--safelinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/block/paride/pt.c.p"
-__inline static int read_reg(struct pi_adapter *pi , int reg ) 
+ static int read_reg(struct pi_adapter *pi , int reg ) 
 { int tmp ;
 
   {
@@ -4187,7 +4187,7 @@ __inline static int read_reg(struct pi_adapter *pi , int reg )
 }
 }
 #line 267 "/anthill/stuff/tacas-comp/work/current--X--drivers/block/paride/pt.ko--X--safelinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/block/paride/pt.c.p"
-__inline static void write_reg(struct pi_adapter *pi , int reg , int val ) 
+ static void write_reg(struct pi_adapter *pi , int reg , int val ) 
 { 
 
   {
@@ -4200,7 +4200,7 @@ __inline static void write_reg(struct pi_adapter *pi , int reg , int val )
 }
 }
 #line 272 "/anthill/stuff/tacas-comp/work/current--X--drivers/block/paride/pt.ko--X--safelinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/block/paride/pt.c.p"
-__inline static u8 DRIVE(struct pt_unit *tape ) 
+ static u8 DRIVE(struct pt_unit *tape ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   u8 __cil_tmp4 ;

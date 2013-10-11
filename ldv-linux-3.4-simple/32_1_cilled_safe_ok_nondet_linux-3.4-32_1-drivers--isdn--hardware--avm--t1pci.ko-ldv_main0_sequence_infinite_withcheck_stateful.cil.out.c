@@ -1888,9 +1888,9 @@ extern void __release_region(struct resource * , resource_size_t  , resource_siz
 #line 174 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
 extern void *ioremap_nocache(resource_size_t offset , unsigned long size ) ;
 #line 182
-__inline static void *ioremap(resource_size_t offset , unsigned long size )  __attribute__((__no_instrument_function__)) ;
+ static void *ioremap(resource_size_t offset , unsigned long size )  __attribute__((__no_instrument_function__)) ;
 #line 182 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *ioremap(resource_size_t offset , unsigned long size ) 
+ static void *ioremap(resource_size_t offset , unsigned long size ) 
 { void *tmp ;
 
   {
@@ -1924,14 +1924,14 @@ extern int __attribute__((__warn_unused_result__))  request_threaded_irq(unsigne
                                                                          char const   *name ,
                                                                          void *dev ) ;
 #line 131
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
                                                                          char const   *name ,
                                                                          void *dev )  __attribute__((__no_instrument_function__)) ;
 #line 131 "include/linux/interrupt.h"
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
@@ -1969,9 +1969,9 @@ extern int __attribute__((__warn_unused_result__))  __pci_register_driver(struct
 #line 949
 extern void pci_unregister_driver(struct pci_driver *dev ) ;
 #line 1358
-__inline static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
+ static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -1996,9 +1996,9 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1363
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 1363 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;

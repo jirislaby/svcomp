@@ -3997,7 +3997,7 @@ int ldv_spin_trylock(void) ;
 #line 218 "include/linux/kernel.h"
 extern int kstrtoull(char const   * , unsigned int  , unsigned long long * ) ;
 #line 220 "include/linux/kernel.h"
-__inline static int kstrtoul(char const   *s , unsigned int base , unsigned long *res ) 
+ static int kstrtoul(char const   *s , unsigned int base , unsigned long *res ) 
 { int tmp ;
   unsigned long long *__cil_tmp6 ;
 
@@ -4021,7 +4021,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12458/dscv_tempdir/dscv/ri/43_1a/drivers/leds/ledtrig-backlight.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -4047,7 +4047,7 @@ extern int led_trigger_register(struct led_trigger * ) ;
 #line 138
 extern void led_trigger_unregister(struct led_trigger * ) ;
 #line 20 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/leds/leds.h"
-__inline static void led_set_brightness(struct led_classdev *led_cdev , enum led_brightness value ) 
+ static void led_set_brightness(struct led_classdev *led_cdev , enum led_brightness value ) 
 { unsigned int __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4965,7 +4965,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 584 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12458/dscv_tempdir/dscv/ri/43_1a/drivers/leds/ledtrig-backlight.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

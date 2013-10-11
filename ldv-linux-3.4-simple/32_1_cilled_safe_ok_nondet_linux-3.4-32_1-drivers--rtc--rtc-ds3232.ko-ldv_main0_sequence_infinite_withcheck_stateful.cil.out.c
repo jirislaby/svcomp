@@ -3647,9 +3647,9 @@ struct ds3232 {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -3667,9 +3667,9 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 }
 }
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3678,9 +3678,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3743,14 +3743,14 @@ extern int __attribute__((__warn_unused_result__))  request_threaded_irq(unsigne
                                                                          char const   *name ,
                                                                          void *dev ) ;
 #line 131
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
                                                                          char const   *name ,
                                                                          void *dev )  __attribute__((__no_instrument_function__)) ;
 #line 131 "include/linux/interrupt.h"
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
@@ -3801,9 +3801,9 @@ extern s32 i2c_smbus_read_i2c_block_data(struct i2c_client  const  *client , u8 
 extern s32 i2c_smbus_write_i2c_block_data(struct i2c_client  const  *client , u8 command ,
                                           u8 length , u8 const   *values ) ;
 #line 242
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3825,9 +3825,9 @@ __inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )
 }
 }
 #line 247
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -3870,10 +3870,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -3887,9 +3887,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 

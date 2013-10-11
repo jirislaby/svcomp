@@ -982,9 +982,9 @@ extern size_t strlcpy(char * , char const   * , size_t  ) ;
 #line 100 "include/linux/printk.h"
 extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -999,9 +999,9 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308
-__inline static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -1046,10 +1046,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -1063,9 +1063,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -1088,9 +1088,9 @@ extern void gameport_unregister_port(struct gameport *gameport ) ;
 extern void ( /* format attribute */  gameport_set_phys)(struct gameport *gameport ,
                                                          char const   *fmt  , ...) ;
 #line 103
-__inline static struct gameport *gameport_allocate_port(void)  __attribute__((__no_instrument_function__)) ;
+ static struct gameport *gameport_allocate_port(void)  __attribute__((__no_instrument_function__)) ;
 #line 103 "include/linux/gameport.h"
-__inline static struct gameport *gameport_allocate_port(void) 
+ static struct gameport *gameport_allocate_port(void) 
 { struct gameport *gameport ;
   void *tmp ;
 
@@ -1106,9 +1106,9 @@ __inline static struct gameport *gameport_allocate_port(void)
 }
 }
 #line 110
-__inline static void gameport_free_port(struct gameport *gameport )  __attribute__((__no_instrument_function__)) ;
+ static void gameport_free_port(struct gameport *gameport )  __attribute__((__no_instrument_function__)) ;
 #line 110 "include/linux/gameport.h"
-__inline static void gameport_free_port(struct gameport *gameport ) 
+ static void gameport_free_port(struct gameport *gameport ) 
 { void const   *__cil_tmp2 ;
 
   {
@@ -1123,9 +1123,9 @@ __inline static void gameport_free_port(struct gameport *gameport )
 }
 }
 #line 115
-__inline static void gameport_set_name(struct gameport *gameport , char const   *name )  __attribute__((__no_instrument_function__)) ;
+ static void gameport_set_name(struct gameport *gameport , char const   *name )  __attribute__((__no_instrument_function__)) ;
 #line 115 "include/linux/gameport.h"
-__inline static void gameport_set_name(struct gameport *gameport , char const   *name ) 
+ static void gameport_set_name(struct gameport *gameport , char const   *name ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;

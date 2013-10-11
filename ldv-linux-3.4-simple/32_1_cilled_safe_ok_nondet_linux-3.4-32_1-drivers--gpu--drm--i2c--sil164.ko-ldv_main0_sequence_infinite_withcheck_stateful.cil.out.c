@@ -5432,10 +5432,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -5449,9 +5449,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -5493,9 +5493,9 @@ extern void i2c_del_driver(struct i2c_driver * ) ;
 #line 1510 "include/drm/drmP.h"
 extern unsigned int drm_debug ;
 #line 135 "include/drm/drm_encoder_slave.h"
-__inline static struct i2c_client *drm_i2c_encoder_get_client(struct drm_encoder *encoder )  __attribute__((__no_instrument_function__)) ;
+ static struct i2c_client *drm_i2c_encoder_get_client(struct drm_encoder *encoder )  __attribute__((__no_instrument_function__)) ;
 #line 135 "include/drm/drm_encoder_slave.h"
-__inline static struct i2c_client *drm_i2c_encoder_get_client(struct drm_encoder *encoder ) 
+ static struct i2c_client *drm_i2c_encoder_get_client(struct drm_encoder *encoder ) 
 { struct drm_encoder  const  *__mptr ;
   struct drm_encoder_slave *__cil_tmp3 ;
   struct drm_encoder *__cil_tmp4 ;
@@ -5535,9 +5535,9 @@ __inline static struct i2c_client *drm_i2c_encoder_get_client(struct drm_encoder
 }
 }
 #line 145
-__inline static int drm_i2c_encoder_register(struct module *owner , struct drm_i2c_encoder_driver *driver )  __attribute__((__no_instrument_function__)) ;
+ static int drm_i2c_encoder_register(struct module *owner , struct drm_i2c_encoder_driver *driver )  __attribute__((__no_instrument_function__)) ;
 #line 145 "include/drm/drm_encoder_slave.h"
-__inline static int drm_i2c_encoder_register(struct module *owner , struct drm_i2c_encoder_driver *driver ) 
+ static int drm_i2c_encoder_register(struct module *owner , struct drm_i2c_encoder_driver *driver ) 
 { int tmp___7 ;
   struct i2c_driver *__cil_tmp4 ;
 
@@ -5553,9 +5553,9 @@ __inline static int drm_i2c_encoder_register(struct module *owner , struct drm_i
 }
 }
 #line 155
-__inline static void drm_i2c_encoder_unregister(struct drm_i2c_encoder_driver *driver )  __attribute__((__no_instrument_function__)) ;
+ static void drm_i2c_encoder_unregister(struct drm_i2c_encoder_driver *driver )  __attribute__((__no_instrument_function__)) ;
 #line 155 "include/drm/drm_encoder_slave.h"
-__inline static void drm_i2c_encoder_unregister(struct drm_i2c_encoder_driver *driver ) 
+ static void drm_i2c_encoder_unregister(struct drm_i2c_encoder_driver *driver ) 
 { struct i2c_driver *__cil_tmp2 ;
 
   {

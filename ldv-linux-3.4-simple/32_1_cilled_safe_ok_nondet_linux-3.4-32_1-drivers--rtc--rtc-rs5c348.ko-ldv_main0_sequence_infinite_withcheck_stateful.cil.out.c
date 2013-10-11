@@ -3582,9 +3582,9 @@ extern unsigned char bin2bcd(unsigned int val )  __attribute__((__const__)) ;
 #line 10 "include/asm-generic/delay.h"
 extern void __const_udelay(unsigned long xloops ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3593,9 +3593,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3650,10 +3650,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -3667,9 +3667,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -3695,9 +3695,9 @@ extern struct rtc_device *rtc_device_register(char const   *name , struct device
 #line 225
 extern void rtc_device_unregister(struct rtc_device *rtc ) ;
 #line 105 "include/linux/spi/spi.h"
-__inline static struct spi_device *to_spi_device(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static struct spi_device *to_spi_device(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 105 "include/linux/spi/spi.h"
-__inline static struct spi_device *to_spi_device(struct device *dev ) 
+ static struct spi_device *to_spi_device(struct device *dev ) 
 { struct device  const  *__mptr ;
   struct spi_device *tmp___7 ;
   struct spi_device *__cil_tmp4 ;
@@ -3737,9 +3737,9 @@ __inline static struct spi_device *to_spi_device(struct device *dev )
 #line 191
 extern int spi_register_driver(struct spi_driver *sdrv ) ;
 #line 198
-__inline static void spi_unregister_driver(struct spi_driver *sdrv )  __attribute__((__no_instrument_function__)) ;
+ static void spi_unregister_driver(struct spi_driver *sdrv )  __attribute__((__no_instrument_function__)) ;
 #line 198 "include/linux/spi/spi.h"
-__inline static void spi_unregister_driver(struct spi_driver *sdrv ) 
+ static void spi_unregister_driver(struct spi_driver *sdrv ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct device_driver *__cil_tmp4 ;
@@ -3768,9 +3768,9 @@ __inline static void spi_unregister_driver(struct spi_driver *sdrv )
 extern int spi_write_then_read(struct spi_device *spi , void const   *txbuf , unsigned int n_tx ,
                                void *rxbuf , unsigned int n_rx ) ;
 #line 698
-__inline static ssize_t spi_w8r8(struct spi_device *spi , u8 cmd )  __attribute__((__no_instrument_function__)) ;
+ static ssize_t spi_w8r8(struct spi_device *spi , u8 cmd )  __attribute__((__no_instrument_function__)) ;
 #line 698 "include/linux/spi/spi.h"
-__inline static ssize_t spi_w8r8(struct spi_device *spi , u8 cmd ) 
+ static ssize_t spi_w8r8(struct spi_device *spi , u8 cmd ) 
 { ssize_t status ;
   u8 result ;
   int tmp___7 ;

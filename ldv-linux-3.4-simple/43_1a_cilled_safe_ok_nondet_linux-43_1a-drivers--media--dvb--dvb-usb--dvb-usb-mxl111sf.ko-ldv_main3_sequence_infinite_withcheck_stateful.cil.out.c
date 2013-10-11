@@ -10500,7 +10500,7 @@ static int mxl111sf_attach_demod(struct dvb_usb_adapter *adap )
 }
 }
 #line 535 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8601/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/dvb-usb/mxl111sf.c.p"
-__inline static int mxl111sf_set_ant_path(struct mxl111sf_state *state , int antpath ) 
+ static int mxl111sf_set_ant_path(struct mxl111sf_state *state , int antpath ) 
 { int tmp ;
   int tmp___0 ;
   u8 __cil_tmp5 ;
@@ -16264,7 +16264,7 @@ extern int mutex_lock_interruptible_nested(struct mutex * , unsigned int  ) ;
 #line 792 "include/linux/device.h"
 extern void *dev_get_drvdata(struct device  const  * ) ;
 #line 395 "include/linux/i2c.h"
-__inline static void *i2c_get_adapdata(struct i2c_adapter  const  *dev ) 
+ static void *i2c_get_adapdata(struct i2c_adapter  const  *dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;

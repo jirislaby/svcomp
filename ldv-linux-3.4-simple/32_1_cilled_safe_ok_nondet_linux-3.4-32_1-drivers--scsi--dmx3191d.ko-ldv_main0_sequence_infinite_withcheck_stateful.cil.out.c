@@ -4939,9 +4939,9 @@ extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 #line 147 "include/linux/kernel.h"
 extern void __might_sleep(char const   *file , int line , int preempt_offset ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -4961,9 +4961,9 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 88 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/percpu.h"
 extern void __bad_percpu_size(void) ;
 #line 651 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/processor.h"
-__inline static void rep_nop(void)  __attribute__((__no_instrument_function__)) ;
+ static void rep_nop(void)  __attribute__((__no_instrument_function__)) ;
 #line 651 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/processor.h"
-__inline static void rep_nop(void) 
+ static void rep_nop(void) 
 { 
 
   {
@@ -4974,9 +4974,9 @@ __inline static void rep_nop(void)
 }
 }
 #line 656
-__inline static void cpu_relax(void)  __attribute__((__no_instrument_function__)) ;
+ static void cpu_relax(void)  __attribute__((__no_instrument_function__)) ;
 #line 656 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/processor.h"
-__inline static void cpu_relax(void) 
+ static void cpu_relax(void) 
 { 
 
   {
@@ -4991,9 +4991,9 @@ __inline static void cpu_relax(void)
 #line 220 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
 extern unsigned long kernel_stack  __attribute__((__section__(".data..percpu"))) ;
 #line 222
-__inline static struct thread_info *current_thread_info(void)  __attribute__((__no_instrument_function__)) ;
+ static struct thread_info *current_thread_info(void)  __attribute__((__no_instrument_function__)) ;
 #line 222 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
-__inline static struct thread_info *current_thread_info(void) 
+ static struct thread_info *current_thread_info(void) 
 { struct thread_info *ti ;
   unsigned long pfo_ret__ ;
   unsigned long __cil_tmp3 ;
@@ -5111,9 +5111,9 @@ extern void _raw_spin_unlock_irq(raw_spinlock_t *lock )  __attribute__((__sectio
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -5122,9 +5122,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 308
-__inline static void spin_lock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 308 "include/linux/spinlock.h"
-__inline static void spin_lock_irq(spinlock_t *lock ) 
+ static void spin_lock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -5139,9 +5139,9 @@ __inline static void spin_lock_irq(spinlock_t *lock )
 }
 }
 #line 333
-__inline static void spin_unlock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 333 "include/linux/spinlock.h"
-__inline static void spin_unlock_irq(spinlock_t *lock ) 
+ static void spin_unlock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -5156,9 +5156,9 @@ __inline static void spin_unlock_irq(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -5204,9 +5204,9 @@ extern int schedule_delayed_work(struct delayed_work *work , unsigned long delay
 #line 396
 extern bool cancel_delayed_work_sync(struct delayed_work *dwork ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -5221,9 +5221,9 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308
-__inline static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -5261,9 +5261,9 @@ extern int __attribute__((__warn_unused_result__))  __pci_register_driver(struct
 #line 949
 extern void pci_unregister_driver(struct pci_driver *dev ) ;
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page )  __attribute__((__no_instrument_function__)) ;
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page )  __attribute__((__no_instrument_function__)) ;
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page ) 
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page ) 
 { struct page *__cil_tmp2 ;
   struct page  const  *__cil_tmp3 ;
   int __cil_tmp4 ;
@@ -5297,9 +5297,9 @@ __inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(
 }
 }
 #line 95 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg )  __attribute__((__no_instrument_function__)) ;
+ static struct page *sg_page(struct scatterlist *sg )  __attribute__((__no_instrument_function__)) ;
 #line 95 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg ) 
+ static struct page *sg_page(struct scatterlist *sg ) 
 { long tmp ;
   long tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -5443,9 +5443,9 @@ __inline static struct page *sg_page(struct scatterlist *sg )
 }
 }
 #line 199
-__inline static void *sg_virt(struct scatterlist *sg )  __attribute__((__no_instrument_function__)) ;
+ static void *sg_virt(struct scatterlist *sg )  __attribute__((__no_instrument_function__)) ;
 #line 199 "include/linux/scatterlist.h"
-__inline static void *sg_virt(struct scatterlist *sg ) 
+ static void *sg_virt(struct scatterlist *sg ) 
 { struct page *tmp ;
   void *tmp___0 ;
   struct page  const  *__cil_tmp4 ;
@@ -5475,9 +5475,9 @@ __inline static void *sg_virt(struct scatterlist *sg )
 }
 }
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
+ static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5502,9 +5502,9 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1363
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 1363 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -5534,14 +5534,14 @@ extern int __attribute__((__warn_unused_result__))  request_threaded_irq(unsigne
                                                                          char const   *name ,
                                                                          void *dev ) ;
 #line 131
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
                                                                          char const   *name ,
                                                                          void *dev )  __attribute__((__no_instrument_function__)) ;
 #line 131 "include/linux/interrupt.h"
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
@@ -5581,10 +5581,10 @@ extern void scsi_host_put(struct Scsi_Host *t ) ;
 #line 789
 extern void scsi_cmd_get_serial(struct Scsi_Host * , struct scsi_cmnd * ) ;
 #line 793
-__inline static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
+ static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
                                                                            struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 793 "include/scsi/scsi_host.h"
-__inline static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
+ static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
                                                                            struct device *dev ) 
 { int tmp ;
 
@@ -5602,9 +5602,9 @@ extern void __const_udelay(unsigned long xloops ) ;
 #line 2626 "include/linux/sched.h"
 extern int _cond_resched(void) ;
 #line 163 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 163 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5626,9 +5626,9 @@ __inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )
 }
 }
 #line 168
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 168 "include/scsi/scsi_cmnd.h"
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -5644,9 +5644,9 @@ __inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )
 }
 }
 #line 173
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 173 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5665,9 +5665,9 @@ __inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )
 }
 }
 #line 409 "include/scsi/scsi_device.h"
-__inline static unsigned int sdev_id(struct scsi_device *sdev )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int sdev_id(struct scsi_device *sdev )  __attribute__((__no_instrument_function__)) ;
 #line 409 "include/scsi/scsi_device.h"
-__inline static unsigned int sdev_id(struct scsi_device *sdev ) 
+ static unsigned int sdev_id(struct scsi_device *sdev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -5720,9 +5720,9 @@ static int do_abort(struct Scsi_Host *host ) ;
 #line 282
 static void do_reset(struct Scsi_Host *host ) ;
 #line 291
-__inline static void initialize_SCp(Scsi_Cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static void initialize_SCp(Scsi_Cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 291 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/scsi/NCR5380.c"
-__inline static void initialize_SCp(Scsi_Cmnd *cmd ) 
+ static void initialize_SCp(Scsi_Cmnd *cmd ) 
 { unsigned int tmp___7 ;
   void *tmp___8 ;
   unsigned int tmp___9 ;

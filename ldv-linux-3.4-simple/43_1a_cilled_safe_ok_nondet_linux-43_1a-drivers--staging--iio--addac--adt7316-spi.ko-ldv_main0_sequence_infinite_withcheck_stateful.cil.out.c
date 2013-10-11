@@ -2444,7 +2444,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2464,7 +2464,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -2499,7 +2499,7 @@ struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 892 "include/linux/device.h"
 extern int dev_err(struct device  const  * , char const   *  , ...) ;
 #line 573 "include/linux/spi/spi.h"
-__inline static void spi_message_init(struct spi_message *m ) 
+ static void spi_message_init(struct spi_message *m ) 
 { void *__cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
 
@@ -2519,7 +2519,7 @@ __inline static void spi_message_init(struct spi_message *m )
 }
 }
 #line 580 "include/linux/spi/spi.h"
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -2545,7 +2545,7 @@ __inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_me
 #line 630
 extern int spi_sync(struct spi_device * , struct spi_message * ) ;
 #line 646 "include/linux/spi/spi.h"
-__inline static int spi_write(struct spi_device *spi , void const   *buf , size_t len ) 
+ static int spi_write(struct spi_device *spi , void const   *buf , size_t len ) 
 { struct spi_transfer t ;
   struct spi_message m ;
   int tmp ;

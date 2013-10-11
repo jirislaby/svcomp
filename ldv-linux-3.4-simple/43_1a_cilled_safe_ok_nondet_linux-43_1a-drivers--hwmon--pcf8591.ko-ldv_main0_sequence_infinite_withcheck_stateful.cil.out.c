@@ -2495,7 +2495,7 @@ extern int printk(char const   *  , ...) ;
 #line 218 "include/linux/kernel.h"
 extern int kstrtoull(char const   * , unsigned int  , unsigned long long * ) ;
 #line 220 "include/linux/kernel.h"
-__inline static int kstrtoul(char const   *s , unsigned int base , unsigned long *res ) 
+ static int kstrtoul(char const   *s , unsigned int base , unsigned long *res ) 
 { int tmp ;
   unsigned long long *__cil_tmp6 ;
 
@@ -2513,7 +2513,7 @@ __inline static int kstrtoul(char const   *s , unsigned int base , unsigned long
 #line 320
 extern int sprintf(char * , char const   *  , ...) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2522,7 +2522,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2562,7 +2562,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11097/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/pcf8591.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2584,7 +2584,7 @@ extern s32 i2c_smbus_write_byte(struct i2c_client  const  * , u8  ) ;
 #line 88
 extern s32 i2c_smbus_write_byte_data(struct i2c_client  const  * , u8  , u8  ) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2606,7 +2606,7 @@ __inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )
 }
 }
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -4149,7 +4149,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 865 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11097/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/pcf8591.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

@@ -6184,7 +6184,7 @@ long __builtin_expect(long  , long  ) ;
 #line 14 "include/linux/file.h"
 extern void fput(struct file * ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { 
 
   {
@@ -6199,7 +6199,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -6216,7 +6216,7 @@ __inline static void list_add_tail(struct list_head *new , struct list_head *hea
 #line 111
 extern void __list_del_entry(struct list_head *entry ) ;
 #line 142 "include/linux/list.h"
-__inline static void list_del_init(struct list_head *entry ) 
+ static void list_del_init(struct list_head *entry ) 
 { 
 
   {
@@ -6231,7 +6231,7 @@ __inline static void list_del_init(struct list_head *entry )
 }
 }
 #line 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head  const  *head ) 
+ static int list_empty(struct list_head  const  *head ) 
 { unsigned long __cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6250,7 +6250,7 @@ __inline static int list_empty(struct list_head  const  *head )
 }
 }
 #line 59 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -6282,7 +6282,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
   int __cil_tmp2 ;
   int __cil_tmp3 ;
@@ -6397,7 +6397,7 @@ __inline static struct task_struct *( __attribute__((__always_inline__)) get_cur
 #line 11 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/cmpxchg_64.h"
 extern void __xchg_wrong_size(void) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -6406,7 +6406,7 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -6436,7 +6436,7 @@ __inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const 
 #line 217 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/thread_info.h"
 extern unsigned long kernel_stack  __attribute__((__section__(".data..percpu"))) ;
 #line 219 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/thread_info.h"
-__inline static struct thread_info *current_thread_info(void) 
+ static struct thread_info *current_thread_info(void) 
 { struct thread_info *ti ;
   unsigned long pfo_ret__ ;
   int __cil_tmp3 ;
@@ -6586,7 +6586,7 @@ extern void _raw_spin_unlock_irq(raw_spinlock_t *lock )  __attribute__((__sectio
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -6595,7 +6595,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 308 "include/linux/spinlock.h"
-__inline static void spin_lock_irq(spinlock_t *lock ) 
+ static void spin_lock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -6610,7 +6610,7 @@ __inline static void spin_lock_irq(spinlock_t *lock )
 }
 }
 #line 333 "include/linux/spinlock.h"
-__inline static void spin_unlock_irq(spinlock_t *lock ) 
+ static void spin_unlock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -6625,7 +6625,7 @@ __inline static void spin_unlock_irq(spinlock_t *lock )
 }
 }
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp3 ;
 
   {
@@ -6653,7 +6653,7 @@ __inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long fla
 #line 80 "include/linux/wait.h"
 extern void __init_waitqueue_head(wait_queue_head_t *q , struct lock_class_key * ) ;
 #line 105 "include/linux/wait.h"
-__inline static void init_waitqueue_func_entry(wait_queue_t *q , int (*func)(wait_queue_t *wait ,
+ static void init_waitqueue_func_entry(wait_queue_t *q , int (*func)(wait_queue_t *wait ,
                                                                              unsigned int mode ,
                                                                              int flags ,
                                                                              void *key ) ) 
@@ -6700,7 +6700,7 @@ extern void mutex_unlock(struct mutex *lock ) ;
 #line 433 "include/linux/mm.h"
 extern void put_page(struct page *page ) ;
 #line 720 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page *page ) 
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page *page ) 
 { struct page *__cil_tmp2 ;
   int __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6737,7 +6737,7 @@ extern int set_page_dirty_lock(struct page *page ) ;
 #line 80 "include/linux/rcupdate.h"
 extern void synchronize_sched(void) ;
 #line 110 "include/linux/rcupdate.h"
-__inline static void __rcu_read_lock(void) 
+ static void __rcu_read_lock(void) 
 { 
 
   {
@@ -6758,7 +6758,7 @@ __inline static void __rcu_read_lock(void)
 }
 }
 #line 120 "include/linux/rcupdate.h"
-__inline static void synchronize_rcu(void) 
+ static void synchronize_rcu(void) 
 { 
 
   {
@@ -6775,7 +6775,7 @@ extern struct lockdep_map rcu_lock_map ;
 #line 200
 extern int debug_lockdep_rcu_enabled(void) ;
 #line 214 "include/linux/rcupdate.h"
-__inline static int rcu_read_lock_held(void) 
+ static int rcu_read_lock_held(void) 
 { int tmp ;
   int tmp___0 ;
 
@@ -6800,7 +6800,7 @@ __inline static int rcu_read_lock_held(void)
 }
 }
 #line 590 "include/linux/rcupdate.h"
-__inline static void rcu_read_lock(void) 
+ static void rcu_read_lock(void) 
 { void *__cil_tmp1 ;
   struct lockdep_map *__cil_tmp2 ;
   void *__cil_tmp3 ;
@@ -6826,7 +6826,7 @@ __inline static void rcu_read_lock(void)
 }
 }
 #line 612 "include/linux/rcupdate.h"
-__inline static void rcu_read_unlock(void) 
+ static void rcu_read_unlock(void) 
 { void *__cil_tmp1 ;
   unsigned long __cil_tmp2 ;
 
@@ -6848,7 +6848,7 @@ __inline static void rcu_read_unlock(void)
 #line 830
 extern void kfree(void const   * ) ;
 #line 153 "include/linux/virtio_ring.h"
-__inline static int vring_need_event(__u16 event_idx , __u16 new_idx , __u16 old ) 
+ static int vring_need_event(__u16 event_idx , __u16 new_idx , __u16 old ) 
 { int __cil_tmp4 ;
   int __cil_tmp5 ;
   int __cil_tmp6 ;
@@ -6895,7 +6895,7 @@ extern int memcpy_fromiovec(unsigned char *kdata , struct iovec *iov , int len )
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -6921,7 +6921,7 @@ extern unsigned long __attribute__((__warn_unused_result__))  copy_user_generic_
                                                                                          void const   *from ,
                                                                                          unsigned int len ) ;
 #line 24 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_user_generic)(void *to ,
+ static unsigned long __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_user_generic)(void *to ,
                                                                                                                                void const   *from ,
                                                                                                                                unsigned int len ) 
 { unsigned int ret ;
@@ -6973,7 +6973,7 @@ extern unsigned long __attribute__((__warn_unused_result__))  _copy_from_user(vo
                                                                               void const   *from ,
                                                                               unsigned int len ) ;
 #line 46 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
+ static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
                                                                                       void const   *from ,
                                                                                       unsigned long n ) 
 { int sz ;
@@ -7084,7 +7084,7 @@ __inline static unsigned long __attribute__((__warn_unused_result__))  copy_from
 }
 }
 #line 62 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void const   *src ,
                                                                                                                 unsigned int size ) 
 { unsigned long tmp ;
@@ -7107,7 +7107,7 @@ __inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__
 }
 }
 #line 70 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) __copy_from_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) __copy_from_user)(void *dst ,
                                                                                                                     void const   *src ,
                                                                                                                     unsigned int size ) 
 { int ret ;
@@ -7644,7 +7644,7 @@ __inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__
 }
 }
 #line 114 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) __copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) __copy_to_user)(void *dst ,
                                                                                                                   void const   *src ,
                                                                                                                   unsigned int size ) 
 { int ret ;
@@ -8109,7 +8109,7 @@ extern void use_mm(struct mm_struct *mm ) ;
 #line 7
 extern void unuse_mm(struct mm_struct *mm ) ;
 #line 46 "include/linux/poll.h"
-__inline static void init_poll_funcptr(poll_table *pt , void (*qproc)(struct file * ,
+ static void init_poll_funcptr(poll_table *pt , void (*qproc)(struct file * ,
                                                                       wait_queue_head_t * ,
                                                                       struct poll_table_struct * ) ) 
 { 
@@ -8124,7 +8124,7 @@ __inline static void init_poll_funcptr(poll_table *pt , void (*qproc)(struct fil
 }
 }
 #line 16 "include/linux/uaccess.h"
-__inline static void pagefault_disable(void) 
+ static void pagefault_disable(void) 
 { struct thread_info *tmp ;
   int __cil_tmp2 ;
 
@@ -8155,7 +8155,7 @@ __inline static void pagefault_disable(void)
 }
 }
 #line 26 "include/linux/uaccess.h"
-__inline static void pagefault_enable(void) 
+ static void pagefault_enable(void) 
 { struct thread_info *tmp ;
   int __cil_tmp2 ;
 
@@ -8200,7 +8200,7 @@ __inline static void pagefault_enable(void)
 }
 }
 #line 58 "include/linux/highmem.h"
-__inline static void *__kmap_atomic(struct page *page ) 
+ static void *__kmap_atomic(struct page *page ) 
 { void *tmp ;
 
   {
@@ -8215,7 +8215,7 @@ __inline static void *__kmap_atomic(struct page *page )
 }
 }
 #line 65 "include/linux/highmem.h"
-__inline static void __kunmap_atomic(void *addr ) 
+ static void __kunmap_atomic(void *addr ) 
 { 
 
   {
@@ -8297,7 +8297,7 @@ bool vhost_enable_notify(struct vhost_dev *dev , struct vhost_virtqueue *vq ) ;
 int vhost_log_write(struct vhost_virtqueue *vq , struct vhost_log *log , unsigned int log_num ,
                     u64 len ) ;
 #line 179 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/vhost/vhost.h"
-__inline static int vhost_has_feature(struct vhost_dev *dev , int bit ) 
+ static int vhost_has_feature(struct vhost_dev *dev , int bit ) 
 { unsigned int acked_features ;
   unsigned int _________p1 ;
   int tmp___7 ;
@@ -8831,7 +8831,7 @@ void vhost_poll_flush(struct vhost_poll *poll )
 }
 }
 #line 138 "/anthill/stuff/tacas-comp/work/current--X--drivers/vhost/vhost_net.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/12/dscv_tempdir/dscv/ri/68_1/drivers/vhost/vhost.c.common.c"
-__inline static void vhost_work_queue(struct vhost_dev *dev , struct vhost_work *work ) 
+ static void vhost_work_queue(struct vhost_dev *dev , struct vhost_work *work ) 
 { unsigned long flags ;
   raw_spinlock_t *tmp___7 ;
   int tmp___8 ;
@@ -20719,7 +20719,7 @@ void ldv_check_final_state(void)
 }
 }
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
 { 
 
   {
@@ -20728,7 +20728,7 @@ __inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long erro
 }
 }
 #line 23 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const   *v ) 
+ static int atomic_read(atomic_t const   *v ) 
 { int const   *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -20747,7 +20747,7 @@ __inline static int atomic_read(atomic_t const   *v )
 }
 }
 #line 43 "include/linux/uio.h"
-__inline static size_t iov_length(struct iovec  const  *iov , unsigned long nr_segs ) 
+ static size_t iov_length(struct iovec  const  *iov , unsigned long nr_segs ) 
 { unsigned long seg ;
   size_t ret ;
   struct iovec  const  *__cil_tmp5 ;
@@ -20796,7 +20796,7 @@ extern int memcpy_toiovecend(struct iovec  const  *v , unsigned char *kdata , in
 #line 2336 "include/linux/fs.h"
 extern loff_t noop_llseek(struct file *file , loff_t offset , int origin ) ;
 #line 198 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/compat.h"
-__inline static void *compat_ptr(compat_uptr_t uptr ) 
+ static void *compat_ptr(compat_uptr_t uptr ) 
 { unsigned long __cil_tmp2 ;
 
   {
@@ -20819,7 +20819,7 @@ extern struct module __this_module ;
 #line 248 "include/linux/net.h"
 extern struct socket *sockfd_lookup(int fd , int *err ) ;
 #line 808 "include/linux/skbuff.h"
-__inline static struct sk_buff *skb_peek(struct sk_buff_head *list_ ) 
+ static struct sk_buff *skb_peek(struct sk_buff_head *list_ ) 
 { struct sk_buff *list ;
   struct sk_buff *__cil_tmp3 ;
   struct sk_buff *__cil_tmp4 ;

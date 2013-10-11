@@ -4681,7 +4681,7 @@ struct dma_map_ops {
 # 1 "<compiler builtins>"
 
 # 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )
+ static void INIT_LIST_HEAD(struct list_head *list )
 {
 
   {
@@ -4696,7 +4696,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 # 47 "include/linux/list.h"
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 # 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head )
+ static void list_add(struct list_head *new , struct list_head *head )
 {
 
   {
@@ -4709,7 +4709,7 @@ __inline static void list_add(struct list_head *new , struct list_head *head )
 }
 }
 # 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )
+ static void list_add_tail(struct list_head *new , struct list_head *head )
 {
 
   {
@@ -4726,7 +4726,7 @@ extern void __list_del_entry(struct list_head * ) ;
 # 112 "include/linux/list.h"
 extern void list_del(struct list_head * ) ;
 # 142 "include/linux/list.h"
-__inline static void list_del_init(struct list_head *entry )
+ static void list_del_init(struct list_head *entry )
 {
 
   {
@@ -4741,7 +4741,7 @@ __inline static void list_del_init(struct list_head *entry )
 }
 }
 # 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head const *head )
+ static int list_empty(struct list_head const *head )
 {
 
   {
@@ -4750,7 +4750,7 @@ __inline static int list_empty(struct list_head const *head )
 }
 }
 # 60 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void set_bit(unsigned int nr , unsigned long volatile *addr )
+ static void set_bit(unsigned int nr , unsigned long volatile *addr )
 {
 
   {
@@ -4761,7 +4761,7 @@ __inline static void set_bit(unsigned int nr , unsigned long volatile *addr )
 }
 }
 # 98 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void clear_bit(int nr , unsigned long volatile *addr )
+ static void clear_bit(int nr , unsigned long volatile *addr )
 {
 
   {
@@ -4772,7 +4772,7 @@ __inline static void clear_bit(int nr , unsigned long volatile *addr )
 }
 }
 # 309 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int constant_test_bit(unsigned int nr , unsigned long const volatile *addr )
+ static int constant_test_bit(unsigned int nr , unsigned long const volatile *addr )
 {
 
   {
@@ -4781,7 +4781,7 @@ __inline static int constant_test_bit(unsigned int nr , unsigned long const vola
 }
 }
 # 315 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile *addr )
+ static int variable_test_bit(int nr , unsigned long const volatile *addr )
 { int oldbit ;
 
   {
@@ -4793,7 +4793,7 @@ __inline static int variable_test_bit(int nr , unsigned long const volatile *add
 }
 }
 # 7 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/swab.h"
-__inline static __u32 __arch_swab32(__u32 val )
+ static __u32 __arch_swab32(__u32 val )
 {
 
   {
@@ -4804,7 +4804,7 @@ __inline static __u32 __arch_swab32(__u32 val )
 }
 }
 # 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val )
+ static __u16 __fswab16(__u16 val )
 {
 
   {
@@ -4813,7 +4813,7 @@ __inline static __u16 __fswab16(__u16 val )
 }
 }
 # 55 "include/linux/swab.h"
-__inline static __u32 __fswab32(__u32 val )
+ static __u32 __fswab32(__u32 val )
 { __u32 tmp ;
 
   {
@@ -4842,7 +4842,7 @@ extern void __bad_percpu_size(void) ;
 # 10 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 # 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void)
+ static struct task_struct *get_current(void)
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -4897,7 +4897,7 @@ extern char *strcpy(char * , char const * ) ;
 # 64 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/string_64.h"
 extern int strcmp(char const * , char const * ) ;
 # 32 "include/linux/err.h"
-__inline static long IS_ERR(void const *ptr )
+ static long IS_ERR(void const *ptr )
 { long tmp ;
 
   {
@@ -4910,7 +4910,7 @@ __inline static long IS_ERR(void const *ptr )
 }
 }
 # 23 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const *v )
+ static int atomic_read(atomic_t const *v )
 {
 
   {
@@ -4919,7 +4919,7 @@ __inline static int atomic_read(atomic_t const *v )
 }
 }
 # 35 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i )
+ static void atomic_set(atomic_t *v , int i )
 {
 
   {
@@ -4930,7 +4930,7 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 # 93 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v )
+ static void atomic_inc(atomic_t *v )
 {
 
   {
@@ -4941,7 +4941,7 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 # 105 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v )
+ static void atomic_dec(atomic_t *v )
 {
 
   {
@@ -4952,7 +4952,7 @@ __inline static void atomic_dec(atomic_t *v )
 }
 }
 # 119 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_dec_and_test(atomic_t *v )
+ static int atomic_dec_and_test(atomic_t *v )
 { unsigned char c ;
 
   {
@@ -4966,7 +4966,7 @@ __inline static int atomic_dec_and_test(atomic_t *v )
 # 217 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/thread_info.h"
 extern unsigned long kernel_stack ;
 # 219 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/thread_info.h"
-__inline static struct thread_info *current_thread_info(void)
+ static struct thread_info *current_thread_info(void)
 { struct thread_info *ti ;
   unsigned long pfo_ret__ ;
 
@@ -5014,7 +5014,7 @@ __inline static struct thread_info *current_thread_info(void)
 }
 }
 # 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag )
+ static int test_ti_thread_flag(struct thread_info *ti , int flag )
 { int tmp ;
 
   {
@@ -5037,7 +5037,7 @@ extern void _raw_spin_unlock(raw_spinlock_t * ) ;
 # 41 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irq(raw_spinlock_t * ) ;
 # 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 {
 
   {
@@ -5046,7 +5046,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 # 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock )
+ static void spin_lock(spinlock_t *lock )
 {
 
   {
@@ -5059,7 +5059,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 # 308 "include/linux/spinlock.h"
-__inline static void spin_lock_irq(spinlock_t *lock )
+ static void spin_lock_irq(spinlock_t *lock )
 {
 
   {
@@ -5072,7 +5072,7 @@ __inline static void spin_lock_irq(spinlock_t *lock )
 }
 }
 # 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock )
+ static void spin_unlock(spinlock_t *lock )
 {
 
   {
@@ -5085,7 +5085,7 @@ __inline static void spin_unlock(spinlock_t *lock )
 }
 }
 # 333 "include/linux/spinlock.h"
-__inline static void spin_unlock_irq(spinlock_t *lock )
+ static void spin_unlock_irq(spinlock_t *lock )
 {
 
   {
@@ -5116,7 +5116,7 @@ extern void mutex_unlock(struct mutex * ) ;
 # 322 "include/linux/gfp.h"
 extern struct page *alloc_pages_current(gfp_t , unsigned int ) ;
 # 325 "include/linux/gfp.h"
-__inline static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order )
+ static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order )
 { struct page *tmp ;
 
   {
@@ -5142,9 +5142,9 @@ extern int kobject_uevent(struct kobject * , enum kobject_action ) ;
 # 99 "include/linux/module.h"
 extern struct module __this_module ;
 # 519 "include/linux/module.h"
-__inline static void ldv___module_get_3(struct module *module ) ;
+ static void ldv___module_get_3(struct module *module ) ;
 # 541 "include/linux/module.h"
-__inline static int ldv_try_module_get_1(struct module *module ) ;
+ static int ldv_try_module_get_1(struct module *module ) ;
 # 547 "include/linux/module.h"
 void ldv_module_put_2(struct module *ldv_func_arg1 ) ;
 # 551 "include/linux/module.h"
@@ -5172,7 +5172,7 @@ extern struct rb_node *rb_next(struct rb_node const * ) ;
 # 161 "include/linux/rbtree.h"
 extern struct rb_node *rb_first(struct rb_root const * ) ;
 # 168 "include/linux/rbtree.h"
-__inline static void rb_link_node(struct rb_node *node , struct rb_node *parent ,
+ static void rb_link_node(struct rb_node *node , struct rb_node *parent ,
                                   struct rb_node **rb_link )
 { struct rb_node *tmp ;
 
@@ -5198,7 +5198,7 @@ extern void set_user_nice(struct task_struct * , long ) ;
 # 2112 "include/linux/sched.h"
 extern int wake_up_process(struct task_struct * ) ;
 # 2441 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 { int tmp ;
 
   {
@@ -5211,7 +5211,7 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 # 41 "include/linux/kdev_t.h"
-__inline static u32 new_encode_dev(dev_t dev )
+ static u32 new_encode_dev(dev_t dev )
 { unsigned int major ;
   unsigned int minor ;
 
@@ -5225,7 +5225,7 @@ __inline static u32 new_encode_dev(dev_t dev )
 }
 }
 # 48 "include/linux/kdev_t.h"
-__inline static dev_t new_decode_dev(u32 dev )
+ static dev_t new_decode_dev(u32 dev )
 { unsigned int major ;
   unsigned int minor ;
 
@@ -5241,7 +5241,7 @@ __inline static dev_t new_decode_dev(u32 dev )
 # 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t , gfp_t ) ;
 # 255 "include/linux/slub_def.h"
-__inline static void *kmalloc(size_t size , gfp_t flags )
+ static void *kmalloc(size_t size , gfp_t flags )
 { void *tmp___2 ;
 
   {
@@ -5254,7 +5254,7 @@ __inline static void *kmalloc(size_t size , gfp_t flags )
 }
 }
 # 223 "include/linux/slab.h"
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags )
+ static void *kcalloc(size_t n , size_t size , gfp_t flags )
 { void *tmp ;
 
   {
@@ -5279,7 +5279,7 @@ __inline static void *kcalloc(size_t n , size_t size , gfp_t flags )
 }
 }
 # 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )
+ static void *kzalloc(size_t size , gfp_t flags )
 { void *tmp ;
 
   {
@@ -5325,7 +5325,7 @@ extern void add_disk(struct gendisk * ) ;
 # 409 "include/linux/genhd.h"
 extern void del_gendisk(struct gendisk * ) ;
 # 438 "include/linux/genhd.h"
-__inline static void set_capacity(struct gendisk *disk , sector_t size )
+ static void set_capacity(struct gendisk *disk , sector_t size )
 {
 
   {
@@ -5340,7 +5340,7 @@ extern struct gendisk *alloc_disk(int ) ;
 # 609 "include/linux/genhd.h"
 extern void put_disk(struct gendisk * ) ;
 # 720 "include/linux/mm.h"
-__inline static void *lowmem_page_address(struct page *page )
+ static void *lowmem_page_address(struct page *page )
 {
 
   {
@@ -5353,7 +5353,7 @@ extern unsigned long _copy_to_user(void * , void const * , unsigned int ) ;
 # 42 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_from_user(void * , void const * , unsigned int ) ;
 # 46 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long copy_from_user(void *to , void const *from , unsigned long n )
+ static unsigned long copy_from_user(void *to , void const *from , unsigned long n )
 { int sz ;
   unsigned long tmp ;
   int __ret_warn_on ;
@@ -5417,7 +5417,7 @@ __inline static unsigned long copy_from_user(void *to , void const *from , unsig
 }
 }
 # 63 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const *src , unsigned int size )
+ static int copy_to_user(void *dst , void const *src , unsigned int size )
 { unsigned long tmp ;
 
   {
@@ -5432,7 +5432,7 @@ __inline static int copy_to_user(void *dst , void const *src , unsigned int size
 }
 }
 # 16 "include/linux/uaccess.h"
-__inline static void pagefault_disable(void)
+ static void pagefault_disable(void)
 { struct thread_info *tmp ;
 
   {
@@ -5449,7 +5449,7 @@ __inline static void pagefault_disable(void)
 }
 }
 # 26 "include/linux/uaccess.h"
-__inline static void pagefault_enable(void)
+ static void pagefault_enable(void)
 { struct thread_info *tmp ;
 
   {
@@ -5468,7 +5468,7 @@ __inline static void pagefault_enable(void)
 }
 }
 # 58 "include/linux/highmem.h"
-__inline static void *__kmap_atomic(struct page *page )
+ static void *__kmap_atomic(struct page *page )
 { void *tmp ;
 
   {
@@ -5483,7 +5483,7 @@ __inline static void *__kmap_atomic(struct page *page )
 }
 }
 # 65 "include/linux/highmem.h"
-__inline static void __kunmap_atomic(void *addr )
+ static void __kunmap_atomic(void *addr )
 {
 
   {
@@ -5514,7 +5514,7 @@ extern void *mempool_kmalloc(gfp_t , void * ) ;
 # 54 "include/linux/mempool.h"
 extern void mempool_kfree(void * , void * ) ;
 # 55 "include/linux/mempool.h"
-__inline static mempool_t *mempool_create_kmalloc_pool(int min_nr , size_t size )
+ static mempool_t *mempool_create_kmalloc_pool(int min_nr , size_t size )
 { mempool_t *tmp ;
 
   {
@@ -5541,7 +5541,7 @@ extern void bio_init(struct bio * ) ;
 # 229 "include/linux/bio.h"
 extern int bio_add_page(struct bio * , struct page * , unsigned int , unsigned int ) ;
 # 386 "include/linux/bio.h"
-__inline static int bio_list_empty(struct bio_list const *bl )
+ static int bio_list_empty(struct bio_list const *bl )
 {
 
   {
@@ -5550,7 +5550,7 @@ __inline static int bio_list_empty(struct bio_list const *bl )
 }
 }
 # 391 "include/linux/bio.h"
-__inline static void bio_list_init(struct bio_list *bl )
+ static void bio_list_init(struct bio_list *bl )
 { struct bio *tmp ;
 
   {
@@ -5565,7 +5565,7 @@ __inline static void bio_list_init(struct bio_list *bl )
 }
 }
 # 410 "include/linux/bio.h"
-__inline static void bio_list_add(struct bio_list *bl , struct bio *bio )
+ static void bio_list_add(struct bio_list *bl , struct bio *bio )
 {
 
   {
@@ -5586,7 +5586,7 @@ __inline static void bio_list_add(struct bio_list *bl , struct bio *bio )
 }
 }
 # 459 "include/linux/bio.h"
-__inline static struct bio *bio_list_peek(struct bio_list *bl )
+ static struct bio *bio_list_peek(struct bio_list *bl )
 {
 
   {
@@ -5595,7 +5595,7 @@ __inline static struct bio *bio_list_peek(struct bio_list *bl )
 }
 }
 # 464 "include/linux/bio.h"
-__inline static struct bio *bio_list_pop(struct bio_list *bl )
+ static struct bio *bio_list_pop(struct bio_list *bl )
 { struct bio *bio ;
 
   {
@@ -5636,7 +5636,7 @@ extern int blk_rq_map_kern(struct request_queue * , struct request * , void * , 
 extern int blk_execute_rq(struct request_queue * , struct gendisk * , struct request * ,
                           int ) ;
 # 717 "include/linux/blkdev.h"
-__inline static struct request_queue *bdev_get_queue(struct block_device *bdev )
+ static struct request_queue *bdev_get_queue(struct block_device *bdev )
 {
 
   {
@@ -5657,7 +5657,7 @@ extern void blk_queue_merge_bvec(struct request_queue * , merge_bvec_fn * ) ;
 # 856 "include/linux/blkdev.h"
 extern struct request_queue *blk_alloc_queue(gfp_t ) ;
 # 975 "include/linux/blkdev.h"
-__inline static unsigned short queue_max_segments(struct request_queue *q )
+ static unsigned short queue_max_segments(struct request_queue *q )
 {
 
   {
@@ -5671,7 +5671,7 @@ extern int __blkdev_driver_ioctl(struct block_device * , fmode_t , unsigned int 
 # 1022 "include/linux/cdrom.h"
 extern void init_cdrom_command(struct packet_command * , void * , int , int ) ;
 # 198 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/compat.h"
-__inline static void *compat_ptr(compat_uptr_t uptr )
+ static void *compat_ptr(compat_uptr_t uptr )
 {
 
   {
@@ -5695,7 +5695,7 @@ extern void remove_proc_entry(char const * , struct proc_dir_entry * ) ;
 # 148 "include/linux/proc_fs.h"
 extern struct proc_dir_entry *proc_mkdir(char const * , struct proc_dir_entry * ) ;
 # 278 "include/linux/proc_fs.h"
-__inline static struct proc_inode *PROC_I(struct inode const *inode )
+ static struct proc_inode *PROC_I(struct inode const *inode )
 { struct inode const *__mptr ;
 
   {
@@ -5706,7 +5706,7 @@ __inline static struct proc_inode *PROC_I(struct inode const *inode )
 }
 }
 # 283 "include/linux/proc_fs.h"
-__inline static struct proc_dir_entry *PDE(struct inode const *inode )
+ static struct proc_dir_entry *PDE(struct inode const *inode )
 { struct proc_inode *tmp ;
 
   {
@@ -5733,7 +5733,7 @@ extern int misc_register(struct miscdevice * ) ;
 # 59 "include/linux/miscdevice.h"
 extern int misc_deregister(struct miscdevice * ) ;
 # 21 "include/linux/freezer.h"
-__inline static int freezing(struct task_struct *p )
+ static int freezing(struct task_struct *p )
 { int tmp ;
 
   {
@@ -5748,7 +5748,7 @@ __inline static int freezing(struct task_struct *p )
 # 50 "include/linux/freezer.h"
 extern void refrigerator(void) ;
 # 54 "include/linux/freezer.h"
-__inline static int try_to_freeze(void)
+ static int try_to_freeze(void)
 { struct task_struct *tmp ;
   int tmp___0 ;
 
@@ -5774,7 +5774,7 @@ __inline static int try_to_freeze(void)
 }
 }
 # 122 "include/linux/freezer.h"
-__inline static void set_freezable(void)
+ static void set_freezable(void)
 { struct task_struct *tmp ;
 
   {
@@ -7276,7 +7276,7 @@ static int pkt_grow_pktlist(struct pktcdvd_device *pd , int nr_packets )
 }
 }
 # 668 "/anthill/stuff/tacas-comp/work/current--X--drivers/block/pktcdvd.ko--X--unsafelinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/block/pktcdvd.c.p"
-__inline static struct pkt_rb_node *pkt_rbtree_next(struct pkt_rb_node *node )
+ static struct pkt_rb_node *pkt_rbtree_next(struct pkt_rb_node *node )
 { struct rb_node *n ;
   struct rb_node *tmp ;
   struct rb_node const *__mptr ;
@@ -8597,7 +8597,7 @@ static int pkt_start_recovery(struct packet_data *pkt )
 }
 }
 # 1247 "/anthill/stuff/tacas-comp/work/current--X--drivers/block/pktcdvd.ko--X--unsafelinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/block/pktcdvd.c.p"
-__inline static void pkt_set_state(struct packet_data *pkt , enum packet_data_state state )
+ static void pkt_set_state(struct packet_data *pkt , enum packet_data_state state )
 {
 
   {
@@ -13763,7 +13763,7 @@ void ldv_check_final_state(void)
 }
 }
 # 4430 "/anthill/stuff/tacas-comp/work/current--X--drivers/block/pktcdvd.ko--X--unsafelinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/block/pktcdvd.c.p"
-__inline static int ldv_try_module_get_1(struct module *module )
+ static int ldv_try_module_get_1(struct module *module )
 { int tmp ;
 
   {
@@ -13789,7 +13789,7 @@ void ldv_module_put_2(struct module *ldv_func_arg1 )
 }
 }
 # 4446 "/anthill/stuff/tacas-comp/work/current--X--drivers/block/pktcdvd.ko--X--unsafelinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/block/pktcdvd.c.p"
-__inline static void ldv___module_get_3(struct module *module )
+ static void ldv___module_get_3(struct module *module )
 {
 
   {

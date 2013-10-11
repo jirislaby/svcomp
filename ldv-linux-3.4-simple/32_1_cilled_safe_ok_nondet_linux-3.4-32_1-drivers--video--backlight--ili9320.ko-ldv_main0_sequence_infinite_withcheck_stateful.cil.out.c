@@ -4280,9 +4280,9 @@ extern int ( /* format attribute */  __dynamic_dev_dbg)(struct _ddebug *descript
 #line 10 "include/asm-generic/delay.h"
 extern void __const_udelay(unsigned long xloops ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -4291,9 +4291,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4321,9 +4321,9 @@ __inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const 
 }
 }
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -4343,9 +4343,9 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 74
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -4397,10 +4397,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -4414,9 +4414,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -4437,9 +4437,9 @@ extern struct lcd_device *lcd_device_register(char const   *name , struct device
 #line 105
 extern void lcd_device_unregister(struct lcd_device *ld ) ;
 #line 109
-__inline static void *lcd_get_data(struct lcd_device *ld_dev )  __attribute__((__no_instrument_function__)) ;
+ static void *lcd_get_data(struct lcd_device *ld_dev )  __attribute__((__no_instrument_function__)) ;
 #line 109 "include/linux/lcd.h"
-__inline static void *lcd_get_data(struct lcd_device *ld_dev ) 
+ static void *lcd_get_data(struct lcd_device *ld_dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4464,9 +4464,9 @@ __inline static void *lcd_get_data(struct lcd_device *ld_dev )
 }
 }
 #line 573 "include/linux/spi/spi.h"
-__inline static void spi_message_init(struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
+ static void spi_message_init(struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
 #line 573 "include/linux/spi/spi.h"
-__inline static void spi_message_init(struct spi_message *m ) 
+ static void spi_message_init(struct spi_message *m ) 
 { void *__cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
 
@@ -4486,9 +4486,9 @@ __inline static void spi_message_init(struct spi_message *m )
 }
 }
 #line 579
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
 #line 579 "include/linux/spi/spi.h"
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -4530,9 +4530,9 @@ int ili9320_suspend(struct ili9320 *lcd , int state_event33 ) ;
 #line 80
 int ili9320_resume(struct ili9320 *lcd ) ;
 #line 30 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/16918/dscv_tempdir/dscv/ri/32_1/drivers/video/backlight/ili9320.c.common.c"
-__inline static int ili9320_write_spi(struct ili9320 *ili , unsigned int reg , unsigned int value )  __attribute__((__no_instrument_function__)) ;
+ static int ili9320_write_spi(struct ili9320 *ili , unsigned int reg , unsigned int value )  __attribute__((__no_instrument_function__)) ;
 #line 30 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/16918/dscv_tempdir/dscv/ri/32_1/drivers/video/backlight/ili9320.c.common.c"
-__inline static int ili9320_write_spi(struct ili9320 *ili , unsigned int reg , unsigned int value ) 
+ static int ili9320_write_spi(struct ili9320 *ili , unsigned int reg , unsigned int value ) 
 { struct ili9320_spi *spi ;
   unsigned char *addr ;
   unsigned char *data ;
@@ -4970,9 +4970,9 @@ static void ili9320_reset(struct ili9320 *lcd )
 }
 }
 #line 95
-__inline static int ili9320_init_chip(struct ili9320 *lcd )  __attribute__((__no_instrument_function__)) ;
+ static int ili9320_init_chip(struct ili9320 *lcd )  __attribute__((__no_instrument_function__)) ;
 #line 95 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/16918/dscv_tempdir/dscv/ri/32_1/drivers/video/backlight/ili9320.c.common.c"
-__inline static int ili9320_init_chip(struct ili9320 *lcd ) 
+ static int ili9320_init_chip(struct ili9320 *lcd ) 
 { int ret ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5045,9 +5045,9 @@ __inline static int ili9320_init_chip(struct ili9320 *lcd )
 }
 }
 #line 111
-__inline static int ili9320_power_on(struct ili9320 *lcd )  __attribute__((__no_instrument_function__)) ;
+ static int ili9320_power_on(struct ili9320 *lcd )  __attribute__((__no_instrument_function__)) ;
 #line 111 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/16918/dscv_tempdir/dscv/ri/32_1/drivers/video/backlight/ili9320.c.common.c"
-__inline static int ili9320_power_on(struct ili9320 *lcd ) 
+ static int ili9320_power_on(struct ili9320 *lcd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -5120,9 +5120,9 @@ __inline static int ili9320_power_on(struct ili9320 *lcd )
 }
 }
 #line 122
-__inline static int ili9320_power_off(struct ili9320 *lcd )  __attribute__((__no_instrument_function__)) ;
+ static int ili9320_power_off(struct ili9320 *lcd )  __attribute__((__no_instrument_function__)) ;
 #line 122 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/16918/dscv_tempdir/dscv/ri/32_1/drivers/video/backlight/ili9320.c.common.c"
-__inline static int ili9320_power_off(struct ili9320 *lcd ) 
+ static int ili9320_power_off(struct ili9320 *lcd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -5354,9 +5354,9 @@ static int ili9320_power(struct ili9320 *lcd , int power )
 }
 }
 #line 151
-__inline static struct ili9320 *to_our_lcd(struct lcd_device *lcd )  __attribute__((__no_instrument_function__)) ;
+ static struct ili9320 *to_our_lcd(struct lcd_device *lcd )  __attribute__((__no_instrument_function__)) ;
 #line 151 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/16918/dscv_tempdir/dscv/ri/32_1/drivers/video/backlight/ili9320.c.common.c"
-__inline static struct ili9320 *to_our_lcd(struct lcd_device *lcd ) 
+ static struct ili9320 *to_our_lcd(struct lcd_device *lcd ) 
 { void *tmp___7 ;
 
   {

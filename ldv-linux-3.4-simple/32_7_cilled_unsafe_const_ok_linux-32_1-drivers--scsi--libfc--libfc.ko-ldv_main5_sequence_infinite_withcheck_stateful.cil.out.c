@@ -5829,10 +5829,10 @@ enum kobj_ns_type;
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 7 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/swab.h"
-__inline static __u32 __arch_swab32(__u32 val )  __attribute__((__no_instrument_function__)) ;
+ static __u32 __arch_swab32(__u32 val )  __attribute__((__no_instrument_function__)) ;
 
 #line 7 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/swab.h"
-__inline static __u32 __arch_swab32(__u32 val ) 
+ static __u32 __arch_swab32(__u32 val ) 
 { 
 
   {
@@ -5843,10 +5843,10 @@ __inline static __u32 __arch_swab32(__u32 val )
 }
 }
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__)) ;
+ static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__)) ;
 
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -5877,10 +5877,10 @@ __inline static __u16 __fswab16(__u16 val )
 }
 }
 #line 55
-__inline static __u32 __fswab32(__u32 val )  __attribute__((__no_instrument_function__)) ;
+ static __u32 __fswab32(__u32 val )  __attribute__((__no_instrument_function__)) ;
 
 #line 55 "include/linux/swab.h"
-__inline static __u32 __fswab32(__u32 val ) 
+ static __u32 __fswab32(__u32 val ) 
 { __u32 tmp ;
 
   {
@@ -5903,9 +5903,9 @@ extern void __bad_percpu_size(void) ;
 #line 220 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
 extern unsigned long kernel_stack  __attribute__((__section__(".data..percpu"))) ;
 #line 222
-__inline static struct thread_info *current_thread_info(void)  __attribute__((__no_instrument_function__)) ;
+ static struct thread_info *current_thread_info(void)  __attribute__((__no_instrument_function__)) ;
 #line 222 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
-__inline static struct thread_info *current_thread_info(void) 
+ static struct thread_info *current_thread_info(void) 
 { struct thread_info *ti ;
   unsigned long pfo_ret__ ;
   unsigned long __cil_tmp3 ;
@@ -6017,9 +6017,9 @@ __inline static struct thread_info *current_thread_info(void)
 #line 47 "include/linux/list.h"
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 74
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -6056,9 +6056,9 @@ int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 144 "include/linux/rcupdate.h"
 extern void synchronize_sched(void) ;
 #line 172
-__inline static void synchronize_rcu(void)  __attribute__((__no_instrument_function__)) ;
+ static void synchronize_rcu(void)  __attribute__((__no_instrument_function__)) ;
 #line 172 "include/linux/rcupdate.h"
-__inline static void synchronize_rcu(void) 
+ static void synchronize_rcu(void) 
 { 
 
   {
@@ -6074,9 +6074,9 @@ __inline static void synchronize_rcu(void)
 extern int blocking_notifier_call_chain(struct blocking_notifier_head *nh , unsigned long val ,
                                         void *v ) ;
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page )  __attribute__((__no_instrument_function__)) ;
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page )  __attribute__((__no_instrument_function__)) ;
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page ) 
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page ) 
 { struct page *__cil_tmp2 ;
   struct page    *__cil_tmp3 ;
   int __cil_tmp4 ;
@@ -6110,9 +6110,9 @@ __inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(
 }
 }
 #line 95 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg )  __attribute__((__no_instrument_function__)) ;
+ static struct page *sg_page(struct scatterlist *sg )  __attribute__((__no_instrument_function__)) ;
 #line 95 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg ) 
+ static struct page *sg_page(struct scatterlist *sg ) 
 { long tmp ;
   long tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -6266,9 +6266,9 @@ int init_module(void) ;
 #line 68
 void cleanup_module(void) ;
 #line 16 "include/linux/uaccess.h"
-__inline static void pagefault_disable(void)  __attribute__((__no_instrument_function__)) ;
+ static void pagefault_disable(void)  __attribute__((__no_instrument_function__)) ;
 #line 16 "include/linux/uaccess.h"
-__inline static void pagefault_disable(void) 
+ static void pagefault_disable(void) 
 { struct thread_info *tmp___7 ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -6309,9 +6309,9 @@ __inline static void pagefault_disable(void)
 }
 }
 #line 26
-__inline static void pagefault_enable(void)  __attribute__((__no_instrument_function__)) ;
+ static void pagefault_enable(void)  __attribute__((__no_instrument_function__)) ;
 #line 26 "include/linux/uaccess.h"
-__inline static void pagefault_enable(void) 
+ static void pagefault_enable(void) 
 { struct thread_info *tmp___7 ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -6363,9 +6363,9 @@ __inline static void pagefault_enable(void)
 }
 }
 #line 59 "include/linux/highmem.h"
-__inline static void *kmap_atomic(struct page *page )  __attribute__((__no_instrument_function__)) ;
+ static void *kmap_atomic(struct page *page )  __attribute__((__no_instrument_function__)) ;
 #line 59 "include/linux/highmem.h"
-__inline static void *kmap_atomic(struct page *page ) 
+ static void *kmap_atomic(struct page *page ) 
 { void *tmp___7 ;
   struct page    *__cil_tmp3 ;
 
@@ -6383,9 +6383,9 @@ __inline static void *kmap_atomic(struct page *page )
 }
 }
 #line 66
-__inline static void __kunmap_atomic(void *addr )  __attribute__((__no_instrument_function__)) ;
+ static void __kunmap_atomic(void *addr )  __attribute__((__no_instrument_function__)) ;
 #line 66 "include/linux/highmem.h"
-__inline static void __kunmap_atomic(void *addr ) 
+ static void __kunmap_atomic(void *addr ) 
 { 
 
   {
@@ -6400,9 +6400,9 @@ __inline static void __kunmap_atomic(void *addr )
 #line 1292 "include/linux/skbuff.h"
 extern unsigned char *skb_put(struct sk_buff *skb , unsigned int len ) ;
 #line 43 "include/scsi/fc_frame.h"
-__inline static void hton24(u8 *p , u32 v )  __attribute__((__no_instrument_function__)) ;
+ static void hton24(u8 *p , u32 v )  __attribute__((__no_instrument_function__)) ;
 #line 43 "include/scsi/fc_frame.h"
-__inline static void hton24(u8 *p , u32 v ) 
+ static void hton24(u8 *p , u32 v ) 
 { u8 *__cil_tmp3 ;
   u32 __cil_tmp4 ;
   unsigned int __cil_tmp5 ;
@@ -6440,9 +6440,9 @@ __inline static void hton24(u8 *p , u32 v )
 }
 }
 #line 160
-__inline static struct fc_frame_header *__fc_frame_header_get(struct fc_frame    *fp )  __attribute__((__no_instrument_function__)) ;
+ static struct fc_frame_header *__fc_frame_header_get(struct fc_frame    *fp )  __attribute__((__no_instrument_function__)) ;
 #line 160 "include/scsi/fc_frame.h"
-__inline static struct fc_frame_header *__fc_frame_header_get(struct fc_frame    *fp ) 
+ static struct fc_frame_header *__fc_frame_header_get(struct fc_frame    *fp ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -8782,9 +8782,9 @@ long s__builtin_expect(long val , long res )
 }
 }
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -8802,10 +8802,10 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 }
 }
 #line 29 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/swab.h"
-__inline static __u64 __arch_swab64(__u64 val )  __attribute__((__no_instrument_function__)) ;
+ static __u64 __arch_swab64(__u64 val )  __attribute__((__no_instrument_function__)) ;
 
 #line 29 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/swab.h"
-__inline static __u64 __arch_swab64(__u64 val ) 
+ static __u64 __arch_swab64(__u64 val ) 
 { 
 
   {
@@ -8816,10 +8816,10 @@ __inline static __u64 __arch_swab64(__u64 val )
 }
 }
 #line 64 "include/linux/swab.h"
-__inline static __u64 __fswab64(__u64 val )  __attribute__((__no_instrument_function__)) ;
+ static __u64 __fswab64(__u64 val )  __attribute__((__no_instrument_function__)) ;
 
 #line 64 "include/linux/swab.h"
-__inline static __u64 __fswab64(__u64 val ) 
+ static __u64 __fswab64(__u64 val ) 
 { __u64 tmp ;
 
   {
@@ -8832,9 +8832,9 @@ __inline static __u64 __fswab64(__u64 val )
 }
 }
 #line 174
-__inline static __u64 __swab64p(__u64    *p )  __attribute__((__no_instrument_function__)) ;
+ static __u64 __swab64p(__u64    *p )  __attribute__((__no_instrument_function__)) ;
 #line 174 "include/linux/swab.h"
-__inline static __u64 __swab64p(__u64    *p ) 
+ static __u64 __swab64p(__u64    *p ) 
 { __u64 tmp ;
   __u64    __cil_tmp3 ;
   __u64 __cil_tmp4 ;
@@ -8853,9 +8853,9 @@ __inline static __u64 __swab64p(__u64    *p )
 }
 }
 #line 71 "include/linux/byteorder/little_endian.h"
-__inline static __u64 __be64_to_cpup(__be64    *p )  __attribute__((__no_instrument_function__)) ;
+ static __u64 __be64_to_cpup(__be64    *p )  __attribute__((__no_instrument_function__)) ;
 #line 71 "include/linux/byteorder/little_endian.h"
-__inline static __u64 __be64_to_cpup(__be64    *p ) 
+ static __u64 __be64_to_cpup(__be64    *p ) 
 { __u64 tmp ;
   __u64 *__cil_tmp3 ;
   __u64    *__cil_tmp4 ;
@@ -8876,9 +8876,9 @@ __inline static __u64 __be64_to_cpup(__be64    *p )
 #line 100 "include/linux/printk.h"
 extern int ( /* format attribute */  printk)(char    *fmt  , ...) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr ) 
 { 
 
   {
@@ -8887,9 +8887,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *p
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -8917,9 +8917,9 @@ __inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *pt
 }
 }
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t    *v )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_read(atomic_t    *v )  __attribute__((__no_instrument_function__)) ;
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t    *v ) 
+ static int atomic_read(atomic_t    *v ) 
 { int    *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -8938,9 +8938,9 @@ __inline static int atomic_read(atomic_t    *v )
 }
 }
 #line 77
-__inline static int atomic_sub_and_test(int i , atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_sub_and_test(int i , atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 77 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_sub_and_test(int i , atomic_t *v ) 
+ static int atomic_sub_and_test(int i , atomic_t *v ) 
 { unsigned char c ;
 
   {
@@ -8957,9 +8957,9 @@ __inline static int atomic_sub_and_test(int i , atomic_t *v )
 }
 }
 #line 93
-__inline static void atomic_inc(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_inc(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 93 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v ) 
+ static void atomic_inc(atomic_t *v ) 
 { 
 
   {
@@ -8990,9 +8990,9 @@ extern bool cancel_delayed_work_sync(struct delayed_work *dwork ) ;
 #line 161 "include/linux/slab.h"
 extern void kfree(void    * ) ;
 #line 39 "include/linux/kref.h"
-__inline static void kref_get(struct kref *kref )  __attribute__((__no_instrument_function__)) ;
+ static void kref_get(struct kref *kref )  __attribute__((__no_instrument_function__)) ;
 #line 39 "include/linux/kref.h"
-__inline static void kref_get(struct kref *kref ) 
+ static void kref_get(struct kref *kref ) 
 { int __ret_warn_on ;
   int tmp ;
   int tmp___0 ;
@@ -9067,9 +9067,9 @@ __inline static void kref_get(struct kref *kref )
 }
 }
 #line 63
-__inline static int kref_sub(struct kref *kref , unsigned int count , void (*release)(struct kref *kref ) )  __attribute__((__no_instrument_function__)) ;
+ static int kref_sub(struct kref *kref , unsigned int count , void (*release)(struct kref *kref ) )  __attribute__((__no_instrument_function__)) ;
 #line 63 "include/linux/kref.h"
-__inline static int kref_sub(struct kref *kref , unsigned int count , void (*release)(struct kref *kref ) ) 
+ static int kref_sub(struct kref *kref , unsigned int count , void (*release)(struct kref *kref ) ) 
 { int __ret_warn_on ;
   long tmp ;
   int tmp___0 ;
@@ -9154,9 +9154,9 @@ __inline static int kref_sub(struct kref *kref , unsigned int count , void (*rel
 }
 }
 #line 92
-__inline static int kref_put(struct kref *kref , void (*release)(struct kref *kref ) )  __attribute__((__no_instrument_function__)) ;
+ static int kref_put(struct kref *kref , void (*release)(struct kref *kref ) )  __attribute__((__no_instrument_function__)) ;
 #line 92 "include/linux/kref.h"
-__inline static int kref_put(struct kref *kref , void (*release)(struct kref *kref ) ) 
+ static int kref_put(struct kref *kref , void (*release)(struct kref *kref ) ) 
 { int tmp ;
 
   {
@@ -9171,10 +9171,10 @@ __inline static int kref_put(struct kref *kref , void (*release)(struct kref *kr
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -9188,9 +9188,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -9206,9 +9206,9 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 #line 32 "include/linux/unaligned/access_ok.h"
-__inline static u64 get_unaligned_be64(void    *p )  __attribute__((__no_instrument_function__)) ;
+ static u64 get_unaligned_be64(void    *p )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/unaligned/access_ok.h"
-__inline static u64 get_unaligned_be64(void    *p ) 
+ static u64 get_unaligned_be64(void    *p ) 
 { __u64 tmp ;
   __be64 *__cil_tmp3 ;
   __be64    *__cil_tmp4 ;
@@ -9229,9 +9229,9 @@ __inline static u64 get_unaligned_be64(void    *p )
 #line 560 "include/linux/skbuff.h"
 extern void kfree_skb(struct sk_buff *skb ) ;
 #line 1185
-__inline static bool skb_is_nonlinear(struct sk_buff    *skb )  __attribute__((__no_instrument_function__)) ;
+ static bool skb_is_nonlinear(struct sk_buff    *skb )  __attribute__((__no_instrument_function__)) ;
 #line 1185 "include/linux/skbuff.h"
-__inline static bool skb_is_nonlinear(struct sk_buff    *skb ) 
+ static bool skb_is_nonlinear(struct sk_buff    *skb ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned int    __cil_tmp4 ;
@@ -9250,9 +9250,9 @@ __inline static bool skb_is_nonlinear(struct sk_buff    *skb )
 }
 }
 #line 38 "include/scsi/fc_frame.h"
-__inline static u32 ntoh24(u8    *p )  __attribute__((__no_instrument_function__)) ;
+ static u32 ntoh24(u8    *p )  __attribute__((__no_instrument_function__)) ;
 #line 38 "include/scsi/fc_frame.h"
-__inline static u32 ntoh24(u8    *p ) 
+ static u32 ntoh24(u8    *p ) 
 { u8    *__cil_tmp2 ;
   u8    __cil_tmp3 ;
   int    __cil_tmp4 ;
@@ -9305,9 +9305,9 @@ struct fc_frame *fc_frame_alloc_fill(struct fc_lport *lp , size_t payload_len ) 
 #line 122
 struct fc_frame *_fc_frame_alloc(size_t len ) ;
 #line 128
-__inline static struct fc_frame *fc_frame_alloc(struct fc_lport *dev , size_t len )  __attribute__((__no_instrument_function__)) ;
+ static struct fc_frame *fc_frame_alloc(struct fc_lport *dev , size_t len )  __attribute__((__no_instrument_function__)) ;
 #line 128 "include/scsi/fc_frame.h"
-__inline static struct fc_frame *fc_frame_alloc(struct fc_lport *dev , size_t len ) 
+ static struct fc_frame *fc_frame_alloc(struct fc_lport *dev , size_t len ) 
 { struct fc_frame *fp ;
 
   {
@@ -9336,9 +9336,9 @@ __inline static struct fc_frame *fc_frame_alloc(struct fc_lport *dev , size_t le
 }
 }
 #line 146
-__inline static void fc_frame_free(struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
+ static void fc_frame_free(struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
 #line 146 "include/scsi/fc_frame.h"
-__inline static void fc_frame_free(struct fc_frame *fp ) 
+ static void fc_frame_free(struct fc_frame *fp ) 
 { struct sk_buff *__cil_tmp2 ;
 
   {
@@ -9353,9 +9353,9 @@ __inline static void fc_frame_free(struct fc_frame *fp )
 }
 }
 #line 151
-__inline static int fc_frame_is_linear(struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
+ static int fc_frame_is_linear(struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
 #line 151 "include/scsi/fc_frame.h"
-__inline static int fc_frame_is_linear(struct fc_frame *fp ) 
+ static int fc_frame_is_linear(struct fc_frame *fp ) 
 { bool tmp___7 ;
   int tmp___8 ;
   struct sk_buff *__cil_tmp4 ;
@@ -9383,9 +9383,9 @@ __inline static int fc_frame_is_linear(struct fc_frame *fp )
 }
 }
 #line 170
-__inline static struct fc_frame_header *fc_frame_header_get(struct fc_frame    *fp )  __attribute__((__no_instrument_function__)) ;
+ static struct fc_frame_header *fc_frame_header_get(struct fc_frame    *fp )  __attribute__((__no_instrument_function__)) ;
 #line 170 "include/scsi/fc_frame.h"
-__inline static struct fc_frame_header *fc_frame_header_get(struct fc_frame    *fp ) 
+ static struct fc_frame_header *fc_frame_header_get(struct fc_frame    *fp ) 
 { int __ret_warn_on ;
   long tmp___7 ;
   struct fc_frame_header *tmp___8 ;
@@ -9459,9 +9459,9 @@ __inline static struct fc_frame_header *fc_frame_header_get(struct fc_frame    *
 }
 }
 #line 203
-__inline static void *fc_frame_payload_get(struct fc_frame    *fp , size_t len )  __attribute__((__no_instrument_function__)) ;
+ static void *fc_frame_payload_get(struct fc_frame    *fp , size_t len )  __attribute__((__no_instrument_function__)) ;
 #line 203 "include/scsi/fc_frame.h"
-__inline static void *fc_frame_payload_get(struct fc_frame    *fp , size_t len ) 
+ static void *fc_frame_payload_get(struct fc_frame    *fp , size_t len ) 
 { void *pp ;
   struct fc_frame_header *tmp___7 ;
   unsigned long __cil_tmp5 ;
@@ -9507,9 +9507,9 @@ __inline static void *fc_frame_payload_get(struct fc_frame    *fp , size_t len )
 }
 }
 #line 218
-__inline static u8 fc_frame_payload_op(struct fc_frame    *fp )  __attribute__((__no_instrument_function__)) ;
+ static u8 fc_frame_payload_op(struct fc_frame    *fp )  __attribute__((__no_instrument_function__)) ;
 #line 218 "include/scsi/fc_frame.h"
-__inline static u8 fc_frame_payload_op(struct fc_frame    *fp ) 
+ static u8 fc_frame_payload_op(struct fc_frame    *fp ) 
 { u8 *cp ;
   void *tmp___7 ;
 
@@ -9532,9 +9532,9 @@ __inline static u8 fc_frame_payload_op(struct fc_frame    *fp )
 }
 }
 #line 939 "include/scsi/libfc.h"
-__inline static int fc_lport_test_ready(struct fc_lport *lport )  __attribute__((__no_instrument_function__)) ;
+ static int fc_lport_test_ready(struct fc_lport *lport )  __attribute__((__no_instrument_function__)) ;
 #line 939 "include/scsi/libfc.h"
-__inline static int fc_lport_test_ready(struct fc_lport *lport ) 
+ static int fc_lport_test_ready(struct fc_lport *lport ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   enum fc_lport_state __cil_tmp4 ;
@@ -9558,9 +9558,9 @@ __inline static int fc_lport_test_ready(struct fc_lport *lport )
 #line 1072
 int fc_disc_init(struct fc_lport *lport ) ;
 #line 1074
-__inline static struct fc_lport *fc_disc_lport(struct fc_disc *disc )  __attribute__((__no_instrument_function__)) ;
+ static struct fc_lport *fc_disc_lport(struct fc_disc *disc )  __attribute__((__no_instrument_function__)) ;
 #line 1074 "include/scsi/libfc.h"
-__inline static struct fc_lport *fc_disc_lport(struct fc_disc *disc ) 
+ static struct fc_lport *fc_disc_lport(struct fc_disc *disc ) 
 { struct fc_disc    *__mptr ;
   struct fc_lport *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -14685,9 +14685,9 @@ __aligned__(1)))  =
 static struct kernel_symbol    __ksymtab_fc_disc_init  __attribute__((__used__,
 __unused__, __section__("___ksymtab+fc_disc_init")))  =    {(unsigned long )(& fc_disc_init), __kstrtab_fc_disc_init};
 #line 97 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 97 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -14717,9 +14717,9 @@ extern struct cpumask    *   cpu_possible_mask ;
 #line 108 "include/linux/cpumask.h"
 static bool __warned  __attribute__((__section__(".data.unlikely")))  ;
 #line 105
-__inline static unsigned int cpumask_check(unsigned int cpu )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int cpumask_check(unsigned int cpu )  __attribute__((__no_instrument_function__)) ;
 #line 105 "include/linux/cpumask.h"
-__inline static unsigned int cpumask_check(unsigned int cpu ) 
+ static unsigned int cpumask_check(unsigned int cpu ) 
 { int __ret_warn_once ;
   int __ret_warn_on ;
   long tmp ;
@@ -14827,9 +14827,9 @@ __inline static unsigned int cpumask_check(unsigned int cpu )
 }
 }
 #line 170
-__inline static unsigned int cpumask_next(int n , struct cpumask    *srcp )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int cpumask_next(int n , struct cpumask    *srcp )  __attribute__((__no_instrument_function__)) ;
 #line 170 "include/linux/cpumask.h"
-__inline static unsigned int cpumask_next(int n , struct cpumask    *srcp ) 
+ static unsigned int cpumask_next(int n , struct cpumask    *srcp ) 
 { unsigned long tmp ;
   unsigned int __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -14881,9 +14881,9 @@ __inline static unsigned int cpumask_next(int n , struct cpumask    *srcp )
 }
 }
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )  __attribute__((__no_instrument_function__)) ;
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )  __attribute__((__no_instrument_function__)) ;
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
 { 
 
   {
@@ -14892,9 +14892,9 @@ __inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long erro
 }
 }
 #line 35 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_set(atomic_t *v , int i )  __attribute__((__no_instrument_function__)) ;
 #line 35 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i ) 
+ static void atomic_set(atomic_t *v , int i ) 
 { 
 
   {
@@ -14905,9 +14905,9 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 #line 105
-__inline static void atomic_dec(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_dec(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 105 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v ) 
+ static void atomic_dec(atomic_t *v ) 
 { 
 
   {
@@ -14924,9 +14924,9 @@ __inline static void atomic_dec(atomic_t *v )
 }
 }
 #line 119
-__inline static int atomic_dec_and_test(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_dec_and_test(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 119 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_dec_and_test(atomic_t *v ) 
+ static int atomic_dec_and_test(atomic_t *v ) 
 { unsigned char c ;
   int __cil_tmp3 ;
 
@@ -14954,9 +14954,9 @@ extern void _raw_spin_lock_bh(raw_spinlock_t *lock )  __attribute__((__section__
 #line 40
 extern void _raw_spin_unlock_bh(raw_spinlock_t *lock )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -14965,9 +14965,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 288
-__inline static void spin_lock_bh(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock_bh(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 288 "include/linux/spinlock.h"
-__inline static void spin_lock_bh(spinlock_t *lock ) 
+ static void spin_lock_bh(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -14982,9 +14982,9 @@ __inline static void spin_lock_bh(spinlock_t *lock )
 }
 }
 #line 328
-__inline static void spin_unlock_bh(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_bh(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 328 "include/linux/spinlock.h"
-__inline static void spin_unlock_bh(spinlock_t *lock ) 
+ static void spin_unlock_bh(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -15015,9 +15015,9 @@ extern int queue_delayed_work(struct workqueue_struct *wq , struct delayed_work 
 #line 376
 extern void flush_workqueue(struct workqueue_struct *wq ) ;
 #line 410
-__inline static bool cancel_delayed_work(struct delayed_work *work )  __attribute__((__no_instrument_function__)) ;
+ static bool cancel_delayed_work(struct delayed_work *work )  __attribute__((__no_instrument_function__)) ;
 #line 410 "include/linux/workqueue.h"
-__inline static bool cancel_delayed_work(struct delayed_work *work ) 
+ static bool cancel_delayed_work(struct delayed_work *work ) 
 { bool ret ;
   int tmp ;
   unsigned long __cil_tmp4 ;
@@ -15071,9 +15071,9 @@ extern struct kmem_cache *kmem_cache_create(char    * , size_t  , size_t  , unsi
 #line 104
 extern void kmem_cache_destroy(struct kmem_cache * ) ;
 #line 30 "include/linux/kref.h"
-__inline static void kref_init(struct kref *kref )  __attribute__((__no_instrument_function__)) ;
+ static void kref_init(struct kref *kref )  __attribute__((__no_instrument_function__)) ;
 #line 30 "include/linux/kref.h"
-__inline static void kref_init(struct kref *kref ) 
+ static void kref_init(struct kref *kref ) 
 { atomic_t *__cil_tmp2 ;
 
   {
@@ -15101,9 +15101,9 @@ extern void *mempool_alloc_slab(gfp_t gfp_mask , void *pool_data ) ;
 #line 41
 extern void mempool_free_slab(void *element , void *pool_data ) ;
 #line 42
-__inline static mempool_t *mempool_create_slab_pool(int min_nr , struct kmem_cache *kc )  __attribute__((__no_instrument_function__)) ;
+ static mempool_t *mempool_create_slab_pool(int min_nr , struct kmem_cache *kc )  __attribute__((__no_instrument_function__)) ;
 #line 42 "include/linux/mempool.h"
-__inline static mempool_t *mempool_create_slab_pool(int min_nr , struct kmem_cache *kc ) 
+ static mempool_t *mempool_create_slab_pool(int min_nr , struct kmem_cache *kc ) 
 { mempool_t *tmp___7 ;
   void *__cil_tmp4 ;
 
@@ -15121,9 +15121,9 @@ __inline static mempool_t *mempool_create_slab_pool(int min_nr , struct kmem_cac
 #line 1605 "include/linux/skbuff.h"
 extern void skb_trim(struct sk_buff *skb , unsigned int len ) ;
 #line 109 "include/scsi/fc/fc_encaps.h"
-__inline static int fc_sof_needs_ack(enum fc_sof sof )  __attribute__((__no_instrument_function__)) ;
+ static int fc_sof_needs_ack(enum fc_sof sof )  __attribute__((__no_instrument_function__)) ;
 #line 109 "include/scsi/fc/fc_encaps.h"
-__inline static int fc_sof_needs_ack(enum fc_sof sof ) 
+ static int fc_sof_needs_ack(enum fc_sof sof ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
 
@@ -15139,9 +15139,9 @@ __inline static int fc_sof_needs_ack(enum fc_sof sof )
 }
 }
 #line 117
-__inline static enum fc_sof fc_sof_normal(enum fc_class class )  __attribute__((__no_instrument_function__)) ;
+ static enum fc_sof fc_sof_normal(enum fc_class class )  __attribute__((__no_instrument_function__)) ;
 #line 117 "include/scsi/fc/fc_encaps.h"
-__inline static enum fc_sof fc_sof_normal(enum fc_class class ) 
+ static enum fc_sof fc_sof_normal(enum fc_class class ) 
 { unsigned int __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -15160,9 +15160,9 @@ __inline static enum fc_sof fc_sof_normal(enum fc_class class )
 }
 }
 #line 125
-__inline static enum fc_class fc_sof_class(enum fc_sof sof )  __attribute__((__no_instrument_function__)) ;
+ static enum fc_class fc_sof_class(enum fc_sof sof )  __attribute__((__no_instrument_function__)) ;
 #line 125 "include/scsi/fc/fc_encaps.h"
-__inline static enum fc_class fc_sof_class(enum fc_sof sof ) 
+ static enum fc_class fc_sof_class(enum fc_sof sof ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -15181,9 +15181,9 @@ __inline static enum fc_class fc_sof_class(enum fc_sof sof )
 }
 }
 #line 133
-__inline static int fc_sof_is_init(enum fc_sof sof )  __attribute__((__no_instrument_function__)) ;
+ static int fc_sof_is_init(enum fc_sof sof )  __attribute__((__no_instrument_function__)) ;
 #line 133 "include/scsi/fc/fc_encaps.h"
-__inline static int fc_sof_is_init(enum fc_sof sof ) 
+ static int fc_sof_is_init(enum fc_sof sof ) 
 { int __cil_tmp2 ;
 
   {
@@ -15196,9 +15196,9 @@ __inline static int fc_sof_is_init(enum fc_sof sof )
 }
 }
 #line 232 "include/scsi/fc_frame.h"
-__inline static enum fc_class fc_frame_class(struct fc_frame    *fp )  __attribute__((__no_instrument_function__)) ;
+ static enum fc_class fc_frame_class(struct fc_frame    *fp )  __attribute__((__no_instrument_function__)) ;
 #line 232 "include/scsi/fc_frame.h"
-__inline static enum fc_class fc_frame_class(struct fc_frame    *fp ) 
+ static enum fc_class fc_frame_class(struct fc_frame    *fp ) 
 { enum fc_class tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -15266,11 +15266,11 @@ void fc_exch_recv(struct fc_lport *lport , struct fc_frame *fp ) ;
 #line 1129
 void fc_exch_mgr_reset(struct fc_lport *lport , u32 sid , u32 did ) ;
 #line 54 "include/scsi/fc_encode.h"
-__inline static void __fc_fill_fc_hdr(struct fc_frame_header *fh , enum fc_rctl r_ctl ,
+ static void __fc_fill_fc_hdr(struct fc_frame_header *fh , enum fc_rctl r_ctl ,
                                       u32 did , u32 sid , enum fc_fh_type type , u32 f_ctl ,
                                       u32 parm_offset )  __attribute__((__no_instrument_function__)) ;
 #line 54 "include/scsi/fc_encode.h"
-__inline static void __fc_fill_fc_hdr(struct fc_frame_header *fh , enum fc_rctl r_ctl ,
+ static void __fc_fill_fc_hdr(struct fc_frame_header *fh , enum fc_rctl r_ctl ,
                                       u32 did , u32 sid , enum fc_fh_type type , u32 f_ctl ,
                                       u32 parm_offset ) 
 { int __ret_warn_on ;
@@ -15419,10 +15419,10 @@ __inline static void __fc_fill_fc_hdr(struct fc_frame_header *fh , enum fc_rctl 
 }
 }
 #line 73
-__inline static void fc_fill_fc_hdr(struct fc_frame *fp , enum fc_rctl r_ctl , u32 did ,
+ static void fc_fill_fc_hdr(struct fc_frame *fp , enum fc_rctl r_ctl , u32 did ,
                                     u32 sid , enum fc_fh_type type , u32 f_ctl , u32 parm_offset )  __attribute__((__no_instrument_function__)) ;
 #line 73 "include/scsi/fc_encode.h"
-__inline static void fc_fill_fc_hdr(struct fc_frame *fp , enum fc_rctl r_ctl , u32 did ,
+ static void fc_fill_fc_hdr(struct fc_frame *fp , enum fc_rctl r_ctl , u32 did ,
                                     u32 sid , enum fc_fh_type type , u32 f_ctl , u32 parm_offset ) 
 { struct fc_frame_header *fh ;
   struct fc_frame    *__cil_tmp9 ;
@@ -15531,10 +15531,10 @@ static char *fc_exch_rctl_names[202]  =
         (char *)"LC port busy",      (char *)"LC fabric busy to data frame",      (char *)"LC fabric busy to link control frame",      (char *)"LC link credit reset", 
         (char *)0,      (char *)"LC end"};
 #line 235
-__inline static char    *fc_exch_name_lookup(unsigned int op , char **table ,
+ static char    *fc_exch_name_lookup(unsigned int op , char **table ,
                                                   unsigned int max_index )  __attribute__((__no_instrument_function__)) ;
 #line 235 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/508/dscv_tempdir/dscv/ri/32_1/drivers/scsi/libfc/fc_exch.c"
-__inline static char    *fc_exch_name_lookup(unsigned int op , char **table ,
+ static char    *fc_exch_name_lookup(unsigned int op , char **table ,
                                                   unsigned int max_index ) 
 { char    *name ;
   void *__cil_tmp5 ;
@@ -15600,9 +15600,9 @@ static char    *fc_exch_rctl_name(unsigned int op )
 }
 }
 #line 261
-__inline static void fc_exch_hold(struct fc_exch *ep )  __attribute__((__no_instrument_function__)) ;
+ static void fc_exch_hold(struct fc_exch *ep )  __attribute__((__no_instrument_function__)) ;
 #line 261 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/508/dscv_tempdir/dscv/ri/32_1/drivers/scsi/libfc/fc_exch.c"
-__inline static void fc_exch_hold(struct fc_exch *ep ) 
+ static void fc_exch_hold(struct fc_exch *ep ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   atomic_t *__cil_tmp4 ;
@@ -16387,9 +16387,9 @@ static int fc_exch_done_locked(struct fc_exch *ep )
 }
 }
 #line 378
-__inline static struct fc_exch *fc_exch_ptr_get(struct fc_exch_pool *pool , u16 index )  __attribute__((__no_instrument_function__)) ;
+ static struct fc_exch *fc_exch_ptr_get(struct fc_exch_pool *pool , u16 index )  __attribute__((__no_instrument_function__)) ;
 #line 378 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/508/dscv_tempdir/dscv/ri/32_1/drivers/scsi/libfc/fc_exch.c"
-__inline static struct fc_exch *fc_exch_ptr_get(struct fc_exch_pool *pool , u16 index ) 
+ static struct fc_exch *fc_exch_ptr_get(struct fc_exch_pool *pool , u16 index ) 
 { struct fc_exch **exches ;
   struct fc_exch_pool *__cil_tmp4 ;
   struct fc_exch **__cil_tmp5 ;
@@ -16408,9 +16408,9 @@ __inline static struct fc_exch *fc_exch_ptr_get(struct fc_exch_pool *pool , u16 
 }
 }
 #line 391
-__inline static void fc_exch_ptr_set(struct fc_exch_pool *pool , u16 index , struct fc_exch *ep )  __attribute__((__no_instrument_function__)) ;
+ static void fc_exch_ptr_set(struct fc_exch_pool *pool , u16 index , struct fc_exch *ep )  __attribute__((__no_instrument_function__)) ;
 #line 391 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/508/dscv_tempdir/dscv/ri/32_1/drivers/scsi/libfc/fc_exch.c"
-__inline static void fc_exch_ptr_set(struct fc_exch_pool *pool , u16 index , struct fc_exch *ep ) 
+ static void fc_exch_ptr_set(struct fc_exch_pool *pool , u16 index , struct fc_exch *ep ) 
 { struct fc_exch_pool *__cil_tmp4 ;
   struct fc_exch **__cil_tmp5 ;
   struct fc_exch **__cil_tmp6 ;
@@ -16668,9 +16668,9 @@ static void fc_exch_delete(struct fc_exch *ep )
 }
 }
 #line 435
-__inline static void fc_exch_timer_set_locked(struct fc_exch *ep , unsigned int timer_msec )  __attribute__((__no_instrument_function__)) ;
+ static void fc_exch_timer_set_locked(struct fc_exch *ep , unsigned int timer_msec )  __attribute__((__no_instrument_function__)) ;
 #line 435 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/508/dscv_tempdir/dscv/ri/32_1/drivers/scsi/libfc/fc_exch.c"
-__inline static void fc_exch_timer_set_locked(struct fc_exch *ep , unsigned int timer_msec ) 
+ static void fc_exch_timer_set_locked(struct fc_exch *ep , unsigned int timer_msec ) 
 { long tmp___7 ;
   unsigned long tmp___8 ;
   int tmp___9 ;
@@ -19112,9 +19112,9 @@ static struct fc_exch *fc_exch_em_alloc(struct fc_lport *lport , struct fc_exch_
 }
 }
 #line 799
-__inline static struct fc_exch *fc_exch_alloc(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
+ static struct fc_exch *fc_exch_alloc(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
 #line 799 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/508/dscv_tempdir/dscv/ri/32_1/drivers/scsi/libfc/fc_exch.c"
-__inline static struct fc_exch *fc_exch_alloc(struct fc_lport *lport , struct fc_frame *fp ) 
+ static struct fc_exch *fc_exch_alloc(struct fc_lport *lport , struct fc_frame *fp ) 
 { struct fc_exch_mgr_anchor *ema ;
   struct list_head    *__mptr ;
   struct list_head    *__mptr___0 ;
@@ -31099,9 +31099,9 @@ void fc_destroy_exch_mgr(void)
 extern int ( /* format attribute */  snprintf)(char *buf , size_t size , char    *fmt 
                                                , ...) ;
 #line 52 "include/linux/unaligned/access_ok.h"
-__inline static void put_unaligned_be16(u16 val , void *p )  __attribute__((__no_instrument_function__)) ;
+ static void put_unaligned_be16(u16 val , void *p )  __attribute__((__no_instrument_function__)) ;
 #line 52 "include/linux/unaligned/access_ok.h"
-__inline static void put_unaligned_be16(u16 val , void *p ) 
+ static void put_unaligned_be16(u16 val , void *p ) 
 { __u16 tmp ;
   __be16 *__cil_tmp4 ;
   int __cil_tmp5 ;
@@ -31122,9 +31122,9 @@ __inline static void put_unaligned_be16(u16 val , void *p )
 }
 }
 #line 57
-__inline static void put_unaligned_be32(u32 val , void *p )  __attribute__((__no_instrument_function__)) ;
+ static void put_unaligned_be32(u32 val , void *p )  __attribute__((__no_instrument_function__)) ;
 #line 57 "include/linux/unaligned/access_ok.h"
-__inline static void put_unaligned_be32(u32 val , void *p ) 
+ static void put_unaligned_be32(u32 val , void *p ) 
 { __u32 tmp ;
   __be32 *__cil_tmp4 ;
 
@@ -31142,9 +31142,9 @@ __inline static void put_unaligned_be32(u32 val , void *p )
 }
 }
 #line 62
-__inline static void put_unaligned_be64(u64 val , void *p )  __attribute__((__no_instrument_function__)) ;
+ static void put_unaligned_be64(u64 val , void *p )  __attribute__((__no_instrument_function__)) ;
 #line 62 "include/linux/unaligned/access_ok.h"
-__inline static void put_unaligned_be64(u64 val , void *p ) 
+ static void put_unaligned_be64(u64 val , void *p ) 
 { __u64 tmp ;
   __be64 *__cil_tmp4 ;
 
@@ -31168,9 +31168,9 @@ extern char *strncpy(char * , char    * , __kernel_size_t  ) ;
 #line 84
 extern __kernel_size_t strnlen(char    * , __kernel_size_t  ) ;
 #line 80 "include/linux/kobject.h"
-__inline static char    *kobject_name(struct kobject    *kobj )  __attribute__((__no_instrument_function__)) ;
+ static char    *kobject_name(struct kobject    *kobj )  __attribute__((__no_instrument_function__)) ;
 #line 80 "include/linux/kobject.h"
-__inline static char    *kobject_name(struct kobject    *kobj ) 
+ static char    *kobject_name(struct kobject    *kobj ) 
 { char    *   __cil_tmp2 ;
 
   {
@@ -31183,9 +31183,9 @@ __inline static char    *kobject_name(struct kobject    *kobj )
 }
 }
 #line 685 "include/linux/device.h"
-__inline static char    *dev_name(struct device    *dev )  __attribute__((__no_instrument_function__)) ;
+ static char    *dev_name(struct device    *dev )  __attribute__((__no_instrument_function__)) ;
 #line 685 "include/linux/device.h"
-__inline static char    *dev_name(struct device    *dev ) 
+ static char    *dev_name(struct device    *dev ) 
 { char    *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -31242,9 +31242,9 @@ struct fc_seq *fc_elsct_send(struct fc_lport *lport , u32 did , struct fc_frame 
 #line 56 "include/linux/utsname.h"
 extern struct uts_namespace init_uts_ns ;
 #line 104
-__inline static struct new_utsname *init_utsname(void)  __attribute__((__no_instrument_function__)) ;
+ static struct new_utsname *init_utsname(void)  __attribute__((__no_instrument_function__)) ;
 #line 104 "include/linux/utsname.h"
-__inline static struct new_utsname *init_utsname(void) 
+ static struct new_utsname *init_utsname(void) 
 { unsigned long __cil_tmp1 ;
 
   {
@@ -31257,9 +31257,9 @@ __inline static struct new_utsname *init_utsname(void)
 }
 }
 #line 88 "include/scsi/fc_encode.h"
-__inline static void fc_adisc_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
+ static void fc_adisc_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
 #line 88 "include/scsi/fc_encode.h"
-__inline static void fc_adisc_fill(struct fc_lport *lport , struct fc_frame *fp ) 
+ static void fc_adisc_fill(struct fc_lport *lport , struct fc_frame *fp ) 
 { struct fc_els_adisc *adisc ;
   void *tmp___7 ;
   struct fc_frame    *__cil_tmp5 ;
@@ -31357,11 +31357,11 @@ __inline static void fc_adisc_fill(struct fc_lport *lport , struct fc_frame *fp 
 }
 }
 #line 104
-__inline static struct fc_ct_req *fc_ct_hdr_fill(struct fc_frame    *fp , unsigned int op ,
+ static struct fc_ct_req *fc_ct_hdr_fill(struct fc_frame    *fp , unsigned int op ,
                                                  size_t req_size , enum fc_ct_fs_type fs_type ,
                                                  u8 subtype )  __attribute__((__no_instrument_function__)) ;
 #line 104 "include/scsi/fc_encode.h"
-__inline static struct fc_ct_req *fc_ct_hdr_fill(struct fc_frame    *fp , unsigned int op ,
+ static struct fc_ct_req *fc_ct_hdr_fill(struct fc_frame    *fp , unsigned int op ,
                                                  size_t req_size , enum fc_ct_fs_type fs_type ,
                                                  u8 subtype ) 
 { struct fc_ct_req *ct ;
@@ -31431,10 +31431,10 @@ __inline static struct fc_ct_req *fc_ct_hdr_fill(struct fc_frame    *fp , unsign
 }
 }
 #line 131
-__inline static int fc_ct_ns_fill(struct fc_lport *lport , u32 fc_id , struct fc_frame *fp ,
+ static int fc_ct_ns_fill(struct fc_lport *lport , u32 fc_id , struct fc_frame *fp ,
                                   unsigned int op , enum fc_rctl *r_ctl , enum fc_fh_type *fh_type )  __attribute__((__no_instrument_function__)) ;
 #line 131 "include/scsi/fc_encode.h"
-__inline static int fc_ct_ns_fill(struct fc_lport *lport , u32 fc_id , struct fc_frame *fp ,
+ static int fc_ct_ns_fill(struct fc_lport *lport , u32 fc_id , struct fc_frame *fp ,
                                   unsigned int op , enum fc_rctl *r_ctl , enum fc_fh_type *fh_type ) 
 { struct fc_ct_req *ct ;
   size_t len ;
@@ -32192,10 +32192,10 @@ __inline static int fc_ct_ns_fill(struct fc_lport *lport , u32 fc_id , struct fc
 }
 }
 #line 215
-__inline static int fc_ct_ms_fill(struct fc_lport *lport , u32 fc_id , struct fc_frame *fp ,
+ static int fc_ct_ms_fill(struct fc_lport *lport , u32 fc_id , struct fc_frame *fp ,
                                   unsigned int op , enum fc_rctl *r_ctl , enum fc_fh_type *fh_type )  __attribute__((__no_instrument_function__)) ;
 #line 215 "include/scsi/fc_encode.h"
-__inline static int fc_ct_ms_fill(struct fc_lport *lport , u32 fc_id , struct fc_frame *fp ,
+ static int fc_ct_ms_fill(struct fc_lport *lport , u32 fc_id , struct fc_frame *fp ,
                                   unsigned int op , enum fc_rctl *r_ctl , enum fc_fh_type *fh_type ) 
 { struct fc_ct_req *ct ;
   size_t len ;
@@ -34384,11 +34384,11 @@ __inline static int fc_ct_ms_fill(struct fc_lport *lport , u32 fc_id , struct fc
 }
 }
 #line 509
-__inline static int fc_ct_fill(struct fc_lport *lport , u32 fc_id , struct fc_frame *fp ,
+ static int fc_ct_fill(struct fc_lport *lport , u32 fc_id , struct fc_frame *fp ,
                                unsigned int op , enum fc_rctl *r_ctl , enum fc_fh_type *fh_type ,
                                u32 *did )  __attribute__((__no_instrument_function__)) ;
 #line 509 "include/scsi/fc_encode.h"
-__inline static int fc_ct_fill(struct fc_lport *lport , u32 fc_id , struct fc_frame *fp ,
+ static int fc_ct_fill(struct fc_lport *lport , u32 fc_id , struct fc_frame *fp ,
                                unsigned int op , enum fc_rctl *r_ctl , enum fc_fh_type *fh_type ,
                                u32 *did ) 
 { int rc ;
@@ -34434,10 +34434,10 @@ __inline static int fc_ct_fill(struct fc_lport *lport , u32 fc_id , struct fc_fr
 }
 }
 #line 533
-__inline static void fc_plogi_fill(struct fc_lport *lport , struct fc_frame *fp ,
+ static void fc_plogi_fill(struct fc_lport *lport , struct fc_frame *fp ,
                                    unsigned int op )  __attribute__((__no_instrument_function__)) ;
 #line 533 "include/scsi/fc_encode.h"
-__inline static void fc_plogi_fill(struct fc_lport *lport , struct fc_frame *fp ,
+ static void fc_plogi_fill(struct fc_lport *lport , struct fc_frame *fp ,
                                    unsigned int op ) 
 { struct fc_els_flogi *plogi ;
   struct fc_els_csp *csp ;
@@ -34726,9 +34726,9 @@ __inline static void fc_plogi_fill(struct fc_lport *lport , struct fc_frame *fp 
 }
 }
 #line 566
-__inline static void fc_flogi_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
+ static void fc_flogi_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
 #line 566 "include/scsi/fc_encode.h"
-__inline static void fc_flogi_fill(struct fc_lport *lport , struct fc_frame *fp ) 
+ static void fc_flogi_fill(struct fc_lport *lport , struct fc_frame *fp ) 
 { struct fc_els_csp *sp ;
   struct fc_els_cssp *cp ;
   struct fc_els_flogi *flogi ;
@@ -34910,9 +34910,9 @@ __inline static void fc_flogi_fill(struct fc_lport *lport , struct fc_frame *fp 
 }
 }
 #line 591
-__inline static void fc_fdisc_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
+ static void fc_fdisc_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
 #line 591 "include/scsi/fc_encode.h"
-__inline static void fc_fdisc_fill(struct fc_lport *lport , struct fc_frame *fp ) 
+ static void fc_fdisc_fill(struct fc_lport *lport , struct fc_frame *fp ) 
 { struct fc_els_csp *sp ;
   struct fc_els_cssp *cp ;
   struct fc_els_flogi *fdisc ;
@@ -35072,9 +35072,9 @@ __inline static void fc_fdisc_fill(struct fc_lport *lport , struct fc_frame *fp 
 }
 }
 #line 614
-__inline static void fc_logo_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
+ static void fc_logo_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
 #line 614 "include/scsi/fc_encode.h"
-__inline static void fc_logo_fill(struct fc_lport *lport , struct fc_frame *fp ) 
+ static void fc_logo_fill(struct fc_lport *lport , struct fc_frame *fp ) 
 { struct fc_els_logo *logo ;
   void *tmp___7 ;
   __u64 tmp___8 ;
@@ -35146,9 +35146,9 @@ __inline static void fc_logo_fill(struct fc_lport *lport , struct fc_frame *fp )
 }
 }
 #line 628
-__inline static void fc_rtv_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
+ static void fc_rtv_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
 #line 628 "include/scsi/fc_encode.h"
-__inline static void fc_rtv_fill(struct fc_lport *lport , struct fc_frame *fp ) 
+ static void fc_rtv_fill(struct fc_lport *lport , struct fc_frame *fp ) 
 { struct fc_els_rtv *rtv ;
   void *tmp___7 ;
   struct fc_frame    *__cil_tmp5 ;
@@ -35174,9 +35174,9 @@ __inline static void fc_rtv_fill(struct fc_lport *lport , struct fc_frame *fp )
 }
 }
 #line 640
-__inline static void fc_rec_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
+ static void fc_rec_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
 #line 640 "include/scsi/fc_encode.h"
-__inline static void fc_rec_fill(struct fc_lport *lport , struct fc_frame *fp ) 
+ static void fc_rec_fill(struct fc_lport *lport , struct fc_frame *fp ) 
 { struct fc_els_rec *rec ;
   struct fc_exch *ep ;
   struct fc_seq    *__mptr ;
@@ -35331,9 +35331,9 @@ __inline static void fc_rec_fill(struct fc_lport *lport , struct fc_frame *fp )
 }
 }
 #line 656
-__inline static void fc_prli_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
+ static void fc_prli_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
 #line 656 "include/scsi/fc_encode.h"
-__inline static void fc_prli_fill(struct fc_lport *lport , struct fc_frame *fp ) 
+ static void fc_prli_fill(struct fc_lport *lport , struct fc_frame *fp ) 
 { struct __anonstruct_pp_293 *pp ;
   void *tmp___7 ;
   __u32 tmp___9 ;
@@ -35456,9 +35456,9 @@ __inline static void fc_prli_fill(struct fc_lport *lport , struct fc_frame *fp )
 }
 }
 #line 676
-__inline static void fc_scr_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
+ static void fc_scr_fill(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
 #line 676 "include/scsi/fc_encode.h"
-__inline static void fc_scr_fill(struct fc_lport *lport , struct fc_frame *fp ) 
+ static void fc_scr_fill(struct fc_lport *lport , struct fc_frame *fp ) 
 { struct fc_els_scr *scr ;
   void *tmp___7 ;
   struct fc_frame    *__cil_tmp5 ;
@@ -35492,10 +35492,10 @@ __inline static void fc_scr_fill(struct fc_lport *lport , struct fc_frame *fp )
 }
 }
 #line 689
-__inline static int fc_els_fill(struct fc_lport *lport , u32 did , struct fc_frame *fp ,
+ static int fc_els_fill(struct fc_lport *lport , u32 did , struct fc_frame *fp ,
                                 unsigned int op , enum fc_rctl *r_ctl , enum fc_fh_type *fh_type )  __attribute__((__no_instrument_function__)) ;
 #line 689 "include/scsi/fc_encode.h"
-__inline static int fc_els_fill(struct fc_lport *lport , u32 did , struct fc_frame *fp ,
+ static int fc_els_fill(struct fc_lport *lport , u32 did , struct fc_frame *fp ,
                                 unsigned int op , enum fc_rctl *r_ctl , enum fc_fh_type *fh_type ) 
 { 
 
@@ -36101,9 +36101,9 @@ char    *fc_els_resp_type(struct fc_frame *fp )
 extern struct sk_buff *__alloc_skb(unsigned int size , gfp_t priority , int fclone ,
                                    int node ) ;
 #line 572
-__inline static struct sk_buff *alloc_skb_fclone(unsigned int size , gfp_t priority )  __attribute__((__no_instrument_function__)) ;
+ static struct sk_buff *alloc_skb_fclone(unsigned int size , gfp_t priority )  __attribute__((__no_instrument_function__)) ;
 #line 572 "include/linux/skbuff.h"
-__inline static struct sk_buff *alloc_skb_fclone(unsigned int size , gfp_t priority ) 
+ static struct sk_buff *alloc_skb_fclone(unsigned int size , gfp_t priority ) 
 { struct sk_buff *tmp ;
 
   {
@@ -36116,9 +36116,9 @@ __inline static struct sk_buff *alloc_skb_fclone(unsigned int size , gfp_t prior
 }
 }
 #line 1390
-__inline static void skb_reserve(struct sk_buff *skb , int len )  __attribute__((__no_instrument_function__)) ;
+ static void skb_reserve(struct sk_buff *skb , int len )  __attribute__((__no_instrument_function__)) ;
 #line 1390 "include/linux/skbuff.h"
-__inline static void skb_reserve(struct sk_buff *skb , int len ) 
+ static void skb_reserve(struct sk_buff *skb , int len ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -36163,9 +36163,9 @@ __inline static void skb_reserve(struct sk_buff *skb , int len )
 }
 }
 #line 113 "include/scsi/fc_frame.h"
-__inline static void fc_frame_init(struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
+ static void fc_frame_init(struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
 #line 113 "include/scsi/fc_frame.h"
-__inline static void fc_frame_init(struct fc_frame *fp ) 
+ static void fc_frame_init(struct fc_frame *fp ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -36814,9 +36814,9 @@ __unused__, __section__("___ksymtab+fc_frame_alloc_fill")))  =    {(unsigned lon
 #line 108 "include/linux/cpumask.h"
 static bool __warned___0  __attribute__((__section__(".data.unlikely")))  ;
 #line 105
-__inline static unsigned int cpumask_check___0(unsigned int cpu )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int cpumask_check___0(unsigned int cpu )  __attribute__((__no_instrument_function__)) ;
 #line 105 "include/linux/cpumask.h"
-__inline static unsigned int cpumask_check___0(unsigned int cpu ) 
+ static unsigned int cpumask_check___0(unsigned int cpu ) 
 { int __ret_warn_once ;
   int __ret_warn_on ;
   long tmp ;
@@ -36924,9 +36924,9 @@ __inline static unsigned int cpumask_check___0(unsigned int cpu )
 }
 }
 #line 170
-__inline static unsigned int cpumask_next___0(int n , struct cpumask    *srcp )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int cpumask_next___0(int n , struct cpumask    *srcp )  __attribute__((__no_instrument_function__)) ;
 #line 170 "include/linux/cpumask.h"
-__inline static unsigned int cpumask_next___0(int n , struct cpumask    *srcp ) 
+ static unsigned int cpumask_next___0(int n , struct cpumask    *srcp ) 
 { unsigned long tmp ;
   unsigned int __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -36978,9 +36978,9 @@ __inline static unsigned int cpumask_next___0(int n , struct cpumask    *srcp )
 }
 }
 #line 17 "include/linux/math64.h"
-__inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder )  __attribute__((__no_instrument_function__)) ;
+ static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder )  __attribute__((__no_instrument_function__)) ;
 #line 17 "include/linux/math64.h"
-__inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder ) 
+ static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder ) 
 { unsigned long long __cil_tmp4 ;
   unsigned long long __cil_tmp5 ;
   u64 __cil_tmp6 ;
@@ -37001,9 +37001,9 @@ __inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder )
 }
 }
 #line 82
-__inline static u64 div_u64(u64 dividend , u32 divisor )  __attribute__((__no_instrument_function__)) ;
+ static u64 div_u64(u64 dividend , u32 divisor )  __attribute__((__no_instrument_function__)) ;
 #line 82 "include/linux/math64.h"
-__inline static u64 div_u64(u64 dividend , u32 divisor ) 
+ static u64 div_u64(u64 dividend , u32 divisor ) 
 { u32 remainder ;
   u64 tmp ;
 
@@ -37021,9 +37021,9 @@ extern unsigned long volatile   jiffies  __attribute__((__section__(".data"))) ;
 #line 301
 extern void jiffies_to_timespec(unsigned long    jiffies , struct timespec *value ) ;
 #line 162 "include/linux/rcupdate.h"
-__inline static void __rcu_read_lock(void)  __attribute__((__no_instrument_function__)) ;
+ static void __rcu_read_lock(void)  __attribute__((__no_instrument_function__)) ;
 #line 162 "include/linux/rcupdate.h"
-__inline static void __rcu_read_lock(void) 
+ static void __rcu_read_lock(void) 
 { struct thread_info *tmp ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -37073,9 +37073,9 @@ __inline static void __rcu_read_lock(void)
 }
 }
 #line 167
-__inline static void __rcu_read_unlock(void)  __attribute__((__no_instrument_function__)) ;
+ static void __rcu_read_unlock(void)  __attribute__((__no_instrument_function__)) ;
 #line 167 "include/linux/rcupdate.h"
-__inline static void __rcu_read_unlock(void) 
+ static void __rcu_read_unlock(void) 
 { struct thread_info *tmp ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -37145,9 +37145,9 @@ __inline static void __rcu_read_unlock(void)
 }
 }
 #line 723
-__inline static void rcu_read_lock(void)  __attribute__((__no_instrument_function__)) ;
+ static void rcu_read_lock(void)  __attribute__((__no_instrument_function__)) ;
 #line 723 "include/linux/rcupdate.h"
-__inline static void rcu_read_lock(void) 
+ static void rcu_read_lock(void) 
 { 
 
   {
@@ -37178,9 +37178,9 @@ __inline static void rcu_read_lock(void)
 }
 }
 #line 747
-__inline static void rcu_read_unlock(void)  __attribute__((__no_instrument_function__)) ;
+ static void rcu_read_unlock(void)  __attribute__((__no_instrument_function__)) ;
 #line 747 "include/linux/rcupdate.h"
-__inline static void rcu_read_unlock(void) 
+ static void rcu_read_unlock(void) 
 { 
 
   {
@@ -37218,9 +37218,9 @@ extern void module_put(struct module *module ) ;
 extern size_t sg_copy_to_buffer(struct scatterlist *sgl , unsigned int nents , void *buf ,
                                 size_t buflen ) ;
 #line 750 "include/scsi/scsi_host.h"
-__inline static void *shost_priv(struct Scsi_Host *shost )  __attribute__((__no_instrument_function__)) ;
+ static void *shost_priv(struct Scsi_Host *shost )  __attribute__((__no_instrument_function__)) ;
 #line 750 "include/scsi/scsi_host.h"
-__inline static void *shost_priv(struct Scsi_Host *shost ) 
+ static void *shost_priv(struct Scsi_Host *shost ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -37245,9 +37245,9 @@ __inline static void *shost_priv(struct Scsi_Host *shost )
 }
 }
 #line 811 "include/scsi/scsi_transport_fc.h"
-__inline static void fc_vport_set_state(struct fc_vport *vport , enum fc_vport_state new_state )  __attribute__((__no_instrument_function__)) ;
+ static void fc_vport_set_state(struct fc_vport *vport , enum fc_vport_state new_state )  __attribute__((__no_instrument_function__)) ;
 #line 811 "include/scsi/scsi_transport_fc.h"
-__inline static void fc_vport_set_state(struct fc_vport *vport , enum fc_vport_state new_state ) 
+ static void fc_vport_set_state(struct fc_vport *vport , enum fc_vport_state new_state ) 
 { unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -37290,9 +37290,9 @@ extern u32 fc_get_event_number(void) ;
 extern void fc_host_post_event(struct Scsi_Host *shost , u32 event_number , enum fc_host_event_code event_code ,
                                u32 event_data ) ;
 #line 180 "include/scsi/fc_frame.h"
-__inline static u32 fc_frame_sid(struct fc_frame    *fp )  __attribute__((__no_instrument_function__)) ;
+ static u32 fc_frame_sid(struct fc_frame    *fp )  __attribute__((__no_instrument_function__)) ;
 #line 180 "include/scsi/fc_frame.h"
-__inline static u32 fc_frame_sid(struct fc_frame    *fp ) 
+ static u32 fc_frame_sid(struct fc_frame    *fp ) 
 { struct fc_frame_header *tmp___7 ;
   u32 tmp___8 ;
   unsigned long __cil_tmp4 ;
@@ -37326,9 +37326,9 @@ __inline static u32 fc_frame_sid(struct fc_frame    *fp )
 }
 }
 #line 188
-__inline static u32 fc_frame_did(struct fc_frame    *fp )  __attribute__((__no_instrument_function__)) ;
+ static u32 fc_frame_did(struct fc_frame    *fp )  __attribute__((__no_instrument_function__)) ;
 #line 188 "include/scsi/fc_frame.h"
-__inline static u32 fc_frame_did(struct fc_frame    *fp ) 
+ static u32 fc_frame_did(struct fc_frame    *fp ) 
 { struct fc_frame_header *tmp___7 ;
   u32 tmp___8 ;
   unsigned long __cil_tmp4 ;
@@ -37362,9 +37362,9 @@ __inline static u32 fc_frame_did(struct fc_frame    *fp )
 }
 }
 #line 969 "include/scsi/libfc.h"
-__inline static void fc_lport_state_enter(struct fc_lport *lport , enum fc_lport_state state )  __attribute__((__no_instrument_function__)) ;
+ static void fc_lport_state_enter(struct fc_lport *lport , enum fc_lport_state state )  __attribute__((__no_instrument_function__)) ;
 #line 969 "include/scsi/libfc.h"
-__inline static void fc_lport_state_enter(struct fc_lport *lport , enum fc_lport_state state ) 
+ static void fc_lport_state_enter(struct fc_lport *lport , enum fc_lport_state state ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   enum fc_lport_state __cil_tmp5 ;
@@ -50207,9 +50207,9 @@ void main(void)
 }
 }
 #line 86 "include/linux/list.h"
-__inline static void __list_del(struct list_head *prev , struct list_head *next )  __attribute__((__no_instrument_function__)) ;
+ static void __list_del(struct list_head *prev , struct list_head *next )  __attribute__((__no_instrument_function__)) ;
 #line 86 "include/linux/list.h"
-__inline static void __list_del(struct list_head *prev , struct list_head *next ) 
+ static void __list_del(struct list_head *prev , struct list_head *next ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
 
@@ -50231,10 +50231,10 @@ extern int queue_work(struct workqueue_struct *wq , struct work_struct *work ) ;
 #line 64 "include/linux/rcutree.h"
 extern void kfree_call_rcu(struct rcu_head *head , void (*func)(struct rcu_head *rcu ) ) ;
 #line 912 "include/linux/rcupdate.h"
-__inline static void ( __attribute__((__always_inline__)) __kfree_rcu)(struct rcu_head *head ,
+ static void ( __attribute__((__always_inline__)) __kfree_rcu)(struct rcu_head *head ,
                                                                        unsigned long offset )  __attribute__((__no_instrument_function__)) ;
 #line 912 "include/linux/rcupdate.h"
-__inline static void ( __attribute__((__always_inline__)) __kfree_rcu)(struct rcu_head *head ,
+ static void ( __attribute__((__always_inline__)) __kfree_rcu)(struct rcu_head *head ,
                                                                        unsigned long offset ) 
 { void (*__cil_tmp3)(struct rcu_head * ) ;
 
@@ -50250,10 +50250,10 @@ __inline static void ( __attribute__((__always_inline__)) __kfree_rcu)(struct rc
 }
 }
 #line 33 "include/linux/rculist.h"
-__inline static void __list_add_rcu(struct list_head *new , struct list_head *prev ,
+ static void __list_add_rcu(struct list_head *new , struct list_head *prev ,
                                     struct list_head *next )  __attribute__((__no_instrument_function__)) ;
 #line 33 "include/linux/rculist.h"
-__inline static void __list_add_rcu(struct list_head *new , struct list_head *prev ,
+ static void __list_add_rcu(struct list_head *new , struct list_head *prev ,
                                     struct list_head *next ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -50284,9 +50284,9 @@ __inline static void __list_add_rcu(struct list_head *new , struct list_head *pr
 }
 }
 #line 58
-__inline static void list_add_rcu(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add_rcu(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 58 "include/linux/rculist.h"
-__inline static void list_add_rcu(struct list_head *new , struct list_head *head ) 
+ static void list_add_rcu(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -50301,9 +50301,9 @@ __inline static void list_add_rcu(struct list_head *new , struct list_head *head
 }
 }
 #line 109
-__inline static void list_del_rcu(struct list_head *entry )  __attribute__((__no_instrument_function__)) ;
+ static void list_del_rcu(struct list_head *entry )  __attribute__((__no_instrument_function__)) ;
 #line 109 "include/linux/rculist.h"
-__inline static void list_del_rcu(struct list_head *entry ) 
+ static void list_del_rcu(struct list_head *entry ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct list_head *__cil_tmp4 ;
@@ -50352,9 +50352,9 @@ void fc_rport_terminate_io(struct fc_rport *rport ) ;
 #line 1136
 void fc_set_rport_loss_tmo(struct fc_rport *rport , u32 timeout ) ;
 #line 656 "include/scsi/fc_encode.h"
-__inline static void fc_prli_fill___0(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
+ static void fc_prli_fill___0(struct fc_lport *lport , struct fc_frame *fp )  __attribute__((__no_instrument_function__)) ;
 #line 656 "include/scsi/fc_encode.h"
-__inline static void fc_prli_fill___0(struct fc_lport *lport , struct fc_frame *fp ) 
+ static void fc_prli_fill___0(struct fc_lport *lport , struct fc_frame *fp ) 
 { struct __anonstruct_pp_296 *pp ;
   void *tmp___7 ;
   __u32 tmp___9 ;
@@ -64018,9 +64018,9 @@ void ldv_main6_sequence_infinite_withcheck_stateful(void)
 }
 }
 #line 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head    *head )  __attribute__((__no_instrument_function__)) ;
+ static int list_empty(struct list_head    *head )  __attribute__((__no_instrument_function__)) ;
 #line 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head    *head ) 
+ static int list_empty(struct list_head    *head ) 
 { unsigned long __cil_tmp2 ;
   struct list_head *   __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -64039,10 +64039,10 @@ __inline static int list_empty(struct list_head    *head )
 }
 }
 #line 309 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int ( __attribute__((__always_inline__)) ant_test_bit)(unsigned int nr ,
+ static int ( __attribute__((__always_inline__)) ant_test_bit)(unsigned int nr ,
                                                                             unsigned long  volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 309 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int ( __attribute__((__always_inline__)) ant_test_bit)(unsigned int nr ,
+ static int ( __attribute__((__always_inline__)) ant_test_bit)(unsigned int nr ,
                                                                             unsigned long  volatile   *addr ) 
 { unsigned int __cil_tmp3 ;
   unsigned long  volatile   *__cil_tmp4 ;
@@ -64078,9 +64078,9 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock )  __attribute_
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -64108,9 +64108,9 @@ extern void __init_waitqueue_head(wait_queue_head_t *q , char    *name , struct 
 #line 76 "include/linux/completion.h"
 static struct lock_class_key __key  ;
 #line 73
-__inline static void init_completion(struct completion *x )  __attribute__((__no_instrument_function__)) ;
+ static void init_completion(struct completion *x )  __attribute__((__no_instrument_function__)) ;
 #line 73 "include/linux/completion.h"
-__inline static void init_completion(struct completion *x ) 
+ static void init_completion(struct completion *x ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   wait_queue_head_t *__cil_tmp4 ;
@@ -64148,11 +64148,11 @@ extern void complete(struct completion * ) ;
 #line 296 "include/linux/jiffies.h"
 extern unsigned int jiffies_to_msecs(unsigned long    j ) ;
 #line 166 "include/linux/timer.h"
-__inline static void setup_timer_key(struct timer_list *timer , char    *name ,
+ static void setup_timer_key(struct timer_list *timer , char    *name ,
                                      struct lock_class_key *key , void (*function)(unsigned long  ) ,
                                      unsigned long data )  __attribute__((__no_instrument_function__)) ;
 #line 166 "include/linux/timer.h"
-__inline static void setup_timer_key(struct timer_list *timer , char    *name ,
+ static void setup_timer_key(struct timer_list *timer , char    *name ,
                                      struct lock_class_key *key , void (*function)(unsigned long  ) ,
                                      unsigned long data ) 
 { unsigned long __cil_tmp6 ;
@@ -64186,9 +64186,9 @@ extern int mod_timer(struct timer_list *timer , unsigned long expires ) ;
 #line 46 "include/linux/delay.h"
 extern void msleep(unsigned int msecs ) ;
 #line 342 "include/linux/page-flags.h"
-__inline static int PageTail(struct page    *page )  __attribute__((__no_instrument_function__)) ;
+ static int PageTail(struct page    *page )  __attribute__((__no_instrument_function__)) ;
 #line 342 "include/linux/page-flags.h"
-__inline static int PageTail(struct page    *page ) 
+ static int PageTail(struct page    *page ) 
 { int tmp ;
   unsigned long    *__cil_tmp4 ;
   unsigned long  volatile   *__cil_tmp5 ;
@@ -64209,9 +64209,9 @@ __inline static int PageTail(struct page    *page )
 #line 392 "include/linux/mm.h"
 extern bool __get_page_tail(struct page *page ) ;
 #line 394
-__inline static void get_page(struct page *page )  __attribute__((__no_instrument_function__)) ;
+ static void get_page(struct page *page )  __attribute__((__no_instrument_function__)) ;
 #line 394 "include/linux/mm.h"
-__inline static void get_page(struct page *page ) 
+ static void get_page(struct page *page ) 
 { bool tmp ;
   int tmp___0 ;
   long tmp___1 ;
@@ -64388,9 +64388,9 @@ extern int blk_queue_init_tags(struct request_queue * , int  , struct blk_queue_
 #line 937
 extern void blk_queue_free_tags(struct request_queue * ) ;
 #line 163 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 163 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -64412,9 +64412,9 @@ __inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )
 }
 }
 #line 168
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 168 "include/scsi/scsi_cmnd.h"
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -64430,9 +64430,9 @@ __inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )
 }
 }
 #line 173
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 173 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -64451,9 +64451,9 @@ __inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )
 }
 }
 #line 274 "include/scsi/scsi_device.h"
-__inline static struct scsi_target *scsi_target(struct scsi_device *sdev )  __attribute__((__no_instrument_function__)) ;
+ static struct scsi_target *scsi_target(struct scsi_device *sdev )  __attribute__((__no_instrument_function__)) ;
 #line 274 "include/scsi/scsi_device.h"
-__inline static struct scsi_target *scsi_target(struct scsi_device *sdev ) 
+ static struct scsi_target *scsi_target(struct scsi_device *sdev ) 
 { struct device    *__mptr ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -64502,9 +64502,9 @@ extern int scsi_track_queue_full(struct scsi_device * , int  ) ;
 #line 377
 extern void int_to_scsilun(unsigned int  , struct scsi_lun * ) ;
 #line 409
-__inline static unsigned int sdev_id(struct scsi_device *sdev )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int sdev_id(struct scsi_device *sdev )  __attribute__((__no_instrument_function__)) ;
 #line 409 "include/scsi/scsi_device.h"
-__inline static unsigned int sdev_id(struct scsi_device *sdev ) 
+ static unsigned int sdev_id(struct scsi_device *sdev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -64520,9 +64520,9 @@ __inline static unsigned int sdev_id(struct scsi_device *sdev )
 }
 }
 #line 27 "include/scsi/scsi_tcq.h"
-__inline static int scsi_get_tag_type(struct scsi_device *sdev )  __attribute__((__no_instrument_function__)) ;
+ static int scsi_get_tag_type(struct scsi_device *sdev )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/scsi/scsi_tcq.h"
-__inline static int scsi_get_tag_type(struct scsi_device *sdev ) 
+ static int scsi_get_tag_type(struct scsi_device *sdev ) 
 { unsigned int __cil_tmp2 ;
 
   {
@@ -64556,9 +64556,9 @@ __inline static int scsi_get_tag_type(struct scsi_device *sdev )
 }
 }
 #line 38
-__inline static void scsi_set_tag_type(struct scsi_device *sdev , int tag )  __attribute__((__no_instrument_function__)) ;
+ static void scsi_set_tag_type(struct scsi_device *sdev , int tag )  __attribute__((__no_instrument_function__)) ;
 #line 38 "include/scsi/scsi_tcq.h"
-__inline static void scsi_set_tag_type(struct scsi_device *sdev , int tag ) 
+ static void scsi_set_tag_type(struct scsi_device *sdev , int tag ) 
 { 
 
   {
@@ -64602,9 +64602,9 @@ __inline static void scsi_set_tag_type(struct scsi_device *sdev , int tag )
 }
 }
 #line 65
-__inline static void scsi_activate_tcq(struct scsi_device *sdev , int depth )  __attribute__((__no_instrument_function__)) ;
+ static void scsi_activate_tcq(struct scsi_device *sdev , int depth )  __attribute__((__no_instrument_function__)) ;
 #line 65 "include/scsi/scsi_tcq.h"
-__inline static void scsi_activate_tcq(struct scsi_device *sdev , int depth ) 
+ static void scsi_activate_tcq(struct scsi_device *sdev , int depth ) 
 { int tmp___7 ;
   int tmp___9 ;
   unsigned int __cil_tmp6 ;
@@ -64687,9 +64687,9 @@ __inline static void scsi_activate_tcq(struct scsi_device *sdev , int depth )
 }
 }
 #line 81
-__inline static void scsi_deactivate_tcq(struct scsi_device *sdev , int depth )  __attribute__((__no_instrument_function__)) ;
+ static void scsi_deactivate_tcq(struct scsi_device *sdev , int depth )  __attribute__((__no_instrument_function__)) ;
 #line 81 "include/scsi/scsi_tcq.h"
-__inline static void scsi_deactivate_tcq(struct scsi_device *sdev , int depth ) 
+ static void scsi_deactivate_tcq(struct scsi_device *sdev , int depth ) 
 { int tmp___7 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -64745,9 +64745,9 @@ __inline static void scsi_deactivate_tcq(struct scsi_device *sdev , int depth )
 }
 }
 #line 172 "include/linux/skbuff.h"
-__inline static void skb_frag_size_set(skb_frag_t *frag , unsigned int size )  __attribute__((__no_instrument_function__)) ;
+ static void skb_frag_size_set(skb_frag_t *frag , unsigned int size )  __attribute__((__no_instrument_function__)) ;
 #line 172 "include/linux/skbuff.h"
-__inline static void skb_frag_size_set(skb_frag_t *frag , unsigned int size ) 
+ static void skb_frag_size_set(skb_frag_t *frag , unsigned int size ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
 
@@ -64763,9 +64763,9 @@ __inline static void skb_frag_size_set(skb_frag_t *frag , unsigned int size )
 }
 }
 #line 642
-__inline static unsigned char *skb_end_pointer(struct sk_buff    *skb )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char *skb_end_pointer(struct sk_buff    *skb )  __attribute__((__no_instrument_function__)) ;
 #line 642 "include/linux/skbuff.h"
-__inline static unsigned char *skb_end_pointer(struct sk_buff    *skb ) 
+ static unsigned char *skb_end_pointer(struct sk_buff    *skb ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   sk_buff_data_t    __cil_tmp4 ;
@@ -64796,10 +64796,10 @@ __inline static unsigned char *skb_end_pointer(struct sk_buff    *skb )
 }
 }
 #line 1217
-__inline static void __skb_fill_page_desc(struct sk_buff *skb , int i , struct page *page ,
+ static void __skb_fill_page_desc(struct sk_buff *skb , int i , struct page *page ,
                                           int off , int size )  __attribute__((__no_instrument_function__)) ;
 #line 1217 "include/linux/skbuff.h"
-__inline static void __skb_fill_page_desc(struct sk_buff *skb , int i , struct page *page ,
+ static void __skb_fill_page_desc(struct sk_buff *skb , int i , struct page *page ,
                                           int off , int size ) 
 { skb_frag_t *frag ;
   unsigned char *tmp___7 ;
@@ -64849,10 +64849,10 @@ __inline static void __skb_fill_page_desc(struct sk_buff *skb , int i , struct p
 }
 }
 #line 1241
-__inline static void skb_fill_page_desc(struct sk_buff *skb , int i , struct page *page ,
+ static void skb_fill_page_desc(struct sk_buff *skb , int i , struct page *page ,
                                         int off , int size )  __attribute__((__no_instrument_function__)) ;
 #line 1241 "include/linux/skbuff.h"
-__inline static void skb_fill_page_desc(struct sk_buff *skb , int i , struct page *page ,
+ static void skb_fill_page_desc(struct sk_buff *skb , int i , struct page *page ,
                                         int off , int size ) 
 { unsigned char *tmp___7 ;
   struct sk_buff    *__cil_tmp7 ;
@@ -64879,9 +64879,9 @@ __inline static void skb_fill_page_desc(struct sk_buff *skb , int i , struct pag
 }
 }
 #line 753 "include/scsi/scsi_transport_fc.h"
-__inline static int fc_remote_port_chkready(struct fc_rport *rport )  __attribute__((__no_instrument_function__)) ;
+ static int fc_remote_port_chkready(struct fc_rport *rport )  __attribute__((__no_instrument_function__)) ;
 #line 753 "include/scsi/scsi_transport_fc.h"
-__inline static int fc_remote_port_chkready(struct fc_rport *rport ) 
+ static int fc_remote_port_chkready(struct fc_rport *rport ) 
 { int result ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -65290,9 +65290,9 @@ static void fc_fcp_pkt_destroy(struct fc_seq *seq , void *fsp )
 }
 }
 #line 223
-__inline static int fc_fcp_lock_pkt(struct fc_fcp_pkt *fsp )  __attribute__((__no_instrument_function__)) ;
+ static int fc_fcp_lock_pkt(struct fc_fcp_pkt *fsp )  __attribute__((__no_instrument_function__)) ;
 #line 223 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/508/dscv_tempdir/dscv/ri/32_1/drivers/scsi/libfc/fc_fcp.c"
-__inline static int fc_fcp_lock_pkt(struct fc_fcp_pkt *fsp ) 
+ static int fc_fcp_lock_pkt(struct fc_fcp_pkt *fsp ) 
 { spinlock_t *__cil_tmp2 ;
   int __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -65342,9 +65342,9 @@ __inline static int fc_fcp_lock_pkt(struct fc_fcp_pkt *fsp )
 }
 }
 #line 240
-__inline static void fc_fcp_unlock_pkt(struct fc_fcp_pkt *fsp )  __attribute__((__no_instrument_function__)) ;
+ static void fc_fcp_unlock_pkt(struct fc_fcp_pkt *fsp )  __attribute__((__no_instrument_function__)) ;
 #line 240 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/508/dscv_tempdir/dscv/ri/32_1/drivers/scsi/libfc/fc_fcp.c"
-__inline static void fc_fcp_unlock_pkt(struct fc_fcp_pkt *fsp ) 
+ static void fc_fcp_unlock_pkt(struct fc_fcp_pkt *fsp ) 
 { spinlock_t *__cil_tmp2 ;
 
   {
@@ -66250,9 +66250,9 @@ static void fc_fcp_can_queue_ramp_down(struct fc_lport *lport )
 }
 }
 #line 414
-__inline static struct fc_frame *fc_fcp_frame_alloc(struct fc_lport *lport , size_t len )  __attribute__((__no_instrument_function__)) ;
+ static struct fc_frame *fc_fcp_frame_alloc(struct fc_lport *lport , size_t len )  __attribute__((__no_instrument_function__)) ;
 #line 414 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/508/dscv_tempdir/dscv/ri/32_1/drivers/scsi/libfc/fc_fcp.c"
-__inline static struct fc_frame *fc_fcp_frame_alloc(struct fc_lport *lport , size_t len ) 
+ static struct fc_frame *fc_fcp_frame_alloc(struct fc_lport *lport , size_t len ) 
 { struct fc_frame *fp ;
   long tmp___7 ;
   int __cil_tmp5 ;
@@ -72618,9 +72618,9 @@ static int fc_fcp_pkt_send(struct fc_lport *lport , struct fc_fcp_pkt *fsp )
 }
 }
 #line 1100
-__inline static unsigned int get_fsp_rec_tov(struct fc_fcp_pkt *fsp )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int get_fsp_rec_tov(struct fc_fcp_pkt *fsp )  __attribute__((__no_instrument_function__)) ;
 #line 1100 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/508/dscv_tempdir/dscv/ri/32_1/drivers/scsi/libfc/fc_fcp.c"
-__inline static unsigned int get_fsp_rec_tov(struct fc_fcp_pkt *fsp ) 
+ static unsigned int get_fsp_rec_tov(struct fc_fcp_pkt *fsp ) 
 { struct fc_rport_libfc_priv *rpriv ;
   unsigned long tmp___7 ;
   unsigned long __cil_tmp4 ;
@@ -77045,9 +77045,9 @@ static void fc_fcp_srr_error(struct fc_fcp_pkt *fsp , struct fc_frame *fp )
 }
 }
 #line 1767
-__inline static int fc_fcp_lport_queue_ready(struct fc_lport *lport )  __attribute__((__no_instrument_function__)) ;
+ static int fc_fcp_lport_queue_ready(struct fc_lport *lport )  __attribute__((__no_instrument_function__)) ;
 #line 1767 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/508/dscv_tempdir/dscv/ri/32_1/drivers/scsi/libfc/fc_fcp.c"
-__inline static int fc_fcp_lport_queue_ready(struct fc_lport *lport ) 
+ static int fc_fcp_lport_queue_ready(struct fc_lport *lport ) 
 { int tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -82050,10 +82050,10 @@ __unused__, __section__("___ksymtab+fc_fcp_init")))  =    {(unsigned long )(& fc
 #line 778 "include/scsi/scsi_host.h"
 extern struct Scsi_Host *scsi_host_alloc(struct scsi_host_template * , int  ) ;
 #line 1015 "include/scsi/libfc.h"
-__inline static struct fc_lport *libfc_host_alloc(struct scsi_host_template *sht ,
+ static struct fc_lport *libfc_host_alloc(struct scsi_host_template *sht ,
                                                   int priv_size )  __attribute__((__no_instrument_function__)) ;
 #line 1015 "include/scsi/libfc.h"
-__inline static struct fc_lport *libfc_host_alloc(struct scsi_host_template *sht ,
+ static struct fc_lport *libfc_host_alloc(struct scsi_host_template *sht ,
                                                   int priv_size ) 
 { struct fc_lport *lport ;
   struct Scsi_Host *shost ;

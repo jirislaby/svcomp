@@ -4405,9 +4405,9 @@ struct moschip_port {
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -4426,9 +4426,9 @@ extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 #line 147 "include/linux/kernel.h"
 extern void __might_sleep(char const   *file , int line , int preempt_offset ) ;
 #line 194
-__inline static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
+ static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
 #line 194 "include/linux/kernel.h"
-__inline static void might_fault(void) 
+ static void might_fault(void) 
 { 
 
   {
@@ -4463,9 +4463,9 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -4559,9 +4559,9 @@ __inline static struct task_struct *( __attribute__((__always_inline__)) get_cur
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern void *memset(void *s , int c , size_t n ) ;
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp___0 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -4599,9 +4599,9 @@ extern void _raw_spin_unlock(raw_spinlock_t *lock )  __attribute__((__section__(
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -4610,9 +4610,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 283
-__inline static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -4627,9 +4627,9 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -4644,9 +4644,9 @@ __inline static void spin_unlock(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -4699,10 +4699,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -4716,9 +4716,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -4738,11 +4738,11 @@ extern unsigned long __attribute__((__warn_unused_result__))  _copy_to_user(void
                                                                             void const   *from ,
                                                                             unsigned int len ) ;
 #line 62
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void const   *src ,
                                                                                                                 unsigned int size )  __attribute__((__no_instrument_function__)) ;
 #line 62 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void const   *src ,
                                                                                                                 unsigned int size ) 
 { unsigned long tmp ;
@@ -4781,10 +4781,10 @@ extern struct tty_struct *tty_port_tty_get(struct tty_port *port ) ;
 extern int tty_insert_flip_string_fixed_flag(struct tty_struct *tty , unsigned char const   *chars ,
                                              char flag , size_t size ) ;
 #line 23
-__inline static int tty_insert_flip_string(struct tty_struct *tty , unsigned char const   *chars ,
+ static int tty_insert_flip_string(struct tty_struct *tty , unsigned char const   *chars ,
                                            size_t size )  __attribute__((__no_instrument_function__)) ;
 #line 23 "include/linux/tty_flip.h"
-__inline static int tty_insert_flip_string(struct tty_struct *tty , unsigned char const   *chars ,
+ static int tty_insert_flip_string(struct tty_struct *tty , unsigned char const   *chars ,
                                            size_t size ) 
 { int tmp ;
 
@@ -4806,9 +4806,9 @@ void cleanup_module(void) ;
 #line 362 "include/linux/sched.h"
 extern void schedule(void) ;
 #line 2563
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 2563 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp___7 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4833,9 +4833,9 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2589
-__inline static int signal_pending(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
+ static int signal_pending(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
 #line 2589 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp___7 ;
   int tmp___8 ;
   long tmp___9 ;
@@ -4865,12 +4865,12 @@ __inline static int signal_pending(struct task_struct *p )
 }
 }
 #line 1278 "include/linux/usb.h"
-__inline static void usb_fill_control_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_control_urb(struct urb *urb , struct usb_device *dev ,
                                           unsigned int pipe , unsigned char *setup_packet ,
                                           void *transfer_buffer , int buffer_length ,
                                           void (*complete_fn)(struct urb * ) , void *context )  __attribute__((__no_instrument_function__)) ;
 #line 1278 "include/linux/usb.h"
-__inline static void usb_fill_control_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_control_urb(struct urb *urb , struct usb_device *dev ,
                                           unsigned int pipe , unsigned char *setup_packet ,
                                           void *transfer_buffer , int buffer_length ,
                                           void (*complete_fn)(struct urb * ) , void *context ) 
@@ -4937,12 +4937,12 @@ __inline static void usb_fill_control_urb(struct urb *urb , struct usb_device *d
 }
 }
 #line 1309
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context )  __attribute__((__no_instrument_function__)) ;
 #line 1309 "include/linux/usb.h"
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context ) 
@@ -5001,12 +5001,12 @@ __inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev 
 }
 }
 #line 1350
-__inline static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
+ static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
                                       void *transfer_buffer , int buffer_length ,
                                       void (*complete_fn)(struct urb * ) , void *context ,
                                       int interval )  __attribute__((__no_instrument_function__)) ;
 #line 1350 "include/linux/usb.h"
-__inline static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
+ static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
                                       void *transfer_buffer , int buffer_length ,
                                       void (*complete_fn)(struct urb * ) , void *context ,
                                       int interval ) 
@@ -5153,9 +5153,9 @@ extern int usb_control_msg(struct usb_device *dev , unsigned int pipe , __u8 req
 #line 1461
 extern int usb_clear_halt(struct usb_device *dev , int pipe ) ;
 #line 1567
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -5177,9 +5177,9 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 124 "include/linux/usb/serial.h"
-__inline static void *usb_get_serial_port_data(struct usb_serial_port *port )  __attribute__((__no_instrument_function__)) ;
+ static void *usb_get_serial_port_data(struct usb_serial_port *port )  __attribute__((__no_instrument_function__)) ;
 #line 124 "include/linux/usb/serial.h"
-__inline static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
+ static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5204,9 +5204,9 @@ __inline static void *usb_get_serial_port_data(struct usb_serial_port *port )
 }
 }
 #line 129
-__inline static void usb_set_serial_port_data(struct usb_serial_port *port , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void usb_set_serial_port_data(struct usb_serial_port *port , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 129 "include/linux/usb/serial.h"
-__inline static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
+ static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -6413,9 +6413,9 @@ static void mos7840_dump_serial_port(struct moschip_port *mos7840_port )
 }
 }
 #line 418
-__inline static void mos7840_set_port_private(struct usb_serial_port *port , struct moschip_port *data )  __attribute__((__no_instrument_function__)) ;
+ static void mos7840_set_port_private(struct usb_serial_port *port , struct moschip_port *data )  __attribute__((__no_instrument_function__)) ;
 #line 418 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/7545/dscv_tempdir/dscv/ri/32_1/drivers/usb/serial/mos7840.c.common.c"
-__inline static void mos7840_set_port_private(struct usb_serial_port *port , struct moschip_port *data ) 
+ static void mos7840_set_port_private(struct usb_serial_port *port , struct moschip_port *data ) 
 { void *__cil_tmp3 ;
 
   {
@@ -6430,9 +6430,9 @@ __inline static void mos7840_set_port_private(struct usb_serial_port *port , str
 }
 }
 #line 424
-__inline static struct moschip_port *mos7840_get_port_private(struct usb_serial_port *port )  __attribute__((__no_instrument_function__)) ;
+ static struct moschip_port *mos7840_get_port_private(struct usb_serial_port *port )  __attribute__((__no_instrument_function__)) ;
 #line 424 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/7545/dscv_tempdir/dscv/ri/32_1/drivers/usb/serial/mos7840.c.common.c"
-__inline static struct moschip_port *mos7840_get_port_private(struct usb_serial_port *port ) 
+ static struct moschip_port *mos7840_get_port_private(struct usb_serial_port *port ) 
 { void *tmp___7 ;
 
   {

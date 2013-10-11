@@ -4103,7 +4103,7 @@ extern void *kmemdup(void const   * , size_t  , gfp_t  ) ;
 #line 93 "include/linux/spinlock.h"
 extern void __raw_spin_lock_init(raw_spinlock_t * , char const   * , struct lock_class_key * ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -4118,7 +4118,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1809/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/ipw.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -4135,7 +4135,7 @@ extern int usb_control_msg(struct usb_device * , unsigned int  , __u8  , __u8  ,
 #line 1461
 extern int usb_clear_halt(struct usb_device * , int  ) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -4157,7 +4157,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 174 "include/linux/usb/serial.h"
-__inline static void *usb_get_serial_data(struct usb_serial *serial ) 
+ static void *usb_get_serial_data(struct usb_serial *serial ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -4173,7 +4173,7 @@ __inline static void *usb_get_serial_data(struct usb_serial *serial )
 }
 }
 #line 179 "include/linux/usb/serial.h"
-__inline static void usb_set_serial_data(struct usb_serial *serial , void *data ) 
+ static void usb_set_serial_data(struct usb_serial *serial , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
 
@@ -5382,7 +5382,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1137 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1809/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/ipw.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

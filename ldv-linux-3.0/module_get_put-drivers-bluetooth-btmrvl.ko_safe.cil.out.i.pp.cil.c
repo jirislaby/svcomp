@@ -5783,7 +5783,7 @@ struct btmrvl_debugfs_data {
 #line 1
 long __builtin_expect(long  , long  ) ;
 #line 60 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
+ static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -5796,7 +5796,7 @@ __inline static void set_bit(unsigned int nr , unsigned long volatile   *addr )
 }
 }
 #line 246 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -5811,7 +5811,7 @@ __inline static int test_and_clear_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 309 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int constant_test_bit(unsigned int nr , unsigned long const volatile   *addr ) 
+ static int constant_test_bit(unsigned int nr , unsigned long const volatile   *addr ) 
 { int __cil_tmp3 ;
   int __cil_tmp4 ;
   unsigned int __cil_tmp5 ;
@@ -5848,7 +5848,7 @@ __inline static int constant_test_bit(unsigned int nr , unsigned long const vola
 }
 }
 #line 315 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -5873,7 +5873,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 #line 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void) 
+ static struct task_struct *get_current(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -5920,7 +5920,7 @@ __inline static struct task_struct *get_current(void)
 #line 11 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/cmpxchg_64.h"
 extern void __xchg_wrong_size(void) ;
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -5942,7 +5942,7 @@ __inline static long IS_ERR(void const   *ptr )
 }
 }
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp ;
   __u32 *__cil_tmp4 ;
   unsigned long const volatile   *__cil_tmp5 ;
@@ -5967,7 +5967,7 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t * ) ;
 #line 43
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -5976,7 +5976,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp3 ;
 
   {
@@ -5995,7 +5995,7 @@ extern int default_wake_function(wait_queue_t * , unsigned int  , int  , void * 
 #line 80
 extern void __init_waitqueue_head(wait_queue_head_t * , struct lock_class_key * ) ;
 #line 98 "include/linux/wait.h"
-__inline static void init_waitqueue_entry(wait_queue_t *q , struct task_struct *p ) 
+ static void init_waitqueue_entry(wait_queue_t *q , struct task_struct *p ) 
 { 
 
   {
@@ -6042,7 +6042,7 @@ void ldv_module_put_and_exit(void) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 255 "include/linux/slub_def.h"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -6055,7 +6055,7 @@ __inline static void *kmalloc(size_t size , gfp_t flags )
 }
 }
 #line 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -6075,7 +6075,7 @@ extern void kfree_skb(struct sk_buff * ) ;
 #line 493
 extern struct sk_buff *__alloc_skb(unsigned int  , gfp_t  , int  , int  ) ;
 #line 495 "include/linux/skbuff.h"
-__inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority ) 
+ static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority ) 
 { struct sk_buff *tmp ;
 
   {
@@ -6090,7 +6090,7 @@ __inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )
 #line 519
 extern struct sk_buff *skb_realloc_headroom(struct sk_buff * , unsigned int  ) ;
 #line 593 "include/linux/skbuff.h"
-__inline static int skb_queue_empty(struct sk_buff_head  const  *list ) 
+ static int skb_queue_empty(struct sk_buff_head  const  *list ) 
 { struct sk_buff *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct sk_buff *__cil_tmp4 ;
@@ -6115,7 +6115,7 @@ __inline static int skb_queue_empty(struct sk_buff_head  const  *list )
 }
 }
 #line 858 "include/linux/skbuff.h"
-__inline static void __skb_queue_head_init(struct sk_buff_head *list ) 
+ static void __skb_queue_head_init(struct sk_buff_head *list ) 
 { struct sk_buff *tmp ;
 
   {
@@ -6132,7 +6132,7 @@ __inline static void __skb_queue_head_init(struct sk_buff_head *list )
 }
 }
 #line 872 "include/linux/skbuff.h"
-__inline static void skb_queue_head_init(struct sk_buff_head *list ) 
+ static void skb_queue_head_init(struct sk_buff_head *list ) 
 { struct lock_class_key __key ;
   spinlock_t *__cil_tmp3 ;
   struct raw_spinlock *__cil_tmp4 ;
@@ -6165,7 +6165,7 @@ extern unsigned char *skb_put(struct sk_buff * , unsigned int  ) ;
 #line 1177
 extern unsigned char *skb_push(struct sk_buff * , unsigned int  ) ;
 #line 1229 "include/linux/skbuff.h"
-__inline static unsigned int skb_headroom(struct sk_buff  const  *skb ) 
+ static unsigned int skb_headroom(struct sk_buff  const  *skb ) 
 { unsigned char *__cil_tmp2 ;
   long __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -6193,7 +6193,7 @@ __inline static unsigned int skb_headroom(struct sk_buff  const  *skb )
 }
 }
 #line 1253 "include/linux/skbuff.h"
-__inline static void skb_reserve(struct sk_buff *skb , int len ) 
+ static void skb_reserve(struct sk_buff *skb , int len ) 
 { unsigned long __cil_tmp3 ;
   unsigned char *__cil_tmp4 ;
   sk_buff_data_t __cil_tmp5 ;
@@ -6225,7 +6225,7 @@ extern void schedule(void) ;
 #line 2112
 extern int wake_up_process(struct task_struct * ) ;
 #line 2441 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp ;
   void *__cil_tmp4 ;
   struct thread_info *__cil_tmp5 ;
@@ -6244,7 +6244,7 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2467 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp ;
   long tmp___0 ;
   int __cil_tmp4 ;
@@ -6266,7 +6266,7 @@ __inline static int signal_pending(struct task_struct *p )
 }
 }
 #line 156 "include/net/bluetooth/bluetooth.h"
-__inline static struct sk_buff *bt_skb_alloc(unsigned int len , gfp_t how ) 
+ static struct sk_buff *bt_skb_alloc(unsigned int len , gfp_t how ) 
 { struct sk_buff *skb ;
   unsigned int __cil_tmp4 ;
   struct sk_buff *__cil_tmp5 ;
@@ -10168,7 +10168,7 @@ extern void might_fault(void) ;
 #line 196
 extern int kstrtoll(char const   * , unsigned int  , long long * ) ;
 #line 210 "include/linux/kernel.h"
-__inline static int kstrtol(char const   *s , unsigned int base , long *res ) 
+ static int kstrtol(char const   *s , unsigned int base , long *res ) 
 { int tmp ;
   long long *__cil_tmp5 ;
 
@@ -10202,7 +10202,7 @@ extern void debugfs_remove(struct dentry * ) ;
 #line 42 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_from_user(void * , void const   * , unsigned int  ) ;
 #line 46 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long copy_from_user(void *to , void const   *from , unsigned long n ) 
+ static unsigned long copy_from_user(void *to , void const   *from , unsigned long n ) 
 { int sz ;
   unsigned long tmp ;
   int __ret_warn_on ;

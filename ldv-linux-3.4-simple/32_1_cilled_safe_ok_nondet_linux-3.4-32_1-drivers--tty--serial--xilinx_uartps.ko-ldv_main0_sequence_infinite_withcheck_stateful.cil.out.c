@@ -3867,9 +3867,9 @@ extern void _raw_spin_unlock(raw_spinlock_t *lock )  __attribute__((__section__(
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -3878,9 +3878,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 283
-__inline static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -3895,9 +3895,9 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -3912,9 +3912,9 @@ __inline static void spin_unlock(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -3966,9 +3966,9 @@ extern void platform_driver_unregister(struct platform_driver * ) ;
 #line 174 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
 extern void *ioremap_nocache(resource_size_t offset , unsigned long size ) ;
 #line 182
-__inline static void *ioremap(resource_size_t offset , unsigned long size )  __attribute__((__no_instrument_function__)) ;
+ static void *ioremap(resource_size_t offset , unsigned long size )  __attribute__((__no_instrument_function__)) ;
 #line 182 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *ioremap(resource_size_t offset , unsigned long size ) 
+ static void *ioremap(resource_size_t offset , unsigned long size ) 
 { void *tmp ;
 
   {
@@ -3996,14 +3996,14 @@ extern int __attribute__((__warn_unused_result__))  request_threaded_irq(unsigne
                                                                          char const   *name ,
                                                                          void *dev ) ;
 #line 131
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
                                                                          char const   *name ,
                                                                          void *dev )  __attribute__((__no_instrument_function__)) ;
 #line 131 "include/linux/interrupt.h"
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
@@ -4061,9 +4061,9 @@ extern int uart_suspend_port(struct uart_driver *reg , struct uart_port *port ) 
 #line 481
 extern int uart_resume_port(struct uart_driver *reg , struct uart_port *port ) ;
 #line 492
-__inline static int uart_tx_stopped(struct uart_port *port )  __attribute__((__no_instrument_function__)) ;
+ static int uart_tx_stopped(struct uart_port *port )  __attribute__((__no_instrument_function__)) ;
 #line 492 "include/linux/serial_core.h"
-__inline static int uart_tx_stopped(struct uart_port *port ) 
+ static int uart_tx_stopped(struct uart_port *port ) 
 { struct tty_struct *tty ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;

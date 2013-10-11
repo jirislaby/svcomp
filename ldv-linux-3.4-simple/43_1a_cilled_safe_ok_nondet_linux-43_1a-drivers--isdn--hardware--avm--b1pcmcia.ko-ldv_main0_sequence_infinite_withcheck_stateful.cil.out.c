@@ -892,7 +892,7 @@ extern int sprintf(char * , char const   *  , ...) ;
 #line 47 "include/linux/list.h"
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head ) 
+ static void list_add(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -913,7 +913,7 @@ extern size_t strlcpy(char * , char const   * , size_t  ) ;
 #line 57
 extern char *strchr(char const   * , int  ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -924,7 +924,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -974,7 +974,7 @@ extern int request_threaded_irq(unsigned int  , irqreturn_t (*)(int  , void * ) 
                                 irqreturn_t (*)(int  , void * ) , unsigned long  ,
                                 char const   * , void * ) ;
 #line 132 "include/linux/interrupt.h"
-__inline static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
+ static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
                                 unsigned long flags , char const   *name , void *dev ) 
 { int tmp ;
   irqreturn_t (*__cil_tmp7)(int  , void * ) ;
@@ -1009,7 +1009,7 @@ extern void register_capi_driver(struct capi_driver * ) ;
 #line 101
 extern void unregister_capi_driver(struct capi_driver * ) ;
 #line 219 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/isdn/hardware/avm/avmcard.h"
-__inline static unsigned char b1outp(unsigned int base , unsigned short offset , unsigned char value ) 
+ static unsigned char b1outp(unsigned int base , unsigned short offset , unsigned char value ) 
 { unsigned char tmp ;
   int __cil_tmp5 ;
   unsigned char __cil_tmp6 ;
@@ -1045,7 +1045,7 @@ __inline static unsigned char b1outp(unsigned int base , unsigned short offset ,
 }
 }
 #line 318 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/isdn/hardware/avm/avmcard.h"
-__inline static void b1_reset(unsigned int base ) 
+ static void b1_reset(unsigned int base ) 
 { unsigned long __ms ;
   unsigned long tmp ;
   unsigned long __ms___0 ;

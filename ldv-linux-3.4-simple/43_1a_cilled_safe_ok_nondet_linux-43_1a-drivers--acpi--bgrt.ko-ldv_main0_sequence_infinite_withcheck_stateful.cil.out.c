@@ -3284,7 +3284,7 @@ extern int snprintf(char * , size_t  , char const   *  , ...) ;
 #line 174 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
 extern void *ioremap_nocache(resource_size_t  , unsigned long  ) ;
 #line 182 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *ioremap(resource_size_t offset , unsigned long size ) 
+ static void *ioremap(resource_size_t offset , unsigned long size ) 
 { void *tmp ;
 
   {
@@ -3299,7 +3299,7 @@ __inline static void *ioremap(resource_size_t offset , unsigned long size )
 #line 187
 extern void iounmap(void volatile   * ) ;
 #line 209 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memcpy_fromio(void *dst , void const volatile   *src , size_t count ) 
+ static void memcpy_fromio(void *dst , void const volatile   *src , size_t count ) 
 { size_t __len ;
   void *__ret ;
   void const   *__cil_tmp6 ;

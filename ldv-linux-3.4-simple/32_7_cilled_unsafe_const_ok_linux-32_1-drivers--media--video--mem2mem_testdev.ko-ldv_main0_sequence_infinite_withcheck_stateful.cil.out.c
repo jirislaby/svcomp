@@ -4859,9 +4859,9 @@ extern void *memset(void *s , int c , size_t n ) ;
 #line 27 "include/linux/string.h"
 extern char *strncpy(char * , char    * , __kernel_size_t  ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr ) 
 { 
 
   {
@@ -4870,9 +4870,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *p
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4900,9 +4900,9 @@ __inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *pt
 }
 }
 #line 35 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_set(atomic_t *v , int i )  __attribute__((__no_instrument_function__)) ;
 #line 35 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i ) 
+ static void atomic_set(atomic_t *v , int i ) 
 { 
 
   {
@@ -4913,9 +4913,9 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 #line 93
-__inline static void atomic_inc(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_inc(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 93 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v ) 
+ static void atomic_inc(atomic_t *v ) 
 { 
 
   {
@@ -4932,9 +4932,9 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 #line 105
-__inline static void atomic_dec(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_dec(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 105 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v ) 
+ static void atomic_dec(atomic_t *v ) 
 { 
 
   {
@@ -4957,9 +4957,9 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock )  __attribute_
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -4968,9 +4968,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -5014,11 +5014,11 @@ extern unsigned long msecs_to_jiffies(unsigned int    m ) ;
 #line 91 "include/linux/timer.h"
 extern void init_timer_key(struct timer_list *timer , char    *name , struct lock_class_key *key ) ;
 #line 166
-__inline static void setup_timer_key(struct timer_list *timer , char    *name ,
+ static void setup_timer_key(struct timer_list *timer , char    *name ,
                                      struct lock_class_key *key , void (*function)(unsigned long  ) ,
                                      unsigned long data )  __attribute__((__no_instrument_function__)) ;
 #line 166 "include/linux/timer.h"
-__inline static void setup_timer_key(struct timer_list *timer , char    *name ,
+ static void setup_timer_key(struct timer_list *timer , char    *name ,
                                      struct lock_class_key *key , void (*function)(unsigned long  ) ,
                                      unsigned long data ) 
 { unsigned long __cil_tmp6 ;
@@ -5062,10 +5062,10 @@ extern void kfree(void    * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -5079,9 +5079,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -5109,9 +5109,9 @@ extern int platform_driver_register(struct platform_driver * ) ;
 #line 175
 extern void platform_driver_unregister(struct platform_driver * ) ;
 #line 183
-__inline static void *platform_get_drvdata(struct platform_device    *pdev )  __attribute__((__no_instrument_function__)) ;
+ static void *platform_get_drvdata(struct platform_device    *pdev )  __attribute__((__no_instrument_function__)) ;
 #line 183 "include/linux/platform_device.h"
-__inline static void *platform_get_drvdata(struct platform_device    *pdev ) 
+ static void *platform_get_drvdata(struct platform_device    *pdev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5133,9 +5133,9 @@ __inline static void *platform_get_drvdata(struct platform_device    *pdev )
 }
 }
 #line 188
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void platform_set_drvdata(struct platform_device *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 188 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
+ static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -5162,9 +5162,9 @@ extern void vb2_buffer_done(struct vb2_buffer *vb , enum vb2_buffer_state state 
 #line 314
 extern int vb2_queue_init(struct vb2_queue *q ) ;
 #line 353
-__inline static bool vb2_is_busy(struct vb2_queue *q )  __attribute__((__no_instrument_function__)) ;
+ static bool vb2_is_busy(struct vb2_queue *q )  __attribute__((__no_instrument_function__)) ;
 #line 353 "include/media/videobuf2-core.h"
-__inline static bool vb2_is_busy(struct vb2_queue *q ) 
+ static bool vb2_is_busy(struct vb2_queue *q ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -5186,9 +5186,9 @@ __inline static bool vb2_is_busy(struct vb2_queue *q )
 }
 }
 #line 362
-__inline static void *vb2_get_drv_priv(struct vb2_queue *q )  __attribute__((__no_instrument_function__)) ;
+ static void *vb2_get_drv_priv(struct vb2_queue *q )  __attribute__((__no_instrument_function__)) ;
 #line 362 "include/media/videobuf2-core.h"
-__inline static void *vb2_get_drv_priv(struct vb2_queue *q ) 
+ static void *vb2_get_drv_priv(struct vb2_queue *q ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -5204,10 +5204,10 @@ __inline static void *vb2_get_drv_priv(struct vb2_queue *q )
 }
 }
 #line 373
-__inline static void vb2_set_plane_payload(struct vb2_buffer *vb , unsigned int plane_no ,
+ static void vb2_set_plane_payload(struct vb2_buffer *vb , unsigned int plane_no ,
                                            unsigned long size )  __attribute__((__no_instrument_function__)) ;
 #line 373 "include/media/videobuf2-core.h"
-__inline static void vb2_set_plane_payload(struct vb2_buffer *vb , unsigned int plane_no ,
+ static void vb2_set_plane_payload(struct vb2_buffer *vb , unsigned int plane_no ,
                                            unsigned long size ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -5246,9 +5246,9 @@ __inline static void vb2_set_plane_payload(struct vb2_buffer *vb , unsigned int 
 }
 }
 #line 399
-__inline static unsigned long vb2_plane_size(struct vb2_buffer *vb , unsigned int plane_no )  __attribute__((__no_instrument_function__)) ;
+ static unsigned long vb2_plane_size(struct vb2_buffer *vb , unsigned int plane_no )  __attribute__((__no_instrument_function__)) ;
 #line 399 "include/media/videobuf2-core.h"
-__inline static unsigned long vb2_plane_size(struct vb2_buffer *vb , unsigned int plane_no ) 
+ static unsigned long vb2_plane_size(struct vb2_buffer *vb , unsigned int plane_no ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned int __cil_tmp5 ;
@@ -5300,9 +5300,9 @@ extern struct vb2_queue *v4l2_m2m_get_vq(struct v4l2_m2m_ctx *m2m_ctx , enum v4l
 #line 94
 extern void v4l2_m2m_job_finish(struct v4l2_m2m_dev *m2m_dev , struct v4l2_m2m_ctx *m2m_ctx ) ;
 #line 97
-__inline static void v4l2_m2m_buf_done(struct vb2_buffer *buf , enum vb2_buffer_state state )  __attribute__((__no_instrument_function__)) ;
+ static void v4l2_m2m_buf_done(struct vb2_buffer *buf , enum vb2_buffer_state state )  __attribute__((__no_instrument_function__)) ;
 #line 97 "include/media/v4l2-mem2mem.h"
-__inline static void v4l2_m2m_buf_done(struct vb2_buffer *buf , enum vb2_buffer_state state ) 
+ static void v4l2_m2m_buf_done(struct vb2_buffer *buf , enum vb2_buffer_state state ) 
 { 
 
   {
@@ -5344,9 +5344,9 @@ extern void v4l2_m2m_ctx_release(struct v4l2_m2m_ctx *m2m_ctx ) ;
 #line 134
 extern void v4l2_m2m_buf_queue(struct v4l2_m2m_ctx *m2m_ctx , struct vb2_buffer *vb ) ;
 #line 140
-__inline static unsigned int v4l2_m2m_num_src_bufs_ready(struct v4l2_m2m_ctx *m2m_ctx )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int v4l2_m2m_num_src_bufs_ready(struct v4l2_m2m_ctx *m2m_ctx )  __attribute__((__no_instrument_function__)) ;
 #line 140 "include/media/v4l2-mem2mem.h"
-__inline static unsigned int v4l2_m2m_num_src_bufs_ready(struct v4l2_m2m_ctx *m2m_ctx ) 
+ static unsigned int v4l2_m2m_num_src_bufs_ready(struct v4l2_m2m_ctx *m2m_ctx ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5368,9 +5368,9 @@ __inline static unsigned int v4l2_m2m_num_src_bufs_ready(struct v4l2_m2m_ctx *m2
 }
 }
 #line 150
-__inline static unsigned int v4l2_m2m_num_dst_bufs_ready(struct v4l2_m2m_ctx *m2m_ctx )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int v4l2_m2m_num_dst_bufs_ready(struct v4l2_m2m_ctx *m2m_ctx )  __attribute__((__no_instrument_function__)) ;
 #line 150 "include/media/v4l2-mem2mem.h"
-__inline static unsigned int v4l2_m2m_num_dst_bufs_ready(struct v4l2_m2m_ctx *m2m_ctx ) 
+ static unsigned int v4l2_m2m_num_dst_bufs_ready(struct v4l2_m2m_ctx *m2m_ctx ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5394,9 +5394,9 @@ __inline static unsigned int v4l2_m2m_num_dst_bufs_ready(struct v4l2_m2m_ctx *m2
 #line 156
 extern void *v4l2_m2m_next_buf(struct v4l2_m2m_queue_ctx *q_ctx ) ;
 #line 162
-__inline static void *v4l2_m2m_next_src_buf(struct v4l2_m2m_ctx *m2m_ctx )  __attribute__((__no_instrument_function__)) ;
+ static void *v4l2_m2m_next_src_buf(struct v4l2_m2m_ctx *m2m_ctx )  __attribute__((__no_instrument_function__)) ;
 #line 162 "include/media/v4l2-mem2mem.h"
-__inline static void *v4l2_m2m_next_src_buf(struct v4l2_m2m_ctx *m2m_ctx ) 
+ static void *v4l2_m2m_next_src_buf(struct v4l2_m2m_ctx *m2m_ctx ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5418,9 +5418,9 @@ __inline static void *v4l2_m2m_next_src_buf(struct v4l2_m2m_ctx *m2m_ctx )
 }
 }
 #line 171
-__inline static void *v4l2_m2m_next_dst_buf(struct v4l2_m2m_ctx *m2m_ctx )  __attribute__((__no_instrument_function__)) ;
+ static void *v4l2_m2m_next_dst_buf(struct v4l2_m2m_ctx *m2m_ctx )  __attribute__((__no_instrument_function__)) ;
 #line 171 "include/media/v4l2-mem2mem.h"
-__inline static void *v4l2_m2m_next_dst_buf(struct v4l2_m2m_ctx *m2m_ctx ) 
+ static void *v4l2_m2m_next_dst_buf(struct v4l2_m2m_ctx *m2m_ctx ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5444,9 +5444,9 @@ __inline static void *v4l2_m2m_next_dst_buf(struct v4l2_m2m_ctx *m2m_ctx )
 #line 194
 extern void *v4l2_m2m_buf_remove(struct v4l2_m2m_queue_ctx *q_ctx ) ;
 #line 200
-__inline static void *v4l2_m2m_src_buf_remove(struct v4l2_m2m_ctx *m2m_ctx )  __attribute__((__no_instrument_function__)) ;
+ static void *v4l2_m2m_src_buf_remove(struct v4l2_m2m_ctx *m2m_ctx )  __attribute__((__no_instrument_function__)) ;
 #line 200 "include/media/v4l2-mem2mem.h"
-__inline static void *v4l2_m2m_src_buf_remove(struct v4l2_m2m_ctx *m2m_ctx ) 
+ static void *v4l2_m2m_src_buf_remove(struct v4l2_m2m_ctx *m2m_ctx ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5468,9 +5468,9 @@ __inline static void *v4l2_m2m_src_buf_remove(struct v4l2_m2m_ctx *m2m_ctx )
 }
 }
 #line 209
-__inline static void *v4l2_m2m_dst_buf_remove(struct v4l2_m2m_ctx *m2m_ctx )  __attribute__((__no_instrument_function__)) ;
+ static void *v4l2_m2m_dst_buf_remove(struct v4l2_m2m_ctx *m2m_ctx )  __attribute__((__no_instrument_function__)) ;
 #line 209 "include/media/v4l2-mem2mem.h"
-__inline static void *v4l2_m2m_dst_buf_remove(struct v4l2_m2m_ctx *m2m_ctx ) 
+ static void *v4l2_m2m_dst_buf_remove(struct v4l2_m2m_ctx *m2m_ctx ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5498,11 +5498,11 @@ extern int __attribute__((__warn_unused_result__))  __video_register_device(stru
                                                                             int warn_if_nr_in_use ,
                                                                             struct module *owner ) ;
 #line 146
-__inline static int __attribute__((__warn_unused_result__))  video_register_device(struct video_device *vdev ,
+ static int __attribute__((__warn_unused_result__))  video_register_device(struct video_device *vdev ,
                                                                                    int type ,
                                                                                    int nr )  __attribute__((__no_instrument_function__)) ;
 #line 146 "include/media/v4l2-dev.h"
-__inline static int __attribute__((__warn_unused_result__))  video_register_device(struct video_device *vdev ,
+ static int __attribute__((__warn_unused_result__))  video_register_device(struct video_device *vdev ,
                                                                                    int type ,
                                                                                    int nr ) 
 { int tmp___7 ;
@@ -5538,9 +5538,9 @@ extern struct video_device * __attribute__((__warn_unused_result__)) video_devic
 #line 169
 extern void video_device_release(struct video_device *vdev ) ;
 #line 177
-__inline static void *video_get_drvdata(struct video_device *vdev )  __attribute__((__no_instrument_function__)) ;
+ static void *video_get_drvdata(struct video_device *vdev )  __attribute__((__no_instrument_function__)) ;
 #line 177 "include/media/v4l2-dev.h"
-__inline static void *video_get_drvdata(struct video_device *vdev ) 
+ static void *video_get_drvdata(struct video_device *vdev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5565,9 +5565,9 @@ __inline static void *video_get_drvdata(struct video_device *vdev )
 }
 }
 #line 182
-__inline static void video_set_drvdata(struct video_device *vdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void video_set_drvdata(struct video_device *vdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 182 "include/media/v4l2-dev.h"
-__inline static void video_set_drvdata(struct video_device *vdev , void *data ) 
+ static void video_set_drvdata(struct video_device *vdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -5590,9 +5590,9 @@ __inline static void video_set_drvdata(struct video_device *vdev , void *data )
 #line 187
 extern struct video_device *video_devdata(struct file *file ) ;
 #line 191
-__inline static void *video_drvdata(struct file *file )  __attribute__((__no_instrument_function__)) ;
+ static void *video_drvdata(struct file *file )  __attribute__((__no_instrument_function__)) ;
 #line 191 "include/media/v4l2-dev.h"
-__inline static void *video_drvdata(struct file *file ) 
+ static void *video_drvdata(struct file *file ) 
 { struct video_device *tmp___7 ;
   void *tmp___8 ;
 

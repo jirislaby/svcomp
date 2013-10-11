@@ -5180,7 +5180,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/255/dscv_tempdir/dscv/ri/43_1a/drivers/gpu/drm/i2c/sil164_drv.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -5212,7 +5212,7 @@ extern void i2c_del_driver(struct i2c_driver * ) ;
 #line 1510 "include/drm/drmP.h"
 extern unsigned int drm_debug ;
 #line 135 "include/drm/drm_encoder_slave.h"
-__inline static struct i2c_client *drm_i2c_encoder_get_client(struct drm_encoder *encoder ) 
+ static struct i2c_client *drm_i2c_encoder_get_client(struct drm_encoder *encoder ) 
 { struct drm_encoder  const  *__mptr ;
   struct drm_encoder_slave *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5237,7 +5237,7 @@ __inline static struct i2c_client *drm_i2c_encoder_get_client(struct drm_encoder
 }
 }
 #line 145 "include/drm/drm_encoder_slave.h"
-__inline static int drm_i2c_encoder_register(struct module *owner , struct drm_i2c_encoder_driver *driver ) 
+ static int drm_i2c_encoder_register(struct module *owner , struct drm_i2c_encoder_driver *driver ) 
 { int tmp ;
   struct i2c_driver *__cil_tmp4 ;
 
@@ -5253,7 +5253,7 @@ __inline static int drm_i2c_encoder_register(struct module *owner , struct drm_i
 }
 }
 #line 155 "include/drm/drm_encoder_slave.h"
-__inline static void drm_i2c_encoder_unregister(struct drm_i2c_encoder_driver *driver ) 
+ static void drm_i2c_encoder_unregister(struct drm_i2c_encoder_driver *driver ) 
 { struct i2c_driver *__cil_tmp2 ;
 
   {
@@ -7561,7 +7561,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 2895 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/255/dscv_tempdir/dscv/ri/43_1a/drivers/gpu/drm/i2c/sil164_drv.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

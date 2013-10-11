@@ -4548,7 +4548,7 @@ extern char *strcpy(char * , char const * ) ;
 # 39 "include/linux/string.h"
 extern size_t strlcat(char * , char const * , __kernel_size_t ) ;
 # 32 "include/linux/err.h"
-__inline static long IS_ERR(void const *ptr )
+ static long IS_ERR(void const *ptr )
 { long tmp ;
 
   {
@@ -4574,7 +4574,7 @@ extern void __release_region(struct resource * , resource_size_t , resource_size
 # 82 "include/linux/jiffies.h"
 extern unsigned long volatile jiffies ;
 # 55 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile *addr )
+ static unsigned char readb(void const volatile *addr )
 { unsigned char ret ;
 
   {
@@ -4585,7 +4585,7 @@ __inline static unsigned char readb(void const volatile *addr )
 }
 }
 # 57 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static unsigned int readl(void const volatile *addr )
+ static unsigned int readl(void const volatile *addr )
 { unsigned int ret ;
 
   {
@@ -4596,7 +4596,7 @@ __inline static unsigned int readl(void const volatile *addr )
 }
 }
 # 63 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void writeb(unsigned char val , void volatile *addr )
+ static void writeb(unsigned char val , void volatile *addr )
 {
 
   {
@@ -4607,7 +4607,7 @@ __inline static void writeb(unsigned char val , void volatile *addr )
 }
 }
 # 65 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void writel(unsigned int val , void volatile *addr )
+ static void writel(unsigned int val , void volatile *addr )
 {
 
   {
@@ -4620,7 +4620,7 @@ __inline static void writel(unsigned int val , void volatile *addr )
 # 176 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
 extern void *ioremap_nocache(resource_size_t , unsigned long ) ;
 # 184 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void *ioremap(resource_size_t offset , unsigned long size )
+ static void *ioremap(resource_size_t offset , unsigned long size )
 { void *tmp ;
 
   {
@@ -4653,7 +4653,7 @@ extern void *dev_get_drvdata(struct device const * ) ;
 # 706 "include/linux/device.h"
 extern int dev_set_drvdata(struct device * , void * ) ;
 # 106 "include/linux/backlight.h"
-__inline static void backlight_update_status(struct backlight_device *bd )
+ static void backlight_update_status(struct backlight_device *bd )
 {
 
   {
@@ -4690,7 +4690,7 @@ extern struct backlight_device *backlight_device_register(char const * , struct 
 # 117 "include/linux/backlight.h"
 extern void backlight_device_unregister(struct backlight_device * ) ;
 # 123 "include/linux/backlight.h"
-__inline static void *bl_get_data(struct backlight_device *bl_dev )
+ static void *bl_get_data(struct backlight_device *bl_dev )
 { void *tmp ;
 
   {
@@ -4747,7 +4747,7 @@ extern int __pci_register_driver(struct pci_driver * , struct module * , char co
 # 925 "include/linux/pci.h"
 extern void pci_unregister_driver(struct pci_driver * ) ;
 # 1316 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev )
+ static void *pci_get_drvdata(struct pci_dev *pdev )
 { void *tmp ;
 
   {
@@ -4760,7 +4760,7 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 # 1321 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data )
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data )
 {
 
   {
@@ -4967,7 +4967,7 @@ static struct fb_ops aty128fb_ops =
                                                                        struct fb_var_screeninfo * ))0,
     (void (*)(struct fb_info * ))0, (int (*)(struct fb_info * ))0, (int (*)(struct fb_info * ))0};
 # 504 "/anthill/stuff/tacas-comp/work/current--X--drivers/video/aty/aty128fb.ko--X--chewlinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/video/aty/aty128fb.c.p"
-__inline static u32 _aty_ld_le32(unsigned int volatile regindex , struct aty128fb_par const *par )
+ static u32 _aty_ld_le32(unsigned int volatile regindex , struct aty128fb_par const *par )
 { unsigned int tmp ;
 
   {
@@ -4980,7 +4980,7 @@ __inline static u32 _aty_ld_le32(unsigned int volatile regindex , struct aty128f
 }
 }
 # 510 "/anthill/stuff/tacas-comp/work/current--X--drivers/video/aty/aty128fb.ko--X--chewlinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/video/aty/aty128fb.c.p"
-__inline static void _aty_st_le32(unsigned int volatile regindex , u32 val , struct aty128fb_par const *par )
+ static void _aty_st_le32(unsigned int volatile regindex , u32 val , struct aty128fb_par const *par )
 {
 
   {
@@ -4993,7 +4993,7 @@ __inline static void _aty_st_le32(unsigned int volatile regindex , u32 val , str
 }
 }
 # 522 "/anthill/stuff/tacas-comp/work/current--X--drivers/video/aty/aty128fb.ko--X--chewlinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/video/aty/aty128fb.c.p"
-__inline static void _aty_st_8(unsigned int regindex , u8 val , struct aty128fb_par const *par )
+ static void _aty_st_8(unsigned int regindex , u8 val , struct aty128fb_par const *par )
 {
 
   {

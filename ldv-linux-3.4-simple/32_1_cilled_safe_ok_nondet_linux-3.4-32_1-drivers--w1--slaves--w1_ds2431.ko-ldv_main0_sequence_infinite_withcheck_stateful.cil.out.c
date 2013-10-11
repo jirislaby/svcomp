@@ -987,9 +987,9 @@ extern u8 w1_read_block(struct w1_master * , u8 * , int  ) ;
 #line 218
 extern int w1_reset_select_slave(struct w1_slave *sl ) ;
 #line 222
-__inline static struct w1_slave *dev_to_w1_slave(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static struct w1_slave *dev_to_w1_slave(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 222 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/w1/slaves/../w1.h"
-__inline static struct w1_slave *dev_to_w1_slave(struct device *dev ) 
+ static struct w1_slave *dev_to_w1_slave(struct device *dev ) 
 { struct device  const  *__mptr ;
   struct w1_slave *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -1023,9 +1023,9 @@ __inline static struct w1_slave *dev_to_w1_slave(struct device *dev )
 }
 }
 #line 227
-__inline static struct w1_slave *kobj_to_w1_slave(struct kobject *kobj )  __attribute__((__no_instrument_function__)) ;
+ static struct w1_slave *kobj_to_w1_slave(struct kobject *kobj )  __attribute__((__no_instrument_function__)) ;
 #line 227 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/w1/slaves/../w1.h"
-__inline static struct w1_slave *kobj_to_w1_slave(struct kobject *kobj ) 
+ static struct w1_slave *kobj_to_w1_slave(struct kobject *kobj ) 
 { struct kobject  const  *__mptr ;
   struct w1_slave *tmp ;
   struct device *__cil_tmp4 ;
@@ -1065,9 +1065,9 @@ __inline static struct w1_slave *kobj_to_w1_slave(struct kobject *kobj )
 }
 }
 #line 49 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12356/dscv_tempdir/dscv/ri/32_1/drivers/w1/slaves/w1_ds2431.c.common.c"
-__inline static size_t w1_f2d_fix_count(loff_t off , size_t count , size_t size )  __attribute__((__no_instrument_function__)) ;
+ static size_t w1_f2d_fix_count(loff_t off , size_t count , size_t size )  __attribute__((__no_instrument_function__)) ;
 #line 49 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12356/dscv_tempdir/dscv/ri/32_1/drivers/w1/slaves/w1_ds2431.c.common.c"
-__inline static size_t w1_f2d_fix_count(loff_t off , size_t count , size_t size ) 
+ static size_t w1_f2d_fix_count(loff_t off , size_t count , size_t size ) 
 { loff_t __cil_tmp4 ;
   loff_t __cil_tmp5 ;
   loff_t __cil_tmp6 ;

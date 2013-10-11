@@ -1045,7 +1045,7 @@ extern u8 w1_read_block(struct w1_master * , u8 * , int  ) ;
 #line 218
 extern int w1_reset_select_slave(struct w1_slave * ) ;
 #line 222 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/w1/slaves/../w1.h"
-__inline static struct w1_slave *dev_to_w1_slave(struct device *dev ) 
+ static struct w1_slave *dev_to_w1_slave(struct device *dev ) 
 { struct device  const  *__mptr ;
   struct w1_slave *__cil_tmp3 ;
 
@@ -1061,7 +1061,7 @@ __inline static struct w1_slave *dev_to_w1_slave(struct device *dev )
 }
 }
 #line 227 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/w1/slaves/../w1.h"
-__inline static struct w1_slave *kobj_to_w1_slave(struct kobject *kobj ) 
+ static struct w1_slave *kobj_to_w1_slave(struct kobject *kobj ) 
 { struct kobject  const  *__mptr ;
   struct w1_slave *tmp ;
   struct device *__cil_tmp4 ;
@@ -1083,7 +1083,7 @@ __inline static struct w1_slave *kobj_to_w1_slave(struct kobject *kobj )
 }
 }
 #line 63 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4910/dscv_tempdir/dscv/ri/43_1a/drivers/w1/slaves/w1_ds2431.c.p"
-__inline static size_t w1_f2d_fix_count(loff_t off , size_t count , size_t size ) 
+ static size_t w1_f2d_fix_count(loff_t off , size_t count , size_t size ) 
 { unsigned long long __cil_tmp4 ;
   unsigned long long __cil_tmp5 ;
   unsigned long long __cil_tmp6 ;

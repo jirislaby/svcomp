@@ -3665,7 +3665,7 @@ extern int sprintf(char * , char const   *  , ...) ;
 #line 323
 extern int snprintf(char * , size_t  , char const   *  , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -3685,7 +3685,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head ) 
+ static void list_add(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -3704,7 +3704,7 @@ extern size_t strlen(char const   * ) ;
 #line 119 "include/linux/string.h"
 extern char *kstrdup(char const   * , gfp_t  ) ;
 #line 22 "include/linux/err.h"
-__inline static void *ERR_PTR(long error ) 
+ static void *ERR_PTR(long error ) 
 { 
 
   {
@@ -3713,7 +3713,7 @@ __inline static void *ERR_PTR(long error )
 }
 }
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3722,7 +3722,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3754,7 +3754,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11038/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/asus_atk0110.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -3773,7 +3773,7 @@ extern int nonseekable_open(struct inode * , struct file * ) ;
 extern ssize_t simple_read_from_buffer(void * , size_t  , loff_t * , void const   * ,
                                        size_t  ) ;
 #line 2634 "include/linux/fs.h"
-__inline static void __simple_attr_check_format(char const   *fmt  , ...) 
+ static void __simple_attr_check_format(char const   *fmt  , ...) 
 { 
 
   {
@@ -11996,7 +11996,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 2666 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11038/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/asus_atk0110.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

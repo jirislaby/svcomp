@@ -725,7 +725,7 @@ int expectedDirection  =    0;
 #line 15
 int getCurrentHeading(void) ;
 #line 11 "Specification3_spec.c"
-__inline void __utac_acc__Specification3_spec__1(void) 
+ void __utac_acc__Specification3_spec__1(void) 
 { int currentFloorID___0 ;
   int tmp ;
   int tmp___0 ;
@@ -920,7 +920,7 @@ __inline void __utac_acc__Specification3_spec__1(void)
 }
 }
 #line 31 "Specification3_spec.c"
-__inline void __utac_acc__Specification3_spec__2(void) 
+ void __utac_acc__Specification3_spec__2(void) 
 { int tmp ;
   int tmp___0 ;
 

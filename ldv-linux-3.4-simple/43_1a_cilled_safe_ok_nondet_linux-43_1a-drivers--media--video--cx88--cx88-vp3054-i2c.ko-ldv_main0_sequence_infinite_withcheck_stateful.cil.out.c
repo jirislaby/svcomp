@@ -7534,7 +7534,7 @@ extern void *__memcpy(void * , void const   * , size_t  ) ;
 #line 30 "include/linux/string.h"
 extern size_t strlcpy(char * , char const   * , size_t  ) ;
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned int readl(void const volatile   *addr ) 
+ static unsigned int readl(void const volatile   *addr ) 
 { unsigned int ret ;
   unsigned int volatile   *__cil_tmp3 ;
 
@@ -7548,7 +7548,7 @@ __inline static unsigned int readl(void const volatile   *addr )
 }
 }
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writel(unsigned int val , void volatile   *addr ) 
+ static void writel(unsigned int val , void volatile   *addr ) 
 { unsigned int volatile   *__cil_tmp3 ;
 
   {
@@ -7569,7 +7569,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/7362/dscv_tempdir/dscv/ri/43_1a/drivers/media/video/cx88/cx88-vp3054-i2c.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -7581,7 +7581,7 @@ struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 793 "include/linux/device.h"
 extern int dev_set_drvdata(struct device * , void * ) ;
 #line 400 "include/linux/i2c.h"
-__inline static void i2c_set_adapdata(struct i2c_adapter *dev , void *data ) 
+ static void i2c_set_adapdata(struct i2c_adapter *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -8590,7 +8590,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 594 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/7362/dscv_tempdir/dscv/ri/43_1a/drivers/media/video/cx88/cx88-vp3054-i2c.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

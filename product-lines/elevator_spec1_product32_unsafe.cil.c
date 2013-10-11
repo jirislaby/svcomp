@@ -3235,7 +3235,7 @@ void __utac_acc__Specification1_spec__1(void)
 }
 }
 #line 25 "Specification1_spec.c"
-__inline void __utac_acc__Specification1_spec__2(int floor ) 
+ void __utac_acc__Specification1_spec__2(int floor ) 
 { 
 
   {

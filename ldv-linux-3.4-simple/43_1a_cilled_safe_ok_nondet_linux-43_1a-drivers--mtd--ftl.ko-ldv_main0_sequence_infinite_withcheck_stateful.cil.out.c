@@ -3544,7 +3544,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -3557,9 +3557,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11861/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/ftl.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -3583,7 +3583,7 @@ extern int mtd_read(struct mtd_info * , loff_t  , size_t  , size_t * , u_char * 
 #line 254
 extern int mtd_write(struct mtd_info * , loff_t  , size_t  , size_t * , u_char const   * ) ;
 #line 294 "include/linux/mtd/mtd.h"
-__inline static void mtd_sync(struct mtd_info *mtd ) 
+ static void mtd_sync(struct mtd_info *mtd ) 
 { void (*__cil_tmp2)(struct mtd_info * ) ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -10875,7 +10875,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1944 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11861/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/ftl.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -10905,7 +10905,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 2000 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11861/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/ftl.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

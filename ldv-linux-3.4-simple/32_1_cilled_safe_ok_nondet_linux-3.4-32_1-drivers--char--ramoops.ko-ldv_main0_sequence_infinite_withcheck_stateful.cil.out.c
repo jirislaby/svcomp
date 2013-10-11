@@ -1028,9 +1028,9 @@ struct ramoops_context {
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 439 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int fls(int x )  __attribute__((__no_instrument_function__)) ;
+ static int fls(int x )  __attribute__((__no_instrument_function__)) ;
 #line 439 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int fls(int x ) 
+ static int fls(int x ) 
 { int r ;
   long tmp ;
 
@@ -1044,9 +1044,9 @@ __inline static int fls(int x )
 }
 }
 #line 482
-__inline static int ( __attribute__((__always_inline__)) fls64)(__u64 x )  __attribute__((__no_instrument_function__)) ;
+ static int ( __attribute__((__always_inline__)) fls64)(__u64 x )  __attribute__((__no_instrument_function__)) ;
 #line 482 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int ( __attribute__((__always_inline__)) fls64)(__u64 x ) 
+ static int ( __attribute__((__always_inline__)) fls64)(__u64 x ) 
 { long bitpos ;
   long __cil_tmp3 ;
 
@@ -1064,9 +1064,9 @@ __inline static int ( __attribute__((__always_inline__)) fls64)(__u64 x )
 }
 }
 #line 160 "include/linux/bitops.h"
-__inline static unsigned int fls_long(unsigned long l )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int fls_long(unsigned long l )  __attribute__((__no_instrument_function__)) ;
 #line 160 "include/linux/bitops.h"
-__inline static unsigned int fls_long(unsigned long l ) 
+ static unsigned int fls_long(unsigned long l ) 
 { int tmp ;
   int tmp___0 ;
   int __cil_tmp4 ;
@@ -1097,10 +1097,10 @@ __inline static unsigned int fls_long(unsigned long l )
 }
 }
 #line 69 "include/linux/log2.h"
-__inline static unsigned long __rounddown_pow_of_two(unsigned long n )  __attribute__((__no_instrument_function__,
+ static unsigned long __rounddown_pow_of_two(unsigned long n )  __attribute__((__no_instrument_function__,
 __const__)) ;
 #line 69 "include/linux/log2.h"
-__inline static unsigned long __rounddown_pow_of_two(unsigned long n ) 
+ static unsigned long __rounddown_pow_of_two(unsigned long n ) 
 { unsigned int tmp ;
   unsigned int __cil_tmp3 ;
 
@@ -1122,9 +1122,9 @@ extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 #line 320 "include/linux/kernel.h"
 extern int ( /* format attribute */  sprintf)(char *buf , char const   *fmt  , ...) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -1133,9 +1133,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -1189,9 +1189,9 @@ extern void __release_region(struct resource * , resource_size_t  , resource_siz
 #line 174 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
 extern void *ioremap_nocache(resource_size_t offset , unsigned long size ) ;
 #line 182
-__inline static void *ioremap(resource_size_t offset , unsigned long size )  __attribute__((__no_instrument_function__)) ;
+ static void *ioremap(resource_size_t offset , unsigned long size )  __attribute__((__no_instrument_function__)) ;
 #line 182 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *ioremap(resource_size_t offset , unsigned long size ) 
+ static void *ioremap(resource_size_t offset , unsigned long size ) 
 { void *tmp ;
 
   {
@@ -1233,10 +1233,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -1250,9 +1250,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 

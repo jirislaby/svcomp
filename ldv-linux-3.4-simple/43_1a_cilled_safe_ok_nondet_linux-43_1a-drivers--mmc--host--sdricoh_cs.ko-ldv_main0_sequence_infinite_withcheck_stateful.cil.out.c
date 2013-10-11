@@ -4009,7 +4009,7 @@ extern int __dynamic_dev_dbg(struct _ddebug * , struct device  const  * , char c
 #line 147 "include/linux/kernel.h"
 extern void __might_sleep(char const   * , int  , int  ) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr ) 
+ static unsigned char readb(void const volatile   *addr ) 
 { unsigned char ret ;
   unsigned char volatile   *__cil_tmp3 ;
 
@@ -4023,7 +4023,7 @@ __inline static unsigned char readb(void const volatile   *addr )
 }
 }
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned int readl(void const volatile   *addr ) 
+ static unsigned int readl(void const volatile   *addr ) 
 { unsigned int ret ;
   unsigned int volatile   *__cil_tmp3 ;
 
@@ -4037,7 +4037,7 @@ __inline static unsigned int readl(void const volatile   *addr )
 }
 }
 #line 62 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writew(unsigned short val , void volatile   *addr ) 
+ static void writew(unsigned short val , void volatile   *addr ) 
 { unsigned short volatile   *__cil_tmp3 ;
 
   {
@@ -4050,7 +4050,7 @@ __inline static void writew(unsigned short val , void volatile   *addr )
 }
 }
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writel(unsigned int val , void volatile   *addr ) 
+ static void writel(unsigned int val , void volatile   *addr ) 
 { unsigned int volatile   *__cil_tmp3 ;
 
   {
@@ -4077,7 +4077,7 @@ void ldv_check_alloc_nonatomic(void) ;
 #line 14
 struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 737 "include/linux/mm.h"
-__inline static void *lowmem_page_address(struct page  const  *page ) 
+ static void *lowmem_page_address(struct page  const  *page ) 
 { long __cil_tmp2 ;
   long __cil_tmp3 ;
   long __cil_tmp4 ;
@@ -4108,7 +4108,7 @@ __inline static void *lowmem_page_address(struct page  const  *page )
 }
 }
 #line 49 "include/linux/highmem.h"
-__inline static void *kmap(struct page *page ) 
+ static void *kmap(struct page *page ) 
 { void *tmp ;
   struct page  const  *__cil_tmp3 ;
 
@@ -4126,7 +4126,7 @@ __inline static void *kmap(struct page *page )
 }
 }
 #line 55 "include/linux/highmem.h"
-__inline static void kunmap(struct page *page ) 
+ static void kunmap(struct page *page ) 
 { 
 
   {
@@ -4143,7 +4143,7 @@ extern void pci_dev_put(struct pci_dev * ) ;
 #line 716
 extern struct pci_dev *pci_get_device(unsigned int  , unsigned int  , struct pci_dev * ) ;
 #line 95 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg ) 
+ static struct page *sg_page(struct scatterlist *sg ) 
 { long tmp ;
   long tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -4238,7 +4238,7 @@ extern void mmc_remove_host(struct mmc_host * ) ;
 #line 328
 extern void mmc_free_host(struct mmc_host * ) ;
 #line 330 "include/linux/mmc/host.h"
-__inline static void *mmc_priv(struct mmc_host *host ) 
+ static void *mmc_priv(struct mmc_host *host ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long (*__cil_tmp4)[0U] ;
@@ -4279,7 +4279,7 @@ static struct pcmcia_device_id  const  pcmcia_ids[3U]  = {      {(__u16 )48U, (u
 #line 104 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17208/dscv_tempdir/dscv/ri/43_1a/drivers/mmc/host/sdricoh_cs.c.p"
 struct pcmcia_device_id  const  __mod_pcmcia_device_table  ;
 #line 117 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17208/dscv_tempdir/dscv/ri/43_1a/drivers/mmc/host/sdricoh_cs.c.p"
-__inline static unsigned int sdricoh_readl(struct sdricoh_host *host , unsigned int reg ) 
+ static unsigned int sdricoh_readl(struct sdricoh_host *host , unsigned int reg ) 
 { unsigned int value ;
   unsigned int tmp ;
   unsigned long __cil_tmp5 ;
@@ -4313,7 +4313,7 @@ __inline static unsigned int sdricoh_readl(struct sdricoh_host *host , unsigned 
 }
 }
 #line 125 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17208/dscv_tempdir/dscv/ri/43_1a/drivers/mmc/host/sdricoh_cs.c.p"
-__inline static void sdricoh_writel(struct sdricoh_host *host , unsigned int reg ,
+ static void sdricoh_writel(struct sdricoh_host *host , unsigned int reg ,
                                     unsigned int value ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4344,7 +4344,7 @@ __inline static void sdricoh_writel(struct sdricoh_host *host , unsigned int reg
 }
 }
 #line 141 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17208/dscv_tempdir/dscv/ri/43_1a/drivers/mmc/host/sdricoh_cs.c.p"
-__inline static void sdricoh_writew(struct sdricoh_host *host , unsigned int reg ,
+ static void sdricoh_writew(struct sdricoh_host *host , unsigned int reg ,
                                     unsigned short value ) 
 { int __cil_tmp4 ;
   unsigned short __cil_tmp5 ;
@@ -4381,7 +4381,7 @@ __inline static void sdricoh_writew(struct sdricoh_host *host , unsigned int reg
 }
 }
 #line 148 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17208/dscv_tempdir/dscv/ri/43_1a/drivers/mmc/host/sdricoh_cs.c.p"
-__inline static unsigned int sdricoh_readb(struct sdricoh_host *host , unsigned int reg ) 
+ static unsigned int sdricoh_readb(struct sdricoh_host *host , unsigned int reg ) 
 { unsigned int value ;
   unsigned char tmp ;
   unsigned long __cil_tmp5 ;

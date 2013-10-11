@@ -2424,7 +2424,7 @@ int ldv_spin_trylock(void) ;
 #line 355 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt_types.h"
 extern struct pv_cpu_ops pv_cpu_ops ;
 #line 349 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt.h"
-__inline static void slow_down_io(void) 
+ static void slow_down_io(void) 
 { unsigned long __cil_tmp1 ;
   void (*__cil_tmp2)(void) ;
 
@@ -2446,7 +2446,7 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t * ) ;
 #line 43
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -2457,7 +2457,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -2468,7 +2468,7 @@ __inline static unsigned char inb(int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb_p(unsigned char value , int port ) 
+ static void outb_p(unsigned char value , int port ) 
 { int __cil_tmp3 ;
   unsigned char __cil_tmp4 ;
 
@@ -2488,7 +2488,7 @@ __inline static void outb_p(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb_p(int port ) 
+ static unsigned char inb_p(int port ) 
 { unsigned char value ;
   unsigned char tmp ;
 
@@ -2526,7 +2526,7 @@ extern void input_free_device(struct input_dev * ) ;
 #line 1480
 extern int input_register_device(struct input_dev * ) ;
 #line 188 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
+ static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;

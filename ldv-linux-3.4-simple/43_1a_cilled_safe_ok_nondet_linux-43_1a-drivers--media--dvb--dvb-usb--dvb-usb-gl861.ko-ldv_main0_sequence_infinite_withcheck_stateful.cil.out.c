@@ -6858,7 +6858,7 @@ extern int usb_control_msg(struct usb_device * , unsigned int  , __u8  , __u8  ,
 #line 1463
 extern int usb_set_interface(struct usb_device * , int  , int  ) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -6880,7 +6880,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 395 "include/linux/i2c.h"
-__inline static void *i2c_get_adapdata(struct i2c_adapter  const  *dev ) 
+ static void *i2c_get_adapdata(struct i2c_adapter  const  *dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;

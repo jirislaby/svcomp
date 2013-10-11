@@ -1612,9 +1612,9 @@ long __builtin_expect(long val , long res ) ;
 #line 100 "include/linux/printk.h"
 extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char readb(void const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr ) 
+ static unsigned char readb(void const volatile   *addr ) 
 { unsigned char ret ;
   unsigned char volatile   *__cil_tmp3 ;
 
@@ -1630,9 +1630,9 @@ __inline static unsigned char readb(void const volatile   *addr )
 }
 }
 #line 61
-__inline static void writeb(unsigned char val , void volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void writeb(unsigned char val , void volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 61 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writeb(unsigned char val , void volatile   *addr ) 
+ static void writeb(unsigned char val , void volatile   *addr ) 
 { unsigned char volatile   *__cil_tmp3 ;
 
   {
@@ -1673,10 +1673,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -1690,9 +1690,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -1724,9 +1724,9 @@ extern int __attribute__((__warn_unused_result__))  __pci_register_driver(struct
 #line 949
 extern void pci_unregister_driver(struct pci_driver *dev ) ;
 #line 1358
-__inline static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
+ static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -1751,9 +1751,9 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1363
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 1363 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -1854,9 +1854,9 @@ static u8 matrox_w1_read_ddc_bit(void *data ) ;
 #line 94
 static void matrox_w1_write_ddc_bit(void *data , u8 bit ) ;
 #line 107
-__inline static u8 matrox_w1_read_reg(struct matrox_device *dev , u8 reg )  __attribute__((__no_instrument_function__)) ;
+ static u8 matrox_w1_read_reg(struct matrox_device *dev , u8 reg )  __attribute__((__no_instrument_function__)) ;
 #line 107 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12371/dscv_tempdir/dscv/ri/32_1/drivers/w1/masters/matrox_w1.c.common.c"
-__inline static u8 matrox_w1_read_reg(struct matrox_device *dev , u8 reg ) 
+ static u8 matrox_w1_read_reg(struct matrox_device *dev , u8 reg ) 
 { u8 ret ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -1897,9 +1897,9 @@ __inline static u8 matrox_w1_read_reg(struct matrox_device *dev , u8 reg )
 }
 }
 #line 118
-__inline static void matrox_w1_write_reg(struct matrox_device *dev , u8 reg , u8 val )  __attribute__((__no_instrument_function__)) ;
+ static void matrox_w1_write_reg(struct matrox_device *dev , u8 reg , u8 val )  __attribute__((__no_instrument_function__)) ;
 #line 118 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12371/dscv_tempdir/dscv/ri/32_1/drivers/w1/masters/matrox_w1.c.common.c"
-__inline static void matrox_w1_write_reg(struct matrox_device *dev , u8 reg , u8 val ) 
+ static void matrox_w1_write_reg(struct matrox_device *dev , u8 reg , u8 val ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
   void *__cil_tmp6 ;

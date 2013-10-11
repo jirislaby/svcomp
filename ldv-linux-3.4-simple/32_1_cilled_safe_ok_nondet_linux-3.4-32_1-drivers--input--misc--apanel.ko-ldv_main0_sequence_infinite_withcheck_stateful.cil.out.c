@@ -3727,10 +3727,10 @@ struct apanel {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -3759,9 +3759,9 @@ extern int ( /* format attribute */  __dynamic_dev_dbg)(struct _ddebug *descript
                                                         struct device  const  *dev ,
                                                         char const   *fmt  , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -3795,9 +3795,9 @@ extern void __init_work(struct work_struct *work , int onstack ) ;
 #line 380
 extern int schedule_work(struct work_struct *work ) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char readb(void const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr ) 
+ static unsigned char readb(void const volatile   *addr ) 
 { unsigned char ret ;
   unsigned char volatile   *__cil_tmp3 ;
 
@@ -3815,9 +3815,9 @@ __inline static unsigned char readb(void const volatile   *addr )
 #line 174
 extern void *ioremap_nocache(resource_size_t offset , unsigned long size ) ;
 #line 182
-__inline static void *ioremap(resource_size_t offset , unsigned long size )  __attribute__((__no_instrument_function__)) ;
+ static void *ioremap(resource_size_t offset , unsigned long size )  __attribute__((__no_instrument_function__)) ;
 #line 182 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *ioremap(resource_size_t offset , unsigned long size ) 
+ static void *ioremap(resource_size_t offset , unsigned long size ) 
 { void *tmp ;
 
   {
@@ -3851,10 +3851,10 @@ extern int ( /* format attribute */  dev_warn)(struct device  const  *dev , char
 extern void input_event(struct input_dev *dev , unsigned int type , unsigned int code ,
                         int value ) ;
 #line 1505
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value )  __attribute__((__no_instrument_function__)) ;
 #line 1505 "include/linux/input.h"
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -3873,9 +3873,9 @@ __inline static void input_report_key(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1530
-__inline static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
+ static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {
@@ -3901,9 +3901,9 @@ extern s32 i2c_smbus_read_word_data(struct i2c_client  const  *client , u8 comma
 extern s32 i2c_smbus_write_word_data(struct i2c_client  const  *client , u8 command ,
                                      u16 value ) ;
 #line 242
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3925,9 +3925,9 @@ __inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )
 }
 }
 #line 247
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;

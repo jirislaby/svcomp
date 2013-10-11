@@ -5826,9 +5826,9 @@ extern int usb_control_msg(struct usb_device *dev , unsigned int pipe , __u8 req
                            __u8 requesttype , __u16 value , __u16 index , void *data ,
                            __u16 size , int timeout ) ;
 #line 1567
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -5858,9 +5858,9 @@ extern int usbnet_resume(struct usb_interface * ) ;
 #line 163
 extern void usbnet_disconnect(struct usb_interface * ) ;
 #line 72 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/9624/dscv_tempdir/dscv/ri/32_1/drivers/net/usb/plusb.c.common.c"
-__inline static int pl_vendor_req(struct usbnet *dev , u8 req , u8 val , u8 index )  __attribute__((__no_instrument_function__)) ;
+ static int pl_vendor_req(struct usbnet *dev , u8 req , u8 val , u8 index )  __attribute__((__no_instrument_function__)) ;
 #line 72 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/9624/dscv_tempdir/dscv/ri/32_1/drivers/net/usb/plusb.c.common.c"
-__inline static int pl_vendor_req(struct usbnet *dev , u8 req , u8 val , u8 index ) 
+ static int pl_vendor_req(struct usbnet *dev , u8 req , u8 val , u8 index ) 
 { unsigned int tmp___7 ;
   int tmp___8 ;
   struct usb_device *__cil_tmp7 ;
@@ -5916,9 +5916,9 @@ __inline static int pl_vendor_req(struct usbnet *dev , u8 req , u8 val , u8 inde
 }
 }
 #line 90
-__inline static int pl_set_QuickLink_features(struct usbnet *dev , int val )  __attribute__((__no_instrument_function__)) ;
+ static int pl_set_QuickLink_features(struct usbnet *dev , int val )  __attribute__((__no_instrument_function__)) ;
 #line 90 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/9624/dscv_tempdir/dscv/ri/32_1/drivers/net/usb/plusb.c.common.c"
-__inline static int pl_set_QuickLink_features(struct usbnet *dev , int val ) 
+ static int pl_set_QuickLink_features(struct usbnet *dev , int val ) 
 { int tmp___7 ;
   u8 __cil_tmp4 ;
   u8 __cil_tmp5 ;

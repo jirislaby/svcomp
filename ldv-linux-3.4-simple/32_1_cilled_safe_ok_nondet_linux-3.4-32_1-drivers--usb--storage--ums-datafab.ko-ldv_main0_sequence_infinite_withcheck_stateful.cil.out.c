@@ -4696,10 +4696,10 @@ struct datafab_info {
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 7 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/swab.h"
-__inline static __u32 __arch_swab32(__u32 val )  __attribute__((__no_instrument_function__,
+ static __u32 __arch_swab32(__u32 val )  __attribute__((__no_instrument_function__,
 __const__)) ;
 #line 7 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/swab.h"
-__inline static __u32 __arch_swab32(__u32 val ) 
+ static __u32 __arch_swab32(__u32 val ) 
 { 
 
   {
@@ -4710,10 +4710,10 @@ __inline static __u32 __arch_swab32(__u32 val )
 }
 }
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__,
+ static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__,
 __const__)) ;
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4744,10 +4744,10 @@ __inline static __u16 __fswab16(__u16 val )
 }
 }
 #line 55
-__inline static __u32 __fswab32(__u32 val )  __attribute__((__no_instrument_function__,
+ static __u32 __fswab32(__u32 val )  __attribute__((__no_instrument_function__,
 __const__)) ;
 #line 55 "include/linux/swab.h"
-__inline static __u32 __fswab32(__u32 val ) 
+ static __u32 __fswab32(__u32 val ) 
 { __u32 tmp ;
 
   {
@@ -4788,10 +4788,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -4805,9 +4805,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -4962,9 +4962,9 @@ static struct us_unusual_dev datafab_unusual_dev_list[10]  =
         {"Acomdata",
       "CF", (__u8 )6, (__u8 )242, (int (*)(struct us_data * ))((void *)0)}};
 #line 122
-__inline static int datafab_bulk_read(struct us_data *us , unsigned char *data , unsigned int len )  __attribute__((__no_instrument_function__)) ;
+ static int datafab_bulk_read(struct us_data *us , unsigned char *data , unsigned int len )  __attribute__((__no_instrument_function__)) ;
 #line 122 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/7659/dscv_tempdir/dscv/ri/32_1/drivers/usb/storage/datafab.c.common.c"
-__inline static int datafab_bulk_read(struct us_data *us , unsigned char *data , unsigned int len ) 
+ static int datafab_bulk_read(struct us_data *us , unsigned char *data , unsigned int len ) 
 { int tmp___7 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -5004,10 +5004,10 @@ __inline static int datafab_bulk_read(struct us_data *us , unsigned char *data ,
 }
 }
 #line 133
-__inline static int datafab_bulk_write(struct us_data *us , unsigned char *data ,
+ static int datafab_bulk_write(struct us_data *us , unsigned char *data ,
                                        unsigned int len )  __attribute__((__no_instrument_function__)) ;
 #line 133 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/7659/dscv_tempdir/dscv/ri/32_1/drivers/usb/storage/datafab.c.common.c"
-__inline static int datafab_bulk_write(struct us_data *us , unsigned char *data ,
+ static int datafab_bulk_write(struct us_data *us , unsigned char *data ,
                                        unsigned int len ) 
 { int tmp___7 ;
   unsigned long __cil_tmp5 ;

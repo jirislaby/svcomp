@@ -833,12 +833,12 @@ void __VERIFIER_atomic_end();
 
 typedef int atomic_t;
 # 34 "/ddverify-2010-04-30/models/seq1/include/asm/atomic.h"
-static __inline__ void atomic_add(int i, atomic_t *v)
+static  void atomic_add(int i, atomic_t *v)
 {
     (*v) = (*v) + i;
 }
 # 46 "/ddverify-2010-04-30/models/seq1/include/asm/atomic.h"
-static __inline__ void atomic_sub(int i, atomic_t *v)
+static  void atomic_sub(int i, atomic_t *v)
 {
     (*v) = (*v) - i;
 }
@@ -849,7 +849,7 @@ static __inline__ void atomic_sub(int i, atomic_t *v)
 
 
 
-static __inline__ void atomic_inc(atomic_t *v)
+static  void atomic_inc(atomic_t *v)
 {
     (*v)++;
 }
@@ -860,12 +860,12 @@ static __inline__ void atomic_inc(atomic_t *v)
 
 
 
-static __inline__ void atomic_dec(atomic_t *v)
+static  void atomic_dec(atomic_t *v)
 {
     (*v)--;
 }
 # 81 "/ddverify-2010-04-30/models/seq1/include/asm/atomic.h"
-static __inline__ int atomic_dec_and_test(atomic_t *v)
+static  int atomic_dec_and_test(atomic_t *v)
 {
     int ret;
 
@@ -882,7 +882,7 @@ static __inline__ int atomic_dec_and_test(atomic_t *v)
     return ret;
 }
 # 106 "/ddverify-2010-04-30/models/seq1/include/asm/atomic.h"
-static __inline__ int atomic_inc_and_test(atomic_t *v)
+static  int atomic_inc_and_test(atomic_t *v)
 {
     int ret;
 
@@ -899,7 +899,7 @@ static __inline__ int atomic_inc_and_test(atomic_t *v)
     return ret;
 }
 # 132 "/ddverify-2010-04-30/models/seq1/include/asm/atomic.h"
-static __inline__ int atomic_add_negative(int i, atomic_t *v)
+static  int atomic_add_negative(int i, atomic_t *v)
 {
    int ret;
 
@@ -916,12 +916,12 @@ static __inline__ int atomic_add_negative(int i, atomic_t *v)
     return ret;
 }
 # 156 "/ddverify-2010-04-30/models/seq1/include/asm/atomic.h"
-static __inline__ int atomic_add_return(int i, atomic_t *v)
+static  int atomic_add_return(int i, atomic_t *v)
 {
     return (*v) + i;
 }
 
-static __inline__ int atomic_sub_return(int i, atomic_t *v)
+static  int atomic_sub_return(int i, atomic_t *v)
 {
     return (*v) - i;
 }

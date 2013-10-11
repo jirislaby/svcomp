@@ -5336,7 +5336,7 @@ struct __anonstruct_282 {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long  , long  ) ;
 #line 315 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -5359,7 +5359,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
   int __cil_tmp2 ;
   int __cil_tmp3 ;
@@ -5479,7 +5479,7 @@ extern void __xchg_wrong_size(void) ;
 #line 30 "include/linux/string.h"
 extern size_t strlcpy(char * , char const   * , size_t  ) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -5507,7 +5507,7 @@ __inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const 
 }
 }
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp___0 ;
   __u32 *__cil_tmp4 ;
   unsigned long *__cil_tmp5 ;
@@ -5560,7 +5560,7 @@ extern struct module __this_module ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -5574,7 +5574,7 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -5598,7 +5598,7 @@ extern void schedule(void) ;
 #line 2112
 extern int wake_up_process(struct task_struct *tsk ) ;
 #line 2441 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp___7 ;
   void *__cil_tmp4 ;
   struct thread_info *__cil_tmp5 ;
@@ -5622,7 +5622,7 @@ extern int i2c_master_send(struct i2c_client  const  *client , char const   *buf
 #line 66
 extern int i2c_transfer(struct i2c_adapter *adap , struct i2c_msg *msgs , int num ) ;
 #line 223 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp___7 ;
   struct device  const  *__cil_tmp3 ;
 
@@ -5642,7 +5642,7 @@ extern int i2c_register_driver(struct module * , struct i2c_driver * ) ;
 #line 435
 extern void i2c_del_driver(struct i2c_driver * ) ;
 #line 437 "include/linux/i2c.h"
-__inline static int i2c_add_driver(struct i2c_driver *driver ) 
+ static int i2c_add_driver(struct i2c_driver *driver ) 
 { int tmp___7 ;
 
   {
@@ -5655,7 +5655,7 @@ __inline static int i2c_add_driver(struct i2c_driver *driver )
 }
 }
 #line 467 "include/linux/i2c.h"
-__inline static int i2c_adapter_id(struct i2c_adapter *adap ) 
+ static int i2c_adapter_id(struct i2c_adapter *adap ) 
 { 
 
   {
@@ -5672,7 +5672,7 @@ extern int kthread_stop(struct task_struct *k ) ;
 #line 37
 extern int kthread_should_stop(void) ;
 #line 21 "include/linux/freezer.h"
-__inline static int freezing(struct task_struct *p ) 
+ static int freezing(struct task_struct *p ) 
 { int tmp___7 ;
 
   {
@@ -5687,7 +5687,7 @@ __inline static int freezing(struct task_struct *p )
 #line 50
 extern void refrigerator(void) ;
 #line 54 "include/linux/freezer.h"
-__inline static int try_to_freeze(void) 
+ static int try_to_freeze(void) 
 { struct task_struct *tmp___7 ;
   int tmp___8 ;
 
@@ -5719,7 +5719,7 @@ extern int v4l2_chip_ident_i2c_client(struct i2c_client *c , struct v4l2_dbg_chi
 extern void v4l2_i2c_subdev_init(struct v4l2_subdev *sd , struct i2c_client *client ,
                                  struct v4l2_subdev_ops  const  *ops ) ;
 #line 560 "include/media/v4l2-subdev.h"
-__inline static void *v4l2_get_subdevdata(struct v4l2_subdev  const  *sd ) 
+ static void *v4l2_get_subdevdata(struct v4l2_subdev  const  *sd ) 
 { void *__cil_tmp2 ;
 
   {
@@ -5748,7 +5748,7 @@ extern struct v4l2_ctrl *v4l2_ctrl_new_std(struct v4l2_ctrl_handler *hdl , struc
 #line 363
 extern void v4l2_ctrl_cluster(unsigned int ncontrols , struct v4l2_ctrl **controls ) ;
 #line 406 "include/media/v4l2-ctrls.h"
-__inline static void v4l2_ctrl_lock(struct v4l2_ctrl *ctrl ) 
+ static void v4l2_ctrl_lock(struct v4l2_ctrl *ctrl ) 
 { struct v4l2_ctrl_handler *__cil_tmp2 ;
   struct mutex *__cil_tmp3 ;
 
@@ -5766,7 +5766,7 @@ __inline static void v4l2_ctrl_lock(struct v4l2_ctrl *ctrl )
 }
 }
 #line 415 "include/media/v4l2-ctrls.h"
-__inline static void v4l2_ctrl_unlock(struct v4l2_ctrl *ctrl ) 
+ static void v4l2_ctrl_unlock(struct v4l2_ctrl *ctrl ) 
 { struct v4l2_ctrl_handler *__cil_tmp2 ;
   struct mutex *__cil_tmp3 ;
 
@@ -5810,7 +5810,7 @@ int msp_dolby  ;
 #line 51
 int msp_stereo_thresh ;
 #line 107 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/media/video/msp3400-driver.h"
-__inline static struct msp_state *to_state(struct v4l2_subdev *sd ) 
+ static struct msp_state *to_state(struct v4l2_subdev *sd ) 
 { struct v4l2_subdev  const  *__mptr ;
   struct msp_state *__cil_tmp3 ;
   struct v4l2_subdev *__cil_tmp4 ;
@@ -5838,7 +5838,7 @@ __inline static struct msp_state *to_state(struct v4l2_subdev *sd )
 }
 }
 #line 112 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/media/video/msp3400-driver.h"
-__inline static struct msp_state *ctrl_to_state(struct v4l2_ctrl *ctrl ) 
+ static struct msp_state *ctrl_to_state(struct v4l2_ctrl *ctrl ) 
 { struct v4l2_ctrl_handler  const  *__mptr ;
   struct v4l2_ctrl_handler *__cil_tmp3 ;
   struct msp_state *__cil_tmp4 ;
@@ -10694,7 +10694,7 @@ void ldv_check_final_state(void)
 }
 }
 #line 122 "include/linux/freezer.h"
-__inline static void set_freezable(void) 
+ static void set_freezable(void) 
 { struct task_struct *tmp___7 ;
   unsigned int __cil_tmp2 ;
 

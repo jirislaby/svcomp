@@ -82,7 +82,7 @@ int isSigned(int handle ) ;
 #line 33 "ClientLib.h"
 int getClientPrivateKey(int handle ) ;
 #line 13 "SignForward_spec.c"
-__inline void __utac_acc__SignForward_spec__1(int client , int msg ) 
+ void __utac_acc__SignForward_spec__1(int client , int msg ) 
 { int tmp ;
   int tmp___0 ;
 

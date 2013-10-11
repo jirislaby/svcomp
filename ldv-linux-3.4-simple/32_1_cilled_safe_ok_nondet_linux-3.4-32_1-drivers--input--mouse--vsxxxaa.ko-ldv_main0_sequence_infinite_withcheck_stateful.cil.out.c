@@ -2209,9 +2209,9 @@ struct vsxxxaa {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 82 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void __set_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 82 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile   *addr ) 
+ static void __set_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -2259,10 +2259,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -2276,9 +2276,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -2309,10 +2309,10 @@ extern void input_unregister_device(struct input_dev * ) ;
 extern void input_event(struct input_dev *dev , unsigned int type , unsigned int code ,
                         int value ) ;
 #line 1505
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value )  __attribute__((__no_instrument_function__)) ;
 #line 1505 "include/linux/input.h"
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -2331,10 +2331,10 @@ __inline static void input_report_key(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1510
-__inline static void input_report_rel(struct input_dev *dev , unsigned int code ,
+ static void input_report_rel(struct input_dev *dev , unsigned int code ,
                                       int value )  __attribute__((__no_instrument_function__)) ;
 #line 1510 "include/linux/input.h"
-__inline static void input_report_rel(struct input_dev *dev , unsigned int code ,
+ static void input_report_rel(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { 
 
@@ -2348,10 +2348,10 @@ __inline static void input_report_rel(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1515
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value )  __attribute__((__no_instrument_function__)) ;
 #line 1515 "include/linux/input.h"
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { 
 
@@ -2365,9 +2365,9 @@ __inline static void input_report_abs(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1530
-__inline static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
+ static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {
@@ -2393,9 +2393,9 @@ extern int __attribute__((__warn_unused_result__))  __serio_register_driver(stru
 #line 97
 extern void serio_unregister_driver(struct serio_driver *drv ) ;
 #line 99
-__inline static int serio_write(struct serio *serio , unsigned char data )  __attribute__((__no_instrument_function__)) ;
+ static int serio_write(struct serio *serio , unsigned char data )  __attribute__((__no_instrument_function__)) ;
 #line 99 "include/linux/serio.h"
-__inline static int serio_write(struct serio *serio , unsigned char data ) 
+ static int serio_write(struct serio *serio , unsigned char data ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -2431,9 +2431,9 @@ __inline static int serio_write(struct serio *serio , unsigned char data )
 }
 }
 #line 117
-__inline static void *serio_get_drvdata(struct serio *serio )  __attribute__((__no_instrument_function__)) ;
+ static void *serio_get_drvdata(struct serio *serio )  __attribute__((__no_instrument_function__)) ;
 #line 117 "include/linux/serio.h"
-__inline static void *serio_get_drvdata(struct serio *serio ) 
+ static void *serio_get_drvdata(struct serio *serio ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2458,9 +2458,9 @@ __inline static void *serio_get_drvdata(struct serio *serio )
 }
 }
 #line 122
-__inline static void serio_set_drvdata(struct serio *serio , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void serio_set_drvdata(struct serio *serio , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 122 "include/linux/serio.h"
-__inline static void serio_set_drvdata(struct serio *serio , void *data ) 
+ static void serio_set_drvdata(struct serio *serio , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -3044,10 +3044,10 @@ static int vsxxxaa_check_packet(struct vsxxxaa *mouse , int packet_len )
 }
 }
 #line 204
-__inline static int vsxxxaa_smells_like_packet(struct vsxxxaa *mouse , unsigned char type ,
+ static int vsxxxaa_smells_like_packet(struct vsxxxaa *mouse , unsigned char type ,
                                                size_t len )  __attribute__((__no_instrument_function__)) ;
 #line 204 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/4049/dscv_tempdir/dscv/ri/32_1/drivers/input/mouse/vsxxxaa.c.common.c"
-__inline static int vsxxxaa_smells_like_packet(struct vsxxxaa *mouse , unsigned char type ,
+ static int vsxxxaa_smells_like_packet(struct vsxxxaa *mouse , unsigned char type ,
                                                size_t len ) 
 { int tmp ;
   unsigned long __cil_tmp5 ;

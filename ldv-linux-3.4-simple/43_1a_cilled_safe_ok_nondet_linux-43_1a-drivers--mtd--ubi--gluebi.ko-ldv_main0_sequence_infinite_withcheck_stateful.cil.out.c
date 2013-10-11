@@ -2526,7 +2526,7 @@ extern int printk(char const   *  , ...) ;
 #line 47 "include/linux/list.h"
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -2553,7 +2553,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void) 
+ static struct task_struct *get_current(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -2620,7 +2620,7 @@ __inline static struct task_struct *get_current(void)
 #line 121 "include/linux/string.h"
 extern void *kmemdup(void const   * , size_t  , gfp_t  ) ;
 #line 17 "include/linux/math64.h"
-__inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder ) 
+ static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder ) 
 { u64 __cil_tmp4 ;
   unsigned long long __cil_tmp5 ;
   u64 __cil_tmp6 ;
@@ -2641,7 +2641,7 @@ __inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder )
 }
 }
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2650,7 +2650,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2688,7 +2688,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11691/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/ubi/gluebi.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2715,7 +2715,7 @@ extern int ubi_leb_erase(struct ubi_volume_desc * , int  ) ;
 #line 215
 extern int ubi_leb_unmap(struct ubi_volume_desc * , int  ) ;
 #line 224 "include/linux/mtd/ubi.h"
-__inline static int ubi_read(struct ubi_volume_desc *desc , int lnum , char *buf ,
+ static int ubi_read(struct ubi_volume_desc *desc , int lnum , char *buf ,
                              int offset , int len ) 
 { int tmp ;
 
@@ -2729,7 +2729,7 @@ __inline static int ubi_read(struct ubi_volume_desc *desc , int lnum , char *buf
 }
 }
 #line 234 "include/linux/mtd/ubi.h"
-__inline static int ubi_write(struct ubi_volume_desc *desc , int lnum , void const   *buf ,
+ static int ubi_write(struct ubi_volume_desc *desc , int lnum , void const   *buf ,
                               int offset , int len ) 
 { int tmp ;
 
@@ -2743,7 +2743,7 @@ __inline static int ubi_write(struct ubi_volume_desc *desc , int lnum , void con
 }
 }
 #line 317 "include/linux/mtd/mtd.h"
-__inline static uint32_t mtd_div_by_eb(uint64_t sz , struct mtd_info *mtd ) 
+ static uint32_t mtd_div_by_eb(uint64_t sz , struct mtd_info *mtd ) 
 { uint32_t __base ;
   uint32_t __rem ;
   unsigned long __cil_tmp5 ;
@@ -2809,7 +2809,7 @@ __inline static uint32_t mtd_div_by_eb(uint64_t sz , struct mtd_info *mtd )
 }
 }
 #line 340 "include/linux/mtd/mtd.h"
-__inline static uint32_t mtd_mod_by_ws(uint64_t sz , struct mtd_info *mtd ) 
+ static uint32_t mtd_mod_by_ws(uint64_t sz , struct mtd_info *mtd ) 
 { uint32_t __base ;
   uint32_t __rem ;
   unsigned long __cil_tmp5 ;
@@ -5239,7 +5239,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 927 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11691/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/ubi/gluebi.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

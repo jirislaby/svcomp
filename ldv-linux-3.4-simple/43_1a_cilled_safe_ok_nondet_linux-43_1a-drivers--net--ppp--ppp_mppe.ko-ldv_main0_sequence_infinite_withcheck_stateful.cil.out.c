@@ -918,7 +918,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   short __cil_tmp4 ;
@@ -965,7 +965,7 @@ extern void *__memcpy(void * , void const   * , size_t  ) ;
 #line 55
 extern void *memset(void * , int  , size_t  ) ;
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -997,7 +997,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -1010,9 +1010,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/15265/dscv_tempdir/dscv/ri/43_1a/drivers/net/ppp/ppp_mppe.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -1026,7 +1026,7 @@ extern int crypto_has_alg(char const   * , u32  , u32  ) ;
 #line 492
 extern struct crypto_tfm *crypto_alloc_base(char const   * , u32  , u32  ) ;
 #line 495 "include/linux/crypto.h"
-__inline static void crypto_free_tfm(struct crypto_tfm *tfm ) 
+ static void crypto_free_tfm(struct crypto_tfm *tfm ) 
 { 
 
   {
@@ -1035,7 +1035,7 @@ __inline static void crypto_free_tfm(struct crypto_tfm *tfm )
 }
 }
 #line 871 "include/linux/crypto.h"
-__inline static struct crypto_blkcipher *__crypto_blkcipher_cast(struct crypto_tfm *tfm ) 
+ static struct crypto_blkcipher *__crypto_blkcipher_cast(struct crypto_tfm *tfm ) 
 { 
 
   {
@@ -1044,7 +1044,7 @@ __inline static struct crypto_blkcipher *__crypto_blkcipher_cast(struct crypto_t
 }
 }
 #line 884 "include/linux/crypto.h"
-__inline static struct crypto_blkcipher *crypto_alloc_blkcipher(char const   *alg_name ,
+ static struct crypto_blkcipher *crypto_alloc_blkcipher(char const   *alg_name ,
                                                                 u32 type , u32 mask ) 
 { struct crypto_tfm *tmp ;
   struct crypto_blkcipher *tmp___0 ;
@@ -1067,7 +1067,7 @@ __inline static struct crypto_blkcipher *crypto_alloc_blkcipher(char const   *al
 }
 }
 #line 894 "include/linux/crypto.h"
-__inline static struct crypto_tfm *crypto_blkcipher_tfm(struct crypto_blkcipher *tfm ) 
+ static struct crypto_tfm *crypto_blkcipher_tfm(struct crypto_blkcipher *tfm ) 
 { 
 
   {
@@ -1076,7 +1076,7 @@ __inline static struct crypto_tfm *crypto_blkcipher_tfm(struct crypto_blkcipher 
 }
 }
 #line 900 "include/linux/crypto.h"
-__inline static void crypto_free_blkcipher(struct crypto_blkcipher *tfm ) 
+ static void crypto_free_blkcipher(struct crypto_blkcipher *tfm ) 
 { struct crypto_tfm *tmp ;
 
   {
@@ -1091,7 +1091,7 @@ __inline static void crypto_free_blkcipher(struct crypto_blkcipher *tfm )
 }
 }
 #line 905 "include/linux/crypto.h"
-__inline static int crypto_has_blkcipher(char const   *alg_name , u32 type , u32 mask ) 
+ static int crypto_has_blkcipher(char const   *alg_name , u32 type , u32 mask ) 
 { int tmp ;
 
   {
@@ -1110,7 +1110,7 @@ __inline static int crypto_has_blkcipher(char const   *alg_name , u32 type , u32
 }
 }
 #line 919 "include/linux/crypto.h"
-__inline static struct blkcipher_tfm *crypto_blkcipher_crt(struct crypto_blkcipher *tfm ) 
+ static struct blkcipher_tfm *crypto_blkcipher_crt(struct crypto_blkcipher *tfm ) 
 { struct crypto_tfm *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -1131,7 +1131,7 @@ __inline static struct blkcipher_tfm *crypto_blkcipher_crt(struct crypto_blkciph
 }
 }
 #line 965 "include/linux/crypto.h"
-__inline static int crypto_blkcipher_setkey(struct crypto_blkcipher *tfm , u8 const   *key ,
+ static int crypto_blkcipher_setkey(struct crypto_blkcipher *tfm , u8 const   *key ,
                                             unsigned int keylen ) 
 { struct blkcipher_tfm *tmp ;
   struct crypto_tfm *tmp___0 ;
@@ -1160,7 +1160,7 @@ __inline static int crypto_blkcipher_setkey(struct crypto_blkcipher *tfm , u8 co
 }
 }
 #line 972 "include/linux/crypto.h"
-__inline static int crypto_blkcipher_encrypt(struct blkcipher_desc *desc , struct scatterlist *dst ,
+ static int crypto_blkcipher_encrypt(struct blkcipher_desc *desc , struct scatterlist *dst ,
                                              struct scatterlist *src , unsigned int nbytes ) 
 { struct blkcipher_tfm *tmp ;
   struct blkcipher_tfm *tmp___0 ;
@@ -1205,7 +1205,7 @@ __inline static int crypto_blkcipher_encrypt(struct blkcipher_desc *desc , struc
 }
 }
 #line 989 "include/linux/crypto.h"
-__inline static int crypto_blkcipher_decrypt(struct blkcipher_desc *desc , struct scatterlist *dst ,
+ static int crypto_blkcipher_decrypt(struct blkcipher_desc *desc , struct scatterlist *dst ,
                                              struct scatterlist *src , unsigned int nbytes ) 
 { struct blkcipher_tfm *tmp ;
   struct blkcipher_tfm *tmp___0 ;
@@ -1250,7 +1250,7 @@ __inline static int crypto_blkcipher_decrypt(struct blkcipher_desc *desc , struc
 }
 }
 #line 1111 "include/linux/crypto.h"
-__inline static struct crypto_hash *__crypto_hash_cast(struct crypto_tfm *tfm ) 
+ static struct crypto_hash *__crypto_hash_cast(struct crypto_tfm *tfm ) 
 { 
 
   {
@@ -1259,7 +1259,7 @@ __inline static struct crypto_hash *__crypto_hash_cast(struct crypto_tfm *tfm )
 }
 }
 #line 1123 "include/linux/crypto.h"
-__inline static struct crypto_hash *crypto_alloc_hash(char const   *alg_name , u32 type ,
+ static struct crypto_hash *crypto_alloc_hash(char const   *alg_name , u32 type ,
                                                       u32 mask ) 
 { struct crypto_tfm *tmp ;
   struct crypto_hash *tmp___0 ;
@@ -1284,7 +1284,7 @@ __inline static struct crypto_hash *crypto_alloc_hash(char const   *alg_name , u
 }
 }
 #line 1134 "include/linux/crypto.h"
-__inline static struct crypto_tfm *crypto_hash_tfm(struct crypto_hash *tfm ) 
+ static struct crypto_tfm *crypto_hash_tfm(struct crypto_hash *tfm ) 
 { 
 
   {
@@ -1293,7 +1293,7 @@ __inline static struct crypto_tfm *crypto_hash_tfm(struct crypto_hash *tfm )
 }
 }
 #line 1139 "include/linux/crypto.h"
-__inline static void crypto_free_hash(struct crypto_hash *tfm ) 
+ static void crypto_free_hash(struct crypto_hash *tfm ) 
 { struct crypto_tfm *tmp ;
 
   {
@@ -1308,7 +1308,7 @@ __inline static void crypto_free_hash(struct crypto_hash *tfm )
 }
 }
 #line 1144 "include/linux/crypto.h"
-__inline static int crypto_has_hash(char const   *alg_name , u32 type , u32 mask ) 
+ static int crypto_has_hash(char const   *alg_name , u32 type , u32 mask ) 
 { int tmp ;
 
   {
@@ -1329,7 +1329,7 @@ __inline static int crypto_has_hash(char const   *alg_name , u32 type , u32 mask
 }
 }
 #line 1154 "include/linux/crypto.h"
-__inline static struct hash_tfm *crypto_hash_crt(struct crypto_hash *tfm ) 
+ static struct hash_tfm *crypto_hash_crt(struct crypto_hash *tfm ) 
 { struct crypto_tfm *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -1350,7 +1350,7 @@ __inline static struct hash_tfm *crypto_hash_crt(struct crypto_hash *tfm )
 }
 }
 #line 1169 "include/linux/crypto.h"
-__inline static unsigned int crypto_hash_digestsize(struct crypto_hash *tfm ) 
+ static unsigned int crypto_hash_digestsize(struct crypto_hash *tfm ) 
 { struct hash_tfm *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -1371,7 +1371,7 @@ __inline static unsigned int crypto_hash_digestsize(struct crypto_hash *tfm )
 }
 }
 #line 1206 "include/linux/crypto.h"
-__inline static int crypto_hash_digest(struct hash_desc *desc , struct scatterlist *sg ,
+ static int crypto_hash_digest(struct hash_desc *desc , struct scatterlist *sg ,
                                        unsigned int nbytes , u8 *out ) 
 { struct hash_tfm *tmp ;
   int tmp___0 ;
@@ -1405,7 +1405,7 @@ extern int ppp_register_compressor(struct compressor * ) ;
 #line 181
 extern void ppp_unregister_compressor(struct compressor * ) ;
 #line 57 "include/linux/scatterlist.h"
-__inline static void sg_assign_page(struct scatterlist *sg , struct page *page ) 
+ static void sg_assign_page(struct scatterlist *sg , struct page *page ) 
 { unsigned long page_link ;
   long tmp ;
   long tmp___0 ;
@@ -1523,7 +1523,7 @@ __inline static void sg_assign_page(struct scatterlist *sg , struct page *page )
 }
 }
 #line 87 "include/linux/scatterlist.h"
-__inline static void sg_set_page(struct scatterlist *sg , struct page *page , unsigned int len ,
+ static void sg_set_page(struct scatterlist *sg , struct page *page , unsigned int len ,
                                  unsigned int offset ) 
 { unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -1552,7 +1552,7 @@ __inline static void sg_set_page(struct scatterlist *sg , struct page *page , un
 }
 }
 #line 111 "include/linux/scatterlist.h"
-__inline static void sg_set_buf(struct scatterlist *sg , void const   *buf , unsigned int buflen ) 
+ static void sg_set_buf(struct scatterlist *sg , void const   *buf , unsigned int buflen ) 
 { unsigned long tmp ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -1590,7 +1590,7 @@ __inline static void sg_set_buf(struct scatterlist *sg , void const   *buf , uns
 #line 206
 extern void sg_init_table(struct scatterlist * , unsigned int  ) ;
 #line 52 "include/linux/unaligned/access_ok.h"
-__inline static void put_unaligned_be16(u16 val , void *p ) 
+ static void put_unaligned_be16(u16 val , void *p ) 
 { __u16 tmp ;
   int __cil_tmp4 ;
   __u16 __cil_tmp5 ;
@@ -1629,7 +1629,7 @@ static unsigned int setup_sg(struct scatterlist *sg , void const   *address , un
 #line 101 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/15265/dscv_tempdir/dscv/ri/43_1a/drivers/net/ppp/ppp_mppe.c.p"
 static struct sha_pad *sha_pad  ;
 #line 103 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/15265/dscv_tempdir/dscv/ri/43_1a/drivers/net/ppp/ppp_mppe.c.p"
-__inline static void sha_pad_init(struct sha_pad *shapad ) 
+ static void sha_pad_init(struct sha_pad *shapad ) 
 { unsigned char (*__cil_tmp2)[40U] ;
   void *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5380,7 +5380,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1580 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/15265/dscv_tempdir/dscv/ri/43_1a/drivers/net/ppp/ppp_mppe.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -5410,7 +5410,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1636 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/15265/dscv_tempdir/dscv/ri/43_1a/drivers/net/ppp/ppp_mppe.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

@@ -5684,9 +5684,9 @@ long __builtin_expect(long val , long res ) ;
 #line 14 "include/linux/file.h"
 extern void fput(struct file * ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -5706,9 +5706,9 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 74
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -5731,9 +5731,9 @@ __inline static void list_add_tail(struct list_head *new , struct list_head *hea
 #line 111
 extern void __list_del_entry(struct list_head *entry ) ;
 #line 142
-__inline static void list_del_init(struct list_head *entry )  __attribute__((__no_instrument_function__)) ;
+ static void list_del_init(struct list_head *entry )  __attribute__((__no_instrument_function__)) ;
 #line 142 "include/linux/list.h"
-__inline static void list_del_init(struct list_head *entry ) 
+ static void list_del_init(struct list_head *entry ) 
 { 
 
   {
@@ -5748,9 +5748,9 @@ __inline static void list_del_init(struct list_head *entry )
 }
 }
 #line 186
-__inline static int list_empty(struct list_head    *head )  __attribute__((__no_instrument_function__)) ;
+ static int list_empty(struct list_head    *head )  __attribute__((__no_instrument_function__)) ;
 #line 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head    *head ) 
+ static int list_empty(struct list_head    *head ) 
 { unsigned long __cil_tmp2 ;
   struct list_head *   __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5769,10 +5769,10 @@ __inline static int list_empty(struct list_head    *head )
 }
 }
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -5792,9 +5792,9 @@ __inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int 
 }
 }
 #line 315
-__inline static int variable_test_bit(int nr , unsigned long  volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static int variable_test_bit(int nr , unsigned long  volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long  volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long  volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -5814,9 +5814,9 @@ extern int ( /* format attribute */  __dynamic_pr_debug)(struct _ddebug *descrip
 #line 147 "include/linux/kernel.h"
 extern void __might_sleep(char    *file , int line , int preempt_offset ) ;
 #line 194
-__inline static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
+ static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
 #line 194 "include/linux/kernel.h"
-__inline static void might_fault(void) 
+ static void might_fault(void) 
 { 
 
   {
@@ -5851,9 +5851,9 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -5950,9 +5950,9 @@ extern void ( /* format attribute */  warn_slowpath_fmt)(char    *file , int    
 #line 70
 extern void warn_slowpath_null(char    *file , int    line ) ;
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )  __attribute__((__no_instrument_function__)) ;
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )  __attribute__((__no_instrument_function__)) ;
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
 { 
 
   {
@@ -5961,9 +5961,9 @@ __inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long erro
 }
 }
 #line 27
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr ) 
 { 
 
   {
@@ -5972,9 +5972,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *p
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -6004,9 +6004,9 @@ __inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *pt
 #line 11 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/cmpxchg.h"
 extern void __xchg_wrong_size(void) ;
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t    *v )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_read(atomic_t    *v )  __attribute__((__no_instrument_function__)) ;
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t    *v ) 
+ static int atomic_read(atomic_t    *v ) 
 { int    *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -6025,9 +6025,9 @@ __inline static int atomic_read(atomic_t    *v )
 }
 }
 #line 35
-__inline static void atomic_set(atomic_t *v , int i )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_set(atomic_t *v , int i )  __attribute__((__no_instrument_function__)) ;
 #line 35 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i ) 
+ static void atomic_set(atomic_t *v , int i ) 
 { 
 
   {
@@ -6038,9 +6038,9 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 #line 77
-__inline static int atomic_sub_and_test(int i , atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_sub_and_test(int i , atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 77 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_sub_and_test(int i , atomic_t *v ) 
+ static int atomic_sub_and_test(int i , atomic_t *v ) 
 { unsigned char c ;
 
   {
@@ -6059,9 +6059,9 @@ __inline static int atomic_sub_and_test(int i , atomic_t *v )
 #line 220 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
 extern unsigned long kernel_stack  __attribute__((__section__(".data..percpu"))) ;
 #line 222
-__inline static struct thread_info *current_thread_info(void)  __attribute__((__no_instrument_function__)) ;
+ static struct thread_info *current_thread_info(void)  __attribute__((__no_instrument_function__)) ;
 #line 222 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
-__inline static struct thread_info *current_thread_info(void) 
+ static struct thread_info *current_thread_info(void) 
 { struct thread_info *ti ;
   unsigned long pfo_ret__ ;
   unsigned long __cil_tmp3 ;
@@ -6171,9 +6171,9 @@ __inline static struct thread_info *current_thread_info(void)
 }
 }
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp___0 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -6211,9 +6211,9 @@ extern void _raw_spin_unlock_irq(raw_spinlock_t *lock )  __attribute__((__sectio
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -6222,9 +6222,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 308
-__inline static void spin_lock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 308 "include/linux/spinlock.h"
-__inline static void spin_lock_irq(spinlock_t *lock ) 
+ static void spin_lock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -6239,9 +6239,9 @@ __inline static void spin_lock_irq(spinlock_t *lock )
 }
 }
 #line 333
-__inline static void spin_unlock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 333 "include/linux/spinlock.h"
-__inline static void spin_unlock_irq(spinlock_t *lock ) 
+ static void spin_unlock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -6256,9 +6256,9 @@ __inline static void spin_unlock_irq(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -6284,12 +6284,12 @@ __inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long fla
 #line 79 "include/linux/wait.h"
 extern void __init_waitqueue_head(wait_queue_head_t *q , char    *name , struct lock_class_key * ) ;
 #line 104
-__inline static void init_waitqueue_func_entry(wait_queue_t *q , int (*func)(wait_queue_t *wait ,
+ static void init_waitqueue_func_entry(wait_queue_t *q , int (*func)(wait_queue_t *wait ,
                                                                              unsigned int mode ,
                                                                              int flags ,
                                                                              void *key ) )  __attribute__((__no_instrument_function__)) ;
 #line 104 "include/linux/wait.h"
-__inline static void init_waitqueue_func_entry(wait_queue_t *q , int (*func)(wait_queue_t *wait ,
+ static void init_waitqueue_func_entry(wait_queue_t *q , int (*func)(wait_queue_t *wait ,
                                                                              unsigned int mode ,
                                                                              int flags ,
                                                                              void *key ) ) 
@@ -6355,9 +6355,9 @@ int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 144 "include/linux/rcupdate.h"
 extern void synchronize_sched(void) ;
 #line 162
-__inline static void __rcu_read_lock(void)  __attribute__((__no_instrument_function__)) ;
+ static void __rcu_read_lock(void)  __attribute__((__no_instrument_function__)) ;
 #line 162 "include/linux/rcupdate.h"
-__inline static void __rcu_read_lock(void) 
+ static void __rcu_read_lock(void) 
 { struct thread_info *tmp ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -6407,9 +6407,9 @@ __inline static void __rcu_read_lock(void)
 }
 }
 #line 167
-__inline static void __rcu_read_unlock(void)  __attribute__((__no_instrument_function__)) ;
+ static void __rcu_read_unlock(void)  __attribute__((__no_instrument_function__)) ;
 #line 167 "include/linux/rcupdate.h"
-__inline static void __rcu_read_unlock(void) 
+ static void __rcu_read_unlock(void) 
 { struct thread_info *tmp ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -6479,9 +6479,9 @@ __inline static void __rcu_read_unlock(void)
 }
 }
 #line 172
-__inline static void synchronize_rcu(void)  __attribute__((__no_instrument_function__)) ;
+ static void synchronize_rcu(void)  __attribute__((__no_instrument_function__)) ;
 #line 172 "include/linux/rcupdate.h"
-__inline static void synchronize_rcu(void) 
+ static void synchronize_rcu(void) 
 { 
 
   {
@@ -6494,9 +6494,9 @@ __inline static void synchronize_rcu(void)
 }
 }
 #line 723
-__inline static void rcu_read_lock(void)  __attribute__((__no_instrument_function__)) ;
+ static void rcu_read_lock(void)  __attribute__((__no_instrument_function__)) ;
 #line 723 "include/linux/rcupdate.h"
-__inline static void rcu_read_lock(void) 
+ static void rcu_read_lock(void) 
 { 
 
   {
@@ -6527,9 +6527,9 @@ __inline static void rcu_read_lock(void)
 }
 }
 #line 747
-__inline static void rcu_read_unlock(void)  __attribute__((__no_instrument_function__)) ;
+ static void rcu_read_unlock(void)  __attribute__((__no_instrument_function__)) ;
 #line 747 "include/linux/rcupdate.h"
-__inline static void rcu_read_unlock(void) 
+ static void rcu_read_unlock(void) 
 { 
 
   {
@@ -6562,9 +6562,9 @@ __inline static void rcu_read_unlock(void)
 #line 450 "include/linux/mm.h"
 extern void put_page(struct page *page ) ;
 #line 737
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page )  __attribute__((__no_instrument_function__)) ;
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page )  __attribute__((__no_instrument_function__)) ;
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page ) 
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page ) 
 { struct page *__cil_tmp2 ;
   struct page    *__cil_tmp3 ;
   int __cil_tmp4 ;
@@ -6602,9 +6602,9 @@ extern int get_user_pages_fast(unsigned long start , int nr_pages , int write , 
 #line 1013
 extern int set_page_dirty_lock(struct page *page ) ;
 #line 30 "include/linux/kref.h"
-__inline static void kref_init(struct kref *kref )  __attribute__((__no_instrument_function__)) ;
+ static void kref_init(struct kref *kref )  __attribute__((__no_instrument_function__)) ;
 #line 30 "include/linux/kref.h"
-__inline static void kref_init(struct kref *kref ) 
+ static void kref_init(struct kref *kref ) 
 { atomic_t *__cil_tmp2 ;
 
   {
@@ -6619,9 +6619,9 @@ __inline static void kref_init(struct kref *kref )
 }
 }
 #line 63
-__inline static int kref_sub(struct kref *kref , unsigned int count , void (*release)(struct kref *kref ) )  __attribute__((__no_instrument_function__)) ;
+ static int kref_sub(struct kref *kref , unsigned int count , void (*release)(struct kref *kref ) )  __attribute__((__no_instrument_function__)) ;
 #line 63 "include/linux/kref.h"
-__inline static int kref_sub(struct kref *kref , unsigned int count , void (*release)(struct kref *kref ) ) 
+ static int kref_sub(struct kref *kref , unsigned int count , void (*release)(struct kref *kref ) ) 
 { int __ret_warn_on ;
   long tmp ;
   int tmp___0 ;
@@ -6706,9 +6706,9 @@ __inline static int kref_sub(struct kref *kref , unsigned int count , void (*rel
 }
 }
 #line 92
-__inline static int kref_put(struct kref *kref , void (*release)(struct kref *kref ) )  __attribute__((__no_instrument_function__)) ;
+ static int kref_put(struct kref *kref , void (*release)(struct kref *kref ) )  __attribute__((__no_instrument_function__)) ;
 #line 92 "include/linux/kref.h"
-__inline static int kref_put(struct kref *kref , void (*release)(struct kref *kref ) ) 
+ static int kref_put(struct kref *kref , void (*release)(struct kref *kref ) ) 
 { int tmp ;
 
   {
@@ -6721,9 +6721,9 @@ __inline static int kref_put(struct kref *kref , void (*release)(struct kref *kr
 }
 }
 #line 153 "include/linux/virtio_ring.h"
-__inline static int vring_need_event(__u16 event_idx , __u16 new_idx , __u16 old )  __attribute__((__no_instrument_function__)) ;
+ static int vring_need_event(__u16 event_idx , __u16 new_idx , __u16 old )  __attribute__((__no_instrument_function__)) ;
 #line 153 "include/linux/virtio_ring.h"
-__inline static int vring_need_event(__u16 event_idx , __u16 new_idx , __u16 old ) 
+ static int vring_need_event(__u16 event_idx , __u16 new_idx , __u16 old ) 
 { int __cil_tmp4 ;
   int __cil_tmp5 ;
   int __cil_tmp6 ;
@@ -6772,10 +6772,10 @@ extern void kfree(void    * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -6801,11 +6801,11 @@ extern unsigned long __attribute__((__warn_unused_result__))  copy_user_generic_
                                                                                          void    *from ,
                                                                                          unsigned int len ) ;
 #line 24
-__inline static unsigned long __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_user_generic)(void *to ,
+ static unsigned long __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_user_generic)(void *to ,
                                                                                                                                void    *from ,
                                                                                                                                unsigned int len )  __attribute__((__no_instrument_function__)) ;
 #line 24 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_user_generic)(void *to ,
+ static unsigned long __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_user_generic)(void *to ,
                                                                                                                                void    *from ,
                                                                                                                                unsigned int len ) 
 { unsigned int ret ;
@@ -6847,11 +6847,11 @@ extern unsigned long __attribute__((__warn_unused_result__))  _copy_from_user(vo
                                                                               void    *from ,
                                                                               unsigned int len ) ;
 #line 46
-__inline static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
+ static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
                                                                                       void    *from ,
                                                                                       unsigned long n )  __attribute__((__no_instrument_function__)) ;
 #line 46 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
+ static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
                                                                                       void    *from ,
                                                                                       unsigned long n ) 
 { int sz ;
@@ -6953,11 +6953,11 @@ __inline static unsigned long __attribute__((__warn_unused_result__))  copy_from
 }
 }
 #line 62
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void    *src ,
                                                                                                                 unsigned int size )  __attribute__((__no_instrument_function__)) ;
 #line 62 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void    *src ,
                                                                                                                 unsigned int size ) 
 { unsigned long tmp ;
@@ -6974,11 +6974,11 @@ __inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__
 }
 }
 #line 70
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) __copy_from_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) __copy_from_user)(void *dst ,
                                                                                                                     void    *src ,
                                                                                                                     unsigned int size )  __attribute__((__no_instrument_function__)) ;
 #line 70 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) __copy_from_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) __copy_from_user)(void *dst ,
                                                                                                                     void    *src ,
                                                                                                                     unsigned int size ) 
 { int ret ;
@@ -7470,11 +7470,11 @@ __inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__
 }
 }
 #line 114
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) __copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) __copy_to_user)(void *dst ,
                                                                                                                   void    *src ,
                                                                                                                   unsigned int size )  __attribute__((__no_instrument_function__)) ;
 #line 114 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) __copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) __copy_to_user)(void *dst ,
                                                                                                                   void    *src ,
                                                                                                                   unsigned int size ) 
 { int ret ;
@@ -7894,11 +7894,11 @@ extern void use_mm(struct mm_struct *mm ) ;
 #line 7
 extern void unuse_mm(struct mm_struct *mm ) ;
 #line 71 "include/linux/poll.h"
-__inline static void init_poll_funcptr(poll_table *pt , void (*qproc)(struct file * ,
+ static void init_poll_funcptr(poll_table *pt , void (*qproc)(struct file * ,
                                                                       wait_queue_head_t * ,
                                                                       struct poll_table_struct * ) )  __attribute__((__no_instrument_function__)) ;
 #line 71 "include/linux/poll.h"
-__inline static void init_poll_funcptr(poll_table *pt , void (*qproc)(struct file * ,
+ static void init_poll_funcptr(poll_table *pt , void (*qproc)(struct file * ,
                                                                       wait_queue_head_t * ,
                                                                       struct poll_table_struct * ) ) 
 { unsigned long __cil_tmp3 ;
@@ -7918,9 +7918,9 @@ __inline static void init_poll_funcptr(poll_table *pt , void (*qproc)(struct fil
 }
 }
 #line 16 "include/linux/uaccess.h"
-__inline static void pagefault_disable(void)  __attribute__((__no_instrument_function__)) ;
+ static void pagefault_disable(void)  __attribute__((__no_instrument_function__)) ;
 #line 16 "include/linux/uaccess.h"
-__inline static void pagefault_disable(void) 
+ static void pagefault_disable(void) 
 { struct thread_info *tmp ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -7961,9 +7961,9 @@ __inline static void pagefault_disable(void)
 }
 }
 #line 26
-__inline static void pagefault_enable(void)  __attribute__((__no_instrument_function__)) ;
+ static void pagefault_enable(void)  __attribute__((__no_instrument_function__)) ;
 #line 26 "include/linux/uaccess.h"
-__inline static void pagefault_enable(void) 
+ static void pagefault_enable(void) 
 { struct thread_info *tmp ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -8015,9 +8015,9 @@ __inline static void pagefault_enable(void)
 }
 }
 #line 59 "include/linux/highmem.h"
-__inline static void *kmap_atomic(struct page *page )  __attribute__((__no_instrument_function__)) ;
+ static void *kmap_atomic(struct page *page )  __attribute__((__no_instrument_function__)) ;
 #line 59 "include/linux/highmem.h"
-__inline static void *kmap_atomic(struct page *page ) 
+ static void *kmap_atomic(struct page *page ) 
 { void *tmp ;
   struct page    *__cil_tmp3 ;
 
@@ -8035,9 +8035,9 @@ __inline static void *kmap_atomic(struct page *page )
 }
 }
 #line 66
-__inline static void __kunmap_atomic(void *addr )  __attribute__((__no_instrument_function__)) ;
+ static void __kunmap_atomic(void *addr )  __attribute__((__no_instrument_function__)) ;
 #line 66 "include/linux/highmem.h"
-__inline static void __kunmap_atomic(void *addr ) 
+ static void __kunmap_atomic(void *addr ) 
 { 
 
   {
@@ -8058,9 +8058,9 @@ extern void mmput(struct mm_struct * ) ;
 #line 2294
 extern struct mm_struct *get_task_mm(struct task_struct *task ) ;
 #line 2614
-__inline static int need_resched(void)  __attribute__((__no_instrument_function__)) ;
+ static int need_resched(void)  __attribute__((__no_instrument_function__)) ;
 #line 2614 "include/linux/sched.h"
-__inline static int need_resched(void) 
+ static int need_resched(void) 
 { struct thread_info *tmp___7 ;
   int tmp___8 ;
   int tmp___9 ;
@@ -8168,9 +8168,9 @@ void vhost_zerocopy_callback(struct ubuf_info *ubuf ) ;
 #line 192
 int vhost_zerocopy_signal_used(struct vhost_virtqueue *vq ) ;
 #line 209
-__inline static int vhost_has_feature(struct vhost_dev *dev , int bit )  __attribute__((__no_instrument_function__)) ;
+ static int vhost_has_feature(struct vhost_dev *dev , int bit )  __attribute__((__no_instrument_function__)) ;
 #line 209 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/vhost/vhost.h"
-__inline static int vhost_has_feature(struct vhost_dev *dev , int bit ) 
+ static int vhost_has_feature(struct vhost_dev *dev , int bit ) 
 { unsigned int acked_features ;
   unsigned int _________p1 ;
   unsigned long __cil_tmp5 ;
@@ -8927,9 +8927,9 @@ void vhost_poll_flush(struct vhost_poll *poll )
 }
 }
 #line 140
-__inline static void vhost_work_queue(struct vhost_dev *dev , struct vhost_work *work )  __attribute__((__no_instrument_function__)) ;
+ static void vhost_work_queue(struct vhost_dev *dev , struct vhost_work *work )  __attribute__((__no_instrument_function__)) ;
 #line 140 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/51/dscv_tempdir/dscv/ri/32_1/drivers/vhost/vhost.c.common.c"
-__inline static void vhost_work_queue(struct vhost_dev *dev , struct vhost_work *work ) 
+ static void vhost_work_queue(struct vhost_dev *dev , struct vhost_work *work ) 
 { unsigned long flags ;
   raw_spinlock_t *tmp___7 ;
   int tmp___8 ;
@@ -24733,9 +24733,9 @@ long s__builtin_expect(long val , long res )
 }
 }
 #line 93 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_inc(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 93 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v ) 
+ static void atomic_inc(atomic_t *v ) 
 { 
 
   {
@@ -24752,9 +24752,9 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 #line 43 "include/linux/uio.h"
-__inline static size_t iov_length(struct iovec    *iov , unsigned long nr_segs )  __attribute__((__no_instrument_function__)) ;
+ static size_t iov_length(struct iovec    *iov , unsigned long nr_segs )  __attribute__((__no_instrument_function__)) ;
 #line 43 "include/linux/uio.h"
-__inline static size_t iov_length(struct iovec    *iov , unsigned long nr_segs ) 
+ static size_t iov_length(struct iovec    *iov , unsigned long nr_segs ) 
 { unsigned long seg ;
   size_t ret ;
   struct iovec    *__cil_tmp5 ;
@@ -24806,9 +24806,9 @@ extern int memcpy_toiovecend(struct iovec    *v , unsigned char *kdata , int off
 #line 2401 "include/linux/fs.h"
 extern loff_t noop_llseek(struct file *file , loff_t offset , int origin ) ;
 #line 214 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/compat.h"
-__inline static void *compat_ptr(compat_uptr_t uptr )  __attribute__((__no_instrument_function__)) ;
+ static void *compat_ptr(compat_uptr_t uptr )  __attribute__((__no_instrument_function__)) ;
 #line 214 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/compat.h"
-__inline static void *compat_ptr(compat_uptr_t uptr ) 
+ static void *compat_ptr(compat_uptr_t uptr ) 
 { unsigned long __cil_tmp2 ;
 
   {
@@ -24823,9 +24823,9 @@ __inline static void *compat_ptr(compat_uptr_t uptr )
 #line 29 "include/linux/file.h"
 extern struct file *fget(unsigned int fd ) ;
 #line 39 "include/linux/kref.h"
-__inline static void kref_get(struct kref *kref )  __attribute__((__no_instrument_function__)) ;
+ static void kref_get(struct kref *kref )  __attribute__((__no_instrument_function__)) ;
 #line 39 "include/linux/kref.h"
-__inline static void kref_get(struct kref *kref ) 
+ static void kref_get(struct kref *kref ) 
 { int __ret_warn_on ;
   int tmp___7 ;
   int tmp___8 ;
@@ -24902,9 +24902,9 @@ __inline static void kref_get(struct kref *kref )
 #line 249 "include/linux/net.h"
 extern struct socket *sockfd_lookup(int fd , int *err ) ;
 #line 882 "include/linux/skbuff.h"
-__inline static struct sk_buff *skb_peek(struct sk_buff_head    *list_ )  __attribute__((__no_instrument_function__)) ;
+ static struct sk_buff *skb_peek(struct sk_buff_head    *list_ )  __attribute__((__no_instrument_function__)) ;
 #line 882 "include/linux/skbuff.h"
-__inline static struct sk_buff *skb_peek(struct sk_buff_head    *list_ ) 
+ static struct sk_buff *skb_peek(struct sk_buff_head    *list_ ) 
 { struct sk_buff *list ;
   struct sk_buff    *__cil_tmp3 ;
   struct sk_buff *   __cil_tmp4 ;
@@ -24958,9 +24958,9 @@ extern struct socket *tun_get_socket(struct file * ) ;
 #line 12 "include/linux/if_macvlan.h"
 extern struct socket *macvtap_get_socket(struct file * ) ;
 #line 642 "include/net/sock.h"
-__inline static int sock_flag(struct sock *sk , enum sock_flags flag )  __attribute__((__no_instrument_function__)) ;
+ static int sock_flag(struct sock *sk , enum sock_flags flag )  __attribute__((__no_instrument_function__)) ;
 #line 642 "include/net/sock.h"
-__inline static int sock_flag(struct sock *sk , enum sock_flags flag ) 
+ static int sock_flag(struct sock *sk , enum sock_flags flag ) 
 { int tmp___8 ;
   int __cil_tmp5 ;
   unsigned long __cil_tmp6 ;

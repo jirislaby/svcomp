@@ -4447,7 +4447,7 @@ struct iowarrior {
 #line 1
 long __builtin_expect(long  , long  ) ;
 #line 315 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -4474,7 +4474,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
   int __cil_tmp2 ;
   int __cil_tmp3 ;
@@ -4595,7 +4595,7 @@ extern int memcmp(void const   *cs , void const   *ct , unsigned long count ) ;
 #line 61
 extern unsigned long strlen(char const   *s ) ;
 #line 23 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const   *v ) 
+ static int atomic_read(atomic_t const   *v ) 
 { int const   *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -4614,7 +4614,7 @@ __inline static int atomic_read(atomic_t const   *v )
 }
 }
 #line 35 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i ) 
+ static void atomic_set(atomic_t *v , int i ) 
 { 
 
   {
@@ -4625,7 +4625,7 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 #line 93 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v ) 
+ static void atomic_inc(atomic_t *v ) 
 { 
 
   {
@@ -4642,7 +4642,7 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 #line 105 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v ) 
+ static void atomic_dec(atomic_t *v ) 
 { 
 
   {
@@ -4659,7 +4659,7 @@ __inline static void atomic_dec(atomic_t *v )
 }
 }
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp___0 ;
   __u32 *__cil_tmp4 ;
   unsigned long *__cil_tmp5 ;
@@ -4687,7 +4687,7 @@ extern void _raw_spin_lock(raw_spinlock_t *lock )  __attribute__((__section__(".
 #line 39
 extern void _raw_spin_unlock(raw_spinlock_t *lock )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -4696,7 +4696,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -4711,7 +4711,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -4745,7 +4745,7 @@ extern void mutex_unlock(struct mutex *lock ) ;
 #line 830 "include/linux/rcupdate.h"
 extern void kfree(void const   * ) ;
 #line 80 "include/linux/kobject.h"
-__inline static char const   *kobject_name(struct kobject  const  *kobj ) 
+ static char const   *kobject_name(struct kobject  const  *kobj ) 
 { char const   *__cil_tmp2 ;
 
   {
@@ -4766,7 +4766,7 @@ void cleanup_module(void) ;
 #line 99
 extern struct module __this_module ;
 #line 424 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_dir_in(struct usb_endpoint_descriptor  const  *epd ) 
+ static int usb_endpoint_dir_in(struct usb_endpoint_descriptor  const  *epd ) 
 { __u8 __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4785,7 +4785,7 @@ __inline static int usb_endpoint_dir_in(struct usb_endpoint_descriptor  const  *
 }
 }
 #line 435 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_dir_out(struct usb_endpoint_descriptor  const  *epd ) 
+ static int usb_endpoint_dir_out(struct usb_endpoint_descriptor  const  *epd ) 
 { __u8 __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4804,7 +4804,7 @@ __inline static int usb_endpoint_dir_out(struct usb_endpoint_descriptor  const  
 }
 }
 #line 474 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_xfer_int(struct usb_endpoint_descriptor  const  *epd ) 
+ static int usb_endpoint_xfer_int(struct usb_endpoint_descriptor  const  *epd ) 
 { __u8 __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4823,7 +4823,7 @@ __inline static int usb_endpoint_xfer_int(struct usb_endpoint_descriptor  const 
 }
 }
 #line 528 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_is_int_in(struct usb_endpoint_descriptor  const  *epd ) 
+ static int usb_endpoint_is_int_in(struct usb_endpoint_descriptor  const  *epd ) 
 { int tmp ;
   int tmp___0 ;
   int tmp___1 ;
@@ -4856,7 +4856,7 @@ __inline static int usb_endpoint_is_int_in(struct usb_endpoint_descriptor  const
 }
 }
 #line 541 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_is_int_out(struct usb_endpoint_descriptor  const  *epd ) 
+ static int usb_endpoint_is_int_out(struct usb_endpoint_descriptor  const  *epd ) 
 { int tmp ;
   int tmp___0 ;
   int tmp___1 ;
@@ -4897,7 +4897,7 @@ extern unsigned long __attribute__((__warn_unused_result__))  _copy_from_user(vo
                                                                               void const   *from ,
                                                                               unsigned int len ) ;
 #line 46 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
+ static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
                                                                                       void const   *from ,
                                                                                       unsigned long n ) 
 { int sz ;
@@ -5008,7 +5008,7 @@ __inline static unsigned long __attribute__((__warn_unused_result__))  copy_from
 }
 }
 #line 62 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void const   *src ,
                                                                                                                 unsigned int size ) 
 { unsigned long tmp ;
@@ -5031,7 +5031,7 @@ __inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__
 }
 }
 #line 608 "include/linux/device.h"
-__inline static char const   *dev_name(struct device  const  *dev ) 
+ static char const   *dev_name(struct device  const  *dev ) 
 { char const   *tmp ;
   char const   *__cil_tmp3 ;
   struct kobject  const  *__cil_tmp4 ;
@@ -5067,7 +5067,7 @@ extern int dev_err(struct device  const  *dev , char const   *fmt  , ...) ;
 #line 803
 extern int _dev_info(struct device  const  *dev , char const   *fmt  , ...) ;
 #line 891 "include/linux/fs.h"
-__inline static unsigned int iminor(struct inode  const  *inode ) 
+ static unsigned int iminor(struct inode  const  *inode ) 
 { unsigned int __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -5096,7 +5096,7 @@ extern loff_t noop_llseek(struct file *file , loff_t offset , int origin ) ;
 #line 361 "include/linux/sched.h"
 extern void schedule(void) ;
 #line 2441 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp___7 ;
   void *__cil_tmp4 ;
   struct thread_info *__cil_tmp5 ;
@@ -5115,7 +5115,7 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2467 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp___7 ;
   int tmp___8 ;
   long tmp___9 ;
@@ -5145,11 +5145,11 @@ __inline static int signal_pending(struct task_struct *p )
 }
 }
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__ldv_model__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__ldv_model__)) ;
 #line 191
-__inline static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__ldv_model__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__ldv_model__)) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) 
+ static void *usb_get_intfdata(struct usb_interface *intf ) 
 { void *tmp___7 ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -5168,11 +5168,11 @@ __inline static void *usb_get_intfdata(struct usb_interface *intf )
 }
 }
 #line 196
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__ldv_model__)) ;
+ static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__ldv_model__)) ;
 #line 196
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__ldv_model__)) ;
+ static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__ldv_model__)) ;
 #line 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
 { struct device *__cil_tmp3 ;
 
   {
@@ -5187,7 +5187,7 @@ __inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
 }
 }
 #line 497 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
 { struct device  const  *__mptr ;
   struct device *__cil_tmp3 ;
   struct usb_device *__cil_tmp4 ;
@@ -5222,7 +5222,7 @@ extern struct usb_interface *usb_find_interface(struct usb_driver *drv , int min
 #line 929
 extern int usb_register_driver(struct usb_driver * , struct module * , char const   * ) ;
 #line 931 "include/linux/usb.h"
-__inline static int usb_register(struct usb_driver *driver ) 
+ static int usb_register(struct usb_driver *driver ) 
 { int tmp___7 ;
 
   {
@@ -5241,7 +5241,7 @@ extern int usb_register_dev(struct usb_interface *intf , struct usb_class_driver
 #line 943
 extern void usb_deregister_dev(struct usb_interface *intf , struct usb_class_driver *class_driver ) ;
 #line 1309 "include/linux/usb.h"
-__inline static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
+ static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
                                       void *transfer_buffer , int buffer_length ,
                                       void (*complete_fn)(struct urb * ) , void *context ,
                                       int interval ) 
@@ -5321,7 +5321,7 @@ extern int usb_control_msg(struct usb_device *dev , unsigned int pipe , __u8 req
 #line 1416
 extern int usb_string(struct usb_device *dev , int index , char *buf , size_t size ) ;
 #line 1526 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -5345,7 +5345,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -5359,7 +5359,7 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -5375,7 +5375,7 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 #line 40 "include/linux/poll.h"
-__inline static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
+ static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
                                poll_table *p ) 
 { void (*__cil_tmp4)(struct file * , wait_queue_head_t * , struct poll_table_struct * ) ;
 
@@ -6050,7 +6050,7 @@ static void iowarrior_write_callback(struct urb *urb )
 }
 }
 #line 254 "/anthill/stuff/tacas-comp/work/current--X--drivers/usb/misc/iowarrior.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/usb/misc/iowarrior.c.common.c"
-__inline static void iowarrior_delete(struct iowarrior *dev ) 
+ static void iowarrior_delete(struct iowarrior *dev ) 
 { unsigned char __cil_tmp2 ;
   int __cil_tmp3 ;
   unsigned char *__cil_tmp4 ;

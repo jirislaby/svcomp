@@ -1423,7 +1423,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5494/dscv_tempdir/dscv/ri/43_1a/drivers/staging/iio/kfifo_buf.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -1433,7 +1433,7 @@ void ldv_check_alloc_nonatomic(void) ;
 #line 14
 struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 175 "include/linux/kfifo.h"
-__inline static unsigned int __kfifo_uint_must_check_helper(unsigned int val ) 
+ static unsigned int __kfifo_uint_must_check_helper(unsigned int val ) 
 { 
 
   {
@@ -1442,7 +1442,7 @@ __inline static unsigned int __kfifo_uint_must_check_helper(unsigned int val )
 }
 }
 #line 181 "include/linux/kfifo.h"
-__inline static int __kfifo_int_must_check_helper(int val ) 
+ static int __kfifo_int_must_check_helper(int val ) 
 { 
 
   {
@@ -1467,7 +1467,7 @@ extern int __kfifo_to_user_r(struct __kfifo * , void * , unsigned long  , unsign
 #line 92 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/iio/buffer.h"
 extern void iio_buffer_init(struct iio_buffer * ) ;
 #line 100 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/iio/buffer.h"
-__inline static void __iio_update_buffer(struct iio_buffer *buffer , int bytes_per_datum ,
+ static void __iio_update_buffer(struct iio_buffer *buffer , int bytes_per_datum ,
                                          int length ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -1502,7 +1502,7 @@ struct iio_buffer *iio_kfifo_allocate(struct iio_dev *indio_dev ) ;
 #line 7
 void iio_kfifo_free(struct iio_buffer *r ) ;
 #line 34 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5494/dscv_tempdir/dscv/ri/43_1a/drivers/staging/iio/kfifo_buf.c.p"
-__inline static int __iio_allocate_kfifo(struct iio_kfifo *buf , int bytes_per_datum ,
+ static int __iio_allocate_kfifo(struct iio_kfifo *buf , int bytes_per_datum ,
                                          int length ) 
 { struct kfifo *__tmp ;
   struct __kfifo *__kfifo ;
@@ -2266,7 +2266,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 498 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5494/dscv_tempdir/dscv/ri/43_1a/drivers/staging/iio/kfifo_buf.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

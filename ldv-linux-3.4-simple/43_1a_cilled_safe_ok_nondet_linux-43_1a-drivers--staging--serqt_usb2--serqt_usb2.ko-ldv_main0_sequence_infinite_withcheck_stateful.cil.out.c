@@ -4239,7 +4239,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -4260,7 +4260,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void) 
+ static struct task_struct *get_current(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -4329,7 +4329,7 @@ extern void *__memcpy(void * , void const   * , size_t  ) ;
 #line 55
 extern void *memset(void * , int  , size_t  ) ;
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4378,7 +4378,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -4391,9 +4391,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/6284/dscv_tempdir/dscv/ri/43_1a/drivers/staging/serqt_usb2/serqt_usb2.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -4424,7 +4424,7 @@ extern int tty_insert_flip_string_flags(struct tty_struct * , unsigned char cons
 #line 9
 extern void tty_schedule_flip(struct tty_struct * ) ;
 #line 11 "include/linux/tty_flip.h"
-__inline static int tty_insert_flip_char(struct tty_struct *tty , unsigned char ch ,
+ static int tty_insert_flip_char(struct tty_struct *tty , unsigned char ch ,
                                          char flag ) 
 { struct tty_buffer *tb ;
   int tmp ;
@@ -4580,7 +4580,7 @@ __inline static int tty_insert_flip_char(struct tty_struct *tty , unsigned char 
 }
 }
 #line 2563 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4605,7 +4605,7 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2589 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp ;
   long tmp___0 ;
   int __cil_tmp4 ;
@@ -4627,7 +4627,7 @@ __inline static int signal_pending(struct task_struct *p )
 }
 }
 #line 1309 "include/linux/usb.h"
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context ) 
@@ -4686,7 +4686,7 @@ __inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev 
 }
 }
 #line 1350 "include/linux/usb.h"
-__inline static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
+ static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
                                       void *transfer_buffer , int buffer_length ,
                                       void (*complete_fn)(struct urb * ) , void *context ,
                                       int interval ) 
@@ -4842,7 +4842,7 @@ extern int usb_control_msg(struct usb_device * , unsigned int  , __u8  , __u8  ,
 #line 1461
 extern int usb_clear_halt(struct usb_device * , int  ) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -4864,7 +4864,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 124 "include/linux/usb/serial.h"
-__inline static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
+ static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4889,7 +4889,7 @@ __inline static void *usb_get_serial_port_data(struct usb_serial_port *port )
 }
 }
 #line 129 "include/linux/usb/serial.h"
-__inline static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
+ static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -5094,7 +5094,7 @@ static int serial_paranoia_check(struct usb_serial *serial , char const   *funct
 }
 }
 #line 251 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/6284/dscv_tempdir/dscv/ri/43_1a/drivers/staging/serqt_usb2/serqt_usb2.c.p"
-__inline static struct quatech_port *qt_get_port_private(struct usb_serial_port *port ) 
+ static struct quatech_port *qt_get_port_private(struct usb_serial_port *port ) 
 { void *tmp ;
 
   {
@@ -11818,7 +11818,7 @@ static void qt_break(struct tty_struct *tty , int break_state )
 }
 }
 #line 1392 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/6284/dscv_tempdir/dscv/ri/43_1a/drivers/staging/serqt_usb2/serqt_usb2.c.p"
-__inline static int qt_real_tiocmget(struct tty_struct *tty , struct usb_serial_port *port ,
+ static int qt_real_tiocmget(struct tty_struct *tty , struct usb_serial_port *port ,
                                      struct usb_serial *serial ) 
 { u8 mcr ;
   u8 msr ;
@@ -12088,7 +12088,7 @@ __inline static int qt_real_tiocmget(struct tty_struct *tty , struct usb_serial_
 }
 }
 #line 1434 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/6284/dscv_tempdir/dscv/ri/43_1a/drivers/staging/serqt_usb2/serqt_usb2.c.p"
-__inline static int qt_real_tiocmset(struct tty_struct *tty , struct usb_serial_port *port ,
+ static int qt_real_tiocmset(struct tty_struct *tty , struct usb_serial_port *port ,
                                      struct usb_serial *serial , unsigned int value ) 
 { u8 mcr ;
   int status ;
@@ -13661,7 +13661,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 4916 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/6284/dscv_tempdir/dscv/ri/43_1a/drivers/staging/serqt_usb2/serqt_usb2.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -13691,7 +13691,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 4972 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/6284/dscv_tempdir/dscv/ri/43_1a/drivers/staging/serqt_usb2/serqt_usb2.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

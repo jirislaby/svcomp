@@ -4964,9 +4964,9 @@ extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 #line 34 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern void *__memcpy(void *to , void const   *from , size_t len ) ;
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )  __attribute__((__no_instrument_function__)) ;
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )  __attribute__((__no_instrument_function__)) ;
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
 { 
 
   {
@@ -4975,9 +4975,9 @@ __inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long erro
 }
 }
 #line 27
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -4986,9 +4986,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -5020,9 +5020,9 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock )  __attribute_
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -5031,9 +5031,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -5069,9 +5069,9 @@ void mutex_unlock(struct mutex *lock ) ;
 #line 170
 int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned int readl(void const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int readl(void const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned int readl(void const volatile   *addr ) 
+ static unsigned int readl(void const volatile   *addr ) 
 { unsigned int ret ;
   unsigned int volatile   *__cil_tmp3 ;
 
@@ -5087,9 +5087,9 @@ __inline static unsigned int readl(void const volatile   *addr )
 }
 }
 #line 63
-__inline static void writel(unsigned int val , void volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void writel(unsigned int val , void volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writel(unsigned int val , void volatile   *addr ) 
+ static void writel(unsigned int val , void volatile   *addr ) 
 { unsigned int volatile   *__cil_tmp3 ;
 
   {
@@ -5104,9 +5104,9 @@ __inline static void writel(unsigned int val , void volatile   *addr )
 }
 }
 #line 214
-__inline static void memcpy_toio(void volatile   *dst , void const   *src , size_t count )  __attribute__((__no_instrument_function__)) ;
+ static void memcpy_toio(void volatile   *dst , void const   *src , size_t count )  __attribute__((__no_instrument_function__)) ;
 #line 214 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memcpy_toio(void volatile   *dst , void const   *src , size_t count ) 
+ static void memcpy_toio(void volatile   *dst , void const   *src , size_t count ) 
 { size_t __len ;
   void *__ret ;
   void *__cil_tmp6 ;
@@ -5161,10 +5161,10 @@ extern int i2o_driver_register(struct i2o_driver * ) ;
 #line 712
 extern void i2o_driver_unregister(struct i2o_driver * ) ;
 #line 818
-__inline static struct i2o_message *i2o_msg_in_to_virt(struct i2o_controller *c ,
+ static struct i2o_message *i2o_msg_in_to_virt(struct i2o_controller *c ,
                                                        u32 m )  __attribute__((__no_instrument_function__)) ;
 #line 818 "include/linux/i2o.h"
-__inline static struct i2o_message *i2o_msg_in_to_virt(struct i2o_controller *c ,
+ static struct i2o_message *i2o_msg_in_to_virt(struct i2o_controller *c ,
                                                        u32 m ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5187,9 +5187,9 @@ __inline static struct i2o_message *i2o_msg_in_to_virt(struct i2o_controller *c 
 }
 }
 #line 839
-__inline static struct i2o_message *i2o_msg_get(struct i2o_controller *c )  __attribute__((__no_instrument_function__)) ;
+ static struct i2o_message *i2o_msg_get(struct i2o_controller *c )  __attribute__((__no_instrument_function__)) ;
 #line 839 "include/linux/i2o.h"
-__inline static struct i2o_message *i2o_msg_get(struct i2o_controller *c ) 
+ static struct i2o_message *i2o_msg_get(struct i2o_controller *c ) 
 { struct i2o_msg_mfa *mmsg ;
   void *tmp___7 ;
   void *tmp___8 ;
@@ -5332,9 +5332,9 @@ __inline static struct i2o_message *i2o_msg_get(struct i2o_controller *c )
 }
 }
 #line 866
-__inline static void i2o_msg_post(struct i2o_controller *c , struct i2o_message *msg )  __attribute__((__no_instrument_function__)) ;
+ static void i2o_msg_post(struct i2o_controller *c , struct i2o_message *msg )  __attribute__((__no_instrument_function__)) ;
 #line 866 "include/linux/i2o.h"
-__inline static void i2o_msg_post(struct i2o_controller *c , struct i2o_message *msg ) 
+ static void i2o_msg_post(struct i2o_controller *c , struct i2o_message *msg ) 
 { struct i2o_msg_mfa *mmsg ;
   struct i2o_message  const  *__mptr ;
   struct i2o_message *tmp___7 ;
@@ -5446,10 +5446,10 @@ __inline static void i2o_msg_post(struct i2o_controller *c , struct i2o_message 
 }
 }
 #line 890
-__inline static int i2o_msg_post_wait(struct i2o_controller *c , struct i2o_message *msg ,
+ static int i2o_msg_post_wait(struct i2o_controller *c , struct i2o_message *msg ,
                                       unsigned long timeout )  __attribute__((__no_instrument_function__)) ;
 #line 890 "include/linux/i2o.h"
-__inline static int i2o_msg_post_wait(struct i2o_controller *c , struct i2o_message *msg ,
+ static int i2o_msg_post_wait(struct i2o_controller *c , struct i2o_message *msg ,
                                       unsigned long timeout ) 
 { int tmp___7 ;
   void *__cil_tmp5 ;
@@ -5469,9 +5469,9 @@ __inline static int i2o_msg_post_wait(struct i2o_controller *c , struct i2o_mess
 }
 }
 #line 905
-__inline static void i2o_msg_nop_mfa(struct i2o_controller *c , u32 mfa )  __attribute__((__no_instrument_function__)) ;
+ static void i2o_msg_nop_mfa(struct i2o_controller *c , u32 mfa )  __attribute__((__no_instrument_function__)) ;
 #line 905 "include/linux/i2o.h"
-__inline static void i2o_msg_nop_mfa(struct i2o_controller *c , u32 mfa ) 
+ static void i2o_msg_nop_mfa(struct i2o_controller *c , u32 mfa ) 
 { struct i2o_message *msg ;
   u32 nop[3] ;
   unsigned long __cil_tmp5 ;
@@ -5543,9 +5543,9 @@ __inline static void i2o_msg_nop_mfa(struct i2o_controller *c , u32 mfa )
 }
 }
 #line 928
-__inline static void i2o_msg_nop(struct i2o_controller *c , struct i2o_message *msg )  __attribute__((__no_instrument_function__)) ;
+ static void i2o_msg_nop(struct i2o_controller *c , struct i2o_message *msg )  __attribute__((__no_instrument_function__)) ;
 #line 928 "include/linux/i2o.h"
-__inline static void i2o_msg_nop(struct i2o_controller *c , struct i2o_message *msg ) 
+ static void i2o_msg_nop(struct i2o_controller *c , struct i2o_message *msg ) 
 { struct i2o_msg_mfa *mmsg ;
   struct i2o_message  const  *__mptr ;
   struct i2o_msg_mfa *__cil_tmp5 ;
@@ -5618,10 +5618,10 @@ extern void scsi_host_put(struct Scsi_Host *t ) ;
 #line 789
 extern void scsi_cmd_get_serial(struct Scsi_Host * , struct scsi_cmnd * ) ;
 #line 793
-__inline static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
+ static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
                                                                            struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 793 "include/scsi/scsi_host.h"
-__inline static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
+ static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
                                                                            struct device *dev ) 
 { int tmp___7 ;
 
@@ -5646,9 +5646,9 @@ extern struct scsi_device *__scsi_iterate_devices(struct Scsi_Host * , struct sc
 #line 158 "include/scsi/scsi_cmnd.h"
 extern void scsi_dma_unmap(struct scsi_cmnd *cmd ) ;
 #line 163
-__inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 163 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5670,9 +5670,9 @@ __inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )
 }
 }
 #line 168
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 168 "include/scsi/scsi_cmnd.h"
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -5688,9 +5688,9 @@ __inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )
 }
 }
 #line 173
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 173 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;

@@ -2518,9 +2518,9 @@ extern int memcmp(void const   *cs , void const   *ct , unsigned long count ) ;
 #line 62
 extern char *strcpy(char *dest , char const   *src ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2529,9 +2529,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2591,9 +2591,9 @@ extern struct mtd_info *get_mtd_device(struct mtd_info *mtd , int num ) ;
 #line 374
 extern void put_mtd_device(struct mtd_info *mtd ) ;
 #line 390
-__inline static int mtd_is_bitflip(int err )  __attribute__((__no_instrument_function__)) ;
+ static int mtd_is_bitflip(int err )  __attribute__((__no_instrument_function__)) ;
 #line 390 "include/linux/mtd/mtd.h"
-__inline static int mtd_is_bitflip(int err ) 
+ static int mtd_is_bitflip(int err ) 
 { 
 
   {
@@ -2606,10 +2606,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -2623,9 +2623,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -2695,9 +2695,9 @@ static int errcnt  ;
 #line 49 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5473/dscv_tempdir/dscv/ri/32_1/drivers/mtd/tests/mtd_pagetest.c.common.c"
 static unsigned long next  =    1UL;
 #line 51
-__inline static unsigned int simple_rand(void)  __attribute__((__no_instrument_function__)) ;
+ static unsigned int simple_rand(void)  __attribute__((__no_instrument_function__)) ;
 #line 51 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5473/dscv_tempdir/dscv/ri/32_1/drivers/mtd/tests/mtd_pagetest.c.common.c"
-__inline static unsigned int simple_rand(void) 
+ static unsigned int simple_rand(void) 
 { unsigned long __cil_tmp1 ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -2718,9 +2718,9 @@ __inline static unsigned int simple_rand(void)
 }
 }
 #line 57
-__inline static void simple_srand(unsigned long seed )  __attribute__((__no_instrument_function__)) ;
+ static void simple_srand(unsigned long seed )  __attribute__((__no_instrument_function__)) ;
 #line 57 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5473/dscv_tempdir/dscv/ri/32_1/drivers/mtd/tests/mtd_pagetest.c.common.c"
-__inline static void simple_srand(unsigned long seed ) 
+ static void simple_srand(unsigned long seed ) 
 { 
 
   {

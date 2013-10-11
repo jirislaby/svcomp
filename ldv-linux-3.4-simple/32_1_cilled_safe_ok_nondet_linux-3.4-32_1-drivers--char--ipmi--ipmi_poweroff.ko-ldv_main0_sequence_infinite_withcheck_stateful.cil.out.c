@@ -2053,9 +2053,9 @@ extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 #line 60 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern int memcmp(void const   *cs , void const   *ct , unsigned long count ) ;
 #line 651 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/processor.h"
-__inline static void rep_nop(void)  __attribute__((__no_instrument_function__)) ;
+ static void rep_nop(void)  __attribute__((__no_instrument_function__)) ;
 #line 651 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/processor.h"
-__inline static void rep_nop(void) 
+ static void rep_nop(void) 
 { 
 
   {
@@ -2066,9 +2066,9 @@ __inline static void rep_nop(void)
 }
 }
 #line 656
-__inline static void cpu_relax(void)  __attribute__((__no_instrument_function__)) ;
+ static void cpu_relax(void)  __attribute__((__no_instrument_function__)) ;
 #line 656 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/processor.h"
-__inline static void cpu_relax(void) 
+ static void cpu_relax(void) 
 { 
 
   {
@@ -2081,9 +2081,9 @@ __inline static void cpu_relax(void)
 }
 }
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const   *v )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_read(atomic_t const   *v )  __attribute__((__no_instrument_function__)) ;
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const   *v ) 
+ static int atomic_read(atomic_t const   *v ) 
 { int const   *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -2102,9 +2102,9 @@ __inline static int atomic_read(atomic_t const   *v )
 }
 }
 #line 35
-__inline static void atomic_set(atomic_t *v , int i )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_set(atomic_t *v , int i )  __attribute__((__no_instrument_function__)) ;
 #line 35 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i ) 
+ static void atomic_set(atomic_t *v , int i ) 
 { 
 
   {
@@ -2115,9 +2115,9 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 #line 105
-__inline static void atomic_dec(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_dec(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 105 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v ) 
+ static void atomic_dec(atomic_t *v ) 
 { 
 
   {
@@ -2150,9 +2150,9 @@ int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 76 "include/linux/completion.h"
 static struct lock_class_key __key  ;
 #line 73
-__inline static void init_completion(struct completion *x )  __attribute__((__no_instrument_function__)) ;
+ static void init_completion(struct completion *x )  __attribute__((__no_instrument_function__)) ;
 #line 73 "include/linux/completion.h"
-__inline static void init_completion(struct completion *x ) 
+ static void init_completion(struct completion *x ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   wait_queue_head_t *__cil_tmp4 ;

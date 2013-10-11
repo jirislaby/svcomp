@@ -3745,9 +3745,9 @@ struct mpu3050_sensor {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 82 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void __set_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 82 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile   *addr ) 
+ static void __set_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -3760,10 +3760,10 @@ __inline static void __set_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__,
+ static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__,
 __const__)) ;
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3841,9 +3841,9 @@ extern s32 i2c_smbus_read_byte_data(struct i2c_client  const  *client , u8 comma
 extern s32 i2c_smbus_write_byte_data(struct i2c_client  const  *client , u8 command ,
                                      u8 value ) ;
 #line 242
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3873,9 +3873,9 @@ extern struct input_dev *input_allocate_device(void) ;
 #line 1457
 extern void input_free_device(struct input_dev *dev ) ;
 #line 1470
-__inline static void *input_get_drvdata(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *input_get_drvdata(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1470 "include/linux/input.h"
-__inline static void *input_get_drvdata(struct input_dev *dev ) 
+ static void *input_get_drvdata(struct input_dev *dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3900,9 +3900,9 @@ __inline static void *input_get_drvdata(struct input_dev *dev )
 }
 }
 #line 1475
-__inline static void input_set_drvdata(struct input_dev *dev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void input_set_drvdata(struct input_dev *dev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 1475 "include/linux/input.h"
-__inline static void input_set_drvdata(struct input_dev *dev , void *data ) 
+ static void input_set_drvdata(struct input_dev *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -3930,10 +3930,10 @@ extern void input_unregister_device(struct input_dev * ) ;
 extern void input_event(struct input_dev *dev , unsigned int type , unsigned int code ,
                         int value ) ;
 #line 1515
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value )  __attribute__((__no_instrument_function__)) ;
 #line 1515 "include/linux/input.h"
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { 
 
@@ -3947,9 +3947,9 @@ __inline static void input_report_abs(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1530
-__inline static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
+ static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {
@@ -3971,10 +3971,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -3988,9 +3988,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -4018,9 +4018,9 @@ extern void __pm_runtime_disable(struct device *dev , bool check_resume ) ;
 #line 46
 extern void pm_runtime_set_autosuspend_delay(struct device *dev , int delay ) ;
 #line 193
-__inline static int pm_runtime_get(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static int pm_runtime_get(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 193 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_get(struct device *dev ) 
+ static int pm_runtime_get(struct device *dev ) 
 { int tmp___7 ;
 
   {
@@ -4033,9 +4033,9 @@ __inline static int pm_runtime_get(struct device *dev )
 }
 }
 #line 203
-__inline static int pm_runtime_put(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static int pm_runtime_put(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 203 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_put(struct device *dev ) 
+ static int pm_runtime_put(struct device *dev ) 
 { int tmp___7 ;
 
   {
@@ -4048,9 +4048,9 @@ __inline static int pm_runtime_put(struct device *dev )
 }
 }
 #line 229
-__inline static int pm_runtime_set_active(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static int pm_runtime_set_active(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 229 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_set_active(struct device *dev ) 
+ static int pm_runtime_set_active(struct device *dev ) 
 { int tmp___7 ;
 
   {
@@ -4063,9 +4063,9 @@ __inline static int pm_runtime_set_active(struct device *dev )
 }
 }
 #line 234
-__inline static void pm_runtime_set_suspended(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static void pm_runtime_set_suspended(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 234 "include/linux/pm_runtime.h"
-__inline static void pm_runtime_set_suspended(struct device *dev ) 
+ static void pm_runtime_set_suspended(struct device *dev ) 
 { 
 
   {
@@ -4078,9 +4078,9 @@ __inline static void pm_runtime_set_suspended(struct device *dev )
 }
 }
 #line 239
-__inline static void pm_runtime_disable(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static void pm_runtime_disable(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 239 "include/linux/pm_runtime.h"
-__inline static void pm_runtime_disable(struct device *dev ) 
+ static void pm_runtime_disable(struct device *dev ) 
 { bool __cil_tmp2 ;
 
   {

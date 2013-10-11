@@ -1507,9 +1507,9 @@ extern int ( /* format attribute */  snprintf)(char *buf , size_t size , char co
 #line 93 "include/linux/spinlock.h"
 extern void __raw_spin_lock_init(raw_spinlock_t *lock , char const   *name , struct lock_class_key *key ) ;
 #line 272
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -1534,10 +1534,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -1551,9 +1551,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 243 "include/linux/slab.h"
-__inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kmalloc_array(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 243 "include/linux/slab.h"
-__inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
+ static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned long __cil_tmp5 ;
   size_t __cil_tmp6 ;
@@ -1586,9 +1586,9 @@ __inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 256
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kcalloc(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 256 "include/linux/slab.h"
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
+ static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp5 ;
 
@@ -1604,9 +1604,9 @@ __inline static void *kcalloc(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 349
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -1652,9 +1652,9 @@ extern struct comedi_lrange  const  range_unipolar5 ;
 #line 368 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/comedi/drivers/../comedidev.h"
 static struct lock_class_key __key___2  ;
 #line 354
-__inline static int alloc_subdevices(struct comedi_device *dev , unsigned int num_subdevices )  __attribute__((__no_instrument_function__)) ;
+ static int alloc_subdevices(struct comedi_device *dev , unsigned int num_subdevices )  __attribute__((__no_instrument_function__)) ;
 #line 354 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/comedi/drivers/../comedidev.h"
-__inline static int alloc_subdevices(struct comedi_device *dev , unsigned int num_subdevices ) 
+ static int alloc_subdevices(struct comedi_device *dev , unsigned int num_subdevices ) 
 { unsigned int i ;
   void *tmp ;
   unsigned long __cil_tmp5 ;
@@ -1846,9 +1846,9 @@ __inline static int alloc_subdevices(struct comedi_device *dev , unsigned int nu
 }
 }
 #line 374
-__inline static int alloc_private(struct comedi_device *dev , int size )  __attribute__((__no_instrument_function__)) ;
+ static int alloc_private(struct comedi_device *dev , int size )  __attribute__((__no_instrument_function__)) ;
 #line 374 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/comedi/drivers/../comedidev.h"
-__inline static int alloc_private(struct comedi_device *dev , int size ) 
+ static int alloc_private(struct comedi_device *dev , int size ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   size_t __cil_tmp5 ;

@@ -5003,7 +5003,7 @@ struct __anonstruct_282 {
 # 1 "<compiler builtins>"
 
 # 315 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile *addr )
+ static int variable_test_bit(int nr , unsigned long const volatile *addr )
 { int oldbit ;
 
   {
@@ -5024,7 +5024,7 @@ extern void __bad_percpu_size(void) ;
 # 10 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task __attribute__((__section__(".data..percpu"))) ;
 # 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -5118,7 +5118,7 @@ extern void __xchg_wrong_size(void) ;
 # 30 "include/linux/string.h"
 extern size_t strlcpy(char * , char const * , size_t ) ;
 # 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__)) IS_ERR(void const *ptr )
+ static long __attribute__((__warn_unused_result__)) IS_ERR(void const *ptr )
 { long tmp ;
 
   {
@@ -5132,7 +5132,7 @@ __inline static long __attribute__((__warn_unused_result__)) IS_ERR(void const *
 }
 }
 # 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag )
+ static int test_ti_thread_flag(struct thread_info *ti , int flag )
 { int tmp___0 ;
 
   {
@@ -5176,7 +5176,7 @@ extern struct module __this_module ;
 # 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 # 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )
 { void *tmp___2 ;
 
@@ -5190,7 +5190,7 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 # 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )
+ static void *kzalloc(size_t size , gfp_t flags )
 { void *tmp ;
 
   {
@@ -5211,7 +5211,7 @@ extern void schedule(void) ;
 # 2112 "include/linux/sched.h"
 extern int wake_up_process(struct task_struct *tsk ) ;
 # 2441 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 { int tmp___7 ;
 
   {
@@ -5229,7 +5229,7 @@ extern int i2c_master_send(struct i2c_client const *client , char const *buf ,
 # 66 "include/linux/i2c.h"
 extern int i2c_transfer(struct i2c_adapter *adap , struct i2c_msg *msgs , int num ) ;
 # 223 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client const *dev )
+ static void *i2c_get_clientdata(struct i2c_client const *dev )
 { void *tmp___7 ;
 
   {
@@ -5246,7 +5246,7 @@ extern int i2c_register_driver(struct module * , struct i2c_driver * ) ;
 # 435 "include/linux/i2c.h"
 extern void i2c_del_driver(struct i2c_driver * ) ;
 # 437 "include/linux/i2c.h"
-__inline static int i2c_add_driver(struct i2c_driver *driver )
+ static int i2c_add_driver(struct i2c_driver *driver )
 { int tmp___7 ;
 
   {
@@ -5259,7 +5259,7 @@ __inline static int i2c_add_driver(struct i2c_driver *driver )
 }
 }
 # 467 "include/linux/i2c.h"
-__inline static int i2c_adapter_id(struct i2c_adapter *adap )
+ static int i2c_adapter_id(struct i2c_adapter *adap )
 {
 
   {
@@ -5276,7 +5276,7 @@ extern int kthread_stop(struct task_struct *k ) ;
 # 37 "include/linux/kthread.h"
 extern int kthread_should_stop(void) ;
 # 21 "include/linux/freezer.h"
-__inline static int freezing(struct task_struct *p )
+ static int freezing(struct task_struct *p )
 { int tmp___7 ;
 
   {
@@ -5291,7 +5291,7 @@ __inline static int freezing(struct task_struct *p )
 # 50 "include/linux/freezer.h"
 extern void refrigerator(void) ;
 # 54 "include/linux/freezer.h"
-__inline static int try_to_freeze(void)
+ static int try_to_freeze(void)
 { struct task_struct *tmp___7 ;
   int tmp___8 ;
 
@@ -5323,7 +5323,7 @@ extern int v4l2_chip_ident_i2c_client(struct i2c_client *c , struct v4l2_dbg_chi
 extern void v4l2_i2c_subdev_init(struct v4l2_subdev *sd , struct i2c_client *client ,
                                  struct v4l2_subdev_ops const *ops ) ;
 # 560 "include/media/v4l2-subdev.h"
-__inline static void *v4l2_get_subdevdata(struct v4l2_subdev const *sd )
+ static void *v4l2_get_subdevdata(struct v4l2_subdev const *sd )
 {
 
   {
@@ -5348,7 +5348,7 @@ extern struct v4l2_ctrl *v4l2_ctrl_new_std(struct v4l2_ctrl_handler *hdl , struc
 # 363 "include/media/v4l2-ctrls.h"
 extern void v4l2_ctrl_cluster(unsigned int ncontrols , struct v4l2_ctrl **controls ) ;
 # 406 "include/media/v4l2-ctrls.h"
-__inline static void v4l2_ctrl_lock(struct v4l2_ctrl *ctrl )
+ static void v4l2_ctrl_lock(struct v4l2_ctrl *ctrl )
 {
 
   {
@@ -5361,7 +5361,7 @@ __inline static void v4l2_ctrl_lock(struct v4l2_ctrl *ctrl )
 }
 }
 # 415 "include/media/v4l2-ctrls.h"
-__inline static void v4l2_ctrl_unlock(struct v4l2_ctrl *ctrl )
+ static void v4l2_ctrl_unlock(struct v4l2_ctrl *ctrl )
 {
 
   {
@@ -5400,7 +5400,7 @@ int msp_dolby ;
 # 51 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/media/video/msp3400-driver.h"
 int msp_stereo_thresh ;
 # 107 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/media/video/msp3400-driver.h"
-__inline static struct msp_state *to_state(struct v4l2_subdev *sd )
+ static struct msp_state *to_state(struct v4l2_subdev *sd )
 { struct v4l2_subdev const *__mptr ;
 
   {
@@ -5411,7 +5411,7 @@ __inline static struct msp_state *to_state(struct v4l2_subdev *sd )
 }
 }
 # 112 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/media/video/msp3400-driver.h"
-__inline static struct msp_state *ctrl_to_state(struct v4l2_ctrl *ctrl )
+ static struct msp_state *ctrl_to_state(struct v4l2_ctrl *ctrl )
 { struct v4l2_ctrl_handler const *__mptr ;
 
   {
@@ -8834,7 +8834,7 @@ void ldv_check_final_state(void)
 }
 }
 # 122 "include/linux/freezer.h"
-__inline static void set_freezable(void)
+ static void set_freezable(void)
 { struct task_struct *tmp___7 ;
 
   {

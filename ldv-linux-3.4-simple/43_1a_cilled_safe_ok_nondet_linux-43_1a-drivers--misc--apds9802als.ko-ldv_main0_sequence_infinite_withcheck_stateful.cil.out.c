@@ -2488,7 +2488,7 @@ int ldv_spin_trylock(void) ;
 #line 218 "include/linux/kernel.h"
 extern int kstrtoull(char const   * , unsigned int  , unsigned long long * ) ;
 #line 220 "include/linux/kernel.h"
-__inline static int kstrtoul(char const   *s , unsigned int base , unsigned long *res ) 
+ static int kstrtoul(char const   *s , unsigned int base , unsigned long *res ) 
 { int tmp ;
   unsigned long long *__cil_tmp6 ;
 
@@ -2520,7 +2520,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12616/dscv_tempdir/dscv/ri/43_1a/drivers/misc/apds9802als.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2546,7 +2546,7 @@ extern s32 i2c_smbus_read_byte_data(struct i2c_client  const  * , u8  ) ;
 #line 88
 extern s32 i2c_smbus_write_byte_data(struct i2c_client  const  * , u8  , u8  ) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2568,7 +2568,7 @@ __inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )
 }
 }
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2599,7 +2599,7 @@ extern int __pm_runtime_set_status(struct device * , unsigned int  ) ;
 #line 36
 extern void pm_runtime_enable(struct device * ) ;
 #line 198 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_get_sync(struct device *dev ) 
+ static int pm_runtime_get_sync(struct device *dev ) 
 { int tmp ;
 
   {
@@ -2612,7 +2612,7 @@ __inline static int pm_runtime_get_sync(struct device *dev )
 }
 }
 #line 214 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_put_sync(struct device *dev ) 
+ static int pm_runtime_put_sync(struct device *dev ) 
 { int tmp ;
 
   {
@@ -2625,7 +2625,7 @@ __inline static int pm_runtime_put_sync(struct device *dev )
 }
 }
 #line 229 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_set_active(struct device *dev ) 
+ static int pm_runtime_set_active(struct device *dev ) 
 { int tmp ;
 
   {
@@ -3800,7 +3800,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 949 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12616/dscv_tempdir/dscv/ri/43_1a/drivers/misc/apds9802als.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

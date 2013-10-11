@@ -3926,7 +3926,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/9530/dscv_tempdir/dscv/ri/43_1a/drivers/media/common/tuners/tda8290.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -3938,7 +3938,7 @@ struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 69 "include/linux/i2c.h"
 extern int i2c_transfer(struct i2c_adapter * , struct i2c_msg * , int  ) ;
 #line 482 "include/linux/i2c.h"
-__inline static int i2c_adapter_id(struct i2c_adapter *adap ) 
+ static int i2c_adapter_id(struct i2c_adapter *adap ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -3956,7 +3956,7 @@ __inline static int i2c_adapter_id(struct i2c_adapter *adap )
 #line 46 "include/linux/delay.h"
 extern void msleep(unsigned int  ) ;
 #line 36 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/common/tuners/tuner-i2c.h"
-__inline static int tuner_i2c_xfer_send(struct tuner_i2c_props *props , char *buf ,
+ static int tuner_i2c_xfer_send(struct tuner_i2c_props *props , char *buf ,
                                         int len ) 
 { struct i2c_msg msg ;
   int ret ;
@@ -4015,7 +4015,7 @@ __inline static int tuner_i2c_xfer_send(struct tuner_i2c_props *props , char *bu
 }
 }
 #line 54 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/common/tuners/tuner-i2c.h"
-__inline static int tuner_i2c_xfer_send_recv(struct tuner_i2c_props *props , char *obuf ,
+ static int tuner_i2c_xfer_send_recv(struct tuner_i2c_props *props , char *obuf ,
                                              int olen , char *ibuf , int ilen ) 
 { struct i2c_msg msg[2U] ;
   int ret ;
@@ -11386,7 +11386,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1661 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/9530/dscv_tempdir/dscv/ri/43_1a/drivers/media/common/tuners/tda8290.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

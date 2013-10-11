@@ -3753,11 +3753,11 @@ extern void remove_proc_entry(char const   *name , struct proc_dir_entry *parent
 #line 148
 extern struct proc_dir_entry *proc_mkdir(char const   * , struct proc_dir_entry * ) ;
 #line 152
-__inline static struct proc_dir_entry *proc_create(char const   *name , umode_t mode ,
+ static struct proc_dir_entry *proc_create(char const   *name , umode_t mode ,
                                                    struct proc_dir_entry *parent ,
                                                    struct file_operations  const  *proc_fops )  __attribute__((__no_instrument_function__)) ;
 #line 152 "include/linux/proc_fs.h"
-__inline static struct proc_dir_entry *proc_create(char const   *name , umode_t mode ,
+ static struct proc_dir_entry *proc_create(char const   *name , umode_t mode ,
                                                    struct proc_dir_entry *parent ,
                                                    struct file_operations  const  *proc_fops ) 
 { struct proc_dir_entry *tmp ;
@@ -5005,9 +5005,9 @@ extern void _raw_spin_lock_bh(raw_spinlock_t *lock )  __attribute__((__section__
 #line 40
 extern void _raw_spin_unlock_bh(raw_spinlock_t *lock )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -5016,9 +5016,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 288
-__inline static void spin_lock_bh(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock_bh(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 288 "include/linux/spinlock.h"
-__inline static void spin_lock_bh(spinlock_t *lock ) 
+ static void spin_lock_bh(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -5033,9 +5033,9 @@ __inline static void spin_lock_bh(spinlock_t *lock )
 }
 }
 #line 328
-__inline static void spin_unlock_bh(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_bh(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 328 "include/linux/spinlock.h"
-__inline static void spin_unlock_bh(spinlock_t *lock ) 
+ static void spin_unlock_bh(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -5102,9 +5102,9 @@ void xdi_dbg_xlog(char *x  , ...) ;
 #line 240 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/isdn/hardware/eicon/platform.h"
 static struct lock_class_key __key___5  ;
 #line 239
-__inline static int diva_os_initialize_spin_lock(spinlock_t *lock , void *unused )  __attribute__((__no_instrument_function__)) ;
+ static int diva_os_initialize_spin_lock(spinlock_t *lock , void *unused )  __attribute__((__no_instrument_function__)) ;
 #line 239 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/isdn/hardware/eicon/platform.h"
-__inline static int diva_os_initialize_spin_lock(spinlock_t *lock , void *unused ) 
+ static int diva_os_initialize_spin_lock(spinlock_t *lock , void *unused ) 
 { struct raw_spinlock *__cil_tmp3 ;
 
   {
@@ -5141,10 +5141,10 @@ __inline static int diva_os_initialize_spin_lock(spinlock_t *lock , void *unused
 }
 }
 #line 241
-__inline static void diva_os_enter_spin_lock(diva_os_spin_lock_t *a , diva_os_spin_lock_magic_t *old_irql ,
+ static void diva_os_enter_spin_lock(diva_os_spin_lock_t *a , diva_os_spin_lock_magic_t *old_irql ,
                                              void *dbg )  __attribute__((__no_instrument_function__)) ;
 #line 241 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/isdn/hardware/eicon/platform.h"
-__inline static void diva_os_enter_spin_lock(diva_os_spin_lock_t *a , diva_os_spin_lock_magic_t *old_irql ,
+ static void diva_os_enter_spin_lock(diva_os_spin_lock_t *a , diva_os_spin_lock_magic_t *old_irql ,
                                              void *dbg ) 
 { 
 
@@ -5158,10 +5158,10 @@ __inline static void diva_os_enter_spin_lock(diva_os_spin_lock_t *a , diva_os_sp
 }
 }
 #line 244
-__inline static void diva_os_leave_spin_lock(diva_os_spin_lock_t *a , diva_os_spin_lock_magic_t *old_irql ,
+ static void diva_os_leave_spin_lock(diva_os_spin_lock_t *a , diva_os_spin_lock_magic_t *old_irql ,
                                              void *dbg )  __attribute__((__no_instrument_function__)) ;
 #line 244 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/isdn/hardware/eicon/platform.h"
-__inline static void diva_os_leave_spin_lock(diva_os_spin_lock_t *a , diva_os_spin_lock_magic_t *old_irql ,
+ static void diva_os_leave_spin_lock(diva_os_spin_lock_t *a , diva_os_spin_lock_magic_t *old_irql ,
                                              void *dbg ) 
 { 
 
@@ -5246,7 +5246,7 @@ void myDbgPrint_LOG(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 46
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 46
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 46
@@ -5260,7 +5260,7 @@ void myDbgPrint_LOG(char *format  , ...)
 #line 46
     (*__cil_tmp5)(__cil_tmp8, 256, format, ap);
 #line 46
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5288,7 +5288,7 @@ void myDbgPrint_FTL(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 47
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 47
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 47
@@ -5302,7 +5302,7 @@ void myDbgPrint_FTL(char *format  , ...)
 #line 47
     (*__cil_tmp5)(__cil_tmp8, 512, format, ap);
 #line 47
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5330,7 +5330,7 @@ void myDbgPrint_ERR(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 48
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 48
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 48
@@ -5344,7 +5344,7 @@ void myDbgPrint_ERR(char *format  , ...)
 #line 48
     (*__cil_tmp5)(__cil_tmp8, 768, format, ap);
 #line 48
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5372,7 +5372,7 @@ void myDbgPrint_TRC(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 49
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 49
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 49
@@ -5386,7 +5386,7 @@ void myDbgPrint_TRC(char *format  , ...)
 #line 49
     (*__cil_tmp5)(__cil_tmp8, 1024, format, ap);
 #line 49
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5414,7 +5414,7 @@ void myDbgPrint_MXLOG(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 50
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 50
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 50
@@ -5428,7 +5428,7 @@ void myDbgPrint_MXLOG(char *format  , ...)
 #line 50
     (*__cil_tmp5)(__cil_tmp8, 1536, format, ap);
 #line 50
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5456,7 +5456,7 @@ void myDbgPrint_FTL_MXLOG(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 51
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 51
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 51
@@ -5470,7 +5470,7 @@ void myDbgPrint_FTL_MXLOG(char *format  , ...)
 #line 51
     (*__cil_tmp5)(__cil_tmp8, 1536, format, ap);
 #line 51
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5499,7 +5499,7 @@ void myDbgPrint_EVL(long msgID  , ...)
   if (*((void (**)(unsigned short  , unsigned long  , va_list  ))__cil_tmp3)) {
     {
 #line 56
-    __builtin_va_start(ap, msgID);
+    va_start(ap, msgID);
 #line 57
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 264;
 #line 57
@@ -5515,7 +5515,7 @@ void myDbgPrint_EVL(long msgID  , ...)
 #line 57
     (*__cil_tmp5)(__cil_tmp8, __cil_tmp9, ap);
 #line 59
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5543,7 +5543,7 @@ void myDbgPrint_REG(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 61
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 61
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 61
@@ -5557,7 +5557,7 @@ void myDbgPrint_REG(char *format  , ...)
 #line 61
     (*__cil_tmp5)(__cil_tmp8, 2304, format, ap);
 #line 61
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5585,7 +5585,7 @@ void myDbgPrint_MEM(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 62
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 62
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 62
@@ -5599,7 +5599,7 @@ void myDbgPrint_MEM(char *format  , ...)
 #line 62
     (*__cil_tmp5)(__cil_tmp8, 2560, format, ap);
 #line 62
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5627,7 +5627,7 @@ void myDbgPrint_SPL(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 63
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 63
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 63
@@ -5641,7 +5641,7 @@ void myDbgPrint_SPL(char *format  , ...)
 #line 63
     (*__cil_tmp5)(__cil_tmp8, 2816, format, ap);
 #line 63
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5669,7 +5669,7 @@ void myDbgPrint_IRP(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 64
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 64
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 64
@@ -5683,7 +5683,7 @@ void myDbgPrint_IRP(char *format  , ...)
 #line 64
     (*__cil_tmp5)(__cil_tmp8, 3072, format, ap);
 #line 64
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5711,7 +5711,7 @@ void myDbgPrint_TIM(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 65
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 65
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 65
@@ -5725,7 +5725,7 @@ void myDbgPrint_TIM(char *format  , ...)
 #line 65
     (*__cil_tmp5)(__cil_tmp8, 3328, format, ap);
 #line 65
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5753,7 +5753,7 @@ void myDbgPrint_BLK(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 66
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 66
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 66
@@ -5767,7 +5767,7 @@ void myDbgPrint_BLK(char *format  , ...)
 #line 66
     (*__cil_tmp5)(__cil_tmp8, 3584, format, ap);
 #line 66
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5795,7 +5795,7 @@ void myDbgPrint_TAPI(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 67
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 67
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 67
@@ -5809,7 +5809,7 @@ void myDbgPrint_TAPI(char *format  , ...)
 #line 67
     (*__cil_tmp5)(__cil_tmp8, 4352, format, ap);
 #line 67
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5837,7 +5837,7 @@ void myDbgPrint_NDIS(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 68
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 68
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 68
@@ -5851,7 +5851,7 @@ void myDbgPrint_NDIS(char *format  , ...)
 #line 68
     (*__cil_tmp5)(__cil_tmp8, 4608, format, ap);
 #line 68
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5879,7 +5879,7 @@ void myDbgPrint_CONN(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 69
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 69
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 69
@@ -5893,7 +5893,7 @@ void myDbgPrint_CONN(char *format  , ...)
 #line 69
     (*__cil_tmp5)(__cil_tmp8, 4864, format, ap);
 #line 69
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5921,7 +5921,7 @@ void myDbgPrint_STAT(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 70
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 70
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 70
@@ -5935,7 +5935,7 @@ void myDbgPrint_STAT(char *format  , ...)
 #line 70
     (*__cil_tmp5)(__cil_tmp8, 5120, format, ap);
 #line 70
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -5963,7 +5963,7 @@ void myDbgPrint_SEND(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 71
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 71
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 71
@@ -5977,7 +5977,7 @@ void myDbgPrint_SEND(char *format  , ...)
 #line 71
     (*__cil_tmp5)(__cil_tmp8, 5376, format, ap);
 #line 71
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -6005,7 +6005,7 @@ void myDbgPrint_RECV(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 72
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 72
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 72
@@ -6019,7 +6019,7 @@ void myDbgPrint_RECV(char *format  , ...)
 #line 72
     (*__cil_tmp5)(__cil_tmp8, 5632, format, ap);
 #line 72
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -6047,7 +6047,7 @@ void myDbgPrint_PRV0(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 73
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 73
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 73
@@ -6061,7 +6061,7 @@ void myDbgPrint_PRV0(char *format  , ...)
 #line 73
     (*__cil_tmp5)(__cil_tmp8, 6400, format, ap);
 #line 73
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -6089,7 +6089,7 @@ void myDbgPrint_PRV1(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 74
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 74
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 74
@@ -6103,7 +6103,7 @@ void myDbgPrint_PRV1(char *format  , ...)
 #line 74
     (*__cil_tmp5)(__cil_tmp8, 6656, format, ap);
 #line 74
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -6131,7 +6131,7 @@ void myDbgPrint_PRV2(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 75
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 75
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 75
@@ -6145,7 +6145,7 @@ void myDbgPrint_PRV2(char *format  , ...)
 #line 75
     (*__cil_tmp5)(__cil_tmp8, 6912, format, ap);
 #line 75
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -6173,7 +6173,7 @@ void myDbgPrint_PRV3(char *format  , ...)
   if (*((void (**)(unsigned short  , int  , char * , va_list  ))__cil_tmp3)) {
     {
 #line 76
-    __builtin_va_start(ap, format);
+    va_start(ap, format);
 #line 76
     __cil_tmp4 = (unsigned long )(& myDriverDebugHandle) + 248;
 #line 76
@@ -6187,7 +6187,7 @@ void myDbgPrint_PRV3(char *format  , ...)
 #line 76
     (*__cil_tmp5)(__cil_tmp8, 7168, format, ap);
 #line 76
-    __builtin_va_end(ap);
+    va_end(ap);
     }
   } else {
 
@@ -6503,7 +6503,7 @@ void xdi_dbg_xlog(char *x  , ...)
   {
   {
 #line 142
-  __builtin_va_start(ap, x);
+  va_start(ap, x);
   }
   {
 #line 143
@@ -6599,7 +6599,7 @@ void xdi_dbg_xlog(char *x  , ...)
   }
   {
 #line 153
-  __builtin_va_end(ap);
+  va_end(ap);
   }
 #line 154
   return;

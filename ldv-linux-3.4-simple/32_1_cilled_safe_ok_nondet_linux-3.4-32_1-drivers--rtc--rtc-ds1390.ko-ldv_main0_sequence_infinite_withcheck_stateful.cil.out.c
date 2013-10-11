@@ -3578,9 +3578,9 @@ struct ds1390 {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3589,9 +3589,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3658,10 +3658,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -3675,9 +3675,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -3693,9 +3693,9 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 #line 105 "include/linux/spi/spi.h"
-__inline static struct spi_device *to_spi_device(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static struct spi_device *to_spi_device(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 105 "include/linux/spi/spi.h"
-__inline static struct spi_device *to_spi_device(struct device *dev ) 
+ static struct spi_device *to_spi_device(struct device *dev ) 
 { struct device  const  *__mptr ;
   struct spi_device *tmp___7 ;
   struct spi_device *__cil_tmp4 ;
@@ -3733,9 +3733,9 @@ __inline static struct spi_device *to_spi_device(struct device *dev )
 }
 }
 #line 140
-__inline static void *spi_get_drvdata(struct spi_device *spi )  __attribute__((__no_instrument_function__)) ;
+ static void *spi_get_drvdata(struct spi_device *spi )  __attribute__((__no_instrument_function__)) ;
 #line 140 "include/linux/spi/spi.h"
-__inline static void *spi_get_drvdata(struct spi_device *spi ) 
+ static void *spi_get_drvdata(struct spi_device *spi ) 
 { void *tmp___7 ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -3756,9 +3756,9 @@ __inline static void *spi_get_drvdata(struct spi_device *spi )
 #line 191
 extern int spi_register_driver(struct spi_driver *sdrv ) ;
 #line 198
-__inline static void spi_unregister_driver(struct spi_driver *sdrv )  __attribute__((__no_instrument_function__)) ;
+ static void spi_unregister_driver(struct spi_driver *sdrv )  __attribute__((__no_instrument_function__)) ;
 #line 198 "include/linux/spi/spi.h"
-__inline static void spi_unregister_driver(struct spi_driver *sdrv ) 
+ static void spi_unregister_driver(struct spi_driver *sdrv ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct device_driver *__cil_tmp4 ;

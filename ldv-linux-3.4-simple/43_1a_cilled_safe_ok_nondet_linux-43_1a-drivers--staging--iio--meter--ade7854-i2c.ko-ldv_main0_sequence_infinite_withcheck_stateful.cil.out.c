@@ -2671,7 +2671,7 @@ extern int i2c_master_send(struct i2c_client  const  * , char const   * , int  )
 #line 64
 extern int i2c_master_recv(struct i2c_client  const  * , char * , int  ) ;
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2694,7 +2694,7 @@ __inline static void i2c_set_clientdata(struct i2c_client *dev , void *data )
 #line 426 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/iio/meter/../iio.h"
 extern struct iio_dev *iio_allocate_device(int  ) ;
 #line 428 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/iio/meter/../iio.h"
-__inline static void *iio_priv(struct iio_dev  const  *indio_dev ) 
+ static void *iio_priv(struct iio_dev  const  *indio_dev ) 
 { void *__cil_tmp2 ;
 
   {

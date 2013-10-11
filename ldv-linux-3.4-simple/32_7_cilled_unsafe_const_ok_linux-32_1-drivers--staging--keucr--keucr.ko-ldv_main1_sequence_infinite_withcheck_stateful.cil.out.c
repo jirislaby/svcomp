@@ -4829,10 +4829,10 @@ enum kobj_ns_type;
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -4852,9 +4852,9 @@ __inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int 
 }
 }
 #line 97
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 97 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -4873,10 +4873,10 @@ __inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , un
 }
 }
 #line 309
-__inline static int ( __attribute__((__always_inline__)) ant_test_bit)(unsigned int nr ,
+ static int ( __attribute__((__always_inline__)) ant_test_bit)(unsigned int nr ,
                                                                             unsigned long  volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 309 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int ( __attribute__((__always_inline__)) ant_test_bit)(unsigned int nr ,
+ static int ( __attribute__((__always_inline__)) ant_test_bit)(unsigned int nr ,
                                                                             unsigned long  volatile   *addr ) 
 { unsigned int __cil_tmp3 ;
   unsigned long  volatile   *__cil_tmp4 ;
@@ -4908,9 +4908,9 @@ __inline static int ( __attribute__((__always_inline__)) ant_test_bit)(unsigned 
 }
 }
 #line 315
-__inline static int variable_test_bit(int nr , unsigned long  volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static int variable_test_bit(int nr , unsigned long  volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long  volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long  volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -4936,9 +4936,9 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -5034,9 +5034,9 @@ extern void *memset(void *s , int c , size_t n ) ;
 #line 61
 extern unsigned long strlen(char    *s ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr ) 
 { 
 
   {
@@ -5045,9 +5045,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *p
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -5077,9 +5077,9 @@ __inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *pt
 #line 11 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/cmpxchg.h"
 extern void __xchg_wrong_size(void) ;
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t    *v )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_read(atomic_t    *v )  __attribute__((__no_instrument_function__)) ;
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t    *v ) 
+ static int atomic_read(atomic_t    *v ) 
 { int    *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -5098,9 +5098,9 @@ __inline static int atomic_read(atomic_t    *v )
 }
 }
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp___0 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -5132,9 +5132,9 @@ extern void _raw_spin_lock_irq(raw_spinlock_t *lock )  __attribute__((__section_
 #line 41
 extern void _raw_spin_unlock_irq(raw_spinlock_t *lock )  __attribute__((__section__(".spinlock.text"))) ;
 #line 308 "include/linux/spinlock.h"
-__inline static void spin_lock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 308 "include/linux/spinlock.h"
-__inline static void spin_lock_irq(spinlock_t *lock ) 
+ static void spin_lock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -5149,9 +5149,9 @@ __inline static void spin_lock_irq(spinlock_t *lock )
 }
 }
 #line 333
-__inline static void spin_unlock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 333 "include/linux/spinlock.h"
-__inline static void spin_unlock_irq(spinlock_t *lock ) 
+ static void spin_unlock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -5179,9 +5179,9 @@ extern int autoremove_wake_function(wait_queue_t *wait , unsigned int mode , int
 #line 76 "include/linux/completion.h"
 static struct lock_class_key __key  ;
 #line 73
-__inline static void init_completion(struct completion *x )  __attribute__((__no_instrument_function__)) ;
+ static void init_completion(struct completion *x )  __attribute__((__no_instrument_function__)) ;
 #line 73 "include/linux/completion.h"
-__inline static void init_completion(struct completion *x ) 
+ static void init_completion(struct completion *x ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   wait_queue_head_t *__cil_tmp4 ;
@@ -5239,9 +5239,9 @@ extern void schedule(void) ;
 #line 2194
 extern int wake_up_process(struct task_struct *tsk ) ;
 #line 2563
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 2563 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp___7 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -5266,9 +5266,9 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2589
-__inline static int signal_pending(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
+ static int signal_pending(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
 #line 2589 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp___7 ;
   int tmp___8 ;
   long tmp___9 ;
@@ -5302,9 +5302,9 @@ extern atomic_t system_freezing_cnt ;
 #line 23
 extern bool freezing_slow_path(struct task_struct *p ) ;
 #line 28
-__inline static bool freezing(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
+ static bool freezing(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
 #line 28 "include/linux/freezer.h"
-__inline static bool freezing(struct task_struct *p ) 
+ static bool freezing(struct task_struct *p ) 
 { int tmp___7 ;
   int tmp___8 ;
   long tmp___9 ;
@@ -5351,9 +5351,9 @@ __inline static bool freezing(struct task_struct *p )
 #line 38
 extern bool __refrigerator(bool check_kthr_stop ) ;
 #line 44
-__inline static bool try_to_freeze(void)  __attribute__((__no_instrument_function__)) ;
+ static bool try_to_freeze(void)  __attribute__((__no_instrument_function__)) ;
 #line 44 "include/linux/freezer.h"
-__inline static bool try_to_freeze(void) 
+ static bool try_to_freeze(void) 
 { struct task_struct *tmp___7 ;
   bool tmp___8 ;
   int tmp___9 ;
@@ -5435,10 +5435,10 @@ extern void kfree(void    * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -5466,9 +5466,9 @@ extern void *dev_get_drvdata(struct device    *dev ) ;
 #line 793
 extern int dev_set_drvdata(struct device *dev , void *data ) ;
 #line 435 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_dir_in(struct usb_endpoint_descriptor    *epd )  __attribute__((__no_instrument_function__)) ;
+ static int usb_endpoint_dir_in(struct usb_endpoint_descriptor    *epd )  __attribute__((__no_instrument_function__)) ;
 #line 435 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_dir_in(struct usb_endpoint_descriptor    *epd ) 
+ static int usb_endpoint_dir_in(struct usb_endpoint_descriptor    *epd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   __u8    __cil_tmp4 ;
@@ -5493,9 +5493,9 @@ __inline static int usb_endpoint_dir_in(struct usb_endpoint_descriptor    *epd )
 }
 }
 #line 458
-__inline static int usb_endpoint_xfer_bulk(struct usb_endpoint_descriptor    *epd )  __attribute__((__no_instrument_function__)) ;
+ static int usb_endpoint_xfer_bulk(struct usb_endpoint_descriptor    *epd )  __attribute__((__no_instrument_function__)) ;
 #line 458 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_xfer_bulk(struct usb_endpoint_descriptor    *epd ) 
+ static int usb_endpoint_xfer_bulk(struct usb_endpoint_descriptor    *epd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   __u8    __cil_tmp4 ;
@@ -5520,9 +5520,9 @@ __inline static int usb_endpoint_xfer_bulk(struct usb_endpoint_descriptor    *ep
 }
 }
 #line 485
-__inline static int usb_endpoint_xfer_int(struct usb_endpoint_descriptor    *epd )  __attribute__((__no_instrument_function__)) ;
+ static int usb_endpoint_xfer_int(struct usb_endpoint_descriptor    *epd )  __attribute__((__no_instrument_function__)) ;
 #line 485 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_xfer_int(struct usb_endpoint_descriptor    *epd ) 
+ static int usb_endpoint_xfer_int(struct usb_endpoint_descriptor    *epd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   __u8    __cil_tmp4 ;
@@ -5547,9 +5547,9 @@ __inline static int usb_endpoint_xfer_int(struct usb_endpoint_descriptor    *epd
 }
 }
 #line 539
-__inline static int usb_endpoint_is_int_in(struct usb_endpoint_descriptor    *epd )  __attribute__((__no_instrument_function__)) ;
+ static int usb_endpoint_is_int_in(struct usb_endpoint_descriptor    *epd )  __attribute__((__no_instrument_function__)) ;
 #line 539 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_is_int_in(struct usb_endpoint_descriptor    *epd ) 
+ static int usb_endpoint_is_int_in(struct usb_endpoint_descriptor    *epd ) 
 { int tmp___7 ;
   int tmp___8 ;
   int tmp___9 ;
@@ -5582,9 +5582,9 @@ __inline static int usb_endpoint_is_int_in(struct usb_endpoint_descriptor    *ep
 }
 }
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) 
+ static void *usb_get_intfdata(struct usb_interface *intf ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5609,9 +5609,9 @@ __inline static void *usb_get_intfdata(struct usb_interface *intf )
 }
 }
 #line 196
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -5632,9 +5632,9 @@ __inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
 }
 }
 #line 523
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
 #line 523 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
 { struct device    *__mptr ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5691,9 +5691,9 @@ extern void *usb_alloc_coherent(struct usb_device *dev , size_t size , gfp_t mem
 extern void usb_free_coherent(struct usb_device *dev , size_t size , void *addr ,
                               dma_addr_t dma ) ;
 #line 1567
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -5727,10 +5727,10 @@ extern void scsi_remove_host(struct Scsi_Host * ) ;
 #line 786
 extern void scsi_host_put(struct Scsi_Host *t ) ;
 #line 793
-__inline static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
+ static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
                                                                            struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 793 "include/scsi/scsi_host.h"
-__inline static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
+ static int __attribute__((__warn_unused_result__))  scsi_add_host(struct Scsi_Host *host ,
                                                                            struct device *dev ) 
 { int tmp___7 ;
 
@@ -5744,9 +5744,9 @@ __inline static int __attribute__((__warn_unused_result__))  scsi_add_host(struc
 }
 }
 #line 221 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/keucr/usb.h"
-__inline static struct Scsi_Host *us_to_host(struct us_data *us )  __attribute__((__no_instrument_function__)) ;
+ static struct Scsi_Host *us_to_host(struct us_data *us )  __attribute__((__no_instrument_function__)) ;
 #line 221 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/keucr/usb.h"
-__inline static struct Scsi_Host *us_to_host(struct us_data *us ) 
+ static struct Scsi_Host *us_to_host(struct us_data *us ) 
 { unsigned long (   (*__mptr))[0] ;
   void *__cil_tmp3 ;
   struct Scsi_Host *__cil_tmp4 ;
@@ -5783,9 +5783,9 @@ __inline static struct Scsi_Host *us_to_host(struct us_data *us )
 }
 }
 #line 224
-__inline static struct us_data *host_to_us(struct Scsi_Host *host )  __attribute__((__no_instrument_function__)) ;
+ static struct us_data *host_to_us(struct Scsi_Host *host )  __attribute__((__no_instrument_function__)) ;
 #line 224 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/keucr/usb.h"
-__inline static struct us_data *host_to_us(struct Scsi_Host *host ) 
+ static struct us_data *host_to_us(struct Scsi_Host *host ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -10100,9 +10100,9 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock )  __attribute_
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -10111,9 +10111,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -10137,9 +10137,9 @@ __inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long fla
 }
 }
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page )  __attribute__((__no_instrument_function__)) ;
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page )  __attribute__((__no_instrument_function__)) ;
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page ) 
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page ) 
 { struct page *__cil_tmp2 ;
   struct page    *__cil_tmp3 ;
   int __cil_tmp4 ;
@@ -10173,9 +10173,9 @@ __inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(
 }
 }
 #line 95 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg )  __attribute__((__no_instrument_function__)) ;
+ static struct page *sg_page(struct scatterlist *sg )  __attribute__((__no_instrument_function__)) ;
 #line 95 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg ) 
+ static struct page *sg_page(struct scatterlist *sg ) 
 { long tmp ;
   long tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -10321,9 +10321,9 @@ __inline static struct page *sg_page(struct scatterlist *sg )
 #line 204
 extern struct scatterlist *sg_next(struct scatterlist * ) ;
 #line 49 "include/linux/highmem.h"
-__inline static void *kmap(struct page *page )  __attribute__((__no_instrument_function__)) ;
+ static void *kmap(struct page *page )  __attribute__((__no_instrument_function__)) ;
 #line 49 "include/linux/highmem.h"
-__inline static void *kmap(struct page *page ) 
+ static void *kmap(struct page *page ) 
 { void *tmp___7 ;
   struct page    *__cil_tmp3 ;
 
@@ -10361,9 +10361,9 @@ __inline static void *kmap(struct page *page )
 }
 }
 #line 55
-__inline static void kunmap(struct page *page )  __attribute__((__no_instrument_function__)) ;
+ static void kunmap(struct page *page )  __attribute__((__no_instrument_function__)) ;
 #line 55 "include/linux/highmem.h"
-__inline static void kunmap(struct page *page ) 
+ static void kunmap(struct page *page ) 
 { 
 
   {
@@ -10376,9 +10376,9 @@ extern void blk_queue_max_hw_sectors(struct request_queue * , unsigned int  ) ;
 #line 860
 extern void blk_queue_update_dma_alignment(struct request_queue * , int  ) ;
 #line 996
-__inline static unsigned int queue_max_sectors(struct request_queue *q )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int queue_max_sectors(struct request_queue *q )  __attribute__((__no_instrument_function__)) ;
 #line 996 "include/linux/blkdev.h"
-__inline static unsigned int queue_max_sectors(struct request_queue *q ) 
+ static unsigned int queue_max_sectors(struct request_queue *q ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -10397,9 +10397,9 @@ __inline static unsigned int queue_max_sectors(struct request_queue *q )
 }
 }
 #line 168 "include/scsi/scsi_cmnd.h"
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 168 "include/scsi/scsi_cmnd.h"
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -10415,9 +10415,9 @@ __inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )
 }
 }
 #line 173
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 173 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -10436,9 +10436,9 @@ __inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )
 }
 }
 #line 178
-__inline static void scsi_set_resid(struct scsi_cmnd *cmd , int resid )  __attribute__((__no_instrument_function__)) ;
+ static void scsi_set_resid(struct scsi_cmnd *cmd , int resid )  __attribute__((__no_instrument_function__)) ;
 #line 178 "include/scsi/scsi_cmnd.h"
-__inline static void scsi_set_resid(struct scsi_cmnd *cmd , int resid ) 
+ static void scsi_set_resid(struct scsi_cmnd *cmd , int resid ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -13157,9 +13157,9 @@ void main(void)
 }
 }
 #line 246 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int test_and_clear_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static int test_and_clear_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 246 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -13184,9 +13184,9 @@ extern void *__memcpy(void *to , void    *from , size_t len ) ;
 #line 76 "include/linux/completion.h"
 static struct lock_class_key __key___8  ;
 #line 73
-__inline static void init_completion___0(struct completion *x )  __attribute__((__no_instrument_function__)) ;
+ static void init_completion___0(struct completion *x )  __attribute__((__no_instrument_function__)) ;
 #line 73 "include/linux/completion.h"
-__inline static void init_completion___0(struct completion *x ) 
+ static void init_completion___0(struct completion *x ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   wait_queue_head_t *__cil_tmp4 ;
@@ -13220,9 +13220,9 @@ __inline static void init_completion___0(struct completion *x )
 #line 84
 extern long wait_for_completion_interruptible_timeout(struct completion *x , unsigned long timeout ) ;
 #line 768 "include/linux/device.h"
-__inline static void device_unlock(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static void device_unlock(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 768 "include/linux/device.h"
-__inline static void device_unlock(struct device *dev ) 
+ static void device_unlock(struct device *dev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct mutex *__cil_tmp4 ;
@@ -13243,9 +13243,9 @@ __inline static void device_unlock(struct device *dev )
 }
 }
 #line 163 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 163 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -13267,9 +13267,9 @@ __inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )
 }
 }
 #line 183
-__inline static int scsi_get_resid(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static int scsi_get_resid(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 183 "include/scsi/scsi_cmnd.h"
-__inline static int scsi_get_resid(struct scsi_cmnd *cmd ) 
+ static int scsi_get_resid(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -13299,12 +13299,12 @@ extern int usb_lock_device_for_reset(struct usb_device *udev , struct usb_interf
 #line 539
 extern int usb_reset_device(struct usb_device *dev ) ;
 #line 1278
-__inline static void usb_fill_control_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_control_urb(struct urb *urb , struct usb_device *dev ,
                                           unsigned int pipe , unsigned char *setup_packet ,
                                           void *transfer_buffer , int buffer_length ,
                                           void (*complete_fn)(struct urb * ) , void *context )  __attribute__((__no_instrument_function__)) ;
 #line 1278 "include/linux/usb.h"
-__inline static void usb_fill_control_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_control_urb(struct urb *urb , struct usb_device *dev ,
                                           unsigned int pipe , unsigned char *setup_packet ,
                                           void *transfer_buffer , int buffer_length ,
                                           void (*complete_fn)(struct urb * ) , void *context ) 
@@ -13371,12 +13371,12 @@ __inline static void usb_fill_control_urb(struct urb *urb , struct usb_device *d
 }
 }
 #line 1309
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context )  __attribute__((__no_instrument_function__)) ;
 #line 1309 "include/linux/usb.h"
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context ) 
@@ -25216,9 +25216,9 @@ int MarkFail_D_PhyOneBlock(struct us_data *us )
 }
 }
 #line 24 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/arch_hweight.h"
-__inline static unsigned int __arch_hweight32(unsigned int w )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int __arch_hweight32(unsigned int w )  __attribute__((__no_instrument_function__)) ;
 #line 24 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/arch_hweight.h"
-__inline static unsigned int __arch_hweight32(unsigned int w ) 
+ static unsigned int __arch_hweight32(unsigned int w ) 
 { unsigned int res ;
 
   {
@@ -25250,9 +25250,9 @@ __inline static unsigned int __arch_hweight32(unsigned int w )
 }
 }
 #line 35
-__inline static unsigned int __arch_hweight16(unsigned int w )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int __arch_hweight16(unsigned int w )  __attribute__((__no_instrument_function__)) ;
 #line 35 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/arch_hweight.h"
-__inline static unsigned int __arch_hweight16(unsigned int w ) 
+ static unsigned int __arch_hweight16(unsigned int w ) 
 { unsigned int tmp ;
   unsigned int __cil_tmp3 ;
 
@@ -25268,9 +25268,9 @@ __inline static unsigned int __arch_hweight16(unsigned int w )
 }
 }
 #line 40
-__inline static unsigned int __arch_hweight8(unsigned int w )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int __arch_hweight8(unsigned int w )  __attribute__((__no_instrument_function__)) ;
 #line 40 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/arch_hweight.h"
-__inline static unsigned int __arch_hweight8(unsigned int w ) 
+ static unsigned int __arch_hweight8(unsigned int w ) 
 { unsigned int tmp ;
   unsigned int __cil_tmp3 ;
 

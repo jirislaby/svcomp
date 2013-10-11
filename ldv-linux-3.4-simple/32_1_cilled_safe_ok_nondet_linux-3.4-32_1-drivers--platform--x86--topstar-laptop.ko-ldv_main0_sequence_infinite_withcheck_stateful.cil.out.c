@@ -3898,10 +3898,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -3915,9 +3915,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -3937,9 +3937,9 @@ extern acpi_status acpi_evaluate_object(acpi_handle object , acpi_string pathnam
                                         struct acpi_object_list *parameter_objects ,
                                         struct acpi_buffer *return_object_buffer ) ;
 #line 279 "include/acpi/acpi_bus.h"
-__inline static void *acpi_driver_data(struct acpi_device *d )  __attribute__((__no_instrument_function__)) ;
+ static void *acpi_driver_data(struct acpi_device *d )  __attribute__((__no_instrument_function__)) ;
 #line 279 "include/acpi/acpi_bus.h"
-__inline static void *acpi_driver_data(struct acpi_device *d ) 
+ static void *acpi_driver_data(struct acpi_device *d ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 

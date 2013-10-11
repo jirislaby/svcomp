@@ -2475,7 +2475,7 @@ void __automaton_fail(void) ;
 #line 7 "EncryptForward_spec.c"
 int in_encrypted  =    0;
 #line 11 "EncryptForward_spec.c"
-__inline void __utac_acc__EncryptForward_spec__1(int msg ) 
+ void __utac_acc__EncryptForward_spec__1(int msg ) 
 { char const   * __restrict  __cil_tmp2 ;
 
   {
@@ -2494,7 +2494,7 @@ __inline void __utac_acc__EncryptForward_spec__1(int msg )
 }
 }
 #line 19 "EncryptForward_spec.c"
-__inline void __utac_acc__EncryptForward_spec__2(int msg ) 
+ void __utac_acc__EncryptForward_spec__2(int msg ) 
 { int tmp ;
   char const   * __restrict  __cil_tmp3 ;
 

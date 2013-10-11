@@ -4141,7 +4141,7 @@ extern void msleep(unsigned int  ) ;
 extern int usb_control_msg(struct usb_device * , unsigned int  , __u8  , __u8  , __u16  ,
                            __u16  , void * , __u16  , int  ) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;

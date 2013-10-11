@@ -2646,9 +2646,9 @@ struct __anonstruct_235 {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2672,11 +2672,11 @@ extern int __attribute__((__warn_unused_result__))  _kstrtoul(char const   *s , 
 extern int __attribute__((__warn_unused_result__))  kstrtoull(char const   *s , unsigned int base ,
                                                               unsigned long long *res ) ;
 #line 220
-__inline static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
+ static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
                                                                       unsigned int base ,
                                                                       unsigned long *res )  __attribute__((__no_instrument_function__)) ;
 #line 220 "include/linux/kernel.h"
-__inline static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
+ static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
                                                                       unsigned int base ,
                                                                       unsigned long *res ) 
 { int tmp ;
@@ -2770,9 +2770,9 @@ extern int ( /* format attribute */  _dev_info)(struct device  const  *dev , cha
 extern s32 i2c_smbus_write_byte_data(struct i2c_client  const  *client , u8 command ,
                                      u8 value ) ;
 #line 242
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2794,9 +2794,9 @@ __inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )
 }
 }
 #line 247
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2825,9 +2825,9 @@ extern void __gpio_set_value(unsigned int gpio , int value ) ;
 #line 176
 extern int gpio_request_one(unsigned int gpio , unsigned long flags , char const   *label ) ;
 #line 31 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/gpio.h"
-__inline static void gpio_set_value(unsigned int gpio , int value )  __attribute__((__no_instrument_function__)) ;
+ static void gpio_set_value(unsigned int gpio , int value )  __attribute__((__no_instrument_function__)) ;
 #line 31 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/gpio.h"
-__inline static void gpio_set_value(unsigned int gpio , int value ) 
+ static void gpio_set_value(unsigned int gpio , int value ) 
 { 
 
   {
@@ -2850,10 +2850,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -2867,9 +2867,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -2885,9 +2885,9 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 #line 113 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12595/dscv_tempdir/dscv/ri/32_1/drivers/leds/leds-bd2802.c.common.c"
-__inline static int bd2802_is_rgb_off(struct bd2802_led *led , enum led_ids id , enum led_colors color )  __attribute__((__no_instrument_function__)) ;
+ static int bd2802_is_rgb_off(struct bd2802_led *led , enum led_ids id , enum led_colors color )  __attribute__((__no_instrument_function__)) ;
 #line 113 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12595/dscv_tempdir/dscv/ri/32_1/drivers/leds/leds-bd2802.c.common.c"
-__inline static int bd2802_is_rgb_off(struct bd2802_led *led , enum led_ids id , enum led_colors color ) 
+ static int bd2802_is_rgb_off(struct bd2802_led *led , enum led_ids id , enum led_colors color ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -3006,9 +3006,9 @@ __inline static int bd2802_is_rgb_off(struct bd2802_led *led , enum led_ids id ,
 }
 }
 #line 129
-__inline static int bd2802_is_led_off(struct bd2802_led *led , enum led_ids id )  __attribute__((__no_instrument_function__)) ;
+ static int bd2802_is_led_off(struct bd2802_led *led , enum led_ids id )  __attribute__((__no_instrument_function__)) ;
 #line 129 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12595/dscv_tempdir/dscv/ri/32_1/drivers/leds/leds-bd2802.c.common.c"
-__inline static int bd2802_is_led_off(struct bd2802_led *led , enum led_ids id ) 
+ static int bd2802_is_led_off(struct bd2802_led *led , enum led_ids id ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -3077,9 +3077,9 @@ __inline static int bd2802_is_led_off(struct bd2802_led *led , enum led_ids id )
 }
 }
 #line 137
-__inline static int bd2802_is_all_off(struct bd2802_led *led )  __attribute__((__no_instrument_function__)) ;
+ static int bd2802_is_all_off(struct bd2802_led *led )  __attribute__((__no_instrument_function__)) ;
 #line 137 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12595/dscv_tempdir/dscv/ri/32_1/drivers/leds/leds-bd2802.c.common.c"
-__inline static int bd2802_is_all_off(struct bd2802_led *led ) 
+ static int bd2802_is_all_off(struct bd2802_led *led ) 
 { int i ;
   int tmp___7 ;
   enum led_ids __cil_tmp4 ;
@@ -3121,9 +3121,9 @@ __inline static int bd2802_is_all_off(struct bd2802_led *led )
 }
 }
 #line 148
-__inline static u8 bd2802_get_base_offset(enum led_ids id , enum led_colors color )  __attribute__((__no_instrument_function__)) ;
+ static u8 bd2802_get_base_offset(enum led_ids id , enum led_colors color )  __attribute__((__no_instrument_function__)) ;
 #line 148 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12595/dscv_tempdir/dscv/ri/32_1/drivers/leds/leds-bd2802.c.common.c"
-__inline static u8 bd2802_get_base_offset(enum led_ids id , enum led_colors color ) 
+ static u8 bd2802_get_base_offset(enum led_ids id , enum led_colors color ) 
 { unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
   unsigned int __cil_tmp5 ;
@@ -3148,9 +3148,9 @@ __inline static u8 bd2802_get_base_offset(enum led_ids id , enum led_colors colo
 }
 }
 #line 153
-__inline static u8 bd2802_get_reg_addr(enum led_ids id , enum led_colors color , u8 reg_offset )  __attribute__((__no_instrument_function__)) ;
+ static u8 bd2802_get_reg_addr(enum led_ids id , enum led_colors color , u8 reg_offset )  __attribute__((__no_instrument_function__)) ;
 #line 153 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12595/dscv_tempdir/dscv/ri/32_1/drivers/leds/leds-bd2802.c.common.c"
-__inline static u8 bd2802_get_reg_addr(enum led_ids id , enum led_colors color , u8 reg_offset ) 
+ static u8 bd2802_get_reg_addr(enum led_ids id , enum led_colors color , u8 reg_offset ) 
 { u8 tmp___7 ;
   int __cil_tmp5 ;
   int __cil_tmp6 ;

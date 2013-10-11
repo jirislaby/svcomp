@@ -3634,7 +3634,7 @@ typedef struct poll_table_struct poll_table;
 # 1 "<compiler builtins>"
 
 # 98 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void clear_bit(int nr , unsigned long volatile *addr )
+ static void clear_bit(int nr , unsigned long volatile *addr )
 {
 
   {
@@ -3645,7 +3645,7 @@ __inline static void clear_bit(int nr , unsigned long volatile *addr )
 }
 }
 # 195 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int test_and_set_bit(int nr , unsigned long volatile *addr )
+ static int test_and_set_bit(int nr , unsigned long volatile *addr )
 { int oldbit ;
 
   {
@@ -3657,7 +3657,7 @@ __inline static int test_and_set_bit(int nr , unsigned long volatile *addr )
 }
 }
 # 315 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile *addr )
+ static int variable_test_bit(int nr , unsigned long const volatile *addr )
 { int oldbit ;
 
   {
@@ -3685,7 +3685,7 @@ extern void __bad_percpu_size(void) ;
 # 10 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 # 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void)
+ static struct task_struct *get_current(void)
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -3742,7 +3742,7 @@ extern char *strncpy(char * , char const * , __kernel_size_t ) ;
 # 67 "include/linux/string.h"
 extern char *strim(char * ) ;
 # 69 "include/linux/string.h"
-__inline static char *strstrip(char *str )
+ static char *strstrip(char *str )
 { char *tmp ;
 
   {
@@ -3755,7 +3755,7 @@ __inline static char *strstrip(char *str )
 }
 }
 # 23 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const *v )
+ static int atomic_read(atomic_t const *v )
 {
 
   {
@@ -3764,7 +3764,7 @@ __inline static int atomic_read(atomic_t const *v )
 }
 }
 # 35 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i )
+ static void atomic_set(atomic_t *v , int i )
 {
 
   {
@@ -3775,7 +3775,7 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 # 47 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_add(int i , atomic_t *v )
+ static void atomic_add(int i , atomic_t *v )
 {
 
   {
@@ -3786,7 +3786,7 @@ __inline static void atomic_add(int i , atomic_t *v )
 }
 }
 # 105 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v )
+ static void atomic_dec(atomic_t *v )
 {
 
   {
@@ -3797,7 +3797,7 @@ __inline static void atomic_dec(atomic_t *v )
 }
 }
 # 119 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_dec_and_test(atomic_t *v )
+ static int atomic_dec_and_test(atomic_t *v )
 { unsigned char c ;
 
   {
@@ -3809,7 +3809,7 @@ __inline static int atomic_dec_and_test(atomic_t *v )
 }
 }
 # 137 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_inc_and_test(atomic_t *v )
+ static int atomic_inc_and_test(atomic_t *v )
 { unsigned char c ;
 
   {
@@ -3821,7 +3821,7 @@ __inline static int atomic_inc_and_test(atomic_t *v )
 }
 }
 # 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag )
+ static int test_ti_thread_flag(struct thread_info *ti , int flag )
 { int tmp ;
 
   {
@@ -3838,7 +3838,7 @@ extern void _raw_spin_lock(raw_spinlock_t * ) ;
 # 39 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock(raw_spinlock_t * ) ;
 # 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock )
+ static void spin_lock(spinlock_t *lock )
 {
 
   {
@@ -3851,7 +3851,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 # 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock )
+ static void spin_unlock(spinlock_t *lock )
 {
 
   {
@@ -3866,7 +3866,7 @@ __inline static void spin_unlock(spinlock_t *lock )
 # 30 "include/linux/wait.h"
 extern int default_wake_function(wait_queue_t * , unsigned int , int , void * ) ;
 # 98 "include/linux/wait.h"
-__inline static void init_waitqueue_entry(wait_queue_t *q , struct task_struct *p )
+ static void init_waitqueue_entry(wait_queue_t *q , struct task_struct *p )
 {
 
   {
@@ -3913,7 +3913,7 @@ unsigned int ldv_module_refcount(void) ;
 # 7 "/anthill/stuff/tacas-comp/work/current--X--drivers/char/ipmi/ipmi_watchdog.ko--X--safelinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/char/ipmi/ipmi_watchdog.c.p"
 void ldv_module_put_and_exit(void) ;
 # 891 "include/linux/fs.h"
-__inline static unsigned int iminor(struct inode const *inode )
+ static unsigned int iminor(struct inode const *inode )
 {
 
   {
@@ -3959,7 +3959,7 @@ extern unsigned long _copy_to_user(void * , void const * , unsigned int ) ;
 # 42 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_from_user(void * , void const * , unsigned int ) ;
 # 46 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long copy_from_user(void *to , void const *from , unsigned long n )
+ static unsigned long copy_from_user(void *to , void const *from , unsigned long n )
 { int sz ;
   unsigned long tmp ;
   int __ret_warn_on ;
@@ -4023,7 +4023,7 @@ __inline static unsigned long copy_from_user(void *to , void const *from , unsig
 }
 }
 # 63 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const *src , unsigned int size )
+ static int copy_to_user(void *dst , void const *src , unsigned int size )
 { unsigned long tmp ;
 
   {
@@ -4042,7 +4042,7 @@ extern long schedule_timeout_uninterruptible(long ) ;
 # 361 "include/linux/sched.h"
 extern void schedule(void) ;
 # 2441 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 { int tmp ;
 
   {
@@ -4055,7 +4055,7 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 # 2467 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p )
+ static int signal_pending(struct task_struct *p )
 { int tmp ;
   long tmp___0 ;
 
@@ -4075,7 +4075,7 @@ extern int register_reboot_notifier(struct notifier_block * ) ;
 # 43 "include/linux/reboot.h"
 extern int unregister_reboot_notifier(struct notifier_block * ) ;
 # 40 "include/linux/poll.h"
-__inline static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
+ static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
                                poll_table *p )
 {
 

@@ -7200,9 +7200,9 @@ extern int usb_register_driver(struct usb_driver * , struct module * , char cons
 #line 962
 extern void usb_deregister(struct usb_driver * ) ;
 #line 395 "include/linux/i2c.h"
-__inline static void *i2c_get_adapdata(struct i2c_adapter  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *i2c_get_adapdata(struct i2c_adapter  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 395 "include/linux/i2c.h"
-__inline static void *i2c_get_adapdata(struct i2c_adapter  const  *dev ) 
+ static void *i2c_get_adapdata(struct i2c_adapter  const  *dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -7243,9 +7243,9 @@ extern void *__symbol_get(char const   *symbol ) ;
 #line 447
 extern void __symbol_put(char const   *symbol ) ;
 #line 78 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/dvb-usb/dvb-usb.h"
-__inline static u8 rc5_custom(struct rc_map_table *key )  __attribute__((__no_instrument_function__)) ;
+ static u8 rc5_custom(struct rc_map_table *key )  __attribute__((__no_instrument_function__)) ;
 #line 78 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/dvb-usb/dvb-usb.h"
-__inline static u8 rc5_custom(struct rc_map_table *key ) 
+ static u8 rc5_custom(struct rc_map_table *key ) 
 { u32 __cil_tmp2 ;
   u32 __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -7264,9 +7264,9 @@ __inline static u8 rc5_custom(struct rc_map_table *key )
 }
 }
 #line 83
-__inline static u8 rc5_data(struct rc_map_table *key )  __attribute__((__no_instrument_function__)) ;
+ static u8 rc5_data(struct rc_map_table *key )  __attribute__((__no_instrument_function__)) ;
 #line 83 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/dvb-usb/dvb-usb.h"
-__inline static u8 rc5_data(struct rc_map_table *key ) 
+ static u8 rc5_data(struct rc_map_table *key ) 
 { u32 __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
 
@@ -7292,9 +7292,9 @@ extern int dvb_usb_generic_rw(struct dvb_usb_device * , u8 * , u16  , u8 * , u16
 #line 467
 extern int dvb_usb_generic_write(struct dvb_usb_device * , u8 * , u16  ) ;
 #line 66 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/frontends/mt352.h"
-__inline static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len )  __attribute__((__no_instrument_function__)) ;
+ static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len )  __attribute__((__no_instrument_function__)) ;
 #line 66 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/frontends/mt352.h"
-__inline static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len ) 
+ static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len ) 
 { int r ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;

@@ -3950,7 +3950,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long  volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long  volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -3972,7 +3972,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void) 
+ static struct task_struct *get_current(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -4039,7 +4039,7 @@ __inline static struct task_struct *get_current(void)
 #line 735 "include/linux/cpumask.h"
 extern unsigned long    cpu_bit_bitmap[65U][64U] ;
 #line 737 "include/linux/cpumask.h"
-__inline static struct cpumask    *get_cpu_mask(unsigned int cpu ) 
+ static struct cpumask    *get_cpu_mask(unsigned int cpu ) 
 { unsigned long    *p ;
   unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -4073,7 +4073,7 @@ __inline static struct cpumask    *get_cpu_mask(unsigned int cpu )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void    *ptr ) 
+ static long IS_ERR(void    *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4099,7 +4099,7 @@ extern void __cmpxchg_wrong_size(void) ;
 #line 15
 extern void __xadd_wrong_size(void) ;
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t    *v ) 
+ static int atomic_read(atomic_t    *v ) 
 { int    *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -4118,7 +4118,7 @@ __inline static int atomic_read(atomic_t    *v )
 }
 }
 #line 35 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i ) 
+ static void atomic_set(atomic_t *v , int i ) 
 { 
 
   {
@@ -4129,7 +4129,7 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 #line 93 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v ) 
+ static void atomic_inc(atomic_t *v ) 
 { 
 
   {
@@ -4140,7 +4140,7 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 #line 105 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v ) 
+ static void atomic_dec(atomic_t *v ) 
 { 
 
   {
@@ -4151,7 +4151,7 @@ __inline static void atomic_dec(atomic_t *v )
 }
 }
 #line 173 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_add_return(int i , atomic_t *v ) 
+ static int atomic_add_return(int i , atomic_t *v ) 
 { int __ret ;
 
   {
@@ -4222,7 +4222,7 @@ __inline static int atomic_add_return(int i , atomic_t *v )
 }
 }
 #line 201 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_sub_return(int i , atomic_t *v ) 
+ static int atomic_sub_return(int i , atomic_t *v ) 
 { int tmp ;
   int __cil_tmp4 ;
 
@@ -4238,7 +4238,7 @@ __inline static int atomic_sub_return(int i , atomic_t *v )
 }
 }
 #line 209 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_cmpxchg(atomic_t *v , int old , int new ) 
+ static int atomic_cmpxchg(atomic_t *v , int old , int new ) 
 { int __ret ;
   int __old ;
   int __new ;
@@ -4337,7 +4337,7 @@ __inline static int atomic_cmpxchg(atomic_t *v , int old , int new )
 }
 }
 #line 228 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int __atomic_add_unless(atomic_t *v , int a , int u ) 
+ static int __atomic_add_unless(atomic_t *v , int a , int u ) 
 { int c ;
   int old ;
   long tmp ;
@@ -4401,7 +4401,7 @@ __inline static int __atomic_add_unless(atomic_t *v , int a , int u )
 }
 }
 #line 15 "include/linux/atomic.h"
-__inline static int atomic_add_unless(atomic_t *v , int a , int u ) 
+ static int atomic_add_unless(atomic_t *v , int a , int u ) 
 { int tmp ;
 
   {
@@ -4414,7 +4414,7 @@ __inline static int atomic_add_unless(atomic_t *v , int a , int u )
 }
 }
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4447,7 +4447,7 @@ extern void _raw_spin_unlock(raw_spinlock_t * ) ;
 #line 43
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -4456,7 +4456,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 283 "include/linux/spinlock.h"
-__inline static void ldv_spin_lock_1(spinlock_t *lock ) 
+ static void ldv_spin_lock_1(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -4471,9 +4471,9 @@ __inline static void ldv_spin_lock_1(spinlock_t *lock )
 }
 }
 #line 283
-__inline static void spin_lock(spinlock_t *lock ) ;
+ static void spin_lock(spinlock_t *lock ) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_5(spinlock_t *lock ) 
+ static void ldv_spin_unlock_5(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -4488,9 +4488,9 @@ __inline static void ldv_spin_unlock_5(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock ) ;
+ static void spin_unlock(spinlock_t *lock ) ;
 #line 350 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
+ static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -4505,7 +4505,7 @@ __inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned lo
 }
 }
 #line 350
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 79 "include/linux/wait.h"
 extern void __init_waitqueue_head(wait_queue_head_t * , char    * , struct lock_class_key * ) ;
 #line 155
@@ -4522,7 +4522,7 @@ extern void abort_exclusive_wait(wait_queue_head_t * , wait_queue_t * , unsigned
 #line 589
 extern int autoremove_wake_function(wait_queue_t * , unsigned int  , int  , void * ) ;
 #line 73 "include/linux/completion.h"
-__inline static void init_completion(struct completion *x ) 
+ static void init_completion(struct completion *x ) 
 { struct lock_class_key __key ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4570,7 +4570,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12523/dscv_tempdir/dscv/ri/43_1a/drivers/misc/sgi-xp/xpc_main.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -4606,7 +4606,7 @@ extern int set_cpus_allowed_ptr(struct task_struct * , struct cpumask    * ) ;
 #line 2194
 extern int wake_up_process(struct task_struct * ) ;
 #line 2563 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4631,7 +4631,7 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2589 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp ;
   long tmp___0 ;
   int __cil_tmp4 ;
@@ -4752,7 +4752,7 @@ void xpc_disconnect_channel(int    line , struct xpc_channel *ch , enum xp_retva
 #line 933
 void xpc_disconnect_callout(struct xpc_channel *ch , enum xp_retval reason ) ;
 #line 937 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/misc/sgi-xp/xpc.h"
-__inline static void xpc_wakeup_channel_mgr(struct xpc_partition *part ) 
+ static void xpc_wakeup_channel_mgr(struct xpc_partition *part ) 
 { int tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4795,7 +4795,7 @@ __inline static void xpc_wakeup_channel_mgr(struct xpc_partition *part )
 }
 }
 #line 948 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/misc/sgi-xp/xpc.h"
-__inline static void xpc_msgqueue_ref(struct xpc_channel *ch ) 
+ static void xpc_msgqueue_ref(struct xpc_channel *ch ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   atomic_t *__cil_tmp4 ;
@@ -4816,7 +4816,7 @@ __inline static void xpc_msgqueue_ref(struct xpc_channel *ch )
 }
 }
 #line 954 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/misc/sgi-xp/xpc.h"
-__inline static void xpc_msgqueue_deref(struct xpc_channel *ch ) 
+ static void xpc_msgqueue_deref(struct xpc_channel *ch ) 
 { s32 refs ;
   int tmp ;
   unsigned long __cil_tmp4 ;
@@ -4859,7 +4859,7 @@ __inline static void xpc_msgqueue_deref(struct xpc_channel *ch )
 }
 }
 #line 971 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/misc/sgi-xp/xpc.h"
-__inline static void xpc_part_deref(struct xpc_partition *part ) 
+ static void xpc_part_deref(struct xpc_partition *part ) 
 { s32 refs ;
   int tmp ;
   unsigned long __cil_tmp4 ;
@@ -4924,7 +4924,7 @@ __inline static void xpc_part_deref(struct xpc_partition *part )
 }
 }
 #line 981 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/misc/sgi-xp/xpc.h"
-__inline static int xpc_part_ref(struct xpc_partition *part ) 
+ static int xpc_part_ref(struct xpc_partition *part ) 
 { int setup ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -10837,7 +10837,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1666 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12523/dscv_tempdir/dscv/ri/43_1a/drivers/misc/sgi-xp/xpc_main.c.p"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { 
 
   {
@@ -10852,7 +10852,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 1708 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12523/dscv_tempdir/dscv/ri/43_1a/drivers/misc/sgi-xp/xpc_main.c.p"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { 
 
   {
@@ -10867,7 +10867,7 @@ __inline static void spin_unlock(spinlock_t *lock )
 }
 }
 #line 1738 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12523/dscv_tempdir/dscv/ri/43_1a/drivers/misc/sgi-xp/xpc_main.c.p"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {
@@ -10897,7 +10897,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1840 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12523/dscv_tempdir/dscv/ri/43_1a/drivers/misc/sgi-xp/xpc_main.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {
@@ -10912,11 +10912,11 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) ;
+ static void spin_lock(spinlock_t *lock ) ;
 #line 323
-__inline static void spin_unlock(spinlock_t *lock ) ;
+ static void spin_unlock(spinlock_t *lock ) ;
 #line 350
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 578 "include/linux/wait.h"
 extern long interruptible_sleep_on_timeout(wait_queue_head_t * , long  ) ;
 #line 168 "include/linux/mutex.h"
@@ -16382,7 +16382,7 @@ extern void *memset(void * , int  , size_t  ) ;
 #line 220 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
 extern unsigned long kernel_stack ;
 #line 222 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
-__inline static struct thread_info *current_thread_info(void) 
+ static struct thread_info *current_thread_info(void) 
 { struct thread_info *ti ;
   unsigned long pfo_ret__ ;
   unsigned long __cil_tmp3 ;
@@ -16453,13 +16453,13 @@ __inline static struct thread_info *current_thread_info(void)
 }
 }
 #line 350 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 39 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/smp.h"
 extern int cpu_number ;
 #line 225 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -16472,9 +16472,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 338 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/misc/sgi-xp/xp.h"
 extern u8 xp_region_size ;
 #line 340
@@ -19330,7 +19330,7 @@ enum xp_retval xpc_initiate_partid_to_nasids(short partid , void *nasid_mask )
 }
 }
 #line 675 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12523/dscv_tempdir/dscv/ri/43_1a/drivers/misc/sgi-xp/xpc_partition.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -19347,7 +19347,7 @@ __inline static void *kmalloc(size_t size , gfp_t flags )
 #line 1 "<compiler builtins>"
 
 #line 482 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int fls64(__u64 x ) 
+ static int fls64(__u64 x ) 
 { long bitpos ;
   unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -19370,7 +19370,7 @@ __inline static int fls64(__u64 x )
 #line 61 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/page_64_types.h"
 extern unsigned long __phys_addr(unsigned long  ) ;
 #line 13 "include/asm-generic/getorder.h"
-__inline static int __get_order(unsigned long size ) 
+ static int __get_order(unsigned long size ) 
 { int order ;
   __u64 __cil_tmp3 ;
 
@@ -19392,7 +19392,7 @@ __inline static int __get_order(unsigned long size )
 #line 540 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/percpu.h"
 extern unsigned long this_cpu_off ;
 #line 22 "include/linux/err.h"
-__inline static void *ERR_PTR(long error ) 
+ static void *ERR_PTR(long error ) 
 { 
 
   {
@@ -19401,7 +19401,7 @@ __inline static void *ERR_PTR(long error )
 }
 }
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void    *ptr ) 
+ static long PTR_ERR(void    *ptr ) 
 { 
 
   {
@@ -19410,11 +19410,11 @@ __inline static long PTR_ERR(void    *ptr )
 }
 }
 #line 350 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 392 "include/linux/nodemask.h"
 extern nodemask_t node_states[4U] ;
 #line 395 "include/linux/nodemask.h"
-__inline static int node_state(int node , enum node_states state ) 
+ static int node_state(int node , enum node_states state ) 
 { int tmp ;
   unsigned int __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -19450,7 +19450,7 @@ extern pg_data_t *node_data[] ;
 #line 57 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/topology.h"
 extern int __cpu_to_node(int  ) ;
 #line 84 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned long readq(void  volatile   *addr ) 
+ static unsigned long readq(void  volatile   *addr ) 
 { unsigned long ret ;
   unsigned long volatile   *__cil_tmp3 ;
 
@@ -19464,7 +19464,7 @@ __inline static unsigned long readq(void  volatile   *addr )
 }
 }
 #line 265 "include/linux/gfp.h"
-__inline static int gfp_zonelist(gfp_t flags ) 
+ static int gfp_zonelist(gfp_t flags ) 
 { long tmp ;
   unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -19493,7 +19493,7 @@ __inline static int gfp_zonelist(gfp_t flags )
 }
 }
 #line 282 "include/linux/gfp.h"
-__inline static struct zonelist *node_zonelist(int nid , gfp_t flags ) 
+ static struct zonelist *node_zonelist(int nid , gfp_t flags ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -19535,7 +19535,7 @@ __inline static struct zonelist *node_zonelist(int nid , gfp_t flags )
 extern struct page *__alloc_pages_nodemask(gfp_t  , unsigned int  , struct zonelist * ,
                                            nodemask_t * ) ;
 #line 299 "include/linux/gfp.h"
-__inline static struct page *__alloc_pages(gfp_t gfp_mask , unsigned int order , struct zonelist *zonelist ) 
+ static struct page *__alloc_pages(gfp_t gfp_mask , unsigned int order , struct zonelist *zonelist ) 
 { struct page *tmp ;
   nodemask_t *__cil_tmp5 ;
 
@@ -19551,7 +19551,7 @@ __inline static struct page *__alloc_pages(gfp_t gfp_mask , unsigned int order ,
 }
 }
 #line 315 "include/linux/gfp.h"
-__inline static struct page *alloc_pages_exact_node(int nid , gfp_t gfp_mask , unsigned int order ) 
+ static struct page *alloc_pages_exact_node(int nid , gfp_t gfp_mask , unsigned int order ) 
 { long tmp ;
   long tmp___0 ;
   int tmp___1 ;
@@ -19641,11 +19641,11 @@ __inline static struct page *alloc_pages_exact_node(int nid , gfp_t gfp_mask , u
 #line 361
 extern void free_pages(unsigned long  , unsigned int  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 737 "include/linux/mm.h"
-__inline static void *lowmem_page_address(struct page    *page ) 
+ static void *lowmem_page_address(struct page    *page ) 
 { long __cil_tmp2 ;
   long __cil_tmp3 ;
   long __cil_tmp4 ;
@@ -19680,7 +19680,7 @@ extern int request_threaded_irq(unsigned int  , irqreturn_t (*)(int  , void * ) 
                                 irqreturn_t (*)(int  , void * ) , unsigned long  ,
                                 char    * , void * ) ;
 #line 132 "include/linux/interrupt.h"
-__inline static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
+ static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
                                 unsigned long flags , char    *name , void *dev ) 
 { int tmp ;
   irqreturn_t (*__cil_tmp7)(int  , void * ) ;
@@ -19701,7 +19701,7 @@ extern void free_irq(unsigned int  , void * ) ;
 #line 166 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
 extern struct uv_hub_info_s __uv_hub_info ;
 #line 294 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static unsigned long uv_soc_phys_ram_to_gpa(unsigned long paddr ) 
+ static unsigned long uv_soc_phys_ram_to_gpa(unsigned long paddr ) 
 { unsigned long tcp_ptr__ ;
   void    *__vpp_verify ;
   unsigned long tcp_ptr_____0 ;
@@ -19879,7 +19879,7 @@ __inline static unsigned long uv_soc_phys_ram_to_gpa(unsigned long paddr )
 }
 }
 #line 306 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static unsigned long uv_gpa(void *v ) 
+ static unsigned long uv_gpa(void *v ) 
 { unsigned long tmp ;
   unsigned long tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -19898,7 +19898,7 @@ __inline static unsigned long uv_gpa(void *v )
 }
 }
 #line 404 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static void volatile   *uv_global_mmr64_address(int pnode , unsigned long offset ) 
+ static void volatile   *uv_global_mmr64_address(int pnode , unsigned long offset ) 
 { unsigned long tcp_ptr__ ;
   void    *__vpp_verify ;
   unsigned long __cil_tmp5 ;
@@ -19935,7 +19935,7 @@ __inline static void volatile   *uv_global_mmr64_address(int pnode , unsigned lo
 }
 }
 #line 415 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static unsigned long uv_read_global_mmr64(int pnode , unsigned long offset ) 
+ static unsigned long uv_read_global_mmr64(int pnode , unsigned long offset ) 
 { void volatile   *tmp ;
   unsigned long tmp___0 ;
   void  volatile   *__cil_tmp5 ;
@@ -19958,7 +19958,7 @@ extern struct uv_blade_info *uv_blade_info ;
 #line 483
 extern short *uv_cpu_to_blade ;
 #line 499 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static int uv_cpu_to_blade_id(int cpu ) 
+ static int uv_cpu_to_blade_id(int cpu ) 
 { unsigned long __cil_tmp2 ;
   short *__cil_tmp3 ;
   short __cil_tmp4 ;
@@ -19977,7 +19977,7 @@ __inline static int uv_cpu_to_blade_id(int cpu )
 }
 }
 #line 511 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static int uv_blade_to_pnode(int bid ) 
+ static int uv_blade_to_pnode(int bid ) 
 { unsigned long __cil_tmp2 ;
   struct uv_blade_info *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -20002,7 +20002,7 @@ __inline static int uv_blade_to_pnode(int bid )
 }
 }
 #line 535 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static int uv_cpu_to_pnode(int cpu ) 
+ static int uv_cpu_to_pnode(int cpu ) 
 { int tmp ;
   unsigned long __cil_tmp3 ;
   struct uv_blade_info *__cil_tmp4 ;

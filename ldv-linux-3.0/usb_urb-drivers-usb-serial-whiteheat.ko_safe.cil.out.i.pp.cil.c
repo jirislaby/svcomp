@@ -4910,11 +4910,11 @@ struct whiteheat_private {
 #line 1 "<compiler builtins>"
 
 #line 7 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/swab.h"
-__inline static __u32 __arch_swab32(__u32 val )  __attribute__((__const__)) ;
+ static __u32 __arch_swab32(__u32 val )  __attribute__((__const__)) ;
 #line 7
-__inline static __u32 __arch_swab32(__u32 val )  __attribute__((__const__)) ;
+ static __u32 __arch_swab32(__u32 val )  __attribute__((__const__)) ;
 #line 7 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/swab.h"
-__inline static __u32 __arch_swab32(__u32 val ) 
+ static __u32 __arch_swab32(__u32 val ) 
 { 
 
   {
@@ -4925,11 +4925,11 @@ __inline static __u32 __arch_swab32(__u32 val )
 }
 }
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val )  __attribute__((__const__)) ;
+ static __u16 __fswab16(__u16 val )  __attribute__((__const__)) ;
 #line 46
-__inline static __u16 __fswab16(__u16 val )  __attribute__((__const__)) ;
+ static __u16 __fswab16(__u16 val )  __attribute__((__const__)) ;
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4960,11 +4960,11 @@ __inline static __u16 __fswab16(__u16 val )
 }
 }
 #line 55
-__inline static __u32 __fswab32(__u32 val )  __attribute__((__const__)) ;
+ static __u32 __fswab32(__u32 val )  __attribute__((__const__)) ;
 #line 55
-__inline static __u32 __fswab32(__u32 val )  __attribute__((__const__)) ;
+ static __u32 __fswab32(__u32 val )  __attribute__((__const__)) ;
 #line 55 "include/linux/swab.h"
-__inline static __u32 __fswab32(__u32 val ) 
+ static __u32 __fswab32(__u32 val ) 
 { __u32 tmp ;
 
   {
@@ -4985,7 +4985,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
   int __cil_tmp2 ;
   int __cil_tmp3 ;
@@ -5102,7 +5102,7 @@ extern void *__memcpy(void *to , void const   *from , size_t len ) ;
 #line 55
 extern void *memset(void *s , int c , size_t n ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { 
 
   {
@@ -5117,7 +5117,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head ) 
+ static void list_add(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -5132,7 +5132,7 @@ __inline static void list_add(struct list_head *new , struct list_head *head )
 }
 }
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -5151,7 +5151,7 @@ extern void __list_del_entry(struct list_head *entry ) ;
 #line 112
 extern void list_del(struct list_head *entry ) ;
 #line 153 "include/linux/list.h"
-__inline static void list_move(struct list_head *list , struct list_head *head ) 
+ static void list_move(struct list_head *list , struct list_head *head ) 
 { 
 
   {
@@ -5166,7 +5166,7 @@ __inline static void list_move(struct list_head *list , struct list_head *head )
 }
 }
 #line 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head  const  *head ) 
+ static int list_empty(struct list_head  const  *head ) 
 { unsigned long __cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5202,7 +5202,7 @@ extern void _raw_spin_unlock_irq(raw_spinlock_t *lock )  __attribute__((__sectio
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -5211,7 +5211,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -5226,7 +5226,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 308 "include/linux/spinlock.h"
-__inline static void spin_lock_irq(spinlock_t *lock ) 
+ static void spin_lock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -5241,7 +5241,7 @@ __inline static void spin_lock_irq(spinlock_t *lock )
 }
 }
 #line 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -5256,7 +5256,7 @@ __inline static void spin_unlock(spinlock_t *lock )
 }
 }
 #line 333 "include/linux/spinlock.h"
-__inline static void spin_unlock_irq(spinlock_t *lock ) 
+ static void spin_unlock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -5271,7 +5271,7 @@ __inline static void spin_unlock_irq(spinlock_t *lock )
 }
 }
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp3 ;
 
   {
@@ -5322,7 +5322,7 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -5340,7 +5340,7 @@ extern unsigned long __attribute__((__warn_unused_result__))  _copy_to_user(void
                                                                             void const   *from ,
                                                                             unsigned int len ) ;
 #line 62 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void const   *src ,
                                                                                                                 unsigned int size ) 
 { unsigned long tmp ;
@@ -5397,7 +5397,7 @@ extern struct tty_struct *tty_port_tty_get(struct tty_port *port ) ;
 extern int tty_insert_flip_string_fixed_flag(struct tty_struct *tty , unsigned char const   *chars ,
                                              char flag , size_t size ) ;
 #line 23 "include/linux/tty_flip.h"
-__inline static int tty_insert_flip_string(struct tty_struct *tty , unsigned char const   *chars ,
+ static int tty_insert_flip_string(struct tty_struct *tty , unsigned char const   *chars ,
                                            size_t size ) 
 { int tmp ;
 
@@ -5415,7 +5415,7 @@ extern long schedule_timeout(long timeout ) ;
 #line 929 "include/linux/usb.h"
 extern int usb_register_driver(struct usb_driver * , struct module * , char const   * ) ;
 #line 931 "include/linux/usb.h"
-__inline static int usb_register(struct usb_driver *driver ) 
+ static int usb_register(struct usb_driver *driver ) 
 { int tmp___7 ;
 
   {
@@ -5430,7 +5430,7 @@ __inline static int usb_register(struct usb_driver *driver )
 #line 935
 extern void usb_deregister(struct usb_driver * ) ;
 #line 1268 "include/linux/usb.h"
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context ) 
@@ -5472,7 +5472,7 @@ extern int usb_bulk_msg(struct usb_device *usb_dev , unsigned int pipe , void *d
 #line 1420
 extern int usb_clear_halt(struct usb_device *dev , int pipe ) ;
 #line 1526 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -5494,7 +5494,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 127 "include/linux/usb/serial.h"
-__inline static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
+ static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
 { void *tmp___7 ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -5513,7 +5513,7 @@ __inline static void *usb_get_serial_port_data(struct usb_serial_port *port )
 }
 }
 #line 132 "include/linux/usb/serial.h"
-__inline static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
+ static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
 { struct device *__cil_tmp3 ;
 
   {
@@ -5543,7 +5543,7 @@ extern int ezusb_writememory(struct usb_serial *serial , int address , unsigned 
 #line 311
 extern int ezusb_set_reset(struct usb_serial *serial , unsigned char reset_bit ) ;
 #line 363 "include/linux/usb/serial.h"
-__inline static void usb_serial_debug_data(int debug , struct device *dev , char const   *function ,
+ static void usb_serial_debug_data(int debug , struct device *dev , char const   *function ,
                                            int size , unsigned char const   *data ) 
 { int i ;
   struct device  const  *__cil_tmp7 ;
@@ -5607,7 +5607,7 @@ extern int request_firmware(struct firmware  const  **fw , char const   *name , 
 #line 46
 extern void release_firmware(struct firmware  const  *fw ) ;
 #line 24 "include/linux/ihex.h"
-__inline static struct ihex_binrec  const  *ihex_next_binrec(struct ihex_binrec  const  *rec ) 
+ static struct ihex_binrec  const  *ihex_next_binrec(struct ihex_binrec  const  *rec ) 
 { int next ;
   __u16 tmp___7 ;
   struct ihex_binrec  const  *tmp___9 ;
@@ -5667,7 +5667,7 @@ __inline static struct ihex_binrec  const  *ihex_next_binrec(struct ihex_binrec 
 }
 }
 #line 34 "include/linux/ihex.h"
-__inline static int ihex_validate_fw(struct firmware  const  *fw ) 
+ static int ihex_validate_fw(struct firmware  const  *fw ) 
 { struct ihex_binrec  const  *rec ;
   size_t ofs ;
   __u16 tmp___7 ;
@@ -5767,7 +5767,7 @@ __inline static int ihex_validate_fw(struct firmware  const  *fw )
 }
 }
 #line 54 "include/linux/ihex.h"
-__inline static int request_ihex_firmware(struct firmware  const  **fw , char const   *fw_name ,
+ static int request_ihex_firmware(struct firmware  const  **fw , char const   *fw_name ,
                                           struct device *dev ) 
 { struct firmware  const  *lfw ;
   int ret ;

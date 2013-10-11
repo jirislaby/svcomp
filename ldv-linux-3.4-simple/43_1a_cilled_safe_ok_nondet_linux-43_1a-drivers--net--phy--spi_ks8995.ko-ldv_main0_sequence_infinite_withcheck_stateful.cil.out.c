@@ -2457,7 +2457,7 @@ int ldv_spin_trylock(void) ;
 #line 101 "include/linux/printk.h"
 extern int printk(char const   *  , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2477,7 +2477,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -2518,7 +2518,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/15084/dscv_tempdir/dscv/ri/43_1a/drivers/net/phy/spi_ks8995.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2544,7 +2544,7 @@ extern int _dev_info(struct device  const  * , char const   *  , ...) ;
 #line 31 "include/linux/spi/spi.h"
 extern struct bus_type spi_bus_type ;
 #line 111 "include/linux/spi/spi.h"
-__inline static struct spi_device *spi_dev_get(struct spi_device *spi ) 
+ static struct spi_device *spi_dev_get(struct spi_device *spi ) 
 { struct spi_device *tmp___0 ;
   struct device *tmp___1 ;
   struct spi_device *__cil_tmp5 ;
@@ -2599,7 +2599,7 @@ __inline static struct spi_device *spi_dev_get(struct spi_device *spi )
 #line 191
 extern int spi_register_driver(struct spi_driver * ) ;
 #line 198 "include/linux/spi/spi.h"
-__inline static void spi_unregister_driver(struct spi_driver *sdrv ) 
+ static void spi_unregister_driver(struct spi_driver *sdrv ) 
 { struct spi_driver *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2636,7 +2636,7 @@ __inline static void spi_unregister_driver(struct spi_driver *sdrv )
 }
 }
 #line 573 "include/linux/spi/spi.h"
-__inline static void spi_message_init(struct spi_message *m ) 
+ static void spi_message_init(struct spi_message *m ) 
 { void *__cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
 
@@ -2656,7 +2656,7 @@ __inline static void spi_message_init(struct spi_message *m )
 }
 }
 #line 580 "include/linux/spi/spi.h"
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -2684,7 +2684,7 @@ extern int spi_setup(struct spi_device * ) ;
 #line 630
 extern int spi_sync(struct spi_device * , struct spi_message * ) ;
 #line 113 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/15084/dscv_tempdir/dscv/ri/43_1a/drivers/net/phy/spi_ks8995.c.p"
-__inline static u8 get_chip_id(u8 val ) 
+ static u8 get_chip_id(u8 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
 
@@ -2700,7 +2700,7 @@ __inline static u8 get_chip_id(u8 val )
 }
 }
 #line 118 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/15084/dscv_tempdir/dscv/ri/43_1a/drivers/net/phy/spi_ks8995.c.p"
-__inline static u8 get_chip_rev(u8 val ) 
+ static u8 get_chip_rev(u8 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   u8 __cil_tmp4 ;
@@ -2978,7 +2978,7 @@ static int ks8995_write(struct ks8995_switch *ks , char *buf , unsigned int offs
 }
 }
 #line 190 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/15084/dscv_tempdir/dscv/ri/43_1a/drivers/net/phy/spi_ks8995.c.p"
-__inline static int ks8995_write_reg(struct ks8995_switch *ks , u8 addr , u8 val ) 
+ static int ks8995_write_reg(struct ks8995_switch *ks , u8 addr , u8 val ) 
 { char buf ;
   int tmp ;
   char *__cil_tmp6 ;
@@ -3983,7 +3983,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1241 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/15084/dscv_tempdir/dscv/ri/43_1a/drivers/net/phy/spi_ks8995.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

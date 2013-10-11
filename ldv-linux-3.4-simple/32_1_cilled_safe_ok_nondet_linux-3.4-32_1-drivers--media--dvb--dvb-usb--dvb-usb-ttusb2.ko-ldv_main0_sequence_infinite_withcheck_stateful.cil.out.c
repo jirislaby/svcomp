@@ -7239,9 +7239,9 @@ extern void *dev_get_drvdata(struct device  const  *dev ) ;
 #line 46 "include/linux/delay.h"
 extern void msleep(unsigned int msecs ) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) 
+ static void *usb_get_intfdata(struct usb_interface *intf ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -7276,9 +7276,9 @@ extern void rc_keydown(struct rc_dev *dev , int scancode , u8 toggle ) ;
 #line 146
 extern void rc_keyup(struct rc_dev *dev ) ;
 #line 395 "include/linux/i2c.h"
-__inline static void *i2c_get_adapdata(struct i2c_adapter  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *i2c_get_adapdata(struct i2c_adapter  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 395 "include/linux/i2c.h"
-__inline static void *i2c_get_adapdata(struct i2c_adapter  const  *dev ) 
+ static void *i2c_get_adapdata(struct i2c_adapter  const  *dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -7323,10 +7323,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -7340,9 +7340,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 

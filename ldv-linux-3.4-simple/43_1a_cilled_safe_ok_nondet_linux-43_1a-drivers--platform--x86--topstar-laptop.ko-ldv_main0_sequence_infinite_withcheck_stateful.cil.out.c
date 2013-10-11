@@ -3781,7 +3781,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12334/dscv_tempdir/dscv/ri/43_1a/drivers/platform/x86/topstar-laptop.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -3794,7 +3794,7 @@ struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 extern acpi_status acpi_evaluate_object(acpi_handle  , acpi_string  , struct acpi_object_list * ,
                                         struct acpi_buffer * ) ;
 #line 279 "include/acpi/acpi_bus.h"
-__inline static void *acpi_driver_data(struct acpi_device *d ) 
+ static void *acpi_driver_data(struct acpi_device *d ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -4613,7 +4613,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 661 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12334/dscv_tempdir/dscv/ri/43_1a/drivers/platform/x86/topstar-laptop.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

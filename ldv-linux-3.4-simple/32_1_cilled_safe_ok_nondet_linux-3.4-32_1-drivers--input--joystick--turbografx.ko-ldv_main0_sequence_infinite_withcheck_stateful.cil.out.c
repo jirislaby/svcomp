@@ -2352,10 +2352,10 @@ struct tgfx {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -2380,9 +2380,9 @@ extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 extern int ( /* format attribute */  snprintf)(char *buf , size_t size , char const   *fmt 
                                                , ...) ;
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )  __attribute__((__no_instrument_function__)) ;
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )  __attribute__((__no_instrument_function__)) ;
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
 { 
 
   {
@@ -2391,9 +2391,9 @@ __inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long erro
 }
 }
 #line 27
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2402,9 +2402,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2458,10 +2458,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -2475,9 +2475,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -2516,9 +2516,9 @@ extern struct input_dev *input_allocate_device(void) ;
 #line 1457
 extern void input_free_device(struct input_dev *dev ) ;
 #line 1470
-__inline static void *input_get_drvdata(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *input_get_drvdata(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1470 "include/linux/input.h"
-__inline static void *input_get_drvdata(struct input_dev *dev ) 
+ static void *input_get_drvdata(struct input_dev *dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2543,9 +2543,9 @@ __inline static void *input_get_drvdata(struct input_dev *dev )
 }
 }
 #line 1475
-__inline static void input_set_drvdata(struct input_dev *dev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void input_set_drvdata(struct input_dev *dev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 1475 "include/linux/input.h"
-__inline static void input_set_drvdata(struct input_dev *dev , void *data ) 
+ static void input_set_drvdata(struct input_dev *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2573,10 +2573,10 @@ extern void input_unregister_device(struct input_dev * ) ;
 extern void input_event(struct input_dev *dev , unsigned int type , unsigned int code ,
                         int value ) ;
 #line 1505
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value )  __attribute__((__no_instrument_function__)) ;
 #line 1505 "include/linux/input.h"
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -2595,10 +2595,10 @@ __inline static void input_report_key(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1515
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value )  __attribute__((__no_instrument_function__)) ;
 #line 1515 "include/linux/input.h"
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { 
 
@@ -2612,9 +2612,9 @@ __inline static void input_report_abs(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1530
-__inline static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
+ static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {

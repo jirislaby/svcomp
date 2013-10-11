@@ -8158,9 +8158,9 @@ void mutex_unlock(struct mutex *lock ) ;
 #line 170
 int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned int readl(void const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int readl(void const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned int readl(void const volatile   *addr ) 
+ static unsigned int readl(void const volatile   *addr ) 
 { unsigned int ret ;
   unsigned int volatile   *__cil_tmp3 ;
 
@@ -8176,9 +8176,9 @@ __inline static unsigned int readl(void const volatile   *addr )
 }
 }
 #line 63
-__inline static void writel(unsigned int val , void volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void writel(unsigned int val , void volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writel(unsigned int val , void volatile   *addr ) 
+ static void writel(unsigned int val , void volatile   *addr ) 
 { unsigned int volatile   *__cil_tmp3 ;
 
   {
@@ -8197,10 +8197,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -8245,9 +8245,9 @@ extern int dvb_unregister_frontend(struct dvb_frontend *fe ) ;
 #line 397
 extern void dvb_frontend_detach(struct dvb_frontend *fe ) ;
 #line 110 "drivers/media/dvb/frontends/stv0299.h"
-__inline static int stv0299_writereg(struct dvb_frontend *fe , u8 reg , u8 val )  __attribute__((__no_instrument_function__)) ;
+ static int stv0299_writereg(struct dvb_frontend *fe , u8 reg , u8 val )  __attribute__((__no_instrument_function__)) ;
 #line 110 "drivers/media/dvb/frontends/stv0299.h"
-__inline static int stv0299_writereg(struct dvb_frontend *fe , u8 reg , u8 val ) 
+ static int stv0299_writereg(struct dvb_frontend *fe , u8 reg , u8 val ) 
 { int r ;
   u8 buf[2] ;
   unsigned long __cil_tmp6 ;

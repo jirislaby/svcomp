@@ -6856,7 +6856,7 @@ extern void *dev_get_drvdata(struct device  const  * ) ;
 #line 46 "include/linux/delay.h"
 extern void msleep(unsigned int  ) ;
 #line 523 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
 { struct device  const  *__mptr ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6884,7 +6884,7 @@ __inline static struct usb_device *interface_to_usbdev(struct usb_interface *int
 extern int usb_control_msg(struct usb_device * , unsigned int  , __u8  , __u8  , __u16  ,
                            __u16  , void * , __u16  , int  ) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -6906,7 +6906,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 395 "include/linux/i2c.h"
-__inline static void *i2c_get_adapdata(struct i2c_adapter  const  *dev ) 
+ static void *i2c_get_adapdata(struct i2c_adapter  const  *dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;

@@ -3800,7 +3800,7 @@ int valid_product(void)
 #line 4 "wsllib.h"
 void __automaton_fail(void) ;
 #line 13 "SignForward_spec.c"
-__inline void __utac_acc__SignForward_spec__1(int client , int msg ) 
+ void __utac_acc__SignForward_spec__1(int client , int msg ) 
 { int tmp ;
   int tmp___0 ;
 

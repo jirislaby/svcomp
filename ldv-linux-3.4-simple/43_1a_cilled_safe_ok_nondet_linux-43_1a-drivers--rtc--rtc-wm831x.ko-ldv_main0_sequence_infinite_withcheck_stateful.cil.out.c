@@ -2183,7 +2183,7 @@ extern int __dynamic_dev_dbg(struct _ddebug * , struct device  const  * , char c
 #line 60 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern int memcmp(void const   * , void const   * , size_t  ) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2192,7 +2192,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2238,7 +2238,7 @@ extern void rtc_time_to_tm(unsigned long  , struct rtc_time * ) ;
 #line 553 "include/linux/device.h"
 extern void *devm_kzalloc(struct device * , size_t  , gfp_t  ) ;
 #line 70 "include/linux/pm_wakeup.h"
-__inline static bool device_may_wakeup(struct device *dev ) 
+ static bool device_may_wakeup(struct device *dev ) 
 { int tmp ;
   unsigned char *__cil_tmp3 ;
   unsigned char *__cil_tmp4 ;
@@ -2323,7 +2323,7 @@ extern void msleep(unsigned int  ) ;
 #line 49 "include/linux/platform_device.h"
 extern int platform_get_irq_byname(struct platform_device * , char const   * ) ;
 #line 188 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
+ static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;

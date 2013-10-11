@@ -1105,9 +1105,9 @@ extern void _raw_spin_lock(raw_spinlock_t *lock )  __attribute__((__section__(".
 #line 39
 extern void _raw_spin_unlock(raw_spinlock_t *lock )  __attribute__((__section__(".spinlock.text"))) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -1122,9 +1122,9 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -1159,9 +1159,9 @@ extern struct resource *__request_region(struct resource * , resource_size_t sta
 #line 192
 extern void __release_region(struct resource * , resource_size_t  , resource_size_t  ) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char readb(void const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr ) 
+ static unsigned char readb(void const volatile   *addr ) 
 { unsigned char ret ;
   unsigned char volatile   *__cil_tmp3 ;
 
@@ -1177,9 +1177,9 @@ __inline static unsigned char readb(void const volatile   *addr )
 }
 }
 #line 61
-__inline static void writeb(unsigned char val , void volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void writeb(unsigned char val , void volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 61 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writeb(unsigned char val , void volatile   *addr ) 
+ static void writeb(unsigned char val , void volatile   *addr ) 
 { unsigned char volatile   *__cil_tmp3 ;
 
   {
@@ -1196,9 +1196,9 @@ __inline static void writeb(unsigned char val , void volatile   *addr )
 #line 174
 extern void *ioremap_nocache(resource_size_t offset , unsigned long size ) ;
 #line 182
-__inline static void *ioremap(resource_size_t offset , unsigned long size )  __attribute__((__no_instrument_function__)) ;
+ static void *ioremap(resource_size_t offset , unsigned long size )  __attribute__((__no_instrument_function__)) ;
 #line 182 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *ioremap(resource_size_t offset , unsigned long size ) 
+ static void *ioremap(resource_size_t offset , unsigned long size ) 
 { void *tmp ;
 
   {
@@ -1213,9 +1213,9 @@ __inline static void *ioremap(resource_size_t offset , unsigned long size )
 #line 187
 extern void iounmap(void volatile   *addr ) ;
 #line 208
-__inline static void memcpy_fromio(void *dst , void const volatile   *src , size_t count )  __attribute__((__no_instrument_function__)) ;
+ static void memcpy_fromio(void *dst , void const volatile   *src , size_t count )  __attribute__((__no_instrument_function__)) ;
 #line 208 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memcpy_fromio(void *dst , void const volatile   *src , size_t count ) 
+ static void memcpy_fromio(void *dst , void const volatile   *src , size_t count ) 
 { size_t __len ;
   void *__ret ;
   void const   *__cil_tmp6 ;
@@ -1234,9 +1234,9 @@ __inline static void memcpy_fromio(void *dst , void const volatile   *src , size
 }
 }
 #line 214
-__inline static void memcpy_toio(void volatile   *dst , void const   *src , size_t count )  __attribute__((__no_instrument_function__)) ;
+ static void memcpy_toio(void volatile   *dst , void const   *src , size_t count )  __attribute__((__no_instrument_function__)) ;
 #line 214 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memcpy_toio(void volatile   *dst , void const   *src , size_t count ) 
+ static void memcpy_toio(void volatile   *dst , void const   *src , size_t count ) 
 { size_t __len ;
   void *__ret ;
   void *__cil_tmp6 ;
@@ -1255,9 +1255,9 @@ __inline static void memcpy_toio(void volatile   *dst , void const   *src , size
 }
 }
 #line 309
-__inline static void outw(unsigned short value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outw(unsigned short value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 309 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outw(unsigned short value , int port ) 
+ static void outw(unsigned short value , int port ) 
 { 
 
   {
@@ -1301,9 +1301,9 @@ static struct mtd_partition partition_info[3]  = {      {(char *)"SBC-GXx flash 
         {(char *)"SBC-GXx flash application partition", 0ULL, (uint64_t )2097152, 0U,
       (struct nand_ecclayout *)0}};
 #line 104
-__inline static void sbc_gxx_page(struct map_info *map , unsigned long ofs )  __attribute__((__no_instrument_function__)) ;
+ static void sbc_gxx_page(struct map_info *map , unsigned long ofs )  __attribute__((__no_instrument_function__)) ;
 #line 104 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5452/dscv_tempdir/dscv/ri/32_1/drivers/mtd/maps/sbc_gxx.c.common.c"
-__inline static void sbc_gxx_page(struct map_info *map , unsigned long ofs ) 
+ static void sbc_gxx_page(struct map_info *map , unsigned long ofs ) 
 { unsigned long page ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;

@@ -2190,9 +2190,9 @@ struct da9052_rtc {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2201,9 +2201,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2266,9 +2266,9 @@ extern int platform_driver_register(struct platform_driver * ) ;
 #line 175
 extern void platform_driver_unregister(struct platform_driver * ) ;
 #line 188
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void platform_set_drvdata(struct platform_device *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 188 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
+ static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2320,9 +2320,9 @@ extern int regmap_bulk_read(struct regmap *map , unsigned int reg , void *val , 
 extern int regmap_update_bits(struct regmap *map , unsigned int reg , unsigned int mask ,
                               unsigned int val ) ;
 #line 89 "include/linux/mfd/da9052/da9052.h"
-__inline static int da9052_reg_read(struct da9052 *da9052 , unsigned char reg )  __attribute__((__no_instrument_function__)) ;
+ static int da9052_reg_read(struct da9052 *da9052 , unsigned char reg )  __attribute__((__no_instrument_function__)) ;
 #line 89 "include/linux/mfd/da9052/da9052.h"
-__inline static int da9052_reg_read(struct da9052 *da9052 , unsigned char reg ) 
+ static int da9052_reg_read(struct da9052 *da9052 , unsigned char reg ) 
 { int val ;
   int ret ;
   unsigned long __cil_tmp5 ;
@@ -2363,10 +2363,10 @@ __inline static int da9052_reg_read(struct da9052 *da9052 , unsigned char reg )
 }
 }
 #line 105
-__inline static int da9052_group_read(struct da9052 *da9052 , unsigned char reg ,
+ static int da9052_group_read(struct da9052 *da9052 , unsigned char reg ,
                                       unsigned int reg_cnt , unsigned char *val )  __attribute__((__no_instrument_function__)) ;
 #line 105 "include/linux/mfd/da9052/da9052.h"
-__inline static int da9052_group_read(struct da9052 *da9052 , unsigned char reg ,
+ static int da9052_group_read(struct da9052 *da9052 , unsigned char reg ,
                                       unsigned int reg_cnt , unsigned char *val ) 
 { int tmp ;
   unsigned long __cil_tmp6 ;
@@ -2398,10 +2398,10 @@ __inline static int da9052_group_read(struct da9052 *da9052 , unsigned char reg 
 }
 }
 #line 111
-__inline static int da9052_group_write(struct da9052 *da9052 , unsigned char reg ,
+ static int da9052_group_write(struct da9052 *da9052 , unsigned char reg ,
                                        unsigned int reg_cnt , unsigned char *val )  __attribute__((__no_instrument_function__)) ;
 #line 111 "include/linux/mfd/da9052/da9052.h"
-__inline static int da9052_group_write(struct da9052 *da9052 , unsigned char reg ,
+ static int da9052_group_write(struct da9052 *da9052 , unsigned char reg ,
                                        unsigned int reg_cnt , unsigned char *val ) 
 { int tmp ;
   unsigned long __cil_tmp6 ;
@@ -2433,10 +2433,10 @@ __inline static int da9052_group_write(struct da9052 *da9052 , unsigned char reg
 }
 }
 #line 117
-__inline static int da9052_reg_update(struct da9052 *da9052 , unsigned char reg ,
+ static int da9052_reg_update(struct da9052 *da9052 , unsigned char reg ,
                                       unsigned char bit_mask , unsigned char reg_val )  __attribute__((__no_instrument_function__)) ;
 #line 117 "include/linux/mfd/da9052/da9052.h"
-__inline static int da9052_reg_update(struct da9052 *da9052 , unsigned char reg ,
+ static int da9052_reg_update(struct da9052 *da9052 , unsigned char reg ,
                                       unsigned char bit_mask , unsigned char reg_val ) 
 { int tmp ;
   unsigned long __cil_tmp6 ;

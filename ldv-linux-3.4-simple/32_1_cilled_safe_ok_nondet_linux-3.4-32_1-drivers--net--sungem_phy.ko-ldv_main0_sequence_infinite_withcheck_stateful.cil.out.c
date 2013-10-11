@@ -5364,9 +5364,9 @@ static int const   phy_BCM5400_link_table[8][3]  =
    {        (int const   )1,        (int const   )0,        (int const   )1}, 
    {        (int const   )1,        (int const   )0,        (int const   )1}};
 #line 51
-__inline static int __phy_read(struct mii_phy *phy , int id , int reg )  __attribute__((__no_instrument_function__)) ;
+ static int __phy_read(struct mii_phy *phy , int id , int reg )  __attribute__((__no_instrument_function__)) ;
 #line 51 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12129/dscv_tempdir/dscv/ri/32_1/drivers/net/sungem_phy.c.common.c"
-__inline static int __phy_read(struct mii_phy *phy , int id , int reg ) 
+ static int __phy_read(struct mii_phy *phy , int id , int reg ) 
 { int tmp___7 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -5397,9 +5397,9 @@ __inline static int __phy_read(struct mii_phy *phy , int id , int reg )
 }
 }
 #line 56
-__inline static void __phy_write(struct mii_phy *phy , int id , int reg , int val )  __attribute__((__no_instrument_function__)) ;
+ static void __phy_write(struct mii_phy *phy , int id , int reg , int val )  __attribute__((__no_instrument_function__)) ;
 #line 56 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12129/dscv_tempdir/dscv/ri/32_1/drivers/net/sungem_phy.c.common.c"
-__inline static void __phy_write(struct mii_phy *phy , int id , int reg , int val ) 
+ static void __phy_write(struct mii_phy *phy , int id , int reg , int val ) 
 { unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
   void (*__cil_tmp7)(struct net_device *dev , int mii_id , int reg , int val ) ;
@@ -5429,9 +5429,9 @@ __inline static void __phy_write(struct mii_phy *phy , int id , int reg , int va
 }
 }
 #line 61
-__inline static int phy_read(struct mii_phy *phy , int reg )  __attribute__((__no_instrument_function__)) ;
+ static int phy_read(struct mii_phy *phy , int reg )  __attribute__((__no_instrument_function__)) ;
 #line 61 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12129/dscv_tempdir/dscv/ri/32_1/drivers/net/sungem_phy.c.common.c"
-__inline static int phy_read(struct mii_phy *phy , int reg ) 
+ static int phy_read(struct mii_phy *phy , int reg ) 
 { int tmp___7 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -5471,9 +5471,9 @@ __inline static int phy_read(struct mii_phy *phy , int reg )
 }
 }
 #line 66
-__inline static void phy_write(struct mii_phy *phy , int reg , int val )  __attribute__((__no_instrument_function__)) ;
+ static void phy_write(struct mii_phy *phy , int reg , int val )  __attribute__((__no_instrument_function__)) ;
 #line 66 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12129/dscv_tempdir/dscv/ri/32_1/drivers/net/sungem_phy.c.common.c"
-__inline static void phy_write(struct mii_phy *phy , int reg , int val ) 
+ static void phy_write(struct mii_phy *phy , int reg , int val ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
   void (*__cil_tmp6)(struct net_device *dev , int mii_id , int reg , int val ) ;

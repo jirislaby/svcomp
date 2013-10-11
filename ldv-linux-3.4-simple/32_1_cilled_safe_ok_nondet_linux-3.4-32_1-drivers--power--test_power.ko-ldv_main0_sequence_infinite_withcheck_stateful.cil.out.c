@@ -420,9 +420,9 @@ extern void power_supply_unregister(struct power_supply *psy ) ;
 #line 46 "include/linux/delay.h"
 extern void msleep(unsigned int msecs ) ;
 #line 50
-__inline static void ssleep(unsigned int seconds )  __attribute__((__no_instrument_function__)) ;
+ static void ssleep(unsigned int seconds )  __attribute__((__no_instrument_function__)) ;
 #line 50 "include/linux/delay.h"
-__inline static void ssleep(unsigned int seconds ) 
+ static void ssleep(unsigned int seconds ) 
 { unsigned int __cil_tmp2 ;
 
   {

@@ -5438,10 +5438,10 @@ struct arcnet_local {
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__,
+ static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__,
 __const__)) ;
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -5495,9 +5495,9 @@ void cleanup_module(void) ;
 extern struct sk_buff *__alloc_skb(unsigned int size , gfp_t priority , int fclone ,
                                    int node ) ;
 #line 566
-__inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )  __attribute__((__no_instrument_function__)) ;
+ static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )  __attribute__((__no_instrument_function__)) ;
 #line 566 "include/linux/skbuff.h"
-__inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority ) 
+ static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority ) 
 { struct sk_buff *tmp ;
 
   {
@@ -5516,9 +5516,9 @@ extern unsigned char *skb_push(struct sk_buff *skb , unsigned int len ) ;
 #line 1310
 extern unsigned char *skb_pull(struct sk_buff *skb , unsigned int len ) ;
 #line 1445
-__inline static void skb_reset_mac_header(struct sk_buff *skb )  __attribute__((__no_instrument_function__)) ;
+ static void skb_reset_mac_header(struct sk_buff *skb )  __attribute__((__no_instrument_function__)) ;
 #line 1445 "include/linux/skbuff.h"
-__inline static void skb_reset_mac_header(struct sk_buff *skb ) 
+ static void skb_reset_mac_header(struct sk_buff *skb ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5555,9 +5555,9 @@ __inline static void skb_reset_mac_header(struct sk_buff *skb )
 }
 }
 #line 1422 "include/linux/netdevice.h"
-__inline static void *netdev_priv(struct net_device  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *netdev_priv(struct net_device  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1422 "include/linux/netdevice.h"
-__inline static void *netdev_priv(struct net_device  const  *dev ) 
+ static void *netdev_priv(struct net_device  const  *dev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   char *__cil_tmp4 ;

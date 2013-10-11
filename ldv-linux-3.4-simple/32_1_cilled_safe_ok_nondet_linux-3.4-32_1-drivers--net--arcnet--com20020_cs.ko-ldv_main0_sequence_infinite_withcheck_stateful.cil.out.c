@@ -5896,9 +5896,9 @@ void mutex_unlock(struct mutex *lock ) ;
 #line 170
 int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -5917,10 +5917,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -5934,9 +5934,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -5965,9 +5965,9 @@ void cleanup_module(void) ;
 extern int ( /* format attribute */  dev_notice)(struct device  const  *dev , char const   *fmt 
                                                  , ...) ;
 #line 1422 "include/linux/netdevice.h"
-__inline static void *netdev_priv(struct net_device  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *netdev_priv(struct net_device  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1422 "include/linux/netdevice.h"
-__inline static void *netdev_priv(struct net_device  const  *dev ) 
+ static void *netdev_priv(struct net_device  const  *dev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   char *__cil_tmp4 ;

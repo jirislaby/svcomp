@@ -3799,10 +3799,10 @@ enum kobj_ns_type;
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -3822,9 +3822,9 @@ __inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int 
 }
 }
 #line 82
-__inline static void __set_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void __set_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 82 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile   *addr ) 
+ static void __set_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -3853,9 +3853,9 @@ extern void *memset(void *s , int c , size_t n ) ;
 #line 220 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
 extern unsigned long kernel_stack  __attribute__((__section__(".data..percpu"))) ;
 #line 222
-__inline static struct thread_info *current_thread_info(void)  __attribute__((__no_instrument_function__)) ;
+ static struct thread_info *current_thread_info(void)  __attribute__((__no_instrument_function__)) ;
 #line 222 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
-__inline static struct thread_info *current_thread_info(void) 
+ static struct thread_info *current_thread_info(void) 
 { struct thread_info *ti ;
   unsigned long pfo_ret__ ;
   unsigned long __cil_tmp3 ;
@@ -3971,9 +3971,9 @@ extern void _raw_spin_lock(raw_spinlock_t *lock )  __attribute__((__section__(".
 #line 39
 extern void _raw_spin_unlock(raw_spinlock_t *lock )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -3982,9 +3982,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 283
-__inline static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -3999,9 +3999,9 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -4044,9 +4044,9 @@ extern void vfree(void const   *addr ) ;
 #line 324 "include/linux/gfp.h"
 extern struct page *alloc_pages_current(gfp_t gfp_mask , unsigned int order ) ;
 #line 326
-__inline static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order )  __attribute__((__no_instrument_function__)) ;
+ static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order )  __attribute__((__no_instrument_function__)) ;
 #line 326 "include/linux/gfp.h"
-__inline static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) 
+ static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) 
 { struct page *tmp ;
 
   {
@@ -4084,9 +4084,9 @@ extern void unregister_blkdev(unsigned int  , char const   * ) ;
 #line 33 "include/linux/mm.h"
 extern unsigned long totalram_pages ;
 #line 737
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page )  __attribute__((__no_instrument_function__)) ;
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page )  __attribute__((__no_instrument_function__)) ;
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page ) 
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page  const  *page ) 
 { struct page *__cil_tmp2 ;
   struct page  const  *__cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4120,9 +4120,9 @@ __inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(
 }
 }
 #line 16 "include/linux/uaccess.h"
-__inline static void pagefault_disable(void)  __attribute__((__no_instrument_function__)) ;
+ static void pagefault_disable(void)  __attribute__((__no_instrument_function__)) ;
 #line 16 "include/linux/uaccess.h"
-__inline static void pagefault_disable(void) 
+ static void pagefault_disable(void) 
 { struct thread_info *tmp ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -4163,9 +4163,9 @@ __inline static void pagefault_disable(void)
 }
 }
 #line 26
-__inline static void pagefault_enable(void)  __attribute__((__no_instrument_function__)) ;
+ static void pagefault_enable(void)  __attribute__((__no_instrument_function__)) ;
 #line 26 "include/linux/uaccess.h"
-__inline static void pagefault_enable(void) 
+ static void pagefault_enable(void) 
 { struct thread_info *tmp ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -4217,9 +4217,9 @@ __inline static void pagefault_enable(void)
 }
 }
 #line 59 "include/linux/highmem.h"
-__inline static void *kmap_atomic(struct page *page )  __attribute__((__no_instrument_function__)) ;
+ static void *kmap_atomic(struct page *page )  __attribute__((__no_instrument_function__)) ;
 #line 59 "include/linux/highmem.h"
-__inline static void *kmap_atomic(struct page *page ) 
+ static void *kmap_atomic(struct page *page ) 
 { void *tmp ;
   struct page  const  *__cil_tmp3 ;
 
@@ -4237,9 +4237,9 @@ __inline static void *kmap_atomic(struct page *page )
 }
 }
 #line 66
-__inline static void __kunmap_atomic(void *addr )  __attribute__((__no_instrument_function__)) ;
+ static void __kunmap_atomic(void *addr )  __attribute__((__no_instrument_function__)) ;
 #line 66 "include/linux/highmem.h"
-__inline static void __kunmap_atomic(void *addr ) 
+ static void __kunmap_atomic(void *addr ) 
 { 
 
   {
@@ -4258,10 +4258,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -4275,9 +4275,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -4297,9 +4297,9 @@ extern void add_disk(struct gendisk *disk ) ;
 #line 405
 extern void del_gendisk(struct gendisk *gp ) ;
 #line 434
-__inline static void set_capacity(struct gendisk *disk , sector_t size )  __attribute__((__no_instrument_function__)) ;
+ static void set_capacity(struct gendisk *disk , sector_t size )  __attribute__((__no_instrument_function__)) ;
 #line 434 "include/linux/genhd.h"
-__inline static void set_capacity(struct gendisk *disk , sector_t size ) 
+ static void set_capacity(struct gendisk *disk , sector_t size ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4322,9 +4322,9 @@ extern struct gendisk *alloc_disk(int minors ) ;
 #line 606
 extern void put_disk(struct gendisk *disk ) ;
 #line 436 "include/linux/blkdev.h"
-__inline static void queue_flag_set_unlocked(unsigned int flag , struct request_queue *q )  __attribute__((__no_instrument_function__)) ;
+ static void queue_flag_set_unlocked(unsigned int flag , struct request_queue *q )  __attribute__((__no_instrument_function__)) ;
 #line 436 "include/linux/blkdev.h"
-__inline static void queue_flag_set_unlocked(unsigned int flag , struct request_queue *q ) 
+ static void queue_flag_set_unlocked(unsigned int flag , struct request_queue *q ) 
 { int __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -5335,9 +5335,9 @@ static void handle_uncompressed_page(struct zram *zram , struct bio_vec *bvec , 
 }
 }
 #line 202
-__inline static int is_partial_io(struct bio_vec *bvec )  __attribute__((__no_instrument_function__)) ;
+ static int is_partial_io(struct bio_vec *bvec )  __attribute__((__no_instrument_function__)) ;
 #line 202 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/1136/dscv_tempdir/dscv/ri/32_1/drivers/staging/zram/zram_drv.c.common.c"
-__inline static int is_partial_io(struct bio_vec *bvec ) 
+ static int is_partial_io(struct bio_vec *bvec ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -7265,9 +7265,9 @@ static void __zram_make_request(struct zram *zram , struct bio *bio , int rw )
 }
 }
 #line 537
-__inline static int valid_io_request(struct zram *zram , struct bio *bio )  __attribute__((__no_instrument_function__)) ;
+ static int valid_io_request(struct zram *zram , struct bio *bio )  __attribute__((__no_instrument_function__)) ;
 #line 537 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/1136/dscv_tempdir/dscv/ri/32_1/drivers/staging/zram/zram_drv.c.common.c"
-__inline static int valid_io_request(struct zram *zram , struct bio *bio ) 
+ static int valid_io_request(struct zram *zram , struct bio *bio ) 
 { int tmp___7 ;
   long tmp___8 ;
   unsigned long __cil_tmp5 ;

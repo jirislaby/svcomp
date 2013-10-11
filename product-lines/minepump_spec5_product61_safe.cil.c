@@ -1167,7 +1167,7 @@ void __automaton_fail(void) ;
 #line 7 "Specification5_spec.c"
 int switchedOnBeforeTS  ;
 #line 11 "Specification5_spec.c"
-__inline void __utac_acc__Specification5_spec__1(void) 
+ void __utac_acc__Specification5_spec__1(void) 
 { 
 
   {

@@ -4244,10 +4244,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -4261,9 +4261,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 243 "include/linux/slab.h"
-__inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kmalloc_array(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 243 "include/linux/slab.h"
-__inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
+ static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned long __cil_tmp5 ;
   size_t __cil_tmp6 ;
@@ -4296,9 +4296,9 @@ __inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 256
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kcalloc(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 256 "include/linux/slab.h"
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
+ static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp5 ;
 
@@ -4314,9 +4314,9 @@ __inline static void *kcalloc(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 349
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -4358,9 +4358,9 @@ extern int usb_control_msg(struct usb_device *dev , unsigned int pipe , __u8 req
                            __u8 requesttype , __u16 value , __u16 index , void *data ,
                            __u16 size , int timeout ) ;
 #line 1567
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -4382,9 +4382,9 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 124 "include/linux/usb/serial.h"
-__inline static void *usb_get_serial_port_data(struct usb_serial_port *port )  __attribute__((__no_instrument_function__)) ;
+ static void *usb_get_serial_port_data(struct usb_serial_port *port )  __attribute__((__no_instrument_function__)) ;
 #line 124 "include/linux/usb/serial.h"
-__inline static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
+ static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4409,9 +4409,9 @@ __inline static void *usb_get_serial_port_data(struct usb_serial_port *port )
 }
 }
 #line 129
-__inline static void usb_set_serial_port_data(struct usb_serial_port *port , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void usb_set_serial_port_data(struct usb_serial_port *port , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 129 "include/linux/usb/serial.h"
-__inline static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
+ static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -5237,10 +5237,10 @@ static int cp210x_set_config(struct usb_serial_port *port , u8 request , unsigne
 }
 }
 #line 375
-__inline static int cp210x_set_config_single(struct usb_serial_port *port , u8 request ,
+ static int cp210x_set_config_single(struct usb_serial_port *port , u8 request ,
                                              unsigned int data )  __attribute__((__no_instrument_function__)) ;
 #line 375 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/7522/dscv_tempdir/dscv/ri/32_1/drivers/usb/serial/cp210x.c.common.c"
-__inline static int cp210x_set_config_single(struct usb_serial_port *port , u8 request ,
+ static int cp210x_set_config_single(struct usb_serial_port *port , u8 request ,
                                              unsigned int data ) 
 { int tmp___7 ;
 

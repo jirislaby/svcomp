@@ -356,7 +356,7 @@ extern int printk(char const   *  , ...) ;
 extern ssize_t memory_read_from_buffer(void * , size_t  , loff_t * , void const   * ,
                                        size_t  ) ;
 #line 129 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *phys_to_virt(phys_addr_t address ) 
+ static void *phys_to_virt(phys_addr_t address ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -390,7 +390,7 @@ struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 96 "include/linux/dmi.h"
 extern int dmi_check_system(struct dmi_system_id  const  * ) ;
 #line 9 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bios_ebda.h"
-__inline static unsigned int get_bios_ebda(void) 
+ static unsigned int get_bios_ebda(void) 
 { unsigned int address ;
   void *tmp ;
   unsigned short *__cil_tmp3 ;

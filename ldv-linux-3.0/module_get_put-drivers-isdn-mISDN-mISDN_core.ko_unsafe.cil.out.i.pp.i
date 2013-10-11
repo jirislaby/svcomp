@@ -5535,7 +5535,7 @@ struct mISDNtimer {
 # 47 "include/linux/list.h"
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 # 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )
+ static void list_add_tail(struct list_head *new , struct list_head *head )
 {
 
   {
@@ -5550,7 +5550,7 @@ __inline static void list_add_tail(struct list_head *new , struct list_head *hea
 # 112 "include/linux/list.h"
 extern void list_del(struct list_head * ) ;
 # 195 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int test_and_set_bit(int nr , unsigned long volatile *addr )
+ static int test_and_set_bit(int nr , unsigned long volatile *addr )
 { int oldbit ;
 
   {
@@ -5562,7 +5562,7 @@ __inline static int test_and_set_bit(int nr , unsigned long volatile *addr )
 }
 }
 # 246 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int test_and_clear_bit(int nr , unsigned long volatile *addr )
+ static int test_and_clear_bit(int nr , unsigned long volatile *addr )
 { int oldbit ;
 
   {
@@ -5590,7 +5590,7 @@ extern void _raw_read_unlock(rwlock_t * ) ;
 # 40 "include/linux/rwlock_api_smp.h"
 extern void _raw_write_unlock_irqrestore(rwlock_t * , unsigned long ) ;
 # 80 "include/linux/kobject.h"
-__inline static char const *kobject_name(struct kobject const *kobj )
+ static char const *kobject_name(struct kobject const *kobj )
 {
 
   {
@@ -5613,7 +5613,7 @@ unsigned int ldv_module_refcount(void) ;
 # 7 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/core.c.p"
 void ldv_module_put_and_exit(void) ;
 # 338 "include/linux/mISDNif.h"
-__inline static int test_channelmap(u_int nr , u_char *map )
+ static int test_channelmap(u_int nr , u_char *map )
 {
 
   {
@@ -5638,7 +5638,7 @@ extern int class_for_each_device(struct class * , struct device * , void * , int
 extern struct device *class_find_device(struct class * , struct device * , void * ,
                                         int (*)(struct device * , void * ) ) ;
 # 608 "include/linux/device.h"
-__inline static char const *dev_name(struct device const *dev )
+ static char const *dev_name(struct device const *dev )
 { char const *tmp ;
 
   {
@@ -5680,7 +5680,7 @@ int mISDN_register_Bprotocol(struct Bprotocol *bp ) ;
 # 572 "include/linux/mISDNif.h"
 void mISDN_unregister_Bprotocol(struct Bprotocol *bp ) ;
 # 577 "include/linux/mISDNif.h"
-__inline static struct mISDNdevice *dev_to_mISDN(struct device *dev )
+ static struct mISDNdevice *dev_to_mISDN(struct device *dev )
 { void *tmp ;
 
   {
@@ -6779,7 +6779,7 @@ extern unsigned long volatile jiffies ;
 # 91 "include/linux/timer.h"
 extern void init_timer_key(struct timer_list * , char const * , struct lock_class_key * ) ;
 # 204 "include/linux/timer.h"
-__inline static int timer_pending(struct timer_list const *timer )
+ static int timer_pending(struct timer_list const *timer )
 {
 
   {
@@ -6796,7 +6796,7 @@ extern void kfree(void const * ) ;
 # 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t , gfp_t ) ;
 # 255 "include/linux/slub_def.h"
-__inline static void *kmalloc(size_t size , gfp_t flags )
+ static void *kmalloc(size_t size , gfp_t flags )
 { void *tmp___2 ;
 
   {
@@ -6809,7 +6809,7 @@ __inline static void *kmalloc(size_t size , gfp_t flags )
 }
 }
 # 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )
+ static void *kzalloc(size_t size , gfp_t flags )
 { void *tmp ;
 
   {
@@ -7123,7 +7123,7 @@ void mISDN_FsmRestartTimer(struct FsmTimer *ft , int millisec , int event , void
 # 1 "<compiler builtins>"
 
 # 576 "include/linux/list.h"
-__inline static int hlist_unhashed(struct hlist_node const *h )
+ static int hlist_unhashed(struct hlist_node const *h )
 {
 
   {
@@ -7132,7 +7132,7 @@ __inline static int hlist_unhashed(struct hlist_node const *h )
 }
 }
 # 586 "include/linux/list.h"
-__inline static void __hlist_del(struct hlist_node *n )
+ static void __hlist_del(struct hlist_node *n )
 { struct hlist_node *next ;
   struct hlist_node **pprev ;
 
@@ -7155,7 +7155,7 @@ __inline static void __hlist_del(struct hlist_node *n )
 }
 }
 # 610 "include/linux/list.h"
-__inline static void hlist_add_head(struct hlist_node *n , struct hlist_head *h )
+ static void hlist_add_head(struct hlist_node *n , struct hlist_head *h )
 { struct hlist_node *first ;
 
   {
@@ -7179,7 +7179,7 @@ __inline static void hlist_add_head(struct hlist_node *n , struct hlist_head *h 
 }
 }
 # 82 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile *addr )
+ static void __set_bit(int nr , unsigned long volatile *addr )
 {
 
   {
@@ -7190,7 +7190,7 @@ __inline static void __set_bit(int nr , unsigned long volatile *addr )
 }
 }
 # 125 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void __clear_bit(int nr , unsigned long volatile *addr )
+ static void __clear_bit(int nr , unsigned long volatile *addr )
 {
 
   {
@@ -7211,7 +7211,7 @@ extern void *__memcpy(void * , void const * , size_t ) ;
 # 55 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/string_64.h"
 extern void *memset(void * , int , size_t ) ;
 # 23 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const *v )
+ static int atomic_read(atomic_t const *v )
 {
 
   {
@@ -7220,7 +7220,7 @@ __inline static int atomic_read(atomic_t const *v )
 }
 }
 # 93 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v )
+ static void atomic_inc(atomic_t *v )
 {
 
   {
@@ -7231,7 +7231,7 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 # 105 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v )
+ static void atomic_dec(atomic_t *v )
 {
 
   {
@@ -7242,7 +7242,7 @@ __inline static void atomic_dec(atomic_t *v )
 }
 }
 # 119 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_dec_and_test(atomic_t *v )
+ static int atomic_dec_and_test(atomic_t *v )
 { unsigned char c ;
 
   {
@@ -7276,7 +7276,7 @@ extern unsigned long _copy_to_user(void * , void const * , unsigned int ) ;
 # 42 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_from_user(void * , void const * , unsigned int ) ;
 # 46 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long copy_from_user(void *to , void const *from , unsigned long n )
+ static unsigned long copy_from_user(void *to , void const *from , unsigned long n )
 { int sz ;
   unsigned long tmp ;
   int __ret_warn_on ;
@@ -7340,7 +7340,7 @@ __inline static unsigned long copy_from_user(void *to , void const *from , unsig
 }
 }
 # 63 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const *src , unsigned int size )
+ static int copy_to_user(void *dst , void const *src , unsigned int size )
 { unsigned long tmp ;
 
   {
@@ -7363,7 +7363,7 @@ extern void kfree_skb(struct sk_buff * ) ;
 # 493 "include/linux/skbuff.h"
 extern struct sk_buff *__alloc_skb(unsigned int , gfp_t , int , int ) ;
 # 495 "include/linux/skbuff.h"
-__inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )
+ static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )
 { struct sk_buff *tmp ;
 
   {
@@ -7384,7 +7384,7 @@ extern unsigned char *skb_push(struct sk_buff * , unsigned int ) ;
 # 1185 "include/linux/skbuff.h"
 extern unsigned char *skb_pull(struct sk_buff * , unsigned int ) ;
 # 1253 "include/linux/skbuff.h"
-__inline static void skb_reserve(struct sk_buff *skb , int len )
+ static void skb_reserve(struct sk_buff *skb , int len )
 {
 
   {
@@ -7408,7 +7408,7 @@ extern int skb_copy_datagram_iovec(struct sk_buff const * , int , struct iovec *
 # 1863 "include/linux/skbuff.h"
 extern void skb_free_datagram(struct sock * , struct sk_buff * ) ;
 # 1949 "include/linux/skbuff.h"
-__inline static void skb_get_timestamp(struct sk_buff const *skb , struct timeval *stamp )
+ static void skb_get_timestamp(struct sk_buff const *skb , struct timeval *stamp )
 {
 
   {
@@ -7421,7 +7421,7 @@ __inline static void skb_get_timestamp(struct sk_buff const *skb , struct timeva
 }
 }
 # 1961 "include/linux/skbuff.h"
-__inline static void __net_timestamp(struct sk_buff *skb )
+ static void __net_timestamp(struct sk_buff *skb )
 {
 
   {
@@ -7434,7 +7434,7 @@ __inline static void __net_timestamp(struct sk_buff *skb )
 }
 }
 # 392 "include/net/sock.h"
-__inline static int sk_unhashed(struct sock const *sk )
+ static int sk_unhashed(struct sock const *sk )
 { int tmp ;
 
   {
@@ -7447,7 +7447,7 @@ __inline static int sk_unhashed(struct sock const *sk )
 }
 }
 # 397 "include/net/sock.h"
-__inline static int sk_hashed(struct sock const *sk )
+ static int sk_hashed(struct sock const *sk )
 { int tmp ;
 
   {
@@ -7460,7 +7460,7 @@ __inline static int sk_hashed(struct sock const *sk )
 }
 }
 # 402 "include/net/sock.h"
-__inline static void sk_node_init(struct hlist_node *node )
+ static void sk_node_init(struct hlist_node *node )
 {
 
   {
@@ -7471,7 +7471,7 @@ __inline static void sk_node_init(struct hlist_node *node )
 }
 }
 # 412 "include/net/sock.h"
-__inline static void __sk_del_node(struct sock *sk )
+ static void __sk_del_node(struct sock *sk )
 {
 
   {
@@ -7484,7 +7484,7 @@ __inline static void __sk_del_node(struct sock *sk )
 }
 }
 # 418 "include/net/sock.h"
-__inline static int __sk_del_node_init(struct sock *sk )
+ static int __sk_del_node_init(struct sock *sk )
 { int tmp ;
 
   {
@@ -7510,7 +7510,7 @@ __inline static int __sk_del_node_init(struct sock *sk )
 }
 }
 # 434 "include/net/sock.h"
-__inline static void sock_hold(struct sock *sk )
+ static void sock_hold(struct sock *sk )
 {
 
   {
@@ -7523,7 +7523,7 @@ __inline static void sock_hold(struct sock *sk )
 }
 }
 # 442 "include/net/sock.h"
-__inline static void __sock_put(struct sock *sk )
+ static void __sock_put(struct sock *sk )
 {
 
   {
@@ -7536,7 +7536,7 @@ __inline static void __sock_put(struct sock *sk )
 }
 }
 # 447 "include/net/sock.h"
-__inline static int sk_del_node_init(struct sock *sk )
+ static int sk_del_node_init(struct sock *sk )
 { int rc ;
   int tmp ;
   int __ret_warn_on ;
@@ -7583,7 +7583,7 @@ __inline static int sk_del_node_init(struct sock *sk )
 }
 }
 # 481 "include/net/sock.h"
-__inline static void __sk_add_node(struct sock *sk , struct hlist_head *list )
+ static void __sk_add_node(struct sock *sk , struct hlist_head *list )
 {
 
   {
@@ -7596,7 +7596,7 @@ __inline static void __sk_add_node(struct sock *sk , struct hlist_head *list )
 }
 }
 # 486 "include/net/sock.h"
-__inline static void sk_add_node(struct sock *sk , struct hlist_head *list )
+ static void sk_add_node(struct sock *sk , struct hlist_head *list )
 {
 
   {
@@ -7611,7 +7611,7 @@ __inline static void sk_add_node(struct sock *sk , struct hlist_head *list )
 }
 }
 # 572 "include/net/sock.h"
-__inline static void sock_set_flag(struct sock *sk , enum sock_flags flag )
+ static void sock_set_flag(struct sock *sk , enum sock_flags flag )
 {
 
   {
@@ -7624,7 +7624,7 @@ __inline static void sock_set_flag(struct sock *sk , enum sock_flags flag )
 }
 }
 # 577 "include/net/sock.h"
-__inline static void sock_reset_flag(struct sock *sk , enum sock_flags flag )
+ static void sock_reset_flag(struct sock *sk , enum sock_flags flag )
 {
 
   {
@@ -7639,7 +7639,7 @@ __inline static void sock_reset_flag(struct sock *sk , enum sock_flags flag )
 # 1042 "include/net/sock.h"
 extern void lock_sock_nested(struct sock * , int ) ;
 # 1044 "include/net/sock.h"
-__inline static void lock_sock(struct sock *sk )
+ static void lock_sock(struct sock *sk )
 {
 
   {
@@ -7685,7 +7685,7 @@ extern int sock_no_mmap(struct file * , struct socket * , struct vm_area_struct 
 # 1180 "include/net/sock.h"
 extern void sock_init_data(struct socket * , struct sock * ) ;
 # 1237 "include/net/sock.h"
-__inline static void sock_put(struct sock *sk )
+ static void sock_put(struct sock *sk )
 { int tmp ;
 
   {
@@ -7707,7 +7707,7 @@ __inline static void sock_put(struct sock *sk )
 }
 }
 # 1251 "include/net/sock.h"
-__inline static void sk_tx_queue_clear(struct sock *sk )
+ static void sk_tx_queue_clear(struct sock *sk )
 {
 
   {
@@ -7718,7 +7718,7 @@ __inline static void sk_tx_queue_clear(struct sock *sk )
 }
 }
 # 1261 "include/net/sock.h"
-__inline static void sk_set_socket(struct sock *sk , struct socket *sock )
+ static void sk_set_socket(struct sock *sk , struct socket *sock )
 {
 
   {
@@ -7733,7 +7733,7 @@ __inline static void sk_set_socket(struct sock *sk , struct socket *sock )
 }
 }
 # 1279 "include/net/sock.h"
-__inline static void sock_orphan(struct sock *sk )
+ static void sock_orphan(struct sock *sk )
 {
 
   {
@@ -7818,7 +7818,7 @@ static struct mISDN_sock_list base_sockets = {{(struct hlist_node *)0}, {{167772
                                                              (struct lock_class *)0},
                                 "base_sockets.lock", 0, 0UL}}};
 # 51 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/socket.c.p"
-__inline static struct sk_buff *_l2_alloc_skb(unsigned int len , gfp_t gfp_mask )
+ static struct sk_buff *_l2_alloc_skb(unsigned int len , gfp_t gfp_mask )
 { struct sk_buff *skb ;
   long tmp ;
 
@@ -7963,7 +7963,7 @@ static int mISDN_ctrl(struct mISDNchannel *ch , u_int cmd , void *arg )
 }
 }
 # 111 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/socket.c.p"
-__inline static void mISDN_sock_cmsg(struct sock *sk , struct msghdr *msg , struct sk_buff *skb )
+ static void mISDN_sock_cmsg(struct sock *sk , struct msghdr *msg , struct sk_buff *skb )
 { struct timeval tv ;
 
   {
@@ -10718,7 +10718,7 @@ unsigned short mISDN_clock_get(void)
 }
 }
 # 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )
+ static void INIT_LIST_HEAD(struct list_head *list )
 {
 
   {
@@ -10731,7 +10731,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 }
 }
 # 309 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int constant_test_bit(unsigned int nr , unsigned long const volatile *addr )
+ static int constant_test_bit(unsigned int nr , unsigned long const volatile *addr )
 {
 
   {
@@ -10745,7 +10745,7 @@ extern void lockdep_init_map(struct lockdep_map * , char const * , struct lock_c
 # 93 "include/linux/spinlock.h"
 extern void __raw_spin_lock_init(raw_spinlock_t * , char const * , struct lock_class_key * ) ;
 # 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 {
 
   {
@@ -10762,7 +10762,7 @@ extern bool flush_work_sync(struct work_struct * ) ;
 # 491 "include/linux/skbuff.h"
 extern void consume_skb(struct sk_buff * ) ;
 # 858 "include/linux/skbuff.h"
-__inline static void __skb_queue_head_init(struct sk_buff_head *list )
+ static void __skb_queue_head_init(struct sk_buff_head *list )
 { struct sk_buff *tmp ;
 
   {
@@ -10779,7 +10779,7 @@ __inline static void __skb_queue_head_init(struct sk_buff_head *list )
 }
 }
 # 872 "include/linux/skbuff.h"
-__inline static void skb_queue_head_init(struct sk_buff_head *list )
+ static void skb_queue_head_init(struct sk_buff_head *list )
 { struct lock_class_key __key ;
 
   {
@@ -10800,7 +10800,7 @@ extern void skb_queue_tail(struct sk_buff_head * , struct sk_buff * ) ;
 # 1066 "include/linux/skbuff.h"
 extern struct sk_buff *skb_dequeue(struct sk_buff_head * ) ;
 # 525 "include/linux/mISDNif.h"
-__inline static struct sk_buff *mI_alloc_skb(unsigned int len , gfp_t gfp_mask )
+ static struct sk_buff *mI_alloc_skb(unsigned int len , gfp_t gfp_mask )
 { struct sk_buff *skb ;
   long tmp ;
 
@@ -10826,7 +10826,7 @@ __inline static struct sk_buff *mI_alloc_skb(unsigned int len , gfp_t gfp_mask )
 }
 }
 # 536 "include/linux/mISDNif.h"
-__inline static struct sk_buff *_alloc_mISDN_skb(u_int prim , u_int id , u_int len ,
+ static struct sk_buff *_alloc_mISDN_skb(u_int prim , u_int id , u_int len ,
                                                  void *dp , gfp_t gfp_mask )
 { struct sk_buff *skb ;
   struct sk_buff *tmp ;
@@ -10873,7 +10873,7 @@ __inline static struct sk_buff *_alloc_mISDN_skb(u_int prim , u_int id , u_int l
 }
 }
 # 552 "include/linux/mISDNif.h"
-__inline static void _queue_data(struct mISDNchannel *ch , u_int prim , u_int id ,
+ static void _queue_data(struct mISDNchannel *ch , u_int prim , u_int id ,
                                  u_int len , void *dp , gfp_t gfp_mask )
 { struct sk_buff *skb ;
   int tmp ;
@@ -11304,7 +11304,7 @@ int mISDN_freebchannel(struct bchannel *ch )
 }
 }
 # 159 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/hwchannel.c.p"
-__inline static u_int get_sapi_tei(u_char *p )
+ static u_int get_sapi_tei(u_char *p )
 { u_int sapi ;
   u_int tei ;
 
@@ -11812,7 +11812,7 @@ int bchannel_senddata(struct bchannel *ch , struct sk_buff *skb )
 }
 }
 # 176 "include/linux/list.h"
-__inline static int list_is_last(struct list_head const *list , struct list_head const *head )
+ static int list_is_last(struct list_head const *list , struct list_head const *head )
 {
 
   {
@@ -11821,7 +11821,7 @@ __inline static int list_is_last(struct list_head const *list , struct list_head
 }
 }
 # 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head const *head )
+ static int list_empty(struct list_head const *head )
 {
 
   {
@@ -11830,7 +11830,7 @@ __inline static int list_empty(struct list_head const *head )
 }
 }
 # 581 "include/linux/list.h"
-__inline static int hlist_empty(struct hlist_head const *h )
+ static int hlist_empty(struct hlist_head const *h )
 {
 
   {
@@ -11839,7 +11839,7 @@ __inline static int hlist_empty(struct hlist_head const *h )
 }
 }
 # 315 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile *addr )
+ static int variable_test_bit(int nr , unsigned long const volatile *addr )
 { int oldbit ;
 
   {
@@ -11855,7 +11855,7 @@ extern void __bad_percpu_size(void) ;
 # 10 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 # 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void)
+ static struct task_struct *get_current(void)
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -11900,7 +11900,7 @@ __inline static struct task_struct *get_current(void)
 }
 }
 # 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const *ptr )
+ static long PTR_ERR(void const *ptr )
 {
 
   {
@@ -11909,7 +11909,7 @@ __inline static long PTR_ERR(void const *ptr )
 }
 }
 # 32 "include/linux/err.h"
-__inline static long IS_ERR(void const *ptr )
+ static long IS_ERR(void const *ptr )
 { long tmp ;
 
   {
@@ -11922,7 +11922,7 @@ __inline static long IS_ERR(void const *ptr )
 }
 }
 # 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag )
+ static int test_ti_thread_flag(struct thread_info *ti , int flag )
 { int tmp ;
 
   {
@@ -11953,7 +11953,7 @@ extern void mutex_lock_nested(struct mutex * , unsigned int ) ;
 # 169 "include/linux/mutex.h"
 extern void mutex_unlock(struct mutex * ) ;
 # 73 "include/linux/completion.h"
-__inline static void init_completion(struct completion *x )
+ static void init_completion(struct completion *x )
 { struct lock_class_key __key ;
 
   {
@@ -11974,7 +11974,7 @@ extern void complete(struct completion * ) ;
 # 512 "include/linux/skbuff.h"
 extern struct sk_buff *skb_copy(struct sk_buff const * , gfp_t ) ;
 # 593 "include/linux/skbuff.h"
-__inline static int skb_queue_empty(struct sk_buff_head const *list )
+ static int skb_queue_empty(struct sk_buff_head const *list )
 {
 
   {
@@ -11983,7 +11983,7 @@ __inline static int skb_queue_empty(struct sk_buff_head const *list )
 }
 }
 # 170 "include/linux/signal.h"
-__inline static void sigfillset(sigset_t *set )
+ static void sigfillset(sigset_t *set )
 {
 
   {
@@ -12024,7 +12024,7 @@ extern void schedule(void) ;
 # 2112 "include/linux/sched.h"
 extern int wake_up_process(struct task_struct * ) ;
 # 2441 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 { int tmp ;
 
   {
@@ -12037,7 +12037,7 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 # 2467 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p )
+ static int signal_pending(struct task_struct *p )
 { int tmp ;
   long tmp___0 ;
 
@@ -12068,7 +12068,7 @@ void __add_layer2(struct mISDNchannel *ch , struct mISDNstack *st ) ;
 # 30 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/stack.c.p"
 static u_int *debug___2 ;
 # 33 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/stack.c.p"
-__inline static void _queue_message(struct mISDNstack *st , struct sk_buff *skb )
+ static void _queue_message(struct mISDNstack *st , struct sk_buff *skb )
 { struct mISDNhead *hh ;
   int tmp ;
   long tmp___0 ;
@@ -12440,7 +12440,7 @@ static void send_layer2(struct mISDNstack *st , struct sk_buff *skb )
 }
 }
 # 155 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/stack.c.p"
-__inline static int send_msg_to_layer(struct mISDNstack *st , struct sk_buff *skb )
+ static int send_msg_to_layer(struct mISDNstack *st , struct sk_buff *skb )
 { struct mISDNhead *hh ;
   struct mISDNchannel *ch ;
   int lm ;
@@ -13843,7 +13843,7 @@ void mISDN_initstack(u_int *dp )
 # 1 "<compiler builtins>"
 
 # 519 "include/linux/module.h"
-__inline static void ldv___module_get_2(struct module *module ) ;
+ static void ldv___module_get_2(struct module *module ) ;
 # 543 "include/linux/module.h"
 void ldv_module_put_1(struct module *ldv_func_arg1 ) ;
 # 111 "include/linux/mISDNhw.h"
@@ -13875,7 +13875,7 @@ static void l1m_debug(struct FsmInst *fi , char *fmt , ...)
 # 108 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer1.c.p"
   l1 = (struct layer1 *)fi->userdata;
 # 112 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer1.c.p"
-  __builtin_va_start(((& va)));
+  va_start(((& va)));
 # 114 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer1.c.p"
   vaf.fmt = (char const *)fmt;
 # 115 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer1.c.p"
@@ -13885,7 +13885,7 @@ static void l1m_debug(struct FsmInst *fi , char *fmt , ...)
 # 117 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer1.c.p"
   printk("<7>%s: %pV\n", tmp, & vaf);
 # 119 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer1.c.p"
-  __builtin_va_end(((& va)));
+  va_end(((& va)));
   }
 # 120 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer1.c.p"
   return;
@@ -14620,7 +14620,7 @@ void ldv_module_put_1(struct module *ldv_func_arg1 )
 }
 }
 # 426 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer1.c.p"
-__inline static void ldv___module_get_2(struct module *module )
+ static void ldv___module_get_2(struct module *module )
 {
 
   {
@@ -14635,7 +14635,7 @@ __inline static void ldv___module_get_2(struct module *module )
 # 510 "include/linux/skbuff.h"
 extern struct sk_buff *skb_clone(struct sk_buff * , gfp_t ) ;
 # 843 "include/linux/skbuff.h"
-__inline static __u32 skb_queue_len(struct sk_buff_head const *list_ )
+ static __u32 skb_queue_len(struct sk_buff_head const *list_ )
 {
 
   {
@@ -14644,7 +14644,7 @@ __inline static __u32 skb_queue_len(struct sk_buff_head const *list_ )
 }
 }
 # 1229 "include/linux/skbuff.h"
-__inline static unsigned int skb_headroom(struct sk_buff const *skb )
+ static unsigned int skb_headroom(struct sk_buff const *skb )
 {
 
   {
@@ -14703,7 +14703,7 @@ static void l2m_debug(struct FsmInst *fi , char *fmt , ...)
   }
   {
 # 112 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-  __builtin_va_start(((& va)));
+  va_start(((& va)));
 # 114 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
   vaf.fmt = (char const *)fmt;
 # 115 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
@@ -14711,14 +14711,14 @@ static void l2m_debug(struct FsmInst *fi , char *fmt , ...)
 # 117 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
   printk("<7>l2 (sapi %d tei %d): %pV\n", (int )l2->sapi, (int )l2->tei, & vaf);
 # 120 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-  __builtin_va_end(((& va)));
+  va_end(((& va)));
   }
 # 121 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
   return;
 }
 }
 # 124 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline u_int l2headersize(struct layer2 *l2 , int ui )
+ u_int l2headersize(struct layer2 *l2 , int ui )
 { int tmp___0 ;
   int tmp___1 ;
   int tmp___3 ;
@@ -14760,7 +14760,7 @@ __inline u_int l2headersize(struct layer2 *l2 , int ui )
 }
 }
 # 131 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline u_int l2addrsize(struct layer2 *l2 )
+ u_int l2addrsize(struct layer2 *l2 )
 { unsigned int tmp___0 ;
   int tmp___1 ;
 
@@ -15399,7 +15399,7 @@ static void ReleaseWin(struct layer2 *l2 )
 }
 }
 # 355 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline unsigned int cansend(struct layer2 *l2 )
+ unsigned int cansend(struct layer2 *l2 )
 { unsigned int p1 ;
   int tmp ;
   int tmp___0 ;
@@ -15441,7 +15441,7 @@ __inline unsigned int cansend(struct layer2 *l2 )
 }
 }
 # 367 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline void clear_exception(struct layer2 *l2 )
+ void clear_exception(struct layer2 *l2 )
 {
 
   {
@@ -15550,7 +15550,7 @@ static int sethdraddr(struct layer2 *l2 , u_char *header , int rsp )
 }
 }
 # 399 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline static void enqueue_super(struct layer2 *l2 , struct sk_buff *skb )
+ static void enqueue_super(struct layer2 *l2 , struct sk_buff *skb )
 { u_int tmp ;
   int tmp___0 ;
 
@@ -15575,7 +15575,7 @@ __inline static void enqueue_super(struct layer2 *l2 , struct sk_buff *skb )
 }
 }
 # 406 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline static void enqueue_ui(struct layer2 *l2 , struct sk_buff *skb )
+ static void enqueue_ui(struct layer2 *l2 , struct sk_buff *skb )
 { u_int tmp ;
   int tmp___0 ;
 
@@ -15609,7 +15609,7 @@ __inline static void enqueue_ui(struct layer2 *l2 , struct sk_buff *skb )
 }
 }
 # 415 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline int IsUI(u_char *data )
+ int IsUI(u_char *data )
 {
 
   {
@@ -15618,7 +15618,7 @@ __inline int IsUI(u_char *data )
 }
 }
 # 421 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline int IsUA(u_char *data )
+ int IsUA(u_char *data )
 {
 
   {
@@ -15627,7 +15627,7 @@ __inline int IsUA(u_char *data )
 }
 }
 # 427 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline int IsDM(u_char *data )
+ int IsDM(u_char *data )
 {
 
   {
@@ -15636,7 +15636,7 @@ __inline int IsDM(u_char *data )
 }
 }
 # 433 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline int IsDISC(u_char *data )
+ int IsDISC(u_char *data )
 {
 
   {
@@ -15645,7 +15645,7 @@ __inline int IsDISC(u_char *data )
 }
 }
 # 439 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline int IsRR(u_char *data , struct layer2 *l2 )
+ int IsRR(u_char *data , struct layer2 *l2 )
 { int tmp ;
 
   {
@@ -15664,7 +15664,7 @@ __inline int IsRR(u_char *data , struct layer2 *l2 )
 }
 }
 # 448 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline int IsSFrame(u_char *data , struct layer2 *l2 )
+ int IsSFrame(u_char *data , struct layer2 *l2 )
 { register u_char d ;
   int tmp ;
   int tmp___0 ;
@@ -15702,7 +15702,7 @@ __inline int IsSFrame(u_char *data , struct layer2 *l2 )
 }
 }
 # 458 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline int IsSABME(u_char *data , struct layer2 *l2 )
+ int IsSABME(u_char *data , struct layer2 *l2 )
 { u_char d ;
   int tmp___0 ;
   int tmp___1 ;
@@ -15727,7 +15727,7 @@ __inline int IsSABME(u_char *data , struct layer2 *l2 )
 }
 }
 # 466 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline int IsREJ(u_char *data , struct layer2 *l2 )
+ int IsREJ(u_char *data , struct layer2 *l2 )
 { int tmp___0 ;
   int tmp___1 ;
 
@@ -15749,7 +15749,7 @@ __inline int IsREJ(u_char *data , struct layer2 *l2 )
 }
 }
 # 473 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline int IsFRMR(u_char *data )
+ int IsFRMR(u_char *data )
 {
 
   {
@@ -15758,7 +15758,7 @@ __inline int IsFRMR(u_char *data )
 }
 }
 # 479 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline int IsRNR(u_char *data , struct layer2 *l2 )
+ int IsRNR(u_char *data , struct layer2 *l2 )
 { int tmp___0 ;
   int tmp___1 ;
 
@@ -16189,7 +16189,7 @@ static void send_uframe(struct layer2 *l2 , struct sk_buff *skb , u_char cmd , u
 }
 }
 # 625 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline u_char get_PollFlag(struct layer2 *l2 , struct sk_buff *skb )
+ u_char get_PollFlag(struct layer2 *l2 , struct sk_buff *skb )
 { u_int tmp ;
 
   {
@@ -16202,7 +16202,7 @@ __inline u_char get_PollFlag(struct layer2 *l2 , struct sk_buff *skb )
 }
 }
 # 631 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline u_char get_PollFlagFree(struct layer2 *l2 , struct sk_buff *skb )
+ u_char get_PollFlagFree(struct layer2 *l2 , struct sk_buff *skb )
 { u_char PF ;
 
   {
@@ -16217,7 +16217,7 @@ __inline u_char get_PollFlagFree(struct layer2 *l2 , struct sk_buff *skb )
 }
 }
 # 641 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline void start_t200(struct layer2 *l2 , int i )
+ void start_t200(struct layer2 *l2 , int i )
 {
 
   {
@@ -16232,7 +16232,7 @@ __inline void start_t200(struct layer2 *l2 , int i )
 }
 }
 # 648 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline void restart_t200(struct layer2 *l2 , int i )
+ void restart_t200(struct layer2 *l2 , int i )
 {
 
   {
@@ -16247,7 +16247,7 @@ __inline void restart_t200(struct layer2 *l2 , int i )
 }
 }
 # 655 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline void stop_t200(struct layer2 *l2 , int i )
+ void stop_t200(struct layer2 *l2 , int i )
 { int tmp ;
 
   {
@@ -16269,7 +16269,7 @@ __inline void stop_t200(struct layer2 *l2 , int i )
 }
 }
 # 662 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline void st5_dl_release_l2l3(struct layer2 *l2 )
+ void st5_dl_release_l2l3(struct layer2 *l2 )
 { int pr ;
   int tmp ;
 
@@ -16295,7 +16295,7 @@ __inline void st5_dl_release_l2l3(struct layer2 *l2 )
 }
 }
 # 674 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline void lapb_dl_release_l2l3(struct layer2 *l2 , int f )
+ void lapb_dl_release_l2l3(struct layer2 *l2 , int f )
 { u_int tmp ;
   int tmp___0 ;
 
@@ -17439,7 +17439,7 @@ static void enquiry_cr(struct layer2 *l2 , u_char typ , u_char cr , u_char pf )
 }
 }
 # 1109 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline void enquiry_response(struct layer2 *l2 )
+ void enquiry_response(struct layer2 *l2 )
 { int tmp ;
 
   {
@@ -17468,7 +17468,7 @@ __inline void enquiry_response(struct layer2 *l2 )
 }
 }
 # 1119 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/layer2.c.p"
-__inline void transmit_enquiry(struct layer2 *l2 )
+ void transmit_enquiry(struct layer2 *l2 )
 { int tmp ;
 
   {
@@ -20594,7 +20594,7 @@ static void da_debug(struct FsmInst *fi , char *fmt , ...)
   }
   {
 # 95 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/tei.c.p"
-  __builtin_va_start(((__va_list_tag *)(& va)));
+  va_start(((__va_list_tag *)(& va)));
 # 97 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/tei.c.p"
   vaf.fmt = (char const *)fmt;
 # 98 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/tei.c.p"
@@ -20602,7 +20602,7 @@ static void da_debug(struct FsmInst *fi , char *fmt , ...)
 # 100 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/tei.c.p"
   printk("<7>mgr(%d): %pV\n", ((mgr->ch.st)->dev)->id, & vaf);
 # 102 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/tei.c.p"
-  __builtin_va_end(((& va)));
+  va_end(((& va)));
   }
 # 103 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/tei.c.p"
   return;
@@ -20835,7 +20835,7 @@ static void tei_debug(struct FsmInst *fi , char *fmt , ...)
   }
   {
 # 244 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/tei.c.p"
-  __builtin_va_start(((& va)));
+  va_start(((& va)));
 # 246 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/tei.c.p"
   vaf.fmt = (char const *)fmt;
 # 247 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/tei.c.p"
@@ -20844,7 +20844,7 @@ static void tei_debug(struct FsmInst *fi , char *fmt , ...)
   printk("<7>sapi(%d) tei(%d): %pV\n", (int )(tm->l2)->sapi, (int )(tm->l2)->tei,
          & vaf);
 # 252 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/tei.c.p"
-  __builtin_va_end(((& va)));
+  va_end(((& va)));
   }
 # 253 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/mISDN/mISDN_core.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/30/dscv_tempdir/dscv/ri/08_1/drivers/isdn/mISDN/tei.c.p"
   return;
@@ -24015,7 +24015,7 @@ void TEIFree(void)
 # 111 "include/linux/list.h"
 extern void __list_del_entry(struct list_head * ) ;
 # 142 "include/linux/list.h"
-__inline static void list_del_init(struct list_head *entry )
+ static void list_del_init(struct list_head *entry )
 {
 
   {
@@ -24030,7 +24030,7 @@ __inline static void list_del_init(struct list_head *entry )
 }
 }
 # 164 "include/linux/list.h"
-__inline static void list_move_tail(struct list_head *list , struct list_head *head )
+ static void list_move_tail(struct list_head *list , struct list_head *head )
 {
 
   {
@@ -24049,7 +24049,7 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t * ) ;
 # 43 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long ) ;
 # 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
 {
 
   {
@@ -24062,7 +24062,7 @@ __inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long fla
 }
 }
 # 519 "include/linux/module.h"
-__inline static void ldv___module_get_2(struct module *module ) ;
+ static void ldv___module_get_2(struct module *module ) ;
 # 543 "include/linux/module.h"
 void ldv_module_put_3(struct module *ldv_func_arg1 ) ;
 # 2337 "include/linux/fs.h"
@@ -24070,7 +24070,7 @@ extern loff_t no_llseek(struct file * , loff_t , int ) ;
 # 2345 "include/linux/fs.h"
 int ldv_nonseekable_open_2(struct inode *ldv_func_arg1 , struct file *ldv_func_arg2 ) ;
 # 40 "include/linux/poll.h"
-__inline static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
+ static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
                                poll_table *p )
 {
 

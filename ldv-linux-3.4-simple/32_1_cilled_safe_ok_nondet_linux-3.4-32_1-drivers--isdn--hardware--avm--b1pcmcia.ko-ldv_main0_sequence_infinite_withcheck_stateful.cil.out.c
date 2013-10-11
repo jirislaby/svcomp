@@ -776,9 +776,9 @@ long __builtin_expect(long val , long res ) ;
 #line 47 "include/linux/list.h"
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 60
-__inline static void list_add(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head ) 
+ static void list_add(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -815,9 +815,9 @@ void mutex_unlock(struct mutex *lock ) ;
 #line 170
 int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -832,9 +832,9 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308
-__inline static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -866,14 +866,14 @@ extern int __attribute__((__warn_unused_result__))  request_threaded_irq(unsigne
                                                                          char const   *name ,
                                                                          void *dev ) ;
 #line 131
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
                                                                          char const   *name ,
                                                                          void *dev )  __attribute__((__no_instrument_function__)) ;
 #line 131 "include/linux/interrupt.h"
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
@@ -915,9 +915,9 @@ extern void register_capi_driver(struct capi_driver *driver ) ;
 #line 101
 extern void unregister_capi_driver(struct capi_driver *driver ) ;
 #line 219 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/isdn/hardware/avm/avmcard.h"
-__inline static unsigned char b1outp(unsigned int base , unsigned short offset , unsigned char value )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char b1outp(unsigned int base , unsigned short offset , unsigned char value )  __attribute__((__no_instrument_function__)) ;
 #line 219 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/isdn/hardware/avm/avmcard.h"
-__inline static unsigned char b1outp(unsigned int base , unsigned short offset , unsigned char value ) 
+ static unsigned char b1outp(unsigned int base , unsigned short offset , unsigned char value ) 
 { unsigned char tmp ;
   unsigned int __cil_tmp5 ;
   unsigned int __cil_tmp6 ;
@@ -947,9 +947,9 @@ __inline static unsigned char b1outp(unsigned int base , unsigned short offset ,
 }
 }
 #line 318
-__inline static void b1_reset(unsigned int base )  __attribute__((__no_instrument_function__)) ;
+ static void b1_reset(unsigned int base )  __attribute__((__no_instrument_function__)) ;
 #line 318 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/isdn/hardware/avm/avmcard.h"
-__inline static void b1_reset(unsigned int base ) 
+ static void b1_reset(unsigned int base ) 
 { unsigned long __ms ;
   unsigned long tmp ;
   unsigned long __ms___0 ;

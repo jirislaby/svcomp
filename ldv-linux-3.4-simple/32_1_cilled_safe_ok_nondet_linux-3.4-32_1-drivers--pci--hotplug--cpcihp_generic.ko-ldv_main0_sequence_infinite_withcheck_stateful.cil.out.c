@@ -3881,9 +3881,9 @@ extern struct pv_cpu_ops pv_cpu_ops ;
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern void *memset(void *s , int c , size_t n ) ;
 #line 349 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt.h"
-__inline static void slow_down_io(void)  __attribute__((__no_instrument_function__)) ;
+ static void slow_down_io(void)  __attribute__((__no_instrument_function__)) ;
 #line 349 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt.h"
-__inline static void slow_down_io(void) 
+ static void slow_down_io(void) 
 { unsigned long __cil_tmp1 ;
   void (*__cil_tmp2)(void) ;
 
@@ -3921,9 +3921,9 @@ extern struct resource *__request_region(struct resource * , resource_size_t sta
 #line 192
 extern void __release_region(struct resource * , resource_size_t  , resource_size_t  ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -3938,9 +3938,9 @@ __inline static unsigned char inb(int port )
 }
 }
 #line 308
-__inline static unsigned char inb_p(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb_p(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb_p(int port ) 
+ static unsigned char inb_p(int port ) 
 { unsigned char value ;
   unsigned char tmp ;
 

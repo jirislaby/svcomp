@@ -1578,7 +1578,7 @@ extern void _raw_spin_lock(raw_spinlock_t * ) ;
 #line 39
 extern void _raw_spin_unlock(raw_spinlock_t * ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -1587,7 +1587,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 283 "include/linux/spinlock.h"
-__inline static void ldv_spin_lock_1(spinlock_t *lock ) 
+ static void ldv_spin_lock_1(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -1602,9 +1602,9 @@ __inline static void ldv_spin_lock_1(spinlock_t *lock )
 }
 }
 #line 283
-__inline static void spin_lock(spinlock_t *lock ) ;
+ static void spin_lock(spinlock_t *lock ) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_5(spinlock_t *lock ) 
+ static void ldv_spin_unlock_5(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -1619,7 +1619,7 @@ __inline static void ldv_spin_unlock_5(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock ) ;
+ static void spin_unlock(spinlock_t *lock ) ;
 #line 304 "include/linux/workqueue.h"
 extern struct workqueue_struct *__alloc_workqueue_key(char const   * , unsigned int  ,
                                                       int  , struct lock_class_key * ,
@@ -1639,7 +1639,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12648/dscv_tempdir/dscv/ri/43_1a/drivers/misc/tifm_core.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -1677,7 +1677,7 @@ extern struct device *get_device(struct device * ) ;
 #line 856
 extern void put_device(struct device * ) ;
 #line 737 "include/linux/mm.h"
-__inline static void *lowmem_page_address(struct page  const  *page ) 
+ static void *lowmem_page_address(struct page  const  *page ) 
 { long __cil_tmp2 ;
   long __cil_tmp3 ;
   long __cil_tmp4 ;
@@ -1708,7 +1708,7 @@ __inline static void *lowmem_page_address(struct page  const  *page )
 }
 }
 #line 95 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg ) 
+ static struct page *sg_page(struct scatterlist *sg ) 
 { long tmp ;
   long tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -1789,7 +1789,7 @@ __inline static struct page *sg_page(struct scatterlist *sg )
 }
 }
 #line 199 "include/linux/scatterlist.h"
-__inline static void *sg_virt(struct scatterlist *sg ) 
+ static void *sg_virt(struct scatterlist *sg ) 
 { struct page *tmp ;
   void *tmp___0 ;
   struct page  const  *__cil_tmp4 ;
@@ -1824,7 +1824,7 @@ __inline static void *sg_virt(struct scatterlist *sg )
 #line 204
 extern struct scatterlist *sg_next(struct scatterlist * ) ;
 #line 60 "include/linux/dma-mapping.h"
-__inline static int valid_dma_direction(int dma_direction ) 
+ static int valid_dma_direction(int dma_direction ) 
 { int tmp ;
 
   {
@@ -1851,7 +1851,7 @@ __inline static int valid_dma_direction(int dma_direction )
 }
 }
 #line 131 "include/linux/kmemcheck.h"
-__inline static void kmemcheck_mark_initialized(void *address , unsigned int n ) 
+ static void kmemcheck_mark_initialized(void *address , unsigned int n ) 
 { 
 
   {
@@ -1867,7 +1867,7 @@ extern void debug_dma_unmap_sg(struct device * , struct scatterlist * , int  , i
 #line 29 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/dma-mapping.h"
 extern struct dma_map_ops *dma_ops ;
 #line 31 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/dma-mapping.h"
-__inline static struct dma_map_ops *get_dma_ops(struct device *dev ) 
+ static struct dma_map_ops *get_dma_ops(struct device *dev ) 
 { long tmp ;
   struct device *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -1941,7 +1941,7 @@ __inline static struct dma_map_ops *get_dma_ops(struct device *dev )
 }
 }
 #line 42 "include/asm-generic/dma-mapping-common.h"
-__inline static int dma_map_sg_attrs(struct device *dev , struct scatterlist *sg ,
+ static int dma_map_sg_attrs(struct device *dev , struct scatterlist *sg ,
                                      int nents , enum dma_data_direction dir , struct dma_attrs *attrs ) 
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
@@ -2046,7 +2046,7 @@ __inline static int dma_map_sg_attrs(struct device *dev , struct scatterlist *sg
 }
 }
 #line 59 "include/asm-generic/dma-mapping-common.h"
-__inline static void dma_unmap_sg_attrs(struct device *dev , struct scatterlist *sg ,
+ static void dma_unmap_sg_attrs(struct device *dev , struct scatterlist *sg ,
                                         int nents , enum dma_data_direction dir ,
                                         struct dma_attrs *attrs ) 
 { struct dma_map_ops *ops ;
@@ -2141,7 +2141,7 @@ __inline static void dma_unmap_sg_attrs(struct device *dev , struct scatterlist 
 }
 }
 #line 57 "include/asm-generic/pci-dma-compat.h"
-__inline static int pci_map_sg(struct pci_dev *hwdev , struct scatterlist *sg , int nents ,
+ static int pci_map_sg(struct pci_dev *hwdev , struct scatterlist *sg , int nents ,
                                int direction ) 
 { struct device *tmp ;
   int tmp___0 ;
@@ -2187,7 +2187,7 @@ __inline static int pci_map_sg(struct pci_dev *hwdev , struct scatterlist *sg , 
 }
 }
 #line 64 "include/asm-generic/pci-dma-compat.h"
-__inline static void pci_unmap_sg(struct pci_dev *hwdev , struct scatterlist *sg ,
+ static void pci_unmap_sg(struct pci_dev *hwdev , struct scatterlist *sg ,
                                   int nents , int direction ) 
 { struct device *tmp ;
   struct pci_dev *__cil_tmp6 ;
@@ -4426,7 +4426,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 855 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12648/dscv_tempdir/dscv/ri/43_1a/drivers/misc/tifm_core.c.p"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { 
 
   {
@@ -4441,7 +4441,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 897 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12648/dscv_tempdir/dscv/ri/43_1a/drivers/misc/tifm_core.c.p"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { 
 
   {
@@ -4471,7 +4471,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1029 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12648/dscv_tempdir/dscv/ri/43_1a/drivers/misc/tifm_core.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

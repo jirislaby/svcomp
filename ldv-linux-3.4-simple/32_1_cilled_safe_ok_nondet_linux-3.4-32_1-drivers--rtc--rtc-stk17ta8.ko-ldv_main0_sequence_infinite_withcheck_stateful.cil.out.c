@@ -2165,9 +2165,9 @@ extern unsigned int bcd2bin(unsigned char val )  __attribute__((__const__)) ;
 #line 7
 extern unsigned char bin2bcd(unsigned int val )  __attribute__((__const__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2176,9 +2176,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2216,9 +2216,9 @@ extern void _raw_spin_unlock(raw_spinlock_t *lock )  __attribute__((__section__(
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -2227,9 +2227,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 283
-__inline static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -2244,9 +2244,9 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -2261,9 +2261,9 @@ __inline static void spin_unlock(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -2307,9 +2307,9 @@ extern struct resource *__devm_request_region(struct device *dev , struct resour
 #line 82 "include/linux/jiffies.h"
 extern unsigned long volatile   jiffies  __attribute__((__section__(".data"))) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char readb(void const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr ) 
+ static unsigned char readb(void const volatile   *addr ) 
 { unsigned char ret ;
   unsigned char volatile   *__cil_tmp3 ;
 
@@ -2325,9 +2325,9 @@ __inline static unsigned char readb(void const volatile   *addr )
 }
 }
 #line 61
-__inline static void writeb(unsigned char val , void volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void writeb(unsigned char val , void volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 61 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writeb(unsigned char val , void volatile   *addr ) 
+ static void writeb(unsigned char val , void volatile   *addr ) 
 { unsigned char volatile   *__cil_tmp3 ;
 
   {
@@ -2354,7 +2354,7 @@ extern int __attribute__((__warn_unused_result__))  devm_request_threaded_irq(st
                                                                               char const   *devname ,
                                                                               void *dev_id ) ;
 #line 195
-__inline static int __attribute__((__warn_unused_result__))  devm_request_irq(struct device *dev ,
+ static int __attribute__((__warn_unused_result__))  devm_request_irq(struct device *dev ,
                                                                               unsigned int irq ,
                                                                               irqreturn_t (*handler)(int  ,
                                                                                                      void * ) ,
@@ -2362,7 +2362,7 @@ __inline static int __attribute__((__warn_unused_result__))  devm_request_irq(st
                                                                               char const   *devname ,
                                                                               void *dev_id )  __attribute__((__no_instrument_function__)) ;
 #line 195 "include/linux/interrupt.h"
-__inline static int __attribute__((__warn_unused_result__))  devm_request_irq(struct device *dev ,
+ static int __attribute__((__warn_unused_result__))  devm_request_irq(struct device *dev ,
                                                                               unsigned int irq ,
                                                                               irqreturn_t (*handler)(int  ,
                                                                                                      void * ) ,
@@ -2426,9 +2426,9 @@ extern int platform_driver_register(struct platform_driver * ) ;
 #line 175
 extern void platform_driver_unregister(struct platform_driver * ) ;
 #line 183
-__inline static void *platform_get_drvdata(struct platform_device  const  *pdev )  __attribute__((__no_instrument_function__)) ;
+ static void *platform_get_drvdata(struct platform_device  const  *pdev )  __attribute__((__no_instrument_function__)) ;
 #line 183 "include/linux/platform_device.h"
-__inline static void *platform_get_drvdata(struct platform_device  const  *pdev ) 
+ static void *platform_get_drvdata(struct platform_device  const  *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2450,9 +2450,9 @@ __inline static void *platform_get_drvdata(struct platform_device  const  *pdev 
 }
 }
 #line 188
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void platform_set_drvdata(struct platform_device *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 188 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
+ static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;

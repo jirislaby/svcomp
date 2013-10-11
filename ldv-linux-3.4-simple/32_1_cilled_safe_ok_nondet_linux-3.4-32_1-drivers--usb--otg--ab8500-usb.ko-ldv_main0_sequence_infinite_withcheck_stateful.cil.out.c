@@ -2729,9 +2729,9 @@ struct ab8500_usb {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2751,9 +2751,9 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 93 "include/linux/spinlock.h"
 extern void __raw_spin_lock_init(raw_spinlock_t *lock , char const   *name , struct lock_class_key *key ) ;
 #line 272
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -2811,9 +2811,9 @@ extern int platform_driver_register(struct platform_driver * ) ;
 #line 175
 extern void platform_driver_unregister(struct platform_driver * ) ;
 #line 183
-__inline static void *platform_get_drvdata(struct platform_device  const  *pdev )  __attribute__((__no_instrument_function__)) ;
+ static void *platform_get_drvdata(struct platform_device  const  *pdev )  __attribute__((__no_instrument_function__)) ;
 #line 183 "include/linux/platform_device.h"
-__inline static void *platform_get_drvdata(struct platform_device  const  *pdev ) 
+ static void *platform_get_drvdata(struct platform_device  const  *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2835,9 +2835,9 @@ __inline static void *platform_get_drvdata(struct platform_device  const  *pdev 
 }
 }
 #line 188
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void platform_set_drvdata(struct platform_device *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 188 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
+ static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2864,10 +2864,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -2881,9 +2881,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -2922,9 +2922,9 @@ extern int abx500_get_register_interruptible(struct device *dev , u8 bank , u8 r
 #line 444
 extern int abx500_get_chip_id(struct device *dev ) ;
 #line 86 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/7763/dscv_tempdir/dscv/ri/32_1/drivers/usb/otg/ab8500-usb.c.common.c"
-__inline static struct ab8500_usb *phy_to_ab(struct usb_phy *x )  __attribute__((__no_instrument_function__)) ;
+ static struct ab8500_usb *phy_to_ab(struct usb_phy *x )  __attribute__((__no_instrument_function__)) ;
 #line 86 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/7763/dscv_tempdir/dscv/ri/32_1/drivers/usb/otg/ab8500-usb.c.common.c"
-__inline static struct ab8500_usb *phy_to_ab(struct usb_phy *x ) 
+ static struct ab8500_usb *phy_to_ab(struct usb_phy *x ) 
 { struct usb_phy  const  *__mptr ;
   struct ab8500_usb *__cil_tmp3 ;
   struct usb_phy *__cil_tmp4 ;

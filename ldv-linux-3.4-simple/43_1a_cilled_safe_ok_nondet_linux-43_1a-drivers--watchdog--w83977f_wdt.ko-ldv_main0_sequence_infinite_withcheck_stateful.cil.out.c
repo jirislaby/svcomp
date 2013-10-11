@@ -1848,7 +1848,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 98 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void clear_bit(int nr , unsigned long volatile   *addr ) 
+ static void clear_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -1861,7 +1861,7 @@ __inline static void clear_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 195 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -1882,7 +1882,7 @@ extern void might_fault(void) ;
 #line 355 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt_types.h"
 extern struct pv_cpu_ops pv_cpu_ops ;
 #line 349 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt.h"
-__inline static void slow_down_io(void) 
+ static void slow_down_io(void) 
 { unsigned long __cil_tmp1 ;
   void (*__cil_tmp2)(void) ;
 
@@ -1902,7 +1902,7 @@ __inline static void slow_down_io(void)
 #line 43 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 350 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
+ static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -1917,7 +1917,7 @@ __inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned lo
 }
 }
 #line 350
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 137 "include/linux/ioport.h"
 extern struct resource ioport_resource ;
 #line 181
@@ -1926,7 +1926,7 @@ extern struct resource *__request_region(struct resource * , resource_size_t  , 
 #line 192
 extern void __release_region(struct resource * , resource_size_t  , resource_size_t  ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -1937,7 +1937,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -1948,7 +1948,7 @@ __inline static unsigned char inb(int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb_p(unsigned char value , int port ) 
+ static void outb_p(unsigned char value , int port ) 
 { int __cil_tmp3 ;
   unsigned char __cil_tmp4 ;
 
@@ -1968,7 +1968,7 @@ __inline static void outb_p(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb_p(int port ) 
+ static unsigned char inb_p(int port ) 
 { unsigned char value ;
   unsigned char tmp ;
 
@@ -2014,7 +2014,7 @@ extern int unregister_reboot_notifier(struct notifier_block * ) ;
 #line 40 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_to_user(void * , void const   * , unsigned int  ) ;
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
+ static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
 { unsigned long tmp ;
 
   {
@@ -3636,7 +3636,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1038 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17371/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/w83977f_wdt.c.p"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {

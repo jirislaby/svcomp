@@ -4242,7 +4242,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -4265,7 +4265,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void) 
+ static struct task_struct *get_current(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -4332,7 +4332,7 @@ __inline static struct task_struct *get_current(void)
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern void *memset(void * , int  , size_t  ) ;
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4361,7 +4361,7 @@ extern void __raw_spin_lock_init(raw_spinlock_t * , char const   * , struct lock
 #line 43 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -4370,7 +4370,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 350 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
+ static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -4385,7 +4385,7 @@ __inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned lo
 }
 }
 #line 350
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 79 "include/linux/wait.h"
 extern void __init_waitqueue_head(wait_queue_head_t * , char const   * , struct lock_class_key * ) ;
 #line 155
@@ -4407,7 +4407,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1833/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/ssu100.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -4419,7 +4419,7 @@ struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 40 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_to_user(void * , void const   * , unsigned int  ) ;
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
+ static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
 { unsigned long tmp ;
 
   {
@@ -4454,7 +4454,7 @@ extern int tty_insert_flip_string_flags(struct tty_struct * , unsigned char cons
 extern int tty_insert_flip_string_fixed_flag(struct tty_struct * , unsigned char const   * ,
                                              char  , size_t  ) ;
 #line 11 "include/linux/tty_flip.h"
-__inline static int tty_insert_flip_char(struct tty_struct *tty , unsigned char ch ,
+ static int tty_insert_flip_char(struct tty_struct *tty , unsigned char ch ,
                                          char flag ) 
 { struct tty_buffer *tb ;
   int tmp ;
@@ -4612,7 +4612,7 @@ __inline static int tty_insert_flip_char(struct tty_struct *tty , unsigned char 
 #line 362 "include/linux/sched.h"
 extern void schedule(void) ;
 #line 2563 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4637,7 +4637,7 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2589 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp ;
   long tmp___0 ;
   int __cil_tmp4 ;
@@ -4662,7 +4662,7 @@ __inline static int signal_pending(struct task_struct *p )
 extern int usb_control_msg(struct usb_device * , unsigned int  , __u8  , __u8  , __u16  ,
                            __u16  , void * , __u16  , int  ) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -4684,7 +4684,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 124 "include/linux/usb/serial.h"
-__inline static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
+ static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4709,7 +4709,7 @@ __inline static void *usb_get_serial_port_data(struct usb_serial_port *port )
 }
 }
 #line 129 "include/linux/usb/serial.h"
-__inline static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
+ static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -4800,7 +4800,7 @@ static void ssu100_release(struct usb_serial *serial )
 }
 }
 #line 107 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1833/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/ssu100.c.p"
-__inline static int ssu100_control_msg(struct usb_device *dev , u8 request , u16 data ,
+ static int ssu100_control_msg(struct usb_device *dev , u8 request , u16 data ,
                                        u16 index ) 
 { unsigned int tmp ;
   int tmp___0 ;
@@ -4848,7 +4848,7 @@ __inline static int ssu100_control_msg(struct usb_device *dev , u8 request , u16
 }
 }
 #line 115 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1833/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/ssu100.c.p"
-__inline static int ssu100_setdevice(struct usb_device *dev , u8 *data ) 
+ static int ssu100_setdevice(struct usb_device *dev , u8 *data ) 
 { u16 x ;
   int tmp ;
   u8 __cil_tmp5 ;
@@ -4909,7 +4909,7 @@ __inline static int ssu100_setdevice(struct usb_device *dev , u8 *data )
 }
 }
 #line 123 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1833/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/ssu100.c.p"
-__inline static int ssu100_getdevice(struct usb_device *dev , u8 *data ) 
+ static int ssu100_getdevice(struct usb_device *dev , u8 *data ) 
 { unsigned int tmp ;
   int tmp___0 ;
   unsigned int __cil_tmp5 ;
@@ -4947,7 +4947,7 @@ __inline static int ssu100_getdevice(struct usb_device *dev , u8 *data )
 }
 }
 #line 130 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1833/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/ssu100.c.p"
-__inline static int ssu100_getregister(struct usb_device *dev , unsigned short uart ,
+ static int ssu100_getregister(struct usb_device *dev , unsigned short uart ,
                                        unsigned short reg , u8 *data ) 
 { unsigned int tmp ;
   int tmp___0 ;
@@ -4992,7 +4992,7 @@ __inline static int ssu100_getregister(struct usb_device *dev , unsigned short u
 }
 }
 #line 142 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1833/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/ssu100.c.p"
-__inline static int ssu100_setregister(struct usb_device *dev , unsigned short uart ,
+ static int ssu100_setregister(struct usb_device *dev , unsigned short uart ,
                                        unsigned short reg , u16 data ) 
 { u16 value ;
   unsigned int tmp ;
@@ -5061,7 +5061,7 @@ __inline static int ssu100_setregister(struct usb_device *dev , unsigned short u
 }
 }
 #line 159 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1833/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/ssu100.c.p"
-__inline static int update_mctrl(struct usb_device *dev , unsigned int set , unsigned int clear ) 
+ static int update_mctrl(struct usb_device *dev , unsigned int set , unsigned int clear ) 
 { unsigned int urb_value ;
   int result ;
   unsigned int __cil_tmp6 ;
@@ -9251,7 +9251,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1822 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1833/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/ssu100.c.p"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {
@@ -9281,7 +9281,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1924 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1833/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/ssu100.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

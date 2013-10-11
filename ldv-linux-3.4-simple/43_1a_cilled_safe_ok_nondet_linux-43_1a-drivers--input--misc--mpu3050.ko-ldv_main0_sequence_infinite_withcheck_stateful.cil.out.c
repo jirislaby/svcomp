@@ -3650,7 +3650,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 82 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile   *addr ) 
+ static void __set_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -3663,7 +3663,7 @@ __inline static void __set_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   short __cil_tmp4 ;
@@ -3709,7 +3709,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3031/dscv_tempdir/dscv/ri/43_1a/drivers/input/misc/mpu3050.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -3741,7 +3741,7 @@ extern struct input_dev *input_allocate_device(void) ;
 #line 1457
 extern void input_free_device(struct input_dev * ) ;
 #line 1470 "include/linux/input.h"
-__inline static void *input_get_drvdata(struct input_dev *dev ) 
+ static void *input_get_drvdata(struct input_dev *dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3766,7 +3766,7 @@ __inline static void *input_get_drvdata(struct input_dev *dev )
 }
 }
 #line 1475 "include/linux/input.h"
-__inline static void input_set_drvdata(struct input_dev *dev , void *data ) 
+ static void input_set_drvdata(struct input_dev *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -3791,7 +3791,7 @@ extern int input_register_device(struct input_dev * ) ;
 #line 1502
 extern void input_event(struct input_dev * , unsigned int  , unsigned int  , int  ) ;
 #line 1515 "include/linux/input.h"
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { 
 
@@ -3805,7 +3805,7 @@ __inline static void input_report_abs(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {
@@ -3833,7 +3833,7 @@ extern void pm_runtime_enable(struct device * ) ;
 #line 46
 extern void pm_runtime_set_autosuspend_delay(struct device * , int  ) ;
 #line 193 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_get(struct device *dev ) 
+ static int pm_runtime_get(struct device *dev ) 
 { int tmp ;
 
   {
@@ -3846,7 +3846,7 @@ __inline static int pm_runtime_get(struct device *dev )
 }
 }
 #line 203 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_put(struct device *dev ) 
+ static int pm_runtime_put(struct device *dev ) 
 { int tmp ;
 
   {
@@ -3859,7 +3859,7 @@ __inline static int pm_runtime_put(struct device *dev )
 }
 }
 #line 229 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_set_active(struct device *dev ) 
+ static int pm_runtime_set_active(struct device *dev ) 
 { int tmp ;
 
   {
@@ -3872,7 +3872,7 @@ __inline static int pm_runtime_set_active(struct device *dev )
 }
 }
 #line 234 "include/linux/pm_runtime.h"
-__inline static void pm_runtime_set_suspended(struct device *dev ) 
+ static void pm_runtime_set_suspended(struct device *dev ) 
 { 
 
   {
@@ -5270,7 +5270,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1103 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3031/dscv_tempdir/dscv/ri/43_1a/drivers/input/misc/mpu3050.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

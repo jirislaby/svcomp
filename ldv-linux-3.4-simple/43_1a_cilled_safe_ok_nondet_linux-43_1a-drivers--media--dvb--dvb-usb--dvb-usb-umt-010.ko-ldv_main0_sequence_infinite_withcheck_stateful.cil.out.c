@@ -6869,7 +6869,7 @@ extern int dibusb2_0_streaming_ctrl(struct dvb_usb_adapter * , int  ) ;
 #line 121
 extern int dibusb_power_ctrl(struct dvb_usb_device * , int  ) ;
 #line 66 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/frontends/mt352.h"
-__inline static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len ) 
+ static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len ) 
 { int r ;
   int (*__cil_tmp5)(struct dvb_frontend * , u8 const   * , int  ) ;
   unsigned long __cil_tmp6 ;

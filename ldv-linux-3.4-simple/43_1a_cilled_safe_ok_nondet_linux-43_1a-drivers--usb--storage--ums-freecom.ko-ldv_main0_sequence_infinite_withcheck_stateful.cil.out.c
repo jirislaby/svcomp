@@ -4516,7 +4516,7 @@ void ldv_check_alloc_nonatomic(void) ;
 #line 14
 struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 173 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;

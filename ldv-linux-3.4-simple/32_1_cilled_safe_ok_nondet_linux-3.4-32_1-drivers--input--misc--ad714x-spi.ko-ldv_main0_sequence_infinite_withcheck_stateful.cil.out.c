@@ -3466,10 +3466,10 @@ struct ad714x_chip {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__,
+ static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__,
 __const__)) ;
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3502,9 +3502,9 @@ __inline static __u16 __fswab16(__u16 val )
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern void *memset(void *s , int c , size_t n ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3513,9 +3513,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3543,9 +3543,9 @@ __inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const 
 }
 }
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -3565,9 +3565,9 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 74
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -3615,9 +3615,9 @@ int init_module(void) ;
 #line 68
 void cleanup_module(void) ;
 #line 105 "include/linux/spi/spi.h"
-__inline static struct spi_device *to_spi_device(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static struct spi_device *to_spi_device(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 105 "include/linux/spi/spi.h"
-__inline static struct spi_device *to_spi_device(struct device *dev ) 
+ static struct spi_device *to_spi_device(struct device *dev ) 
 { struct device  const  *__mptr ;
   struct spi_device *tmp___7 ;
   struct spi_device *__cil_tmp4 ;
@@ -3655,9 +3655,9 @@ __inline static struct spi_device *to_spi_device(struct device *dev )
 }
 }
 #line 135
-__inline static void spi_set_drvdata(struct spi_device *spi , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void spi_set_drvdata(struct spi_device *spi , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 135 "include/linux/spi/spi.h"
-__inline static void spi_set_drvdata(struct spi_device *spi , void *data ) 
+ static void spi_set_drvdata(struct spi_device *spi , void *data ) 
 { struct device *__cil_tmp3 ;
 
   {
@@ -3672,9 +3672,9 @@ __inline static void spi_set_drvdata(struct spi_device *spi , void *data )
 }
 }
 #line 140
-__inline static void *spi_get_drvdata(struct spi_device *spi )  __attribute__((__no_instrument_function__)) ;
+ static void *spi_get_drvdata(struct spi_device *spi )  __attribute__((__no_instrument_function__)) ;
 #line 140 "include/linux/spi/spi.h"
-__inline static void *spi_get_drvdata(struct spi_device *spi ) 
+ static void *spi_get_drvdata(struct spi_device *spi ) 
 { void *tmp___7 ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -3695,9 +3695,9 @@ __inline static void *spi_get_drvdata(struct spi_device *spi )
 #line 191
 extern int spi_register_driver(struct spi_driver *sdrv ) ;
 #line 198
-__inline static void spi_unregister_driver(struct spi_driver *sdrv )  __attribute__((__no_instrument_function__)) ;
+ static void spi_unregister_driver(struct spi_driver *sdrv )  __attribute__((__no_instrument_function__)) ;
 #line 198 "include/linux/spi/spi.h"
-__inline static void spi_unregister_driver(struct spi_driver *sdrv ) 
+ static void spi_unregister_driver(struct spi_driver *sdrv ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct device_driver *__cil_tmp4 ;
@@ -3723,9 +3723,9 @@ __inline static void spi_unregister_driver(struct spi_driver *sdrv )
 }
 }
 #line 573
-__inline static void spi_message_init(struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
+ static void spi_message_init(struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
 #line 573 "include/linux/spi/spi.h"
-__inline static void spi_message_init(struct spi_message *m ) 
+ static void spi_message_init(struct spi_message *m ) 
 { void *__cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
 
@@ -3745,9 +3745,9 @@ __inline static void spi_message_init(struct spi_message *m )
 }
 }
 #line 579
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
 #line 579 "include/linux/spi/spi.h"
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -3775,9 +3775,9 @@ extern int spi_setup(struct spi_device *spi ) ;
 #line 630
 extern int spi_sync(struct spi_device *spi , struct spi_message *message ) ;
 #line 645
-__inline static int spi_write(struct spi_device *spi , void const   *buf , size_t len )  __attribute__((__no_instrument_function__)) ;
+ static int spi_write(struct spi_device *spi , void const   *buf , size_t len )  __attribute__((__no_instrument_function__)) ;
 #line 645 "include/linux/spi/spi.h"
-__inline static int spi_write(struct spi_device *spi , void const   *buf , size_t len ) 
+ static int spi_write(struct spi_device *spi , void const   *buf , size_t len ) 
 { struct spi_transfer t ;
   struct spi_message m ;
   int tmp___7 ;

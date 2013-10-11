@@ -2556,9 +2556,9 @@ struct gluebi_device {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2567,9 +2567,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2599,9 +2599,9 @@ __inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const 
 #line 47 "include/linux/list.h"
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 74
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -2630,9 +2630,9 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -2726,9 +2726,9 @@ __inline static struct task_struct *( __attribute__((__always_inline__)) get_cur
 #line 121 "include/linux/string.h"
 extern void *kmemdup(void const   *src , size_t len , gfp_t gfp ) ;
 #line 17 "include/linux/math64.h"
-__inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder )  __attribute__((__no_instrument_function__)) ;
+ static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder )  __attribute__((__no_instrument_function__)) ;
 #line 17 "include/linux/math64.h"
-__inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder ) 
+ static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder ) 
 { unsigned long long __cil_tmp4 ;
   unsigned long long __cil_tmp5 ;
   u64 __cil_tmp6 ;
@@ -2765,10 +2765,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -2782,9 +2782,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -2828,10 +2828,10 @@ extern int ubi_leb_erase(struct ubi_volume_desc *desc , int lnum ) ;
 #line 215
 extern int ubi_leb_unmap(struct ubi_volume_desc *desc , int lnum ) ;
 #line 224
-__inline static int ubi_read(struct ubi_volume_desc *desc , int lnum , char *buf ,
+ static int ubi_read(struct ubi_volume_desc *desc , int lnum , char *buf ,
                              int offset , int len )  __attribute__((__no_instrument_function__)) ;
 #line 224 "include/linux/mtd/ubi.h"
-__inline static int ubi_read(struct ubi_volume_desc *desc , int lnum , char *buf ,
+ static int ubi_read(struct ubi_volume_desc *desc , int lnum , char *buf ,
                              int offset , int len ) 
 { int tmp___7 ;
 
@@ -2845,10 +2845,10 @@ __inline static int ubi_read(struct ubi_volume_desc *desc , int lnum , char *buf
 }
 }
 #line 234
-__inline static int ubi_write(struct ubi_volume_desc *desc , int lnum , void const   *buf ,
+ static int ubi_write(struct ubi_volume_desc *desc , int lnum , void const   *buf ,
                               int offset , int len )  __attribute__((__no_instrument_function__)) ;
 #line 234 "include/linux/mtd/ubi.h"
-__inline static int ubi_write(struct ubi_volume_desc *desc , int lnum , void const   *buf ,
+ static int ubi_write(struct ubi_volume_desc *desc , int lnum , void const   *buf ,
                               int offset , int len ) 
 { int tmp___7 ;
 
@@ -2862,9 +2862,9 @@ __inline static int ubi_write(struct ubi_volume_desc *desc , int lnum , void con
 }
 }
 #line 317 "include/linux/mtd/mtd.h"
-__inline static uint32_t mtd_div_by_eb(uint64_t sz , struct mtd_info *mtd )  __attribute__((__no_instrument_function__)) ;
+ static uint32_t mtd_div_by_eb(uint64_t sz , struct mtd_info *mtd )  __attribute__((__no_instrument_function__)) ;
 #line 317 "include/linux/mtd/mtd.h"
-__inline static uint32_t mtd_div_by_eb(uint64_t sz , struct mtd_info *mtd ) 
+ static uint32_t mtd_div_by_eb(uint64_t sz , struct mtd_info *mtd ) 
 { uint32_t __base ;
   uint32_t __rem ;
   unsigned long __cil_tmp5 ;
@@ -2924,9 +2924,9 @@ __inline static uint32_t mtd_div_by_eb(uint64_t sz , struct mtd_info *mtd )
 }
 }
 #line 340
-__inline static uint32_t mtd_mod_by_ws(uint64_t sz , struct mtd_info *mtd )  __attribute__((__no_instrument_function__)) ;
+ static uint32_t mtd_mod_by_ws(uint64_t sz , struct mtd_info *mtd )  __attribute__((__no_instrument_function__)) ;
 #line 340 "include/linux/mtd/mtd.h"
-__inline static uint32_t mtd_mod_by_ws(uint64_t sz , struct mtd_info *mtd ) 
+ static uint32_t mtd_mod_by_ws(uint64_t sz , struct mtd_info *mtd ) 
 { uint32_t __base ;
   uint32_t __rem ;
   unsigned long __cil_tmp5 ;

@@ -5856,7 +5856,7 @@ struct catc {
 # 1 "<compiler builtins>"
 
 # 59 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile *addr )
 {
 
@@ -5874,7 +5874,7 @@ __inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int 
 }
 }
 # 97 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile *addr )
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile *addr )
 {
 
   {
@@ -5891,7 +5891,7 @@ __inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , un
 }
 }
 # 195 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int test_and_set_bit(int nr , unsigned long volatile *addr )
+ static int test_and_set_bit(int nr , unsigned long volatile *addr )
 { int oldbit ;
 
   {
@@ -5909,7 +5909,7 @@ __inline static int test_and_set_bit(int nr , unsigned long volatile *addr )
 }
 }
 # 246 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int test_and_clear_bit(int nr , unsigned long volatile *addr )
+ static int test_and_clear_bit(int nr , unsigned long volatile *addr )
 { int oldbit ;
 
   {
@@ -5927,11 +5927,11 @@ __inline static int test_and_clear_bit(int nr , unsigned long volatile *addr )
 }
 }
 # 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) __attribute__((__const__)) ;
+ static __u16 __fswab16(__u16 val ) __attribute__((__const__)) ;
 # 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) __attribute__((__const__)) ;
+ static __u16 __fswab16(__u16 val ) __attribute__((__const__)) ;
 # 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val )
+ static __u16 __fswab16(__u16 val )
 {
 
   {
@@ -5940,7 +5940,7 @@ __inline static __u16 __fswab16(__u16 val )
 }
 }
 # 148 "include/linux/swab.h"
-__inline static __u16 __swab16p(__u16 const *p )
+ static __u16 __swab16p(__u16 const *p )
 { __u16 tmp ;
 
   {
@@ -5953,7 +5953,7 @@ __inline static __u16 __swab16p(__u16 const *p )
 }
 }
 # 63 "include/linux/byteorder/little_endian.h"
-__inline static __u16 __le16_to_cpup(__le16 const *p )
+ static __u16 __le16_to_cpup(__le16 const *p )
 {
 
   {
@@ -5962,7 +5962,7 @@ __inline static __u16 __le16_to_cpup(__le16 const *p )
 }
 }
 # 87 "include/linux/byteorder/little_endian.h"
-__inline static __u16 __be16_to_cpup(__be16 const *p )
+ static __u16 __be16_to_cpup(__be16 const *p )
 { __u16 tmp ;
 
   {
@@ -5985,7 +5985,7 @@ extern void *memset(void *s , int c , size_t n ) ;
 # 27 "include/linux/string.h"
 extern char *strncpy(char * , char const * , __kernel_size_t ) ;
 # 23 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const *v )
+ static int atomic_read(atomic_t const *v )
 {
 
   {
@@ -5994,7 +5994,7 @@ __inline static int atomic_read(atomic_t const *v )
 }
 }
 # 35 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i )
+ static void atomic_set(atomic_t *v , int i )
 {
 
   {
@@ -6005,7 +6005,7 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 # 93 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v )
+ static void atomic_inc(atomic_t *v )
 {
 
   {
@@ -6022,7 +6022,7 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 # 105 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v )
+ static void atomic_dec(atomic_t *v )
 {
 
   {
@@ -6045,7 +6045,7 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock ) __attribute__
 # 42 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags ) __attribute__((__section__(".spinlock.text"))) ;
 # 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 {
 
   {
@@ -6054,7 +6054,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 # 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
 {
 
   {
@@ -6103,7 +6103,7 @@ extern unsigned char *skb_put(struct sk_buff *skb , unsigned int len ) ;
 # 1541 "include/linux/skbuff.h"
 extern struct sk_buff *dev_alloc_skb(unsigned int length ) ;
 # 1904 "include/linux/skbuff.h"
-__inline static void skb_copy_from_linear_data(struct sk_buff const *skb , void *to ,
+ static void skb_copy_from_linear_data(struct sk_buff const *skb , void *to ,
                                                unsigned int const len )
 { size_t __len ;
   void *__ret ;
@@ -6120,7 +6120,7 @@ __inline static void skb_copy_from_linear_data(struct sk_buff const *skb , void 
 }
 }
 # 1918 "include/linux/skbuff.h"
-__inline static void skb_copy_to_linear_data(struct sk_buff *skb , void const *from ,
+ static void skb_copy_to_linear_data(struct sk_buff *skb , void const *from ,
                                              unsigned int const len )
 { size_t __len ;
   void *__ret ;
@@ -6137,7 +6137,7 @@ __inline static void skb_copy_to_linear_data(struct sk_buff *skb , void const *f
 }
 }
 # 49 "include/linux/ethtool.h"
-__inline static void ethtool_cmd_speed_set(struct ethtool_cmd *ep , __u32 speed )
+ static void ethtool_cmd_speed_set(struct ethtool_cmd *ep , __u32 speed )
 {
 
   {
@@ -6152,7 +6152,7 @@ __inline static void ethtool_cmd_speed_set(struct ethtool_cmd *ep , __u32 speed 
 # 748 "include/linux/ethtool.h"
 extern u32 ethtool_op_get_link(struct net_device *dev ) ;
 # 1409 "include/linux/netdevice.h"
-__inline static struct netdev_queue *netdev_get_tx_queue(struct net_device const *dev ,
+ static struct netdev_queue *netdev_get_tx_queue(struct net_device const *dev ,
                                                          unsigned int index )
 {
 
@@ -6162,7 +6162,7 @@ __inline static struct netdev_queue *netdev_get_tx_queue(struct net_device const
 }
 }
 # 1481 "include/linux/netdevice.h"
-__inline static void *netdev_priv(struct net_device const *dev )
+ static void *netdev_priv(struct net_device const *dev )
 {
 
   {
@@ -6177,7 +6177,7 @@ extern int netpoll_trap(void) ;
 # 1788 "include/linux/netdevice.h"
 extern void __netif_schedule(struct Qdisc *q ) ;
 # 1804 "include/linux/netdevice.h"
-__inline static void netif_tx_start_queue(struct netdev_queue *dev_queue )
+ static void netif_tx_start_queue(struct netdev_queue *dev_queue )
 {
 
   {
@@ -6190,7 +6190,7 @@ __inline static void netif_tx_start_queue(struct netdev_queue *dev_queue )
 }
 }
 # 1815 "include/linux/netdevice.h"
-__inline static void netif_start_queue(struct net_device *dev )
+ static void netif_start_queue(struct net_device *dev )
 { struct netdev_queue *tmp___7 ;
 
   {
@@ -6205,7 +6205,7 @@ __inline static void netif_start_queue(struct net_device *dev )
 }
 }
 # 1830 "include/linux/netdevice.h"
-__inline static void netif_tx_wake_queue(struct netdev_queue *dev_queue )
+ static void netif_tx_wake_queue(struct netdev_queue *dev_queue )
 { int tmp___7 ;
   int tmp___8 ;
 
@@ -6243,7 +6243,7 @@ __inline static void netif_tx_wake_queue(struct netdev_queue *dev_queue )
 }
 }
 # 1849 "include/linux/netdevice.h"
-__inline static void netif_wake_queue(struct net_device *dev )
+ static void netif_wake_queue(struct net_device *dev )
 { struct netdev_queue *tmp___7 ;
 
   {
@@ -6258,7 +6258,7 @@ __inline static void netif_wake_queue(struct net_device *dev )
 }
 }
 # 1864 "include/linux/netdevice.h"
-__inline static void netif_tx_stop_queue(struct netdev_queue *dev_queue )
+ static void netif_tx_stop_queue(struct netdev_queue *dev_queue )
 { int __ret_warn_on ;
   long tmp___7 ;
   long tmp___8 ;
@@ -6303,7 +6303,7 @@ __inline static void netif_tx_stop_queue(struct netdev_queue *dev_queue )
 }
 }
 # 1880 "include/linux/netdevice.h"
-__inline static void netif_stop_queue(struct net_device *dev )
+ static void netif_stop_queue(struct net_device *dev )
 { struct netdev_queue *tmp___7 ;
 
   {
@@ -6341,11 +6341,11 @@ extern struct net_device *alloc_etherdev_mqs(int sizeof_priv , unsigned int txqs
 # 11 "include/linux/crc32.h"
 extern u32 crc32_le(u32 crc , unsigned char const *p , size_t len ) ;
 # 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) __attribute__((__ldv_model__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf ) __attribute__((__ldv_model__)) ;
 # 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) __attribute__((__ldv_model__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf ) __attribute__((__ldv_model__)) ;
 # 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf )
+ static void *usb_get_intfdata(struct usb_interface *intf )
 { void *tmp___7 ;
 
   {
@@ -6358,11 +6358,11 @@ __inline static void *usb_get_intfdata(struct usb_interface *intf )
 }
 }
 # 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) __attribute__((__ldv_model__)) ;
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) __attribute__((__ldv_model__)) ;
 # 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) __attribute__((__ldv_model__)) ;
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) __attribute__((__ldv_model__)) ;
 # 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
+ static void usb_set_intfdata(struct usb_interface *intf , void *data )
 {
 
   {
@@ -6375,7 +6375,7 @@ __inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
 }
 }
 # 497 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf )
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf )
 { struct device const *__mptr ;
 
   {
@@ -6386,7 +6386,7 @@ __inline static struct usb_device *interface_to_usbdev(struct usb_interface *int
 }
 }
 # 637 "include/linux/usb.h"
-__inline static int usb_make_path(struct usb_device *dev , char *buf , size_t size )
+ static int usb_make_path(struct usb_device *dev , char *buf , size_t size )
 { int actual ;
   int tmp___7 ;
 
@@ -6410,7 +6410,7 @@ __inline static int usb_make_path(struct usb_device *dev , char *buf , size_t si
 # 929 "include/linux/usb.h"
 extern int usb_register_driver(struct usb_driver * , struct module * , char const * ) ;
 # 931 "include/linux/usb.h"
-__inline static int usb_register(struct usb_driver *driver )
+ static int usb_register(struct usb_driver *driver )
 { int tmp___7 ;
 
   {
@@ -6425,7 +6425,7 @@ __inline static int usb_register(struct usb_driver *driver )
 # 935 "include/linux/usb.h"
 extern void usb_deregister(struct usb_driver * ) ;
 # 1237 "include/linux/usb.h"
-__inline static void usb_fill_control_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_control_urb(struct urb *urb , struct usb_device *dev ,
                                           unsigned int pipe , unsigned char *setup_packet ,
                                           void *transfer_buffer , int buffer_length ,
                                           void (*complete_fn)(struct urb * ) , void *context )
@@ -6451,7 +6451,7 @@ __inline static void usb_fill_control_urb(struct urb *urb , struct usb_device *d
 }
 }
 # 1268 "include/linux/usb.h"
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context )
@@ -6475,7 +6475,7 @@ __inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev 
 }
 }
 # 1309 "include/linux/usb.h"
-__inline static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
+ static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
                                       void *transfer_buffer , int buffer_length ,
                                       void (*complete_fn)(struct urb * ) , void *context ,
                                       int interval )
@@ -6535,7 +6535,7 @@ extern int usb_control_msg(struct usb_device *dev , unsigned int pipe , __u8 req
 # 1422 "include/linux/usb.h"
 extern int usb_set_interface(struct usb_device *dev , int ifnum , int alternate ) ;
 # 1526 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )
 {
 
   {

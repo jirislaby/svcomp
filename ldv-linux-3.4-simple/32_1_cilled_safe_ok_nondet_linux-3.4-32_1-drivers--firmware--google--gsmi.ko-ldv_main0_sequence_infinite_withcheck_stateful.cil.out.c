@@ -3843,11 +3843,11 @@ extern int __attribute__((__warn_unused_result__))  _kstrtoul(char const   *s , 
 extern int __attribute__((__warn_unused_result__))  kstrtoull(char const   *s , unsigned int base ,
                                                               unsigned long long *res ) ;
 #line 220
-__inline static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
+ static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
                                                                       unsigned int base ,
                                                                       unsigned long *res )  __attribute__((__no_instrument_function__)) ;
 #line 220 "include/linux/kernel.h"
-__inline static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
+ static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
                                                                       unsigned int base ,
                                                                       unsigned long *res ) 
 { int tmp ;
@@ -3894,9 +3894,9 @@ extern void *memset(void *s , int c , size_t n ) ;
 #line 45 "include/linux/string.h"
 extern int strncmp(char const   * , char const   * , __kernel_size_t  ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3905,9 +3905,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3951,9 +3951,9 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock )  __attribute_
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -3962,9 +3962,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -4011,7 +4011,7 @@ extern void platform_device_unregister(struct platform_device * ) ;
 #line 65
 extern struct platform_device *platform_device_register_full(struct platform_device_info  const  *pdevinfo ) ;
 #line 82
-__inline static struct platform_device *platform_device_register_resndata(struct device *parent ,
+ static struct platform_device *platform_device_register_resndata(struct device *parent ,
                                                                           char const   *name ,
                                                                           int id ,
                                                                           struct resource  const  *res ,
@@ -4019,7 +4019,7 @@ __inline static struct platform_device *platform_device_register_resndata(struct
                                                                           void const   *data ,
                                                                           size_t size )  __attribute__((__no_instrument_function__)) ;
 #line 82 "include/linux/platform_device.h"
-__inline static struct platform_device *platform_device_register_resndata(struct device *parent ,
+ static struct platform_device *platform_device_register_resndata(struct device *parent ,
                                                                           char const   *name ,
                                                                           int id ,
                                                                           struct resource  const  *res ,
@@ -4082,11 +4082,11 @@ __inline static struct platform_device *platform_device_register_resndata(struct
 }
 }
 #line 123
-__inline static struct platform_device *platform_device_register_simple(char const   *name ,
+ static struct platform_device *platform_device_register_simple(char const   *name ,
                                                                         int id , struct resource  const  *res ,
                                                                         unsigned int num )  __attribute__((__no_instrument_function__)) ;
 #line 123 "include/linux/platform_device.h"
-__inline static struct platform_device *platform_device_register_simple(char const   *name ,
+ static struct platform_device *platform_device_register_simple(char const   *name ,
                                                                         int id , struct resource  const  *res ,
                                                                         unsigned int num ) 
 { struct platform_device *tmp ;
@@ -4121,9 +4121,9 @@ extern int atomic_notifier_chain_register(struct atomic_notifier_head *nh , stru
 #line 128
 extern int atomic_notifier_chain_unregister(struct atomic_notifier_head *nh , struct notifier_block *nb ) ;
 #line 111 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static phys_addr_t virt_to_phys(void volatile   *address )  __attribute__((__no_instrument_function__)) ;
+ static phys_addr_t virt_to_phys(void volatile   *address )  __attribute__((__no_instrument_function__)) ;
 #line 111 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static phys_addr_t virt_to_phys(void volatile   *address ) 
+ static phys_addr_t virt_to_phys(void volatile   *address ) 
 { unsigned long tmp ;
   unsigned long __cil_tmp3 ;
 
@@ -4152,10 +4152,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -4169,9 +4169,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 

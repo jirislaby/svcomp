@@ -767,7 +767,7 @@ int createEmail(int from , int to )
 #line 4 "wsllib.h"
 void __automaton_fail(void) ;
 #line 10 "EncryptVerify_spec.c"
-__inline void __utac_acc__EncryptVerify_spec__1(int msg ) 
+ void __utac_acc__EncryptVerify_spec__1(int msg ) 
 { int tmp ;
 
   {

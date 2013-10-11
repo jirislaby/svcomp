@@ -1888,9 +1888,9 @@ extern void __release_region(struct resource * , resource_size_t  , resource_siz
 #line 174 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
 extern void *ioremap_nocache(resource_size_t offset , unsigned long size ) ;
 #line 182
-__inline static void *ioremap(resource_size_t offset , unsigned long size )  __attribute__((__no_instrument_function__)) ;
+ static void *ioremap(resource_size_t offset , unsigned long size )  __attribute__((__no_instrument_function__)) ;
 #line 182 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *ioremap(resource_size_t offset , unsigned long size ) 
+ static void *ioremap(resource_size_t offset , unsigned long size ) 
 { void *tmp ;
 
   {
@@ -1905,9 +1905,9 @@ __inline static void *ioremap(resource_size_t offset , unsigned long size )
 #line 187
 extern void iounmap(void volatile   *addr ) ;
 #line 308
-__inline static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -1922,9 +1922,9 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308
-__inline static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -1960,14 +1960,14 @@ extern int __attribute__((__warn_unused_result__))  request_threaded_irq(unsigne
                                                                          char const   *name ,
                                                                          void *dev ) ;
 #line 131
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
                                                                          char const   *name ,
                                                                          void *dev )  __attribute__((__no_instrument_function__)) ;
 #line 131 "include/linux/interrupt.h"
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
@@ -2003,9 +2003,9 @@ extern int __attribute__((__warn_unused_result__))  __pci_register_driver(struct
 #line 949
 extern void pci_unregister_driver(struct pci_driver *dev ) ;
 #line 1358
-__inline static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
+ static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2030,9 +2030,9 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1363
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 1363 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2061,9 +2061,9 @@ extern void register_capi_driver(struct capi_driver *driver ) ;
 #line 101
 extern void unregister_capi_driver(struct capi_driver *driver ) ;
 #line 219 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/isdn/hardware/avm/avmcard.h"
-__inline static unsigned char b1outp(unsigned int base , unsigned short offset , unsigned char value )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char b1outp(unsigned int base , unsigned short offset , unsigned char value )  __attribute__((__no_instrument_function__)) ;
 #line 219 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/isdn/hardware/avm/avmcard.h"
-__inline static unsigned char b1outp(unsigned int base , unsigned short offset , unsigned char value ) 
+ static unsigned char b1outp(unsigned int base , unsigned short offset , unsigned char value ) 
 { unsigned char tmp ;
   unsigned int __cil_tmp5 ;
   unsigned int __cil_tmp6 ;
@@ -2093,9 +2093,9 @@ __inline static unsigned char b1outp(unsigned int base , unsigned short offset ,
 }
 }
 #line 318
-__inline static void b1_reset(unsigned int base )  __attribute__((__no_instrument_function__)) ;
+ static void b1_reset(unsigned int base )  __attribute__((__no_instrument_function__)) ;
 #line 318 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/isdn/hardware/avm/avmcard.h"
-__inline static void b1_reset(unsigned int base ) 
+ static void b1_reset(unsigned int base ) 
 { unsigned long __ms ;
   unsigned long tmp ;
   unsigned long __ms___0 ;

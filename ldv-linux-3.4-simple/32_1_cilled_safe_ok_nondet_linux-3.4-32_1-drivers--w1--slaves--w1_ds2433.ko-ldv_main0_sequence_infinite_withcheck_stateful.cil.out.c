@@ -1044,10 +1044,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -1061,9 +1061,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -1095,9 +1095,9 @@ extern u8 w1_read_block(struct w1_master * , u8 * , int  ) ;
 #line 218
 extern int w1_reset_select_slave(struct w1_slave *sl ) ;
 #line 222
-__inline static struct w1_slave *dev_to_w1_slave(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static struct w1_slave *dev_to_w1_slave(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 222 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/w1/slaves/../w1.h"
-__inline static struct w1_slave *dev_to_w1_slave(struct device *dev ) 
+ static struct w1_slave *dev_to_w1_slave(struct device *dev ) 
 { struct device  const  *__mptr ;
   struct w1_slave *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -1131,9 +1131,9 @@ __inline static struct w1_slave *dev_to_w1_slave(struct device *dev )
 }
 }
 #line 227
-__inline static struct w1_slave *kobj_to_w1_slave(struct kobject *kobj )  __attribute__((__no_instrument_function__)) ;
+ static struct w1_slave *kobj_to_w1_slave(struct kobject *kobj )  __attribute__((__no_instrument_function__)) ;
 #line 227 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/w1/slaves/../w1.h"
-__inline static struct w1_slave *kobj_to_w1_slave(struct kobject *kobj ) 
+ static struct w1_slave *kobj_to_w1_slave(struct kobject *kobj ) 
 { struct kobject  const  *__mptr ;
   struct w1_slave *tmp ;
   struct device *__cil_tmp4 ;
@@ -1213,9 +1213,9 @@ __section__(".modinfo"), __aligned__(1)))  =
         (char const   )'E',      (char const   )'E',      (char const   )'P',      (char const   )'R', 
         (char const   )'O',      (char const   )'M',      (char const   )'\000'};
 #line 56
-__inline static size_t w1_f23_fix_count(loff_t off , size_t count , size_t size )  __attribute__((__no_instrument_function__)) ;
+ static size_t w1_f23_fix_count(loff_t off , size_t count , size_t size )  __attribute__((__no_instrument_function__)) ;
 #line 56 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12357/dscv_tempdir/dscv/ri/32_1/drivers/w1/slaves/w1_ds2433.c.common.c"
-__inline static size_t w1_f23_fix_count(loff_t off , size_t count , size_t size ) 
+ static size_t w1_f23_fix_count(loff_t off , size_t count , size_t size ) 
 { loff_t __cil_tmp4 ;
   loff_t __cil_tmp5 ;
   loff_t __cil_tmp6 ;

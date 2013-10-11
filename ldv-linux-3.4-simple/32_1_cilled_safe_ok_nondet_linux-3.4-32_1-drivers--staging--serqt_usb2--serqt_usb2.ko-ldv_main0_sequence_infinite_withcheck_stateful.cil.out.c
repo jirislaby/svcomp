@@ -4370,9 +4370,9 @@ struct quatech_port {
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -4393,9 +4393,9 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -4491,9 +4491,9 @@ extern void *__memcpy(void *to , void const   *from , size_t len ) ;
 #line 55
 extern void *memset(void *s , int c , size_t n ) ;
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp___0 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -4549,10 +4549,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -4566,9 +4566,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -4608,10 +4608,10 @@ extern int tty_insert_flip_string_flags(struct tty_struct *tty , unsigned char c
 #line 9
 extern void tty_schedule_flip(struct tty_struct *tty ) ;
 #line 11
-__inline static int tty_insert_flip_char(struct tty_struct *tty , unsigned char ch ,
+ static int tty_insert_flip_char(struct tty_struct *tty , unsigned char ch ,
                                          char flag )  __attribute__((__no_instrument_function__)) ;
 #line 11 "include/linux/tty_flip.h"
-__inline static int tty_insert_flip_char(struct tty_struct *tty , unsigned char ch ,
+ static int tty_insert_flip_char(struct tty_struct *tty , unsigned char ch ,
                                          char flag ) 
 { struct tty_buffer *tb ;
   int tmp ;
@@ -4759,9 +4759,9 @@ int init_module(void) ;
 #line 68
 void cleanup_module(void) ;
 #line 2563 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 2563 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp___7 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4786,9 +4786,9 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2589
-__inline static int signal_pending(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
+ static int signal_pending(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
 #line 2589 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp___7 ;
   int tmp___8 ;
   long tmp___9 ;
@@ -4818,12 +4818,12 @@ __inline static int signal_pending(struct task_struct *p )
 }
 }
 #line 1309 "include/linux/usb.h"
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context )  __attribute__((__no_instrument_function__)) ;
 #line 1309 "include/linux/usb.h"
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context ) 
@@ -4882,12 +4882,12 @@ __inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev 
 }
 }
 #line 1350
-__inline static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
+ static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
                                       void *transfer_buffer , int buffer_length ,
                                       void (*complete_fn)(struct urb * ) , void *context ,
                                       int interval )  __attribute__((__no_instrument_function__)) ;
 #line 1350 "include/linux/usb.h"
-__inline static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
+ static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
                                       void *transfer_buffer , int buffer_length ,
                                       void (*complete_fn)(struct urb * ) , void *context ,
                                       int interval ) 
@@ -5034,9 +5034,9 @@ extern int usb_control_msg(struct usb_device *dev , unsigned int pipe , __u8 req
 #line 1461
 extern int usb_clear_halt(struct usb_device *dev , int pipe ) ;
 #line 1567
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -5058,9 +5058,9 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 124 "include/linux/usb/serial.h"
-__inline static void *usb_get_serial_port_data(struct usb_serial_port *port )  __attribute__((__no_instrument_function__)) ;
+ static void *usb_get_serial_port_data(struct usb_serial_port *port )  __attribute__((__no_instrument_function__)) ;
 #line 124 "include/linux/usb/serial.h"
-__inline static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
+ static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5085,9 +5085,9 @@ __inline static void *usb_get_serial_port_data(struct usb_serial_port *port )
 }
 }
 #line 129
-__inline static void usb_set_serial_port_data(struct usb_serial_port *port , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void usb_set_serial_port_data(struct usb_serial_port *port , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 129 "include/linux/usb/serial.h"
-__inline static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
+ static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -5369,9 +5369,9 @@ static int serial_paranoia_check(struct usb_serial *serial , char const   *funct
 }
 }
 #line 237
-__inline static struct quatech_port *qt_get_port_private(struct usb_serial_port *port )  __attribute__((__no_instrument_function__)) ;
+ static struct quatech_port *qt_get_port_private(struct usb_serial_port *port )  __attribute__((__no_instrument_function__)) ;
 #line 237 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/1659/dscv_tempdir/dscv/ri/32_1/drivers/staging/serqt_usb2/serqt_usb2.c.common.c"
-__inline static struct quatech_port *qt_get_port_private(struct usb_serial_port *port ) 
+ static struct quatech_port *qt_get_port_private(struct usb_serial_port *port ) 
 { void *tmp___7 ;
 
   {
@@ -12004,10 +12004,10 @@ static void qt_break(struct tty_struct *tty , int break_state )
 }
 }
 #line 1378
-__inline static int qt_real_tiocmget(struct tty_struct *tty , struct usb_serial_port *port ,
+ static int qt_real_tiocmget(struct tty_struct *tty , struct usb_serial_port *port ,
                                      struct usb_serial *serial )  __attribute__((__no_instrument_function__)) ;
 #line 1378 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/1659/dscv_tempdir/dscv/ri/32_1/drivers/staging/serqt_usb2/serqt_usb2.c.common.c"
-__inline static int qt_real_tiocmget(struct tty_struct *tty , struct usb_serial_port *port ,
+ static int qt_real_tiocmget(struct tty_struct *tty , struct usb_serial_port *port ,
                                      struct usb_serial *serial ) 
 { u8 mcr ;
   u8 msr ;
@@ -12253,10 +12253,10 @@ __inline static int qt_real_tiocmget(struct tty_struct *tty , struct usb_serial_
 }
 }
 #line 1420
-__inline static int qt_real_tiocmset(struct tty_struct *tty , struct usb_serial_port *port ,
+ static int qt_real_tiocmset(struct tty_struct *tty , struct usb_serial_port *port ,
                                      struct usb_serial *serial , unsigned int value )  __attribute__((__no_instrument_function__)) ;
 #line 1420 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/1659/dscv_tempdir/dscv/ri/32_1/drivers/staging/serqt_usb2/serqt_usb2.c.common.c"
-__inline static int qt_real_tiocmset(struct tty_struct *tty , struct usb_serial_port *port ,
+ static int qt_real_tiocmset(struct tty_struct *tty , struct usb_serial_port *port ,
                                      struct usb_serial *serial , unsigned int value ) 
 { u8 mcr ;
   int status ;

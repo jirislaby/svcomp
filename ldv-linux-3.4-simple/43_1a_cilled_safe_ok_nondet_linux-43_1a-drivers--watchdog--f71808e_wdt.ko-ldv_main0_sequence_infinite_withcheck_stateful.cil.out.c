@@ -1587,7 +1587,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 82 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile   *addr ) 
+ static void __set_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -1600,7 +1600,7 @@ __inline static void __set_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 98 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void clear_bit(int nr , unsigned long volatile   *addr ) 
+ static void clear_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -1613,7 +1613,7 @@ __inline static void clear_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 125 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __clear_bit(int nr , unsigned long volatile   *addr ) 
+ static void __clear_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -1626,7 +1626,7 @@ __inline static void __clear_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 195 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -1660,7 +1660,7 @@ extern struct resource *__request_region(struct resource * , resource_size_t  , 
 #line 192
 extern void __release_region(struct resource * , resource_size_t  , resource_size_t  ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -1671,7 +1671,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -1710,7 +1710,7 @@ extern int unregister_reboot_notifier(struct notifier_block * ) ;
 #line 40 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_to_user(void * , void const   * , unsigned int  ) ;
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
+ static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
 { unsigned long tmp ;
 
   {
@@ -1742,21 +1742,21 @@ static unsigned int start_withtimeout  ;
 static char const   *f71808e_names[6U]  = {      "f71808fg",      "f71858fg",      "f71862fg",      "f71869", 
         "f71882fg",      "f71889fg"};
 #line 141
-__inline static int superio_inb(int base , int reg ) ;
+ static int superio_inb(int base , int reg ) ;
 #line 142
-__inline static int superio_inw(int base , int reg ) ;
+ static int superio_inw(int base , int reg ) ;
 #line 143
-__inline static void superio_outb(int base , int reg , u8 val ) ;
+ static void superio_outb(int base , int reg , u8 val ) ;
 #line 144
-__inline static void superio_set_bit(int base , int reg , int bit ) ;
+ static void superio_set_bit(int base , int reg , int bit ) ;
 #line 145
-__inline static void superio_clear_bit(int base , int reg , int bit ) ;
+ static void superio_clear_bit(int base , int reg , int bit ) ;
 #line 146
-__inline static int superio_enter(int base ) ;
+ static int superio_enter(int base ) ;
 #line 147
-__inline static void superio_select(int base , int ld ) ;
+ static void superio_select(int base , int ld ) ;
 #line 148
-__inline static void superio_exit(int base ) ;
+ static void superio_exit(int base ) ;
 #line 166 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17341/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/f71808e_wdt.c.p"
 static struct watchdog_data watchdog  = 
 #line 166
@@ -1802,7 +1802,7 @@ static struct watchdog_data watchdog  =
                                                                                (unsigned char)0}},
     (unsigned short)0, (unsigned char)0, (char)0, (unsigned char)0, (char)0, (char)0};
 #line 171 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17341/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/f71808e_wdt.c.p"
-__inline static int superio_inb(int base , int reg ) 
+ static int superio_inb(int base , int reg ) 
 { unsigned char tmp ;
   unsigned char __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -1829,7 +1829,7 @@ __inline static int superio_inb(int base , int reg )
 }
 }
 #line 177 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17341/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/f71808e_wdt.c.p"
-__inline static int superio_inw(int base , int reg ) 
+ static int superio_inw(int base , int reg ) 
 { int val ;
   int tmp ;
   int tmp___0 ;
@@ -1853,7 +1853,7 @@ __inline static int superio_inw(int base , int reg )
 }
 }
 #line 185 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17341/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/f71808e_wdt.c.p"
-__inline static void superio_outb(int base , int reg , u8 val ) 
+ static void superio_outb(int base , int reg , u8 val ) 
 { unsigned char __cil_tmp4 ;
   int __cil_tmp5 ;
   unsigned char __cil_tmp6 ;
@@ -1885,7 +1885,7 @@ __inline static void superio_outb(int base , int reg , u8 val )
 }
 }
 #line 191 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17341/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/f71808e_wdt.c.p"
-__inline static void superio_set_bit(int base , int reg , int bit ) 
+ static void superio_set_bit(int base , int reg , int bit ) 
 { unsigned long val ;
   int tmp ;
   unsigned long *__cil_tmp6 ;
@@ -1926,7 +1926,7 @@ __inline static void superio_set_bit(int base , int reg , int bit )
 }
 }
 #line 198 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17341/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/f71808e_wdt.c.p"
-__inline static void superio_clear_bit(int base , int reg , int bit ) 
+ static void superio_clear_bit(int base , int reg , int bit ) 
 { unsigned long val ;
   int tmp ;
   unsigned long *__cil_tmp6 ;
@@ -1967,7 +1967,7 @@ __inline static void superio_clear_bit(int base , int reg , int bit )
 }
 }
 #line 205 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17341/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/f71808e_wdt.c.p"
-__inline static int superio_enter(int base ) 
+ static int superio_enter(int base ) 
 { struct resource *tmp ;
   resource_size_t __cil_tmp3 ;
   struct resource *__cil_tmp4 ;
@@ -2011,7 +2011,7 @@ __inline static int superio_enter(int base )
 }
 }
 #line 220 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17341/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/f71808e_wdt.c.p"
-__inline static void superio_select(int base , int ld ) 
+ static void superio_select(int base , int ld ) 
 { unsigned char __cil_tmp3 ;
   int __cil_tmp4 ;
   unsigned char __cil_tmp5 ;
@@ -2037,7 +2037,7 @@ __inline static void superio_select(int base , int ld )
 }
 }
 #line 226 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17341/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/f71808e_wdt.c.p"
-__inline static void superio_exit(int base ) 
+ static void superio_exit(int base ) 
 { resource_size_t __cil_tmp2 ;
 
   {

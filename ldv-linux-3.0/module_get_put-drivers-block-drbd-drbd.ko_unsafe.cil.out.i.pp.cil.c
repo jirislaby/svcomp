@@ -8085,7 +8085,7 @@ struct cn_handler_struct {
 #line 1
 long __builtin_expect(long  , long  ) ;
 #line 60 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
+ static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -8098,7 +8098,7 @@ __inline static void set_bit(unsigned int nr , unsigned long volatile   *addr )
 }
 }
 #line 98 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void clear_bit(int nr , unsigned long volatile   *addr ) 
+ static void clear_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -8111,7 +8111,7 @@ __inline static void clear_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 195 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -8126,7 +8126,7 @@ __inline static int test_and_set_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 227 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int __test_and_set_bit(int nr , unsigned long volatile   *addr ) 
+ static int __test_and_set_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -8140,7 +8140,7 @@ __inline static int __test_and_set_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 266 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int __test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
+ static int __test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -8154,7 +8154,7 @@ __inline static int __test_and_clear_bit(int nr , unsigned long volatile   *addr
 }
 }
 #line 309 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int constant_test_bit(unsigned int nr , unsigned long const volatile   *addr ) 
+ static int constant_test_bit(unsigned int nr , unsigned long const volatile   *addr ) 
 { int __cil_tmp3 ;
   int __cil_tmp4 ;
   unsigned int __cil_tmp5 ;
@@ -8191,7 +8191,7 @@ __inline static int constant_test_bit(unsigned int nr , unsigned long const vola
 }
 }
 #line 315 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -8211,7 +8211,7 @@ extern unsigned long find_next_bit(unsigned long const   * , unsigned long  , un
 extern unsigned long find_next_zero_bit(unsigned long const   * , unsigned long  ,
                                         unsigned long  ) ;
 #line 45 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/arch_hweight.h"
-__inline static unsigned long __arch_hweight64(__u64 w ) 
+ static unsigned long __arch_hweight64(__u64 w ) 
 { unsigned long res ;
 
   {
@@ -8224,7 +8224,7 @@ __inline static unsigned long __arch_hweight64(__u64 w )
 }
 }
 #line 11 "include/asm-generic/bitops/le.h"
-__inline static unsigned long find_next_zero_bit_le(void const   *addr , unsigned long size ,
+ static unsigned long find_next_zero_bit_le(void const   *addr , unsigned long size ,
                                                     unsigned long offset ) 
 { unsigned long tmp ;
   unsigned long const   *__cil_tmp5 ;
@@ -8241,7 +8241,7 @@ __inline static unsigned long find_next_zero_bit_le(void const   *addr , unsigne
 }
 }
 #line 17 "include/asm-generic/bitops/le.h"
-__inline static unsigned long find_next_bit_le(void const   *addr , unsigned long size ,
+ static unsigned long find_next_bit_le(void const   *addr , unsigned long size ,
                                                unsigned long offset ) 
 { unsigned long tmp ;
   unsigned long const   *__cil_tmp5 ;
@@ -8258,7 +8258,7 @@ __inline static unsigned long find_next_bit_le(void const   *addr , unsigned lon
 }
 }
 #line 52 "include/asm-generic/bitops/le.h"
-__inline static int test_bit_le(int nr , void const   *addr ) 
+ static int test_bit_le(int nr , void const   *addr ) 
 { int tmp ;
   unsigned long const volatile   *__cil_tmp4 ;
 
@@ -8274,7 +8274,7 @@ __inline static int test_bit_le(int nr , void const   *addr )
 }
 }
 #line 77 "include/asm-generic/bitops/le.h"
-__inline static int __test_and_set_bit_le(int nr , void *addr ) 
+ static int __test_and_set_bit_le(int nr , void *addr ) 
 { int tmp ;
   unsigned long volatile   *__cil_tmp4 ;
 
@@ -8290,7 +8290,7 @@ __inline static int __test_and_set_bit_le(int nr , void *addr )
 }
 }
 #line 82 "include/asm-generic/bitops/le.h"
-__inline static int __test_and_clear_bit_le(int nr , void *addr ) 
+ static int __test_and_clear_bit_le(int nr , void *addr ) 
 { int tmp ;
   unsigned long volatile   *__cil_tmp4 ;
 
@@ -8306,7 +8306,7 @@ __inline static int __test_and_clear_bit_le(int nr , void *addr )
 }
 }
 #line 47 "include/linux/bitops.h"
-__inline static unsigned long hweight_long(unsigned long w ) 
+ static unsigned long hweight_long(unsigned long w ) 
 { unsigned long tmp ;
   __u64 __cil_tmp3 ;
 
@@ -8332,7 +8332,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 #line 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void) 
+ static struct task_struct *get_current(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -8381,7 +8381,7 @@ extern void *__memcpy(void * , void const   * , size_t  ) ;
 #line 55
 extern void *memset(void * , int  , size_t  ) ;
 #line 47 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_add(int i , atomic_t *v ) 
+ static void atomic_add(int i , atomic_t *v ) 
 { 
 
   {
@@ -8392,7 +8392,7 @@ __inline static void atomic_add(int i , atomic_t *v )
 }
 }
 #line 93 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v ) 
+ static void atomic_inc(atomic_t *v ) 
 { 
 
   {
@@ -8403,7 +8403,7 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 #line 119 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_dec_and_test(atomic_t *v ) 
+ static int atomic_dec_and_test(atomic_t *v ) 
 { unsigned char c ;
   unsigned int __cil_tmp3 ;
 
@@ -8420,7 +8420,7 @@ __inline static int atomic_dec_and_test(atomic_t *v )
 }
 }
 #line 173 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_add_return(int i , atomic_t *v ) 
+ static int atomic_add_return(int i , atomic_t *v ) 
 { int __i ;
 
   {
@@ -8434,7 +8434,7 @@ __inline static int atomic_add_return(int i , atomic_t *v )
 }
 }
 #line 205 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_sub_return(int i , atomic_t *v ) 
+ static int atomic_sub_return(int i , atomic_t *v ) 
 { int tmp ;
   int __cil_tmp4 ;
 
@@ -8452,7 +8452,7 @@ __inline static int atomic_sub_return(int i , atomic_t *v )
 #line 217 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/thread_info.h"
 extern unsigned long kernel_stack ;
 #line 219 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/thread_info.h"
-__inline static struct thread_info *current_thread_info(void) 
+ static struct thread_info *current_thread_info(void) 
 { struct thread_info *ti ;
   unsigned long pfo_ret__ ;
   unsigned long __cil_tmp3 ;
@@ -8517,7 +8517,7 @@ extern void _raw_read_lock(rwlock_t * ) ;
 #line 30
 extern void _raw_read_unlock(rwlock_t * ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -8526,7 +8526,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 308 "include/linux/spinlock.h"
-__inline static void spin_lock_irq(spinlock_t *lock ) 
+ static void spin_lock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -8541,7 +8541,7 @@ __inline static void spin_lock_irq(spinlock_t *lock )
 }
 }
 #line 333 "include/linux/spinlock.h"
-__inline static void spin_unlock_irq(spinlock_t *lock ) 
+ static void spin_unlock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -8556,7 +8556,7 @@ __inline static void spin_unlock_irq(spinlock_t *lock )
 }
 }
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp3 ;
 
   {
@@ -8591,7 +8591,7 @@ extern void mutex_unlock(struct mutex * ) ;
 #line 82 "include/linux/jiffies.h"
 extern unsigned long volatile   jiffies ;
 #line 73 "include/linux/completion.h"
-__inline static void init_completion(struct completion *x ) 
+ static void init_completion(struct completion *x ) 
 { struct lock_class_key __key ;
   wait_queue_head_t *__cil_tmp3 ;
 
@@ -8619,7 +8619,7 @@ extern void vfree(void const   * ) ;
 #line 322 "include/linux/gfp.h"
 extern struct page *alloc_pages_current(gfp_t  , unsigned int  ) ;
 #line 325 "include/linux/gfp.h"
-__inline static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) 
+ static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) 
 { struct page *tmp ;
 
   {
@@ -8648,7 +8648,7 @@ void ldv_module_put_and_exit(void) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 255 "include/linux/slub_def.h"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -8661,7 +8661,7 @@ __inline static void *kmalloc(size_t size , gfp_t flags )
 }
 }
 #line 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -8689,7 +8689,7 @@ extern int _dev_info(struct device  const  * , char const   *  , ...) ;
 #line 433 "include/linux/mm.h"
 extern void put_page(struct page * ) ;
 #line 720 "include/linux/mm.h"
-__inline static void *lowmem_page_address(struct page *page ) 
+ static void *lowmem_page_address(struct page *page ) 
 { long __cil_tmp2 ;
   long __cil_tmp3 ;
   long __cil_tmp4 ;
@@ -8726,7 +8726,7 @@ extern void schedule(void) ;
 #line 2504
 extern int _cond_resched(void) ;
 #line 16 "include/linux/uaccess.h"
-__inline static void pagefault_disable(void) 
+ static void pagefault_disable(void) 
 { struct thread_info *tmp ;
   int __cil_tmp2 ;
 
@@ -8746,7 +8746,7 @@ __inline static void pagefault_disable(void)
 }
 }
 #line 26 "include/linux/uaccess.h"
-__inline static void pagefault_enable(void) 
+ static void pagefault_enable(void) 
 { struct thread_info *tmp ;
   int __cil_tmp2 ;
 
@@ -8770,7 +8770,7 @@ __inline static void pagefault_enable(void)
 #line 41 "include/linux/ratelimit.h"
 extern int ___ratelimit(struct ratelimit_state * , char const   * ) ;
 #line 58 "include/linux/highmem.h"
-__inline static void *__kmap_atomic(struct page *page ) 
+ static void *__kmap_atomic(struct page *page ) 
 { void *tmp ;
 
   {
@@ -8785,7 +8785,7 @@ __inline static void *__kmap_atomic(struct page *page )
 }
 }
 #line 65 "include/linux/highmem.h"
-__inline static void __kunmap_atomic(void *addr ) 
+ static void __kunmap_atomic(void *addr ) 
 { 
 
   {
@@ -8814,7 +8814,7 @@ int fault_rate  ;
 #line 136
 unsigned int _drbd_insert_fault(struct drbd_conf *mdev , unsigned int type ) ;
 #line 139 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int drbd_insert_fault(struct drbd_conf *mdev , unsigned int type ) 
+ static int drbd_insert_fault(struct drbd_conf *mdev , unsigned int type ) 
 { unsigned int tmp ;
   int tmp___0 ;
   int __cil_tmp5 ;
@@ -8923,7 +8923,7 @@ rwlock_t global_state_lock  ;
 #line 1519
 char *ppsize(char *buf , unsigned long long size ) ;
 #line 1795 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static enum drbd_state_rv _drbd_set_state(struct drbd_conf *mdev , union drbd_state ns ,
+ static enum drbd_state_rv _drbd_set_state(struct drbd_conf *mdev , union drbd_state ns ,
                                                    enum chg_state_flags flags , struct completion *done ) 
 { enum drbd_state_rv rv ;
 
@@ -8941,7 +8941,7 @@ __inline static enum drbd_state_rv _drbd_set_state(struct drbd_conf *mdev , unio
 }
 }
 #line 1825 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void __drbd_chk_io_error_(struct drbd_conf *mdev , int forcedetach ,
+ static void __drbd_chk_io_error_(struct drbd_conf *mdev , int forcedetach ,
                                           char const   *where ) 
 { int tmp ;
   union drbd_state __ns ;
@@ -9109,7 +9109,7 @@ __inline static void __drbd_chk_io_error_(struct drbd_conf *mdev , int forcedeta
 }
 }
 #line 1858 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_chk_io_error_(struct drbd_conf *mdev , int error , int forcedetach ,
+ static void drbd_chk_io_error_(struct drbd_conf *mdev , int error , int forcedetach ,
                                         char const   *where ) 
 { unsigned long flags ;
   raw_spinlock_t *tmp ;
@@ -9141,7 +9141,7 @@ __inline static void drbd_chk_io_error_(struct drbd_conf *mdev , int error , int
 }
 }
 #line 1893 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static sector_t drbd_md_last_sector(struct drbd_backing_dev *bdev ) 
+ static sector_t drbd_md_last_sector(struct drbd_backing_dev *bdev ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -9217,7 +9217,7 @@ __inline static sector_t drbd_md_last_sector(struct drbd_backing_dev *bdev )
 }
 }
 #line 2156 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void put_ldev(struct drbd_conf *mdev ) 
+ static void put_ldev(struct drbd_conf *mdev ) 
 { int i ;
   int tmp ;
   atomic_t *__cil_tmp4 ;
@@ -9318,7 +9318,7 @@ __inline static void put_ldev(struct drbd_conf *mdev )
 }
 }
 #line 2177 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int _get_ldev_if_state(struct drbd_conf *mdev , enum drbd_disk_state mins ) 
+ static int _get_ldev_if_state(struct drbd_conf *mdev , enum drbd_disk_state mins ) 
 { int io_allowed ;
   unsigned char *__cil_tmp4 ;
   unsigned char *__cil_tmp5 ;
@@ -9375,7 +9375,7 @@ __inline static int _get_ldev_if_state(struct drbd_conf *mdev , enum drbd_disk_s
 }
 }
 #line 2451 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_md_flush(struct drbd_conf *mdev ) 
+ static void drbd_md_flush(struct drbd_conf *mdev ) 
 { int r ;
   int tmp ;
   unsigned long *__cil_tmp4 ;
@@ -15453,7 +15453,7 @@ int drbd_bm_clear_bits(struct drbd_conf *mdev , unsigned long s , unsigned long 
 }
 }
 #line 1349 "/anthill/stuff/tacas-comp/work/current--X--drivers/block/drbd/drbd.ko--X--unsafe1_safe6linux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/19/dscv_tempdir/dscv/ri/08_1/drivers/block/drbd/drbd_bitmap.c.p"
-__inline static void bm_set_full_words_within_one_page(struct drbd_bitmap *b , int page_nr ,
+ static void bm_set_full_words_within_one_page(struct drbd_bitmap *b , int page_nr ,
                                                        int first_word , int last_word ) 
 { int i ;
   int bits ;
@@ -16993,7 +16993,7 @@ void ldv_check_final_state(void)
 }
 }
 #line 23 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const   *v ) 
+ static int atomic_read(atomic_t const   *v ) 
 { int const   *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -17014,11 +17014,11 @@ __inline static int atomic_read(atomic_t const   *v )
 #line 99 "include/linux/module.h"
 extern struct module __this_module ;
 #line 537
-__inline static int ldv_try_module_get_1(struct module *module ) ;
+ static int ldv_try_module_get_1(struct module *module ) ;
 #line 543
 void ldv_module_put_2(struct module *ldv_func_arg1 ) ;
 #line 278 "include/linux/proc_fs.h"
-__inline static struct proc_inode *PROC_I(struct inode  const  *inode ) 
+ static struct proc_inode *PROC_I(struct inode  const  *inode ) 
 { struct inode  const  *__mptr ;
   struct proc_inode *__cil_tmp3 ;
 
@@ -17034,7 +17034,7 @@ __inline static struct proc_inode *PROC_I(struct inode  const  *inode )
 }
 }
 #line 283 "include/linux/proc_fs.h"
-__inline static struct proc_dir_entry *PDE(struct inode  const  *inode ) 
+ static struct proc_dir_entry *PDE(struct inode  const  *inode ) 
 { struct proc_inode *tmp ;
 
   {
@@ -17074,7 +17074,7 @@ unsigned int minor_count ;
 #line 158 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
 struct drbd_conf **minor_table  ;
 #line 1136 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static struct drbd_conf *minor_to_mdev(unsigned int minor ) 
+ static struct drbd_conf *minor_to_mdev(unsigned int minor ) 
 { struct drbd_conf *mdev ;
   unsigned long __cil_tmp3 ;
   struct drbd_conf **__cil_tmp4 ;
@@ -17103,7 +17103,7 @@ struct proc_dir_entry *drbd_proc  ;
 #line 1651
 struct file_operations  const  drbd_proc_fops ;
 #line 2196 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_get_syncer_progress(struct drbd_conf *mdev , unsigned long *bits_left ,
+ static void drbd_get_syncer_progress(struct drbd_conf *mdev , unsigned long *bits_left ,
                                               unsigned int *per_mil_done ) 
 { unsigned long tmp ;
   char const   *tmp___0 ;
@@ -17262,7 +17262,7 @@ __inline static void drbd_get_syncer_progress(struct drbd_conf *mdev , unsigned 
 }
 }
 #line 2326 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int is_susp(union drbd_state s ) 
+ static int is_susp(union drbd_state s ) 
 { int tmp ;
   unsigned char *__cil_tmp3 ;
   unsigned char *__cil_tmp4 ;
@@ -18777,7 +18777,7 @@ void main(void)
 }
 }
 #line 454 "/anthill/stuff/tacas-comp/work/current--X--drivers/block/drbd/drbd.ko--X--unsafe1_safe6linux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/19/dscv_tempdir/dscv/ri/08_1/drivers/block/drbd/drbd_proc.c.p"
-__inline static int ldv_try_module_get_1(struct module *module ) 
+ static int ldv_try_module_get_1(struct module *module ) 
 { int tmp ;
 
   {
@@ -18803,7 +18803,7 @@ void ldv_module_put_2(struct module *ldv_func_arg1 )
 }
 }
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { 
 
   {
@@ -18818,7 +18818,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head ) 
+ static void list_add(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -18833,7 +18833,7 @@ __inline static void list_add(struct list_head *new , struct list_head *head )
 }
 }
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -18852,7 +18852,7 @@ extern void __list_del_entry(struct list_head * ) ;
 #line 112
 extern void list_del(struct list_head * ) ;
 #line 142 "include/linux/list.h"
-__inline static void list_del_init(struct list_head *entry ) 
+ static void list_del_init(struct list_head *entry ) 
 { 
 
   {
@@ -18867,7 +18867,7 @@ __inline static void list_del_init(struct list_head *entry )
 }
 }
 #line 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head  const  *head ) 
+ static int list_empty(struct list_head  const  *head ) 
 { unsigned long __cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
   struct list_head  const  *__cil_tmp4 ;
@@ -18889,7 +18889,7 @@ __inline static int list_empty(struct list_head  const  *head )
 }
 }
 #line 273 "include/linux/list.h"
-__inline static void __list_splice(struct list_head  const  *list , struct list_head *prev ,
+ static void __list_splice(struct list_head  const  *list , struct list_head *prev ,
                                    struct list_head *next ) 
 { struct list_head *first ;
   struct list_head *last ;
@@ -18918,7 +18918,7 @@ __inline static void __list_splice(struct list_head  const  *list , struct list_
 }
 }
 #line 318 "include/linux/list.h"
-__inline static void list_splice_init(struct list_head *list , struct list_head *head ) 
+ static void list_splice_init(struct list_head *list , struct list_head *head ) 
 { int tmp ;
   struct list_head  const  *__cil_tmp4 ;
   struct list_head  const  *__cil_tmp5 ;
@@ -18957,7 +18957,7 @@ extern void __xchg_wrong_size(void) ;
 #line 60 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/string_64.h"
 extern int memcmp(void const   * , void const   * , size_t  ) ;
 #line 22 "include/linux/err.h"
-__inline static void *ERR_PTR(long error ) 
+ static void *ERR_PTR(long error ) 
 { 
 
   {
@@ -18966,7 +18966,7 @@ __inline static void *ERR_PTR(long error )
 }
 }
 #line 35 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i ) 
+ static void atomic_set(atomic_t *v , int i ) 
 { 
 
   {
@@ -18977,7 +18977,7 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 #line 61 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_sub(int i , atomic_t *v ) 
+ static void atomic_sub(int i , atomic_t *v ) 
 { 
 
   {
@@ -18988,7 +18988,7 @@ __inline static void atomic_sub(int i , atomic_t *v )
 }
 }
 #line 105 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v ) 
+ static void atomic_dec(atomic_t *v ) 
 { 
 
   {
@@ -18999,7 +18999,7 @@ __inline static void atomic_dec(atomic_t *v )
 }
 }
 #line 218 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_xchg(atomic_t *v , int new ) 
+ static int atomic_xchg(atomic_t *v , int new ) 
 { int __x ;
   u8 volatile   *__ptr ;
   u16 volatile   *__ptr___0 ;
@@ -19081,7 +19081,7 @@ extern void _raw_write_lock_irq(rwlock_t * ) ;
 #line 35
 extern void _raw_write_unlock_irq(rwlock_t * ) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -19096,7 +19096,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -19115,7 +19115,7 @@ extern int mod_timer(struct timer_list * , unsigned long  ) ;
 #line 275
 extern void add_timer(struct timer_list * ) ;
 #line 346 "include/linux/page-flags.h"
-__inline static int PageTail(struct page *page ) 
+ static int PageTail(struct page *page ) 
 { int tmp ;
   unsigned long *__cil_tmp3 ;
   unsigned long const volatile   *__cil_tmp4 ;
@@ -19134,7 +19134,7 @@ __inline static int PageTail(struct page *page )
 }
 }
 #line 351 "include/linux/mm.h"
-__inline static struct page *compound_head(struct page *page ) 
+ static struct page *compound_head(struct page *page ) 
 { int tmp ;
   long tmp___0 ;
   int __cil_tmp4 ;
@@ -19163,7 +19163,7 @@ __inline static struct page *compound_head(struct page *page )
 }
 }
 #line 358 "include/linux/mm.h"
-__inline static int page_count(struct page *page ) 
+ static int page_count(struct page *page ) 
 { struct page *tmp ;
   int tmp___0 ;
   atomic_t *__cil_tmp4 ;
@@ -19185,7 +19185,7 @@ __inline static int page_count(struct page *page )
 }
 }
 #line 55 "include/linux/scatterlist.h"
-__inline static void sg_assign_page(struct scatterlist *sg , struct page *page ) 
+ static void sg_assign_page(struct scatterlist *sg , struct page *page ) 
 { unsigned long page_link ;
   long tmp ;
   long tmp___0 ;
@@ -19285,7 +19285,7 @@ __inline static void sg_assign_page(struct scatterlist *sg , struct page *page )
 }
 }
 #line 85 "include/linux/scatterlist.h"
-__inline static void sg_set_page(struct scatterlist *sg , struct page *page , unsigned int len ,
+ static void sg_set_page(struct scatterlist *sg , struct page *page , unsigned int len ,
                                  unsigned int offset ) 
 { 
 
@@ -19305,7 +19305,7 @@ __inline static void sg_set_page(struct scatterlist *sg , struct page *page , un
 #line 204
 extern void sg_init_table(struct scatterlist * , unsigned int  ) ;
 #line 32 "include/linux/semaphore.h"
-__inline static void sema_init(struct semaphore *sem , int val ) 
+ static void sema_init(struct semaphore *sem , int val ) 
 { struct lock_class_key __key ;
   struct semaphore __constr_expr_0 ;
   struct lockdep_map *__cil_tmp5 ;
@@ -19356,7 +19356,7 @@ extern int down_trylock(struct semaphore * ) ;
 #line 44
 extern void up(struct semaphore * ) ;
 #line 848 "include/linux/fs.h"
-__inline static loff_t i_size_read(struct inode  const  *inode ) 
+ static loff_t i_size_read(struct inode  const  *inode ) 
 { loff_t __cil_tmp2 ;
 
   {
@@ -19377,7 +19377,7 @@ extern void force_sig(int  , struct task_struct * ) ;
 #line 1093 "include/net/sock.h"
 extern int sock_setsockopt(struct socket * , int  , int  , char * , unsigned int  ) ;
 #line 1127 "include/linux/crypto.h"
-__inline static struct crypto_tfm *crypto_hash_tfm(struct crypto_hash *tfm ) 
+ static struct crypto_tfm *crypto_hash_tfm(struct crypto_hash *tfm ) 
 { 
 
   {
@@ -19386,7 +19386,7 @@ __inline static struct crypto_tfm *crypto_hash_tfm(struct crypto_hash *tfm )
 }
 }
 #line 1147 "include/linux/crypto.h"
-__inline static struct hash_tfm *crypto_hash_crt(struct crypto_hash *tfm ) 
+ static struct hash_tfm *crypto_hash_crt(struct crypto_hash *tfm ) 
 { struct crypto_tfm *tmp ;
 
   {
@@ -19399,7 +19399,7 @@ __inline static struct hash_tfm *crypto_hash_crt(struct crypto_hash *tfm )
 }
 }
 #line 1162 "include/linux/crypto.h"
-__inline static unsigned int crypto_hash_digestsize(struct crypto_hash *tfm ) 
+ static unsigned int crypto_hash_digestsize(struct crypto_hash *tfm ) 
 { struct hash_tfm *tmp ;
 
   {
@@ -19412,7 +19412,7 @@ __inline static unsigned int crypto_hash_digestsize(struct crypto_hash *tfm )
 }
 }
 #line 1182 "include/linux/crypto.h"
-__inline static int crypto_hash_init(struct hash_desc *desc ) 
+ static int crypto_hash_init(struct hash_desc *desc ) 
 { struct hash_tfm *tmp ;
   int tmp___0 ;
   struct crypto_hash *__cil_tmp4 ;
@@ -19434,7 +19434,7 @@ __inline static int crypto_hash_init(struct hash_desc *desc )
 }
 }
 #line 1187 "include/linux/crypto.h"
-__inline static int crypto_hash_update(struct hash_desc *desc , struct scatterlist *sg ,
+ static int crypto_hash_update(struct hash_desc *desc , struct scatterlist *sg ,
                                        unsigned int nbytes ) 
 { struct hash_tfm *tmp ;
   int tmp___0 ;
@@ -19457,7 +19457,7 @@ __inline static int crypto_hash_update(struct hash_desc *desc , struct scatterli
 }
 }
 #line 1194 "include/linux/crypto.h"
-__inline static int crypto_hash_final(struct hash_desc *desc , u8 *out ) 
+ static int crypto_hash_final(struct hash_desc *desc , u8 *out ) 
 { struct hash_tfm *tmp ;
   int tmp___0 ;
   struct crypto_hash *__cil_tmp5 ;
@@ -19483,7 +19483,7 @@ extern struct bio *bio_clone(struct bio * , gfp_t  ) ;
 #line 651 "include/linux/blkdev.h"
 extern void generic_make_request(struct bio * ) ;
 #line 970 "include/linux/blkdev.h"
-__inline static unsigned int queue_max_hw_sectors(struct request_queue *q ) 
+ static unsigned int queue_max_hw_sectors(struct request_queue *q ) 
 { 
 
   {
@@ -19492,7 +19492,7 @@ __inline static unsigned int queue_max_hw_sectors(struct request_queue *q )
 }
 }
 #line 675 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static enum drbd_thread_state get_t_state(struct drbd_thread *thi ) 
+ static enum drbd_thread_state get_t_state(struct drbd_thread *thi ) 
 { 
 
   {
@@ -19503,7 +19503,7 @@ __inline static enum drbd_thread_state get_t_state(struct drbd_thread *thi )
 }
 }
 #line 1145 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static unsigned int mdev_to_minor(struct drbd_conf *mdev ) 
+ static unsigned int mdev_to_minor(struct drbd_conf *mdev ) 
 { 
 
   {
@@ -19512,7 +19512,7 @@ __inline static unsigned int mdev_to_minor(struct drbd_conf *mdev )
 }
 }
 #line 1158 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int drbd_get_data_sock(struct drbd_conf *mdev ) 
+ static int drbd_get_data_sock(struct drbd_conf *mdev ) 
 { long tmp ;
   struct mutex *__cil_tmp3 ;
   struct socket *__cil_tmp4 ;
@@ -19562,7 +19562,7 @@ __inline static int drbd_get_data_sock(struct drbd_conf *mdev )
 }
 }
 #line 1170 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_put_data_sock(struct drbd_conf *mdev ) 
+ static void drbd_put_data_sock(struct drbd_conf *mdev ) 
 { struct mutex *__cil_tmp2 ;
 
   {
@@ -19642,7 +19642,7 @@ void drbd_ov_oos_found(struct drbd_conf *mdev , sector_t sector , int size ) ;
 #line 1543
 void drbd_rs_controller_reset(struct drbd_conf *mdev ) ;
 #line 1545 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void ov_oos_print(struct drbd_conf *mdev ) 
+ static void ov_oos_print(struct drbd_conf *mdev ) 
 { sector_t __cil_tmp2 ;
   struct gendisk *__cil_tmp3 ;
   struct device *__cil_tmp4 ;
@@ -19737,7 +19737,7 @@ struct drbd_epoch_entry *drbd_alloc_ee(struct drbd_conf *mdev , u64 id , sector_
 #line 1592
 void drbd_free_some_ee(struct drbd_conf *mdev , struct drbd_epoch_entry *e , int is_net ) ;
 #line 1607 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int drbd_setsockopt(struct socket *sock , int level , int optname ,
+ static int drbd_setsockopt(struct socket *sock , int level , int optname ,
                                     char *optval , int optlen ) 
 { int err ;
   unsigned int __cil_tmp7 ;
@@ -19771,7 +19771,7 @@ __inline static int drbd_setsockopt(struct socket *sock , int level , int optnam
 }
 }
 #line 1619 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_tcp_cork(struct socket *sock ) 
+ static void drbd_tcp_cork(struct socket *sock ) 
 { int val ;
   char *__cil_tmp3 ;
 
@@ -19789,7 +19789,7 @@ __inline static void drbd_tcp_cork(struct socket *sock )
 }
 }
 #line 1626 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_tcp_uncork(struct socket *sock ) 
+ static void drbd_tcp_uncork(struct socket *sock ) 
 { int val ;
   char *__cil_tmp3 ;
 
@@ -19829,7 +19829,7 @@ void __drbd_set_in_sync(struct drbd_conf *mdev , sector_t sector , int size , ch
 int __drbd_set_out_of_sync(struct drbd_conf *mdev , sector_t sector , int size , char const   *file ,
                            unsigned int line ) ;
 #line 1748 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static struct page *page_chain_next(struct page *page ) 
+ static struct page *page_chain_next(struct page *page ) 
 { unsigned long __cil_tmp2 ;
 
   {
@@ -19842,7 +19842,7 @@ __inline static struct page *page_chain_next(struct page *page )
 }
 }
 #line 1771 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int drbd_ee_has_active_page(struct drbd_epoch_entry *e ) 
+ static int drbd_ee_has_active_page(struct drbd_epoch_entry *e ) 
 { struct page *page ;
   int tmp ;
   struct page *tmp___0 ;
@@ -19903,7 +19903,7 @@ __inline static int drbd_ee_has_active_page(struct drbd_epoch_entry *e )
 }
 }
 #line 1782 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_state_lock(struct drbd_conf *mdev ) 
+ static void drbd_state_lock(struct drbd_conf *mdev ) 
 { int tmp ;
   wait_queue_t __wait ;
   struct task_struct *tmp___0 ;
@@ -19984,7 +19984,7 @@ __inline static void drbd_state_lock(struct drbd_conf *mdev )
 }
 }
 #line 1788 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_state_unlock(struct drbd_conf *mdev ) 
+ static void drbd_state_unlock(struct drbd_conf *mdev ) 
 { unsigned long *__cil_tmp2 ;
   unsigned long volatile   *__cil_tmp3 ;
   wait_queue_head_t *__cil_tmp4 ;
@@ -20010,7 +20010,7 @@ __inline static void drbd_state_unlock(struct drbd_conf *mdev )
 }
 }
 #line 1825 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void __drbd_chk_io_error____0(struct drbd_conf *mdev , int forcedetach ,
+ static void __drbd_chk_io_error____0(struct drbd_conf *mdev , int forcedetach ,
                                               char const   *where ) 
 { int tmp ;
   union drbd_state __ns ;
@@ -20178,7 +20178,7 @@ __inline static void __drbd_chk_io_error____0(struct drbd_conf *mdev , int force
 }
 }
 #line 1906 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static sector_t drbd_get_capacity(struct block_device *bdev ) 
+ static sector_t drbd_get_capacity(struct block_device *bdev ) 
 { loff_t tmp ;
   sector_t tmp___0 ;
   struct block_device *__cil_tmp4 ;
@@ -20220,7 +20220,7 @@ __inline static sector_t drbd_get_capacity(struct block_device *bdev )
 }
 }
 #line 1988 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_queue_work(struct drbd_work_queue *q , struct drbd_work *w ) 
+ static void drbd_queue_work(struct drbd_work_queue *q , struct drbd_work *w ) 
 { unsigned long flags ;
   raw_spinlock_t *tmp ;
   spinlock_t *__cil_tmp5 ;
@@ -20257,7 +20257,7 @@ __inline static void drbd_queue_work(struct drbd_work_queue *q , struct drbd_wor
 }
 }
 #line 1998 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void wake_asender(struct drbd_conf *mdev ) 
+ static void wake_asender(struct drbd_conf *mdev ) 
 { int tmp ;
   unsigned long *__cil_tmp3 ;
   unsigned long const volatile   *__cil_tmp4 ;
@@ -20288,7 +20288,7 @@ __inline static void wake_asender(struct drbd_conf *mdev )
 }
 }
 #line 2004 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void request_ping(struct drbd_conf *mdev ) 
+ static void request_ping(struct drbd_conf *mdev ) 
 { unsigned long *__cil_tmp2 ;
   unsigned long volatile   *__cil_tmp3 ;
 
@@ -20308,7 +20308,7 @@ __inline static void request_ping(struct drbd_conf *mdev )
 }
 }
 #line 2010 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int drbd_send_short_cmd(struct drbd_conf *mdev , enum drbd_packets cmd ) 
+ static int drbd_send_short_cmd(struct drbd_conf *mdev , enum drbd_packets cmd ) 
 { struct p_header80 h ;
   int tmp ;
 
@@ -20322,7 +20322,7 @@ __inline static int drbd_send_short_cmd(struct drbd_conf *mdev , enum drbd_packe
 }
 }
 #line 2029 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_thread_stop(struct drbd_thread *thi ) 
+ static void drbd_thread_stop(struct drbd_thread *thi ) 
 { 
 
   {
@@ -20335,7 +20335,7 @@ __inline static void drbd_thread_stop(struct drbd_thread *thi )
 }
 }
 #line 2089 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void inc_rs_pending(struct drbd_conf *mdev ) 
+ static void inc_rs_pending(struct drbd_conf *mdev ) 
 { atomic_t *__cil_tmp2 ;
 
   {
@@ -20356,7 +20356,7 @@ void drbd_endio_sec(struct bio *bio , int error ) ;
 #line 24
 void drbd_endio_pri(struct bio *bio , int error ) ;
 #line 268 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_req.h"
-__inline static void drbd_req_make_private_bio(struct drbd_request *req , struct bio *bio_src ) 
+ static void drbd_req_make_private_bio(struct drbd_request *req , struct bio *bio_src ) 
 { struct bio *bio ;
 
   {
@@ -20381,7 +20381,7 @@ int __req_mod(struct drbd_request *req , enum drbd_req_event what , struct bio_a
 #line 323
 void complete_master_bio(struct drbd_conf *mdev , struct bio_and_error *m ) ;
 #line 330 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_req.h"
-__inline static int _req_mod(struct drbd_request *req , enum drbd_req_event what ) 
+ static int _req_mod(struct drbd_request *req , enum drbd_req_event what ) 
 { struct drbd_conf *mdev ;
   struct bio_and_error m ;
   int rv ;
@@ -20418,7 +20418,7 @@ __inline static int _req_mod(struct drbd_request *req , enum drbd_req_event what
 }
 }
 #line 348 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_req.h"
-__inline static int req_mod(struct drbd_request *req , enum drbd_req_event what ) 
+ static int req_mod(struct drbd_request *req , enum drbd_req_event what ) 
 { unsigned long flags ;
   struct drbd_conf *mdev ;
   struct bio_and_error m ;
@@ -28123,7 +28123,7 @@ int drbd_worker(struct drbd_thread *thi )
 }
 }
 #line 153 "include/linux/list.h"
-__inline static void list_move(struct list_head *list , struct list_head *head ) 
+ static void list_move(struct list_head *list , struct list_head *head ) 
 { 
 
   {
@@ -28138,7 +28138,7 @@ __inline static void list_move(struct list_head *list , struct list_head *head )
 }
 }
 #line 570 "include/linux/list.h"
-__inline static void INIT_HLIST_NODE(struct hlist_node *h ) 
+ static void INIT_HLIST_NODE(struct hlist_node *h ) 
 { 
 
   {
@@ -28151,7 +28151,7 @@ __inline static void INIT_HLIST_NODE(struct hlist_node *h )
 }
 }
 #line 576 "include/linux/list.h"
-__inline static int hlist_unhashed(struct hlist_node  const  *h ) 
+ static int hlist_unhashed(struct hlist_node  const  *h ) 
 { struct hlist_node **__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct hlist_node **__cil_tmp4 ;
@@ -28173,7 +28173,7 @@ __inline static int hlist_unhashed(struct hlist_node  const  *h )
 }
 }
 #line 586 "include/linux/list.h"
-__inline static void __hlist_del(struct hlist_node *n ) 
+ static void __hlist_del(struct hlist_node *n ) 
 { struct hlist_node *next ;
   struct hlist_node **pprev ;
   struct hlist_node *__cil_tmp4 ;
@@ -28207,7 +28207,7 @@ __inline static void __hlist_del(struct hlist_node *n )
 }
 }
 #line 602 "include/linux/list.h"
-__inline static void hlist_del_init(struct hlist_node *n ) 
+ static void hlist_del_init(struct hlist_node *n ) 
 { int tmp ;
   struct hlist_node  const  *__cil_tmp3 ;
 
@@ -28234,7 +28234,7 @@ __inline static void hlist_del_init(struct hlist_node *n )
 }
 }
 #line 610 "include/linux/list.h"
-__inline static void hlist_add_head(struct hlist_node *n , struct hlist_head *h ) 
+ static void hlist_add_head(struct hlist_node *n , struct hlist_head *h ) 
 { struct hlist_node *first ;
   struct hlist_node *__cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -28269,7 +28269,7 @@ __inline static void hlist_add_head(struct hlist_node *n , struct hlist_head *h 
 }
 }
 #line 246 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -28284,7 +28284,7 @@ __inline static int test_and_clear_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 7 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/swab.h"
-__inline static __u32 __arch_swab32(__u32 val ) 
+ static __u32 __arch_swab32(__u32 val ) 
 { 
 
   {
@@ -28295,7 +28295,7 @@ __inline static __u32 __arch_swab32(__u32 val )
 }
 }
 #line 29 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/swab.h"
-__inline static __u64 __arch_swab64(__u64 val ) 
+ static __u64 __arch_swab64(__u64 val ) 
 { 
 
   {
@@ -28306,7 +28306,7 @@ __inline static __u64 __arch_swab64(__u64 val )
 }
 }
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   short __cil_tmp4 ;
@@ -28343,7 +28343,7 @@ __inline static __u16 __fswab16(__u16 val )
 }
 }
 #line 55 "include/linux/swab.h"
-__inline static __u32 __fswab32(__u32 val ) 
+ static __u32 __fswab32(__u32 val ) 
 { __u32 tmp ;
 
   {
@@ -28356,7 +28356,7 @@ __inline static __u32 __fswab32(__u32 val )
 }
 }
 #line 64 "include/linux/swab.h"
-__inline static __u64 __fswab64(__u64 val ) 
+ static __u64 __fswab64(__u64 val ) 
 { __u64 tmp ;
 
   {
@@ -28385,7 +28385,7 @@ extern int nr_cpu_ids ;
 #line 78
 extern struct cpumask  const  * const  cpu_possible_mask ;
 #line 104 "include/linux/cpumask.h"
-__inline static unsigned int cpumask_check(unsigned int cpu ) 
+ static unsigned int cpumask_check(unsigned int cpu ) 
 { bool __warned ;
   int __ret_warn_once ;
   int __ret_warn_on ;
@@ -28473,7 +28473,7 @@ __inline static unsigned int cpumask_check(unsigned int cpu )
 }
 }
 #line 169 "include/linux/cpumask.h"
-__inline static unsigned int cpumask_next(int n , struct cpumask  const  *srcp ) 
+ static unsigned int cpumask_next(int n , struct cpumask  const  *srcp ) 
 { unsigned long tmp ;
   unsigned int __cil_tmp4 ;
   unsigned long (*__cil_tmp5)[64U] ;
@@ -28513,7 +28513,7 @@ __inline static unsigned int cpumask_next(int n , struct cpumask  const  *srcp )
 }
 }
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -28522,7 +28522,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -28544,7 +28544,7 @@ __inline static long IS_ERR(void const   *ptr )
 }
 }
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp ;
   __u32 *__cil_tmp4 ;
   unsigned long const volatile   *__cil_tmp5 ;
@@ -28585,7 +28585,7 @@ extern void sock_release(struct socket * ) ;
 #line 245
 extern int sock_recvmsg(struct socket * , struct msghdr * , size_t  , int  ) ;
 #line 55 "include/linux/scatterlist.h"
-__inline static void sg_assign_page___0(struct scatterlist *sg , struct page *page ) 
+ static void sg_assign_page___0(struct scatterlist *sg , struct page *page ) 
 { unsigned long page_link ;
   long tmp ;
   long tmp___0 ;
@@ -28685,7 +28685,7 @@ __inline static void sg_assign_page___0(struct scatterlist *sg , struct page *pa
 }
 }
 #line 85 "include/linux/scatterlist.h"
-__inline static void sg_set_page___0(struct scatterlist *sg , struct page *page ,
+ static void sg_set_page___0(struct scatterlist *sg , struct page *page ,
                                      unsigned int len , unsigned int offset ) 
 { 
 
@@ -28703,7 +28703,7 @@ __inline static void sg_set_page___0(struct scatterlist *sg , struct page *page 
 }
 }
 #line 109 "include/linux/scatterlist.h"
-__inline static void sg_set_buf(struct scatterlist *sg , void const   *buf , unsigned int buflen ) 
+ static void sg_set_buf(struct scatterlist *sg , void const   *buf , unsigned int buflen ) 
 { unsigned long tmp ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -28745,7 +28745,7 @@ extern long schedule_timeout(long  ) ;
 #line 360
 extern long schedule_timeout_uninterruptible(long  ) ;
 #line 2441 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp ;
   void *__cil_tmp4 ;
   struct thread_info *__cil_tmp5 ;
@@ -28764,7 +28764,7 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2467 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp ;
   long tmp___0 ;
   int __cil_tmp4 ;
@@ -28790,7 +28790,7 @@ char const   *drbd_set_st_err_str(enum drbd_state_rv err ) ;
 #line 480 "include/linux/crypto.h"
 extern struct crypto_tfm *crypto_alloc_base(char const   * , u32  , u32  ) ;
 #line 483 "include/linux/crypto.h"
-__inline static void crypto_free_tfm(struct crypto_tfm *tfm ) 
+ static void crypto_free_tfm(struct crypto_tfm *tfm ) 
 { 
 
   {
@@ -28799,7 +28799,7 @@ __inline static void crypto_free_tfm(struct crypto_tfm *tfm )
 }
 }
 #line 513 "include/linux/crypto.h"
-__inline static u32 crypto_tfm_alg_type(struct crypto_tfm *tfm ) 
+ static u32 crypto_tfm_alg_type(struct crypto_tfm *tfm ) 
 { struct crypto_alg *__cil_tmp2 ;
   u32 __cil_tmp3 ;
 
@@ -28815,7 +28815,7 @@ __inline static u32 crypto_tfm_alg_type(struct crypto_tfm *tfm )
 }
 }
 #line 1104 "include/linux/crypto.h"
-__inline static struct crypto_hash *__crypto_hash_cast(struct crypto_tfm *tfm ) 
+ static struct crypto_hash *__crypto_hash_cast(struct crypto_tfm *tfm ) 
 { 
 
   {
@@ -28824,7 +28824,7 @@ __inline static struct crypto_hash *__crypto_hash_cast(struct crypto_tfm *tfm )
 }
 }
 #line 1116 "include/linux/crypto.h"
-__inline static struct crypto_hash *crypto_alloc_hash(char const   *alg_name , u32 type ,
+ static struct crypto_hash *crypto_alloc_hash(char const   *alg_name , u32 type ,
                                                       u32 mask ) 
 { struct crypto_tfm *tmp ;
   struct crypto_hash *tmp___0 ;
@@ -28849,7 +28849,7 @@ __inline static struct crypto_hash *crypto_alloc_hash(char const   *alg_name , u
 }
 }
 #line 1132 "include/linux/crypto.h"
-__inline static void crypto_free_hash(struct crypto_hash *tfm ) 
+ static void crypto_free_hash(struct crypto_hash *tfm ) 
 { struct crypto_tfm *tmp ;
 
   {
@@ -28864,7 +28864,7 @@ __inline static void crypto_free_hash(struct crypto_hash *tfm )
 }
 }
 #line 1199 "include/linux/crypto.h"
-__inline static int crypto_hash_digest(struct hash_desc *desc , struct scatterlist *sg ,
+ static int crypto_hash_digest(struct hash_desc *desc , struct scatterlist *sg ,
                                        unsigned int nbytes , u8 *out ) 
 { struct hash_tfm *tmp ;
   int tmp___0 ;
@@ -28887,7 +28887,7 @@ __inline static int crypto_hash_digest(struct hash_desc *desc , struct scatterli
 }
 }
 #line 1206 "include/linux/crypto.h"
-__inline static int crypto_hash_setkey(struct crypto_hash *hash , u8 const   *key ,
+ static int crypto_hash_setkey(struct crypto_hash *hash , u8 const   *key ,
                                        unsigned int keylen ) 
 { struct hash_tfm *tmp ;
   int tmp___0 ;
@@ -28907,7 +28907,7 @@ __inline static int crypto_hash_setkey(struct crypto_hash *hash , u8 const   *ke
 }
 }
 #line 438 "include/linux/genhd.h"
-__inline static void set_capacity(struct gendisk *disk , sector_t size ) 
+ static void set_capacity(struct gendisk *disk , sector_t size ) 
 { 
 
   {
@@ -28918,7 +28918,7 @@ __inline static void set_capacity(struct gendisk *disk , sector_t size )
 }
 }
 #line 48 "include/linux/highmem.h"
-__inline static void *kmap(struct page *page ) 
+ static void *kmap(struct page *page ) 
 { void *tmp ;
 
   {
@@ -28933,7 +28933,7 @@ __inline static void *kmap(struct page *page )
 }
 }
 #line 54 "include/linux/highmem.h"
-__inline static void kunmap(struct page *page ) 
+ static void kunmap(struct page *page ) 
 { 
 
   {
@@ -28948,7 +28948,7 @@ extern void mempool_free(void * , mempool_t * ) ;
 #line 249 "include/linux/lru_cache.h"
 extern struct lc_element *lc_find(struct lru_cache * , unsigned int  ) ;
 #line 224 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static char const   *cmdname(enum drbd_packets cmd ) 
+ static char const   *cmdname(enum drbd_packets cmd ) 
 { char const   *cmdnames[43U] ;
   unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -29093,7 +29093,7 @@ __inline static char const   *cmdname(enum drbd_packets cmd )
 #line 301
 void INFO_bm_xfer_stats(struct drbd_conf *mdev , char const   *direction , struct bm_xfer_ctx *c ) ;
 #line 304 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void bm_xfer_ctx_bit_to_word_offset(struct bm_xfer_ctx *c ) 
+ static void bm_xfer_ctx_bit_to_word_offset(struct bm_xfer_ctx *c ) 
 { unsigned long __cil_tmp2 ;
 
   {
@@ -29106,7 +29106,7 @@ __inline static void bm_xfer_ctx_bit_to_word_offset(struct bm_xfer_ctx *c )
 }
 }
 #line 586 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static enum drbd_bitmap_code DCBP_get_code(struct p_compressed_bm *p ) 
+ static enum drbd_bitmap_code DCBP_get_code(struct p_compressed_bm *p ) 
 { u8 __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -29125,7 +29125,7 @@ __inline static enum drbd_bitmap_code DCBP_get_code(struct p_compressed_bm *p )
 }
 }
 #line 599 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int DCBP_get_start(struct p_compressed_bm *p ) 
+ static int DCBP_get_start(struct p_compressed_bm *p ) 
 { u8 __cil_tmp2 ;
   signed char __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -29144,7 +29144,7 @@ __inline static int DCBP_get_start(struct p_compressed_bm *p )
 }
 }
 #line 611 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int DCBP_get_pad_bits(struct p_compressed_bm *p ) 
+ static int DCBP_get_pad_bits(struct p_compressed_bm *p ) 
 { u8 __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -29241,7 +29241,7 @@ void drbd_flush_workqueue(struct drbd_conf *mdev ) ;
 #line 1603
 void drbd_free_tl_hash(struct drbd_conf *mdev ) ;
 #line 1633 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_tcp_nodelay(struct socket *sock ) 
+ static void drbd_tcp_nodelay(struct socket *sock ) 
 { int val ;
   char *__cil_tmp3 ;
 
@@ -29259,7 +29259,7 @@ __inline static void drbd_tcp_nodelay(struct socket *sock )
 }
 }
 #line 1640 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_tcp_quickack(struct socket *sock ) 
+ static void drbd_tcp_quickack(struct socket *sock ) 
 { int val ;
   char *__cil_tmp3 ;
 
@@ -29284,7 +29284,7 @@ int drbd_rs_begin_io(struct drbd_conf *mdev , sector_t sector ) ;
 void drbd_bcast_ee(struct drbd_conf *mdev , char const   *reason , int dgs , char const   *seen_hash ,
                    char const   *calc_hash , struct drbd_epoch_entry  const  *e ) ;
 #line 1771 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int drbd_ee_has_active_page___0(struct drbd_epoch_entry *e ) 
+ static int drbd_ee_has_active_page___0(struct drbd_epoch_entry *e ) 
 { struct page *page ;
   int tmp ;
   struct page *tmp___0 ;
@@ -29345,7 +29345,7 @@ __inline static int drbd_ee_has_active_page___0(struct drbd_epoch_entry *e )
 }
 }
 #line 1817 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int drbd_request_state(struct drbd_conf *mdev , union drbd_state mask ,
+ static int drbd_request_state(struct drbd_conf *mdev , union drbd_state mask ,
                                        union drbd_state val ) 
 { enum drbd_state_rv tmp ;
   enum chg_state_flags __cil_tmp5 ;
@@ -29362,7 +29362,7 @@ __inline static int drbd_request_state(struct drbd_conf *mdev , union drbd_state
 }
 }
 #line 1877 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static sector_t drbd_md_first_sector(struct drbd_backing_dev *bdev ) 
+ static sector_t drbd_md_first_sector(struct drbd_backing_dev *bdev ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -29435,7 +29435,7 @@ __inline static sector_t drbd_md_first_sector(struct drbd_backing_dev *bdev )
 }
 }
 #line 1920 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static sector_t drbd_get_max_capacity(struct drbd_backing_dev *bdev ) 
+ static sector_t drbd_get_max_capacity(struct drbd_backing_dev *bdev ) 
 { sector_t s ;
   sector_t __min1 ;
   sector_t __min2 ;
@@ -29611,7 +29611,7 @@ __inline static sector_t drbd_get_max_capacity(struct drbd_backing_dev *bdev )
 }
 }
 #line 1977 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_queue_work_front(struct drbd_work_queue *q , struct drbd_work *w ) 
+ static void drbd_queue_work_front(struct drbd_work_queue *q , struct drbd_work *w ) 
 { unsigned long flags ;
   raw_spinlock_t *tmp ;
   spinlock_t *__cil_tmp5 ;
@@ -29648,7 +29648,7 @@ __inline static void drbd_queue_work_front(struct drbd_work_queue *q , struct dr
 }
 }
 #line 2017 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int drbd_send_ping(struct drbd_conf *mdev ) 
+ static int drbd_send_ping(struct drbd_conf *mdev ) 
 { struct p_header80 h ;
   int tmp ;
   enum drbd_packets __cil_tmp4 ;
@@ -29665,7 +29665,7 @@ __inline static int drbd_send_ping(struct drbd_conf *mdev )
 }
 }
 #line 2023 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int drbd_send_ping_ack(struct drbd_conf *mdev ) 
+ static int drbd_send_ping_ack(struct drbd_conf *mdev ) 
 { struct p_header80 h ;
   int tmp ;
   enum drbd_packets __cil_tmp4 ;
@@ -29682,7 +29682,7 @@ __inline static int drbd_send_ping_ack(struct drbd_conf *mdev )
 }
 }
 #line 2108 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void inc_unacked(struct drbd_conf *mdev ) 
+ static void inc_unacked(struct drbd_conf *mdev ) 
 { atomic_t *__cil_tmp2 ;
 
   {
@@ -29697,7 +29697,7 @@ __inline static void inc_unacked(struct drbd_conf *mdev )
 }
 }
 #line 2124 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void put_net_conf(struct drbd_conf *mdev ) 
+ static void put_net_conf(struct drbd_conf *mdev ) 
 { int tmp ;
   atomic_t *__cil_tmp3 ;
   wait_queue_head_t *__cil_tmp4 ;
@@ -29728,7 +29728,7 @@ __inline static void put_net_conf(struct drbd_conf *mdev )
 }
 }
 #line 2136 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int get_net_conf(struct drbd_conf *mdev ) 
+ static int get_net_conf(struct drbd_conf *mdev ) 
 { int have_net_conf ;
   atomic_t *__cil_tmp3 ;
   unsigned char __cil_tmp4 ;
@@ -29761,7 +29761,7 @@ __inline static int get_net_conf(struct drbd_conf *mdev )
 }
 }
 #line 2400 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int drbd_set_ed_uuid(struct drbd_conf *mdev , u64 val ) 
+ static int drbd_set_ed_uuid(struct drbd_conf *mdev , u64 val ) 
 { int changed ;
   u64 __cil_tmp4 ;
 
@@ -29777,7 +29777,7 @@ __inline static int drbd_set_ed_uuid(struct drbd_conf *mdev , u64 val )
 }
 }
 #line 2407 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int seq_cmp(u32 a , u32 b ) 
+ static int seq_cmp(u32 a , u32 b ) 
 { int __cil_tmp3 ;
   int __cil_tmp4 ;
 
@@ -29793,7 +29793,7 @@ __inline static int seq_cmp(u32 a , u32 b )
 }
 }
 #line 2423 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void update_peer_seq(struct drbd_conf *mdev , unsigned int new_seq ) 
+ static void update_peer_seq(struct drbd_conf *mdev , unsigned int new_seq ) 
 { unsigned int m ;
   int tmp___0 ;
   spinlock_t *__cil_tmp5 ;
@@ -29847,7 +29847,7 @@ __inline static void update_peer_seq(struct drbd_conf *mdev , unsigned int new_s
 }
 }
 #line 11 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_wrappers.h"
-__inline static void drbd_set_my_capacity(struct drbd_conf *mdev , sector_t size ) 
+ static void drbd_set_my_capacity(struct drbd_conf *mdev , sector_t size ) 
 { struct gendisk *__cil_tmp3 ;
   struct block_device *__cil_tmp4 ;
   struct inode *__cil_tmp5 ;
@@ -29873,7 +29873,7 @@ __inline static void drbd_set_my_capacity(struct drbd_conf *mdev , sector_t size
 }
 }
 #line 29 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_wrappers.h"
-__inline static void drbd_generic_make_request(struct drbd_conf *mdev , int fault_type ,
+ static void drbd_generic_make_request(struct drbd_conf *mdev , int fault_type ,
                                                struct bio *bio ) 
 { unsigned int tmp ;
   int tmp___0 ;
@@ -29934,7 +29934,7 @@ __inline static void drbd_generic_make_request(struct drbd_conf *mdev , int faul
 }
 }
 #line 48 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_wrappers.h"
-__inline static int drbd_crypto_is_hash(struct crypto_tfm *tfm ) 
+ static int drbd_crypto_is_hash(struct crypto_tfm *tfm ) 
 { u32 tmp ;
   unsigned int __cil_tmp3 ;
 
@@ -29952,7 +29952,7 @@ __inline static int drbd_crypto_is_hash(struct crypto_tfm *tfm )
 }
 }
 #line 227 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_req.h"
-__inline static struct hlist_head *ee_hash_slot(struct drbd_conf *mdev , sector_t sector ) 
+ static struct hlist_head *ee_hash_slot(struct drbd_conf *mdev , sector_t sector ) 
 { long tmp ;
   unsigned int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -30005,7 +30005,7 @@ __inline static struct hlist_head *ee_hash_slot(struct drbd_conf *mdev , sector_
 }
 }
 #line 236 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_req.h"
-__inline static struct hlist_head *tl_hash_slot(struct drbd_conf *mdev , sector_t sector ) 
+ static struct hlist_head *tl_hash_slot(struct drbd_conf *mdev , sector_t sector ) 
 { long tmp ;
   unsigned int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -30080,7 +30080,7 @@ static struct hlist_head *ar_hash_slot(struct drbd_conf *mdev , sector_t sector 
 }
 }
 #line 252 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_req.h"
-__inline static struct drbd_request *_ar_id_to_req(struct drbd_conf *mdev , u64 id ,
+ static struct drbd_request *_ar_id_to_req(struct drbd_conf *mdev , u64 id ,
                                                    sector_t sector ) 
 { struct hlist_head *slot ;
   struct hlist_head *tmp ;
@@ -30177,7 +30177,7 @@ __inline static struct drbd_request *_ar_id_to_req(struct drbd_conf *mdev , u64 
 }
 }
 #line 306 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_req.h"
-__inline static int overlaps(sector_t s1 , int l1 , sector_t s2 , int l2 ) 
+ static int overlaps(sector_t s1 , int l1 , sector_t s2 , int l2 ) 
 { int tmp ;
   int __cil_tmp6 ;
   sector_t __cil_tmp7 ;
@@ -30222,7 +30222,7 @@ __inline static int overlaps(sector_t s1 , int l1 , sector_t s2 , int l2 )
 }
 }
 #line 146 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_vli.h"
-__inline static int vli_decode_bits(u64 *out , u64 in ) 
+ static int vli_decode_bits(u64 *out , u64 in ) 
 { u64 adj ;
   unsigned long long __cil_tmp4 ;
   unsigned long long __cil_tmp5 ;
@@ -30454,7 +30454,7 @@ __inline static int vli_decode_bits(u64 *out , u64 in )
 }
 }
 #line 211 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_vli.h"
-__inline static void bitstream_cursor_reset(struct bitstream_cursor *cur , void *s ) 
+ static void bitstream_cursor_reset(struct bitstream_cursor *cur , void *s ) 
 { 
 
   {
@@ -30467,7 +30467,7 @@ __inline static void bitstream_cursor_reset(struct bitstream_cursor *cur , void 
 }
 }
 #line 219 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_vli.h"
-__inline static void bitstream_cursor_advance(struct bitstream_cursor *cur , unsigned int bits ) 
+ static void bitstream_cursor_advance(struct bitstream_cursor *cur , unsigned int bits ) 
 { unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -30493,7 +30493,7 @@ __inline static void bitstream_cursor_advance(struct bitstream_cursor *cur , uns
 }
 }
 #line 238 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_vli.h"
-__inline static void bitstream_init(struct bitstream *bs , void *s , size_t len ,
+ static void bitstream_init(struct bitstream *bs , void *s , size_t len ,
                                     unsigned int pad_bits ) 
 { struct bitstream_cursor *__cil_tmp5 ;
   unsigned char *__cil_tmp6 ;
@@ -30521,7 +30521,7 @@ __inline static void bitstream_init(struct bitstream *bs , void *s , size_t len 
 }
 }
 #line 293 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_vli.h"
-__inline static int bitstream_get_bits(struct bitstream *bs , u64 *out , int bits ) 
+ static int bitstream_get_bits(struct bitstream *bs , u64 *out , int bits ) 
 { u64 val ;
   unsigned int n ;
   size_t __len ;
@@ -54162,7 +54162,7 @@ int drbd_asender(struct drbd_thread *thi )
 }
 }
 #line 595 "include/linux/list.h"
-__inline static void hlist_del(struct hlist_node *n ) 
+ static void hlist_del(struct hlist_node *n ) 
 { 
 
   {
@@ -54186,7 +54186,7 @@ extern void lock_release(struct lockdep_map * , int  , unsigned long  ) ;
 #line 39 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/smp.h"
 extern int cpu_number ;
 #line 110 "include/linux/rcupdate.h"
-__inline static void __rcu_read_lock(void) 
+ static void __rcu_read_lock(void) 
 { 
 
   {
@@ -54197,7 +54197,7 @@ __inline static void __rcu_read_lock(void)
 #line 184
 extern struct lockdep_map rcu_lock_map ;
 #line 590 "include/linux/rcupdate.h"
-__inline static void rcu_read_lock(void) 
+ static void rcu_read_lock(void) 
 { struct lockdep_map *__cil_tmp1 ;
   void *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -54220,7 +54220,7 @@ __inline static void rcu_read_lock(void)
 }
 }
 #line 612 "include/linux/rcupdate.h"
-__inline static void rcu_read_unlock(void) 
+ static void rcu_read_unlock(void) 
 { void *__cil_tmp1 ;
   unsigned long __cil_tmp2 ;
 
@@ -54240,7 +54240,7 @@ __inline static void rcu_read_unlock(void)
 }
 }
 #line 195 "include/linux/genhd.h"
-__inline static struct gendisk *part_to_disk(struct hd_struct *part ) 
+ static struct gendisk *part_to_disk(struct hd_struct *part ) 
 { struct device  const  *__mptr ;
   struct device  const  *__mptr___0 ;
   long tmp ;
@@ -54308,7 +54308,7 @@ __inline static struct gendisk *part_to_disk(struct hd_struct *part )
 }
 }
 #line 372 "include/linux/genhd.h"
-__inline static void part_inc_in_flight(struct hd_struct *part , int rw ) 
+ static void part_inc_in_flight(struct hd_struct *part , int rw ) 
 { struct gendisk *tmp ;
   unsigned long __cil_tmp4 ;
   atomic_t (*__cil_tmp5)[2U] ;
@@ -54361,7 +54361,7 @@ __inline static void part_inc_in_flight(struct hd_struct *part , int rw )
 }
 }
 #line 379 "include/linux/genhd.h"
-__inline static void part_dec_in_flight(struct hd_struct *part , int rw ) 
+ static void part_dec_in_flight(struct hd_struct *part , int rw ) 
 { struct gendisk *tmp ;
   unsigned long __cil_tmp4 ;
   atomic_t (*__cil_tmp5)[2U] ;
@@ -54430,7 +54430,7 @@ int drbd_make_request(struct request_queue *q , struct bio *bio ) ;
 #line 1512
 int drbd_merge_bvec(struct request_queue *q , struct bvec_merge_data *bvm , struct bio_vec *bvec ) ;
 #line 2066 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void inc_ap_pending(struct drbd_conf *mdev ) 
+ static void inc_ap_pending(struct drbd_conf *mdev ) 
 { atomic_t *__cil_tmp2 ;
 
   {
@@ -54445,7 +54445,7 @@ __inline static void inc_ap_pending(struct drbd_conf *mdev )
 }
 }
 #line 2246 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int drbd_get_max_buffers(struct drbd_conf *mdev ) 
+ static int drbd_get_max_buffers(struct drbd_conf *mdev ) 
 { int mxb ;
   int tmp ;
   struct net_conf *__cil_tmp4 ;
@@ -54475,7 +54475,7 @@ __inline static int drbd_get_max_buffers(struct drbd_conf *mdev )
 }
 }
 #line 2256 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int drbd_state_is_stable(struct drbd_conf *mdev ) 
+ static int drbd_state_is_stable(struct drbd_conf *mdev ) 
 { union drbd_state s ;
   unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -55043,7 +55043,7 @@ __inline static int drbd_state_is_stable(struct drbd_conf *mdev )
 }
 }
 #line 2331 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static bool may_inc_ap_bio(struct drbd_conf *mdev ) 
+ static bool may_inc_ap_bio(struct drbd_conf *mdev ) 
 { int mxb ;
   int tmp ;
   int tmp___0 ;
@@ -55138,7 +55138,7 @@ __inline static bool may_inc_ap_bio(struct drbd_conf *mdev )
 }
 }
 #line 2357 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static bool inc_ap_bio_cond(struct drbd_conf *mdev , int count ) 
+ static bool inc_ap_bio_cond(struct drbd_conf *mdev , int count ) 
 { bool rv ;
   spinlock_t *__cil_tmp4 ;
   atomic_t *__cil_tmp5 ;
@@ -55177,7 +55177,7 @@ __inline static bool inc_ap_bio_cond(struct drbd_conf *mdev , int count )
 }
 }
 #line 2370 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void inc_ap_bio(struct drbd_conf *mdev , int count ) 
+ static void inc_ap_bio(struct drbd_conf *mdev , int count ) 
 { bool tmp ;
   wait_queue_t __wait ;
   struct task_struct *tmp___0 ;
@@ -55246,7 +55246,7 @@ __inline static void inc_ap_bio(struct drbd_conf *mdev , int count )
 }
 }
 #line 2383 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void dec_ap_bio(struct drbd_conf *mdev ) 
+ static void dec_ap_bio(struct drbd_conf *mdev ) 
 { int mxb ;
   int tmp ;
   int ap_bio ;
@@ -55354,7 +55354,7 @@ __inline static void dec_ap_bio(struct drbd_conf *mdev )
 }
 }
 #line 227 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_req.h"
-__inline static struct hlist_head *ee_hash_slot___0(struct drbd_conf *mdev , sector_t sector ) 
+ static struct hlist_head *ee_hash_slot___0(struct drbd_conf *mdev , sector_t sector ) 
 { long tmp ;
   unsigned int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -55407,7 +55407,7 @@ __inline static struct hlist_head *ee_hash_slot___0(struct drbd_conf *mdev , sec
 }
 }
 #line 236 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_req.h"
-__inline static struct hlist_head *tl_hash_slot___0(struct drbd_conf *mdev , sector_t sector ) 
+ static struct hlist_head *tl_hash_slot___0(struct drbd_conf *mdev , sector_t sector ) 
 { long tmp ;
   unsigned int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -55482,7 +55482,7 @@ static struct hlist_head *ar_hash_slot___0(struct drbd_conf *mdev , sector_t sec
 }
 }
 #line 280 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_req.h"
-__inline static struct drbd_request *drbd_req_new(struct drbd_conf *mdev , struct bio *bio_src ) 
+ static struct drbd_request *drbd_req_new(struct drbd_conf *mdev , struct bio *bio_src ) 
 { struct drbd_request *req ;
   void *tmp ;
   long tmp___0 ;
@@ -55568,7 +55568,7 @@ __inline static struct drbd_request *drbd_req_new(struct drbd_conf *mdev , struc
 }
 }
 #line 301 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_req.h"
-__inline static void drbd_req_free(struct drbd_request *req ) 
+ static void drbd_req_free(struct drbd_request *req ) 
 { void *__cil_tmp2 ;
 
   {
@@ -55587,7 +55587,7 @@ void _req_may_be_done(struct drbd_request *req , struct bio_and_error *m ) ;
 #line 325
 void request_timer_fn(unsigned long data ) ;
 #line 366 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_req.h"
-__inline static bool drbd_should_do_remote(union drbd_state s ) 
+ static bool drbd_should_do_remote(union drbd_state s ) 
 { int tmp ;
   unsigned int *__cil_tmp3 ;
   unsigned int *__cil_tmp4 ;
@@ -55648,7 +55648,7 @@ __inline static bool drbd_should_do_remote(union drbd_state s )
 }
 }
 #line 376 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_req.h"
-__inline static bool drbd_should_send_oos(union drbd_state s ) 
+ static bool drbd_should_send_oos(union drbd_state s ) 
 { int tmp ;
   unsigned short *__cil_tmp3 ;
   unsigned short *__cil_tmp4 ;
@@ -61612,7 +61612,7 @@ void request_timer_fn(unsigned long data )
 }
 }
 #line 124 "include/linux/mutex.h"
-__inline static int mutex_is_locked(struct mutex *lock ) 
+ static int mutex_is_locked(struct mutex *lock ) 
 { int tmp ;
   atomic_t *__cil_tmp3 ;
   atomic_t const   *__cil_tmp4 ;
@@ -61631,7 +61631,7 @@ __inline static int mutex_is_locked(struct mutex *lock )
 }
 }
 #line 717 "include/linux/blkdev.h"
-__inline static struct request_queue *bdev_get_queue(struct block_device *bdev ) 
+ static struct request_queue *bdev_get_queue(struct block_device *bdev ) 
 { struct gendisk *__cil_tmp2 ;
 
   {
@@ -61644,7 +61644,7 @@ __inline static struct request_queue *bdev_get_queue(struct block_device *bdev )
 }
 }
 #line 985 "include/linux/blkdev.h"
-__inline static unsigned short queue_logical_block_size(struct request_queue *q ) 
+ static unsigned short queue_logical_block_size(struct request_queue *q ) 
 { int retval ;
   struct request_queue *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -61689,7 +61689,7 @@ __inline static unsigned short queue_logical_block_size(struct request_queue *q 
 }
 }
 #line 995 "include/linux/blkdev.h"
-__inline static unsigned short bdev_logical_block_size(struct block_device *bdev ) 
+ static unsigned short bdev_logical_block_size(struct block_device *bdev ) 
 { struct request_queue *tmp ;
   unsigned short tmp___0 ;
 
@@ -61719,7 +61719,7 @@ extern unsigned int lc_put(struct lru_cache * , struct lc_element * ) ;
 #line 252
 extern void lc_changed(struct lru_cache * , struct lc_element * ) ;
 #line 267 "include/linux/lru_cache.h"
-__inline static int lc_try_lock(struct lru_cache *lc ) 
+ static int lc_try_lock(struct lru_cache *lc ) 
 { int tmp ;
   unsigned long *__cil_tmp3 ;
   unsigned long volatile   *__cil_tmp4 ;
@@ -61738,7 +61738,7 @@ __inline static int lc_try_lock(struct lru_cache *lc )
 }
 }
 #line 276 "include/linux/lru_cache.h"
-__inline static void lc_unlock(struct lru_cache *lc ) 
+ static void lc_unlock(struct lru_cache *lc ) 
 { unsigned long *__cil_tmp2 ;
   unsigned long volatile   *__cil_tmp3 ;
 
@@ -61758,7 +61758,7 @@ __inline static void lc_unlock(struct lru_cache *lc )
 }
 }
 #line 282 "include/linux/lru_cache.h"
-__inline static int lc_is_used(struct lru_cache *lc , unsigned int enr ) 
+ static int lc_is_used(struct lru_cache *lc , unsigned int enr ) 
 { struct lc_element *e ;
   struct lc_element *tmp ;
   int tmp___0 ;
@@ -68019,7 +68019,7 @@ void drbd_rs_failed_io(struct drbd_conf *mdev , sector_t sector , int size )
 }
 }
 #line 292 "include/linux/list.h"
-__inline static void list_splice(struct list_head  const  *list , struct list_head *head ) 
+ static void list_splice(struct list_head  const  *list , struct list_head *head ) 
 { int tmp ;
   struct list_head *__cil_tmp4 ;
 
@@ -68044,7 +68044,7 @@ __inline static void list_splice(struct list_head  const  *list , struct list_he
 }
 }
 #line 77 "include/linux/swab.h"
-__inline static __u32 __fswahw32(__u32 val ) 
+ static __u32 __fswahw32(__u32 val ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   __u32 __cil_tmp4 ;
@@ -68068,7 +68068,7 @@ __inline static __u32 __fswahw32(__u32 val )
 #line 113 "include/linux/bitmap.h"
 extern int __bitmap_weight(unsigned long const   * , int  ) ;
 #line 167 "include/linux/bitmap.h"
-__inline static void bitmap_fill(unsigned long *dst , int nbits ) 
+ static void bitmap_fill(unsigned long *dst , int nbits ) 
 { size_t nlongs ;
   int len ;
   unsigned long __cil_tmp5 ;
@@ -68141,7 +68141,7 @@ __inline static void bitmap_fill(unsigned long *dst , int nbits )
 }
 }
 #line 274 "include/linux/bitmap.h"
-__inline static int bitmap_weight(unsigned long const   *src , int nbits ) 
+ static int bitmap_weight(unsigned long const   *src , int nbits ) 
 { int tmp___1 ;
 
   {
@@ -68156,7 +68156,7 @@ __inline static int bitmap_weight(unsigned long const   *src , int nbits )
 #line 79 "include/linux/cpumask.h"
 extern struct cpumask  const  * const  cpu_online_mask ;
 #line 254 "include/linux/cpumask.h"
-__inline static void cpumask_set_cpu(unsigned int cpu , struct cpumask *dstp ) 
+ static void cpumask_set_cpu(unsigned int cpu , struct cpumask *dstp ) 
 { unsigned int tmp ;
   unsigned long (*__cil_tmp4)[64U] ;
   unsigned long volatile   *__cil_tmp5 ;
@@ -68177,7 +68177,7 @@ __inline static void cpumask_set_cpu(unsigned int cpu , struct cpumask *dstp )
 }
 }
 #line 307 "include/linux/cpumask.h"
-__inline static void cpumask_setall(struct cpumask *dstp ) 
+ static void cpumask_setall(struct cpumask *dstp ) 
 { unsigned long (*__cil_tmp2)[64U] ;
   unsigned long *__cil_tmp3 ;
 
@@ -68195,7 +68195,7 @@ __inline static void cpumask_setall(struct cpumask *dstp )
 }
 }
 #line 446 "include/linux/cpumask.h"
-__inline static unsigned int cpumask_weight(struct cpumask  const  *srcp ) 
+ static unsigned int cpumask_weight(struct cpumask  const  *srcp ) 
 { int tmp ;
   unsigned long (*__cil_tmp3)[64U] ;
   unsigned long const   *__cil_tmp4 ;
@@ -68236,7 +68236,7 @@ extern struct kmem_cache *kmem_cache_create(char const   * , size_t  , size_t  ,
 #line 104
 extern void kmem_cache_destroy(struct kmem_cache * ) ;
 #line 206 "include/linux/page-flags.h"
-__inline static int PageSlab(struct page *page ) 
+ static int PageSlab(struct page *page ) 
 { int tmp ;
   unsigned long *__cil_tmp3 ;
   unsigned long const volatile   *__cil_tmp4 ;
@@ -68290,7 +68290,7 @@ extern struct gendisk *alloc_disk(int  ) ;
 #line 609
 extern void put_disk(struct gendisk * ) ;
 #line 255 "include/linux/backing-dev.h"
-__inline static int bdi_congested(struct backing_dev_info *bdi , int bdi_bits ) 
+ static int bdi_congested(struct backing_dev_info *bdi , int bdi_bits ) 
 { int tmp ;
   congested_fn *__cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -68374,7 +68374,7 @@ int fault_devs  ;
 #line 73
 char usermode_helper[80U] ;
 #line 592 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void DCBP_set_code(struct p_compressed_bm *p , enum drbd_bitmap_code code ) 
+ static void DCBP_set_code(struct p_compressed_bm *p , enum drbd_bitmap_code code ) 
 { long tmp ;
   unsigned int __cil_tmp4 ;
   unsigned int __cil_tmp5 ;
@@ -68430,7 +68430,7 @@ __inline static void DCBP_set_code(struct p_compressed_bm *p , enum drbd_bitmap_
 }
 }
 #line 605 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void DCBP_set_start(struct p_compressed_bm *p , int set ) 
+ static void DCBP_set_start(struct p_compressed_bm *p , int set ) 
 { int tmp ;
   u8 __cil_tmp4 ;
   signed char __cil_tmp5 ;
@@ -68464,7 +68464,7 @@ __inline static void DCBP_set_start(struct p_compressed_bm *p , int set )
 }
 }
 #line 617 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void DCBP_set_pad_bits(struct p_compressed_bm *p , int n ) 
+ static void DCBP_set_pad_bits(struct p_compressed_bm *p , int n ) 
 { long tmp ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -68576,7 +68576,7 @@ int drbd_nl_init(void) ;
 #line 1683
 void drbd_bcast_state(struct drbd_conf *mdev , union drbd_state state ) ;
 #line 1782 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_state_lock___0(struct drbd_conf *mdev ) 
+ static void drbd_state_lock___0(struct drbd_conf *mdev ) 
 { int tmp ;
   wait_queue_t __wait ;
   struct task_struct *tmp___0 ;
@@ -68657,7 +68657,7 @@ __inline static void drbd_state_lock___0(struct drbd_conf *mdev )
 }
 }
 #line 1825 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void __drbd_chk_io_error____3(struct drbd_conf *mdev , int forcedetach ,
+ static void __drbd_chk_io_error____3(struct drbd_conf *mdev , int forcedetach ,
                                               char const   *where ) 
 { int tmp ;
   union drbd_state __ns ;
@@ -68825,7 +68825,7 @@ __inline static void __drbd_chk_io_error____3(struct drbd_conf *mdev , int force
 }
 }
 #line 1858 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_chk_io_error____1(struct drbd_conf *mdev , int error , int forcedetach ,
+ static void drbd_chk_io_error____1(struct drbd_conf *mdev , int error , int forcedetach ,
                                             char const   *where ) 
 { unsigned long flags ;
   raw_spinlock_t *tmp ;
@@ -68857,7 +68857,7 @@ __inline static void drbd_chk_io_error____1(struct drbd_conf *mdev , int error ,
 }
 }
 #line 1920 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static sector_t drbd_get_max_capacity___0(struct drbd_backing_dev *bdev ) 
+ static sector_t drbd_get_max_capacity___0(struct drbd_backing_dev *bdev ) 
 { sector_t s ;
   sector_t __min1 ;
   sector_t __min2 ;
@@ -69033,7 +69033,7 @@ __inline static sector_t drbd_get_max_capacity___0(struct drbd_backing_dev *bdev
 }
 }
 #line 1951 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static sector_t drbd_md_ss__(struct drbd_conf *mdev , struct drbd_backing_dev *bdev ) 
+ static sector_t drbd_md_ss__(struct drbd_conf *mdev , struct drbd_backing_dev *bdev ) 
 { int tmp ;
   sector_t tmp___0 ;
   int __cil_tmp5 ;
@@ -69162,7 +69162,7 @@ __inline static sector_t drbd_md_ss__(struct drbd_conf *mdev , struct drbd_backi
 }
 }
 #line 2034 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_thread_stop_nowait(struct drbd_thread *thi ) 
+ static void drbd_thread_stop_nowait(struct drbd_thread *thi ) 
 { 
 
   {
@@ -69175,7 +69175,7 @@ __inline static void drbd_thread_stop_nowait(struct drbd_thread *thi )
 }
 }
 #line 2039 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_thread_restart_nowait(struct drbd_thread *thi ) 
+ static void drbd_thread_restart_nowait(struct drbd_thread *thi ) 
 { 
 
   {
@@ -69188,7 +69188,7 @@ __inline static void drbd_thread_restart_nowait(struct drbd_thread *thi )
 }
 }
 #line 2256 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int drbd_state_is_stable___0(struct drbd_conf *mdev ) 
+ static int drbd_state_is_stable___0(struct drbd_conf *mdev ) 
 { union drbd_state s ;
   unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -69756,7 +69756,7 @@ __inline static int drbd_state_is_stable___0(struct drbd_conf *mdev )
 }
 }
 #line 2331 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static bool may_inc_ap_bio___0(struct drbd_conf *mdev ) 
+ static bool may_inc_ap_bio___0(struct drbd_conf *mdev ) 
 { int mxb ;
   int tmp ;
   int tmp___0 ;
@@ -69851,7 +69851,7 @@ __inline static bool may_inc_ap_bio___0(struct drbd_conf *mdev )
 }
 }
 #line 2434 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static void drbd_update_congested(struct drbd_conf *mdev ) 
+ static void drbd_update_congested(struct drbd_conf *mdev ) 
 { struct sock *sk ;
   struct socket *__cil_tmp3 ;
   int __cil_tmp4 ;
@@ -69894,7 +69894,7 @@ __inline static void drbd_update_congested(struct drbd_conf *mdev )
 }
 }
 #line 2441 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static int drbd_queue_order_type(struct drbd_conf *mdev ) 
+ static int drbd_queue_order_type(struct drbd_conf *mdev ) 
 { 
 
   {
@@ -69905,7 +69905,7 @@ __inline static int drbd_queue_order_type(struct drbd_conf *mdev )
 #line 326 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_req.h"
 void tl_restart(struct drbd_conf *mdev , enum drbd_req_event what ) ;
 #line 168 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_vli.h"
-__inline static int __vli_encode_bits(u64 *out , u64 in ) 
+ static int __vli_encode_bits(u64 *out , u64 in ) 
 { u64 max ;
   u64 adj ;
   u64 *__cil_tmp5 ;
@@ -70273,7 +70273,7 @@ __inline static int __vli_encode_bits(u64 *out , u64 in )
 }
 }
 #line 260 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_vli.h"
-__inline static int bitstream_put_bits(struct bitstream *bs , u64 val , unsigned int bits ) 
+ static int bitstream_put_bits(struct bitstream *bs , u64 val , unsigned int bits ) 
 { unsigned char *b ;
   unsigned int tmp ;
   unsigned char *tmp___0 ;
@@ -70445,7 +70445,7 @@ __inline static int bitstream_put_bits(struct bitstream *bs , u64 val , unsigned
 }
 }
 #line 340 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_vli.h"
-__inline static int vli_encode_bits(struct bitstream *bs , u64 in ) 
+ static int vli_encode_bits(struct bitstream *bs , u64 in ) 
 { u64 code ;
   int bits ;
   int tmp ;
@@ -90843,7 +90843,7 @@ char const   *drbd_set_st_err_str(enum drbd_state_rv err )
 }
 }
 #line 47 "include/linux/byteorder/little_endian.h"
-__inline static __u64 __le64_to_cpup(__le64 const   *p ) 
+ static __u64 __le64_to_cpup(__le64 const   *p ) 
 { __le64 __cil_tmp2 ;
 
   {
@@ -90856,7 +90856,7 @@ __inline static __u64 __le64_to_cpup(__le64 const   *p )
 }
 }
 #line 55 "include/linux/byteorder/little_endian.h"
-__inline static __u32 __le32_to_cpup(__le32 const   *p ) 
+ static __u32 __le32_to_cpup(__le32 const   *p ) 
 { __le32 __cil_tmp2 ;
 
   {
@@ -90869,7 +90869,7 @@ __inline static __u32 __le32_to_cpup(__le32 const   *p )
 }
 }
 #line 63 "include/linux/byteorder/little_endian.h"
-__inline static __u16 __le16_to_cpup(__le16 const   *p ) 
+ static __u16 __le16_to_cpup(__le16 const   *p ) 
 { __le16 __cil_tmp2 ;
 
   {
@@ -90889,7 +90889,7 @@ extern int __bitmap_equal(unsigned long const   * , unsigned long const   * , in
 extern int __bitmap_parse(char const   * , unsigned int  , int  , unsigned long * ,
                           int  ) ;
 #line 177 "include/linux/bitmap.h"
-__inline static void bitmap_copy(unsigned long *dst , unsigned long const   *src ,
+ static void bitmap_copy(unsigned long *dst , unsigned long const   *src ,
                                  int nbits ) 
 { int len ;
   size_t __len ;
@@ -90930,7 +90930,7 @@ __inline static void bitmap_copy(unsigned long *dst , unsigned long const   *src
 }
 }
 #line 231 "include/linux/bitmap.h"
-__inline static int bitmap_equal(unsigned long const   *src1 , unsigned long const   *src2 ,
+ static int bitmap_equal(unsigned long const   *src1 , unsigned long const   *src2 ,
                                  int nbits ) 
 { int tmp___0 ;
 
@@ -90944,7 +90944,7 @@ __inline static int bitmap_equal(unsigned long const   *src1 , unsigned long con
 }
 }
 #line 393 "include/linux/cpumask.h"
-__inline static bool cpumask_equal(struct cpumask  const  *src1p , struct cpumask  const  *src2p ) 
+ static bool cpumask_equal(struct cpumask  const  *src1p , struct cpumask  const  *src2p ) 
 { int tmp ;
   unsigned long (*__cil_tmp4)[64U] ;
   unsigned long const   *__cil_tmp5 ;
@@ -90974,7 +90974,7 @@ __inline static bool cpumask_equal(struct cpumask  const  *src1p , struct cpumas
 }
 }
 #line 482 "include/linux/cpumask.h"
-__inline static void cpumask_copy(struct cpumask *dstp , struct cpumask  const  *srcp ) 
+ static void cpumask_copy(struct cpumask *dstp , struct cpumask  const  *srcp ) 
 { unsigned long (*__cil_tmp3)[64U] ;
   unsigned long *__cil_tmp4 ;
   unsigned long (*__cil_tmp5)[64U] ;
@@ -91007,7 +91007,7 @@ extern void call_usermodehelper_setfns(struct subprocess_info * , int (*)(struct
 #line 81
 extern int call_usermodehelper_exec(struct subprocess_info * , enum umh_wait  ) ;
 #line 88 "include/linux/kmod.h"
-__inline static int call_usermodehelper_fns(char *path , char **argv , char **envp ,
+ static int call_usermodehelper_fns(char *path , char **argv , char **envp ,
                                             enum umh_wait wait , int (*init)(struct subprocess_info * ,
                                                                              struct cred * ) ,
                                             void (*cleanup)(struct subprocess_info * ) ,
@@ -91066,7 +91066,7 @@ __inline static int call_usermodehelper_fns(char *path , char **argv , char **en
 }
 }
 #line 107 "include/linux/kmod.h"
-__inline static int call_usermodehelper(char *path , char **argv , char **envp , enum umh_wait wait ) 
+ static int call_usermodehelper(char *path , char **argv , char **envp , enum umh_wait wait ) 
 { int tmp ;
   int (*__cil_tmp6)(struct subprocess_info * , struct cred * ) ;
   void (*__cil_tmp7)(struct subprocess_info * ) ;
@@ -91114,7 +91114,7 @@ extern struct lru_cache *lc_create(char const   * , struct kmem_cache * , unsign
 #line 1528 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
 enum drbd_disk_state drbd_try_outdate_peer(struct drbd_conf *mdev ) ;
 #line 1920 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/block/drbd/drbd_int.h"
-__inline static sector_t drbd_get_max_capacity___1(struct drbd_backing_dev *bdev ) 
+ static sector_t drbd_get_max_capacity___1(struct drbd_backing_dev *bdev ) 
 { sector_t s ;
   sector_t __min1 ;
   sector_t __min2 ;
@@ -91290,7 +91290,7 @@ __inline static sector_t drbd_get_max_capacity___1(struct drbd_backing_dev *bdev
 }
 }
 #line 7 "include/linux/unaligned/access_ok.h"
-__inline static u16 get_unaligned_le16(void const   *p ) 
+ static u16 get_unaligned_le16(void const   *p ) 
 { __u16 tmp ;
   __le16 const   *__cil_tmp3 ;
 
@@ -91306,7 +91306,7 @@ __inline static u16 get_unaligned_le16(void const   *p )
 }
 }
 #line 12 "include/linux/unaligned/access_ok.h"
-__inline static u32 get_unaligned_le32(void const   *p ) 
+ static u32 get_unaligned_le32(void const   *p ) 
 { __u32 tmp ;
   __le32 const   *__cil_tmp3 ;
 
@@ -91322,7 +91322,7 @@ __inline static u32 get_unaligned_le32(void const   *p )
 }
 }
 #line 17 "include/linux/unaligned/access_ok.h"
-__inline static u64 get_unaligned_le64(void const   *p ) 
+ static u64 get_unaligned_le64(void const   *p ) 
 { __u64 tmp ;
   __le64 const   *__cil_tmp3 ;
 
@@ -91338,7 +91338,7 @@ __inline static u64 get_unaligned_le64(void const   *p )
 }
 }
 #line 37 "include/linux/unaligned/access_ok.h"
-__inline static void put_unaligned_le16(u16 val , void *p ) 
+ static void put_unaligned_le16(u16 val , void *p ) 
 { __le16 *__cil_tmp3 ;
 
   {
@@ -91351,7 +91351,7 @@ __inline static void put_unaligned_le16(u16 val , void *p )
 }
 }
 #line 42 "include/linux/unaligned/access_ok.h"
-__inline static void put_unaligned_le32(u32 val , void *p ) 
+ static void put_unaligned_le32(u32 val , void *p ) 
 { __le32 *__cil_tmp3 ;
 
   {
@@ -91364,7 +91364,7 @@ __inline static void put_unaligned_le32(u32 val , void *p )
 }
 }
 #line 47 "include/linux/unaligned/access_ok.h"
-__inline static void put_unaligned_le64(u64 val , void *p ) 
+ static void put_unaligned_le64(u64 val , void *p ) 
 { __le64 *__cil_tmp3 ;
 
   {

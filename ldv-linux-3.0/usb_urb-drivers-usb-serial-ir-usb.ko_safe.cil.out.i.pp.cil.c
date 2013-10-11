@@ -4776,7 +4776,7 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock )  __attribute_
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -4785,7 +4785,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp3 ;
 
   {
@@ -4815,7 +4815,7 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -4829,7 +4829,7 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -4872,7 +4872,7 @@ extern struct tty_struct *tty_port_tty_get(struct tty_port *port ) ;
 extern int tty_insert_flip_string_fixed_flag(struct tty_struct *tty , unsigned char const   *chars ,
                                              char flag , size_t size ) ;
 #line 23 "include/linux/tty_flip.h"
-__inline static int tty_insert_flip_string(struct tty_struct *tty , unsigned char const   *chars ,
+ static int tty_insert_flip_string(struct tty_struct *tty , unsigned char const   *chars ,
                                            size_t size ) 
 { int tmp ;
 
@@ -4888,7 +4888,7 @@ __inline static int tty_insert_flip_string(struct tty_struct *tty , unsigned cha
 #line 929 "include/linux/usb.h"
 extern int usb_register_driver(struct usb_driver * , struct module * , char const   * ) ;
 #line 931 "include/linux/usb.h"
-__inline static int usb_register(struct usb_driver *driver ) 
+ static int usb_register(struct usb_driver *driver ) 
 { int tmp___7 ;
 
   {
@@ -4903,7 +4903,7 @@ __inline static int usb_register(struct usb_driver *driver )
 #line 935
 extern void usb_deregister(struct usb_driver * ) ;
 #line 1268 "include/linux/usb.h"
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context ) 
@@ -4942,7 +4942,7 @@ extern int usb_control_msg(struct usb_device *dev , unsigned int pipe , __u8 req
                            __u8 requesttype , __u16 value , __u16 index , void *data ,
                            __u16 size , int timeout ) ;
 #line 1526 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -4964,7 +4964,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 174 "include/linux/kfifo.h"
-__inline static unsigned int __attribute__((__warn_unused_result__))  __kfifo_uint_must_check_helper(unsigned int val ) 
+ static unsigned int __attribute__((__warn_unused_result__))  __kfifo_uint_must_check_helper(unsigned int val ) 
 { 
 
   {
@@ -5080,7 +5080,7 @@ static struct usb_serial_driver ir_device  =
     (void (*)(struct urb *urb ))0, (void (*)(struct urb *urb ))0, & ir_process_read_urb,
     & ir_prepare_write_buffer};
 #line 137 "/anthill/stuff/tacas-comp/work/current--X--drivers/usb/serial/ir-usb.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/usb/serial/ir-usb.c.common.c"
-__inline static void irda_usb_dump_class_desc(struct usb_irda_cs_descriptor *desc ) 
+ static void irda_usb_dump_class_desc(struct usb_irda_cs_descriptor *desc ) 
 { __u8 __cil_tmp2 ;
   int __cil_tmp3 ;
   __u8 __cil_tmp4 ;

@@ -3653,7 +3653,7 @@ extern int printk(char const   *  , ...) ;
 #line 47 "include/linux/list.h"
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -3692,7 +3692,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -3705,7 +3705,7 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 11 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4894/dscv_tempdir/dscv/ri/43_1a/drivers/w1/masters/ds2490.c.p"
 void ldv_check_alloc_flags(gfp_t flags ) ;
 #line 12
@@ -3719,7 +3719,7 @@ extern void *dev_get_drvdata(struct device  const  * ) ;
 #line 793
 extern int dev_set_drvdata(struct device * , void * ) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) 
+ static void *usb_get_intfdata(struct usb_interface *intf ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3744,7 +3744,7 @@ __inline static void *usb_get_intfdata(struct usb_interface *intf )
 }
 }
 #line 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -3765,7 +3765,7 @@ __inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
 }
 }
 #line 523 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
 { struct device  const  *__mptr ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3806,7 +3806,7 @@ extern int usb_reset_configuration(struct usb_device * ) ;
 #line 1463
 extern int usb_set_interface(struct usb_device * , int  , int  ) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -4292,7 +4292,7 @@ static int ds_recv_status_nodump(struct ds_device *dev , struct ds_status *st , 
 }
 }
 #line 276 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4894/dscv_tempdir/dscv/ri/43_1a/drivers/w1/masters/ds2490.c.p"
-__inline static void ds_print_msg(unsigned char *buf , unsigned char *str , int off ) 
+ static void ds_print_msg(unsigned char *buf , unsigned char *str , int off ) 
 { unsigned long __cil_tmp4 ;
   unsigned char *__cil_tmp5 ;
   unsigned char __cil_tmp6 ;
@@ -6749,7 +6749,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1742 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4894/dscv_tempdir/dscv/ri/43_1a/drivers/w1/masters/ds2490.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {

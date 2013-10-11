@@ -2593,7 +2593,7 @@ int ldv_spin_trylock(void) ;
 #line 218 "include/linux/kernel.h"
 extern int kstrtoull(char const   * , unsigned int  , unsigned long long * ) ;
 #line 220 "include/linux/kernel.h"
-__inline static int kstrtoul(char const   *s , unsigned int base , unsigned long *res ) 
+ static int kstrtoul(char const   *s , unsigned int base , unsigned long *res ) 
 { int tmp ;
   unsigned long long *__cil_tmp6 ;
 
@@ -2611,7 +2611,7 @@ __inline static int kstrtoul(char const   *s , unsigned int base , unsigned long
 #line 320
 extern int sprintf(char * , char const   *  , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2654,7 +2654,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12440/dscv_tempdir/dscv/ri/43_1a/drivers/leds/leds-bd2802.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2678,7 +2678,7 @@ extern int _dev_info(struct device  const  * , char const   *  , ...) ;
 #line 88 "include/linux/i2c.h"
 extern s32 i2c_smbus_write_byte_data(struct i2c_client  const  * , u8  , u8  ) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2700,7 +2700,7 @@ __inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )
 }
 }
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2725,7 +2725,7 @@ extern void __gpio_set_value(unsigned int  , int  ) ;
 #line 176
 extern int gpio_request_one(unsigned int  , unsigned long  , char const   * ) ;
 #line 31 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/gpio.h"
-__inline static void gpio_set_value(unsigned int gpio , int value ) 
+ static void gpio_set_value(unsigned int gpio , int value ) 
 { 
 
   {
@@ -2744,7 +2744,7 @@ extern int led_classdev_register(struct device * , struct led_classdev * ) ;
 #line 81
 extern void led_classdev_unregister(struct led_classdev * ) ;
 #line 127 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12440/dscv_tempdir/dscv/ri/43_1a/drivers/leds/leds-bd2802.c.p"
-__inline static int bd2802_is_rgb_off(struct bd2802_led *led , enum led_ids id , enum led_colors color ) 
+ static int bd2802_is_rgb_off(struct bd2802_led *led , enum led_ids id , enum led_colors color ) 
 { unsigned int __cil_tmp4 ;
   unsigned int __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -2886,7 +2886,7 @@ __inline static int bd2802_is_rgb_off(struct bd2802_led *led , enum led_ids id ,
 }
 }
 #line 143 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12440/dscv_tempdir/dscv/ri/43_1a/drivers/leds/leds-bd2802.c.p"
-__inline static int bd2802_is_led_off(struct bd2802_led *led , enum led_ids id ) 
+ static int bd2802_is_led_off(struct bd2802_led *led , enum led_ids id ) 
 { unsigned int __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -2982,7 +2982,7 @@ __inline static int bd2802_is_led_off(struct bd2802_led *led , enum led_ids id )
 }
 }
 #line 151 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12440/dscv_tempdir/dscv/ri/43_1a/drivers/leds/leds-bd2802.c.p"
-__inline static int bd2802_is_all_off(struct bd2802_led *led ) 
+ static int bd2802_is_all_off(struct bd2802_led *led ) 
 { int i ;
   int tmp ;
   enum led_ids __cil_tmp4 ;
@@ -3023,7 +3023,7 @@ __inline static int bd2802_is_all_off(struct bd2802_led *led )
 }
 }
 #line 162 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12440/dscv_tempdir/dscv/ri/43_1a/drivers/leds/leds-bd2802.c.p"
-__inline static u8 bd2802_get_base_offset(enum led_ids id , enum led_colors color ) 
+ static u8 bd2802_get_base_offset(enum led_ids id , enum led_colors color ) 
 { u8 __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
   unsigned int __cil_tmp5 ;
@@ -3054,7 +3054,7 @@ __inline static u8 bd2802_get_base_offset(enum led_ids id , enum led_colors colo
 }
 }
 #line 167 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12440/dscv_tempdir/dscv/ri/43_1a/drivers/leds/leds-bd2802.c.p"
-__inline static u8 bd2802_get_reg_addr(enum led_ids id , enum led_colors color , u8 reg_offset ) 
+ static u8 bd2802_get_reg_addr(enum led_ids id , enum led_colors color , u8 reg_offset ) 
 { u8 tmp ;
   int __cil_tmp5 ;
   int __cil_tmp6 ;
@@ -9688,7 +9688,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1872 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12440/dscv_tempdir/dscv/ri/43_1a/drivers/leds/leds-bd2802.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

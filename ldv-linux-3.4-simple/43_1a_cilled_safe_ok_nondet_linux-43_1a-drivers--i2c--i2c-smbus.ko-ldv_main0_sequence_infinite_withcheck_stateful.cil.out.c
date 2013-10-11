@@ -2530,7 +2530,7 @@ int ldv_spin_trylock(void) ;
 extern int __dynamic_dev_dbg(struct _ddebug * , struct device  const  * , char const   * 
                              , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2569,7 +2569,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11475/dscv_tempdir/dscv/ri/43_1a/drivers/i2c/i2c-smbus.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2579,7 +2579,7 @@ void ldv_check_alloc_nonatomic(void) ;
 #line 14
 struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 758 "include/linux/device.h"
-__inline static void device_lock(struct device *dev ) 
+ static void device_lock(struct device *dev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct mutex *__cil_tmp4 ;
@@ -2600,7 +2600,7 @@ __inline static void device_lock(struct device *dev )
 }
 }
 #line 768 "include/linux/device.h"
-__inline static void device_unlock(struct device *dev ) 
+ static void device_unlock(struct device *dev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct mutex *__cil_tmp4 ;
@@ -2637,7 +2637,7 @@ extern int devm_request_threaded_irq(struct device * , unsigned int  , irqreturn
                                      irqreturn_t (*)(int  , void * ) , unsigned long  ,
                                      char const   * , void * ) ;
 #line 196 "include/linux/interrupt.h"
-__inline static int devm_request_irq(struct device *dev , unsigned int irq , irqreturn_t (*handler)(int  ,
+ static int devm_request_irq(struct device *dev , unsigned int irq , irqreturn_t (*handler)(int  ,
                                                                                                     void * ) ,
                                      unsigned long irqflags , char const   *devname ,
                                      void *dev_id ) 
@@ -2665,7 +2665,7 @@ extern s32 i2c_smbus_read_byte(struct i2c_client  const  * ) ;
 #line 234
 extern struct i2c_client *i2c_verify_client(struct device * ) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2687,7 +2687,7 @@ __inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )
 }
 }
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -4256,7 +4256,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 704 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11475/dscv_tempdir/dscv/ri/43_1a/drivers/i2c/i2c-smbus.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

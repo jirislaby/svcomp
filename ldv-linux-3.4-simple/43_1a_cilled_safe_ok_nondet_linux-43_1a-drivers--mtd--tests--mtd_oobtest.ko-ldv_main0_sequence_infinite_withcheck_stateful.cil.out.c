@@ -2476,7 +2476,7 @@ extern void *memset(void * , int  , size_t  ) ;
 #line 60
 extern int memcmp(void const   * , void const   * , size_t  ) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2485,7 +2485,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2515,7 +2515,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -2528,7 +2528,7 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 11 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11603/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/tests/mtd_oobtest.c.p"
 void ldv_check_alloc_flags(gfp_t flags ) ;
 #line 12
@@ -2538,7 +2538,7 @@ struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 246 "include/linux/mtd/mtd.h"
 extern int mtd_erase(struct mtd_info * , struct erase_info * ) ;
 #line 259 "include/linux/mtd/mtd.h"
-__inline static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops ) 
+ static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops ) 
 { size_t tmp ;
   int tmp___0 ;
   unsigned long __cil_tmp6 ;
@@ -2606,7 +2606,7 @@ __inline static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd
 }
 }
 #line 268 "include/linux/mtd/mtd.h"
-__inline static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops ) 
+ static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops ) 
 { size_t tmp ;
   int tmp___0 ;
   unsigned long __cil_tmp6 ;
@@ -2729,7 +2729,7 @@ static int vary_offset  ;
 #line 64 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11603/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/tests/mtd_oobtest.c.p"
 static unsigned long next  =    1UL;
 #line 66 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11603/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/tests/mtd_oobtest.c.p"
-__inline static unsigned int simple_rand(void) 
+ static unsigned int simple_rand(void) 
 { unsigned long __cil_tmp1 ;
   unsigned long __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
@@ -2750,7 +2750,7 @@ __inline static unsigned int simple_rand(void)
 }
 }
 #line 72 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11603/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/tests/mtd_oobtest.c.p"
-__inline static void simple_srand(unsigned long seed ) 
+ static void simple_srand(unsigned long seed ) 
 { 
 
   {
@@ -6366,7 +6366,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1048 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11603/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/tests/mtd_oobtest.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {

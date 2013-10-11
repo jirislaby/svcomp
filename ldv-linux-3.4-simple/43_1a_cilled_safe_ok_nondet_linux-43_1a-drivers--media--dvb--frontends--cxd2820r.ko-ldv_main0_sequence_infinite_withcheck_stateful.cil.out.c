@@ -3682,7 +3682,7 @@ extern void *__memcpy(void * , void const   * , size_t  ) ;
 #line 60
 extern int memcmp(void const   * , void const   * , size_t  ) ;
 #line 17 "include/linux/math64.h"
-__inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder ) 
+ static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder ) 
 { u64 __cil_tmp4 ;
   unsigned long long __cil_tmp5 ;
   u64 __cil_tmp6 ;
@@ -3703,7 +3703,7 @@ __inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder )
 }
 }
 #line 82 "include/linux/math64.h"
-__inline static u64 div_u64(u64 dividend , u32 divisor ) 
+ static u64 div_u64(u64 dividend , u32 divisor ) 
 { u32 remainder ;
   u64 tmp ;
 
@@ -3723,7 +3723,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8396/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/frontends/cxd2820r_core.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -7360,7 +7360,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1249 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8396/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/frontends/cxd2820r_core.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

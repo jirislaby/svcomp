@@ -4890,7 +4890,7 @@ struct seq_operations {
 #line 1
 long __builtin_expect(long  , long  ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { 
 
   {
@@ -4909,7 +4909,7 @@ extern int snprintf(char * , size_t  , char const   *  , ...) ;
 #line 303
 extern char *kasprintf(gfp_t  , char const   *  , ...) ;
 #line 35 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i ) 
+ static void atomic_set(atomic_t *v , int i ) 
 { 
 
   {
@@ -4942,7 +4942,7 @@ void ldv_module_put_and_exit(void) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 255 "include/linux/slub_def.h"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -4955,7 +4955,7 @@ __inline static void *kmalloc(size_t size , gfp_t flags )
 }
 }
 #line 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -4978,7 +4978,7 @@ extern struct device *bus_find_device(struct bus_type * , struct device * , void
 #line 617
 extern int dev_set_name(struct device * , char const   *  , ...) ;
 #line 621 "include/linux/device.h"
-__inline static int dev_to_node(struct device *dev ) 
+ static int dev_to_node(struct device *dev ) 
 { 
 
   {
@@ -4987,7 +4987,7 @@ __inline static int dev_to_node(struct device *dev )
 }
 }
 #line 625 "include/linux/device.h"
-__inline static void set_dev_node(struct device *dev , int node ) 
+ static void set_dev_node(struct device *dev , int node ) 
 { 
 
   {
@@ -4998,7 +4998,7 @@ __inline static void set_dev_node(struct device *dev , int node )
 }
 }
 #line 676 "include/linux/device.h"
-__inline static int device_trylock(struct device *dev ) 
+ static int device_trylock(struct device *dev ) 
 { int tmp ;
   struct mutex *__cil_tmp3 ;
 
@@ -5051,7 +5051,7 @@ struct bus_type usb_bus_type ;
 #line 929
 int usb_register_driver(struct usb_driver *new_driver , struct module *owner , char const   *mod_name ) ;
 #line 931 "include/linux/usb.h"
-__inline static int usb_register(struct usb_driver *driver ) 
+ static int usb_register(struct usb_driver *driver ) 
 { int tmp ;
 
   {
@@ -5079,7 +5079,7 @@ void usb_free_coherent(struct usb_device *dev , size_t size , void *addr , dma_a
 #line 1605 "include/linux/usb.h"
 struct dentry *usb_debug_root  ;
 #line 190 "include/linux/usb/hcd.h"
-__inline static struct usb_hcd *bus_to_hcd(struct usb_bus *bus ) 
+ static struct usb_hcd *bus_to_hcd(struct usb_bus *bus ) 
 { struct usb_bus  const  *__mptr ;
 
   {
@@ -5143,7 +5143,7 @@ struct device_type usb_if_device_type ;
 #line 103
 struct usb_device_driver usb_generic_driver ;
 #line 110 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/usb/core/usb.h"
-__inline static int is_usb_interface(struct device  const  *dev ) 
+ static int is_usb_interface(struct device  const  *dev ) 
 { struct device_type  const  *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct device_type  const  *__cil_tmp4 ;
@@ -7018,7 +7018,7 @@ void ldv_check_final_state(void)
 #line 47 "include/linux/list.h"
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -7037,7 +7037,7 @@ extern void __list_del_entry(struct list_head * ) ;
 #line 112
 extern void list_del(struct list_head * ) ;
 #line 142 "include/linux/list.h"
-__inline static void list_del_init(struct list_head *entry ) 
+ static void list_del_init(struct list_head *entry ) 
 { 
 
   {
@@ -7052,7 +7052,7 @@ __inline static void list_del_init(struct list_head *entry )
 }
 }
 #line 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head  const  *head ) 
+ static int list_empty(struct list_head  const  *head ) 
 { unsigned long __cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
   struct list_head  const  *__cil_tmp4 ;
@@ -7074,7 +7074,7 @@ __inline static int list_empty(struct list_head  const  *head )
 }
 }
 #line 60 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
+ static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -7087,7 +7087,7 @@ __inline static void set_bit(unsigned int nr , unsigned long volatile   *addr )
 }
 }
 #line 98 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void clear_bit(int nr , unsigned long volatile   *addr ) 
+ static void clear_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -7100,7 +7100,7 @@ __inline static void clear_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 246 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -7115,7 +7115,7 @@ __inline static int test_and_clear_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 315 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -7141,7 +7141,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 #line 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void) 
+ static struct task_struct *get_current(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -7192,7 +7192,7 @@ extern size_t strlen(char const   * ) ;
 #line 118 "include/linux/string.h"
 extern char *kstrdup(char const   * , gfp_t  ) ;
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -7214,7 +7214,7 @@ __inline static long IS_ERR(void const   *ptr )
 }
 }
 #line 93 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v ) 
+ static void atomic_inc(atomic_t *v ) 
 { 
 
   {
@@ -7225,7 +7225,7 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp ;
   __u32 *__cil_tmp4 ;
   unsigned long const volatile   *__cil_tmp5 ;
@@ -7257,7 +7257,7 @@ extern void _raw_spin_unlock_irq(raw_spinlock_t * ) ;
 #line 43
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -7266,7 +7266,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 308 "include/linux/spinlock.h"
-__inline static void spin_lock_irq(spinlock_t *lock ) 
+ static void spin_lock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -7281,7 +7281,7 @@ __inline static void spin_lock_irq(spinlock_t *lock )
 }
 }
 #line 333 "include/linux/spinlock.h"
-__inline static void spin_unlock_irq(spinlock_t *lock ) 
+ static void spin_unlock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -7296,7 +7296,7 @@ __inline static void spin_unlock_irq(spinlock_t *lock )
 }
 }
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp3 ;
 
   {
@@ -7353,7 +7353,7 @@ extern void schedule(void) ;
 #line 2112
 extern int wake_up_process(struct task_struct * ) ;
 #line 2441 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp ;
   void *__cil_tmp4 ;
   struct thread_info *__cil_tmp5 ;
@@ -7372,7 +7372,7 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2467 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp ;
   long tmp___0 ;
   int __cil_tmp4 ;
@@ -7394,7 +7394,7 @@ __inline static int signal_pending(struct task_struct *p )
 }
 }
 #line 424 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_dir_in(struct usb_endpoint_descriptor  const  *epd ) 
+ static int usb_endpoint_dir_in(struct usb_endpoint_descriptor  const  *epd ) 
 { __u8 __cil_tmp2 ;
   signed char __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -7413,7 +7413,7 @@ __inline static int usb_endpoint_dir_in(struct usb_endpoint_descriptor  const  *
 }
 }
 #line 474 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_xfer_int(struct usb_endpoint_descriptor  const  *epd ) 
+ static int usb_endpoint_xfer_int(struct usb_endpoint_descriptor  const  *epd ) 
 { __u8 __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -7432,7 +7432,7 @@ __inline static int usb_endpoint_xfer_int(struct usb_endpoint_descriptor  const 
 }
 }
 #line 528 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_is_int_in(struct usb_endpoint_descriptor  const  *epd ) 
+ static int usb_endpoint_is_int_in(struct usb_endpoint_descriptor  const  *epd ) 
 { int tmp ;
   int tmp___0 ;
   int tmp___1 ;
@@ -7469,7 +7469,7 @@ extern void device_set_wakeup_capable(struct device * , bool  ) ;
 #line 85
 extern int device_init_wakeup(struct device * , bool  ) ;
 #line 654 "include/linux/device.h"
-__inline static void device_enable_async_suspend(struct device *dev ) 
+ static void device_enable_async_suspend(struct device *dev ) 
 { bool __cil_tmp2 ;
 
   {
@@ -7489,7 +7489,7 @@ __inline static void device_enable_async_suspend(struct device *dev )
 }
 }
 #line 671 "include/linux/device.h"
-__inline static void device_lock(struct device *dev ) 
+ static void device_lock(struct device *dev ) 
 { struct mutex *__cil_tmp2 ;
 
   {
@@ -7504,7 +7504,7 @@ __inline static void device_lock(struct device *dev )
 }
 }
 #line 681 "include/linux/device.h"
-__inline static void device_unlock(struct device *dev ) 
+ static void device_unlock(struct device *dev ) 
 { struct mutex *__cil_tmp2 ;
 
   {
@@ -7545,7 +7545,7 @@ extern void __pm_runtime_disable(struct device * , bool  ) ;
 #line 44
 extern void __pm_runtime_use_autosuspend(struct device * , bool  ) ;
 #line 59 "include/linux/pm_runtime.h"
-__inline static void pm_runtime_get_noresume(struct device *dev ) 
+ static void pm_runtime_get_noresume(struct device *dev ) 
 { atomic_t *__cil_tmp2 ;
 
   {
@@ -7560,7 +7560,7 @@ __inline static void pm_runtime_get_noresume(struct device *dev )
 }
 }
 #line 95 "include/linux/pm_runtime.h"
-__inline static void pm_runtime_mark_last_busy(struct device *dev ) 
+ static void pm_runtime_mark_last_busy(struct device *dev ) 
 { unsigned long *__cil_tmp2 ;
   unsigned long volatile   *__cil_tmp3 ;
 
@@ -7576,7 +7576,7 @@ __inline static void pm_runtime_mark_last_busy(struct device *dev )
 }
 }
 #line 218 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_put_sync_autosuspend(struct device *dev ) 
+ static int pm_runtime_put_sync_autosuspend(struct device *dev ) 
 { int tmp ;
 
   {
@@ -7589,7 +7589,7 @@ __inline static int pm_runtime_put_sync_autosuspend(struct device *dev )
 }
 }
 #line 223 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_set_active(struct device *dev ) 
+ static int pm_runtime_set_active(struct device *dev ) 
 { int tmp ;
 
   {
@@ -7602,7 +7602,7 @@ __inline static int pm_runtime_set_active(struct device *dev )
 }
 }
 #line 228 "include/linux/pm_runtime.h"
-__inline static void pm_runtime_set_suspended(struct device *dev ) 
+ static void pm_runtime_set_suspended(struct device *dev ) 
 { 
 
   {
@@ -7615,7 +7615,7 @@ __inline static void pm_runtime_set_suspended(struct device *dev )
 }
 }
 #line 233 "include/linux/pm_runtime.h"
-__inline static void pm_runtime_disable(struct device *dev ) 
+ static void pm_runtime_disable(struct device *dev ) 
 { bool __cil_tmp2 ;
 
   {
@@ -7630,7 +7630,7 @@ __inline static void pm_runtime_disable(struct device *dev )
 }
 }
 #line 238 "include/linux/pm_runtime.h"
-__inline static void pm_runtime_use_autosuspend(struct device *dev ) 
+ static void pm_runtime_use_autosuspend(struct device *dev ) 
 { bool __cil_tmp2 ;
 
   {
@@ -7645,7 +7645,7 @@ __inline static void pm_runtime_use_autosuspend(struct device *dev )
 }
 }
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) 
+ static void *usb_get_intfdata(struct usb_interface *intf ) 
 { void *tmp ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -7664,7 +7664,7 @@ __inline static void *usb_get_intfdata(struct usb_interface *intf )
 }
 }
 #line 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
 { struct device *__cil_tmp3 ;
 
   {
@@ -7679,7 +7679,7 @@ __inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
 }
 }
 #line 497 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
 { struct device  const  *__mptr ;
   struct device *__cil_tmp3 ;
   struct usb_device *__cil_tmp4 ;
@@ -7716,7 +7716,7 @@ void usb_autopm_get_interface_no_resume(struct usb_interface *intf ) ;
 #line 527
 void usb_autopm_put_interface_no_suspend(struct usb_interface *intf ) ;
 #line 529 "include/linux/usb.h"
-__inline static void usb_mark_last_busy(struct usb_device *udev ) 
+ static void usb_mark_last_busy(struct usb_device *udev ) 
 { struct device *__cil_tmp2 ;
 
   {
@@ -7731,7 +7731,7 @@ __inline static void usb_mark_last_busy(struct usb_device *udev )
 }
 }
 #line 1309 "include/linux/usb.h"
-__inline static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
+ static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
                                       void *transfer_buffer , int buffer_length ,
                                       void (*complete_fn)(struct urb * ) , void *context ,
                                       int interval ) 
@@ -7812,7 +7812,7 @@ int usb_string(struct usb_device *dev , int index , char *buf , size_t size ) ;
 #line 1422
 int usb_set_interface(struct usb_device *dev , int interface , int alternate ) ;
 #line 1526 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -7834,7 +7834,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 1561 "include/linux/usb.h"
-__inline static __u16 usb_maxpacket(struct usb_device *udev , int pipe , int is_out ) 
+ static __u16 usb_maxpacket(struct usb_device *udev , int pipe , int is_out ) 
 { struct usb_host_endpoint *ep ;
   unsigned int epnum ;
   int __ret_warn_on ;
@@ -7990,7 +7990,7 @@ extern int kthread_stop(struct task_struct * ) ;
 #line 37
 extern int kthread_should_stop(void) ;
 #line 21 "include/linux/freezer.h"
-__inline static int freezing(struct task_struct *p ) 
+ static int freezing(struct task_struct *p ) 
 { int tmp ;
 
   {
@@ -8005,7 +8005,7 @@ __inline static int freezing(struct task_struct *p )
 #line 50
 extern void refrigerator(void) ;
 #line 54 "include/linux/freezer.h"
-__inline static int try_to_freeze(void) 
+ static int try_to_freeze(void) 
 { struct task_struct *tmp ;
   int tmp___0 ;
 
@@ -8031,7 +8031,7 @@ __inline static int try_to_freeze(void)
 }
 }
 #line 122 "include/linux/freezer.h"
-__inline static void set_freezable(void) 
+ static void set_freezable(void) 
 { struct task_struct *tmp ;
   unsigned int __cil_tmp2 ;
 
@@ -8102,7 +8102,7 @@ int usb_autoresume_device(struct usb_device *udev ) ;
 #line 79
 int usb_remote_wakeup(struct usb_device *udev ) ;
 #line 93 "/anthill/stuff/tacas-comp/work/current--X--drivers/usb/core/usbcore.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/28/dscv_tempdir/dscv/ri/08_1/drivers/usb/core/hub.c.p"
-__inline static int hub_is_superspeed(struct usb_device *hdev ) 
+ static int hub_is_superspeed(struct usb_device *hdev ) 
 { __u8 __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
 
@@ -8160,7 +8160,7 @@ struct rw_semaphore ehci_cf_port_reset_rwsem  =    {0L, {{{{0U}, 3735899821U, 42
 #line 164
 static int usb_reset_and_verify_device(struct usb_device *udev ) ;
 #line 166 "/anthill/stuff/tacas-comp/work/current--X--drivers/usb/core/usbcore.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/28/dscv_tempdir/dscv/ri/08_1/drivers/usb/core/hub.c.p"
-__inline static char *portspeed(struct usb_hub *hub , int portstatus ) 
+ static char *portspeed(struct usb_hub *hub , int portstatus ) 
 { int tmp ;
   struct usb_device *__cil_tmp4 ;
   int __cil_tmp5 ;
@@ -9447,7 +9447,7 @@ static void hub_irq(struct urb *urb )
 }
 }
 #line 471 "/anthill/stuff/tacas-comp/work/current--X--drivers/usb/core/usbcore.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/28/dscv_tempdir/dscv/ri/08_1/drivers/usb/core/hub.c.p"
-__inline static int hub_clear_tt_buffer(struct usb_device *hdev , u16 devinfo , u16 tt ) 
+ static int hub_clear_tt_buffer(struct usb_device *hdev , u16 devinfo , u16 tt ) 
 { unsigned int tmp ;
   int tmp___0 ;
   unsigned int __cil_tmp6 ;
@@ -23023,7 +23023,7 @@ void usb_queue_reset_device(struct usb_interface *iface )
 #line 4074
 extern void ldv_check_return_value(int  ) ;
 #line 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head ) 
+ static void list_add(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -23038,7 +23038,7 @@ __inline static void list_add(struct list_head *new , struct list_head *head )
 }
 }
 #line 47 "include/linux/byteorder/little_endian.h"
-__inline static __u64 __le64_to_cpup(__le64 const   *p ) 
+ static __u64 __le64_to_cpup(__le64 const   *p ) 
 { __le64 __cil_tmp2 ;
 
   {
@@ -23061,7 +23061,7 @@ extern struct pv_irq_ops pv_irq_ops ;
 #line 55 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/string_64.h"
 extern void *memset(void * , int  , size_t  ) ;
 #line 851 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static unsigned long arch_local_save_flags(void) 
+ static unsigned long arch_local_save_flags(void) 
 { unsigned long __ret ;
   unsigned long __edi ;
   unsigned long __esi ;
@@ -23122,7 +23122,7 @@ __inline static unsigned long arch_local_save_flags(void)
 }
 }
 #line 856 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_restore(unsigned long f ) 
+ static void arch_local_irq_restore(unsigned long f ) 
 { unsigned long __edi ;
   unsigned long __esi ;
   unsigned long __edx ;
@@ -23180,7 +23180,7 @@ __inline static void arch_local_irq_restore(unsigned long f )
 }
 }
 #line 861 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_disable(void) 
+ static void arch_local_irq_disable(void) 
 { unsigned long __edi ;
   unsigned long __esi ;
   unsigned long __edx ;
@@ -23238,7 +23238,7 @@ __inline static void arch_local_irq_disable(void)
 }
 }
 #line 871 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static unsigned long arch_local_irq_save(void) 
+ static unsigned long arch_local_irq_save(void) 
 { unsigned long f ;
 
   {
@@ -23253,7 +23253,7 @@ __inline static unsigned long arch_local_irq_save(void)
 }
 }
 #line 154 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/irqflags.h"
-__inline static int arch_irqs_disabled_flags(unsigned long flags ) 
+ static int arch_irqs_disabled_flags(unsigned long flags ) 
 { unsigned long __cil_tmp2 ;
 
   {
@@ -23270,7 +23270,7 @@ extern void trace_hardirqs_on(void) ;
 #line 21
 extern void trace_hardirqs_off(void) ;
 #line 23 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const   *v ) 
+ static int atomic_read(atomic_t const   *v ) 
 { int const   *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -23289,7 +23289,7 @@ __inline static int atomic_read(atomic_t const   *v )
 }
 }
 #line 105 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v ) 
+ static void atomic_dec(atomic_t *v ) 
 { 
 
   {
@@ -23304,7 +23304,7 @@ extern void _raw_spin_lock(raw_spinlock_t * ) ;
 #line 39
 extern void _raw_spin_unlock(raw_spinlock_t * ) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -23319,7 +23319,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -23346,7 +23346,7 @@ extern int sysfs_create_group(struct kobject * , struct attribute_group  const  
 #line 161
 extern void sysfs_remove_group(struct kobject * , struct attribute_group  const  * ) ;
 #line 80 "include/linux/kobject.h"
-__inline static char const   *kobject_name(struct kobject  const  *kobj ) 
+ static char const   *kobject_name(struct kobject  const  *kobj ) 
 { char const   *__cil_tmp2 ;
 
   {
@@ -23361,7 +23361,7 @@ __inline static char const   *kobject_name(struct kobject  const  *kobj )
 #line 48 "include/linux/utsname.h"
 extern struct uts_namespace init_uts_ns ;
 #line 88 "include/linux/utsname.h"
-__inline static struct new_utsname *init_utsname(void) 
+ static struct new_utsname *init_utsname(void) 
 { 
 
   {
@@ -23370,7 +23370,7 @@ __inline static struct new_utsname *init_utsname(void)
 }
 }
 #line 720 "include/linux/mm.h"
-__inline static void *lowmem_page_address(struct page *page ) 
+ static void *lowmem_page_address(struct page *page ) 
 { long __cil_tmp2 ;
   long __cil_tmp3 ;
   long __cil_tmp4 ;
@@ -23401,7 +23401,7 @@ __inline static void *lowmem_page_address(struct page *page )
 }
 }
 #line 65 "include/linux/pm_wakeup.h"
-__inline static bool device_can_wakeup(struct device *dev ) 
+ static bool device_can_wakeup(struct device *dev ) 
 { unsigned char __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -23420,7 +23420,7 @@ __inline static bool device_can_wakeup(struct device *dev )
 }
 }
 #line 70 "include/linux/pm_wakeup.h"
-__inline static bool device_may_wakeup(struct device *dev ) 
+ static bool device_may_wakeup(struct device *dev ) 
 { int tmp ;
   unsigned char *__cil_tmp3 ;
   unsigned char *__cil_tmp4 ;
@@ -23473,7 +23473,7 @@ __inline static bool device_may_wakeup(struct device *dev )
 #line 86
 extern int device_set_wakeup_enable(struct device * , bool  ) ;
 #line 608 "include/linux/device.h"
-__inline static char const   *dev_name(struct device  const  *dev ) 
+ static char const   *dev_name(struct device  const  *dev ) 
 { char const   *tmp ;
   char const   *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -23515,7 +23515,7 @@ __inline static char const   *dev_name(struct device  const  *dev )
 }
 }
 #line 93 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg ) 
+ static struct page *sg_page(struct scatterlist *sg ) 
 { long tmp ;
   long tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -23584,7 +23584,7 @@ __inline static struct page *sg_page(struct scatterlist *sg )
 }
 }
 #line 197 "include/linux/scatterlist.h"
-__inline static void *sg_virt(struct scatterlist *sg ) 
+ static void *sg_virt(struct scatterlist *sg ) 
 { struct page *tmp ;
   void *tmp___0 ;
   unsigned int __cil_tmp4 ;
@@ -23610,7 +23610,7 @@ __inline static void *sg_virt(struct scatterlist *sg )
 #line 202
 extern struct scatterlist *sg_next(struct scatterlist * ) ;
 #line 80 "include/linux/dma-mapping.h"
-__inline static int valid_dma_direction(int dma_direction ) 
+ static int valid_dma_direction(int dma_direction ) 
 { int tmp ;
 
   {
@@ -23637,7 +23637,7 @@ __inline static int valid_dma_direction(int dma_direction )
 }
 }
 #line 131 "include/linux/kmemcheck.h"
-__inline static void kmemcheck_mark_initialized(void *address , unsigned int n ) 
+ static void kmemcheck_mark_initialized(void *address , unsigned int n ) 
 { 
 
   {
@@ -23659,7 +23659,7 @@ extern void debug_dma_unmap_sg(struct device * , struct scatterlist * , int  , i
 #line 29 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
 extern struct dma_map_ops *dma_ops ;
 #line 31 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
-__inline static struct dma_map_ops *get_dma_ops(struct device *dev ) 
+ static struct dma_map_ops *get_dma_ops(struct device *dev ) 
 { long tmp ;
   struct device *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -23713,7 +23713,7 @@ __inline static struct dma_map_ops *get_dma_ops(struct device *dev )
 }
 }
 #line 9 "include/asm-generic/dma-mapping-common.h"
-__inline static dma_addr_t dma_map_single_attrs(struct device *dev , void *ptr , size_t size ,
+ static dma_addr_t dma_map_single_attrs(struct device *dev , void *ptr , size_t size ,
                                                 enum dma_data_direction dir , struct dma_attrs *attrs ) 
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
@@ -23820,7 +23820,7 @@ __inline static dma_addr_t dma_map_single_attrs(struct device *dev , void *ptr ,
 }
 }
 #line 28 "include/asm-generic/dma-mapping-common.h"
-__inline static void dma_unmap_single_attrs(struct device *dev , dma_addr_t addr ,
+ static void dma_unmap_single_attrs(struct device *dev , dma_addr_t addr ,
                                             size_t size , enum dma_data_direction dir ,
                                             struct dma_attrs *attrs ) 
 { struct dma_map_ops *ops ;
@@ -23904,7 +23904,7 @@ __inline static void dma_unmap_single_attrs(struct device *dev , dma_addr_t addr
 }
 }
 #line 41 "include/asm-generic/dma-mapping-common.h"
-__inline static int dma_map_sg_attrs(struct device *dev , struct scatterlist *sg ,
+ static int dma_map_sg_attrs(struct device *dev , struct scatterlist *sg ,
                                      int nents , enum dma_data_direction dir , struct dma_attrs *attrs ) 
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
@@ -23996,7 +23996,7 @@ __inline static int dma_map_sg_attrs(struct device *dev , struct scatterlist *sg
 }
 }
 #line 58 "include/asm-generic/dma-mapping-common.h"
-__inline static void dma_unmap_sg_attrs(struct device *dev , struct scatterlist *sg ,
+ static void dma_unmap_sg_attrs(struct device *dev , struct scatterlist *sg ,
                                         int nents , enum dma_data_direction dir ,
                                         struct dma_attrs *attrs ) 
 { struct dma_map_ops *ops ;
@@ -24077,7 +24077,7 @@ __inline static void dma_unmap_sg_attrs(struct device *dev , struct scatterlist 
 }
 }
 #line 70 "include/asm-generic/dma-mapping-common.h"
-__inline static dma_addr_t dma_map_page(struct device *dev , struct page *page , size_t offset ,
+ static dma_addr_t dma_map_page(struct device *dev , struct page *page , size_t offset ,
                                         size_t size , enum dma_data_direction dir ) 
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
@@ -24151,7 +24151,7 @@ __inline static dma_addr_t dma_map_page(struct device *dev , struct page *page ,
 }
 }
 #line 85 "include/asm-generic/dma-mapping-common.h"
-__inline static void dma_unmap_page(struct device *dev , dma_addr_t addr , size_t size ,
+ static void dma_unmap_page(struct device *dev , dma_addr_t addr , size_t size ,
                                     enum dma_data_direction dir ) 
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
@@ -24237,7 +24237,7 @@ __inline static void dma_unmap_page(struct device *dev , dma_addr_t addr , size_
 }
 }
 #line 46 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
-__inline static int dma_mapping_error(struct device *dev , dma_addr_t dma_addr ) 
+ static int dma_mapping_error(struct device *dev , dma_addr_t dma_addr ) 
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
   int tmp___0 ;
@@ -24282,7 +24282,7 @@ __inline static int dma_mapping_error(struct device *dev , dma_addr_t dma_addr )
 }
 }
 #line 17 "include/linux/unaligned/access_ok.h"
-__inline static u64 get_unaligned_le64(void const   *p ) 
+ static u64 get_unaligned_le64(void const   *p ) 
 { __u64 tmp ;
   __le64 const   *__cil_tmp3 ;
 
@@ -24298,7 +24298,7 @@ __inline static u64 get_unaligned_le64(void const   *p )
 }
 }
 #line 37 "include/linux/unaligned/access_ok.h"
-__inline static void put_unaligned_le16(u16 val , void *p ) 
+ static void put_unaligned_le16(u16 val , void *p ) 
 { __le16 *__cil_tmp3 ;
 
   {
@@ -24311,7 +24311,7 @@ __inline static void put_unaligned_le16(u16 val , void *p )
 }
 }
 #line 42 "include/linux/unaligned/access_ok.h"
-__inline static void put_unaligned_le32(u32 val , void *p ) 
+ static void put_unaligned_le32(u32 val , void *p ) 
 { __le32 *__cil_tmp3 ;
 
   {
@@ -24324,7 +24324,7 @@ __inline static void put_unaligned_le32(u32 val , void *p )
 }
 }
 #line 47 "include/linux/unaligned/access_ok.h"
-__inline static void put_unaligned_le64(u64 val , void *p ) 
+ static void put_unaligned_le64(u64 val , void *p ) 
 { __le64 *__cil_tmp3 ;
 
   {
@@ -24339,7 +24339,7 @@ __inline static void put_unaligned_le64(u64 val , void *p )
 #line 8 "include/linux/unaligned/generic.h"
 extern void __bad_unaligned_access_size(void) ;
 #line 138 "include/linux/platform_device.h"
-__inline static void *platform_get_drvdata(struct platform_device  const  *pdev ) 
+ static void *platform_get_drvdata(struct platform_device  const  *pdev ) 
 { void *tmp ;
   struct device  const  *__cil_tmp3 ;
 
@@ -24355,7 +24355,7 @@ __inline static void *platform_get_drvdata(struct platform_device  const  *pdev 
 }
 }
 #line 401 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_num(struct usb_endpoint_descriptor  const  *epd ) 
+ static int usb_endpoint_num(struct usb_endpoint_descriptor  const  *epd ) 
 { __u8 __cil_tmp2 ;
   int __cil_tmp3 ;
 
@@ -24371,7 +24371,7 @@ __inline static int usb_endpoint_num(struct usb_endpoint_descriptor  const  *epd
 }
 }
 #line 413 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_type(struct usb_endpoint_descriptor  const  *epd ) 
+ static int usb_endpoint_type(struct usb_endpoint_descriptor  const  *epd ) 
 { __u8 __cil_tmp2 ;
   int __cil_tmp3 ;
 
@@ -24387,7 +24387,7 @@ __inline static int usb_endpoint_type(struct usb_endpoint_descriptor  const  *ep
 }
 }
 #line 435 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_dir_out(struct usb_endpoint_descriptor  const  *epd ) 
+ static int usb_endpoint_dir_out(struct usb_endpoint_descriptor  const  *epd ) 
 { __u8 __cil_tmp2 ;
   signed char __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -24406,7 +24406,7 @@ __inline static int usb_endpoint_dir_out(struct usb_endpoint_descriptor  const  
 }
 }
 #line 447 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_xfer_bulk(struct usb_endpoint_descriptor  const  *epd ) 
+ static int usb_endpoint_xfer_bulk(struct usb_endpoint_descriptor  const  *epd ) 
 { __u8 __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -24425,7 +24425,7 @@ __inline static int usb_endpoint_xfer_bulk(struct usb_endpoint_descriptor  const
 }
 }
 #line 460 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_xfer_control(struct usb_endpoint_descriptor  const  *epd ) 
+ static int usb_endpoint_xfer_control(struct usb_endpoint_descriptor  const  *epd ) 
 { __u8 __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -24448,7 +24448,7 @@ extern int request_threaded_irq(unsigned int  , irqreturn_t (*)(int  , void * ) 
                                 irqreturn_t (*)(int  , void * ) , unsigned long  ,
                                 char const   * , void * ) ;
 #line 129 "include/linux/interrupt.h"
-__inline static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
+ static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
                                 unsigned long flags , char const   *name , void *dev ) 
 { int tmp ;
   irqreturn_t (*__cil_tmp7)(int  , void * ) ;
@@ -24479,7 +24479,7 @@ struct urb *usb_get_urb(struct urb *urb ) ;
 #line 1346
 void usb_unanchor_urb(struct urb *urb ) ;
 #line 1360 "include/linux/usb.h"
-__inline static int usb_urb_dir_in(struct urb *urb ) 
+ static int usb_urb_dir_in(struct urb *urb ) 
 { unsigned int __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
 
@@ -24559,7 +24559,7 @@ void usb_hcd_resume_root_hub(struct usb_hcd *hcd ) ;
 #line 618 "include/linux/usb/hcd.h"
 struct usb_mon_operations *mon_ops  ;
 #line 620 "include/linux/usb/hcd.h"
-__inline static void usbmon_urb_submit(struct usb_bus *bus , struct urb *urb ) 
+ static void usbmon_urb_submit(struct usb_bus *bus , struct urb *urb ) 
 { int __cil_tmp3 ;
   void (*__cil_tmp4)(struct usb_bus * , struct urb * ) ;
 
@@ -24584,7 +24584,7 @@ __inline static void usbmon_urb_submit(struct usb_bus *bus , struct urb *urb )
 }
 }
 #line 626 "include/linux/usb/hcd.h"
-__inline static void usbmon_urb_submit_error(struct usb_bus *bus , struct urb *urb ,
+ static void usbmon_urb_submit_error(struct usb_bus *bus , struct urb *urb ,
                                              int error ) 
 { int __cil_tmp4 ;
   void (*__cil_tmp5)(struct usb_bus * , struct urb * , int  ) ;
@@ -24610,7 +24610,7 @@ __inline static void usbmon_urb_submit_error(struct usb_bus *bus , struct urb *u
 }
 }
 #line 633 "include/linux/usb/hcd.h"
-__inline static void usbmon_urb_complete(struct usb_bus *bus , struct urb *urb , int status ) 
+ static void usbmon_urb_complete(struct usb_bus *bus , struct urb *urb , int status ) 
 { int __cil_tmp4 ;
   void (*__cil_tmp5)(struct usb_bus * , struct urb * , int  ) ;
 
@@ -24684,7 +24684,7 @@ wait_queue_head_t usb_kill_urb_queue  =    {{{{{0U}, 3735899821U, 4294967295U, (
                                                                        0, 0UL}}}},
     {& usb_kill_urb_queue.task_list, & usb_kill_urb_queue.task_list}};
 #line 122 "/anthill/stuff/tacas-comp/work/current--X--drivers/usb/core/usbcore.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/28/dscv_tempdir/dscv/ri/08_1/drivers/usb/core/hcd.c.p"
-__inline static int is_root_hub(struct usb_device *udev ) 
+ static int is_root_hub(struct usb_device *udev ) 
 { struct usb_device *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct usb_device *__cil_tmp4 ;
@@ -32718,7 +32718,7 @@ void usb_mon_deregister(void)
 }
 }
 #line 422 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int fls(int x ) 
+ static int fls(int x ) 
 { int r ;
 
   {
@@ -32729,7 +32729,7 @@ __inline static int fls(int x )
 }
 }
 #line 32 "include/linux/log2.h"
-__inline static int __ilog2_u32(u32 n ) 
+ static int __ilog2_u32(u32 n ) 
 { int tmp ;
   int __cil_tmp3 ;
 
@@ -32773,7 +32773,7 @@ void usb_scuttle_anchored_urbs(struct usb_anchor *anchor ) ;
 #line 1351
 int usb_anchor_empty(struct usb_anchor *anchor ) ;
 #line 1551 "include/linux/usb.h"
-__inline static struct usb_host_endpoint *usb_pipe_endpoint(struct usb_device *dev ,
+ static struct usb_host_endpoint *usb_pipe_endpoint(struct usb_device *dev ,
                                                             unsigned int pipe ) 
 { struct usb_host_endpoint **eps ;
   unsigned int __cil_tmp4 ;
@@ -35009,7 +35009,7 @@ int usb_anchor_empty(struct usb_anchor *anchor )
 }
 }
 #line 702 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/processor.h"
-__inline static void rep_nop(void) 
+ static void rep_nop(void) 
 { 
 
   {
@@ -35020,7 +35020,7 @@ __inline static void rep_nop(void)
 }
 }
 #line 707 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/processor.h"
-__inline static void cpu_relax(void) 
+ static void cpu_relax(void) 
 { 
 
   {
@@ -35035,7 +35035,7 @@ __inline static void cpu_relax(void)
 #line 80 "include/linux/wait.h"
 extern void __init_waitqueue_head(wait_queue_head_t * , struct lock_class_key * ) ;
 #line 73 "include/linux/completion.h"
-__inline static void init_completion(struct completion *x ) 
+ static void init_completion(struct completion *x ) 
 { struct lock_class_key __key ;
   wait_queue_head_t *__cil_tmp3 ;
 
@@ -35059,7 +35059,7 @@ extern unsigned long wait_for_completion_timeout(struct completion * , unsigned 
 #line 91
 extern void complete(struct completion * ) ;
 #line 649 "include/linux/device.h"
-__inline static int device_is_registered(struct device *dev ) 
+ static int device_is_registered(struct device *dev ) 
 { unsigned char __cil_tmp2 ;
 
   {
@@ -35072,7 +35072,7 @@ __inline static int device_is_registered(struct device *dev )
 }
 }
 #line 245 "include/linux/page-flags.h"
-__inline static int PageHighMem(struct page *page ) 
+ static int PageHighMem(struct page *page ) 
 { 
 
   {
@@ -35081,7 +35081,7 @@ __inline static int PageHighMem(struct page *page )
 }
 }
 #line 93 "include/linux/scatterlist.h"
-__inline static struct page *sg_page___0(struct scatterlist *sg ) 
+ static struct page *sg_page___0(struct scatterlist *sg ) 
 { long tmp ;
   long tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -35150,7 +35150,7 @@ __inline static struct page *sg_page___0(struct scatterlist *sg )
 }
 }
 #line 197 "include/linux/scatterlist.h"
-__inline static void *sg_virt___0(struct scatterlist *sg ) 
+ static void *sg_virt___0(struct scatterlist *sg ) 
 { struct page *tmp ;
   void *tmp___0 ;
   unsigned int __cil_tmp4 ;
@@ -35178,7 +35178,7 @@ extern void yield(void) ;
 #line 42 "include/linux/pm_runtime.h"
 extern void pm_runtime_no_callbacks(struct device * ) ;
 #line 1237 "include/linux/usb.h"
-__inline static void usb_fill_control_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_control_urb(struct urb *urb , struct usb_device *dev ,
                                           unsigned int pipe , unsigned char *setup_packet ,
                                           void *transfer_buffer , int buffer_length ,
                                           void (*complete_fn)(struct urb * ) , void *context ) 
@@ -35204,7 +35204,7 @@ __inline static void usb_fill_control_urb(struct urb *urb , struct usb_device *d
 }
 }
 #line 1268 "include/linux/usb.h"
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context ) 
@@ -41274,7 +41274,7 @@ int usb_driver_set_configuration(struct usb_device *udev , int config )
 #line 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/cmpxchg_64.h"
 extern void __cmpxchg_wrong_size(void) ;
 #line 213 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_cmpxchg(atomic_t *v , int old , int new ) 
+ static int atomic_cmpxchg(atomic_t *v , int old , int new ) 
 { int __ret ;
   int __old ;
   int __new ;
@@ -41353,7 +41353,7 @@ __inline static int atomic_cmpxchg(atomic_t *v , int old , int new )
 }
 }
 #line 232 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_add_unless(atomic_t *v , int a , int u ) 
+ static int atomic_add_unless(atomic_t *v , int a , int u ) 
 { int c ;
   int old ;
   long tmp ;
@@ -41447,7 +41447,7 @@ extern void pm_runtime_allow(struct device * ) ;
 #line 38
 extern void pm_runtime_forbid(struct device * ) ;
 #line 54 "include/linux/pm_runtime.h"
-__inline static void pm_suspend_ignore_children(struct device *dev , bool enable ) 
+ static void pm_suspend_ignore_children(struct device *dev , bool enable ) 
 { 
 
   {
@@ -41458,7 +41458,7 @@ __inline static void pm_suspend_ignore_children(struct device *dev , bool enable
 }
 }
 #line 64 "include/linux/pm_runtime.h"
-__inline static void pm_runtime_put_noidle(struct device *dev ) 
+ static void pm_runtime_put_noidle(struct device *dev ) 
 { atomic_t *__cil_tmp2 ;
 
   {
@@ -41473,7 +41473,7 @@ __inline static void pm_runtime_put_noidle(struct device *dev )
 }
 }
 #line 162 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_autosuspend(struct device *dev ) 
+ static int pm_runtime_autosuspend(struct device *dev ) 
 { int tmp ;
 
   {
@@ -41486,7 +41486,7 @@ __inline static int pm_runtime_autosuspend(struct device *dev )
 }
 }
 #line 167 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_resume(struct device *dev ) 
+ static int pm_runtime_resume(struct device *dev ) 
 { int tmp ;
 
   {
@@ -41499,7 +41499,7 @@ __inline static int pm_runtime_resume(struct device *dev )
 }
 }
 #line 187 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_get(struct device *dev ) 
+ static int pm_runtime_get(struct device *dev ) 
 { int tmp ;
 
   {
@@ -41512,7 +41512,7 @@ __inline static int pm_runtime_get(struct device *dev )
 }
 }
 #line 192 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_get_sync(struct device *dev ) 
+ static int pm_runtime_get_sync(struct device *dev ) 
 { int tmp ;
 
   {
@@ -41525,7 +41525,7 @@ __inline static int pm_runtime_get_sync(struct device *dev )
 }
 }
 #line 197 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_put(struct device *dev ) 
+ static int pm_runtime_put(struct device *dev ) 
 { int tmp ;
 
   {
@@ -41538,7 +41538,7 @@ __inline static int pm_runtime_put(struct device *dev )
 }
 }
 #line 208 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_put_sync(struct device *dev ) 
+ static int pm_runtime_put_sync(struct device *dev ) 
 { int tmp ;
 
   {
@@ -41569,7 +41569,7 @@ void usbfs_update_special(void) ;
 #line 36 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/usb/core/usb.h"
 int usb_match_device(struct usb_device *dev , struct usb_device_id  const  *id ) ;
 #line 105 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/usb/core/usb.h"
-__inline static int is_usb_device(struct device  const  *dev ) 
+ static int is_usb_device(struct device  const  *dev ) 
 { struct device_type  const  *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct device_type  const  *__cil_tmp4 ;
@@ -41594,7 +41594,7 @@ __inline static int is_usb_device(struct device  const  *dev )
 }
 }
 #line 122 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/usb/core/usb.h"
-__inline static int is_usb_device_driver(struct device_driver *drv ) 
+ static int is_usb_device_driver(struct device_driver *drv ) 
 { struct device_driver  const  *__mptr ;
   struct usbdrv_wrap *__cil_tmp3 ;
 
@@ -46386,7 +46386,7 @@ struct bus_type usb_bus_type  =
 #line 34 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/string_64.h"
 extern void *__memcpy(void * , void const   * , size_t  ) ;
 #line 488 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_xfer_isoc(struct usb_endpoint_descriptor  const  *epd ) 
+ static int usb_endpoint_xfer_isoc(struct usb_endpoint_descriptor  const  *epd ) 
 { __u8 __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -46405,7 +46405,7 @@ __inline static int usb_endpoint_xfer_isoc(struct usb_endpoint_descriptor  const
 }
 }
 #line 26 "/anthill/stuff/tacas-comp/work/current--X--drivers/usb/core/usbcore.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/28/dscv_tempdir/dscv/ri/08_1/drivers/usb/core/config.c.p"
-__inline static char const   *plural(int n ) 
+ static char const   *plural(int n ) 
 { char const   *tmp ;
 
   {
@@ -49863,7 +49863,7 @@ int usb_get_configuration(struct usb_device *dev )
 #line 63 "include/linux/string.h"
 extern char *strrchr(char const   * , int  ) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -49876,7 +49876,7 @@ extern void down_write(struct rw_semaphore * ) ;
 #line 104
 extern void up_write(struct rw_semaphore * ) ;
 #line 537 "include/linux/module.h"
-__inline static int ldv_try_module_get_1(struct module *module ) ;
+ static int ldv_try_module_get_1(struct module *module ) ;
 #line 547
 void ldv_module_put_2(struct module *ldv_func_arg1 ) ;
 #line 551
@@ -49891,7 +49891,7 @@ extern struct device *device_create(struct class * , struct device * , dev_t  , 
 #line 747
 extern void device_destroy(struct class * , dev_t  ) ;
 #line 891 "include/linux/fs.h"
-__inline static unsigned int iminor(struct inode  const  *inode ) 
+ static unsigned int iminor(struct inode  const  *inode ) 
 { dev_t __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
 
@@ -49912,7 +49912,7 @@ extern int __register_chrdev(unsigned int  , unsigned int  , unsigned int  , cha
 #line 2092
 extern void __unregister_chrdev(unsigned int  , unsigned int  , unsigned int  , char const   * ) ;
 #line 2097 "include/linux/fs.h"
-__inline static int register_chrdev(unsigned int major , char const   *name , struct file_operations  const  *fops ) 
+ static int register_chrdev(unsigned int major , char const   *name , struct file_operations  const  *fops ) 
 { int tmp ;
 
   {
@@ -49925,7 +49925,7 @@ __inline static int register_chrdev(unsigned int major , char const   *name , st
 }
 }
 #line 2103 "include/linux/fs.h"
-__inline static void unregister_chrdev(unsigned int major , char const   *name ) 
+ static void unregister_chrdev(unsigned int major , char const   *name ) 
 { 
 
   {
@@ -50901,7 +50901,7 @@ void main(void)
 }
 }
 #line 382 "/anthill/stuff/tacas-comp/work/current--X--drivers/usb/core/usbcore.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/28/dscv_tempdir/dscv/ri/08_1/drivers/usb/core/file.c.p"
-__inline static int ldv_try_module_get_1(struct module *module ) 
+ static int ldv_try_module_get_1(struct module *module ) 
 { int tmp ;
 
   {
@@ -50940,7 +50940,7 @@ void ldv_module_put_4(struct module *ldv_func_arg1 )
 }
 }
 #line 87 "include/linux/dma-mapping.h"
-__inline static int is_device_dma_capable(struct device *dev ) 
+ static int is_device_dma_capable(struct device *dev ) 
 { int tmp ;
   u64 *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -50991,7 +50991,7 @@ extern void debug_dma_free_coherent(struct device * , size_t  , void * , dma_add
 #line 26 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
 extern struct device x86_dma_fallback_dev ;
 #line 89 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
-__inline static unsigned long dma_alloc_coherent_mask(struct device *dev , gfp_t gfp ) 
+ static unsigned long dma_alloc_coherent_mask(struct device *dev , gfp_t gfp ) 
 { unsigned long dma_mask ;
   u64 __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -51025,7 +51025,7 @@ __inline static unsigned long dma_alloc_coherent_mask(struct device *dev , gfp_t
 }
 }
 #line 101 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
-__inline static gfp_t dma_alloc_coherent_gfp_flags(struct device *dev , gfp_t gfp ) 
+ static gfp_t dma_alloc_coherent_gfp_flags(struct device *dev , gfp_t gfp ) 
 { unsigned long dma_mask ;
   unsigned long tmp ;
   unsigned long long __cil_tmp5 ;
@@ -51075,7 +51075,7 @@ __inline static gfp_t dma_alloc_coherent_gfp_flags(struct device *dev , gfp_t gf
 }
 }
 #line 115 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
-__inline static void *dma_alloc_coherent(struct device *dev , size_t size , dma_addr_t *dma_handle ,
+ static void *dma_alloc_coherent(struct device *dev , size_t size , dma_addr_t *dma_handle ,
                                          gfp_t gfp ) 
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
@@ -51161,7 +51161,7 @@ __inline static void *dma_alloc_coherent(struct device *dev , size_t size , dma_
 }
 }
 #line 142 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
-__inline static void dma_free_coherent(struct device *dev , size_t size , void *vaddr ,
+ static void dma_free_coherent(struct device *dev , size_t size , void *vaddr ,
                                        dma_addr_t bus ) 
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
@@ -55910,7 +55910,7 @@ void usb_remove_ep_devs(struct usb_host_endpoint *endpoint )
 }
 }
 #line 164 "include/linux/list.h"
-__inline static void list_move_tail(struct list_head *list , struct list_head *head ) 
+ static void list_move_tail(struct list_head *list , struct list_head *head ) 
 { 
 
   {
@@ -55925,7 +55925,7 @@ __inline static void list_move_tail(struct list_head *list , struct list_head *h
 }
 }
 #line 63 "include/linux/byteorder/little_endian.h"
-__inline static __u16 __le16_to_cpup(__le16 const   *p ) 
+ static __u16 __le16_to_cpup(__le16 const   *p ) 
 { __le16 __cil_tmp2 ;
 
   {
@@ -55951,7 +55951,7 @@ extern char *strncpy(char * , char const   * , __kernel_size_t  ) ;
 #line 217 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/thread_info.h"
 extern unsigned long kernel_stack ;
 #line 219 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/thread_info.h"
-__inline static struct thread_info *current_thread_info(void) 
+ static struct thread_info *current_thread_info(void) 
 { struct thread_info *ti ;
   unsigned long pfo_ret__ ;
   unsigned long __cil_tmp3 ;
@@ -56014,7 +56014,7 @@ extern unsigned long __get_free_pages(gfp_t  , unsigned int  ) ;
 #line 359
 extern void free_pages(unsigned long  , unsigned int  ) ;
 #line 75 "include/linux/pid.h"
-__inline static struct pid *get_pid(struct pid *pid ) 
+ static struct pid *get_pid(struct pid *pid ) 
 { struct pid *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -56047,7 +56047,7 @@ __inline static struct pid *get_pid(struct pid *pid )
 #line 82
 extern void put_pid(struct pid * ) ;
 #line 896 "include/linux/fs.h"
-__inline static unsigned int imajor(struct inode  const  *inode ) 
+ static unsigned int imajor(struct inode  const  *inode ) 
 { dev_t __cil_tmp2 ;
   dev_t __cil_tmp3 ;
 
@@ -56075,7 +56075,7 @@ extern unsigned long _copy_from_user(void * , void const   * , unsigned int  ) ;
 #line 44
 extern unsigned long copy_in_user(void * , void const   * , unsigned int  ) ;
 #line 46 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long copy_from_user(void *to , void const   *from , unsigned long n ) 
+ static unsigned long copy_from_user(void *to , void const   *from , unsigned long n ) 
 { int sz ;
   unsigned long tmp ;
   int __ret_warn_on ;
@@ -56184,7 +56184,7 @@ __inline static unsigned long copy_from_user(void *to , void const   *from , uns
 }
 }
 #line 63 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
+ static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
 { unsigned long tmp ;
 
   {
@@ -56199,7 +56199,7 @@ __inline static int copy_to_user(void *dst , void const   *src , unsigned int si
 }
 }
 #line 40 "include/linux/poll.h"
-__inline static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
+ static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
                                poll_table *p ) 
 { poll_table *__cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -56247,7 +56247,7 @@ __inline static void poll_wait(struct file *filp , wait_queue_head_t *wait_addre
 }
 }
 #line 1609 "include/linux/sched.h"
-__inline static struct pid *task_pid(struct task_struct *task ) 
+ static struct pid *task_pid(struct task_struct *task ) 
 { 
 
   {
@@ -56256,7 +56256,7 @@ __inline static struct pid *task_pid(struct task_struct *task )
 }
 }
 #line 1652 "include/linux/sched.h"
-__inline static pid_t task_pid_nr(struct task_struct *tsk ) 
+ static pid_t task_pid_nr(struct task_struct *tsk ) 
 { 
 
   {
@@ -56268,7 +56268,7 @@ __inline static pid_t task_pid_nr(struct task_struct *tsk )
 extern int kill_pid_info_as_uid(int  , struct siginfo * , struct pid * , uid_t  ,
                                 uid_t  , u32  ) ;
 #line 589 "include/linux/usb.h"
-__inline static int usb_interface_claimed(struct usb_interface *iface ) 
+ static int usb_interface_claimed(struct usb_interface *iface ) 
 { struct device_driver *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct device_driver *__cil_tmp4 ;
@@ -56294,7 +56294,7 @@ void usb_register_notify(struct notifier_block *nb ) ;
 #line 1588
 void usb_unregister_notify(struct notifier_block *nb ) ;
 #line 198 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/compat.h"
-__inline static void *compat_ptr(compat_uptr_t uptr ) 
+ static void *compat_ptr(compat_uptr_t uptr ) 
 { unsigned long __cil_tmp2 ;
 
   {
@@ -56307,7 +56307,7 @@ __inline static void *compat_ptr(compat_uptr_t uptr )
 }
 }
 #line 203 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/compat.h"
-__inline static compat_uptr_t ptr_to_compat(void *uptr ) 
+ static compat_uptr_t ptr_to_compat(void *uptr ) 
 { long __cil_tmp2 ;
 
   {
@@ -69252,7 +69252,7 @@ void usb_detect_quirks(struct usb_device *udev )
 }
 }
 #line 47 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_add(int i , atomic_t *v ) 
+ static void atomic_add(int i , atomic_t *v ) 
 { 
 
   {
@@ -71808,7 +71808,7 @@ struct file_operations  const  usbfs_devices_fops  =
                                                                         int  , loff_t  ,
                                                                         loff_t  ))0};
 #line 309 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int constant_test_bit(unsigned int nr , unsigned long const volatile   *addr ) 
+ static int constant_test_bit(unsigned int nr , unsigned long const volatile   *addr ) 
 { int __cil_tmp3 ;
   int __cil_tmp4 ;
   unsigned int __cil_tmp5 ;
@@ -71845,7 +71845,7 @@ __inline static int constant_test_bit(unsigned int nr , unsigned long const vola
 }
 }
 #line 866 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_enable(void) 
+ static void arch_local_irq_enable(void) 
 { unsigned long __edi ;
   unsigned long __esi ;
   unsigned long __edx ;
@@ -71920,7 +71920,7 @@ extern void iounmap(void volatile   * ) ;
 #line 128 "include/linux/pci.h"
 extern char const   *pci_power_names[] ;
 #line 130 "include/linux/pci.h"
-__inline static char const   *pci_power_name(pci_power_t state ) 
+ static char const   *pci_power_name(pci_power_t state ) 
 { 
 
   {
@@ -71945,7 +71945,7 @@ extern int pci_back_from_sleep(struct pci_dev * ) ;
 #line 830
 extern bool pci_dev_run_wake(struct pci_dev * ) ;
 #line 1316 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -71964,7 +71964,7 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1329 "include/linux/pci.h"
-__inline static char const   *pci_name(struct pci_dev  const  *pdev ) 
+ static char const   *pci_name(struct pci_dev  const  *pdev ) 
 { char const   *tmp ;
   struct device  const  *__cil_tmp3 ;
 
@@ -73123,7 +73123,7 @@ void usb_hcd_pci_shutdown(struct pci_dev *dev )
 }
 }
 #line 364 "/anthill/stuff/tacas-comp/work/current--X--drivers/usb/core/usbcore.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/28/dscv_tempdir/dscv/ri/08_1/drivers/usb/core/hcd-pci.c.p"
-__inline static void powermac_set_asic(struct pci_dev *pci_dev , int enable ) 
+ static void powermac_set_asic(struct pci_dev *pci_dev , int enable ) 
 { 
 
   {
@@ -74051,7 +74051,7 @@ extern char *strsep(char ** , char const   * ) ;
 #line 23 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_lock_nested(raw_spinlock_t * , int  ) ;
 #line 51 "include/linux/list_bl.h"
-__inline static int hlist_bl_unhashed(struct hlist_bl_node  const  *h ) 
+ static int hlist_bl_unhashed(struct hlist_bl_node  const  *h ) 
 { struct hlist_bl_node **__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct hlist_bl_node **__cil_tmp4 ;
@@ -74079,7 +74079,7 @@ extern void d_delete(struct dentry * ) ;
 #line 252
 extern struct dentry *d_alloc_root(struct inode * ) ;
 #line 359 "include/linux/dcache.h"
-__inline static struct dentry *dget_dlock(struct dentry *dentry ) 
+ static struct dentry *dget_dlock(struct dentry *dentry ) 
 { struct dentry *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -74108,7 +74108,7 @@ __inline static struct dentry *dget_dlock(struct dentry *dentry )
 }
 }
 #line 366 "include/linux/dcache.h"
-__inline static struct dentry *dget(struct dentry *dentry ) 
+ static struct dentry *dget(struct dentry *dentry ) 
 { struct dentry *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -74146,7 +74146,7 @@ __inline static struct dentry *dget(struct dentry *dentry )
 }
 }
 #line 385 "include/linux/dcache.h"
-__inline static int d_unhashed(struct dentry *dentry ) 
+ static int d_unhashed(struct dentry *dentry ) 
 { int tmp ;
   struct hlist_bl_node *__cil_tmp3 ;
   struct hlist_bl_node  const  *__cil_tmp4 ;
@@ -74165,7 +74165,7 @@ __inline static int d_unhashed(struct dentry *dentry )
 }
 }
 #line 400 "include/linux/dcache.h"
-__inline static void dont_mount(struct dentry *dentry ) 
+ static void dont_mount(struct dentry *dentry ) 
 { spinlock_t *__cil_tmp2 ;
   unsigned int __cil_tmp3 ;
   spinlock_t *__cil_tmp4 ;
@@ -74194,7 +74194,7 @@ extern void dput(struct dentry * ) ;
 #line 1488 "include/linux/fs.h"
 extern void dentry_unhash(struct dentry * ) ;
 #line 1731 "include/linux/fs.h"
-__inline static void inc_nlink(struct inode *inode ) 
+ static void inc_nlink(struct inode *inode ) 
 { unsigned int __cil_tmp2 ;
 
   {
@@ -74207,7 +74207,7 @@ __inline static void inc_nlink(struct inode *inode )
 }
 }
 #line 1753 "include/linux/fs.h"
-__inline static void drop_nlink(struct inode *inode ) 
+ static void drop_nlink(struct inode *inode ) 
 { unsigned int __cil_tmp2 ;
 
   {
@@ -75480,7 +75480,7 @@ static int usbfs_create(struct inode *dir , struct dentry *dentry , int mode )
 }
 }
 #line 345 "/anthill/stuff/tacas-comp/work/current--X--drivers/usb/core/usbcore.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/28/dscv_tempdir/dscv/ri/08_1/drivers/usb/core/inode.c.p"
-__inline static int usbfs_positive(struct dentry *dentry ) 
+ static int usbfs_positive(struct dentry *dentry ) 
 { int tmp ;
   int tmp___0 ;
   struct inode *__cil_tmp4 ;

@@ -2217,7 +2217,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2916/dscv_tempdir/dscv/ri/43_1a/drivers/input/keyboard/gpio_keys_polled.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2233,7 +2233,7 @@ extern int dev_err(struct device  const  * , char const   *  , ...) ;
 #line 1502 "include/linux/input.h"
 extern void input_event(struct input_dev * , unsigned int  , unsigned int  , int  ) ;
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {
@@ -2254,7 +2254,7 @@ extern void input_free_polled_device(struct input_polled_dev * ) ;
 #line 55
 extern int input_register_polled_device(struct input_polled_dev * ) ;
 #line 188 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
+ static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2287,7 +2287,7 @@ extern int __gpio_get_value(unsigned int  ) ;
 #line 172
 extern int __gpio_cansleep(unsigned int  ) ;
 #line 26 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/gpio.h"
-__inline static int gpio_get_value(unsigned int gpio ) 
+ static int gpio_get_value(unsigned int gpio ) 
 { int tmp ;
 
   {
@@ -2300,7 +2300,7 @@ __inline static int gpio_get_value(unsigned int gpio )
 }
 }
 #line 36 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/gpio.h"
-__inline static int gpio_cansleep(unsigned int gpio ) 
+ static int gpio_cansleep(unsigned int gpio ) 
 { int tmp ;
 
   {
@@ -3672,7 +3672,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 630 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2916/dscv_tempdir/dscv/ri/43_1a/drivers/input/keyboard/gpio_keys_polled.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

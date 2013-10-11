@@ -105,9 +105,9 @@ void cleanup_module(void) ;
 #line 244 "include/linux/device.h"
 extern void wait_for_device_probe(void) ;
 #line 8 "include/scsi/scsi_scan.h"
-__inline static int scsi_complete_async_scans(void)  __attribute__((__no_instrument_function__)) ;
+ static int scsi_complete_async_scans(void)  __attribute__((__no_instrument_function__)) ;
 #line 8 "include/scsi/scsi_scan.h"
-__inline static int scsi_complete_async_scans(void) 
+ static int scsi_complete_async_scans(void) 
 { 
 
   {

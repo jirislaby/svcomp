@@ -3653,9 +3653,9 @@ extern int mtd_read(struct mtd_info *mtd , loff_t from , size_t len , size_t *re
 extern int mtd_write(struct mtd_info *mtd , loff_t to , size_t len , size_t *retlen ,
                      u_char const   *buf ) ;
 #line 294
-__inline static void mtd_sync(struct mtd_info *mtd )  __attribute__((__no_instrument_function__)) ;
+ static void mtd_sync(struct mtd_info *mtd )  __attribute__((__no_instrument_function__)) ;
 #line 294 "include/linux/mtd/mtd.h"
-__inline static void mtd_sync(struct mtd_info *mtd ) 
+ static void mtd_sync(struct mtd_info *mtd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3693,10 +3693,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -3710,9 +3710,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 

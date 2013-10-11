@@ -4925,9 +4925,9 @@ struct __anonstruct_292 {
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -4947,9 +4947,9 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 74
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -4972,9 +4972,9 @@ __inline static void list_add_tail(struct list_head *new , struct list_head *hea
 #line 112
 extern void list_del(struct list_head *entry ) ;
 #line 186
-__inline static int list_empty(struct list_head    *head )  __attribute__((__no_instrument_function__)) ;
+ static int list_empty(struct list_head    *head )  __attribute__((__no_instrument_function__)) ;
 #line 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head    *head ) 
+ static int list_empty(struct list_head    *head ) 
 { unsigned long __cil_tmp2 ;
   struct list_head *   __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4993,10 +4993,10 @@ __inline static int list_empty(struct list_head    *head )
 }
 }
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -5029,9 +5029,9 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -5131,9 +5131,9 @@ extern char *strcpy(char *dest , char    *src ) ;
 #line 30 "include/linux/string.h"
 extern size_t strlcpy(char * , char    * , size_t  ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr ) 
 { 
 
   {
@@ -5142,9 +5142,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *p
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -5172,9 +5172,9 @@ __inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *pt
 }
 }
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t    *v )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_read(atomic_t    *v )  __attribute__((__no_instrument_function__)) ;
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t    *v ) 
+ static int atomic_read(atomic_t    *v ) 
 { int    *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -5199,9 +5199,9 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock )  __attribute_
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -5210,9 +5210,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -5269,9 +5269,9 @@ extern unsigned int jiffies_to_msecs(unsigned long    j ) ;
 #line 298
 extern unsigned long msecs_to_jiffies(unsigned int    m ) ;
 #line 80 "include/linux/kobject.h"
-__inline static char    *kobject_name(struct kobject    *kobj )  __attribute__((__no_instrument_function__)) ;
+ static char    *kobject_name(struct kobject    *kobj )  __attribute__((__no_instrument_function__)) ;
 #line 80 "include/linux/kobject.h"
-__inline static char    *kobject_name(struct kobject    *kobj ) 
+ static char    *kobject_name(struct kobject    *kobj ) 
 { char    *   __cil_tmp2 ;
 
   {
@@ -5300,10 +5300,10 @@ extern void kfree(void    * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -5317,9 +5317,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -5354,9 +5354,9 @@ extern atomic_t system_freezing_cnt ;
 #line 23
 extern bool freezing_slow_path(struct task_struct *p ) ;
 #line 28
-__inline static bool freezing(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
+ static bool freezing(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
 #line 28 "include/linux/freezer.h"
-__inline static bool freezing(struct task_struct *p ) 
+ static bool freezing(struct task_struct *p ) 
 { int tmp___7 ;
   int tmp___8 ;
   long tmp___9 ;
@@ -5403,9 +5403,9 @@ __inline static bool freezing(struct task_struct *p )
 #line 38
 extern bool __refrigerator(bool check_kthr_stop ) ;
 #line 44
-__inline static bool try_to_freeze(void)  __attribute__((__no_instrument_function__)) ;
+ static bool try_to_freeze(void)  __attribute__((__no_instrument_function__)) ;
 #line 44 "include/linux/freezer.h"
-__inline static bool try_to_freeze(void) 
+ static bool try_to_freeze(void) 
 { struct task_struct *tmp___7 ;
   bool tmp___8 ;
   int tmp___9 ;
@@ -5477,10 +5477,10 @@ __inline static bool try_to_freeze(void)
 #line 53
 extern bool set_freezable(void) ;
 #line 44 "include/linux/poll.h"
-__inline static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
+ static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
                                poll_table *p )  __attribute__((__no_instrument_function__)) ;
 #line 44 "include/linux/poll.h"
-__inline static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
+ static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
                                poll_table *p ) 
 { void (*__cil_tmp4)(struct file * , wait_queue_head_t * , struct poll_table_struct * ) ;
 
@@ -5538,9 +5538,9 @@ extern unsigned int vb2_poll(struct vb2_queue *q , struct file *file , poll_tabl
 extern size_t vb2_read(struct vb2_queue *q , char *data , size_t count , loff_t *ppos ,
                        int nonblock ) ;
 #line 342
-__inline static bool vb2_is_streaming(struct vb2_queue *q )  __attribute__((__no_instrument_function__)) ;
+ static bool vb2_is_streaming(struct vb2_queue *q )  __attribute__((__no_instrument_function__)) ;
 #line 342 "include/media/videobuf2-core.h"
-__inline static bool vb2_is_streaming(struct vb2_queue *q ) 
+ static bool vb2_is_streaming(struct vb2_queue *q ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -5559,9 +5559,9 @@ __inline static bool vb2_is_streaming(struct vb2_queue *q )
 }
 }
 #line 362
-__inline static void *vb2_get_drv_priv(struct vb2_queue *q )  __attribute__((__no_instrument_function__)) ;
+ static void *vb2_get_drv_priv(struct vb2_queue *q )  __attribute__((__no_instrument_function__)) ;
 #line 362 "include/media/videobuf2-core.h"
-__inline static void *vb2_get_drv_priv(struct vb2_queue *q ) 
+ static void *vb2_get_drv_priv(struct vb2_queue *q ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -5577,10 +5577,10 @@ __inline static void *vb2_get_drv_priv(struct vb2_queue *q )
 }
 }
 #line 373
-__inline static void vb2_set_plane_payload(struct vb2_buffer *vb , unsigned int plane_no ,
+ static void vb2_set_plane_payload(struct vb2_buffer *vb , unsigned int plane_no ,
                                            unsigned long size )  __attribute__((__no_instrument_function__)) ;
 #line 373 "include/media/videobuf2-core.h"
-__inline static void vb2_set_plane_payload(struct vb2_buffer *vb , unsigned int plane_no ,
+ static void vb2_set_plane_payload(struct vb2_buffer *vb , unsigned int plane_no ,
                                            unsigned long size ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -5619,9 +5619,9 @@ __inline static void vb2_set_plane_payload(struct vb2_buffer *vb , unsigned int 
 }
 }
 #line 399
-__inline static unsigned long vb2_plane_size(struct vb2_buffer *vb , unsigned int plane_no )  __attribute__((__no_instrument_function__)) ;
+ static unsigned long vb2_plane_size(struct vb2_buffer *vb , unsigned int plane_no )  __attribute__((__no_instrument_function__)) ;
 #line 399 "include/media/videobuf2-core.h"
-__inline static unsigned long vb2_plane_size(struct vb2_buffer *vb , unsigned int plane_no ) 
+ static unsigned long vb2_plane_size(struct vb2_buffer *vb , unsigned int plane_no ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned int __cil_tmp5 ;
@@ -5669,9 +5669,9 @@ __inline static unsigned long vb2_plane_size(struct vb2_buffer *vb , unsigned in
 #line 18 "include/media/videobuf2-vmalloc.h"
 extern struct vb2_mem_ops    vb2_vmalloc_memops ;
 #line 685 "include/linux/device.h"
-__inline static char    *dev_name(struct device    *dev )  __attribute__((__no_instrument_function__)) ;
+ static char    *dev_name(struct device    *dev )  __attribute__((__no_instrument_function__)) ;
 #line 685 "include/linux/device.h"
-__inline static char    *dev_name(struct device    *dev ) 
+ static char    *dev_name(struct device    *dev ) 
 { char    *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5729,11 +5729,11 @@ extern int __attribute__((__warn_unused_result__))  __video_register_device(stru
                                                                             int warn_if_nr_in_use ,
                                                                             struct module *owner ) ;
 #line 146
-__inline static int __attribute__((__warn_unused_result__))  video_register_device(struct video_device *vdev ,
+ static int __attribute__((__warn_unused_result__))  video_register_device(struct video_device *vdev ,
                                                                                    int type ,
                                                                                    int nr )  __attribute__((__no_instrument_function__)) ;
 #line 146 "include/media/v4l2-dev.h"
-__inline static int __attribute__((__warn_unused_result__))  video_register_device(struct video_device *vdev ,
+ static int __attribute__((__warn_unused_result__))  video_register_device(struct video_device *vdev ,
                                                                                    int type ,
                                                                                    int nr ) 
 { int tmp___7 ;
@@ -5769,9 +5769,9 @@ extern struct video_device * __attribute__((__warn_unused_result__)) video_devic
 #line 169
 extern void video_device_release(struct video_device *vdev ) ;
 #line 177
-__inline static void *video_get_drvdata(struct video_device *vdev )  __attribute__((__no_instrument_function__)) ;
+ static void *video_get_drvdata(struct video_device *vdev )  __attribute__((__no_instrument_function__)) ;
 #line 177 "include/media/v4l2-dev.h"
-__inline static void *video_get_drvdata(struct video_device *vdev ) 
+ static void *video_get_drvdata(struct video_device *vdev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5796,9 +5796,9 @@ __inline static void *video_get_drvdata(struct video_device *vdev )
 }
 }
 #line 182
-__inline static void video_set_drvdata(struct video_device *vdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void video_set_drvdata(struct video_device *vdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 182 "include/media/v4l2-dev.h"
-__inline static void video_set_drvdata(struct video_device *vdev , void *data ) 
+ static void video_set_drvdata(struct video_device *vdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -5821,9 +5821,9 @@ __inline static void video_set_drvdata(struct video_device *vdev , void *data )
 #line 187
 extern struct video_device *video_devdata(struct file *file ) ;
 #line 191
-__inline static void *video_drvdata(struct file *file )  __attribute__((__no_instrument_function__)) ;
+ static void *video_drvdata(struct file *file )  __attribute__((__no_instrument_function__)) ;
 #line 191 "include/media/v4l2-dev.h"
-__inline static void *video_drvdata(struct file *file ) 
+ static void *video_drvdata(struct file *file ) 
 { struct video_device *tmp___7 ;
   void *tmp___8 ;
 
@@ -5839,9 +5839,9 @@ __inline static void *video_drvdata(struct file *file )
 }
 }
 #line 196
-__inline static char    *video_device_node_name(struct video_device *vdev )  __attribute__((__no_instrument_function__)) ;
+ static char    *video_device_node_name(struct video_device *vdev )  __attribute__((__no_instrument_function__)) ;
 #line 196 "include/media/v4l2-dev.h"
-__inline static char    *video_device_node_name(struct video_device *vdev ) 
+ static char    *video_device_node_name(struct video_device *vdev ) 
 { char    *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5876,9 +5876,9 @@ extern int v4l2_fh_release(struct file *filp ) ;
 #line 91
 extern int v4l2_fh_is_singular(struct v4l2_fh *fh ) ;
 #line 96
-__inline static int v4l2_fh_is_singular_file(struct file *filp )  __attribute__((__no_instrument_function__)) ;
+ static int v4l2_fh_is_singular_file(struct file *filp )  __attribute__((__no_instrument_function__)) ;
 #line 96 "include/media/v4l2-fh.h"
-__inline static int v4l2_fh_is_singular_file(struct file *filp ) 
+ static int v4l2_fh_is_singular_file(struct file *filp ) 
 { int tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;

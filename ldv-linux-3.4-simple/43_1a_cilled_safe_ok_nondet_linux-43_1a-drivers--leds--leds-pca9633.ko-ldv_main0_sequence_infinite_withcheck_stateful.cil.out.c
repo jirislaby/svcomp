@@ -2564,7 +2564,7 @@ int ldv_spin_trylock(void) ;
 #line 323 "include/linux/kernel.h"
 extern int snprintf(char * , size_t  , char const   *  , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2599,7 +2599,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 243 "include/linux/slab.h"
-__inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
+ static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned long __cil_tmp5 ;
   size_t __cil_tmp6 ;
@@ -2632,7 +2632,7 @@ __inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 256 "include/linux/slab.h"
-__inline static void *ldv_kcalloc_14(size_t n , size_t size , gfp_t flags ) 
+ static void *ldv_kcalloc_14(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp5 ;
 
@@ -2648,7 +2648,7 @@ __inline static void *ldv_kcalloc_14(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 256
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags ) ;
+ static void *kcalloc(size_t n , size_t size , gfp_t flags ) ;
 #line 11 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12453/dscv_tempdir/dscv/ri/43_1a/drivers/leds/leds-pca9633.c.p"
 void ldv_check_alloc_flags(gfp_t flags ) ;
 #line 12
@@ -2668,7 +2668,7 @@ extern s32 i2c_smbus_read_byte_data(struct i2c_client  const  * , u8  ) ;
 #line 88
 extern s32 i2c_smbus_write_byte_data(struct i2c_client  const  * , u8  , u8  ) ;
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -3901,7 +3901,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 557 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12453/dscv_tempdir/dscv/ri/43_1a/drivers/leds/leds-pca9633.c.p"
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
+ static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
 { 
 
   {

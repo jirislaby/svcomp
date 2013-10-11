@@ -496,9 +496,9 @@ void mutex_unlock(struct mutex *lock ) ;
 #line 170
 int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -513,9 +513,9 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308
-__inline static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -530,9 +530,9 @@ __inline static unsigned char inb(int port )
 }
 }
 #line 309
-__inline static void outw(unsigned short value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outw(unsigned short value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 309 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outw(unsigned short value , int port ) 
+ static void outw(unsigned short value , int port ) 
 { 
 
   {
@@ -547,9 +547,9 @@ __inline static void outw(unsigned short value , int port )
 }
 }
 #line 309
-__inline static unsigned short inw(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned short inw(int port )  __attribute__((__no_instrument_function__)) ;
 #line 309 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned short inw(int port ) 
+ static unsigned short inw(int port ) 
 { unsigned short value ;
 
   {
@@ -564,9 +564,9 @@ __inline static unsigned short inw(int port )
 }
 }
 #line 310
-__inline static void outl(unsigned int value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outl(unsigned int value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 310 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outl(unsigned int value , int port ) 
+ static void outl(unsigned int value , int port ) 
 { 
 
   {
@@ -581,9 +581,9 @@ __inline static void outl(unsigned int value , int port )
 }
 }
 #line 310
-__inline static unsigned int inl(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int inl(int port )  __attribute__((__no_instrument_function__)) ;
 #line 310 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned int inl(int port ) 
+ static unsigned int inl(int port ) 
 { unsigned int value ;
 
   {

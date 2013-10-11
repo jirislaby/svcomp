@@ -991,7 +991,7 @@ extern struct resource *__request_region(struct resource * , resource_size_t  , 
 #line 192
 extern void __release_region(struct resource * , resource_size_t  , resource_size_t  ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -1002,7 +1002,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -1021,7 +1021,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2888/dscv_tempdir/dscv/ri/43_1a/drivers/input/gameport/lightning.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -1037,7 +1037,7 @@ extern void gameport_unregister_port(struct gameport * ) ;
 #line 81
 extern void gameport_set_phys(struct gameport * , char const   *  , ...) ;
 #line 103 "include/linux/gameport.h"
-__inline static struct gameport *gameport_allocate_port(void) 
+ static struct gameport *gameport_allocate_port(void) 
 { struct gameport *gameport ;
   void *tmp ;
 
@@ -1053,7 +1053,7 @@ __inline static struct gameport *gameport_allocate_port(void)
 }
 }
 #line 110 "include/linux/gameport.h"
-__inline static void gameport_free_port(struct gameport *gameport ) 
+ static void gameport_free_port(struct gameport *gameport ) 
 { void const   *__cil_tmp2 ;
 
   {
@@ -1068,7 +1068,7 @@ __inline static void gameport_free_port(struct gameport *gameport )
 }
 }
 #line 115 "include/linux/gameport.h"
-__inline static void gameport_set_name(struct gameport *gameport , char const   *name ) 
+ static void gameport_set_name(struct gameport *gameport , char const   *name ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   char (*__cil_tmp5)[32U] ;
@@ -2804,7 +2804,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 723 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2888/dscv_tempdir/dscv/ri/43_1a/drivers/input/gameport/lightning.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

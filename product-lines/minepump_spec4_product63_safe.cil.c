@@ -779,7 +779,7 @@ int isPumpRunning(void) ;
 #line 12 "Environment.h"
 int getWaterLevel(void) ;
 #line 11 "Specification4_spec.c"
-__inline void __utac_acc__Specification4_spec__1(void) 
+ void __utac_acc__Specification4_spec__1(void) 
 { int tmp ;
   int tmp___0 ;
 

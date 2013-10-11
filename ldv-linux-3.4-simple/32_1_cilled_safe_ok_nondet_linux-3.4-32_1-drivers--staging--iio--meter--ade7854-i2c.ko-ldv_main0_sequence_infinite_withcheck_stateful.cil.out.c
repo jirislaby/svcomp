@@ -2702,9 +2702,9 @@ extern int i2c_master_send(struct i2c_client  const  *client , char const   *buf
 #line 64
 extern int i2c_master_recv(struct i2c_client  const  *client , char *buf , int count ) ;
 #line 242
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2726,9 +2726,9 @@ __inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )
 }
 }
 #line 247
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2761,9 +2761,9 @@ void cleanup_module(void) ;
 #line 426 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/iio/meter/../iio.h"
 extern struct iio_dev *iio_allocate_device(int sizeof_priv ) ;
 #line 428
-__inline static void *iio_priv(struct iio_dev  const  *indio_dev )  __attribute__((__no_instrument_function__)) ;
+ static void *iio_priv(struct iio_dev  const  *indio_dev )  __attribute__((__no_instrument_function__)) ;
 #line 428 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/iio/meter/../iio.h"
-__inline static void *iio_priv(struct iio_dev  const  *indio_dev ) 
+ static void *iio_priv(struct iio_dev  const  *indio_dev ) 
 { int __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;

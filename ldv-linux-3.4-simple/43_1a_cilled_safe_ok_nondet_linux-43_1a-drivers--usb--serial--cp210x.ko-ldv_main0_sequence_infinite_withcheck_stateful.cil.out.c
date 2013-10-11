@@ -4109,7 +4109,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -4122,9 +4122,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 243 "include/linux/slab.h"
-__inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
+ static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned long __cil_tmp5 ;
   size_t __cil_tmp6 ;
@@ -4157,7 +4157,7 @@ __inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 256 "include/linux/slab.h"
-__inline static void *ldv_kcalloc_14(size_t n , size_t size , gfp_t flags ) 
+ static void *ldv_kcalloc_14(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp5 ;
 
@@ -4173,9 +4173,9 @@ __inline static void *ldv_kcalloc_14(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 256
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags ) ;
+ static void *kcalloc(size_t n , size_t size , gfp_t flags ) ;
 #line 353
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1796/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/cp210x.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -4200,7 +4200,7 @@ extern int usb_reset_device(struct usb_device * ) ;
 extern int usb_control_msg(struct usb_device * , unsigned int  , __u8  , __u8  , __u16  ,
                            __u16  , void * , __u16  , int  ) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -4222,7 +4222,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 124 "include/linux/usb/serial.h"
-__inline static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
+ static void *usb_get_serial_port_data(struct usb_serial_port *port ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4247,7 +4247,7 @@ __inline static void *usb_get_serial_port_data(struct usb_serial_port *port )
 }
 }
 #line 129 "include/linux/usb/serial.h"
-__inline static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
+ static void usb_set_serial_port_data(struct usb_serial_port *port , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -4785,7 +4785,7 @@ static int cp210x_set_config(struct usb_serial_port *port , u8 request , unsigne
 }
 }
 #line 389 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1796/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/cp210x.c.p"
-__inline static int cp210x_set_config_single(struct usb_serial_port *port , u8 request ,
+ static int cp210x_set_config_single(struct usb_serial_port *port , u8 request ,
                                              unsigned int data ) 
 { int tmp ;
   int __cil_tmp5 ;
@@ -8419,7 +8419,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 2461 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1796/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/cp210x.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -8434,7 +8434,7 @@ __inline static void *kmalloc(size_t size , gfp_t flags )
 }
 }
 #line 2484 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1796/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/cp210x.c.p"
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
+ static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
 { 
 
   {
@@ -8464,7 +8464,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 2517 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1796/dscv_tempdir/dscv/ri/43_1a/drivers/usb/serial/cp210x.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

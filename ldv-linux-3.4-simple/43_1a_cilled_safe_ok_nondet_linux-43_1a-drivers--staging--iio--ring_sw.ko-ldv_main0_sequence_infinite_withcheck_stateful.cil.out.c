@@ -3527,7 +3527,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -3540,9 +3540,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5509/dscv_tempdir/dscv/ri/43_1a/drivers/staging/iio/ring_sw.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -3554,7 +3554,7 @@ struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 40 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_to_user(void * , void const   * , unsigned int  ) ;
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
+ static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
 { unsigned long tmp ;
 
   {
@@ -3571,7 +3571,7 @@ __inline static int copy_to_user(void *dst , void const   *src , unsigned int si
 #line 92 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/iio/buffer.h"
 extern void iio_buffer_init(struct iio_buffer * ) ;
 #line 100 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/iio/buffer.h"
-__inline static void __iio_update_buffer(struct iio_buffer *buffer , int bytes_per_datum ,
+ static void __iio_update_buffer(struct iio_buffer *buffer , int bytes_per_datum ,
                                          int length ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -3606,7 +3606,7 @@ struct iio_buffer *iio_sw_rb_allocate(struct iio_dev *indio_dev ) ;
 #line 29
 void iio_sw_rb_free(struct iio_buffer *r ) ;
 #line 59 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5509/dscv_tempdir/dscv/ri/43_1a/drivers/staging/iio/ring_sw.c.p"
-__inline static int __iio_allocate_sw_ring_buffer(struct iio_sw_ring_buffer *ring ,
+ static int __iio_allocate_sw_ring_buffer(struct iio_sw_ring_buffer *ring ,
                                                   int bytes_per_datum , int length ) 
 { void *tmp ;
   int tmp___0 ;
@@ -3716,7 +3716,7 @@ __inline static int __iio_allocate_sw_ring_buffer(struct iio_sw_ring_buffer *rin
 }
 }
 #line 72 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5509/dscv_tempdir/dscv/ri/43_1a/drivers/staging/iio/ring_sw.c.p"
-__inline static void __iio_free_sw_ring_buffer(struct iio_sw_ring_buffer *ring ) 
+ static void __iio_free_sw_ring_buffer(struct iio_sw_ring_buffer *ring ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned char *__cil_tmp4 ;
@@ -5462,7 +5462,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 658 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5509/dscv_tempdir/dscv/ri/43_1a/drivers/staging/iio/ring_sw.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -5492,7 +5492,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 714 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5509/dscv_tempdir/dscv/ri/43_1a/drivers/staging/iio/ring_sw.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

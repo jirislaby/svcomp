@@ -2301,7 +2301,7 @@ extern int hid_connect(struct hid_device * , unsigned int  ) ;
 #line 740
 extern void hid_disconnect(struct hid_device * ) ;
 #line 806 "include/linux/hid.h"
-__inline static int hid_parse(struct hid_device *hdev ) 
+ static int hid_parse(struct hid_device *hdev ) 
 { int ret ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2375,7 +2375,7 @@ __inline static int hid_parse(struct hid_device *hdev )
 }
 }
 #line 830 "include/linux/hid.h"
-__inline static int hid_hw_start(struct hid_device *hdev , unsigned int connect_mask ) 
+ static int hid_hw_start(struct hid_device *hdev , unsigned int connect_mask ) 
 { int ret ;
   int tmp ;
   unsigned long __cil_tmp5 ;
@@ -2446,7 +2446,7 @@ __inline static int hid_hw_start(struct hid_device *hdev , unsigned int connect_
 }
 }
 #line 850 "include/linux/hid.h"
-__inline static void hid_hw_stop(struct hid_device *hdev ) 
+ static void hid_hw_stop(struct hid_device *hdev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct hid_ll_driver *__cil_tmp4 ;

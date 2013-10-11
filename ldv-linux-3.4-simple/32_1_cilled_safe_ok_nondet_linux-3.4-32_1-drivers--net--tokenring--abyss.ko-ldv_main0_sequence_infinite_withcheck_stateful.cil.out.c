@@ -5808,9 +5808,9 @@ extern struct resource *__request_region(struct resource * , resource_size_t sta
 #line 192
 extern void __release_region(struct resource * , resource_size_t  , resource_size_t  ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -5825,9 +5825,9 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308
-__inline static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -5842,9 +5842,9 @@ __inline static unsigned char inb(int port )
 }
 }
 #line 309
-__inline static void outw(unsigned short value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outw(unsigned short value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 309 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outw(unsigned short value , int port ) 
+ static void outw(unsigned short value , int port ) 
 { 
 
   {
@@ -5859,9 +5859,9 @@ __inline static void outw(unsigned short value , int port )
 }
 }
 #line 309
-__inline static unsigned short inw(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned short inw(int port )  __attribute__((__no_instrument_function__)) ;
 #line 309 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned short inw(int port ) 
+ static unsigned short inw(int port ) 
 { unsigned short value ;
 
   {
@@ -5894,9 +5894,9 @@ extern int __attribute__((__warn_unused_result__))  __pci_register_driver(struct
 #line 949
 extern void pci_unregister_driver(struct pci_driver *dev ) ;
 #line 1358
-__inline static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
+ static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5921,9 +5921,9 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1363
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 1363 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -5944,9 +5944,9 @@ __inline static void pci_set_drvdata(struct pci_dev *pdev , void *data )
 }
 }
 #line 1422 "include/linux/netdevice.h"
-__inline static void *netdev_priv(struct net_device  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *netdev_priv(struct net_device  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1422 "include/linux/netdevice.h"
-__inline static void *netdev_priv(struct net_device  const  *dev ) 
+ static void *netdev_priv(struct net_device  const  *dev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   char *__cil_tmp4 ;
@@ -5985,14 +5985,14 @@ extern int __attribute__((__warn_unused_result__))  request_threaded_irq(unsigne
                                                                          char const   *name ,
                                                                          void *dev ) ;
 #line 131
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
                                                                          char const   *name ,
                                                                          void *dev )  __attribute__((__no_instrument_function__)) ;
 #line 131 "include/linux/interrupt.h"
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
@@ -7398,9 +7398,9 @@ static int abyss_chipset_init(struct net_device *dev )
 }
 }
 #line 378
-__inline static void abyss_chipset_close(struct net_device *dev )  __attribute__((__no_instrument_function__)) ;
+ static void abyss_chipset_close(struct net_device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 378 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/9688/dscv_tempdir/dscv/ri/32_1/drivers/net/tokenring/abyss.c.common.c"
-__inline static void abyss_chipset_close(struct net_device *dev ) 
+ static void abyss_chipset_close(struct net_device *dev ) 
 { unsigned long ioaddr ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;

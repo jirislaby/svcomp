@@ -1285,10 +1285,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -1302,9 +1302,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -1328,10 +1328,10 @@ extern void __irq_set_handler(unsigned int irq , void (*handle)(unsigned int irq
                                                                 struct irq_desc *desc ) ,
                               int is_chained , char const   *name ) ;
 #line 448
-__inline static void irq_set_handler(unsigned int irq , void (*handle)(unsigned int irq ,
+ static void irq_set_handler(unsigned int irq , void (*handle)(unsigned int irq ,
                                                                        struct irq_desc *desc ) )  __attribute__((__no_instrument_function__)) ;
 #line 448 "include/linux/irq.h"
-__inline static void irq_set_handler(unsigned int irq , void (*handle)(unsigned int irq ,
+ static void irq_set_handler(unsigned int irq , void (*handle)(unsigned int irq ,
                                                                        struct irq_desc *desc ) ) 
 { void *__cil_tmp3 ;
   char const   *__cil_tmp4 ;
@@ -1354,9 +1354,9 @@ extern void irq_modify_status(unsigned int irq , unsigned long clr , unsigned lo
 #line 528
 extern int irq_set_chip(unsigned int irq , struct irq_chip *chip ) ;
 #line 541
-__inline static struct irq_chip *irq_data_get_irq_chip(struct irq_data *d )  __attribute__((__no_instrument_function__)) ;
+ static struct irq_chip *irq_data_get_irq_chip(struct irq_data *d )  __attribute__((__no_instrument_function__)) ;
 #line 541 "include/linux/irq.h"
-__inline static struct irq_chip *irq_data_get_irq_chip(struct irq_data *d ) 
+ static struct irq_chip *irq_data_get_irq_chip(struct irq_data *d ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 

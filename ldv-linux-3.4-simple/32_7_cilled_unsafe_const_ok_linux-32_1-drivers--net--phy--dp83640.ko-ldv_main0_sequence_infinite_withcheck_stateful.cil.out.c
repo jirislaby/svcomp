@@ -5617,10 +5617,10 @@ struct __anonstruct_358 {
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__)) ;
+ static __u16 __fswab16(__u16 val )  __attribute__((__no_instrument_function__)) ;
 
 #line 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val ) 
+ static __u16 __fswab16(__u16 val ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -5658,9 +5658,9 @@ extern int ( /* format attribute */  __dynamic_pr_debug)(struct _ddebug *descrip
 #line 147 "include/linux/kernel.h"
 extern void __might_sleep(char    *file , int line , int preempt_offset ) ;
 #line 194
-__inline static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
+ static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
 #line 194 "include/linux/kernel.h"
-__inline static void might_fault(void) 
+ static void might_fault(void) 
 { 
 
   {
@@ -5700,9 +5700,9 @@ extern int memcmp(void    *cs , void    *ct , unsigned long count ) ;
 extern void ( /* format attribute */  warn_slowpath_fmt)(char    *file , int    line ,
                                                          char    *fmt  , ...) ;
 #line 17 "include/linux/math64.h"
-__inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder )  __attribute__((__no_instrument_function__)) ;
+ static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder )  __attribute__((__no_instrument_function__)) ;
 #line 17 "include/linux/math64.h"
-__inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder ) 
+ static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder ) 
 { unsigned long long __cil_tmp4 ;
   unsigned long long __cil_tmp5 ;
   u64 __cil_tmp6 ;
@@ -5723,9 +5723,9 @@ __inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder )
 }
 }
 #line 82
-__inline static u64 div_u64(u64 dividend , u32 divisor )  __attribute__((__no_instrument_function__)) ;
+ static u64 div_u64(u64 dividend , u32 divisor )  __attribute__((__no_instrument_function__)) ;
 #line 82 "include/linux/math64.h"
-__inline static u64 div_u64(u64 dividend , u32 divisor ) 
+ static u64 div_u64(u64 dividend , u32 divisor ) 
 { u32 remainder ;
   u64 tmp ;
 
@@ -5739,9 +5739,9 @@ __inline static u64 div_u64(u64 dividend , u32 divisor )
 }
 }
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *ptr ) 
 { 
 
   {
@@ -5750,9 +5750,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void    *p
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void    *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -5780,9 +5780,9 @@ __inline static long __attribute__((__warn_unused_result__))  IS_ERR(void    *pt
 }
 }
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -5802,9 +5802,9 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 60
-__inline static void list_add(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head ) 
+ static void list_add(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -5819,9 +5819,9 @@ __inline static void list_add(struct list_head *new , struct list_head *head )
 }
 }
 #line 74
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -5846,9 +5846,9 @@ extern void __list_del_entry(struct list_head *entry ) ;
 #line 112
 extern void list_del(struct list_head *entry ) ;
 #line 142
-__inline static void list_del_init(struct list_head *entry )  __attribute__((__no_instrument_function__)) ;
+ static void list_del_init(struct list_head *entry )  __attribute__((__no_instrument_function__)) ;
 #line 142 "include/linux/list.h"
-__inline static void list_del_init(struct list_head *entry ) 
+ static void list_del_init(struct list_head *entry ) 
 { 
 
   {
@@ -5863,9 +5863,9 @@ __inline static void list_del_init(struct list_head *entry )
 }
 }
 #line 186
-__inline static int list_empty(struct list_head    *head )  __attribute__((__no_instrument_function__)) ;
+ static int list_empty(struct list_head    *head )  __attribute__((__no_instrument_function__)) ;
 #line 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head    *head ) 
+ static int list_empty(struct list_head    *head ) 
 { unsigned long __cil_tmp2 ;
   struct list_head *   __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5890,9 +5890,9 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock )  __attribute_
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -5901,9 +5901,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -5947,13 +5947,13 @@ int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 82 "include/linux/jiffies.h"
 extern unsigned long volatile   jiffies  __attribute__((__section__(".data"))) ;
 #line 338 "include/linux/ktime.h"
-__inline static ktime_t ns_to_ktime(u64 ns )  __attribute__((__no_instrument_function__)) ;
+ static ktime_t ns_to_ktime(u64 ns )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/ktime.h"
 static union ktime    ktime_zero  =    {(s64 )0};
 #line 336
-__inline static ktime_t ns_to_ktime(u64 ns )  __attribute__((__no_instrument_function__)) ;
+ static ktime_t ns_to_ktime(u64 ns )  __attribute__((__no_instrument_function__)) ;
 #line 336 "include/linux/ktime.h"
-__inline static ktime_t ns_to_ktime(u64 ns ) 
+ static ktime_t ns_to_ktime(u64 ns ) 
 { ktime_t __r_expr_0 ;
   u64 __cil_tmp3 ;
   u64 __cil_tmp4 ;
@@ -5980,10 +5980,10 @@ extern void kfree(void    * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -5997,9 +5997,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -6023,11 +6023,11 @@ extern unsigned long __attribute__((__warn_unused_result__))  _copy_from_user(vo
                                                                               void    *from ,
                                                                               unsigned int len ) ;
 #line 46
-__inline static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
+ static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
                                                                                       void    *from ,
                                                                                       unsigned long n )  __attribute__((__no_instrument_function__)) ;
 #line 46 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
+ static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
                                                                                       void    *from ,
                                                                                       unsigned long n ) 
 { int sz ;
@@ -6129,11 +6129,11 @@ __inline static unsigned long __attribute__((__warn_unused_result__))  copy_from
 }
 }
 #line 62
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void    *src ,
                                                                                                                 unsigned int size )  __attribute__((__no_instrument_function__)) ;
 #line 62 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void    *src ,
                                                                                                                 unsigned int size ) 
 { unsigned long tmp___7 ;
@@ -6156,9 +6156,9 @@ extern void put_device(struct device *dev ) ;
 #line 560 "include/linux/skbuff.h"
 extern void kfree_skb(struct sk_buff *skb ) ;
 #line 642
-__inline static unsigned char *skb_end_pointer(struct sk_buff    *skb )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char *skb_end_pointer(struct sk_buff    *skb )  __attribute__((__no_instrument_function__)) ;
 #line 642 "include/linux/skbuff.h"
-__inline static unsigned char *skb_end_pointer(struct sk_buff    *skb ) 
+ static unsigned char *skb_end_pointer(struct sk_buff    *skb ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   sk_buff_data_t    __cil_tmp4 ;
@@ -6189,9 +6189,9 @@ __inline static unsigned char *skb_end_pointer(struct sk_buff    *skb )
 }
 }
 #line 656
-__inline static struct skb_shared_hwtstamps *skb_hwtstamps(struct sk_buff *skb )  __attribute__((__no_instrument_function__)) ;
+ static struct skb_shared_hwtstamps *skb_hwtstamps(struct sk_buff *skb )  __attribute__((__no_instrument_function__)) ;
 #line 656 "include/linux/skbuff.h"
-__inline static struct skb_shared_hwtstamps *skb_hwtstamps(struct sk_buff *skb ) 
+ static struct skb_shared_hwtstamps *skb_hwtstamps(struct sk_buff *skb ) 
 { unsigned char *tmp___7 ;
   struct sk_buff    *__cil_tmp3 ;
   struct skb_shared_info *__cil_tmp4 ;
@@ -6218,9 +6218,9 @@ __inline static struct skb_shared_hwtstamps *skb_hwtstamps(struct sk_buff *skb )
 }
 }
 #line 950
-__inline static void __skb_queue_head_init(struct sk_buff_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void __skb_queue_head_init(struct sk_buff_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 950 "include/linux/skbuff.h"
-__inline static void __skb_queue_head_init(struct sk_buff_head *list ) 
+ static void __skb_queue_head_init(struct sk_buff_head *list ) 
 { struct sk_buff *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6251,9 +6251,9 @@ __inline static void __skb_queue_head_init(struct sk_buff_head *list )
 #line 966 "include/linux/skbuff.h"
 static struct lock_class_key __key___4  ;
 #line 964
-__inline static void skb_queue_head_init(struct sk_buff_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void skb_queue_head_init(struct sk_buff_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 964 "include/linux/skbuff.h"
-__inline static void skb_queue_head_init(struct sk_buff_head *list ) 
+ static void skb_queue_head_init(struct sk_buff_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   spinlock_t *__cil_tmp4 ;
@@ -6313,9 +6313,9 @@ extern void skb_queue_tail(struct sk_buff_head *list , struct sk_buff *newsk ) ;
 #line 1158
 extern struct sk_buff *skb_dequeue(struct sk_buff_head *list ) ;
 #line 1190
-__inline static unsigned int skb_headlen(struct sk_buff    *skb )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int skb_headlen(struct sk_buff    *skb )  __attribute__((__no_instrument_function__)) ;
 #line 1190 "include/linux/skbuff.h"
-__inline static unsigned int skb_headlen(struct sk_buff    *skb ) 
+ static unsigned int skb_headlen(struct sk_buff    *skb ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned int    __cil_tmp4 ;
@@ -6346,9 +6346,9 @@ __inline static unsigned int skb_headlen(struct sk_buff    *skb )
 }
 }
 #line 1435
-__inline static unsigned char *skb_mac_header(struct sk_buff    *skb )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char *skb_mac_header(struct sk_buff    *skb )  __attribute__((__no_instrument_function__)) ;
 #line 1435 "include/linux/skbuff.h"
-__inline static unsigned char *skb_mac_header(struct sk_buff    *skb ) 
+ static unsigned char *skb_mac_header(struct sk_buff    *skb ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   sk_buff_data_t    __cil_tmp4 ;
@@ -6381,9 +6381,9 @@ __inline static unsigned char *skb_mac_header(struct sk_buff    *skb )
 #line 2267
 extern void skb_complete_tx_timestamp(struct sk_buff *skb , struct skb_shared_hwtstamps *hwtstamps ) ;
 #line 136 "include/linux/if_ether.h"
-__inline static struct ethhdr *eth_hdr(struct sk_buff    *skb )  __attribute__((__no_instrument_function__)) ;
+ static struct ethhdr *eth_hdr(struct sk_buff    *skb )  __attribute__((__no_instrument_function__)) ;
 #line 136 "include/linux/if_ether.h"
-__inline static struct ethhdr *eth_hdr(struct sk_buff    *skb ) 
+ static struct ethhdr *eth_hdr(struct sk_buff    *skb ) 
 { unsigned char *tmp___7 ;
 
   {
@@ -6418,9 +6418,9 @@ extern int mdiobus_read(struct mii_bus *bus , int addr , u32 regnum ) ;
 #line 145
 extern int mdiobus_write(struct mii_bus *bus , int addr , u32 regnum , u16 val ) ;
 #line 460
-__inline static int phy_read(struct phy_device *phydev , u32 regnum )  __attribute__((__no_instrument_function__)) ;
+ static int phy_read(struct phy_device *phydev , u32 regnum )  __attribute__((__no_instrument_function__)) ;
 #line 460 "include/linux/phy.h"
-__inline static int phy_read(struct phy_device *phydev , u32 regnum ) 
+ static int phy_read(struct phy_device *phydev , u32 regnum ) 
 { int tmp___7 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -6451,9 +6451,9 @@ __inline static int phy_read(struct phy_device *phydev , u32 regnum )
 }
 }
 #line 475
-__inline static int phy_write(struct phy_device *phydev , u32 regnum , u16 val )  __attribute__((__no_instrument_function__)) ;
+ static int phy_write(struct phy_device *phydev , u32 regnum , u16 val )  __attribute__((__no_instrument_function__)) ;
 #line 475 "include/linux/phy.h"
-__inline static int phy_write(struct phy_device *phydev , u32 regnum , u16 val ) 
+ static int phy_write(struct phy_device *phydev , u32 regnum , u16 val ) 
 { int tmp___7 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -6610,9 +6610,9 @@ static struct mutex phyter_clocks_lock  =    {{1}, {{{{{(__ticketpair_t )0}}, 37
 #line 163
 static void rx_timestamp_work(struct work_struct *work ) ;
 #line 169
-__inline static int broadcast_write(struct mii_bus *bus , u32 regnum , u16 val )  __attribute__((__no_instrument_function__)) ;
+ static int broadcast_write(struct mii_bus *bus , u32 regnum , u16 val )  __attribute__((__no_instrument_function__)) ;
 #line 169 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/9660/dscv_tempdir/dscv/ri/32_1/drivers/net/phy/dp83640.c.common.c"
-__inline static int broadcast_write(struct mii_bus *bus , u32 regnum , u16 val ) 
+ static int broadcast_write(struct mii_bus *bus , u32 regnum , u16 val ) 
 { int tmp___7 ;
 
   {
@@ -9594,9 +9594,9 @@ static void recalibrate(struct dp83640_clock *clock )
 }
 }
 #line 626
-__inline static u16 exts_chan_to_edata(int ch )  __attribute__((__no_instrument_function__)) ;
+ static u16 exts_chan_to_edata(int ch )  __attribute__((__no_instrument_function__)) ;
 #line 626 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/9660/dscv_tempdir/dscv/ri/32_1/drivers/net/phy/dp83640.c.common.c"
-__inline static u16 exts_chan_to_edata(int ch ) 
+ static u16 exts_chan_to_edata(int ch ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;

@@ -3989,9 +3989,9 @@ extern void *memset(void *s , int c , size_t n ) ;
 #line 62
 extern char *strcpy(char *dest , char const   *src ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -4000,9 +4000,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4061,9 +4061,9 @@ extern struct backlight_device *backlight_device_register(char const   *name , s
 #line 117
 extern void backlight_device_unregister(struct backlight_device *bd ) ;
 #line 123
-__inline static void *bl_get_data(struct backlight_device *bl_dev )  __attribute__((__no_instrument_function__)) ;
+ static void *bl_get_data(struct backlight_device *bl_dev )  __attribute__((__no_instrument_function__)) ;
 #line 123 "include/linux/backlight.h"
-__inline static void *bl_get_data(struct backlight_device *bl_dev ) 
+ static void *bl_get_data(struct backlight_device *bl_dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4092,10 +4092,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -4109,9 +4109,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -4134,9 +4134,9 @@ extern acpi_status acpi_evaluate_object(acpi_handle object , acpi_string pathnam
 extern acpi_status acpi_evaluate_integer(acpi_handle handle , acpi_string pathname ,
                                          struct acpi_object_list *arguments , unsigned long long *data ) ;
 #line 279
-__inline static void *acpi_driver_data(struct acpi_device *d )  __attribute__((__no_instrument_function__)) ;
+ static void *acpi_driver_data(struct acpi_device *d )  __attribute__((__no_instrument_function__)) ;
 #line 279 "include/acpi/acpi_bus.h"
-__inline static void *acpi_driver_data(struct acpi_device *d ) 
+ static void *acpi_driver_data(struct acpi_device *d ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -4386,9 +4386,9 @@ static int acpi_pcc_write_sset(struct pcc_acpi *pcc , int func , int val )
 }
 }
 #line 255
-__inline static int acpi_pcc_get_sqty(struct acpi_device *device )  __attribute__((__no_instrument_function__)) ;
+ static int acpi_pcc_get_sqty(struct acpi_device *device )  __attribute__((__no_instrument_function__)) ;
 #line 255 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5735/dscv_tempdir/dscv/ri/32_1/drivers/platform/x86/panasonic-laptop.c.common.c"
-__inline static int acpi_pcc_get_sqty(struct acpi_device *device ) 
+ static int acpi_pcc_get_sqty(struct acpi_device *device ) 
 { unsigned long long s ;
   acpi_status status ;
   unsigned long __cil_tmp4 ;

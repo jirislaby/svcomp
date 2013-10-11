@@ -1080,7 +1080,7 @@ int ldv_spin_trylock(void) ;
 extern int __dynamic_dev_dbg(struct _ddebug * , struct device  const  * , char const   * 
                              , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -1098,7 +1098,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 }
 }
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -1107,7 +1107,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -1150,7 +1150,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12454/dscv_tempdir/dscv/ri/43_1a/drivers/leds/leds-regulator.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -1166,7 +1166,7 @@ extern int dev_set_drvdata(struct device * , void * ) ;
 #line 892
 extern int dev_err(struct device  const  * , char const   *  , ...) ;
 #line 188 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
+ static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -1203,7 +1203,7 @@ extern int regulator_list_voltage(struct regulator * , unsigned int  ) ;
 #line 167
 extern int regulator_set_voltage(struct regulator * , int  , int  ) ;
 #line 51 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12454/dscv_tempdir/dscv/ri/43_1a/drivers/leds/leds-regulator.c.p"
-__inline static int led_regulator_get_max_brightness(struct regulator *supply ) 
+ static int led_regulator_get_max_brightness(struct regulator *supply ) 
 { int ret ;
   int voltage ;
   int tmp ;
@@ -2413,7 +2413,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 620 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12454/dscv_tempdir/dscv/ri/43_1a/drivers/leds/leds-regulator.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

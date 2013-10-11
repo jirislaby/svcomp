@@ -515,26 +515,26 @@ extern int pselect (int __nfds, fd_set *__restrict __readfds,
       const struct timespec *__restrict __timeout,
       const __sigset_t *__restrict __sigmask);
 __extension__
-extern __inline unsigned int gnu_dev_major (unsigned long long int __dev)
+extern  unsigned int gnu_dev_major (unsigned long long int __dev)
      __attribute__ ((__nothrow__));
 __extension__
-extern __inline unsigned int gnu_dev_minor (unsigned long long int __dev)
+extern  unsigned int gnu_dev_minor (unsigned long long int __dev)
      __attribute__ ((__nothrow__));
 __extension__
-extern __inline unsigned long long int gnu_dev_makedev (unsigned int __major,
+extern  unsigned long long int gnu_dev_makedev (unsigned int __major,
        unsigned int __minor)
      __attribute__ ((__nothrow__));
-__extension__ extern __inline unsigned int
+__extension__ extern  unsigned int
 __attribute__ ((__nothrow__)) gnu_dev_major (unsigned long long int __dev)
 {
   return ((__dev >> 8) & 0xfff) | ((unsigned int) (__dev >> 32) & ~0xfff);
 }
-__extension__ extern __inline unsigned int
+__extension__ extern  unsigned int
 __attribute__ ((__nothrow__)) gnu_dev_minor (unsigned long long int __dev)
 {
   return (__dev & 0xff) | ((unsigned int) (__dev >> 12) & ~0xff);
 }
-__extension__ extern __inline unsigned long long int
+__extension__ extern  unsigned long long int
 __attribute__ ((__nothrow__)) gnu_dev_makedev (unsigned int __major, unsigned int __minor)
 {
   return ((__minor & 0xff) | ((__major & 0xfff) << 8)

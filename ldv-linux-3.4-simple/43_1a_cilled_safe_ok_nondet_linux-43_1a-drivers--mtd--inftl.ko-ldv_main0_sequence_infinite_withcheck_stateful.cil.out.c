@@ -2518,7 +2518,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11741/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/inftlcore.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2532,7 +2532,7 @@ extern int _cond_resched(void) ;
 #line 252 "include/linux/mtd/mtd.h"
 extern int mtd_read(struct mtd_info * , loff_t  , size_t  , size_t * , u_char * ) ;
 #line 259 "include/linux/mtd/mtd.h"
-__inline static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops ) 
+ static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops ) 
 { size_t tmp ;
   int tmp___0 ;
   unsigned long __cil_tmp6 ;
@@ -2600,7 +2600,7 @@ __inline static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd
 }
 }
 #line 268 "include/linux/mtd/mtd.h"
-__inline static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops ) 
+ static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops ) 
 { size_t tmp ;
   int tmp___0 ;
   unsigned long __cil_tmp6 ;
@@ -2689,7 +2689,7 @@ __inline static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_
 }
 }
 #line 390 "include/linux/mtd/mtd.h"
-__inline static int mtd_is_bitflip(int err ) 
+ static int mtd_is_bitflip(int err ) 
 { 
 
   {
@@ -5424,7 +5424,7 @@ static int nrbits(unsigned int val , int bitcount )
 }
 }
 #line 488 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11741/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/inftlcore.c.p"
-__inline static u16 INFTL_findwriteunit(struct INFTLrecord *inftl , unsigned int block ) 
+ static u16 INFTL_findwriteunit(struct INFTLrecord *inftl , unsigned int block ) 
 { unsigned int thisVUC ;
   unsigned int thisEUN ;
   unsigned int writeEUN ;
@@ -8666,7 +8666,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1514 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11741/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/inftlcore.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {
@@ -8689,7 +8689,7 @@ extern void *__memcpy(void * , void const   * , size_t  ) ;
 #line 225 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -8702,9 +8702,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 243 "include/linux/slab.h"
-__inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
+ static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned long __cil_tmp5 ;
   size_t __cil_tmp6 ;
@@ -8737,7 +8737,7 @@ __inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 256 "include/linux/slab.h"
-__inline static void *ldv_kcalloc_14(size_t n , size_t size , gfp_t flags ) 
+ static void *ldv_kcalloc_14(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp5 ;
 
@@ -8753,7 +8753,7 @@ __inline static void *ldv_kcalloc_14(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 256
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags ) ;
+ static void *kcalloc(size_t n , size_t size , gfp_t flags ) ;
 #line 246 "include/linux/mtd/mtd.h"
 extern int mtd_erase(struct mtd_info * , struct erase_info * ) ;
 #line 303
@@ -14518,7 +14518,7 @@ int INFTL_mount(struct INFTLrecord *s )
 }
 }
 #line 926 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11741/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/inftlmount.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -14533,7 +14533,7 @@ __inline static void *kmalloc(size_t size , gfp_t flags )
 }
 }
 #line 949 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11741/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/inftlmount.c.p"
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
+ static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
 { 
 
   {

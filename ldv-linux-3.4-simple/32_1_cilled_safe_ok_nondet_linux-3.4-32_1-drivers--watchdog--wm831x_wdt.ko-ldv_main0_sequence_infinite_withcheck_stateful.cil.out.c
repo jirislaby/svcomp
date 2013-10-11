@@ -1176,10 +1176,10 @@ struct __anonstruct_216 {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -1237,9 +1237,9 @@ extern int platform_driver_register(struct platform_driver * ) ;
 #line 175
 extern void platform_driver_unregister(struct platform_driver * ) ;
 #line 132 "include/linux/watchdog.h"
-__inline static void watchdog_set_nowayout(struct watchdog_device *wdd , bool nowayout )  __attribute__((__no_instrument_function__)) ;
+ static void watchdog_set_nowayout(struct watchdog_device *wdd , bool nowayout )  __attribute__((__no_instrument_function__)) ;
 #line 132 "include/linux/watchdog.h"
-__inline static void watchdog_set_nowayout(struct watchdog_device *wdd , bool nowayout ) 
+ static void watchdog_set_nowayout(struct watchdog_device *wdd , bool nowayout ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long *__cil_tmp5 ;
@@ -1268,9 +1268,9 @@ __inline static void watchdog_set_nowayout(struct watchdog_device *wdd , bool no
 }
 }
 #line 139
-__inline static void watchdog_set_drvdata(struct watchdog_device *wdd , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void watchdog_set_drvdata(struct watchdog_device *wdd , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 139 "include/linux/watchdog.h"
-__inline static void watchdog_set_drvdata(struct watchdog_device *wdd , void *data ) 
+ static void watchdog_set_drvdata(struct watchdog_device *wdd , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
 
@@ -1286,9 +1286,9 @@ __inline static void watchdog_set_drvdata(struct watchdog_device *wdd , void *da
 }
 }
 #line 144
-__inline static void *watchdog_get_drvdata(struct watchdog_device *wdd )  __attribute__((__no_instrument_function__)) ;
+ static void *watchdog_get_drvdata(struct watchdog_device *wdd )  __attribute__((__no_instrument_function__)) ;
 #line 144 "include/linux/watchdog.h"
-__inline static void *watchdog_get_drvdata(struct watchdog_device *wdd ) 
+ static void *watchdog_get_drvdata(struct watchdog_device *wdd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 

@@ -3573,9 +3573,9 @@ struct spi_message {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3584,9 +3584,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3646,9 +3646,9 @@ extern struct rtc_device *rtc_device_register(char const   *name , struct device
 #line 225
 extern void rtc_device_unregister(struct rtc_device *rtc ) ;
 #line 105 "include/linux/spi/spi.h"
-__inline static struct spi_device *to_spi_device(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static struct spi_device *to_spi_device(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 105 "include/linux/spi/spi.h"
-__inline static struct spi_device *to_spi_device(struct device *dev ) 
+ static struct spi_device *to_spi_device(struct device *dev ) 
 { struct device  const  *__mptr ;
   struct spi_device *tmp___7 ;
   struct spi_device *__cil_tmp4 ;
@@ -3688,9 +3688,9 @@ __inline static struct spi_device *to_spi_device(struct device *dev )
 #line 191
 extern int spi_register_driver(struct spi_driver *sdrv ) ;
 #line 198
-__inline static void spi_unregister_driver(struct spi_driver *sdrv )  __attribute__((__no_instrument_function__)) ;
+ static void spi_unregister_driver(struct spi_driver *sdrv )  __attribute__((__no_instrument_function__)) ;
 #line 198 "include/linux/spi/spi.h"
-__inline static void spi_unregister_driver(struct spi_driver *sdrv ) 
+ static void spi_unregister_driver(struct spi_driver *sdrv ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct device_driver *__cil_tmp4 ;

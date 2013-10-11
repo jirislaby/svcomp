@@ -6864,7 +6864,7 @@ extern void lockdep_init_map(struct lockdep_map * , char const   * , struct lock
 #line 43 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 350 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
+ static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -6879,11 +6879,11 @@ __inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned lo
 }
 }
 #line 350
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 368 "include/linux/workqueue.h"
 extern int queue_work(struct workqueue_struct * , struct work_struct * ) ;
 #line 111 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static phys_addr_t virt_to_phys(void volatile   *address ) 
+ static phys_addr_t virt_to_phys(void volatile   *address ) 
 { unsigned long tmp ;
   unsigned long __cil_tmp3 ;
 
@@ -6915,7 +6915,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/14373/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/mwifiex/pcie.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -6937,7 +6937,7 @@ extern int dma_supported(struct device * , u64  ) ;
 #line 59
 extern int dma_set_mask(struct device * , u64  ) ;
 #line 88 "include/linux/dma-mapping.h"
-__inline static int dma_set_coherent_mask(struct device *dev , u64 mask ) 
+ static int dma_set_coherent_mask(struct device *dev , u64 mask ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -7000,7 +7000,7 @@ extern void __const_udelay(unsigned long  ) ;
 #line 48 "include/linux/delay.h"
 extern void usleep_range(unsigned long  , unsigned long  ) ;
 #line 32 "include/linux/semaphore.h"
-__inline static void sema_init(struct semaphore *sem , int val ) 
+ static void sema_init(struct semaphore *sem , int val ) 
 { struct lock_class_key __key ;
   struct semaphore __constr_expr_0 ;
   unsigned long __cil_tmp5 ;
@@ -7098,7 +7098,7 @@ extern void netif_carrier_on(struct net_device * ) ;
 #line 2212
 extern void netif_carrier_off(struct net_device * ) ;
 #line 33 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/net/wireless/mwifiex/util.h"
-__inline static phys_addr_t *MWIFIEX_SKB_PACB(struct sk_buff *skb ) 
+ static phys_addr_t *MWIFIEX_SKB_PACB(struct sk_buff *skb ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   char (*__cil_tmp4)[48U] ;
@@ -7133,7 +7133,7 @@ extern int __pci_register_driver(struct pci_driver * , struct module * , char co
 #line 949
 extern void pci_unregister_driver(struct pci_driver * ) ;
 #line 105 "include/asm-generic/pci-dma-compat.h"
-__inline static int pci_set_dma_mask(struct pci_dev *dev , u64 mask ) 
+ static int pci_set_dma_mask(struct pci_dev *dev , u64 mask ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -7155,7 +7155,7 @@ __inline static int pci_set_dma_mask(struct pci_dev *dev , u64 mask )
 }
 }
 #line 110 "include/asm-generic/pci-dma-compat.h"
-__inline static int pci_set_consistent_dma_mask(struct pci_dev *dev , u64 mask ) 
+ static int pci_set_consistent_dma_mask(struct pci_dev *dev , u64 mask ) 
 { int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -7177,7 +7177,7 @@ __inline static int pci_set_consistent_dma_mask(struct pci_dev *dev , u64 mask )
 }
 }
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -7202,7 +7202,7 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1363 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -7227,7 +7227,7 @@ extern int request_threaded_irq(unsigned int  , irqreturn_t (*)(int  , void * ) 
                                 irqreturn_t (*)(int  , void * ) , unsigned long  ,
                                 char const   * , void * ) ;
 #line 132 "include/linux/interrupt.h"
-__inline static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
+ static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
                                 unsigned long flags , char const   *name , void *dev ) 
 { int tmp ;
   irqreturn_t (*__cil_tmp7)(int  , void * ) ;
@@ -7252,7 +7252,7 @@ extern void mwifiex_process_sleep_confirm_resp(struct mwifiex_adapter * , u8 * ,
 #line 760
 extern int mwifiex_deauthenticate(struct mwifiex_private * , u8 * ) ;
 #line 857 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/net/wireless/mwifiex/main.h"
-__inline static struct mwifiex_private *mwifiex_get_priv(struct mwifiex_adapter *adapter ,
+ static struct mwifiex_private *mwifiex_get_priv(struct mwifiex_adapter *adapter ,
                                                          enum mwifiex_bss_role bss_role ) 
 { int i ;
   struct mwifiex_private *tmp ;
@@ -20366,7 +20366,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 2761 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/14373/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/mwifiex/pcie.c.p"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {
@@ -20396,7 +20396,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 2863 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/14373/dscv_tempdir/dscv/ri/43_1a/drivers/net/wireless/mwifiex/pcie.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

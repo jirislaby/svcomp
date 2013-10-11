@@ -280,7 +280,7 @@ int floorButtons_spc2_3  ;
 #line 11 "Specification2_spec.c"
 int floorButtons_spc2_4  ;
 #line 15 "Specification2_spec.c"
-__inline void __utac_acc__Specification2_spec__1(void) 
+ void __utac_acc__Specification2_spec__1(void) 
 { 
 
   {
@@ -299,7 +299,7 @@ __inline void __utac_acc__Specification2_spec__1(void)
 }
 }
 #line 25 "Specification2_spec.c"
-__inline void __utac_acc__Specification2_spec__2(int floor ) 
+ void __utac_acc__Specification2_spec__2(int floor ) 
 { 
 
   {
@@ -339,7 +339,7 @@ __inline void __utac_acc__Specification2_spec__2(int floor )
 }
 }
 #line 35 "Specification2_spec.c"
-__inline void __utac_acc__Specification2_spec__3(void) 
+ void __utac_acc__Specification2_spec__3(void) 
 { int floor ;
   int tmp ;
   int tmp___0 ;
@@ -465,7 +465,7 @@ __inline void __utac_acc__Specification2_spec__3(void)
 }
 }
 #line 52 "Specification2_spec.c"
-__inline void __utac_acc__Specification2_spec__4(void) 
+ void __utac_acc__Specification2_spec__4(void) 
 { 
 
   {

@@ -7812,7 +7812,7 @@ int ldv_spin_trylock(void) ;
 #line 101 "include/linux/printk.h"
 extern int printk(char const   *  , ...) ;
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned int readl(void const volatile   *addr ) 
+ static unsigned int readl(void const volatile   *addr ) 
 { unsigned int ret ;
   unsigned int volatile   *__cil_tmp3 ;
 
@@ -7826,7 +7826,7 @@ __inline static unsigned int readl(void const volatile   *addr )
 }
 }
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writel(unsigned int val , void volatile   *addr ) 
+ static void writel(unsigned int val , void volatile   *addr ) 
 { unsigned int volatile   *__cil_tmp3 ;
 
   {
@@ -7855,7 +7855,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -7868,7 +7868,7 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 11 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8261/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/ttpci/budget-patch.c.p"
 void ldv_check_alloc_flags(gfp_t flags ) ;
 #line 12
@@ -7911,7 +7911,7 @@ extern int dvb_unregister_frontend(struct dvb_frontend * ) ;
 #line 397
 extern void dvb_frontend_detach(struct dvb_frontend * ) ;
 #line 110 "drivers/media/dvb/frontends/stv0299.h"
-__inline static int stv0299_writereg(struct dvb_frontend *fe , u8 reg , u8 val ) 
+ static int stv0299_writereg(struct dvb_frontend *fe , u8 reg , u8 val ) 
 { int r ;
   u8 buf[2U] ;
   unsigned long __cil_tmp6 ;
@@ -12124,7 +12124,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1116 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8261/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/ttpci/budget-patch.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {

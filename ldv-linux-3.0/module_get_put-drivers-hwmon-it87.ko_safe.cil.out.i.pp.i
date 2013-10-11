@@ -3622,7 +3622,7 @@ extern int kstrtoull(char const * , unsigned int , unsigned long long * ) ;
 # 196 "include/linux/kernel.h"
 extern int kstrtoll(char const * , unsigned int , long long * ) ;
 # 197 "include/linux/kernel.h"
-__inline static int kstrtoul(char const *s , unsigned int base , unsigned long *res )
+ static int kstrtoul(char const *s , unsigned int base , unsigned long *res )
 { int tmp ;
 
   {
@@ -3635,7 +3635,7 @@ __inline static int kstrtoul(char const *s , unsigned int base , unsigned long *
 }
 }
 # 210 "include/linux/kernel.h"
-__inline static int kstrtol(char const *s , unsigned int base , long *res )
+ static int kstrtol(char const *s , unsigned int base , long *res )
 { int tmp ;
 
   {
@@ -3656,7 +3656,7 @@ extern void *memset(void * , int , size_t ) ;
 # 64 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/string_64.h"
 extern int strcmp(char const * , char const * ) ;
 # 339 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void slow_down_io(void)
+ static void slow_down_io(void)
 {
 
   {
@@ -3669,7 +3669,7 @@ __inline static void slow_down_io(void)
 }
 }
 # 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const *ptr )
+ static long PTR_ERR(void const *ptr )
 {
 
   {
@@ -3678,7 +3678,7 @@ __inline static long PTR_ERR(void const *ptr )
 }
 }
 # 32 "include/linux/err.h"
-__inline static long IS_ERR(void const *ptr )
+ static long IS_ERR(void const *ptr )
 { long tmp ;
 
   {
@@ -3706,7 +3706,7 @@ extern void __release_region(struct resource * , resource_size_t , resource_size
 # 82 "include/linux/jiffies.h"
 extern unsigned long volatile jiffies ;
 # 310 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port )
+ static void outb(unsigned char value , int port )
 {
 
   {
@@ -3717,7 +3717,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 # 310 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port )
+ static unsigned char inb(int port )
 { unsigned char value ;
 
   {
@@ -3728,7 +3728,7 @@ __inline static unsigned char inb(int port )
 }
 }
 # 310 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void outb_p(unsigned char value , int port )
+ static void outb_p(unsigned char value , int port )
 {
 
   {
@@ -3743,7 +3743,7 @@ __inline static void outb_p(unsigned char value , int port )
 }
 }
 # 310 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static unsigned char inb_p(int port )
+ static unsigned char inb_p(int port )
 { unsigned char value ;
   unsigned char tmp ;
 
@@ -3787,7 +3787,7 @@ void ldv_module_put_and_exit(void) ;
 # 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t , gfp_t ) ;
 # 255 "include/linux/slub_def.h"
-__inline static void *kmalloc(size_t size , gfp_t flags )
+ static void *kmalloc(size_t size , gfp_t flags )
 { void *tmp___2 ;
 
   {
@@ -3800,7 +3800,7 @@ __inline static void *kmalloc(size_t size , gfp_t flags )
 }
 }
 # 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )
+ static void *kzalloc(size_t size , gfp_t flags )
 { void *tmp ;
 
   {
@@ -3847,7 +3847,7 @@ extern int platform_driver_register(struct platform_driver * ) ;
 # 130 "include/linux/platform_device.h"
 extern void platform_driver_unregister(struct platform_driver * ) ;
 # 138 "include/linux/platform_device.h"
-__inline static void *platform_get_drvdata(struct platform_device const *pdev )
+ static void *platform_get_drvdata(struct platform_device const *pdev )
 { void *tmp ;
 
   {
@@ -3860,7 +3860,7 @@ __inline static void *platform_get_drvdata(struct platform_device const *pdev )
 }
 }
 # 143 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data )
+ static void platform_set_drvdata(struct platform_device *pdev , void *data )
 {
 
   {
@@ -3877,7 +3877,7 @@ extern struct device *hwmon_device_register(struct device * ) ;
 # 21 "include/linux/hwmon.h"
 extern void hwmon_device_unregister(struct device * ) ;
 # 24 "include/linux/hwmon.h"
-__inline static int SENSORS_LIMIT(long value , long low , long high )
+ static int SENSORS_LIMIT(long value , long low , long high )
 {
 
   {
@@ -3909,7 +3909,7 @@ static unsigned short force_id ;
 # 75 "/anthill/stuff/tacas-comp/work/current--X--drivers/hwmon/it87.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/hwmon/it87.c.p"
 static struct platform_device *pdev ;
 # 88 "/anthill/stuff/tacas-comp/work/current--X--drivers/hwmon/it87.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/hwmon/it87.c.p"
-__inline static int superio_inb(int reg )
+ static int superio_inb(int reg )
 { unsigned char tmp ;
 
   {
@@ -3924,7 +3924,7 @@ __inline static int superio_inb(int reg )
 }
 }
 # 94 "/anthill/stuff/tacas-comp/work/current--X--drivers/hwmon/it87.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/hwmon/it87.c.p"
-__inline static void superio_outb(int reg , int val )
+ static void superio_outb(int reg , int val )
 {
 
   {
@@ -3969,7 +3969,7 @@ static int superio_inw(int reg )
 }
 }
 # 110 "/anthill/stuff/tacas-comp/work/current--X--drivers/hwmon/it87.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/hwmon/it87.c.p"
-__inline static void superio_select(int ldn )
+ static void superio_select(int ldn )
 {
 
   {
@@ -3984,7 +3984,7 @@ __inline static void superio_select(int ldn )
 }
 }
 # 116 "/anthill/stuff/tacas-comp/work/current--X--drivers/hwmon/it87.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/hwmon/it87.c.p"
-__inline static int superio_enter(void)
+ static int superio_enter(void)
 { struct resource *tmp ;
 
   {
@@ -4014,7 +4014,7 @@ __inline static int superio_enter(void)
 }
 }
 # 131 "/anthill/stuff/tacas-comp/work/current--X--drivers/hwmon/it87.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/hwmon/it87.c.p"
-__inline static void superio_exit(void)
+ static void superio_exit(void)
 {
 
   {
@@ -4101,7 +4101,7 @@ static int in_from_reg(struct it87_data const *data , int nr , int val )
 }
 }
 # 312 "/anthill/stuff/tacas-comp/work/current--X--drivers/hwmon/it87.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/hwmon/it87.c.p"
-__inline static u8 FAN_TO_REG(long rpm , int div )
+ static u8 FAN_TO_REG(long rpm , int div )
 { int tmp ;
   int tmp___0 ;
 
@@ -4127,7 +4127,7 @@ __inline static u8 FAN_TO_REG(long rpm , int div )
 }
 }
 # 321 "/anthill/stuff/tacas-comp/work/current--X--drivers/hwmon/it87.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/hwmon/it87.c.p"
-__inline static u16 FAN16_TO_REG(long rpm )
+ static u16 FAN16_TO_REG(long rpm )
 { int tmp ;
 
   {
@@ -4216,7 +4216,7 @@ static unsigned int const pwm_freq[8U] =
   { (unsigned int const )375000U, (unsigned int const )187500U, (unsigned int const )93750U, (unsigned int const )62500U,
         (unsigned int const )46875U, (unsigned int const )23437U, (unsigned int const )11718U, (unsigned int const )5859U};
 # 375 "/anthill/stuff/tacas-comp/work/current--X--drivers/hwmon/it87.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/hwmon/it87.c.p"
-__inline static int has_16bit_fans(struct it87_data const *data )
+ static int has_16bit_fans(struct it87_data const *data )
 { int tmp ;
 
   {
@@ -4272,7 +4272,7 @@ __inline static int has_16bit_fans(struct it87_data const *data )
 }
 }
 # 388 "/anthill/stuff/tacas-comp/work/current--X--drivers/hwmon/it87.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/hwmon/it87.c.p"
-__inline static int has_old_autopwm(struct it87_data const *data )
+ static int has_old_autopwm(struct it87_data const *data )
 { int tmp ;
 
   {

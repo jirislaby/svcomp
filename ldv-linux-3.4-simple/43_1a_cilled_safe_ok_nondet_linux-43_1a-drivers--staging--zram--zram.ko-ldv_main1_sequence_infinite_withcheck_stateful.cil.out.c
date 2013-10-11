@@ -3870,7 +3870,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 60 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
+ static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -3883,7 +3883,7 @@ __inline static void set_bit(unsigned int nr , unsigned long volatile   *addr )
 }
 }
 #line 82 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile   *addr ) 
+ static void __set_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -3910,7 +3910,7 @@ extern void *memset(void * , int  , size_t  ) ;
 #line 220 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
 extern unsigned long kernel_stack ;
 #line 222 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
-__inline static struct thread_info *current_thread_info(void) 
+ static struct thread_info *current_thread_info(void) 
 { struct thread_info *ti ;
   unsigned long pfo_ret__ ;
   unsigned long __cil_tmp3 ;
@@ -3987,7 +3987,7 @@ extern void _raw_spin_lock(raw_spinlock_t * ) ;
 #line 39
 extern void _raw_spin_unlock(raw_spinlock_t * ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -3996,7 +3996,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 283 "include/linux/spinlock.h"
-__inline static void ldv_spin_lock_1(spinlock_t *lock ) 
+ static void ldv_spin_lock_1(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -4011,9 +4011,9 @@ __inline static void ldv_spin_lock_1(spinlock_t *lock )
 }
 }
 #line 283
-__inline static void spin_lock(spinlock_t *lock ) ;
+ static void spin_lock(spinlock_t *lock ) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_5(spinlock_t *lock ) 
+ static void ldv_spin_unlock_5(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -4028,7 +4028,7 @@ __inline static void ldv_spin_unlock_5(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock ) ;
+ static void spin_unlock(spinlock_t *lock ) ;
 #line 67 "include/linux/rwsem.h"
 extern void __init_rwsem(struct rw_semaphore * , char const   * , struct lock_class_key * ) ;
 #line 80
@@ -4048,7 +4048,7 @@ extern void vfree(void const   * ) ;
 #line 324 "include/linux/gfp.h"
 extern struct page *alloc_pages_current(gfp_t  , unsigned int  ) ;
 #line 327 "include/linux/gfp.h"
-__inline static struct page *ldv_alloc_pages_11(gfp_t gfp_mask , unsigned int order ) 
+ static struct page *ldv_alloc_pages_11(gfp_t gfp_mask , unsigned int order ) 
 { struct page *tmp ;
 
   {
@@ -4061,7 +4061,7 @@ __inline static struct page *ldv_alloc_pages_11(gfp_t gfp_mask , unsigned int or
 }
 }
 #line 327
-__inline static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) ;
+ static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) ;
 #line 346
 extern unsigned long __get_free_pages(gfp_t  , unsigned int  ) ;
 #line 360
@@ -4083,7 +4083,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -4096,9 +4096,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5798/dscv_tempdir/dscv/ri/43_1a/drivers/staging/zram/zram_drv.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -4114,7 +4114,7 @@ extern void unregister_blkdev(unsigned int  , char const   * ) ;
 #line 33 "include/linux/mm.h"
 extern unsigned long totalram_pages ;
 #line 737 "include/linux/mm.h"
-__inline static void *lowmem_page_address(struct page  const  *page ) 
+ static void *lowmem_page_address(struct page  const  *page ) 
 { long __cil_tmp2 ;
   long __cil_tmp3 ;
   long __cil_tmp4 ;
@@ -4145,7 +4145,7 @@ __inline static void *lowmem_page_address(struct page  const  *page )
 }
 }
 #line 16 "include/linux/uaccess.h"
-__inline static void pagefault_disable(void) 
+ static void pagefault_disable(void) 
 { struct thread_info *tmp ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -4177,7 +4177,7 @@ __inline static void pagefault_disable(void)
 }
 }
 #line 26 "include/linux/uaccess.h"
-__inline static void pagefault_enable(void) 
+ static void pagefault_enable(void) 
 { struct thread_info *tmp ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -4211,7 +4211,7 @@ __inline static void pagefault_enable(void)
 }
 }
 #line 59 "include/linux/highmem.h"
-__inline static void *kmap_atomic(struct page *page ) 
+ static void *kmap_atomic(struct page *page ) 
 { void *tmp ;
   struct page  const  *__cil_tmp3 ;
 
@@ -4229,7 +4229,7 @@ __inline static void *kmap_atomic(struct page *page )
 }
 }
 #line 66 "include/linux/highmem.h"
-__inline static void __kunmap_atomic(void *addr ) 
+ static void __kunmap_atomic(void *addr ) 
 { 
 
   {
@@ -4248,7 +4248,7 @@ extern void add_disk(struct gendisk * ) ;
 #line 405
 extern void del_gendisk(struct gendisk * ) ;
 #line 434 "include/linux/genhd.h"
-__inline static void set_capacity(struct gendisk *disk , sector_t size ) 
+ static void set_capacity(struct gendisk *disk , sector_t size ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4271,7 +4271,7 @@ extern struct gendisk *alloc_disk(int  ) ;
 #line 606
 extern void put_disk(struct gendisk * ) ;
 #line 436 "include/linux/blkdev.h"
-__inline static void queue_flag_set_unlocked(unsigned int flag , struct request_queue *q ) 
+ static void queue_flag_set_unlocked(unsigned int flag , struct request_queue *q ) 
 { int __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -5242,7 +5242,7 @@ static void handle_uncompressed_page(struct zram *zram , struct bio_vec *bvec , 
 }
 }
 #line 216 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5798/dscv_tempdir/dscv/ri/43_1a/drivers/staging/zram/zram_drv.c.p"
-__inline static int is_partial_io(struct bio_vec *bvec ) 
+ static int is_partial_io(struct bio_vec *bvec ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -7095,7 +7095,7 @@ static void __zram_make_request(struct zram *zram , struct bio *bio , int rw )
 }
 }
 #line 551 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5798/dscv_tempdir/dscv/ri/43_1a/drivers/staging/zram/zram_drv.c.p"
-__inline static int valid_io_request(struct zram *zram , struct bio *bio ) 
+ static int valid_io_request(struct zram *zram , struct bio *bio ) 
 { long tmp ;
   long tmp___0 ;
   int tmp___1 ;
@@ -9232,7 +9232,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1107 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5798/dscv_tempdir/dscv/ri/43_1a/drivers/staging/zram/zram_drv.c.p"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { 
 
   {
@@ -9247,7 +9247,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 1149 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5798/dscv_tempdir/dscv/ri/43_1a/drivers/staging/zram/zram_drv.c.p"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { 
 
   {
@@ -9262,7 +9262,7 @@ __inline static void spin_unlock(spinlock_t *lock )
 }
 }
 #line 1214 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5798/dscv_tempdir/dscv/ri/43_1a/drivers/staging/zram/zram_drv.c.p"
-__inline static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) 
+ static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) 
 { struct page *tmp ;
 
   {
@@ -9277,7 +9277,7 @@ __inline static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order )
 }
 }
 #line 1225 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5798/dscv_tempdir/dscv/ri/43_1a/drivers/staging/zram/zram_drv.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -9307,7 +9307,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1281 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5798/dscv_tempdir/dscv/ri/43_1a/drivers/staging/zram/zram_drv.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {
@@ -9343,9 +9343,9 @@ extern int kstrtou16(char const   * , unsigned int  , u16 * ) ;
 #line 320
 extern int sprintf(char * , char const   *  , ...) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) ;
+ static void spin_lock(spinlock_t *lock ) ;
 #line 323
-__inline static void spin_unlock(spinlock_t *lock ) ;
+ static void spin_unlock(spinlock_t *lock ) ;
 #line 2063 "include/linux/fs.h"
 extern int fsync_bdev(struct block_device * ) ;
 #line 407 "include/linux/genhd.h"

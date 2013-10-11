@@ -2537,10 +2537,10 @@ struct mtdoops_context {
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -2560,9 +2560,9 @@ __inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int 
 }
 }
 #line 97
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 97 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -2581,9 +2581,9 @@ __inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , un
 }
 }
 #line 315
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -2602,9 +2602,9 @@ extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 #line 307 "include/linux/kernel.h"
 extern unsigned long simple_strtoul(char const   * , char ** , unsigned int  ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2626,9 +2626,9 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -2726,9 +2726,9 @@ extern unsigned long strlen(char const   *s ) ;
 #line 64
 extern int strcmp(char const   *cs , char const   *ct ) ;
 #line 17 "include/linux/math64.h"
-__inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder )  __attribute__((__no_instrument_function__)) ;
+ static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder )  __attribute__((__no_instrument_function__)) ;
 #line 17 "include/linux/math64.h"
-__inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder ) 
+ static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder ) 
 { unsigned long long __cil_tmp4 ;
   unsigned long long __cil_tmp5 ;
   u64 __cil_tmp6 ;
@@ -2749,9 +2749,9 @@ __inline static u64 div_u64_rem(u64 dividend , u32 divisor , u32 *remainder )
 }
 }
 #line 82
-__inline static u64 div_u64(u64 dividend , u32 divisor )  __attribute__((__no_instrument_function__)) ;
+ static u64 div_u64(u64 dividend , u32 divisor )  __attribute__((__no_instrument_function__)) ;
 #line 82 "include/linux/math64.h"
-__inline static u64 div_u64(u64 dividend , u32 divisor ) 
+ static u64 div_u64(u64 dividend , u32 divisor ) 
 { u32 remainder ;
   u64 tmp ;
 
@@ -2827,9 +2827,9 @@ extern int mtd_block_isbad(struct mtd_info *mtd , loff_t ofs ) ;
 #line 304
 extern int mtd_block_markbad(struct mtd_info *mtd , loff_t ofs ) ;
 #line 317
-__inline static uint32_t mtd_div_by_eb(uint64_t sz , struct mtd_info *mtd )  __attribute__((__no_instrument_function__)) ;
+ static uint32_t mtd_div_by_eb(uint64_t sz , struct mtd_info *mtd )  __attribute__((__no_instrument_function__)) ;
 #line 317 "include/linux/mtd/mtd.h"
-__inline static uint32_t mtd_div_by_eb(uint64_t sz , struct mtd_info *mtd ) 
+ static uint32_t mtd_div_by_eb(uint64_t sz , struct mtd_info *mtd ) 
 { uint32_t __base ;
   uint32_t __rem ;
   unsigned long __cil_tmp5 ;
@@ -2893,9 +2893,9 @@ extern void register_mtd_user(struct mtd_notifier *new ) ;
 #line 385
 extern int unregister_mtd_user(struct mtd_notifier *old ) ;
 #line 390
-__inline static int mtd_is_bitflip(int err )  __attribute__((__no_instrument_function__)) ;
+ static int mtd_is_bitflip(int err )  __attribute__((__no_instrument_function__)) ;
 #line 390 "include/linux/mtd/mtd.h"
-__inline static int mtd_is_bitflip(int err ) 
+ static int mtd_is_bitflip(int err ) 
 { 
 
   {

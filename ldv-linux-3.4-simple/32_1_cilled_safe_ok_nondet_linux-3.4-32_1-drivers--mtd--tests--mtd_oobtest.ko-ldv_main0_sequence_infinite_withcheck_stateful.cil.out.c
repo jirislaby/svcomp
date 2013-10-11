@@ -2514,9 +2514,9 @@ extern void *memset(void *s , int c , size_t n ) ;
 #line 60
 extern int memcmp(void const   *cs , void const   *ct , unsigned long count ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2525,9 +2525,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2575,9 +2575,9 @@ void cleanup_module(void) ;
 #line 246 "include/linux/mtd/mtd.h"
 extern int mtd_erase(struct mtd_info *mtd , struct erase_info *instr ) ;
 #line 259
-__inline static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops )  __attribute__((__no_instrument_function__)) ;
+ static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops )  __attribute__((__no_instrument_function__)) ;
 #line 259 "include/linux/mtd/mtd.h"
-__inline static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops ) 
+ static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops ) 
 { size_t tmp ;
   int tmp___0 ;
   unsigned long __cil_tmp6 ;
@@ -2636,9 +2636,9 @@ __inline static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd
 }
 }
 #line 268
-__inline static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops )  __attribute__((__no_instrument_function__)) ;
+ static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/mtd/mtd.h"
-__inline static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops ) 
+ static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops ) 
 { size_t tmp ;
   int tmp___0 ;
   unsigned long __cil_tmp6 ;
@@ -2728,10 +2728,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -2801,9 +2801,9 @@ static int vary_offset  ;
 #line 50 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5472/dscv_tempdir/dscv/ri/32_1/drivers/mtd/tests/mtd_oobtest.c.common.c"
 static unsigned long next  =    1UL;
 #line 52
-__inline static unsigned int simple_rand(void)  __attribute__((__no_instrument_function__)) ;
+ static unsigned int simple_rand(void)  __attribute__((__no_instrument_function__)) ;
 #line 52 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5472/dscv_tempdir/dscv/ri/32_1/drivers/mtd/tests/mtd_oobtest.c.common.c"
-__inline static unsigned int simple_rand(void) 
+ static unsigned int simple_rand(void) 
 { unsigned long __cil_tmp1 ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -2824,9 +2824,9 @@ __inline static unsigned int simple_rand(void)
 }
 }
 #line 58
-__inline static void simple_srand(unsigned long seed )  __attribute__((__no_instrument_function__)) ;
+ static void simple_srand(unsigned long seed )  __attribute__((__no_instrument_function__)) ;
 #line 58 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5472/dscv_tempdir/dscv/ri/32_1/drivers/mtd/tests/mtd_oobtest.c.common.c"
-__inline static void simple_srand(unsigned long seed ) 
+ static void simple_srand(unsigned long seed ) 
 { 
 
   {

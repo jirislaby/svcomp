@@ -2502,7 +2502,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 82 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile   *addr ) 
+ static void __set_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -2515,7 +2515,7 @@ __inline static void __set_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -2554,7 +2554,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3040/dscv_tempdir/dscv/ri/43_1a/drivers/input/misc/xen-kbdfront.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2578,7 +2578,7 @@ extern void input_unregister_device(struct input_dev * ) ;
 #line 1502
 extern void input_event(struct input_dev * , unsigned int  , unsigned int  , int  ) ;
 #line 1505 "include/linux/input.h"
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { int __cil_tmp4 ;
 
@@ -2594,7 +2594,7 @@ __inline static void input_report_key(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1510 "include/linux/input.h"
-__inline static void input_report_rel(struct input_dev *dev , unsigned int code ,
+ static void input_report_rel(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { 
 
@@ -2608,7 +2608,7 @@ __inline static void input_report_rel(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1515 "include/linux/input.h"
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { 
 
@@ -2622,7 +2622,7 @@ __inline static void input_report_abs(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {
@@ -2649,7 +2649,7 @@ extern void notify_remote_via_irq(int  ) ;
 #line 16 "include/xen/features.h"
 extern u8 xen_features[32U] ;
 #line 18 "include/xen/features.h"
-__inline static int xen_feature(int flag ) 
+ static int xen_feature(int flag ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   u8 __cil_tmp4 ;
@@ -2674,7 +2674,7 @@ extern int gnttab_end_foreign_access_ref(grant_ref_t  , int  ) ;
 #line 45 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/xen/page.h"
 extern unsigned long get_phys_to_machine(unsigned long  ) ;
 #line 57 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/xen/page.h"
-__inline static unsigned long pfn_to_mfn(unsigned long pfn ) 
+ static unsigned long pfn_to_mfn(unsigned long pfn ) 
 { unsigned long mfn ;
   int tmp ;
 
@@ -5064,7 +5064,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 787 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/3040/dscv_tempdir/dscv/ri/43_1a/drivers/input/misc/xen-kbdfront.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

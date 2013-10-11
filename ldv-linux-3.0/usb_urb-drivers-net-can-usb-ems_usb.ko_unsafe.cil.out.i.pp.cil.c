@@ -6359,7 +6359,7 @@ struct ems_usb {
 #line 1
 long __builtin_expect(long  , long  ) ;
 #line 59 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -6379,7 +6379,7 @@ __inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int 
 }
 }
 #line 97 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -6398,7 +6398,7 @@ __inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , un
 }
 }
 #line 246 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -6419,7 +6419,7 @@ __inline static int test_and_clear_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 309 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int ( __attribute__((__always_inline__)) constant_test_bit)(unsigned int nr ,
+ static int ( __attribute__((__always_inline__)) constant_test_bit)(unsigned int nr ,
                                                                             unsigned long const volatile   *addr ) 
 { unsigned int __cil_tmp3 ;
   unsigned long const volatile   *__cil_tmp4 ;
@@ -6457,7 +6457,7 @@ extern void warn_slowpath_null(char const   *file , int line ) ;
 #line 55 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/string_64.h"
 extern void *memset(void *s , int c , size_t n ) ;
 #line 23 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const   *v ) 
+ static int atomic_read(atomic_t const   *v ) 
 { int const   *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -6476,7 +6476,7 @@ __inline static int atomic_read(atomic_t const   *v )
 }
 }
 #line 35 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i ) 
+ static void atomic_set(atomic_t *v , int i ) 
 { 
 
   {
@@ -6487,7 +6487,7 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 #line 93 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v ) 
+ static void atomic_inc(atomic_t *v ) 
 { 
 
   {
@@ -6504,7 +6504,7 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 #line 105 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v ) 
+ static void atomic_dec(atomic_t *v ) 
 { 
 
   {
@@ -6521,7 +6521,7 @@ __inline static void atomic_dec(atomic_t *v )
 }
 }
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { 
 
   {
@@ -6536,7 +6536,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 93 "include/linux/spinlock.h"
 extern void __raw_spin_lock_init(raw_spinlock_t *lock , char const   *name , struct lock_class_key *key ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -6553,7 +6553,7 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -6567,7 +6567,7 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -6603,7 +6603,7 @@ extern void kfree_skb(struct sk_buff *skb ) ;
 #line 491
 extern void consume_skb(struct sk_buff *skb ) ;
 #line 1409 "include/linux/netdevice.h"
-__inline static struct netdev_queue *netdev_get_tx_queue(struct net_device  const  *dev ,
+ static struct netdev_queue *netdev_get_tx_queue(struct net_device  const  *dev ,
                                                          unsigned int index ) 
 { struct netdev_queue *__cil_tmp3 ;
   struct netdev_queue *__cil_tmp4 ;
@@ -6620,7 +6620,7 @@ __inline static struct netdev_queue *netdev_get_tx_queue(struct net_device  cons
 }
 }
 #line 1481 "include/linux/netdevice.h"
-__inline static void *netdev_priv(struct net_device  const  *dev ) 
+ static void *netdev_priv(struct net_device  const  *dev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   char *__cil_tmp4 ;
@@ -6646,7 +6646,7 @@ extern int netpoll_trap(void) ;
 #line 1788
 extern void __netif_schedule(struct Qdisc *q ) ;
 #line 1804 "include/linux/netdevice.h"
-__inline static void netif_tx_start_queue(struct netdev_queue *dev_queue ) 
+ static void netif_tx_start_queue(struct netdev_queue *dev_queue ) 
 { unsigned long *__cil_tmp2 ;
   unsigned long volatile   *__cil_tmp3 ;
 
@@ -6664,7 +6664,7 @@ __inline static void netif_tx_start_queue(struct netdev_queue *dev_queue )
 }
 }
 #line 1815 "include/linux/netdevice.h"
-__inline static void netif_start_queue(struct net_device *dev ) 
+ static void netif_start_queue(struct net_device *dev ) 
 { struct netdev_queue *tmp___7 ;
   struct net_device  const  *__cil_tmp3 ;
 
@@ -6682,7 +6682,7 @@ __inline static void netif_start_queue(struct net_device *dev )
 }
 }
 #line 1830 "include/linux/netdevice.h"
-__inline static void netif_tx_wake_queue(struct netdev_queue *dev_queue ) 
+ static void netif_tx_wake_queue(struct netdev_queue *dev_queue ) 
 { int tmp___7 ;
   int tmp___8 ;
   unsigned long *__cil_tmp4 ;
@@ -6729,7 +6729,7 @@ __inline static void netif_tx_wake_queue(struct netdev_queue *dev_queue )
 }
 }
 #line 1849 "include/linux/netdevice.h"
-__inline static void netif_wake_queue(struct net_device *dev ) 
+ static void netif_wake_queue(struct net_device *dev ) 
 { struct netdev_queue *tmp___7 ;
   struct net_device  const  *__cil_tmp3 ;
 
@@ -6747,7 +6747,7 @@ __inline static void netif_wake_queue(struct net_device *dev )
 }
 }
 #line 1864 "include/linux/netdevice.h"
-__inline static void netif_tx_stop_queue(struct netdev_queue *dev_queue ) 
+ static void netif_tx_stop_queue(struct netdev_queue *dev_queue ) 
 { int __ret_warn_on ;
   long tmp___7 ;
   long tmp___8 ;
@@ -6828,7 +6828,7 @@ __inline static void netif_tx_stop_queue(struct netdev_queue *dev_queue )
 }
 }
 #line 1880 "include/linux/netdevice.h"
-__inline static void netif_stop_queue(struct net_device *dev ) 
+ static void netif_stop_queue(struct net_device *dev ) 
 { struct netdev_queue *tmp___7 ;
   struct net_device  const  *__cil_tmp3 ;
 
@@ -6846,7 +6846,7 @@ __inline static void netif_stop_queue(struct net_device *dev )
 }
 }
 #line 1895 "include/linux/netdevice.h"
-__inline static int netif_tx_queue_stopped(struct netdev_queue  const  *dev_queue ) 
+ static int netif_tx_queue_stopped(struct netdev_queue  const  *dev_queue ) 
 { int tmp___7 ;
   unsigned long const   *__cil_tmp3 ;
   unsigned long const volatile   *__cil_tmp4 ;
@@ -6865,7 +6865,7 @@ __inline static int netif_tx_queue_stopped(struct netdev_queue  const  *dev_queu
 }
 }
 #line 1906 "include/linux/netdevice.h"
-__inline static int netif_queue_stopped(struct net_device  const  *dev ) 
+ static int netif_queue_stopped(struct net_device  const  *dev ) 
 { struct netdev_queue *tmp___7 ;
   int tmp___8 ;
   struct netdev_queue  const  *__cil_tmp4 ;
@@ -6886,7 +6886,7 @@ __inline static int netif_queue_stopped(struct net_device  const  *dev )
 #line 2064
 extern int netif_rx(struct sk_buff *skb ) ;
 #line 2234 "include/linux/netdevice.h"
-__inline static int netif_device_present(struct net_device *dev ) 
+ static int netif_device_present(struct net_device *dev ) 
 { int tmp___7 ;
   unsigned long *__cil_tmp3 ;
   unsigned long const volatile   *__cil_tmp4 ;
@@ -6909,11 +6909,11 @@ extern void netif_device_detach(struct net_device *dev ) ;
 #line 2459
 extern void unregister_netdev(struct net_device *dev ) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__ldv_model__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__ldv_model__)) ;
 #line 191
-__inline static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__ldv_model__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__ldv_model__)) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) 
+ static void *usb_get_intfdata(struct usb_interface *intf ) 
 { void *tmp___7 ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -6932,11 +6932,11 @@ __inline static void *usb_get_intfdata(struct usb_interface *intf )
 }
 }
 #line 196
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__ldv_model__)) ;
+ static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__ldv_model__)) ;
 #line 196
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__ldv_model__)) ;
+ static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__ldv_model__)) ;
 #line 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
 { struct device *__cil_tmp3 ;
 
   {
@@ -6951,7 +6951,7 @@ __inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
 }
 }
 #line 497 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
 { struct device  const  *__mptr ;
   struct device *__cil_tmp3 ;
   struct usb_device *__cil_tmp4 ;
@@ -6984,7 +6984,7 @@ __inline static struct usb_device *interface_to_usbdev(struct usb_interface *int
 #line 929
 extern int usb_register_driver(struct usb_driver * , struct module * , char const   * ) ;
 #line 931 "include/linux/usb.h"
-__inline static int usb_register(struct usb_driver *driver ) 
+ static int usb_register(struct usb_driver *driver ) 
 { int tmp___7 ;
 
   {
@@ -7003,7 +7003,7 @@ static struct lock_class_key __key___7  ;
 #line 1003 "include/linux/usb.h"
 static struct lock_class_key __key___8  ;
 #line 999 "include/linux/usb.h"
-__inline static void init_usb_anchor(struct usb_anchor *anchor ) 
+ static void init_usb_anchor(struct usb_anchor *anchor ) 
 { struct list_head *__cil_tmp2 ;
   wait_queue_head_t *__cil_tmp3 ;
   spinlock_t *__cil_tmp4 ;
@@ -7072,7 +7072,7 @@ __inline static void init_usb_anchor(struct usb_anchor *anchor )
 }
 }
 #line 1268 "include/linux/usb.h"
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context ) 
@@ -7096,7 +7096,7 @@ __inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev 
 }
 }
 #line 1309 "include/linux/usb.h"
-__inline static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
+ static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
                                       void *transfer_buffer , int buffer_length ,
                                       void (*complete_fn)(struct urb * ) , void *context ,
                                       int interval ) 
@@ -7179,7 +7179,7 @@ void usb_free_coherent(struct usb_device *dev , size_t size , void *addr , dma_a
 extern int usb_bulk_msg(struct usb_device *usb_dev , unsigned int pipe , void *data ,
                         int len , int *actual_length , int timeout ) ;
 #line 1526 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -7201,7 +7201,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 68 "include/linux/can/dev.h"
-__inline static int can_dropped_invalid_skb(struct net_device *dev , struct sk_buff *skb ) 
+ static int can_dropped_invalid_skb(struct net_device *dev , struct sk_buff *skb ) 
 { struct can_frame  const  *cf ;
   int tmp___7 ;
   long tmp___8 ;

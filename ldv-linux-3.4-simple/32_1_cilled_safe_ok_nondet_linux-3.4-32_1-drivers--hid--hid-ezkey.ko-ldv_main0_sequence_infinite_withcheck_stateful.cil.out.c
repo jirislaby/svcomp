@@ -2294,10 +2294,10 @@ extern int __attribute__((__warn_unused_result__))  __hid_register_driver(struct
 #line 722
 extern void hid_unregister_driver(struct hid_driver * ) ;
 #line 754
-__inline static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
+ static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
                                    unsigned long **bit , int *max , __u8 type , __u16 c )  __attribute__((__no_instrument_function__)) ;
 #line 754 "include/linux/hid.h"
-__inline static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
+ static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
                                    unsigned long **bit , int *max , __u8 type , __u16 c ) 
 { struct input_dev *input ;
   unsigned long __cil_tmp8 ;

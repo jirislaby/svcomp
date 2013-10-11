@@ -8918,10 +8918,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -8935,9 +8935,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -8953,9 +8953,9 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 #line 482 "include/linux/i2c.h"
-__inline static int i2c_adapter_id(struct i2c_adapter *adap )  __attribute__((__no_instrument_function__)) ;
+ static int i2c_adapter_id(struct i2c_adapter *adap )  __attribute__((__no_instrument_function__)) ;
 #line 482 "include/linux/i2c.h"
-__inline static int i2c_adapter_id(struct i2c_adapter *adap ) 
+ static int i2c_adapter_id(struct i2c_adapter *adap ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -9239,9 +9239,9 @@ static struct mb86a20s_config  const  pv_mb86a20s_config  =    {(u8 )16, (bool )
 static struct tda18271_config pv_tda18271_config  =    {& mb86a20s_tda18271_config, 0, (enum tda18271_i2c_gate )2, 0, (enum tda18271_small_i2c )3,
     0U, 0U};
 #line 155
-__inline static void print_err_status(struct cx231xx *dev , int packet , int status )  __attribute__((__no_instrument_function__)) ;
+ static void print_err_status(struct cx231xx *dev , int packet , int status )  __attribute__((__no_instrument_function__)) ;
 #line 155 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/14413/dscv_tempdir/dscv/ri/32_1/drivers/media/video/cx231xx/cx231xx-dvb.c.common.c"
-__inline static void print_err_status(struct cx231xx *dev , int packet , int status ) 
+ static void print_err_status(struct cx231xx *dev , int packet , int status ) 
 { char *errmsg ;
   unsigned int *__cil_tmp5 ;
   unsigned int __cil_tmp6 ;
@@ -9424,9 +9424,9 @@ __inline static void print_err_status(struct cx231xx *dev , int packet , int sta
 }
 }
 #line 193
-__inline static int dvb_isoc_copy(struct cx231xx *dev , struct urb *urb )  __attribute__((__no_instrument_function__)) ;
+ static int dvb_isoc_copy(struct cx231xx *dev , struct urb *urb )  __attribute__((__no_instrument_function__)) ;
 #line 193 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/14413/dscv_tempdir/dscv/ri/32_1/drivers/media/video/cx231xx/cx231xx-dvb.c.common.c"
-__inline static int dvb_isoc_copy(struct cx231xx *dev , struct urb *urb ) 
+ static int dvb_isoc_copy(struct cx231xx *dev , struct urb *urb ) 
 { int i ;
   int status ;
   unsigned long __cil_tmp5 ;
@@ -9667,9 +9667,9 @@ __inline static int dvb_isoc_copy(struct cx231xx *dev , struct urb *urb )
 }
 }
 #line 227
-__inline static int dvb_bulk_copy(struct cx231xx *dev , struct urb *urb )  __attribute__((__no_instrument_function__)) ;
+ static int dvb_bulk_copy(struct cx231xx *dev , struct urb *urb )  __attribute__((__no_instrument_function__)) ;
 #line 227 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/14413/dscv_tempdir/dscv/ri/32_1/drivers/media/video/cx231xx/cx231xx-dvb.c.common.c"
-__inline static int dvb_bulk_copy(struct cx231xx *dev , struct urb *urb ) 
+ static int dvb_bulk_copy(struct cx231xx *dev , struct urb *urb ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   enum cx231xx_dev_state __cil_tmp5 ;

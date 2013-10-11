@@ -1511,9 +1511,9 @@ extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 #line 93 "include/linux/spinlock.h"
 extern void __raw_spin_lock_init(raw_spinlock_t *lock , char const   *name , struct lock_class_key *key ) ;
 #line 272
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -1542,9 +1542,9 @@ extern struct resource *__request_region(struct resource * , resource_size_t sta
 #line 192
 extern void __release_region(struct resource * , resource_size_t  , resource_size_t  ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -1559,9 +1559,9 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308
-__inline static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -1584,10 +1584,10 @@ void cleanup_module(void) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -1601,9 +1601,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 243 "include/linux/slab.h"
-__inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kmalloc_array(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 243 "include/linux/slab.h"
-__inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
+ static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned long __cil_tmp5 ;
   size_t __cil_tmp6 ;
@@ -1636,9 +1636,9 @@ __inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 256
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kcalloc(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 256 "include/linux/slab.h"
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
+ static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp5 ;
 
@@ -1654,9 +1654,9 @@ __inline static void *kcalloc(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 349
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -1682,9 +1682,9 @@ extern struct comedi_lrange  const  range_unipolar5 ;
 #line 368 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/comedi/drivers/../comedidev.h"
 static struct lock_class_key __key___2  ;
 #line 354
-__inline static int alloc_subdevices(struct comedi_device *dev , unsigned int num_subdevices )  __attribute__((__no_instrument_function__)) ;
+ static int alloc_subdevices(struct comedi_device *dev , unsigned int num_subdevices )  __attribute__((__no_instrument_function__)) ;
 #line 354 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/comedi/drivers/../comedidev.h"
-__inline static int alloc_subdevices(struct comedi_device *dev , unsigned int num_subdevices ) 
+ static int alloc_subdevices(struct comedi_device *dev , unsigned int num_subdevices ) 
 { unsigned int i ;
   void *tmp ;
   unsigned long __cil_tmp5 ;
@@ -1876,9 +1876,9 @@ __inline static int alloc_subdevices(struct comedi_device *dev , unsigned int nu
 }
 }
 #line 374
-__inline static int alloc_private(struct comedi_device *dev , int size )  __attribute__((__no_instrument_function__)) ;
+ static int alloc_private(struct comedi_device *dev , int size )  __attribute__((__no_instrument_function__)) ;
 #line 374 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/comedi/drivers/../comedidev.h"
-__inline static int alloc_private(struct comedi_device *dev , int size ) 
+ static int alloc_private(struct comedi_device *dev , int size ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   size_t __cil_tmp5 ;
@@ -1928,14 +1928,14 @@ extern int __attribute__((__warn_unused_result__))  request_threaded_irq(unsigne
                                                                          char const   *name ,
                                                                          void *dev ) ;
 #line 131
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
                                                                          char const   *name ,
                                                                          void *dev )  __attribute__((__no_instrument_function__)) ;
 #line 131 "include/linux/interrupt.h"
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,

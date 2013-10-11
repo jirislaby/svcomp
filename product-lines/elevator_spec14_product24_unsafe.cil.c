@@ -591,7 +591,7 @@ int isExecutiveFloor(int floorID ) ;
 #line 63 "Elevator.h"
 int blocked  =    0;
 #line 11 "Specification14_spec.c"
-__inline void __utac_acc__Specification14_spec__1(void) 
+ void __utac_acc__Specification14_spec__1(void) 
 { int tmp ;
   int tmp___0 ;
   int tmp___1 ;

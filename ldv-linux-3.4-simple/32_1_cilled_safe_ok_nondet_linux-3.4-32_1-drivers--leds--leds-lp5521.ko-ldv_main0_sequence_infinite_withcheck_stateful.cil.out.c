@@ -2670,9 +2670,9 @@ struct __anonstruct_241 {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2696,11 +2696,11 @@ extern int __attribute__((__warn_unused_result__))  _kstrtoul(char const   *s , 
 extern int __attribute__((__warn_unused_result__))  kstrtoull(char const   *s , unsigned int base ,
                                                               unsigned long long *res ) ;
 #line 220
-__inline static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
+ static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
                                                                       unsigned int base ,
                                                                       unsigned long *res )  __attribute__((__no_instrument_function__)) ;
 #line 220 "include/linux/kernel.h"
-__inline static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
+ static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
                                                                       unsigned int base ,
                                                                       unsigned long *res ) 
 { int tmp ;
@@ -2797,9 +2797,9 @@ extern s32 i2c_smbus_write_byte_data(struct i2c_client  const  *client , u8 comm
 extern s32 i2c_smbus_write_i2c_block_data(struct i2c_client  const  *client , u8 command ,
                                           u8 length , u8 const   *values ) ;
 #line 242
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2821,9 +2821,9 @@ __inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )
 }
 }
 #line 247
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2858,10 +2858,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -2875,9 +2875,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -2893,9 +2893,9 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 #line 126 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12601/dscv_tempdir/dscv/ri/32_1/drivers/leds/leds-lp5521.c.common.c"
-__inline static struct lp5521_led *cdev_to_led(struct led_classdev *cdev )  __attribute__((__no_instrument_function__)) ;
+ static struct lp5521_led *cdev_to_led(struct led_classdev *cdev )  __attribute__((__no_instrument_function__)) ;
 #line 126 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12601/dscv_tempdir/dscv/ri/32_1/drivers/leds/leds-lp5521.c.common.c"
-__inline static struct lp5521_led *cdev_to_led(struct led_classdev *cdev ) 
+ static struct lp5521_led *cdev_to_led(struct led_classdev *cdev ) 
 { struct led_classdev  const  *__mptr ;
   struct lp5521_led *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2929,9 +2929,9 @@ __inline static struct lp5521_led *cdev_to_led(struct led_classdev *cdev )
 }
 }
 #line 131
-__inline static struct lp5521_chip *engine_to_lp5521(struct lp5521_engine *engine )  __attribute__((__no_instrument_function__)) ;
+ static struct lp5521_chip *engine_to_lp5521(struct lp5521_engine *engine )  __attribute__((__no_instrument_function__)) ;
 #line 131 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12601/dscv_tempdir/dscv/ri/32_1/drivers/leds/leds-lp5521.c.common.c"
-__inline static struct lp5521_chip *engine_to_lp5521(struct lp5521_engine *engine ) 
+ static struct lp5521_chip *engine_to_lp5521(struct lp5521_engine *engine ) 
 { struct lp5521_engine  const  *__mptr ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2977,9 +2977,9 @@ __inline static struct lp5521_chip *engine_to_lp5521(struct lp5521_engine *engin
 }
 }
 #line 137
-__inline static struct lp5521_chip *led_to_lp5521(struct lp5521_led *led )  __attribute__((__no_instrument_function__)) ;
+ static struct lp5521_chip *led_to_lp5521(struct lp5521_led *led )  __attribute__((__no_instrument_function__)) ;
 #line 137 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12601/dscv_tempdir/dscv/ri/32_1/drivers/leds/leds-lp5521.c.common.c"
-__inline static struct lp5521_chip *led_to_lp5521(struct lp5521_led *led ) 
+ static struct lp5521_chip *led_to_lp5521(struct lp5521_led *led ) 
 { struct lp5521_led  const  *__mptr ;
   int __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3024,9 +3024,9 @@ __inline static struct lp5521_chip *led_to_lp5521(struct lp5521_led *led )
 #line 143
 static void lp5521_led_brightness_work(struct work_struct *work ) ;
 #line 145
-__inline static int lp5521_write(struct i2c_client *client , u8 reg , u8 value )  __attribute__((__no_instrument_function__)) ;
+ static int lp5521_write(struct i2c_client *client , u8 reg , u8 value )  __attribute__((__no_instrument_function__)) ;
 #line 145 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12601/dscv_tempdir/dscv/ri/32_1/drivers/leds/leds-lp5521.c.common.c"
-__inline static int lp5521_write(struct i2c_client *client , u8 reg , u8 value ) 
+ static int lp5521_write(struct i2c_client *client , u8 reg , u8 value ) 
 { s32 tmp___7 ;
   struct i2c_client  const  *__cil_tmp5 ;
 
@@ -5174,10 +5174,10 @@ static void lp5521_write_program_memory(struct i2c_client *cl , u8 base , u8 *rg
 }
 }
 #line 564
-__inline static struct lp5521_led_pattern *lp5521_get_pattern(struct lp5521_chip *chip ,
+ static struct lp5521_led_pattern *lp5521_get_pattern(struct lp5521_chip *chip ,
                                                               u8 offset )  __attribute__((__no_instrument_function__)) ;
 #line 564 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12601/dscv_tempdir/dscv/ri/32_1/drivers/leds/leds-lp5521.c.common.c"
-__inline static struct lp5521_led_pattern *lp5521_get_pattern(struct lp5521_chip *chip ,
+ static struct lp5521_led_pattern *lp5521_get_pattern(struct lp5521_chip *chip ,
                                                               u8 offset ) 
 { struct lp5521_led_pattern *ptn ;
   int __cil_tmp4 ;

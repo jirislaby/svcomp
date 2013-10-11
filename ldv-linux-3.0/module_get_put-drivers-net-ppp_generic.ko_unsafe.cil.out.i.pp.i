@@ -6155,7 +6155,7 @@ struct compressor_entry {
 # 1 "<compiler builtins>"
 
 # 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )
+ static void INIT_LIST_HEAD(struct list_head *list )
 {
 
   {
@@ -6170,7 +6170,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 # 47 "include/linux/list.h"
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 # 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head )
+ static void list_add(struct list_head *new , struct list_head *head )
 {
 
   {
@@ -6183,7 +6183,7 @@ __inline static void list_add(struct list_head *new , struct list_head *head )
 }
 }
 # 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )
+ static void list_add_tail(struct list_head *new , struct list_head *head )
 {
 
   {
@@ -6200,7 +6200,7 @@ extern void __list_del_entry(struct list_head * ) ;
 # 112 "include/linux/list.h"
 extern void list_del(struct list_head * ) ;
 # 153 "include/linux/list.h"
-__inline static void list_move(struct list_head *list , struct list_head *head )
+ static void list_move(struct list_head *list , struct list_head *head )
 {
 
   {
@@ -6215,7 +6215,7 @@ __inline static void list_move(struct list_head *list , struct list_head *head )
 }
 }
 # 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head const *head )
+ static int list_empty(struct list_head const *head )
 {
 
   {
@@ -6224,7 +6224,7 @@ __inline static int list_empty(struct list_head const *head )
 }
 }
 # 60 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void set_bit(unsigned int nr , unsigned long volatile *addr )
+ static void set_bit(unsigned int nr , unsigned long volatile *addr )
 {
 
   {
@@ -6235,7 +6235,7 @@ __inline static void set_bit(unsigned int nr , unsigned long volatile *addr )
 }
 }
 # 98 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void clear_bit(int nr , unsigned long volatile *addr )
+ static void clear_bit(int nr , unsigned long volatile *addr )
 {
 
   {
@@ -6246,7 +6246,7 @@ __inline static void clear_bit(int nr , unsigned long volatile *addr )
 }
 }
 # 246 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int test_and_clear_bit(int nr , unsigned long volatile *addr )
+ static int test_and_clear_bit(int nr , unsigned long volatile *addr )
 { int oldbit ;
 
   {
@@ -6258,7 +6258,7 @@ __inline static int test_and_clear_bit(int nr , unsigned long volatile *addr )
 }
 }
 # 315 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile *addr )
+ static int variable_test_bit(int nr , unsigned long const volatile *addr )
 { int oldbit ;
 
   {
@@ -6270,7 +6270,7 @@ __inline static int variable_test_bit(int nr , unsigned long const volatile *add
 }
 }
 # 46 "include/linux/swab.h"
-__inline static __u16 __fswab16(__u16 val )
+ static __u16 __fswab16(__u16 val )
 {
 
   {
@@ -6279,7 +6279,7 @@ __inline static __u16 __fswab16(__u16 val )
 }
 }
 # 148 "include/linux/swab.h"
-__inline static __u16 __swab16p(__u16 const *p )
+ static __u16 __swab16p(__u16 const *p )
 { __u16 tmp ;
 
   {
@@ -6292,7 +6292,7 @@ __inline static __u16 __swab16p(__u16 const *p )
 }
 }
 # 87 "include/linux/byteorder/little_endian.h"
-__inline static __u16 __be16_to_cpup(__be16 const *p )
+ static __u16 __be16_to_cpup(__be16 const *p )
 { __u16 tmp ;
 
   {
@@ -6319,7 +6319,7 @@ extern void __bad_percpu_size(void) ;
 # 10 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 # 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void)
+ static struct task_struct *get_current(void)
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -6372,7 +6372,7 @@ extern void *memset(void * , int , size_t ) ;
 # 61 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/string_64.h"
 extern size_t strlen(char const * ) ;
 # 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const *ptr )
+ static long PTR_ERR(void const *ptr )
 {
 
   {
@@ -6381,7 +6381,7 @@ __inline static long PTR_ERR(void const *ptr )
 }
 }
 # 32 "include/linux/err.h"
-__inline static long IS_ERR(void const *ptr )
+ static long IS_ERR(void const *ptr )
 { long tmp ;
 
   {
@@ -6394,7 +6394,7 @@ __inline static long IS_ERR(void const *ptr )
 }
 }
 # 23 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const *v )
+ static int atomic_read(atomic_t const *v )
 {
 
   {
@@ -6403,7 +6403,7 @@ __inline static int atomic_read(atomic_t const *v )
 }
 }
 # 35 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i )
+ static void atomic_set(atomic_t *v , int i )
 {
 
   {
@@ -6414,7 +6414,7 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 # 93 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v )
+ static void atomic_inc(atomic_t *v )
 {
 
   {
@@ -6425,7 +6425,7 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 # 105 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v )
+ static void atomic_dec(atomic_t *v )
 {
 
   {
@@ -6436,7 +6436,7 @@ __inline static void atomic_dec(atomic_t *v )
 }
 }
 # 119 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_dec_and_test(atomic_t *v )
+ static int atomic_dec_and_test(atomic_t *v )
 { unsigned char c ;
 
   {
@@ -6448,7 +6448,7 @@ __inline static int atomic_dec_and_test(atomic_t *v )
 }
 }
 # 19 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic64_64.h"
-__inline static long atomic64_read(atomic64_t const *v )
+ static long atomic64_read(atomic64_t const *v )
 {
 
   {
@@ -6457,7 +6457,7 @@ __inline static long atomic64_read(atomic64_t const *v )
 }
 }
 # 27 "include/asm-generic/atomic-long.h"
-__inline static long atomic_long_read(atomic_long_t *l )
+ static long atomic_long_read(atomic_long_t *l )
 { atomic64_t *v ;
   long tmp ;
 
@@ -6473,7 +6473,7 @@ __inline static long atomic_long_read(atomic_long_t *l )
 }
 }
 # 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag )
+ static int test_ti_thread_flag(struct thread_info *ti , int flag )
 { int tmp ;
 
   {
@@ -6515,7 +6515,7 @@ extern void _raw_read_unlock_bh(rwlock_t * ) ;
 # 33 "include/linux/rwlock_api_smp.h"
 extern void _raw_write_unlock_bh(rwlock_t * ) ;
 # 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 {
 
   {
@@ -6524,7 +6524,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 # 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock )
+ static void spin_lock(spinlock_t *lock )
 {
 
   {
@@ -6537,7 +6537,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 # 288 "include/linux/spinlock.h"
-__inline static void spin_lock_bh(spinlock_t *lock )
+ static void spin_lock_bh(spinlock_t *lock )
 {
 
   {
@@ -6550,7 +6550,7 @@ __inline static void spin_lock_bh(spinlock_t *lock )
 }
 }
 # 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock )
+ static void spin_unlock(spinlock_t *lock )
 {
 
   {
@@ -6563,7 +6563,7 @@ __inline static void spin_unlock(spinlock_t *lock )
 }
 }
 # 328 "include/linux/spinlock.h"
-__inline static void spin_unlock_bh(spinlock_t *lock )
+ static void spin_unlock_bh(spinlock_t *lock )
 {
 
   {
@@ -6604,7 +6604,7 @@ extern void up_write(struct rw_semaphore * ) ;
 # 82 "include/linux/jiffies.h"
 extern unsigned long volatile jiffies ;
 # 110 "include/linux/rcupdate.h"
-__inline static void __rcu_read_lock(void)
+ static void __rcu_read_lock(void)
 {
 
   {
@@ -6613,7 +6613,7 @@ __inline static void __rcu_read_lock(void)
 }
 }
 # 115 "include/linux/rcupdate.h"
-__inline static void __rcu_read_unlock(void)
+ static void __rcu_read_unlock(void)
 {
 
   {
@@ -6626,7 +6626,7 @@ extern struct lockdep_map rcu_lock_map ;
 # 200 "include/linux/rcupdate.h"
 extern int debug_lockdep_rcu_enabled(void) ;
 # 214 "include/linux/rcupdate.h"
-__inline static int rcu_read_lock_held(void)
+ static int rcu_read_lock_held(void)
 { int tmp ;
   int tmp___0 ;
 
@@ -6651,7 +6651,7 @@ __inline static int rcu_read_lock_held(void)
 }
 }
 # 590 "include/linux/rcupdate.h"
-__inline static void rcu_read_lock(void)
+ static void rcu_read_lock(void)
 {
 
   {
@@ -6666,7 +6666,7 @@ __inline static void rcu_read_lock(void)
 }
 }
 # 612 "include/linux/rcupdate.h"
-__inline static void rcu_read_unlock(void)
+ static void rcu_read_unlock(void)
 {
 
   {
@@ -6687,7 +6687,7 @@ extern int __request_module(bool , char const * , ...) ;
 # 99 "include/linux/module.h"
 extern struct module __this_module ;
 # 537 "include/linux/module.h"
-__inline static int ldv_try_module_get_7(struct module *module ) ;
+ static int ldv_try_module_get_7(struct module *module ) ;
 # 543 "include/linux/module.h"
 void ldv_module_put_1(struct module *ldv_func_arg1 ) ;
 # 547 "include/linux/module.h"
@@ -6727,7 +6727,7 @@ extern int net_ratelimit(void) ;
 # 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t , gfp_t ) ;
 # 255 "include/linux/slub_def.h"
-__inline static void *kmalloc(size_t size , gfp_t flags )
+ static void *kmalloc(size_t size , gfp_t flags )
 { void *tmp___2 ;
 
   {
@@ -6740,7 +6740,7 @@ __inline static void *kmalloc(size_t size , gfp_t flags )
 }
 }
 # 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )
+ static void *kzalloc(size_t size , gfp_t flags )
 { void *tmp ;
 
   {
@@ -6757,7 +6757,7 @@ extern unsigned long _copy_to_user(void * , void const * , unsigned int ) ;
 # 42 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_from_user(void * , void const * , unsigned int ) ;
 # 46 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long copy_from_user(void *to , void const *from , unsigned long n )
+ static unsigned long copy_from_user(void *to , void const *from , unsigned long n )
 { int sz ;
   unsigned long tmp ;
   int __ret_warn_on ;
@@ -6821,7 +6821,7 @@ __inline static unsigned long copy_from_user(void *to , void const *from , unsig
 }
 }
 # 63 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const *src , unsigned int size )
+ static int copy_to_user(void *dst , void const *src , unsigned int size )
 { unsigned long tmp ;
 
   {
@@ -6849,7 +6849,7 @@ extern void kfree_skb(struct sk_buff * ) ;
 # 493 "include/linux/skbuff.h"
 extern struct sk_buff *__alloc_skb(unsigned int , gfp_t , int , int ) ;
 # 495 "include/linux/skbuff.h"
-__inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )
+ static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )
 { struct sk_buff *tmp ;
 
   {
@@ -6864,7 +6864,7 @@ __inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )
 # 516 "include/linux/skbuff.h"
 extern int pskb_expand_head(struct sk_buff * , int , int , gfp_t ) ;
 # 568 "include/linux/skbuff.h"
-__inline static unsigned char *skb_end_pointer(struct sk_buff const *skb )
+ static unsigned char *skb_end_pointer(struct sk_buff const *skb )
 {
 
   {
@@ -6873,7 +6873,7 @@ __inline static unsigned char *skb_end_pointer(struct sk_buff const *skb )
 }
 }
 # 593 "include/linux/skbuff.h"
-__inline static int skb_queue_empty(struct sk_buff_head const *list )
+ static int skb_queue_empty(struct sk_buff_head const *list )
 {
 
   {
@@ -6882,7 +6882,7 @@ __inline static int skb_queue_empty(struct sk_buff_head const *list )
 }
 }
 # 605 "include/linux/skbuff.h"
-__inline static bool skb_queue_is_last(struct sk_buff_head const *list , struct sk_buff const *skb )
+ static bool skb_queue_is_last(struct sk_buff_head const *list , struct sk_buff const *skb )
 {
 
   {
@@ -6891,7 +6891,7 @@ __inline static bool skb_queue_is_last(struct sk_buff_head const *list , struct 
 }
 }
 # 632 "include/linux/skbuff.h"
-__inline static struct sk_buff *skb_queue_next(struct sk_buff_head const *list ,
+ static struct sk_buff *skb_queue_next(struct sk_buff_head const *list ,
                                                struct sk_buff const *skb )
 { bool tmp ;
   long tmp___0 ;
@@ -6919,7 +6919,7 @@ __inline static struct sk_buff *skb_queue_next(struct sk_buff_head const *list ,
 }
 }
 # 686 "include/linux/skbuff.h"
-__inline static int skb_cloned(struct sk_buff const *skb )
+ static int skb_cloned(struct sk_buff const *skb )
 { unsigned char *tmp ;
   int tmp___0 ;
   int tmp___1 ;
@@ -6950,7 +6950,7 @@ __inline static int skb_cloned(struct sk_buff const *skb )
 }
 }
 # 699 "include/linux/skbuff.h"
-__inline static int skb_header_cloned(struct sk_buff const *skb )
+ static int skb_header_cloned(struct sk_buff const *skb )
 { int dataref ;
   unsigned char *tmp ;
 
@@ -6975,7 +6975,7 @@ __inline static int skb_header_cloned(struct sk_buff const *skb )
 }
 }
 # 808 "include/linux/skbuff.h"
-__inline static struct sk_buff *skb_peek(struct sk_buff_head *list_ )
+ static struct sk_buff *skb_peek(struct sk_buff_head *list_ )
 { struct sk_buff *list ;
 
   {
@@ -6993,7 +6993,7 @@ __inline static struct sk_buff *skb_peek(struct sk_buff_head *list_ )
 }
 }
 # 843 "include/linux/skbuff.h"
-__inline static __u32 skb_queue_len(struct sk_buff_head const *list_ )
+ static __u32 skb_queue_len(struct sk_buff_head const *list_ )
 {
 
   {
@@ -7002,7 +7002,7 @@ __inline static __u32 skb_queue_len(struct sk_buff_head const *list_ )
 }
 }
 # 858 "include/linux/skbuff.h"
-__inline static void __skb_queue_head_init(struct sk_buff_head *list )
+ static void __skb_queue_head_init(struct sk_buff_head *list )
 { struct sk_buff *tmp ;
 
   {
@@ -7019,7 +7019,7 @@ __inline static void __skb_queue_head_init(struct sk_buff_head *list )
 }
 }
 # 872 "include/linux/skbuff.h"
-__inline static void skb_queue_head_init(struct sk_buff_head *list )
+ static void skb_queue_head_init(struct sk_buff_head *list )
 { struct lock_class_key __key ;
 
   {
@@ -7036,7 +7036,7 @@ __inline static void skb_queue_head_init(struct sk_buff_head *list )
 }
 }
 # 892 "include/linux/skbuff.h"
-__inline static void __skb_insert(struct sk_buff *newsk , struct sk_buff *prev , struct sk_buff *next ,
+ static void __skb_insert(struct sk_buff *newsk , struct sk_buff *prev , struct sk_buff *next ,
                                   struct sk_buff_head *list )
 { struct sk_buff *tmp ;
 
@@ -7058,7 +7058,7 @@ __inline static void __skb_insert(struct sk_buff *newsk , struct sk_buff *prev ,
 }
 }
 # 1000 "include/linux/skbuff.h"
-__inline static void __skb_queue_before(struct sk_buff_head *list , struct sk_buff *next ,
+ static void __skb_queue_before(struct sk_buff_head *list , struct sk_buff *next ,
                                         struct sk_buff *newsk )
 {
 
@@ -7076,7 +7076,7 @@ extern void skb_queue_head(struct sk_buff_head * , struct sk_buff * ) ;
 # 1034 "include/linux/skbuff.h"
 extern void skb_queue_tail(struct sk_buff_head * , struct sk_buff * ) ;
 # 1046 "include/linux/skbuff.h"
-__inline static void __skb_unlink(struct sk_buff *skb , struct sk_buff_head *list )
+ static void __skb_unlink(struct sk_buff *skb , struct sk_buff_head *list )
 { struct sk_buff *next ;
   struct sk_buff *prev ;
   struct sk_buff *tmp ;
@@ -7105,7 +7105,7 @@ __inline static void __skb_unlink(struct sk_buff *skb , struct sk_buff_head *lis
 # 1066 "include/linux/skbuff.h"
 extern struct sk_buff *skb_dequeue(struct sk_buff_head * ) ;
 # 1093 "include/linux/skbuff.h"
-__inline static int skb_is_nonlinear(struct sk_buff const *skb )
+ static int skb_is_nonlinear(struct sk_buff const *skb )
 {
 
   {
@@ -7114,7 +7114,7 @@ __inline static int skb_is_nonlinear(struct sk_buff const *skb )
 }
 }
 # 1098 "include/linux/skbuff.h"
-__inline static unsigned int skb_headlen(struct sk_buff const *skb )
+ static unsigned int skb_headlen(struct sk_buff const *skb )
 {
 
   {
@@ -7129,7 +7129,7 @@ extern unsigned char *skb_push(struct sk_buff * , unsigned int ) ;
 # 1185 "include/linux/skbuff.h"
 extern unsigned char *skb_pull(struct sk_buff * , unsigned int ) ;
 # 1186 "include/linux/skbuff.h"
-__inline static unsigned char *__skb_pull(struct sk_buff *skb , unsigned int len )
+ static unsigned char *__skb_pull(struct sk_buff *skb , unsigned int len )
 { long tmp ;
   unsigned char *tmp___0 ;
 
@@ -7162,7 +7162,7 @@ __inline static unsigned char *__skb_pull(struct sk_buff *skb , unsigned int len
 # 1198 "include/linux/skbuff.h"
 extern unsigned char *__pskb_pull_tail(struct sk_buff * , int ) ;
 # 1214 "include/linux/skbuff.h"
-__inline static int pskb_may_pull(struct sk_buff *skb , unsigned int len )
+ static int pskb_may_pull(struct sk_buff *skb , unsigned int len )
 { unsigned int tmp ;
   long tmp___0 ;
   long tmp___1 ;
@@ -7205,7 +7205,7 @@ __inline static int pskb_may_pull(struct sk_buff *skb , unsigned int len )
 }
 }
 # 1229 "include/linux/skbuff.h"
-__inline static unsigned int skb_headroom(struct sk_buff const *skb )
+ static unsigned int skb_headroom(struct sk_buff const *skb )
 {
 
   {
@@ -7214,7 +7214,7 @@ __inline static unsigned int skb_headroom(struct sk_buff const *skb )
 }
 }
 # 1240 "include/linux/skbuff.h"
-__inline static int skb_tailroom(struct sk_buff const *skb )
+ static int skb_tailroom(struct sk_buff const *skb )
 { int tmp___0 ;
   int tmp___1 ;
 
@@ -7236,7 +7236,7 @@ __inline static int skb_tailroom(struct sk_buff const *skb )
 }
 }
 # 1253 "include/linux/skbuff.h"
-__inline static void skb_reserve(struct sk_buff *skb , int len )
+ static void skb_reserve(struct sk_buff *skb , int len )
 {
 
   {
@@ -7249,7 +7249,7 @@ __inline static void skb_reserve(struct sk_buff *skb , int len )
 }
 }
 # 1308 "include/linux/skbuff.h"
-__inline static void skb_reset_mac_header(struct sk_buff *skb )
+ static void skb_reset_mac_header(struct sk_buff *skb )
 {
 
   {
@@ -7266,7 +7266,7 @@ extern void skb_queue_purge(struct sk_buff_head * ) ;
 # 1541 "include/linux/skbuff.h"
 extern struct sk_buff *dev_alloc_skb(unsigned int ) ;
 # 1621 "include/linux/skbuff.h"
-__inline static int __skb_cow(struct sk_buff *skb , unsigned int headroom , int cloned )
+ static int __skb_cow(struct sk_buff *skb , unsigned int headroom , int cloned )
 { int delta ;
   int _max1 ;
   int _max2 ;
@@ -7379,7 +7379,7 @@ __inline static int __skb_cow(struct sk_buff *skb , unsigned int headroom , int 
 }
 }
 # 1664 "include/linux/skbuff.h"
-__inline static int skb_cow_head(struct sk_buff *skb , unsigned int headroom )
+ static int skb_cow_head(struct sk_buff *skb , unsigned int headroom )
 { int tmp ;
   int tmp___0 ;
 
@@ -7409,7 +7409,7 @@ extern int __register_chrdev(unsigned int , unsigned int , unsigned int , char c
 # 2092 "include/linux/fs.h"
 extern void __unregister_chrdev(unsigned int , unsigned int , unsigned int , char const * ) ;
 # 2097 "include/linux/fs.h"
-__inline static int register_chrdev(unsigned int major , char const *name , struct file_operations const *fops )
+ static int register_chrdev(unsigned int major , char const *name , struct file_operations const *fops )
 { int tmp ;
 
   {
@@ -7422,7 +7422,7 @@ __inline static int register_chrdev(unsigned int major , char const *name , stru
 }
 }
 # 2103 "include/linux/fs.h"
-__inline static void unregister_chrdev(unsigned int major , char const *name )
+ static void unregister_chrdev(unsigned int major , char const *name )
 {
 
   {
@@ -7439,7 +7439,7 @@ extern loff_t noop_llseek(struct file * , loff_t , int ) ;
 # 361 "include/linux/sched.h"
 extern void schedule(void) ;
 # 2441 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 { int tmp ;
 
   {
@@ -7452,7 +7452,7 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 # 2467 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p )
+ static int signal_pending(struct task_struct *p )
 { int tmp ;
   long tmp___0 ;
 
@@ -7468,7 +7468,7 @@ __inline static int signal_pending(struct task_struct *p )
 }
 }
 # 203 "include/net/net_namespace.h"
-__inline static struct net *hold_net(struct net *net )
+ static struct net *hold_net(struct net *net )
 {
 
   {
@@ -7477,7 +7477,7 @@ __inline static struct net *hold_net(struct net *net )
 }
 }
 # 208 "include/net/net_namespace.h"
-__inline static void release_net(struct net *net )
+ static void release_net(struct net *net )
 {
 
   {
@@ -7490,7 +7490,7 @@ extern int register_pernet_device(struct pernet_operations * ) ;
 # 279 "include/net/net_namespace.h"
 extern void unregister_pernet_device(struct pernet_operations * ) ;
 # 1410 "include/linux/netdevice.h"
-__inline static struct netdev_queue *netdev_get_tx_queue(struct net_device const *dev ,
+ static struct netdev_queue *netdev_get_tx_queue(struct net_device const *dev ,
                                                          unsigned int index )
 {
 
@@ -7500,7 +7500,7 @@ __inline static struct netdev_queue *netdev_get_tx_queue(struct net_device const
 }
 }
 # 1438 "include/linux/netdevice.h"
-__inline static void dev_net_set(struct net_device *dev , struct net *net )
+ static void dev_net_set(struct net_device *dev , struct net *net )
 {
 
   {
@@ -7515,7 +7515,7 @@ __inline static void dev_net_set(struct net_device *dev , struct net *net )
 }
 }
 # 1481 "include/linux/netdevice.h"
-__inline static void *netdev_priv(struct net_device const *dev )
+ static void *netdev_priv(struct net_device const *dev )
 {
 
   {
@@ -7530,7 +7530,7 @@ extern int netpoll_trap(void) ;
 # 1788 "include/linux/netdevice.h"
 extern void __netif_schedule(struct Qdisc * ) ;
 # 1804 "include/linux/netdevice.h"
-__inline static void netif_tx_start_queue(struct netdev_queue *dev_queue )
+ static void netif_tx_start_queue(struct netdev_queue *dev_queue )
 {
 
   {
@@ -7543,7 +7543,7 @@ __inline static void netif_tx_start_queue(struct netdev_queue *dev_queue )
 }
 }
 # 1830 "include/linux/netdevice.h"
-__inline static void netif_tx_wake_queue(struct netdev_queue *dev_queue )
+ static void netif_tx_wake_queue(struct netdev_queue *dev_queue )
 { int tmp ;
   int tmp___0 ;
 
@@ -7581,7 +7581,7 @@ __inline static void netif_tx_wake_queue(struct netdev_queue *dev_queue )
 }
 }
 # 1849 "include/linux/netdevice.h"
-__inline static void netif_wake_queue(struct net_device *dev )
+ static void netif_wake_queue(struct net_device *dev )
 { struct netdev_queue *tmp ;
 
   {
@@ -7596,7 +7596,7 @@ __inline static void netif_wake_queue(struct net_device *dev )
 }
 }
 # 1864 "include/linux/netdevice.h"
-__inline static void netif_tx_stop_queue(struct netdev_queue *dev_queue )
+ static void netif_tx_stop_queue(struct netdev_queue *dev_queue )
 { int __ret_warn_on ;
   long tmp ;
   long tmp___0 ;
@@ -7641,7 +7641,7 @@ __inline static void netif_tx_stop_queue(struct netdev_queue *dev_queue )
 }
 }
 # 1880 "include/linux/netdevice.h"
-__inline static void netif_stop_queue(struct net_device *dev )
+ static void netif_stop_queue(struct net_device *dev )
 { struct netdev_queue *tmp ;
 
   {
@@ -7670,7 +7670,7 @@ extern int netdev_printk(char const * , struct net_device const * , char const *
 # 2644 "include/linux/netdevice.h"
 extern int netdev_err(struct net_device const * , char const * , ...) ;
 # 40 "include/linux/poll.h"
-__inline static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
+ static void poll_wait(struct file *filp , wait_queue_head_t *wait_address ,
                                poll_table *p )
 {
 
@@ -7720,7 +7720,7 @@ int ppp_register_compressor(struct compressor *cp ) ;
 # 211 "include/linux/ppp-comp.h"
 void ppp_unregister_compressor(struct compressor *cp ) ;
 # 22 "include/linux/unaligned/access_ok.h"
-__inline static u16 get_unaligned_be16(void const *p )
+ static u16 get_unaligned_be16(void const *p )
 { __u16 tmp ;
 
   {
@@ -7733,7 +7733,7 @@ __inline static u16 get_unaligned_be16(void const *p )
 }
 }
 # 52 "include/linux/unaligned/access_ok.h"
-__inline static void put_unaligned_be16(u16 val , void *p )
+ static void put_unaligned_be16(u16 val , void *p )
 { __u16 tmp ;
 
   {
@@ -7761,7 +7761,7 @@ extern int slhc_remember(struct slcompress * , unsigned char * , int ) ;
 # 181 "include/net/slhc_vj.h"
 extern int slhc_toss(struct slcompress * ) ;
 # 33 "include/net/netns/generic.h"
-__inline static void *net_generic(struct net const *net , int id )
+ static void *net_generic(struct net const *net , int id )
 { struct net_generic *ng ;
   void *ptr ;
   struct net_generic *_________p1 ;
@@ -7924,7 +7924,7 @@ static void *unit_find(struct idr *p , int n ) ;
 # 282 "/anthill/stuff/tacas-comp/work/current--X--drivers/net/ppp_generic.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/net/ppp_generic.c.p"
 static struct class *ppp_class ;
 # 285 "/anthill/stuff/tacas-comp/work/current--X--drivers/net/ppp_generic.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/net/ppp_generic.c.p"
-__inline static struct ppp_net *ppp_pernet(struct net *net )
+ static struct ppp_net *ppp_pernet(struct net *net )
 { long tmp ;
   void *tmp___0 ;
 
@@ -7954,7 +7954,7 @@ __inline static struct ppp_net *ppp_pernet(struct net *net )
 }
 }
 # 293 "/anthill/stuff/tacas-comp/work/current--X--drivers/net/ppp_generic.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/net/ppp_generic.c.p"
-__inline static int proto_to_npindex(int proto )
+ static int proto_to_npindex(int proto )
 {
 
   {
@@ -8019,7 +8019,7 @@ __inline static int proto_to_npindex(int proto )
 static int const npindex_to_proto[6U] = { (int const )33, (int const )87, (int const )43, (int const )41,
         (int const )641, (int const )643};
 # 323 "/anthill/stuff/tacas-comp/work/current--X--drivers/net/ppp_generic.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/net/ppp_generic.c.p"
-__inline static int ethertype_to_npindex(int ethertype )
+ static int ethertype_to_npindex(int ethertype )
 {
 
   {
@@ -10672,7 +10672,7 @@ static void ppp_xmit_process(struct ppp *ppp )
 }
 }
 # 1079 "/anthill/stuff/tacas-comp/work/current--X--drivers/net/ppp_generic.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/net/ppp_generic.c.p"
-__inline static struct sk_buff *pad_compress_skb(struct ppp *ppp , struct sk_buff *skb )
+ static struct sk_buff *pad_compress_skb(struct ppp *ppp , struct sk_buff *skb )
 { struct sk_buff *new_skb ;
   int len ;
   int new_skb_size ;
@@ -11722,7 +11722,7 @@ static void ppp_channel_push(struct channel *pch )
 }
 }
 # 1573 "/anthill/stuff/tacas-comp/work/current--X--drivers/net/ppp_generic.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/net/ppp_generic.c.p"
-__inline static void ppp_do_recv(struct ppp *ppp , struct sk_buff *skb , struct channel *pch )
+ static void ppp_do_recv(struct ppp *ppp , struct sk_buff *skb , struct channel *pch )
 {
 
   {
@@ -15210,7 +15210,7 @@ void ldv_module_put_6(struct module *ldv_func_arg1 )
 }
 }
 # 4977 "/anthill/stuff/tacas-comp/work/current--X--drivers/net/ppp_generic.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/net/ppp_generic.c.p"
-__inline static int ldv_try_module_get_7(struct module *module )
+ static int ldv_try_module_get_7(struct module *module )
 { int tmp ;
 
   {

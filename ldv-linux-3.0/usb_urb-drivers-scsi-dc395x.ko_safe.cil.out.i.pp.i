@@ -5703,7 +5703,7 @@ struct scatterlist;
 # 1 "<compiler builtins>"
 
 # 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )
+ static void INIT_LIST_HEAD(struct list_head *list )
 {
 
   {
@@ -5718,7 +5718,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 # 47 "include/linux/list.h"
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 # 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head )
+ static void list_add(struct list_head *new , struct list_head *head )
 {
 
   {
@@ -5731,7 +5731,7 @@ __inline static void list_add(struct list_head *new , struct list_head *head )
 }
 }
 # 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )
+ static void list_add_tail(struct list_head *new , struct list_head *head )
 {
 
   {
@@ -5748,7 +5748,7 @@ extern void __list_del_entry(struct list_head *entry ) ;
 # 112 "include/linux/list.h"
 extern void list_del(struct list_head *entry ) ;
 # 153 "include/linux/list.h"
-__inline static void list_move(struct list_head *list , struct list_head *head )
+ static void list_move(struct list_head *list , struct list_head *head )
 {
 
   {
@@ -5763,7 +5763,7 @@ __inline static void list_move(struct list_head *list , struct list_head *head )
 }
 }
 # 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head const *head )
+ static int list_empty(struct list_head const *head )
 {
 
   {
@@ -5786,11 +5786,11 @@ extern void *__memcpy(void *to , void const *from , size_t len ) ;
 # 55 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/string_64.h"
 extern void *memset(void *s , int c , size_t n ) ;
 # 851 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static unsigned long arch_local_save_flags(void) __attribute__((__no_instrument_function__)) ;
+ static unsigned long arch_local_save_flags(void) __attribute__((__no_instrument_function__)) ;
 # 851 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static unsigned long arch_local_save_flags(void) __attribute__((__no_instrument_function__)) ;
+ static unsigned long arch_local_save_flags(void) __attribute__((__no_instrument_function__)) ;
 # 851 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static unsigned long arch_local_save_flags(void)
+ static unsigned long arch_local_save_flags(void)
 { unsigned long __ret ;
   unsigned long __edi ;
   unsigned long __esi ;
@@ -5921,11 +5921,11 @@ __inline static unsigned long arch_local_save_flags(void)
 }
 }
 # 856 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_restore(unsigned long f ) __attribute__((__no_instrument_function__)) ;
+ static void arch_local_irq_restore(unsigned long f ) __attribute__((__no_instrument_function__)) ;
 # 856 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_restore(unsigned long f ) __attribute__((__no_instrument_function__)) ;
+ static void arch_local_irq_restore(unsigned long f ) __attribute__((__no_instrument_function__)) ;
 # 856 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_restore(unsigned long f )
+ static void arch_local_irq_restore(unsigned long f )
 { unsigned long __edi ;
   unsigned long __esi ;
   unsigned long __edx ;
@@ -6021,11 +6021,11 @@ __inline static void arch_local_irq_restore(unsigned long f )
 }
 }
 # 861 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_disable(void) __attribute__((__no_instrument_function__)) ;
+ static void arch_local_irq_disable(void) __attribute__((__no_instrument_function__)) ;
 # 861 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_disable(void) __attribute__((__no_instrument_function__)) ;
+ static void arch_local_irq_disable(void) __attribute__((__no_instrument_function__)) ;
 # 861 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_disable(void)
+ static void arch_local_irq_disable(void)
 { unsigned long __edi ;
   unsigned long __esi ;
   unsigned long __edx ;
@@ -6121,11 +6121,11 @@ __inline static void arch_local_irq_disable(void)
 }
 }
 # 871 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static unsigned long arch_local_irq_save(void) __attribute__((__no_instrument_function__)) ;
+ static unsigned long arch_local_irq_save(void) __attribute__((__no_instrument_function__)) ;
 # 871 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static unsigned long arch_local_irq_save(void) __attribute__((__no_instrument_function__)) ;
+ static unsigned long arch_local_irq_save(void) __attribute__((__no_instrument_function__)) ;
 # 871 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static unsigned long arch_local_irq_save(void)
+ static unsigned long arch_local_irq_save(void)
 { unsigned long f ;
 
   {
@@ -6140,7 +6140,7 @@ __inline static unsigned long arch_local_irq_save(void)
 }
 }
 # 154 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/irqflags.h"
-__inline static int arch_irqs_disabled_flags(unsigned long flags )
+ static int arch_irqs_disabled_flags(unsigned long flags )
 {
 
   {
@@ -6161,7 +6161,7 @@ extern void _raw_spin_unlock_irq(raw_spinlock_t *lock ) __attribute__((__section
 # 42 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags ) __attribute__((__section__(".spinlock.text"))) ;
 # 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 {
 
   {
@@ -6170,7 +6170,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 # 308 "include/linux/spinlock.h"
-__inline static void spin_lock_irq(spinlock_t *lock )
+ static void spin_lock_irq(spinlock_t *lock )
 {
 
   {
@@ -6183,7 +6183,7 @@ __inline static void spin_lock_irq(spinlock_t *lock )
 }
 }
 # 333 "include/linux/spinlock.h"
-__inline static void spin_unlock_irq(spinlock_t *lock )
+ static void spin_unlock_irq(spinlock_t *lock )
 {
 
   {
@@ -6196,7 +6196,7 @@ __inline static void spin_unlock_irq(spinlock_t *lock )
 }
 }
 # 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
 {
 
   {
@@ -6231,7 +6231,7 @@ extern unsigned long volatile jiffies __attribute__((__section__(".data"))) ;
 # 91 "include/linux/timer.h"
 extern void init_timer_key(struct timer_list *timer , char const *name , struct lock_class_key *key ) ;
 # 204 "include/linux/timer.h"
-__inline static int timer_pending(struct timer_list const *timer )
+ static int timer_pending(struct timer_list const *timer )
 {
 
   {
@@ -6244,7 +6244,7 @@ extern int del_timer(struct timer_list *timer ) ;
 # 275 "include/linux/timer.h"
 extern void add_timer(struct timer_list *timer ) ;
 # 310 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port )
+ static void outb(unsigned char value , int port )
 {
 
   {
@@ -6259,7 +6259,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 # 310 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port )
+ static unsigned char inb(int port )
 { unsigned char value ;
 
   {
@@ -6274,7 +6274,7 @@ __inline static unsigned char inb(int port )
 }
 }
 # 311 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void outw(unsigned short value , int port )
+ static void outw(unsigned short value , int port )
 {
 
   {
@@ -6289,7 +6289,7 @@ __inline static void outw(unsigned short value , int port )
 }
 }
 # 311 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static unsigned short inw(int port )
+ static unsigned short inw(int port )
 { unsigned short value ;
 
   {
@@ -6304,7 +6304,7 @@ __inline static unsigned short inw(int port )
 }
 }
 # 312 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void outl(unsigned int value , int port )
+ static void outl(unsigned int value , int port )
 {
 
   {
@@ -6319,7 +6319,7 @@ __inline static void outl(unsigned int value , int port )
 }
 }
 # 312 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static unsigned int inl(int port )
+ static unsigned int inl(int port )
 { unsigned int value ;
 
   {
@@ -6350,7 +6350,7 @@ extern void __const_udelay(unsigned long xloops ) ;
 # 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 # 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )
 { void *tmp___10 ;
 
@@ -6377,7 +6377,7 @@ extern int __attribute__((__warn_unused_result__)) request_threaded_irq(unsigned
                                                                          char const *name ,
                                                                          void *dev ) ;
 # 128 "include/linux/interrupt.h"
-__inline static int __attribute__((__warn_unused_result__)) request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__)) request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
@@ -6404,7 +6404,7 @@ extern void free_irq(unsigned int , void * ) ;
 extern int pci_bus_read_config_word(struct pci_bus *bus , unsigned int devfn , int where ,
                                     u16 *val ) ;
 # 741 "include/linux/pci.h"
-__inline static int pci_read_config_word(struct pci_dev *dev , int where , u16 *val )
+ static int pci_read_config_word(struct pci_dev *dev , int where , u16 *val )
 { int tmp___7 ;
 
   {
@@ -6431,7 +6431,7 @@ extern void pci_unregister_driver(struct pci_driver *dev ) ;
 # 202 "include/linux/scatterlist.h"
 extern struct scatterlist *sg_next(struct scatterlist * ) ;
 # 80 "include/linux/dma-mapping.h"
-__inline static int valid_dma_direction(int dma_direction )
+ static int valid_dma_direction(int dma_direction )
 { int tmp___7 ;
 
   {
@@ -6458,7 +6458,7 @@ __inline static int valid_dma_direction(int dma_direction )
 }
 }
 # 131 "include/linux/kmemcheck.h"
-__inline static void kmemcheck_mark_initialized(void *address , unsigned int n )
+ static void kmemcheck_mark_initialized(void *address , unsigned int n )
 {
 
   {
@@ -6482,7 +6482,7 @@ extern void debug_dma_sync_sg_for_cpu(struct device *dev , struct scatterlist *s
 # 29 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
 extern struct dma_map_ops *dma_ops ;
 # 31 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
-__inline static struct dma_map_ops *get_dma_ops(struct device *dev )
+ static struct dma_map_ops *get_dma_ops(struct device *dev )
 { long tmp___7 ;
 
   {
@@ -6506,7 +6506,7 @@ __inline static struct dma_map_ops *get_dma_ops(struct device *dev )
 }
 }
 # 9 "include/asm-generic/dma-mapping-common.h"
-__inline static dma_addr_t dma_map_single_attrs(struct device *dev , void *ptr , size_t size ,
+ static dma_addr_t dma_map_single_attrs(struct device *dev , void *ptr , size_t size ,
                                                 enum dma_data_direction dir , struct dma_attrs *attrs )
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp___7 ;
@@ -6602,7 +6602,7 @@ __inline static dma_addr_t dma_map_single_attrs(struct device *dev , void *ptr ,
 }
 }
 # 28 "include/asm-generic/dma-mapping-common.h"
-__inline static void dma_unmap_single_attrs(struct device *dev , dma_addr_t addr ,
+ static void dma_unmap_single_attrs(struct device *dev , dma_addr_t addr ,
                                             size_t size , enum dma_data_direction dir ,
                                             struct dma_attrs *attrs )
 { struct dma_map_ops *ops ;
@@ -6693,7 +6693,7 @@ __inline static void dma_unmap_single_attrs(struct device *dev , dma_addr_t addr
 }
 }
 # 108 "include/asm-generic/dma-mapping-common.h"
-__inline static void dma_sync_single_for_device(struct device *dev , dma_addr_t addr ,
+ static void dma_sync_single_for_device(struct device *dev , dma_addr_t addr ,
                                                 size_t size , enum dma_data_direction dir )
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp___7 ;
@@ -6783,7 +6783,7 @@ __inline static void dma_sync_single_for_device(struct device *dev , dma_addr_t 
 }
 }
 # 138 "include/asm-generic/dma-mapping-common.h"
-__inline static void dma_sync_sg_for_cpu(struct device *dev , struct scatterlist *sg ,
+ static void dma_sync_sg_for_cpu(struct device *dev , struct scatterlist *sg ,
                                          int nelems , enum dma_data_direction dir )
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp___7 ;
@@ -6873,7 +6873,7 @@ __inline static void dma_sync_sg_for_cpu(struct device *dev , struct scatterlist
 }
 }
 # 29 "include/asm-generic/pci-dma-compat.h"
-__inline static dma_addr_t pci_map_single(struct pci_dev *hwdev , void *ptr , size_t size ,
+ static dma_addr_t pci_map_single(struct pci_dev *hwdev , void *ptr , size_t size ,
                                           int direction )
 { struct device *tmp___7 ;
   dma_addr_t tmp___8 ;
@@ -6897,7 +6897,7 @@ __inline static dma_addr_t pci_map_single(struct pci_dev *hwdev , void *ptr , si
 }
 }
 # 35 "include/asm-generic/pci-dma-compat.h"
-__inline static void pci_unmap_single(struct pci_dev *hwdev , dma_addr_t dma_addr ,
+ static void pci_unmap_single(struct pci_dev *hwdev , dma_addr_t dma_addr ,
                                       size_t size , int direction )
 { struct device *tmp___7 ;
 
@@ -6920,7 +6920,7 @@ __inline static void pci_unmap_single(struct pci_dev *hwdev , dma_addr_t dma_add
 }
 }
 # 77 "include/asm-generic/pci-dma-compat.h"
-__inline static void pci_dma_sync_single_for_device(struct pci_dev *hwdev , dma_addr_t dma_handle ,
+ static void pci_dma_sync_single_for_device(struct pci_dev *hwdev , dma_addr_t dma_handle ,
                                                     size_t size , int direction )
 { struct device *tmp___7 ;
 
@@ -6942,7 +6942,7 @@ __inline static void pci_dma_sync_single_for_device(struct pci_dev *hwdev , dma_
 }
 }
 # 84 "include/asm-generic/pci-dma-compat.h"
-__inline static void pci_dma_sync_sg_for_cpu(struct pci_dev *hwdev , struct scatterlist *sg ,
+ static void pci_dma_sync_sg_for_cpu(struct pci_dev *hwdev , struct scatterlist *sg ,
                                              int nelems , int direction )
 { struct device *tmp___7 ;
 
@@ -6964,7 +6964,7 @@ __inline static void pci_dma_sync_sg_for_cpu(struct pci_dev *hwdev , struct scat
 }
 }
 # 1316 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev )
+ static void *pci_get_drvdata(struct pci_dev *pdev )
 { void *tmp___7 ;
 
   {
@@ -6977,7 +6977,7 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 # 1321 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data )
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data )
 {
 
   {
@@ -7001,7 +7001,7 @@ extern int scsi_dma_map(struct scsi_cmnd *cmd ) ;
 # 149 "include/scsi/scsi_cmnd.h"
 extern void scsi_dma_unmap(struct scsi_cmnd *cmd ) ;
 # 154 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )
+ static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )
 {
 
   {
@@ -7010,7 +7010,7 @@ __inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )
 }
 }
 # 159 "include/scsi/scsi_cmnd.h"
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )
 {
 
   {
@@ -7019,7 +7019,7 @@ __inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )
 }
 }
 # 164 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )
 {
 
   {
@@ -7028,7 +7028,7 @@ __inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )
 }
 }
 # 169 "include/scsi/scsi_cmnd.h"
-__inline static void scsi_set_resid(struct scsi_cmnd *cmd , int resid )
+ static void scsi_set_resid(struct scsi_cmnd *cmd , int resid )
 {
 
   {
@@ -7053,7 +7053,7 @@ extern void scsi_host_put(struct Scsi_Host *t ) ;
 # 773 "include/scsi/scsi_host.h"
 extern void scsi_cmd_get_serial(struct Scsi_Host * , struct scsi_cmnd * ) ;
 # 777 "include/scsi/scsi_host.h"
-__inline static int __attribute__((__warn_unused_result__)) scsi_add_host(struct Scsi_Host *host ,
+ static int __attribute__((__warn_unused_result__)) scsi_add_host(struct Scsi_Host *host ,
                                                                            struct device *dev )
 { int tmp___7 ;
   int tmp ;
@@ -7113,7 +7113,7 @@ static void reselect(struct AdapterCtlBlk *acb ) ;
 # 379 "/anthill/stuff/tacas-comp/work/current--X--drivers/scsi/dc395x.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/scsi/dc395x.c.common.c"
 static u8 start_scsi(struct AdapterCtlBlk *acb , struct DeviceCtlBlk *dcb , struct ScsiReqBlk *srb ) ;
 # 381 "/anthill/stuff/tacas-comp/work/current--X--drivers/scsi/dc395x.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/scsi/dc395x.c.common.c"
-__inline static void enable_msgout_abort(struct AdapterCtlBlk *acb , struct ScsiReqBlk *srb ) ;
+ static void enable_msgout_abort(struct AdapterCtlBlk *acb , struct ScsiReqBlk *srb ) ;
 # 383 "/anthill/stuff/tacas-comp/work/current--X--drivers/scsi/dc395x.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/scsi/dc395x.c.common.c"
 static void build_srb(struct scsi_cmnd *cmd , struct DeviceCtlBlk *dcb , struct ScsiReqBlk *srb ) ;
 # 385 "/anthill/stuff/tacas-comp/work/current--X--drivers/scsi/dc395x.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/scsi/dc395x.c.common.c"
@@ -7821,7 +7821,7 @@ static void free_tag(struct DeviceCtlBlk *dcb , struct ScsiReqBlk *srb )
 }
 }
 # 747 "/anthill/stuff/tacas-comp/work/current--X--drivers/scsi/dc395x.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/scsi/dc395x.c.common.c"
-__inline static struct ScsiReqBlk *find_cmd(struct scsi_cmnd *cmd , struct list_head *head )
+ static struct ScsiReqBlk *find_cmd(struct scsi_cmnd *cmd , struct list_head *head )
 { struct ScsiReqBlk *i ;
   struct list_head const *__mptr ;
   struct list_head const *__mptr___0 ;
@@ -9117,7 +9117,7 @@ static void dump_register_info(struct AdapterCtlBlk *acb , struct DeviceCtlBlk *
 }
 }
 # 1258 "/anthill/stuff/tacas-comp/work/current--X--drivers/scsi/dc395x.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/scsi/dc395x.c.common.c"
-__inline static void clear_fifo(struct AdapterCtlBlk *acb , char *txt )
+ static void clear_fifo(struct AdapterCtlBlk *acb , char *txt )
 {
 
   {
@@ -9924,7 +9924,7 @@ static u8 start_scsi(struct AdapterCtlBlk *acb , struct DeviceCtlBlk *dcb , stru
 }
 }
 # 1682 "/anthill/stuff/tacas-comp/work/current--X--drivers/scsi/dc395x.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/scsi/dc395x.c.common.c"
-__inline static void enable_msgout_abort(struct AdapterCtlBlk *acb , struct ScsiReqBlk *srb )
+ static void enable_msgout_abort(struct AdapterCtlBlk *acb , struct ScsiReqBlk *srb )
 {
 
   {
@@ -11709,7 +11709,7 @@ static void status_phase1(struct AdapterCtlBlk *acb , struct ScsiReqBlk *srb , u
 }
 }
 # 2605 "/anthill/stuff/tacas-comp/work/current--X--drivers/scsi/dc395x.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/scsi/dc395x.c.common.c"
-__inline static u8 msgin_completed(u8 *msgbuf , u32 len )
+ static u8 msgin_completed(u8 *msgbuf , u32 len )
 {
 
   {
@@ -11752,7 +11752,7 @@ __inline static u8 msgin_completed(u8 *msgbuf , u32 len )
 }
 }
 # 2619 "/anthill/stuff/tacas-comp/work/current--X--drivers/scsi/dc395x.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/scsi/dc395x.c.common.c"
-__inline static void msgin_reject(struct AdapterCtlBlk *acb , struct ScsiReqBlk *srb )
+ static void msgin_reject(struct AdapterCtlBlk *acb , struct ScsiReqBlk *srb )
 {
 
   {
@@ -11926,7 +11926,7 @@ static struct ScsiReqBlk *msgin_qtag(struct AdapterCtlBlk *acb , struct DeviceCt
 }
 }
 # 2686 "/anthill/stuff/tacas-comp/work/current--X--drivers/scsi/dc395x.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/scsi/dc395x.c.common.c"
-__inline static void reprogram_regs(struct AdapterCtlBlk *acb , struct DeviceCtlBlk *dcb )
+ static void reprogram_regs(struct AdapterCtlBlk *acb , struct DeviceCtlBlk *dcb )
 {
 
   {
@@ -12192,7 +12192,7 @@ static void msgin_set_sync(struct AdapterCtlBlk *acb , struct ScsiReqBlk *srb )
 }
 }
 # 2793 "/anthill/stuff/tacas-comp/work/current--X--drivers/scsi/dc395x.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/scsi/dc395x.c.common.c"
-__inline static void msgin_set_nowide(struct AdapterCtlBlk *acb , struct ScsiReqBlk *srb )
+ static void msgin_set_nowide(struct AdapterCtlBlk *acb , struct ScsiReqBlk *srb )
 { struct DeviceCtlBlk *dcb ;
 
   {
@@ -13222,7 +13222,7 @@ static void reselect(struct AdapterCtlBlk *acb )
 }
 }
 # 3221 "/anthill/stuff/tacas-comp/work/current--X--drivers/scsi/dc395x.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/scsi/dc395x.c.common.c"
-__inline static u8 tagq_blacklist(char *name )
+ static u8 tagq_blacklist(char *name )
 {
 
   {

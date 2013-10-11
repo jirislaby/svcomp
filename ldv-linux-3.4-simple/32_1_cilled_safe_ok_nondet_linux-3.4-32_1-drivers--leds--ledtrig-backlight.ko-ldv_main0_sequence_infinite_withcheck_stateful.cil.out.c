@@ -4141,11 +4141,11 @@ extern int __attribute__((__warn_unused_result__))  _kstrtoul(char const   *s , 
 extern int __attribute__((__warn_unused_result__))  kstrtoull(char const   *s , unsigned int base ,
                                                               unsigned long long *res ) ;
 #line 220
-__inline static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
+ static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
                                                                       unsigned int base ,
                                                                       unsigned long *res )  __attribute__((__no_instrument_function__)) ;
 #line 220 "include/linux/kernel.h"
-__inline static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
+ static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
                                                                       unsigned int base ,
                                                                       unsigned long *res ) 
 { int tmp ;
@@ -4206,10 +4206,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -4223,9 +4223,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -4258,9 +4258,9 @@ extern int led_trigger_register(struct led_trigger *trigger ) ;
 #line 138
 extern void led_trigger_unregister(struct led_trigger *trigger ) ;
 #line 20 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/leds/leds.h"
-__inline static void led_set_brightness(struct led_classdev *led_cdev , enum led_brightness value )  __attribute__((__no_instrument_function__)) ;
+ static void led_set_brightness(struct led_classdev *led_cdev , enum led_brightness value )  __attribute__((__no_instrument_function__)) ;
 #line 20 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/leds/leds.h"
-__inline static void led_set_brightness(struct led_classdev *led_cdev , enum led_brightness value ) 
+ static void led_set_brightness(struct led_classdev *led_cdev , enum led_brightness value ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   int __cil_tmp5 ;

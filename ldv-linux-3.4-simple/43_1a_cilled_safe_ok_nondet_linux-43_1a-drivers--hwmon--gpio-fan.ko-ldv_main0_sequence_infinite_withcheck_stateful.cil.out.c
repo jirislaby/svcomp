@@ -1064,7 +1064,7 @@ int ldv_spin_trylock(void) ;
 #line 218 "include/linux/kernel.h"
 extern int kstrtoull(char const   * , unsigned int  , unsigned long long * ) ;
 #line 220 "include/linux/kernel.h"
-__inline static int kstrtoul(char const   *s , unsigned int base , unsigned long *res ) 
+ static int kstrtoul(char const   *s , unsigned int base , unsigned long *res ) 
 { int tmp ;
   unsigned long long *__cil_tmp6 ;
 
@@ -1082,7 +1082,7 @@ __inline static int kstrtoul(char const   *s , unsigned int base , unsigned long
 #line 320
 extern int sprintf(char * , char const   *  , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -1100,7 +1100,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 }
 }
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -1109,7 +1109,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -1158,7 +1158,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11055/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/gpio-fan.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -1174,7 +1174,7 @@ extern int request_threaded_irq(unsigned int  , irqreturn_t (*)(int  , void * ) 
                                 irqreturn_t (*)(int  , void * ) , unsigned long  ,
                                 char const   * , void * ) ;
 #line 132 "include/linux/interrupt.h"
-__inline static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
+ static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
                                 unsigned long flags , char const   *name , void *dev ) 
 { int tmp ;
   irqreturn_t (*__cil_tmp7)(int  , void * ) ;
@@ -1205,7 +1205,7 @@ extern int dev_warn(struct device  const  * , char const   *  , ...) ;
 #line 898
 extern int _dev_info(struct device  const  * , char const   *  , ...) ;
 #line 183 "include/linux/platform_device.h"
-__inline static void *platform_get_drvdata(struct platform_device  const  *pdev ) 
+ static void *platform_get_drvdata(struct platform_device  const  *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -1227,7 +1227,7 @@ __inline static void *platform_get_drvdata(struct platform_device  const  *pdev 
 }
 }
 #line 188 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
+ static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -1264,7 +1264,7 @@ extern void __gpio_set_value(unsigned int  , int  ) ;
 #line 174
 extern int __gpio_to_irq(unsigned int  ) ;
 #line 26 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/gpio.h"
-__inline static int gpio_get_value(unsigned int gpio ) 
+ static int gpio_get_value(unsigned int gpio ) 
 { int tmp ;
 
   {
@@ -1277,7 +1277,7 @@ __inline static int gpio_get_value(unsigned int gpio )
 }
 }
 #line 31 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/gpio.h"
-__inline static void gpio_set_value(unsigned int gpio , int value ) 
+ static void gpio_set_value(unsigned int gpio , int value ) 
 { 
 
   {
@@ -1290,7 +1290,7 @@ __inline static void gpio_set_value(unsigned int gpio , int value )
 }
 }
 #line 41 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/gpio.h"
-__inline static int gpio_to_irq(unsigned int gpio ) 
+ static int gpio_to_irq(unsigned int gpio ) 
 { int tmp ;
 
   {
@@ -3945,7 +3945,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1068 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11055/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/gpio-fan.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

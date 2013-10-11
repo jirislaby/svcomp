@@ -1009,7 +1009,7 @@ extern unsigned long volatile   jiffies ;
 #line 91 "include/linux/timer.h"
 extern void init_timer_key(struct timer_list * , char const   * , struct lock_class_key * ) ;
 #line 166 "include/linux/timer.h"
-__inline static void setup_timer_key(struct timer_list *timer , char const   *name ,
+ static void setup_timer_key(struct timer_list *timer , char const   *name ,
                                      struct lock_class_key *key , void (*function)(unsigned long  ) ,
                                      unsigned long data ) 
 { unsigned long __cil_tmp6 ;
@@ -1063,7 +1063,7 @@ extern void pps_unregister_source(struct pps_device * ) ;
 #line 93
 extern void pps_event(struct pps_device * , struct pps_event_time * , int  , void * ) ;
 #line 112 "include/linux/pps_kernel.h"
-__inline static void pps_get_ts(struct pps_event_time *ts ) 
+ static void pps_get_ts(struct pps_event_time *ts ) 
 { struct timespec *__cil_tmp2 ;
 
   {

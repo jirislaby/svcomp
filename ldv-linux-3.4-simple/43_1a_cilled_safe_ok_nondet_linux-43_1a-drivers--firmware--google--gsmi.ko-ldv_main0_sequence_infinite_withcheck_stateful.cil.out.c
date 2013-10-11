@@ -3658,7 +3658,7 @@ extern struct atomic_notifier_head panic_notifier_list ;
 #line 218
 extern int kstrtoull(char const   * , unsigned int  , unsigned long long * ) ;
 #line 220 "include/linux/kernel.h"
-__inline static int kstrtoul(char const   *s , unsigned int base , unsigned long *res ) 
+ static int kstrtoul(char const   *s , unsigned int base , unsigned long *res ) 
 { int tmp ;
   unsigned long long *__cil_tmp6 ;
 
@@ -3682,7 +3682,7 @@ extern void *memset(void * , int  , size_t  ) ;
 #line 45 "include/linux/string.h"
 extern int strncmp(char const   * , char const   * , __kernel_size_t  ) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3691,7 +3691,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3717,7 +3717,7 @@ extern void __raw_spin_lock_init(raw_spinlock_t * , char const   * , struct lock
 #line 43 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -3726,7 +3726,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 350 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
+ static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -3741,13 +3741,13 @@ __inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned lo
 }
 }
 #line 350
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 115 "include/linux/notifier.h"
 extern int atomic_notifier_chain_register(struct atomic_notifier_head * , struct notifier_block * ) ;
 #line 128
 extern int atomic_notifier_chain_unregister(struct atomic_notifier_head * , struct notifier_block * ) ;
 #line 111 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static phys_addr_t virt_to_phys(void volatile   *address ) 
+ static phys_addr_t virt_to_phys(void volatile   *address ) 
 { unsigned long tmp ;
   unsigned long __cil_tmp3 ;
 
@@ -3783,7 +3783,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4502/dscv_tempdir/dscv/ri/43_1a/drivers/firmware/google/gsmi.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -3797,7 +3797,7 @@ extern void platform_device_unregister(struct platform_device * ) ;
 #line 65
 extern struct platform_device *platform_device_register_full(struct platform_device_info  const  * ) ;
 #line 82 "include/linux/platform_device.h"
-__inline static struct platform_device *platform_device_register_resndata(struct device *parent ,
+ static struct platform_device *platform_device_register_resndata(struct device *parent ,
                                                                           char const   *name ,
                                                                           int id ,
                                                                           struct resource  const  *res ,
@@ -3860,7 +3860,7 @@ __inline static struct platform_device *platform_device_register_resndata(struct
 }
 }
 #line 123 "include/linux/platform_device.h"
-__inline static struct platform_device *platform_device_register_simple(char const   *name ,
+ static struct platform_device *platform_device_register_simple(char const   *name ,
                                                                         int id , struct resource  const  *res ,
                                                                         unsigned int num ) 
 { struct platform_device *tmp ;
@@ -8752,7 +8752,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 2219 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4502/dscv_tempdir/dscv/ri/43_1a/drivers/firmware/google/gsmi.c.p"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {
@@ -8782,7 +8782,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 2321 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4502/dscv_tempdir/dscv/ri/43_1a/drivers/firmware/google/gsmi.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

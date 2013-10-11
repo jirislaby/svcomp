@@ -3812,9 +3812,9 @@ extern void _raw_spin_lock(raw_spinlock_t *lock )  __attribute__((__section__(".
 #line 39
 extern void _raw_spin_unlock(raw_spinlock_t *lock )  __attribute__((__section__(".spinlock.text"))) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -3829,9 +3829,9 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -3872,9 +3872,9 @@ extern void iowrite16(u16  , void * ) ;
 #line 37
 extern void iowrite32(u32  , void * ) ;
 #line 202 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memset_io(void volatile   *addr , unsigned char val , size_t count )  __attribute__((__no_instrument_function__)) ;
+ static void memset_io(void volatile   *addr , unsigned char val , size_t count )  __attribute__((__no_instrument_function__)) ;
 #line 202 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memset_io(void volatile   *addr , unsigned char val , size_t count ) 
+ static void memset_io(void volatile   *addr , unsigned char val , size_t count ) 
 { void *__cil_tmp4 ;
   int __cil_tmp5 ;
 
@@ -3910,10 +3910,10 @@ extern int cpufreq_unregister_driver(struct cpufreq_driver *driver_data ) ;
 #line 256
 extern void cpufreq_notify_transition(struct cpufreq_freqs *freqs , unsigned int state ) ;
 #line 259
-__inline static void cpufreq_verify_within_limits(struct cpufreq_policy *policy ,
+ static void cpufreq_verify_within_limits(struct cpufreq_policy *policy ,
                                                   unsigned int min , unsigned int max )  __attribute__((__no_instrument_function__)) ;
 #line 259 "include/linux/cpufreq.h"
-__inline static void cpufreq_verify_within_limits(struct cpufreq_policy *policy ,
+ static void cpufreq_verify_within_limits(struct cpufreq_policy *policy ,
                                                   unsigned int min , unsigned int max ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4127,9 +4127,9 @@ static int pcc_cpufreq_verify(struct cpufreq_policy *policy )
 }
 }
 #line 120
-__inline static void pcc_cmd(void)  __attribute__((__no_instrument_function__)) ;
+ static void pcc_cmd(void)  __attribute__((__no_instrument_function__)) ;
 #line 120 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/3888/dscv_tempdir/dscv/ri/32_1/drivers/cpufreq/pcc-cpufreq.c.common.c"
-__inline static void pcc_cmd(void) 
+ static void pcc_cmd(void) 
 { u64 doorbell_value ;
   int i ;
   unsigned int tmp___7 ;
@@ -4199,9 +4199,9 @@ __inline static void pcc_cmd(void)
 }
 }
 #line 135
-__inline static void pcc_clear_mapping(void)  __attribute__((__no_instrument_function__)) ;
+ static void pcc_clear_mapping(void)  __attribute__((__no_instrument_function__)) ;
 #line 135 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/3888/dscv_tempdir/dscv/ri/32_1/drivers/cpufreq/pcc-cpufreq.c.common.c"
-__inline static void pcc_clear_mapping(void) 
+ static void pcc_clear_mapping(void) 
 { void volatile   *__cil_tmp1 ;
 
   {

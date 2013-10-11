@@ -2521,7 +2521,7 @@ extern int puts(char const   *__s ) ;
 #line 7 "EncryptAutoResponder_spec.c"
 int in_encrypted  =    0;
 #line 11 "EncryptAutoResponder_spec.c"
-__inline void __utac_acc__EncryptAutoResponder_spec__1(int msg ) 
+ void __utac_acc__EncryptAutoResponder_spec__1(int msg ) 
 { char const   * __restrict  __cil_tmp2 ;
 
   {
@@ -2540,7 +2540,7 @@ __inline void __utac_acc__EncryptAutoResponder_spec__1(int msg )
 }
 }
 #line 19 "EncryptAutoResponder_spec.c"
-__inline void __utac_acc__EncryptAutoResponder_spec__2(int msg ) 
+ void __utac_acc__EncryptAutoResponder_spec__2(int msg ) 
 { int tmp ;
   char const   * __restrict  __cil_tmp3 ;
 

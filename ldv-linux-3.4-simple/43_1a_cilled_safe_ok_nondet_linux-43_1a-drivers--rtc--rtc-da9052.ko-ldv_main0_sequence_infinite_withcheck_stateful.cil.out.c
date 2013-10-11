@@ -2165,7 +2165,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2174,7 +2174,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2220,7 +2220,7 @@ extern int dev_err(struct device  const  * , char const   *  , ...) ;
 #line 49 "include/linux/platform_device.h"
 extern int platform_get_irq_byname(struct platform_device * , char const   * ) ;
 #line 188 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
+ static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2262,7 +2262,7 @@ extern int regmap_bulk_read(struct regmap * , unsigned int  , void * , size_t  )
 #line 156
 extern int regmap_update_bits(struct regmap * , unsigned int  , unsigned int  , unsigned int  ) ;
 #line 89 "include/linux/mfd/da9052/da9052.h"
-__inline static int da9052_reg_read(struct da9052 *da9052 , unsigned char reg ) 
+ static int da9052_reg_read(struct da9052 *da9052 , unsigned char reg ) 
 { int val ;
   int ret ;
   unsigned long __cil_tmp5 ;
@@ -2303,7 +2303,7 @@ __inline static int da9052_reg_read(struct da9052 *da9052 , unsigned char reg )
 }
 }
 #line 105 "include/linux/mfd/da9052/da9052.h"
-__inline static int da9052_group_read(struct da9052 *da9052 , unsigned char reg ,
+ static int da9052_group_read(struct da9052 *da9052 , unsigned char reg ,
                                       unsigned int reg_cnt , unsigned char *val ) 
 { int tmp ;
   unsigned long __cil_tmp6 ;
@@ -2335,7 +2335,7 @@ __inline static int da9052_group_read(struct da9052 *da9052 , unsigned char reg 
 }
 }
 #line 111 "include/linux/mfd/da9052/da9052.h"
-__inline static int da9052_group_write(struct da9052 *da9052 , unsigned char reg ,
+ static int da9052_group_write(struct da9052 *da9052 , unsigned char reg ,
                                        unsigned int reg_cnt , unsigned char *val ) 
 { int tmp ;
   unsigned long __cil_tmp6 ;
@@ -2367,7 +2367,7 @@ __inline static int da9052_group_write(struct da9052 *da9052 , unsigned char reg
 }
 }
 #line 117 "include/linux/mfd/da9052/da9052.h"
-__inline static int da9052_reg_update(struct da9052 *da9052 , unsigned char reg ,
+ static int da9052_reg_update(struct da9052 *da9052 , unsigned char reg ,
                                       unsigned char bit_mask , unsigned char reg_val ) 
 { int tmp ;
   unsigned long __cil_tmp6 ;

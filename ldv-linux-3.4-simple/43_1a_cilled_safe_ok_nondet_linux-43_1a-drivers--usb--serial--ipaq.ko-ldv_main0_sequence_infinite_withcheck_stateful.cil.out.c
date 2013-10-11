@@ -4112,7 +4112,7 @@ extern int usb_control_msg(struct usb_device * , unsigned int  , __u8  , __u8  ,
 #line 1462
 extern int usb_reset_configuration(struct usb_device * ) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;

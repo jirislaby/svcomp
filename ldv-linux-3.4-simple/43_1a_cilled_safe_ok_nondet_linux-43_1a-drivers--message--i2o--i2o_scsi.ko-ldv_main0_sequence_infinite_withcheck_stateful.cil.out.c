@@ -4772,7 +4772,7 @@ extern int printk(char const   *  , ...) ;
 #line 34 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern void *__memcpy(void * , void const   * , size_t  ) ;
 #line 22 "include/linux/err.h"
-__inline static void *ERR_PTR(long error ) 
+ static void *ERR_PTR(long error ) 
 { 
 
   {
@@ -4781,7 +4781,7 @@ __inline static void *ERR_PTR(long error )
 }
 }
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -4790,7 +4790,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4814,7 +4814,7 @@ __inline static long IS_ERR(void const   *ptr )
 #line 43 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 350 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
+ static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -4829,9 +4829,9 @@ __inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned lo
 }
 }
 #line 350
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned int readl(void const volatile   *addr ) 
+ static unsigned int readl(void const volatile   *addr ) 
 { unsigned int ret ;
   unsigned int volatile   *__cil_tmp3 ;
 
@@ -4845,7 +4845,7 @@ __inline static unsigned int readl(void const volatile   *addr )
 }
 }
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writel(unsigned int val , void volatile   *addr ) 
+ static void writel(unsigned int val , void volatile   *addr ) 
 { unsigned int volatile   *__cil_tmp3 ;
 
   {
@@ -4858,7 +4858,7 @@ __inline static void writel(unsigned int val , void volatile   *addr )
 }
 }
 #line 215 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memcpy_toio(void volatile   *dst , void const   *src , size_t count ) 
+ static void memcpy_toio(void volatile   *dst , void const   *src , size_t count ) 
 { size_t __len ;
   void *__ret ;
   void *__cil_tmp6 ;
@@ -4919,7 +4919,7 @@ extern int i2o_driver_register(struct i2o_driver * ) ;
 #line 712
 extern void i2o_driver_unregister(struct i2o_driver * ) ;
 #line 818 "include/linux/i2o.h"
-__inline static struct i2o_message *i2o_msg_in_to_virt(struct i2o_controller *c ,
+ static struct i2o_message *i2o_msg_in_to_virt(struct i2o_controller *c ,
                                                        u32 m ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4945,7 +4945,7 @@ __inline static struct i2o_message *i2o_msg_in_to_virt(struct i2o_controller *c 
 }
 }
 #line 839 "include/linux/i2o.h"
-__inline static struct i2o_message *i2o_msg_get(struct i2o_controller *c ) 
+ static struct i2o_message *i2o_msg_get(struct i2o_controller *c ) 
 { struct i2o_msg_mfa *mmsg ;
   void *tmp ;
   void *tmp___0 ;
@@ -5093,7 +5093,7 @@ __inline static struct i2o_message *i2o_msg_get(struct i2o_controller *c )
 }
 }
 #line 866 "include/linux/i2o.h"
-__inline static void i2o_msg_post(struct i2o_controller *c , struct i2o_message *msg ) 
+ static void i2o_msg_post(struct i2o_controller *c , struct i2o_message *msg ) 
 { struct i2o_msg_mfa *mmsg ;
   struct i2o_message  const  *__mptr ;
   struct i2o_message *tmp ;
@@ -5187,7 +5187,7 @@ __inline static void i2o_msg_post(struct i2o_controller *c , struct i2o_message 
 }
 }
 #line 890 "include/linux/i2o.h"
-__inline static int i2o_msg_post_wait(struct i2o_controller *c , struct i2o_message *msg ,
+ static int i2o_msg_post_wait(struct i2o_controller *c , struct i2o_message *msg ,
                                       unsigned long timeout ) 
 { int tmp ;
   struct i2o_dma *__cil_tmp5 ;
@@ -5204,7 +5204,7 @@ __inline static int i2o_msg_post_wait(struct i2o_controller *c , struct i2o_mess
 }
 }
 #line 905 "include/linux/i2o.h"
-__inline static void i2o_msg_nop_mfa(struct i2o_controller *c , u32 mfa ) 
+ static void i2o_msg_nop_mfa(struct i2o_controller *c , u32 mfa ) 
 { struct i2o_message *msg ;
   u32 nop[3U] ;
   unsigned long __cil_tmp5 ;
@@ -5264,7 +5264,7 @@ __inline static void i2o_msg_nop_mfa(struct i2o_controller *c , u32 mfa )
 }
 }
 #line 928 "include/linux/i2o.h"
-__inline static void i2o_msg_nop(struct i2o_controller *c , struct i2o_message *msg ) 
+ static void i2o_msg_nop(struct i2o_controller *c , struct i2o_message *msg ) 
 { struct i2o_msg_mfa *mmsg ;
   struct i2o_message  const  *__mptr ;
   struct i2o_msg_mfa *__cil_tmp5 ;
@@ -5317,7 +5317,7 @@ extern void scsi_host_put(struct Scsi_Host * ) ;
 #line 789
 extern void scsi_cmd_get_serial(struct Scsi_Host * , struct scsi_cmnd * ) ;
 #line 793 "include/scsi/scsi_host.h"
-__inline static int scsi_add_host(struct Scsi_Host *host , struct device *dev ) 
+ static int scsi_add_host(struct Scsi_Host *host , struct device *dev ) 
 { int tmp ;
 
   {
@@ -5341,7 +5341,7 @@ extern struct scsi_device *__scsi_iterate_devices(struct Scsi_Host * , struct sc
 #line 158 "include/scsi/scsi_cmnd.h"
 extern void scsi_dma_unmap(struct scsi_cmnd * ) ;
 #line 163 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5363,7 +5363,7 @@ __inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )
 }
 }
 #line 168 "include/scsi/scsi_cmnd.h"
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -5379,7 +5379,7 @@ __inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )
 }
 }
 #line 173 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -8432,7 +8432,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1604 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11980/dscv_tempdir/dscv/ri/43_1a/drivers/message/i2o/i2o_scsi.c.p"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {

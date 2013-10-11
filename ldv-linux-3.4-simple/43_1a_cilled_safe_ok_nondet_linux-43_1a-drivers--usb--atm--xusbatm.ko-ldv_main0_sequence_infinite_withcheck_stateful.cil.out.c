@@ -6281,7 +6281,7 @@ struct sk_buff *ldv___netdev_alloc_skb_25(struct net_device *ldv_func_arg1 , uns
 struct sk_buff *ldv___netdev_alloc_skb_26(struct net_device *ldv_func_arg1 , unsigned int ldv_func_arg2 ,
                                           gfp_t ldv_func_arg3 ) ;
 #line 135 "include/linux/etherdevice.h"
-__inline static void random_ether_addr(u8 *addr ) 
+ static void random_ether_addr(u8 *addr ) 
 { void *__cil_tmp2 ;
   u8 __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -6318,7 +6318,7 @@ __inline static void random_ether_addr(u8 *addr )
 }
 }
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) 
+ static void *usb_get_intfdata(struct usb_interface *intf ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6343,7 +6343,7 @@ __inline static void *usb_get_intfdata(struct usb_interface *intf )
 }
 }
 #line 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -6364,7 +6364,7 @@ __inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
 }
 }
 #line 523 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
 { struct device  const  *__mptr ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;

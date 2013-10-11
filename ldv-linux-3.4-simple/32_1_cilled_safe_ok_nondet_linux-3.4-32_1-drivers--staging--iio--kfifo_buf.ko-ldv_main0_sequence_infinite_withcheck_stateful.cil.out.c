@@ -1457,10 +1457,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -1474,9 +1474,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -1492,9 +1492,9 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 #line 174 "include/linux/kfifo.h"
-__inline static unsigned int __attribute__((__warn_unused_result__))  __kfifo_uint_must_check_helper(unsigned int val )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int __attribute__((__warn_unused_result__))  __kfifo_uint_must_check_helper(unsigned int val )  __attribute__((__no_instrument_function__)) ;
 #line 174 "include/linux/kfifo.h"
-__inline static unsigned int __attribute__((__warn_unused_result__))  __kfifo_uint_must_check_helper(unsigned int val ) 
+ static unsigned int __attribute__((__warn_unused_result__))  __kfifo_uint_must_check_helper(unsigned int val ) 
 { 
 
   {
@@ -1503,9 +1503,9 @@ __inline static unsigned int __attribute__((__warn_unused_result__))  __kfifo_ui
 }
 }
 #line 180
-__inline static int __attribute__((__warn_unused_result__))  __kfifo_int_must_check_helper(int val )  __attribute__((__no_instrument_function__)) ;
+ static int __attribute__((__warn_unused_result__))  __kfifo_int_must_check_helper(int val )  __attribute__((__no_instrument_function__)) ;
 #line 180 "include/linux/kfifo.h"
-__inline static int __attribute__((__warn_unused_result__))  __kfifo_int_must_check_helper(int val ) 
+ static int __attribute__((__warn_unused_result__))  __kfifo_int_must_check_helper(int val ) 
 { 
 
   {
@@ -1531,10 +1531,10 @@ extern int __kfifo_to_user_r(struct __kfifo *fifo , void *to , unsigned long len
 #line 92 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/iio/buffer.h"
 extern void iio_buffer_init(struct iio_buffer *buffer ) ;
 #line 100
-__inline static void __iio_update_buffer(struct iio_buffer *buffer , int bytes_per_datum ,
+ static void __iio_update_buffer(struct iio_buffer *buffer , int bytes_per_datum ,
                                          int length )  __attribute__((__no_instrument_function__)) ;
 #line 100 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/iio/buffer.h"
-__inline static void __iio_update_buffer(struct iio_buffer *buffer , int bytes_per_datum ,
+ static void __iio_update_buffer(struct iio_buffer *buffer , int bytes_per_datum ,
                                          int length ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -1569,10 +1569,10 @@ struct iio_buffer *iio_kfifo_allocate(struct iio_dev *indio_dev ) ;
 #line 7
 void iio_kfifo_free(struct iio_buffer *r ) ;
 #line 20 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/2033/dscv_tempdir/dscv/ri/32_1/drivers/staging/iio/kfifo_buf.c.common.c"
-__inline static int __iio_allocate_kfifo(struct iio_kfifo *buf , int bytes_per_datum ,
+ static int __iio_allocate_kfifo(struct iio_kfifo *buf , int bytes_per_datum ,
                                          int length )  __attribute__((__no_instrument_function__)) ;
 #line 20 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/2033/dscv_tempdir/dscv/ri/32_1/drivers/staging/iio/kfifo_buf.c.common.c"
-__inline static int __iio_allocate_kfifo(struct iio_kfifo *buf , int bytes_per_datum ,
+ static int __iio_allocate_kfifo(struct iio_kfifo *buf , int bytes_per_datum ,
                                          int length ) 
 { struct kfifo *__tmp ;
   struct __kfifo *__kfifo ;

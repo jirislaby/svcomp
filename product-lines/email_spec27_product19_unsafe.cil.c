@@ -599,7 +599,7 @@ int isVerified(int handle ) ;
 #line 57 "ClientLib.h"
 int findPublicKey(int handle , int userid ) ;
 #line 12 "VerifyForward_spec.c"
-__inline void __utac_acc__VerifyForward_spec__1(int client , int msg ) 
+ void __utac_acc__VerifyForward_spec__1(int client , int msg ) 
 { int pubkey ;
   int tmp ;
   int tmp___0 ;

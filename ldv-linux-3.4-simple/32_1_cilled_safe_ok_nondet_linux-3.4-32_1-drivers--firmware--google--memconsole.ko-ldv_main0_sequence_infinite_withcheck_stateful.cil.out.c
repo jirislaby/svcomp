@@ -298,9 +298,9 @@ void mutex_unlock(struct mutex *lock ) ;
 #line 170
 int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 129 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *phys_to_virt(phys_addr_t address )  __attribute__((__no_instrument_function__)) ;
+ static void *phys_to_virt(phys_addr_t address )  __attribute__((__no_instrument_function__)) ;
 #line 129 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *phys_to_virt(phys_addr_t address ) 
+ static void *phys_to_virt(phys_addr_t address ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -322,9 +322,9 @@ void cleanup_module(void) ;
 #line 96 "include/linux/dmi.h"
 extern int dmi_check_system(struct dmi_system_id  const  *list ) ;
 #line 9 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bios_ebda.h"
-__inline static unsigned int get_bios_ebda(void)  __attribute__((__no_instrument_function__)) ;
+ static unsigned int get_bios_ebda(void)  __attribute__((__no_instrument_function__)) ;
 #line 9 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bios_ebda.h"
-__inline static unsigned int get_bios_ebda(void) 
+ static unsigned int get_bios_ebda(void) 
 { unsigned int address ;
   void *tmp ;
   phys_addr_t __cil_tmp3 ;

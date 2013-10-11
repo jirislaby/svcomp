@@ -8340,7 +8340,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/7500/dscv_tempdir/dscv/ri/43_1a/drivers/media/video/em28xx/em28xx-dvb.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -8354,7 +8354,7 @@ extern void __const_udelay(unsigned long  ) ;
 #line 46 "include/linux/delay.h"
 extern void msleep(unsigned int  ) ;
 #line 32 "include/linux/semaphore.h"
-__inline static void sema_init(struct semaphore *sem , int val ) 
+ static void sema_init(struct semaphore *sem , int val ) 
 { struct lock_class_key __key ;
   struct semaphore __constr_expr_0 ;
   unsigned long __cil_tmp5 ;
@@ -8513,7 +8513,7 @@ extern void em28xx_unregister_extension(struct em28xx_ops * ) ;
 #line 719
 extern int em28xx_tuner_callback(void * , int  , int  , int  ) ;
 #line 66 "drivers/media/dvb/frontends/mt352.h"
-__inline static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len ) 
+ static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len ) 
 { int r ;
   int (*__cil_tmp5)(struct dvb_frontend * , u8 const   * , int  ) ;
   unsigned long __cil_tmp6 ;
@@ -8575,7 +8575,7 @@ static short adapter_nr[8U]  =
   {      (short)-1,      (short)-1,      (short)-1,      (short)-1, 
         (short)-1,      (short)-1,      (short)-1,      (short)-1};
 #line 101 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/7500/dscv_tempdir/dscv/ri/43_1a/drivers/media/video/em28xx/em28xx-dvb.c.p"
-__inline static void print_err_status(struct em28xx *dev , int packet , int status ) 
+ static void print_err_status(struct em28xx *dev , int packet , int status ) 
 { char *errmsg ;
   unsigned int *__cil_tmp5 ;
   unsigned int __cil_tmp6 ;
@@ -8723,7 +8723,7 @@ __inline static void print_err_status(struct em28xx *dev , int packet , int stat
 }
 }
 #line 140 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/7500/dscv_tempdir/dscv/ri/43_1a/drivers/media/video/em28xx/em28xx-dvb.c.p"
-__inline static int em28xx_dvb_isoc_copy(struct em28xx *dev , struct urb *urb ) 
+ static int em28xx_dvb_isoc_copy(struct em28xx *dev , struct urb *urb ) 
 { int i ;
   int status ;
   struct em28xx *__cil_tmp5 ;
@@ -20854,7 +20854,7 @@ static int em28xx_dvb_init(struct em28xx *dev )
 }
 }
 #line 1072 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/7500/dscv_tempdir/dscv/ri/43_1a/drivers/media/video/em28xx/em28xx-dvb.c.p"
-__inline static void prevent_sleep(struct dvb_frontend_ops *ops ) 
+ static void prevent_sleep(struct dvb_frontend_ops *ops ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -21385,7 +21385,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1575 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/7500/dscv_tempdir/dscv/ri/43_1a/drivers/media/video/em28xx/em28xx-dvb.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

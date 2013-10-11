@@ -1039,7 +1039,7 @@ extern u8 w1_read_block(struct w1_master * , u8 * , int  ) ;
 #line 218
 extern int w1_reset_select_slave(struct w1_slave * ) ;
 #line 222 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/w1/slaves/../w1.h"
-__inline static struct w1_slave *dev_to_w1_slave(struct device *dev ) 
+ static struct w1_slave *dev_to_w1_slave(struct device *dev ) 
 { struct device  const  *__mptr ;
   struct w1_slave *__cil_tmp3 ;
 

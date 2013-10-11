@@ -2591,7 +2591,7 @@ extern void *memset(void * , int  , size_t  ) ;
 #line 60
 extern int memcmp(void const   * , void const   * , size_t  ) ;
 #line 54 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned short readw(void const volatile   *addr ) 
+ static unsigned short readw(void const volatile   *addr ) 
 { unsigned short ret ;
   unsigned short volatile   *__cil_tmp3 ;
 
@@ -2605,7 +2605,7 @@ __inline static unsigned short readw(void const volatile   *addr )
 }
 }
 #line 62 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writew(unsigned short val , void volatile   *addr ) 
+ static void writew(unsigned short val , void volatile   *addr ) 
 { unsigned short volatile   *__cil_tmp3 ;
 
   {
@@ -2634,7 +2634,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -2647,9 +2647,9 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11676/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/onenand/onenand_sim.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -5110,7 +5110,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 952 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11676/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/onenand/onenand_sim.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -5140,7 +5140,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1008 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11676/dscv_tempdir/dscv/ri/43_1a/drivers/mtd/onenand/onenand_sim.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

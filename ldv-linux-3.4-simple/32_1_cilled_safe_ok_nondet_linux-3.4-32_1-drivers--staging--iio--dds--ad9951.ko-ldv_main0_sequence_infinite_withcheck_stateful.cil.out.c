@@ -2640,9 +2640,9 @@ struct ad9951_state {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2662,9 +2662,9 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 74
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -2707,9 +2707,9 @@ extern void *dev_get_drvdata(struct device  const  *dev ) ;
 #line 793
 extern int dev_set_drvdata(struct device *dev , void *data ) ;
 #line 135 "include/linux/spi/spi.h"
-__inline static void spi_set_drvdata(struct spi_device *spi , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void spi_set_drvdata(struct spi_device *spi , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 135 "include/linux/spi/spi.h"
-__inline static void spi_set_drvdata(struct spi_device *spi , void *data ) 
+ static void spi_set_drvdata(struct spi_device *spi , void *data ) 
 { struct device *__cil_tmp3 ;
 
   {
@@ -2724,9 +2724,9 @@ __inline static void spi_set_drvdata(struct spi_device *spi , void *data )
 }
 }
 #line 140
-__inline static void *spi_get_drvdata(struct spi_device *spi )  __attribute__((__no_instrument_function__)) ;
+ static void *spi_get_drvdata(struct spi_device *spi )  __attribute__((__no_instrument_function__)) ;
 #line 140 "include/linux/spi/spi.h"
-__inline static void *spi_get_drvdata(struct spi_device *spi ) 
+ static void *spi_get_drvdata(struct spi_device *spi ) 
 { void *tmp___7 ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -2747,9 +2747,9 @@ __inline static void *spi_get_drvdata(struct spi_device *spi )
 #line 191
 extern int spi_register_driver(struct spi_driver *sdrv ) ;
 #line 198
-__inline static void spi_unregister_driver(struct spi_driver *sdrv )  __attribute__((__no_instrument_function__)) ;
+ static void spi_unregister_driver(struct spi_driver *sdrv )  __attribute__((__no_instrument_function__)) ;
 #line 198 "include/linux/spi/spi.h"
-__inline static void spi_unregister_driver(struct spi_driver *sdrv ) 
+ static void spi_unregister_driver(struct spi_driver *sdrv ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct device_driver *__cil_tmp4 ;
@@ -2775,9 +2775,9 @@ __inline static void spi_unregister_driver(struct spi_driver *sdrv )
 }
 }
 #line 573
-__inline static void spi_message_init(struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
+ static void spi_message_init(struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
 #line 573 "include/linux/spi/spi.h"
-__inline static void spi_message_init(struct spi_message *m ) 
+ static void spi_message_init(struct spi_message *m ) 
 { void *__cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
 
@@ -2797,9 +2797,9 @@ __inline static void spi_message_init(struct spi_message *m )
 }
 }
 #line 579
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
 #line 579 "include/linux/spi/spi.h"
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -2839,9 +2839,9 @@ extern void iio_device_unregister(struct iio_dev *indio_dev ) ;
 #line 426
 extern struct iio_dev *iio_allocate_device(int sizeof_priv ) ;
 #line 428
-__inline static void *iio_priv(struct iio_dev  const  *indio_dev )  __attribute__((__no_instrument_function__)) ;
+ static void *iio_priv(struct iio_dev  const  *indio_dev )  __attribute__((__no_instrument_function__)) ;
 #line 428 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/iio/dds/../iio.h"
-__inline static void *iio_priv(struct iio_dev  const  *indio_dev ) 
+ static void *iio_priv(struct iio_dev  const  *indio_dev ) 
 { int __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;

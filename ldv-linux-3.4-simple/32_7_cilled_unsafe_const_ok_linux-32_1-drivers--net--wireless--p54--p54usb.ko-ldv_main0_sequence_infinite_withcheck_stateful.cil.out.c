@@ -6443,9 +6443,9 @@ extern char *strcpy(char *dest , char    *src ) ;
 #line 121 "include/linux/string.h"
 extern void *kmemdup(void    *src , size_t len , gfp_t gfp ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -6465,9 +6465,9 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 93 "include/linux/spinlock.h"
 extern void __raw_spin_lock_init(raw_spinlock_t *lock , char    *name , struct lock_class_key *key ) ;
 #line 272
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -6494,9 +6494,9 @@ void mutex_unlock(struct mutex *lock ) ;
 #line 170
 int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 768 "include/linux/device.h"
-__inline static void device_unlock(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static void device_unlock(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 768 "include/linux/device.h"
-__inline static void device_unlock(struct device *dev ) 
+ static void device_unlock(struct device *dev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct mutex *__cil_tmp4 ;
@@ -6524,9 +6524,9 @@ extern int dev_set_drvdata(struct device *dev , void *data ) ;
 extern int ( /* format attribute */  dev_err)(struct device    *dev , char    *fmt 
                                               , ...) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) 
+ static void *usb_get_intfdata(struct usb_interface *intf ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6551,9 +6551,9 @@ __inline static void *usb_get_intfdata(struct usb_interface *intf )
 }
 }
 #line 196
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void usb_set_intfdata(struct usb_interface *intf , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -6574,9 +6574,9 @@ __inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
 }
 }
 #line 523
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf )  __attribute__((__no_instrument_function__)) ;
 #line 523 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
 { struct device    *__mptr ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6637,9 +6637,9 @@ static struct lock_class_key __key___4  ;
 #line 1042 "include/linux/usb.h"
 static struct lock_class_key __key___5  ;
 #line 1038
-__inline static void init_usb_anchor(struct usb_anchor *anchor )  __attribute__((__no_instrument_function__)) ;
+ static void init_usb_anchor(struct usb_anchor *anchor )  __attribute__((__no_instrument_function__)) ;
 #line 1038 "include/linux/usb.h"
-__inline static void init_usb_anchor(struct usb_anchor *anchor ) 
+ static void init_usb_anchor(struct usb_anchor *anchor ) 
 { struct list_head *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6720,12 +6720,12 @@ __inline static void init_usb_anchor(struct usb_anchor *anchor )
 }
 }
 #line 1309
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context )  __attribute__((__no_instrument_function__)) ;
 #line 1309 "include/linux/usb.h"
-__inline static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
+ static void usb_fill_bulk_urb(struct urb *urb , struct usb_device *dev ,
                                        unsigned int pipe , void *transfer_buffer ,
                                        int buffer_length , void (*complete_fn)(struct urb * ) ,
                                        void *context ) 
@@ -6802,9 +6802,9 @@ extern int usb_interrupt_msg(struct usb_device *usb_dev , unsigned int pipe , vo
 extern int usb_bulk_msg(struct usb_device *usb_dev , unsigned int pipe , void *data ,
                         int len , int *actual_length , int timeout ) ;
 #line 1567
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )  __attribute__((__no_instrument_function__)) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -6830,10 +6830,10 @@ extern void kfree(void    * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -6856,9 +6856,9 @@ extern void kfree_skb(struct sk_buff *skb ) ;
 extern struct sk_buff *__alloc_skb(unsigned int size , gfp_t priority , int fclone ,
                                    int node ) ;
 #line 566
-__inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )  __attribute__((__no_instrument_function__)) ;
+ static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )  __attribute__((__no_instrument_function__)) ;
 #line 566 "include/linux/skbuff.h"
-__inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority ) 
+ static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority ) 
 { struct sk_buff *tmp___7 ;
 
   {
@@ -6871,9 +6871,9 @@ __inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )
 }
 }
 #line 935
-__inline static __u32 skb_queue_len(struct sk_buff_head    *list_ )  __attribute__((__no_instrument_function__)) ;
+ static __u32 skb_queue_len(struct sk_buff_head    *list_ )  __attribute__((__no_instrument_function__)) ;
 #line 935 "include/linux/skbuff.h"
-__inline static __u32 skb_queue_len(struct sk_buff_head    *list_ ) 
+ static __u32 skb_queue_len(struct sk_buff_head    *list_ ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   __u32    __cil_tmp4 ;
@@ -6892,9 +6892,9 @@ __inline static __u32 skb_queue_len(struct sk_buff_head    *list_ )
 }
 }
 #line 950
-__inline static void __skb_queue_head_init(struct sk_buff_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void __skb_queue_head_init(struct sk_buff_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 950 "include/linux/skbuff.h"
-__inline static void __skb_queue_head_init(struct sk_buff_head *list ) 
+ static void __skb_queue_head_init(struct sk_buff_head *list ) 
 { struct sk_buff *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6925,9 +6925,9 @@ __inline static void __skb_queue_head_init(struct sk_buff_head *list )
 #line 966 "include/linux/skbuff.h"
 static struct lock_class_key __key___6  ;
 #line 964
-__inline static void skb_queue_head_init(struct sk_buff_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void skb_queue_head_init(struct sk_buff_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 964 "include/linux/skbuff.h"
-__inline static void skb_queue_head_init(struct sk_buff_head *list ) 
+ static void skb_queue_head_init(struct sk_buff_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   spinlock_t *__cil_tmp4 ;
@@ -6987,9 +6987,9 @@ extern void skb_queue_tail(struct sk_buff_head *list , struct sk_buff *newsk ) ;
 #line 1137
 extern void skb_unlink(struct sk_buff *skb , struct sk_buff_head *list ) ;
 #line 1256
-__inline static unsigned char *skb_tail_pointer(struct sk_buff    *skb )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char *skb_tail_pointer(struct sk_buff    *skb )  __attribute__((__no_instrument_function__)) ;
 #line 1256 "include/linux/skbuff.h"
-__inline static unsigned char *skb_tail_pointer(struct sk_buff    *skb ) 
+ static unsigned char *skb_tail_pointer(struct sk_buff    *skb ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   sk_buff_data_t    __cil_tmp4 ;
@@ -7020,9 +7020,9 @@ __inline static unsigned char *skb_tail_pointer(struct sk_buff    *skb )
 }
 }
 #line 1261
-__inline static void skb_reset_tail_pointer(struct sk_buff *skb )  __attribute__((__no_instrument_function__)) ;
+ static void skb_reset_tail_pointer(struct sk_buff *skb )  __attribute__((__no_instrument_function__)) ;
 #line 1261 "include/linux/skbuff.h"
-__inline static void skb_reset_tail_pointer(struct sk_buff *skb ) 
+ static void skb_reset_tail_pointer(struct sk_buff *skb ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -7065,9 +7065,9 @@ extern unsigned char *skb_push(struct sk_buff *skb , unsigned int len ) ;
 #line 1310
 extern unsigned char *skb_pull(struct sk_buff *skb , unsigned int len ) ;
 #line 1390
-__inline static void skb_reserve(struct sk_buff *skb , int len )  __attribute__((__no_instrument_function__)) ;
+ static void skb_reserve(struct sk_buff *skb , int len )  __attribute__((__no_instrument_function__)) ;
 #line 1390 "include/linux/skbuff.h"
-__inline static void skb_reserve(struct sk_buff *skb , int len ) 
+ static void skb_reserve(struct sk_buff *skb , int len ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -7114,9 +7114,9 @@ __inline static void skb_reserve(struct sk_buff *skb , int len )
 #line 1605
 extern void skb_trim(struct sk_buff *skb , unsigned int len ) ;
 #line 1679
-__inline static struct sk_buff *__dev_alloc_skb(unsigned int length , gfp_t gfp_mask )  __attribute__((__no_instrument_function__)) ;
+ static struct sk_buff *__dev_alloc_skb(unsigned int length , gfp_t gfp_mask )  __attribute__((__no_instrument_function__)) ;
 #line 1679 "include/linux/skbuff.h"
-__inline static struct sk_buff *__dev_alloc_skb(unsigned int length , gfp_t gfp_mask ) 
+ static struct sk_buff *__dev_alloc_skb(unsigned int length , gfp_t gfp_mask ) 
 { struct sk_buff *skb ;
   int _max1 ;
   int _max2 ;
@@ -7253,9 +7253,9 @@ int init_module(void) ;
 #line 68
 void cleanup_module(void) ;
 #line 2154 "include/net/cfg80211.h"
-__inline static void set_wiphy_dev(struct wiphy *wiphy , struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static void set_wiphy_dev(struct wiphy *wiphy , struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 2154 "include/net/cfg80211.h"
-__inline static void set_wiphy_dev(struct wiphy *wiphy , struct device *dev ) 
+ static void set_wiphy_dev(struct wiphy *wiphy , struct device *dev ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
 
@@ -7271,9 +7271,9 @@ __inline static void set_wiphy_dev(struct wiphy *wiphy , struct device *dev )
 }
 }
 #line 1310 "include/net/mac80211.h"
-__inline static void SET_IEEE80211_DEV(struct ieee80211_hw *hw , struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static void SET_IEEE80211_DEV(struct ieee80211_hw *hw , struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1310 "include/net/mac80211.h"
-__inline static void SET_IEEE80211_DEV(struct ieee80211_hw *hw , struct device *dev ) 
+ static void SET_IEEE80211_DEV(struct ieee80211_hw *hw , struct device *dev ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct wiphy *__cil_tmp5 ;

@@ -4141,7 +4141,7 @@ int ldv_spin_trylock(void) ;
 extern int __dynamic_dev_dbg(struct _ddebug * , struct device  const  * , char const   * 
                              , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -4161,7 +4161,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -4184,7 +4184,7 @@ __inline static void list_add_tail(struct list_head *new , struct list_head *hea
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern void *memset(void * , int  , size_t  ) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -4193,7 +4193,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4221,7 +4221,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1328/dscv_tempdir/dscv/ri/43_1a/drivers/video/backlight/ili9320.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -4248,7 +4248,7 @@ extern struct lcd_device *lcd_device_register(char const   * , struct device * ,
 #line 105
 extern void lcd_device_unregister(struct lcd_device * ) ;
 #line 109 "include/linux/lcd.h"
-__inline static void *lcd_get_data(struct lcd_device *ld_dev ) 
+ static void *lcd_get_data(struct lcd_device *ld_dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4273,7 +4273,7 @@ __inline static void *lcd_get_data(struct lcd_device *ld_dev )
 }
 }
 #line 573 "include/linux/spi/spi.h"
-__inline static void spi_message_init(struct spi_message *m ) 
+ static void spi_message_init(struct spi_message *m ) 
 { void *__cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
 
@@ -4293,7 +4293,7 @@ __inline static void spi_message_init(struct spi_message *m )
 }
 }
 #line 580 "include/linux/spi/spi.h"
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -4333,7 +4333,7 @@ int ili9320_suspend(struct ili9320 *lcd , int state_event34 ) ;
 #line 80
 int ili9320_resume(struct ili9320 *lcd ) ;
 #line 44 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1328/dscv_tempdir/dscv/ri/43_1a/drivers/video/backlight/ili9320.c.p"
-__inline static int ili9320_write_spi(struct ili9320 *ili , unsigned int reg , unsigned int value ) 
+ static int ili9320_write_spi(struct ili9320 *ili , unsigned int reg , unsigned int value ) 
 { struct ili9320_spi *spi ;
   unsigned char *addr ;
   unsigned char *data ;
@@ -4717,7 +4717,7 @@ static void ili9320_reset(struct ili9320 *lcd )
 }
 }
 #line 109 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1328/dscv_tempdir/dscv/ri/43_1a/drivers/video/backlight/ili9320.c.p"
-__inline static int ili9320_init_chip(struct ili9320 *lcd ) 
+ static int ili9320_init_chip(struct ili9320 *lcd ) 
 { int ret ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4790,7 +4790,7 @@ __inline static int ili9320_init_chip(struct ili9320 *lcd )
 }
 }
 #line 125 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1328/dscv_tempdir/dscv/ri/43_1a/drivers/video/backlight/ili9320.c.p"
-__inline static int ili9320_power_on(struct ili9320 *lcd ) 
+ static int ili9320_power_on(struct ili9320 *lcd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4857,7 +4857,7 @@ __inline static int ili9320_power_on(struct ili9320 *lcd )
 }
 }
 #line 136 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1328/dscv_tempdir/dscv/ri/43_1a/drivers/video/backlight/ili9320.c.p"
-__inline static int ili9320_power_off(struct ili9320 *lcd ) 
+ static int ili9320_power_off(struct ili9320 *lcd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5072,7 +5072,7 @@ static int ili9320_power(struct ili9320 *lcd , int power )
 }
 }
 #line 165 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1328/dscv_tempdir/dscv/ri/43_1a/drivers/video/backlight/ili9320.c.p"
-__inline static struct ili9320 *to_our_lcd(struct lcd_device *lcd ) 
+ static struct ili9320 *to_our_lcd(struct lcd_device *lcd ) 
 { void *tmp ;
 
   {
@@ -6145,7 +6145,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 746 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1328/dscv_tempdir/dscv/ri/43_1a/drivers/video/backlight/ili9320.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

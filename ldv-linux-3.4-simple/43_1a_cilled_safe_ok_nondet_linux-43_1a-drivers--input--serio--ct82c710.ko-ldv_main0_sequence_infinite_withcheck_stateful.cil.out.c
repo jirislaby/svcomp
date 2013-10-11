@@ -1344,7 +1344,7 @@ extern struct pv_cpu_ops pv_cpu_ops ;
 #line 30 "include/linux/string.h"
 extern size_t strlcpy(char * , char const   * , size_t  ) ;
 #line 349 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt.h"
-__inline static void slow_down_io(void) 
+ static void slow_down_io(void) 
 { unsigned long __cil_tmp1 ;
   void (*__cil_tmp2)(void) ;
 
@@ -1362,7 +1362,7 @@ __inline static void slow_down_io(void)
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -1373,7 +1373,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -1384,7 +1384,7 @@ __inline static unsigned char inb(int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb_p(unsigned char value , int port ) 
+ static void outb_p(unsigned char value , int port ) 
 { int __cil_tmp3 ;
   unsigned char __cil_tmp4 ;
 
@@ -1404,7 +1404,7 @@ __inline static void outb_p(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb_p(int port ) 
+ static unsigned char inb_p(int port ) 
 { unsigned char value ;
   unsigned char tmp ;
 
@@ -1428,7 +1428,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2969/dscv_tempdir/dscv/ri/43_1a/drivers/input/serio/ct82c710.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -1444,7 +1444,7 @@ extern int request_threaded_irq(unsigned int  , irqreturn_t (*)(int  , void * ) 
                                 irqreturn_t (*)(int  , void * ) , unsigned long  ,
                                 char const   * , void * ) ;
 #line 132 "include/linux/interrupt.h"
-__inline static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
+ static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
                                 unsigned long flags , char const   *name , void *dev ) 
 { int tmp ;
   irqreturn_t (*__cil_tmp7)(int  , void * ) ;
@@ -2563,7 +2563,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 749 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2969/dscv_tempdir/dscv/ri/43_1a/drivers/input/serio/ct82c710.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

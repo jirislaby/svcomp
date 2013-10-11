@@ -563,7 +563,7 @@ extern void power_supply_unregister(struct power_supply * ) ;
 #line 46 "include/linux/delay.h"
 extern void msleep(unsigned int  ) ;
 #line 50 "include/linux/delay.h"
-__inline static void ssleep(unsigned int seconds ) 
+ static void ssleep(unsigned int seconds ) 
 { unsigned int __cil_tmp2 ;
 
   {

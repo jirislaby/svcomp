@@ -4233,7 +4233,7 @@ extern void kfree(void const * ) ;
 # 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 # 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )
 { void *tmp___2 ;
 
@@ -4247,7 +4247,7 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 # 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )
+ static void *kzalloc(size_t size , gfp_t flags )
 { void *tmp ;
 
   {
@@ -4266,7 +4266,7 @@ void cleanup_module(void) ;
 # 99 "include/linux/module.h"
 extern struct module __this_module ;
 # 424 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_dir_in(struct usb_endpoint_descriptor const *epd )
+ static int usb_endpoint_dir_in(struct usb_endpoint_descriptor const *epd )
 {
 
   {
@@ -4275,7 +4275,7 @@ __inline static int usb_endpoint_dir_in(struct usb_endpoint_descriptor const *ep
 }
 }
 # 474 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_xfer_int(struct usb_endpoint_descriptor const *epd )
+ static int usb_endpoint_xfer_int(struct usb_endpoint_descriptor const *epd )
 {
 
   {
@@ -4284,7 +4284,7 @@ __inline static int usb_endpoint_xfer_int(struct usb_endpoint_descriptor const *
 }
 }
 # 528 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_is_int_in(struct usb_endpoint_descriptor const *epd )
+ static int usb_endpoint_is_int_in(struct usb_endpoint_descriptor const *epd )
 { int tmp ;
   int tmp___0 ;
   int tmp___1 ;
@@ -4321,11 +4321,11 @@ extern void *dev_get_drvdata(struct device const *dev ) __attribute__((__ldv_mod
 # 706 "include/linux/device.h"
 extern int dev_set_drvdata(struct device *dev , void *data ) ;
 # 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) __attribute__((__ldv_model__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf ) __attribute__((__ldv_model__)) ;
 # 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) __attribute__((__ldv_model__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf ) __attribute__((__ldv_model__)) ;
 # 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf )
+ static void *usb_get_intfdata(struct usb_interface *intf )
 { void *tmp___7 ;
 
   {
@@ -4338,11 +4338,11 @@ __inline static void *usb_get_intfdata(struct usb_interface *intf )
 }
 }
 # 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) __attribute__((__ldv_model__)) ;
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) __attribute__((__ldv_model__)) ;
 # 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) __attribute__((__ldv_model__)) ;
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) __attribute__((__ldv_model__)) ;
 # 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
+ static void usb_set_intfdata(struct usb_interface *intf , void *data )
 {
 
   {
@@ -4355,7 +4355,7 @@ __inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
 }
 }
 # 497 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf )
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf )
 { struct device const *__mptr ;
 
   {
@@ -4366,7 +4366,7 @@ __inline static struct usb_device *interface_to_usbdev(struct usb_interface *int
 }
 }
 # 637 "include/linux/usb.h"
-__inline static int usb_make_path(struct usb_device *dev , char *buf , size_t size )
+ static int usb_make_path(struct usb_device *dev , char *buf , size_t size )
 { int actual ;
   int tmp___7 ;
 
@@ -4390,7 +4390,7 @@ __inline static int usb_make_path(struct usb_device *dev , char *buf , size_t si
 # 929 "include/linux/usb.h"
 extern int usb_register_driver(struct usb_driver * , struct module * , char const * ) ;
 # 931 "include/linux/usb.h"
-__inline static int usb_register(struct usb_driver *driver )
+ static int usb_register(struct usb_driver *driver )
 { int tmp___7 ;
 
   {
@@ -4405,7 +4405,7 @@ __inline static int usb_register(struct usb_driver *driver )
 # 935 "include/linux/usb.h"
 extern void usb_deregister(struct usb_driver * ) ;
 # 1309 "include/linux/usb.h"
-__inline static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
+ static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
                                       void *transfer_buffer , int buffer_length ,
                                       void (*complete_fn)(struct urb * ) , void *context ,
                                       int interval )
@@ -4457,7 +4457,7 @@ void *usb_alloc_coherent(struct usb_device *dev , size_t size , gfp_t mem_flags 
 # 1379 "include/linux/usb.h"
 void usb_free_coherent(struct usb_device *dev , size_t size , void *addr , dma_addr_t dma ) __attribute__((__ldv_model__)) ;
 # 1526 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )
 {
 
   {
@@ -4466,7 +4466,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 # 1560 "include/linux/usb.h"
-__inline static __u16 usb_maxpacket(struct usb_device *udev , int pipe , int is_out )
+ static __u16 usb_maxpacket(struct usb_device *udev , int pipe , int is_out )
 { struct usb_host_endpoint *ep ;
   unsigned int epnum ;
   int __ret_warn_on ;
@@ -4539,7 +4539,7 @@ extern struct input_dev *input_allocate_device(void) ;
 # 1426 "include/linux/input.h"
 extern void input_free_device(struct input_dev *dev ) ;
 # 1439 "include/linux/input.h"
-__inline static void *input_get_drvdata(struct input_dev *dev )
+ static void *input_get_drvdata(struct input_dev *dev )
 { void *tmp___7 ;
 
   {
@@ -4552,7 +4552,7 @@ __inline static void *input_get_drvdata(struct input_dev *dev )
 }
 }
 # 1444 "include/linux/input.h"
-__inline static void input_set_drvdata(struct input_dev *dev , void *data )
+ static void input_set_drvdata(struct input_dev *dev , void *data )
 {
 
   {
@@ -4572,7 +4572,7 @@ extern void input_unregister_device(struct input_dev * ) ;
 extern void input_event(struct input_dev *dev , unsigned int type , unsigned int code ,
                         int value ) ;
 # 1474 "include/linux/input.h"
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value )
 {
 
@@ -4586,7 +4586,7 @@ __inline static void input_report_key(struct input_dev *dev , unsigned int code 
 }
 }
 # 1479 "include/linux/input.h"
-__inline static void input_report_rel(struct input_dev *dev , unsigned int code ,
+ static void input_report_rel(struct input_dev *dev , unsigned int code ,
                                       int value )
 {
 
@@ -4600,7 +4600,7 @@ __inline static void input_report_rel(struct input_dev *dev , unsigned int code 
 }
 }
 # 1499 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev )
+ static void input_sync(struct input_dev *dev )
 {
 
   {
@@ -4613,7 +4613,7 @@ __inline static void input_sync(struct input_dev *dev )
 }
 }
 # 16 "include/linux/usb/input.h"
-__inline static void usb_to_input_id(struct usb_device const *dev , struct input_id *id )
+ static void usb_to_input_id(struct usb_device const *dev , struct input_id *id )
 {
 
   {

@@ -3500,7 +3500,7 @@ int ldv_spin_trylock(void) ;
 extern int __dynamic_dev_dbg(struct _ddebug * , struct device  const  * , char const   * 
                              , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -3520,7 +3520,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -3543,7 +3543,7 @@ __inline static void list_add_tail(struct list_head *new , struct list_head *hea
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern void *memset(void * , int  , size_t  ) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3552,7 +3552,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3599,7 +3599,7 @@ extern struct rtc_device *rtc_device_register(char const   * , struct device * ,
 #line 225
 extern void rtc_device_unregister(struct rtc_device * ) ;
 #line 105 "include/linux/spi/spi.h"
-__inline static struct spi_device *to_spi_device(struct device *dev ) 
+ static struct spi_device *to_spi_device(struct device *dev ) 
 { struct device  const  *__mptr ;
   struct spi_device *tmp ;
   struct device *__cil_tmp4 ;
@@ -3630,7 +3630,7 @@ __inline static struct spi_device *to_spi_device(struct device *dev )
 }
 }
 #line 140 "include/linux/spi/spi.h"
-__inline static void *spi_get_drvdata(struct spi_device *spi ) 
+ static void *spi_get_drvdata(struct spi_device *spi ) 
 { void *tmp ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -3649,7 +3649,7 @@ __inline static void *spi_get_drvdata(struct spi_device *spi )
 }
 }
 #line 573 "include/linux/spi/spi.h"
-__inline static void spi_message_init(struct spi_message *m ) 
+ static void spi_message_init(struct spi_message *m ) 
 { void *__cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
 
@@ -3669,7 +3669,7 @@ __inline static void spi_message_init(struct spi_message *m )
 }
 }
 #line 580 "include/linux/spi/spi.h"
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -3697,7 +3697,7 @@ extern int spi_setup(struct spi_device * ) ;
 #line 630
 extern int spi_sync(struct spi_device * , struct spi_message * ) ;
 #line 646 "include/linux/spi/spi.h"
-__inline static int spi_write(struct spi_device *spi , void const   *buf , size_t len ) 
+ static int spi_write(struct spi_device *spi , void const   *buf , size_t len ) 
 { struct spi_transfer t ;
   struct spi_message m ;
   int tmp ;
@@ -3777,7 +3777,7 @@ __inline static int spi_write(struct spi_device *spi , void const   *buf , size_
 extern int spi_write_then_read(struct spi_device * , void const   * , unsigned int  ,
                                void * , unsigned int  ) ;
 #line 698 "include/linux/spi/spi.h"
-__inline static ssize_t spi_w8r8(struct spi_device *spi , u8 cmd ) 
+ static ssize_t spi_w8r8(struct spi_device *spi , u8 cmd ) 
 { ssize_t status ;
   u8 result ;
   int tmp ;

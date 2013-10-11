@@ -7166,9 +7166,9 @@ extern int ( /* format attribute */  printk)(char    *fmt  , ...) ;
 #line 147 "include/linux/kernel.h"
 extern void __might_sleep(char    *file , int line , int preempt_offset ) ;
 #line 194
-__inline static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
+ static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
 #line 194 "include/linux/kernel.h"
-__inline static void might_fault(void) 
+ static void might_fault(void) 
 { 
 
   {
@@ -7199,9 +7199,9 @@ __inline static void might_fault(void)
 }
 }
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -7221,9 +7221,9 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 74
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -7248,9 +7248,9 @@ extern void __list_del_entry(struct list_head *entry ) ;
 #line 112
 extern void list_del(struct list_head *entry ) ;
 #line 142
-__inline static void list_del_init(struct list_head *entry )  __attribute__((__no_instrument_function__)) ;
+ static void list_del_init(struct list_head *entry )  __attribute__((__no_instrument_function__)) ;
 #line 142 "include/linux/list.h"
-__inline static void list_del_init(struct list_head *entry ) 
+ static void list_del_init(struct list_head *entry ) 
 { 
 
   {
@@ -7265,9 +7265,9 @@ __inline static void list_del_init(struct list_head *entry )
 }
 }
 #line 186
-__inline static int list_empty(struct list_head    *head )  __attribute__((__no_instrument_function__)) ;
+ static int list_empty(struct list_head    *head )  __attribute__((__no_instrument_function__)) ;
 #line 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head    *head ) 
+ static int list_empty(struct list_head    *head ) 
 { unsigned long __cil_tmp2 ;
   struct list_head *   __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -7293,9 +7293,9 @@ extern void ( /* format attribute */  warn_slowpath_fmt)(char    *file , int    
 #line 70
 extern void warn_slowpath_null(char    *file , int    line ) ;
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t    *v )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_read(atomic_t    *v )  __attribute__((__no_instrument_function__)) ;
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t    *v ) 
+ static int atomic_read(atomic_t    *v ) 
 { int    *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -7314,9 +7314,9 @@ __inline static int atomic_read(atomic_t    *v )
 }
 }
 #line 93
-__inline static void atomic_inc(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_inc(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 93 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v ) 
+ static void atomic_inc(atomic_t *v ) 
 { 
 
   {
@@ -7351,9 +7351,9 @@ extern void *vmalloc(unsigned long size ) ;
 #line 66
 extern void vfree(void    *addr ) ;
 #line 39 "include/linux/kref.h"
-__inline static void kref_get(struct kref *kref )  __attribute__((__no_instrument_function__)) ;
+ static void kref_get(struct kref *kref )  __attribute__((__no_instrument_function__)) ;
 #line 39 "include/linux/kref.h"
-__inline static void kref_get(struct kref *kref ) 
+ static void kref_get(struct kref *kref ) 
 { int __ret_warn_on ;
   int tmp ;
   int tmp___0 ;
@@ -7436,11 +7436,11 @@ extern unsigned long __attribute__((__warn_unused_result__))  _copy_from_user(vo
                                                                               void    *from ,
                                                                               unsigned int len ) ;
 #line 46
-__inline static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
+ static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
                                                                                       void    *from ,
                                                                                       unsigned long n )  __attribute__((__no_instrument_function__)) ;
 #line 46 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
+ static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
                                                                                       void    *from ,
                                                                                       unsigned long n ) 
 { int sz ;
@@ -7542,11 +7542,11 @@ __inline static unsigned long __attribute__((__warn_unused_result__))  copy_from
 }
 }
 #line 62
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void    *src ,
                                                                                                                 unsigned int size )  __attribute__((__no_instrument_function__)) ;
 #line 62 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void    *src ,
                                                                                                                 unsigned int size ) 
 { unsigned long tmp ;
@@ -7566,9 +7566,9 @@ __inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__
 extern int ( /* format attribute */  drm_err)(char    *func , char    *format 
                                               , ...) ;
 #line 310 "include/drm/ttm/ttm_bo_api.h"
-__inline static struct ttm_buffer_object *ttm_bo_reference(struct ttm_buffer_object *bo )  __attribute__((__no_instrument_function__)) ;
+ static struct ttm_buffer_object *ttm_bo_reference(struct ttm_buffer_object *bo )  __attribute__((__no_instrument_function__)) ;
 #line 310 "include/drm/ttm/ttm_bo_api.h"
-__inline static struct ttm_buffer_object *ttm_bo_reference(struct ttm_buffer_object *bo ) 
+ static struct ttm_buffer_object *ttm_bo_reference(struct ttm_buffer_object *bo ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct kref *__cil_tmp4 ;
@@ -7619,9 +7619,9 @@ int vmw_user_fence_create(struct drm_file *file_priv , struct vmw_fence_manager 
                           uint32_t seqno , uint32_t mask , struct vmw_fence_obj **p_fence ,
                           uint32_t *p_handle ) ;
 #line 336 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h"
-__inline static struct vmw_private *vmw_priv(struct drm_device *dev )  __attribute__((__no_instrument_function__)) ;
+ static struct vmw_private *vmw_priv(struct drm_device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 336 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h"
-__inline static struct vmw_private *vmw_priv(struct drm_device *dev ) 
+ static struct vmw_private *vmw_priv(struct drm_device *dev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   void *__cil_tmp4 ;
@@ -7640,9 +7640,9 @@ __inline static struct vmw_private *vmw_priv(struct drm_device *dev )
 }
 }
 #line 341
-__inline static struct vmw_fpriv *vmw_fpriv(struct drm_file *file_priv )  __attribute__((__no_instrument_function__)) ;
+ static struct vmw_fpriv *vmw_fpriv(struct drm_file *file_priv )  __attribute__((__no_instrument_function__)) ;
 #line 341 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h"
-__inline static struct vmw_fpriv *vmw_fpriv(struct drm_file *file_priv ) 
+ static struct vmw_fpriv *vmw_fpriv(struct drm_file *file_priv ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   void *__cil_tmp4 ;
@@ -7661,9 +7661,9 @@ __inline static struct vmw_fpriv *vmw_fpriv(struct drm_file *file_priv )
 }
 }
 #line 346
-__inline static struct vmw_master *vmw_master(struct drm_master *master )  __attribute__((__no_instrument_function__)) ;
+ static struct vmw_master *vmw_master(struct drm_master *master )  __attribute__((__no_instrument_function__)) ;
 #line 346 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h"
-__inline static struct vmw_master *vmw_master(struct drm_master *master ) 
+ static struct vmw_master *vmw_master(struct drm_master *master ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   void *__cil_tmp4 ;
@@ -7743,9 +7743,9 @@ void vmw_kms_cursor_post_execbuf(struct vmw_private *dev_priv ) ;
 void vmw_kms_cursor_snoop(struct vmw_surface *srf , struct ttm_object_file *tfile ,
                           struct ttm_buffer_object *bo , SVGA3dCmdHeader *header ) ;
 #line 674
-__inline static void vmw_surface_unreference(struct vmw_surface **srf )  __attribute__((__no_instrument_function__)) ;
+ static void vmw_surface_unreference(struct vmw_surface **srf )  __attribute__((__no_instrument_function__)) ;
 #line 674 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h"
-__inline static void vmw_surface_unreference(struct vmw_surface **srf ) 
+ static void vmw_surface_unreference(struct vmw_surface **srf ) 
 { struct vmw_surface *tmp_srf ;
   struct vmw_resource *res ;
   struct vmw_resource **__cil_tmp4 ;
@@ -7771,9 +7771,9 @@ __inline static void vmw_surface_unreference(struct vmw_surface **srf )
 }
 }
 #line 689
-__inline static void vmw_dmabuf_unreference(struct vmw_dma_buffer **buf )  __attribute__((__no_instrument_function__)) ;
+ static void vmw_dmabuf_unreference(struct vmw_dma_buffer **buf )  __attribute__((__no_instrument_function__)) ;
 #line 689 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h"
-__inline static void vmw_dmabuf_unreference(struct vmw_dma_buffer **buf ) 
+ static void vmw_dmabuf_unreference(struct vmw_dma_buffer **buf ) 
 { struct vmw_dma_buffer *tmp_buf ;
   struct ttm_buffer_object *bo ;
   struct ttm_buffer_object **__cil_tmp4 ;
@@ -14801,9 +14801,9 @@ extern void *__memcpy(void *to , void    *from , size_t len ) ;
 #line 220 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
 extern unsigned long kernel_stack  __attribute__((__section__(".data..percpu"))) ;
 #line 222
-__inline static struct thread_info *current_thread_info(void)  __attribute__((__no_instrument_function__)) ;
+ static struct thread_info *current_thread_info(void)  __attribute__((__no_instrument_function__)) ;
 #line 222 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
-__inline static struct thread_info *current_thread_info(void) 
+ static struct thread_info *current_thread_info(void) 
 { struct thread_info *ti ;
   unsigned long pfo_ret__ ;
   unsigned long __cil_tmp3 ;
@@ -14913,9 +14913,9 @@ __inline static struct thread_info *current_thread_info(void)
 }
 }
 #line 310 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outl(unsigned int value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outl(unsigned int value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 310 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outl(unsigned int value , int port ) 
+ static void outl(unsigned int value , int port ) 
 { 
 
   {
@@ -14932,9 +14932,9 @@ __inline static void outl(unsigned int value , int port )
 #line 324 "include/linux/gfp.h"
 extern struct page *alloc_pages_current(gfp_t gfp_mask , unsigned int order ) ;
 #line 326
-__inline static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order )  __attribute__((__no_instrument_function__)) ;
+ static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order )  __attribute__((__no_instrument_function__)) ;
 #line 326 "include/linux/gfp.h"
-__inline static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) 
+ static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) 
 { struct page *tmp ;
 
   {
@@ -14949,9 +14949,9 @@ __inline static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order )
 #line 360
 extern void __free_pages(struct page *page , unsigned int order ) ;
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page )  __attribute__((__no_instrument_function__)) ;
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page )  __attribute__((__no_instrument_function__)) ;
 #line 737 "include/linux/mm.h"
-__inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page ) 
+ static void *( __attribute__((__always_inline__)) lowmem_page_address)(struct page    *page ) 
 { struct page *__cil_tmp2 ;
   struct page    *__cil_tmp3 ;
   int __cil_tmp4 ;
@@ -14985,9 +14985,9 @@ __inline static void *( __attribute__((__always_inline__)) lowmem_page_address)(
 }
 }
 #line 16 "include/linux/uaccess.h"
-__inline static void pagefault_disable(void)  __attribute__((__no_instrument_function__)) ;
+ static void pagefault_disable(void)  __attribute__((__no_instrument_function__)) ;
 #line 16 "include/linux/uaccess.h"
-__inline static void pagefault_disable(void) 
+ static void pagefault_disable(void) 
 { struct thread_info *tmp___7 ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -15028,9 +15028,9 @@ __inline static void pagefault_disable(void)
 }
 }
 #line 26
-__inline static void pagefault_enable(void)  __attribute__((__no_instrument_function__)) ;
+ static void pagefault_enable(void)  __attribute__((__no_instrument_function__)) ;
 #line 26 "include/linux/uaccess.h"
-__inline static void pagefault_enable(void) 
+ static void pagefault_enable(void) 
 { struct thread_info *tmp___7 ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -15082,9 +15082,9 @@ __inline static void pagefault_enable(void)
 }
 }
 #line 59 "include/linux/highmem.h"
-__inline static void *kmap_atomic(struct page *page )  __attribute__((__no_instrument_function__)) ;
+ static void *kmap_atomic(struct page *page )  __attribute__((__no_instrument_function__)) ;
 #line 59 "include/linux/highmem.h"
-__inline static void *kmap_atomic(struct page *page ) 
+ static void *kmap_atomic(struct page *page ) 
 { void *tmp___7 ;
   struct page    *__cil_tmp3 ;
 
@@ -15102,9 +15102,9 @@ __inline static void *kmap_atomic(struct page *page )
 }
 }
 #line 66
-__inline static void __kunmap_atomic(void *addr )  __attribute__((__no_instrument_function__)) ;
+ static void __kunmap_atomic(void *addr )  __attribute__((__no_instrument_function__)) ;
 #line 66 "include/linux/highmem.h"
-__inline static void __kunmap_atomic(void *addr ) 
+ static void __kunmap_atomic(void *addr ) 
 { 
 
   {
@@ -15117,10 +15117,10 @@ __inline static void __kunmap_atomic(void *addr )
 }
 }
 #line 351 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h"
-__inline static void vmw_write(struct vmw_private *dev_priv , unsigned int offset ,
+ static void vmw_write(struct vmw_private *dev_priv , unsigned int offset ,
                                uint32_t value )  __attribute__((__no_instrument_function__)) ;
 #line 351 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h"
-__inline static void vmw_write(struct vmw_private *dev_priv , unsigned int offset ,
+ static void vmw_write(struct vmw_private *dev_priv , unsigned int offset ,
                                uint32_t value ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -16047,9 +16047,9 @@ static int vmw_gmr_build_descriptors(struct list_head *desc_pages , struct page 
 }
 }
 #line 183
-__inline static void vmw_gmr_free_descriptors(struct list_head *desc_pages )  __attribute__((__no_instrument_function__)) ;
+ static void vmw_gmr_free_descriptors(struct list_head *desc_pages )  __attribute__((__no_instrument_function__)) ;
 #line 183 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6447/dscv_tempdir/dscv/ri/32_1/drivers/gpu/drm/vmwgfx/vmwgfx_gmr.c"
-__inline static void vmw_gmr_free_descriptors(struct list_head *desc_pages ) 
+ static void vmw_gmr_free_descriptors(struct list_head *desc_pages ) 
 { struct page *page ;
   struct page *next ;
   struct list_head    *__mptr ;
@@ -16615,9 +16615,9 @@ void vmw_gmr_unbind(struct vmw_private *dev_priv , int gmr_id )
 }
 }
 #line 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head ) 
+ static void list_add(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -16632,9 +16632,9 @@ __inline static void list_add(struct list_head *new , struct list_head *head )
 }
 }
 #line 153
-__inline static void list_move(struct list_head *list , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_move(struct list_head *list , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 153 "include/linux/list.h"
-__inline static void list_move(struct list_head *list , struct list_head *head ) 
+ static void list_move(struct list_head *list , struct list_head *head ) 
 { 
 
   {
@@ -16649,9 +16649,9 @@ __inline static void list_move(struct list_head *list , struct list_head *head )
 }
 }
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )  __attribute__((__no_instrument_function__)) ;
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )  __attribute__((__no_instrument_function__)) ;
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
 { 
 
   {
@@ -16664,9 +16664,9 @@ extern unsigned int ioread32(void * ) ;
 #line 37
 extern void iowrite32(u32  , void * ) ;
 #line 310 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned int inl(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int inl(int port )  __attribute__((__no_instrument_function__)) ;
 #line 310 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned int inl(int port ) 
+ static unsigned int inl(int port ) 
 { unsigned int value ;
 
   {
@@ -16685,10 +16685,10 @@ extern void kfree(void    * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -16702,9 +16702,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 243 "include/linux/slab.h"
-__inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kmalloc_array(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 243 "include/linux/slab.h"
-__inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
+ static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned long __cil_tmp5 ;
   size_t __cil_tmp6 ;
@@ -16737,9 +16737,9 @@ __inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 256
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kcalloc(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 256 "include/linux/slab.h"
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
+ static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp5 ;
 
@@ -16755,9 +16755,9 @@ __inline static void *kcalloc(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 349
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -16812,9 +16812,9 @@ extern struct drm_master *drm_master_get(struct drm_master *master ) ;
 #line 1505
 extern void drm_master_put(struct drm_master **master ) ;
 #line 640 "include/drm/ttm/ttm_bo_api.h"
-__inline static void *ttm_kmap_obj_virtual(struct ttm_bo_kmap_obj *map , bool *is_iomem )  __attribute__((__no_instrument_function__)) ;
+ static void *ttm_kmap_obj_virtual(struct ttm_bo_kmap_obj *map , bool *is_iomem )  __attribute__((__no_instrument_function__)) ;
 #line 640 "include/drm/ttm/ttm_bo_api.h"
-__inline static void *ttm_kmap_obj_virtual(struct ttm_bo_kmap_obj *map , bool *is_iomem ) 
+ static void *ttm_kmap_obj_virtual(struct ttm_bo_kmap_obj *map , bool *is_iomem ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   enum __anonenum_bo_kmap_type_427 __cil_tmp5 ;
@@ -16864,9 +16864,9 @@ int vmw_event_fence_action_queue(struct drm_file *file_priv , struct vmw_fence_o
                                  struct drm_pending_event *event , uint32_t *tv_sec ,
                                  uint32_t *tv_usec , bool interruptible ) ;
 #line 358 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h"
-__inline static uint32_t vmw_read(struct vmw_private *dev_priv , unsigned int offset )  __attribute__((__no_instrument_function__)) ;
+ static uint32_t vmw_read(struct vmw_private *dev_priv , unsigned int offset )  __attribute__((__no_instrument_function__)) ;
 #line 358 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h"
-__inline static uint32_t vmw_read(struct vmw_private *dev_priv , unsigned int offset ) 
+ static uint32_t vmw_read(struct vmw_private *dev_priv , unsigned int offset ) 
 { uint32_t val ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -16955,9 +16955,9 @@ int vmw_overlay_resume_all(struct vmw_private *dev_priv ) ;
 #line 658
 int vmw_overlay_pause_all(struct vmw_private *dev_priv ) ;
 #line 683
-__inline static struct vmw_surface *vmw_surface_reference(struct vmw_surface *srf )  __attribute__((__no_instrument_function__)) ;
+ static struct vmw_surface *vmw_surface_reference(struct vmw_surface *srf )  __attribute__((__no_instrument_function__)) ;
 #line 683 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h"
-__inline static struct vmw_surface *vmw_surface_reference(struct vmw_surface *srf ) 
+ static struct vmw_surface *vmw_surface_reference(struct vmw_surface *srf ) 
 { struct vmw_resource *__cil_tmp2 ;
 
   {
@@ -16972,9 +16972,9 @@ __inline static struct vmw_surface *vmw_surface_reference(struct vmw_surface *sr
 }
 }
 #line 698
-__inline static struct vmw_dma_buffer *vmw_dmabuf_reference(struct vmw_dma_buffer *buf )  __attribute__((__no_instrument_function__)) ;
+ static struct vmw_dma_buffer *vmw_dmabuf_reference(struct vmw_dma_buffer *buf )  __attribute__((__no_instrument_function__)) ;
 #line 698 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h"
-__inline static struct vmw_dma_buffer *vmw_dmabuf_reference(struct vmw_dma_buffer *buf ) 
+ static struct vmw_dma_buffer *vmw_dmabuf_reference(struct vmw_dma_buffer *buf ) 
 { struct ttm_buffer_object *tmp___7 ;
   struct ttm_buffer_object *__cil_tmp3 ;
   void *__cil_tmp4 ;
@@ -31430,9 +31430,9 @@ void ldv_main2_sequence_infinite_withcheck_stateful(void)
 }
 }
 #line 35 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i )  __attribute__((__no_instrument_function__)) ;
+ static void atomic_set(atomic_t *v , int i )  __attribute__((__no_instrument_function__)) ;
 #line 35 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i ) 
+ static void atomic_set(atomic_t *v , int i ) 
 { 
 
   {
@@ -31449,9 +31449,9 @@ extern void _raw_spin_lock(raw_spinlock_t *lock )  __attribute__((__section__(".
 #line 39
 extern void _raw_spin_unlock(raw_spinlock_t *lock )  __attribute__((__section__(".spinlock.text"))) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -31466,9 +31466,9 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -31525,9 +31525,9 @@ extern int __attribute__((__warn_unused_result__))  pci_request_region(struct pc
 #line 909
 extern void pci_release_region(struct pci_dev * , int  ) ;
 #line 1358
-__inline static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
+ static void *pci_get_drvdata(struct pci_dev *pdev )  __attribute__((__no_instrument_function__)) ;
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -31561,9 +31561,9 @@ extern void idr_destroy(struct idr *idp ) ;
 #line 115
 extern void idr_init(struct idr *idp ) ;
 #line 1246 "include/drm/drmP.h"
-__inline static int drm_mtrr_add(unsigned long offset , unsigned long size , unsigned int flags )  __attribute__((__no_instrument_function__)) ;
+ static int drm_mtrr_add(unsigned long offset , unsigned long size , unsigned int flags )  __attribute__((__no_instrument_function__)) ;
 #line 1246 "include/drm/drmP.h"
-__inline static int drm_mtrr_add(unsigned long offset , unsigned long size , unsigned int flags ) 
+ static int drm_mtrr_add(unsigned long offset , unsigned long size , unsigned int flags ) 
 { int tmp___7 ;
   bool __cil_tmp5 ;
 
@@ -31579,10 +31579,10 @@ __inline static int drm_mtrr_add(unsigned long offset , unsigned long size , uns
 }
 }
 #line 1252
-__inline static int drm_mtrr_del(int handle , unsigned long offset , unsigned long size ,
+ static int drm_mtrr_del(int handle , unsigned long offset , unsigned long size ,
                                  unsigned int flags )  __attribute__((__no_instrument_function__)) ;
 #line 1252 "include/drm/drmP.h"
-__inline static int drm_mtrr_del(int handle , unsigned long offset , unsigned long size ,
+ static int drm_mtrr_del(int handle , unsigned long offset , unsigned long size ,
                                  unsigned int flags ) 
 { int tmp___7 ;
 
@@ -31665,9 +31665,9 @@ extern int ttm_vt_lock(struct ttm_lock *lock , bool interruptible , struct ttm_o
 #line 199
 extern int ttm_vt_unlock(struct ttm_lock *lock ) ;
 #line 239
-__inline static void ttm_lock_set_kill(struct ttm_lock *lock , bool val , int signal )  __attribute__((__no_instrument_function__)) ;
+ static void ttm_lock_set_kill(struct ttm_lock *lock , bool val , int signal )  __attribute__((__no_instrument_function__)) ;
 #line 239 "include/drm/ttm/ttm_lock.h"
-__inline static void ttm_lock_set_kill(struct ttm_lock *lock , bool val , int signal ) 
+ static void ttm_lock_set_kill(struct ttm_lock *lock , bool val , int signal ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -37775,9 +37775,9 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock )  __attribute_
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -37786,9 +37786,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -37816,9 +37816,9 @@ extern int schedule_delayed_work(struct delayed_work *work , unsigned long delay
 #line 395
 extern bool flush_delayed_work_sync(struct delayed_work *work ) ;
 #line 898 "include/linux/fb.h"
-__inline static struct apertures_struct *alloc_apertures(unsigned int max_num )  __attribute__((__no_instrument_function__)) ;
+ static struct apertures_struct *alloc_apertures(unsigned int max_num )  __attribute__((__no_instrument_function__)) ;
 #line 898 "include/linux/fb.h"
-__inline static struct apertures_struct *alloc_apertures(unsigned int max_num ) 
+ static struct apertures_struct *alloc_apertures(unsigned int max_num ) 
 { struct apertures_struct *a ;
   void *tmp___7 ;
   unsigned long __cil_tmp4 ;
@@ -42409,9 +42409,9 @@ void ldv_main4_sequence_infinite_withcheck_stateful(void)
 }
 }
 #line 208 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memcpy_fromio(void *dst , void  volatile   *src , size_t count )  __attribute__((__no_instrument_function__)) ;
+ static void memcpy_fromio(void *dst , void  volatile   *src , size_t count )  __attribute__((__no_instrument_function__)) ;
 #line 208 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memcpy_fromio(void *dst , void  volatile   *src , size_t count ) 
+ static void memcpy_fromio(void *dst , void  volatile   *src , size_t count ) 
 { size_t __len ;
   void *__ret ;
   void    *__cil_tmp6 ;
@@ -43781,9 +43781,9 @@ ssize_t vmw_fops_read(struct file *filp , char *buffer , size_t count , loff_t *
 }
 }
 #line 77 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_sub_and_test(int i , atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_sub_and_test(int i , atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 77 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_sub_and_test(int i , atomic_t *v ) 
+ static int atomic_sub_and_test(int i , atomic_t *v ) 
 { unsigned char c ;
 
   {
@@ -43808,9 +43808,9 @@ extern void _raw_read_unlock(rwlock_t *lock )  __attribute__((__section__(".spin
 #line 31
 extern void _raw_write_unlock(rwlock_t *lock )  __attribute__((__section__(".spinlock.text"))) ;
 #line 30 "include/linux/kref.h"
-__inline static void kref_init(struct kref *kref )  __attribute__((__no_instrument_function__)) ;
+ static void kref_init(struct kref *kref )  __attribute__((__no_instrument_function__)) ;
 #line 30 "include/linux/kref.h"
-__inline static void kref_init(struct kref *kref ) 
+ static void kref_init(struct kref *kref ) 
 { atomic_t *__cil_tmp2 ;
 
   {
@@ -43825,9 +43825,9 @@ __inline static void kref_init(struct kref *kref )
 }
 }
 #line 63
-__inline static int kref_sub(struct kref *kref , unsigned int count , void (*release)(struct kref *kref ) )  __attribute__((__no_instrument_function__)) ;
+ static int kref_sub(struct kref *kref , unsigned int count , void (*release)(struct kref *kref ) )  __attribute__((__no_instrument_function__)) ;
 #line 63 "include/linux/kref.h"
-__inline static int kref_sub(struct kref *kref , unsigned int count , void (*release)(struct kref *kref ) ) 
+ static int kref_sub(struct kref *kref , unsigned int count , void (*release)(struct kref *kref ) ) 
 { int __ret_warn_on ;
   long tmp ;
   int tmp___0 ;
@@ -43912,9 +43912,9 @@ __inline static int kref_sub(struct kref *kref , unsigned int count , void (*rel
 }
 }
 #line 92
-__inline static int kref_put(struct kref *kref , void (*release)(struct kref *kref ) )  __attribute__((__no_instrument_function__)) ;
+ static int kref_put(struct kref *kref , void (*release)(struct kref *kref ) )  __attribute__((__no_instrument_function__)) ;
 #line 92 "include/linux/kref.h"
-__inline static int kref_put(struct kref *kref , void (*release)(struct kref *kref ) ) 
+ static int kref_put(struct kref *kref , void (*release)(struct kref *kref ) ) 
 { int tmp ;
 
   {
@@ -43978,9 +43978,9 @@ int vmw_overlay_claim(struct vmw_private *dev_priv , uint32_t *out ) ;
 #line 660
 int vmw_overlay_unref(struct vmw_private *dev_priv , uint32_t stream_id ) ;
 #line 705
-__inline static struct ttm_mem_global *vmw_mem_glob(struct vmw_private *dev_priv )  __attribute__((__no_instrument_function__)) ;
+ static struct ttm_mem_global *vmw_mem_glob(struct vmw_private *dev_priv )  __attribute__((__no_instrument_function__)) ;
 #line 705 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/gpu/drm/vmwgfx/vmwgfx_drv.h"
-__inline static struct ttm_mem_global *vmw_mem_glob(struct vmw_private *dev_priv ) 
+ static struct ttm_mem_global *vmw_mem_glob(struct vmw_private *dev_priv ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -44008,9 +44008,9 @@ static uint64_t vmw_user_surface_size  ;
 #line 74 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6447/dscv_tempdir/dscv/ri/32_1/drivers/gpu/drm/vmwgfx/vmwgfx_resource.c"
 static uint64_t vmw_user_stream_size  ;
 #line 76
-__inline static struct vmw_dma_buffer *vmw_dma_buffer(struct ttm_buffer_object *bo )  __attribute__((__no_instrument_function__)) ;
+ static struct vmw_dma_buffer *vmw_dma_buffer(struct ttm_buffer_object *bo )  __attribute__((__no_instrument_function__)) ;
 #line 76 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6447/dscv_tempdir/dscv/ri/32_1/drivers/gpu/drm/vmwgfx/vmwgfx_resource.c"
-__inline static struct vmw_dma_buffer *vmw_dma_buffer(struct ttm_buffer_object *bo ) 
+ static struct vmw_dma_buffer *vmw_dma_buffer(struct ttm_buffer_object *bo ) 
 { struct ttm_buffer_object    *__mptr ;
   struct vmw_dma_buffer *__cil_tmp3 ;
   struct ttm_buffer_object *__cil_tmp4 ;
@@ -44038,9 +44038,9 @@ __inline static struct vmw_dma_buffer *vmw_dma_buffer(struct ttm_buffer_object *
 }
 }
 #line 82
-__inline static struct vmw_user_dma_buffer *vmw_user_dma_buffer(struct ttm_buffer_object *bo )  __attribute__((__no_instrument_function__)) ;
+ static struct vmw_user_dma_buffer *vmw_user_dma_buffer(struct ttm_buffer_object *bo )  __attribute__((__no_instrument_function__)) ;
 #line 82 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6447/dscv_tempdir/dscv/ri/32_1/drivers/gpu/drm/vmwgfx/vmwgfx_resource.c"
-__inline static struct vmw_user_dma_buffer *vmw_user_dma_buffer(struct ttm_buffer_object *bo ) 
+ static struct vmw_user_dma_buffer *vmw_user_dma_buffer(struct ttm_buffer_object *bo ) 
 { struct vmw_dma_buffer *vmw_bo ;
   struct vmw_dma_buffer *tmp___7 ;
   struct vmw_dma_buffer    *__mptr ;
@@ -46358,9 +46358,9 @@ static struct vmw_bpp    vmw_sf_bpp[121]  =
         {(uint8_t )24, (uint8_t )24}, 
         {(uint8_t )32, (uint8_t )32}};
 #line 605
-__inline static uint32_t vmw_surface_dma_size(struct vmw_surface    *srf )  __attribute__((__no_instrument_function__)) ;
+ static uint32_t vmw_surface_dma_size(struct vmw_surface    *srf )  __attribute__((__no_instrument_function__)) ;
 #line 605 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6447/dscv_tempdir/dscv/ri/32_1/drivers/gpu/drm/vmwgfx/vmwgfx_resource.c"
-__inline static uint32_t vmw_surface_dma_size(struct vmw_surface    *srf ) 
+ static uint32_t vmw_surface_dma_size(struct vmw_surface    *srf ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   uint32_t    __cil_tmp4 ;
@@ -46385,9 +46385,9 @@ __inline static uint32_t vmw_surface_dma_size(struct vmw_surface    *srf )
 }
 }
 #line 619
-__inline static uint32_t vmw_surface_define_size(struct vmw_surface    *srf )  __attribute__((__no_instrument_function__)) ;
+ static uint32_t vmw_surface_define_size(struct vmw_surface    *srf )  __attribute__((__no_instrument_function__)) ;
 #line 619 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6447/dscv_tempdir/dscv/ri/32_1/drivers/gpu/drm/vmwgfx/vmwgfx_resource.c"
-__inline static uint32_t vmw_surface_define_size(struct vmw_surface    *srf ) 
+ static uint32_t vmw_surface_define_size(struct vmw_surface    *srf ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   uint32_t    __cil_tmp4 ;
@@ -46415,9 +46415,9 @@ __inline static uint32_t vmw_surface_define_size(struct vmw_surface    *srf )
 }
 }
 #line 632
-__inline static uint32_t vmw_surface_destroy_size(void)  __attribute__((__no_instrument_function__)) ;
+ static uint32_t vmw_surface_destroy_size(void)  __attribute__((__no_instrument_function__)) ;
 #line 632 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6447/dscv_tempdir/dscv/ri/32_1/drivers/gpu/drm/vmwgfx/vmwgfx_resource.c"
-__inline static uint32_t vmw_surface_destroy_size(void) 
+ static uint32_t vmw_surface_destroy_size(void) 
 { 
 
   {
@@ -54869,9 +54869,9 @@ void ldv_main7_sequence_infinite_withcheck_stateful(void)
 }
 }
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long  volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static int variable_test_bit(int nr , unsigned long  volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long  volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long  volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -54888,9 +54888,9 @@ __inline static int variable_test_bit(int nr , unsigned long  volatile   *addr )
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -54984,9 +54984,9 @@ __inline static struct task_struct *( __attribute__((__always_inline__)) get_cur
 #line 15 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/cmpxchg.h"
 extern void __xadd_wrong_size(void) ;
 #line 119 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_dec_and_test(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_dec_and_test(atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 119 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_dec_and_test(atomic_t *v ) 
+ static int atomic_dec_and_test(atomic_t *v ) 
 { unsigned char c ;
   int __cil_tmp3 ;
 
@@ -55008,9 +55008,9 @@ __inline static int atomic_dec_and_test(atomic_t *v )
 }
 }
 #line 173
-__inline static int atomic_add_return(int i , atomic_t *v )  __attribute__((__no_instrument_function__)) ;
+ static int atomic_add_return(int i , atomic_t *v )  __attribute__((__no_instrument_function__)) ;
 #line 173 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_add_return(int i , atomic_t *v ) 
+ static int atomic_add_return(int i , atomic_t *v ) 
 { int __ret ;
 
   {
@@ -55108,9 +55108,9 @@ __inline static int atomic_add_return(int i , atomic_t *v )
 }
 }
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp___0 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -55155,9 +55155,9 @@ extern void up_write(struct rw_semaphore *sem ) ;
 #line 82 "include/linux/jiffies.h"
 extern unsigned long volatile   jiffies  __attribute__((__section__(".data"))) ;
 #line 214 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memcpy_toio(void volatile   *dst , void    *src , size_t count )  __attribute__((__no_instrument_function__)) ;
+ static void memcpy_toio(void volatile   *dst , void    *src , size_t count )  __attribute__((__no_instrument_function__)) ;
 #line 214 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void memcpy_toio(void volatile   *dst , void    *src , size_t count ) 
+ static void memcpy_toio(void volatile   *dst , void    *src , size_t count ) 
 { size_t __len ;
   void *__ret ;
   void *__cil_tmp6 ;
@@ -55178,9 +55178,9 @@ __inline static void memcpy_toio(void volatile   *dst , void    *src , size_t co
 #line 358 "include/linux/sched.h"
 extern long schedule_timeout(long timeout ) ;
 #line 2563
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 2563 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp___7 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -55205,9 +55205,9 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2589
-__inline static int signal_pending(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
+ static int signal_pending(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
 #line 2589 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp___7 ;
   int tmp___8 ;
   long tmp___9 ;
@@ -64349,9 +64349,9 @@ int vmw_dmabuf_to_vram(struct vmw_private *dev_priv , struct vmw_dma_buffer *buf
 int vmw_dmabuf_to_vram_or_gmr(struct vmw_private *dev_priv , struct vmw_dma_buffer *buf ,
                               bool pin , bool interruptible ) ;
 #line 73 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6447/dscv_tempdir/dscv/ri/32_1/drivers/gpu/drm/vmwgfx/vmwgfx_overlay.c"
-__inline static void fill_escape(struct vmw_escape_header *header , uint32_t size )  __attribute__((__no_instrument_function__)) ;
+ static void fill_escape(struct vmw_escape_header *header , uint32_t size )  __attribute__((__no_instrument_function__)) ;
 #line 73 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6447/dscv_tempdir/dscv/ri/32_1/drivers/gpu/drm/vmwgfx/vmwgfx_overlay.c"
-__inline static void fill_escape(struct vmw_escape_header *header , uint32_t size ) 
+ static void fill_escape(struct vmw_escape_header *header , uint32_t size ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -64380,9 +64380,9 @@ __inline static void fill_escape(struct vmw_escape_header *header , uint32_t siz
 }
 }
 #line 81
-__inline static void fill_flush(struct vmw_escape_video_flush *cmd , uint32_t stream_id )  __attribute__((__no_instrument_function__)) ;
+ static void fill_flush(struct vmw_escape_video_flush *cmd , uint32_t stream_id )  __attribute__((__no_instrument_function__)) ;
 #line 81 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6447/dscv_tempdir/dscv/ri/32_1/drivers/gpu/drm/vmwgfx/vmwgfx_overlay.c"
-__inline static void fill_flush(struct vmw_escape_video_flush *cmd , uint32_t stream_id ) 
+ static void fill_flush(struct vmw_escape_video_flush *cmd , uint32_t stream_id ) 
 { struct vmw_escape_header *__cil_tmp3 ;
   uint32_t __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -67060,9 +67060,9 @@ int vmw_overlay_close(struct vmw_private *dev_priv )
 }
 }
 #line 56 "include/linux/time.h"
-__inline static int timespec_compare(struct timespec    *lhs , struct timespec    *rhs )  __attribute__((__no_instrument_function__)) ;
+ static int timespec_compare(struct timespec    *lhs , struct timespec    *rhs )  __attribute__((__no_instrument_function__)) ;
 #line 56 "include/linux/time.h"
-__inline static int timespec_compare(struct timespec    *lhs , struct timespec    *rhs ) 
+ static int timespec_compare(struct timespec    *lhs , struct timespec    *rhs ) 
 { __kernel_time_t    __cil_tmp3 ;
   __kernel_time_t    __cil_tmp4 ;
   __kernel_time_t    __cil_tmp5 ;
@@ -67125,10 +67125,10 @@ __inline static int timespec_compare(struct timespec    *lhs , struct timespec  
 #line 78
 extern void set_normalized_timespec(struct timespec *ts , time_t sec , s64 nsec ) ;
 #line 101
-__inline static struct timespec timespec_sub(__kernel_time_t lhs_tv_sec11 , long lhs_tv_nsec10 ,
+ static struct timespec timespec_sub(__kernel_time_t lhs_tv_sec11 , long lhs_tv_nsec10 ,
                                              __kernel_time_t rhs_tv_sec9 , long rhs_tv_nsec8 )  __attribute__((__no_instrument_function__)) ;
 #line 101 "include/linux/time.h"
-__inline static struct timespec timespec_sub(__kernel_time_t lhs_tv_sec11 , long lhs_tv_nsec10 ,
+ static struct timespec timespec_sub(__kernel_time_t lhs_tv_sec11 , long lhs_tv_nsec10 ,
                                              __kernel_time_t rhs_tv_sec9 , long rhs_tv_nsec8 ) 
 { struct timespec ts_delta ;
   __kernel_time_t __cil_tmp4 ;
@@ -68808,10 +68808,10 @@ static void vmw_gmrid_man_debug(struct ttm_mem_type_manager *man , char    *pref
 struct ttm_mem_type_manager_func    vmw_gmrid_manager_func  =    {& vmw_gmrid_man_init, & vmw_gmrid_man_takedown, & vmw_gmrid_man_get_node, & vmw_gmrid_man_put_node,
     & vmw_gmrid_man_debug};
 #line 273 "include/linux/list.h"
-__inline static void __list_splice(struct list_head    *list , struct list_head *prev ,
+ static void __list_splice(struct list_head    *list , struct list_head *prev ,
                                    struct list_head *next )  __attribute__((__no_instrument_function__)) ;
 #line 273 "include/linux/list.h"
-__inline static void __list_splice(struct list_head    *list , struct list_head *prev ,
+ static void __list_splice(struct list_head    *list , struct list_head *prev ,
                                    struct list_head *next ) 
 { struct list_head *first ;
   struct list_head *last ;
@@ -68858,9 +68858,9 @@ __inline static void __list_splice(struct list_head    *list , struct list_head 
 }
 }
 #line 318
-__inline static void list_splice_init(struct list_head *list , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_splice_init(struct list_head *list , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 318 "include/linux/list.h"
-__inline static void list_splice_init(struct list_head *list , struct list_head *head ) 
+ static void list_splice_init(struct list_head *list , struct list_head *head ) 
 { int tmp ;
   struct list_head    *__cil_tmp4 ;
   struct list_head    *__cil_tmp5 ;
@@ -68897,9 +68897,9 @@ extern void _raw_spin_lock_irq(raw_spinlock_t *lock )  __attribute__((__section_
 #line 41
 extern void _raw_spin_unlock_irq(raw_spinlock_t *lock )  __attribute__((__section__(".spinlock.text"))) ;
 #line 308 "include/linux/spinlock.h"
-__inline static void spin_lock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_lock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 308 "include/linux/spinlock.h"
-__inline static void spin_lock_irq(spinlock_t *lock ) 
+ static void spin_lock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -68914,9 +68914,9 @@ __inline static void spin_lock_irq(spinlock_t *lock )
 }
 }
 #line 333
-__inline static void spin_unlock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irq(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 333 "include/linux/spinlock.h"
-__inline static void spin_unlock_irq(spinlock_t *lock ) 
+ static void spin_unlock_irq(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {

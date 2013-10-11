@@ -10401,9 +10401,9 @@ static int mxl111sf_attach_demod(struct dvb_usb_adapter *adap )
 }
 }
 #line 521
-__inline static int mxl111sf_set_ant_path(struct mxl111sf_state *state , int antpath )  __attribute__((__no_instrument_function__)) ;
+ static int mxl111sf_set_ant_path(struct mxl111sf_state *state , int antpath )  __attribute__((__no_instrument_function__)) ;
 #line 521 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/13535/dscv_tempdir/dscv/ri/32_1/drivers/media/dvb/dvb-usb/mxl111sf.c.common.c"
-__inline static int mxl111sf_set_ant_path(struct mxl111sf_state *state , int antpath ) 
+ static int mxl111sf_set_ant_path(struct mxl111sf_state *state , int antpath ) 
 { int tmp___7 ;
   int tmp___8 ;
   u8 __cil_tmp5 ;
@@ -16073,9 +16073,9 @@ int mxl111sf_idac_config(struct mxl111sf_state *state , u8 control_mode , u8 cur
 #line 792 "include/linux/device.h"
 extern void *dev_get_drvdata(struct device  const  *dev ) ;
 #line 395 "include/linux/i2c.h"
-__inline static void *i2c_get_adapdata(struct i2c_adapter  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *i2c_get_adapdata(struct i2c_adapter  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 395 "include/linux/i2c.h"
-__inline static void *i2c_get_adapdata(struct i2c_adapter  const  *dev ) 
+ static void *i2c_get_adapdata(struct i2c_adapter  const  *dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;

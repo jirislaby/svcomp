@@ -1002,7 +1002,7 @@ int isLowWaterLevel(void)
 #line 7 "Specification2_spec.c"
 int methAndRunningLastTime  ;
 #line 11 "Specification2_spec.c"
-__inline void __utac_acc__Specification2_spec__1(void) 
+ void __utac_acc__Specification2_spec__1(void) 
 { 
 
   {

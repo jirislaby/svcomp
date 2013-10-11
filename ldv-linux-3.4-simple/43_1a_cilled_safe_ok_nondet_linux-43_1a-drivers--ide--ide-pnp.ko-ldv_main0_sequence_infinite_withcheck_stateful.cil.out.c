@@ -4774,7 +4774,7 @@ extern int dev_set_drvdata(struct device * , void * ) ;
 #line 25 "include/linux/pnp.h"
 extern struct resource *pnp_get_resource(struct pnp_dev * , unsigned long  , unsigned int  ) ;
 #line 35 "include/linux/pnp.h"
-__inline static int pnp_resource_valid(struct resource *res ) 
+ static int pnp_resource_valid(struct resource *res ) 
 { struct resource *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4800,7 +4800,7 @@ __inline static int pnp_resource_valid(struct resource *res )
 }
 }
 #line 57 "include/linux/pnp.h"
-__inline static resource_size_t pnp_port_start(struct pnp_dev *dev , unsigned int bar ) 
+ static resource_size_t pnp_port_start(struct pnp_dev *dev , unsigned int bar ) 
 { struct resource *res ;
   struct resource *tmp ;
   int tmp___0 ;
@@ -4826,7 +4826,7 @@ __inline static resource_size_t pnp_port_start(struct pnp_dev *dev , unsigned in
 }
 }
 #line 87 "include/linux/pnp.h"
-__inline static int pnp_port_valid(struct pnp_dev *dev , unsigned int bar ) 
+ static int pnp_port_valid(struct pnp_dev *dev , unsigned int bar ) 
 { struct resource *tmp ;
   int tmp___0 ;
 
@@ -4842,7 +4842,7 @@ __inline static int pnp_port_valid(struct pnp_dev *dev , unsigned int bar )
 }
 }
 #line 148 "include/linux/pnp.h"
-__inline static resource_size_t pnp_irq(struct pnp_dev *dev , unsigned int bar ) 
+ static resource_size_t pnp_irq(struct pnp_dev *dev , unsigned int bar ) 
 { struct resource *res ;
   struct resource *tmp ;
   int tmp___0 ;
@@ -4868,7 +4868,7 @@ __inline static resource_size_t pnp_irq(struct pnp_dev *dev , unsigned int bar )
 }
 }
 #line 166 "include/linux/pnp.h"
-__inline static int pnp_irq_valid(struct pnp_dev *dev , unsigned int bar ) 
+ static int pnp_irq_valid(struct pnp_dev *dev , unsigned int bar ) 
 { struct resource *tmp ;
   int tmp___0 ;
 
@@ -4884,7 +4884,7 @@ __inline static int pnp_irq_valid(struct pnp_dev *dev , unsigned int bar )
 }
 }
 #line 287 "include/linux/pnp.h"
-__inline static void *pnp_get_drvdata(struct pnp_dev *pdev ) 
+ static void *pnp_get_drvdata(struct pnp_dev *pdev ) 
 { void *tmp ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -4903,7 +4903,7 @@ __inline static void *pnp_get_drvdata(struct pnp_dev *pdev )
 }
 }
 #line 292 "include/linux/pnp.h"
-__inline static void pnp_set_drvdata(struct pnp_dev *pdev , void *data ) 
+ static void pnp_set_drvdata(struct pnp_dev *pdev , void *data ) 
 { struct device *__cil_tmp3 ;
 
   {
@@ -4922,7 +4922,7 @@ extern int pnp_register_driver(struct pnp_driver * ) ;
 #line 470
 extern void pnp_unregister_driver(struct pnp_driver * ) ;
 #line 186 "include/linux/ide.h"
-__inline static void ide_std_init_ports(struct ide_hw *hw , unsigned long io_addr ,
+ static void ide_std_init_ports(struct ide_hw *hw , unsigned long io_addr ,
                                         unsigned long ctl_addr ) 
 { unsigned int i ;
   unsigned long tmp ;

@@ -4210,11 +4210,11 @@ extern struct pv_irq_ops pv_irq_ops ;
 # 27 "include/linux/string.h"
 extern char *strncpy(char * , char const * , __kernel_size_t ) ;
 # 861 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_disable(void) __attribute__((__no_instrument_function__)) ;
+ static void arch_local_irq_disable(void) __attribute__((__no_instrument_function__)) ;
 # 861 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_disable(void) __attribute__((__no_instrument_function__)) ;
+ static void arch_local_irq_disable(void) __attribute__((__no_instrument_function__)) ;
 # 861 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_disable(void)
+ static void arch_local_irq_disable(void)
 { unsigned long __edi ;
   unsigned long __esi ;
   unsigned long __edx ;
@@ -4310,11 +4310,11 @@ __inline static void arch_local_irq_disable(void)
 }
 }
 # 866 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_enable(void) __attribute__((__no_instrument_function__)) ;
+ static void arch_local_irq_enable(void) __attribute__((__no_instrument_function__)) ;
 # 866 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_enable(void) __attribute__((__no_instrument_function__)) ;
+ static void arch_local_irq_enable(void) __attribute__((__no_instrument_function__)) ;
 # 866 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void arch_local_irq_enable(void)
+ static void arch_local_irq_enable(void)
 { unsigned long __edi ;
   unsigned long __esi ;
   unsigned long __edx ;
@@ -4414,7 +4414,7 @@ extern void trace_hardirqs_on(void) ;
 # 21 "include/linux/irqflags.h"
 extern void trace_hardirqs_off(void) ;
 # 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error )
 {
 
   {
@@ -4423,7 +4423,7 @@ __inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long erro
 }
 }
 # 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__)) PTR_ERR(void const *ptr )
+ static long __attribute__((__warn_unused_result__)) PTR_ERR(void const *ptr )
 {
 
   {
@@ -4432,7 +4432,7 @@ __inline static long __attribute__((__warn_unused_result__)) PTR_ERR(void const 
 }
 }
 # 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__)) IS_ERR(void const *ptr )
+ static long __attribute__((__warn_unused_result__)) IS_ERR(void const *ptr )
 { long tmp ;
 
   {
@@ -4450,7 +4450,7 @@ extern void _raw_spin_lock_irq(raw_spinlock_t *lock ) __attribute__((__section__
 # 41 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irq(raw_spinlock_t *lock ) __attribute__((__section__(".spinlock.text"))) ;
 # 308 "include/linux/spinlock.h"
-__inline static void spin_lock_irq(spinlock_t *lock )
+ static void spin_lock_irq(spinlock_t *lock )
 {
 
   {
@@ -4463,7 +4463,7 @@ __inline static void spin_lock_irq(spinlock_t *lock )
 }
 }
 # 333 "include/linux/spinlock.h"
-__inline static void spin_unlock_irq(spinlock_t *lock )
+ static void spin_unlock_irq(spinlock_t *lock )
 {
 
   {
@@ -4524,7 +4524,7 @@ extern void idr_remove(struct idr *idp , int id ) ;
 # 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 # 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )
 { void *tmp___10 ;
 

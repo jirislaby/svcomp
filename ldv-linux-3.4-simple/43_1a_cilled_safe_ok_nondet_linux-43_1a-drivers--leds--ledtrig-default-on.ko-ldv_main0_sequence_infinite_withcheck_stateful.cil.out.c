@@ -1013,7 +1013,7 @@ extern int led_trigger_register(struct led_trigger * ) ;
 #line 138
 extern void led_trigger_unregister(struct led_trigger * ) ;
 #line 20 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/leds/leds.h"
-__inline static void led_set_brightness(struct led_classdev *led_cdev , enum led_brightness value ) 
+ static void led_set_brightness(struct led_classdev *led_cdev , enum led_brightness value ) 
 { unsigned int __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;

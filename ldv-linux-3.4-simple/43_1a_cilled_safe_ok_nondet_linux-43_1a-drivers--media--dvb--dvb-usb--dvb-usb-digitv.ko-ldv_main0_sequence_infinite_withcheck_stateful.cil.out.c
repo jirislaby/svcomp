@@ -6856,7 +6856,7 @@ extern void *dev_get_drvdata(struct device  const  * ) ;
 #line 46 "include/linux/delay.h"
 extern void msleep(unsigned int  ) ;
 #line 395 "include/linux/i2c.h"
-__inline static void *i2c_get_adapdata(struct i2c_adapter  const  *dev ) 
+ static void *i2c_get_adapdata(struct i2c_adapter  const  *dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6899,7 +6899,7 @@ struct sk_buff *ldv___netdev_alloc_skb_25(struct net_device *ldv_func_arg1 , uns
 struct sk_buff *ldv___netdev_alloc_skb_26(struct net_device *ldv_func_arg1 , unsigned int ldv_func_arg2 ,
                                           gfp_t ldv_func_arg3 ) ;
 #line 78 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/dvb-usb/dvb-usb.h"
-__inline static u8 rc5_custom(struct rc_map_table *key ) 
+ static u8 rc5_custom(struct rc_map_table *key ) 
 { u32 __cil_tmp2 ;
   u32 __cil_tmp3 ;
 
@@ -6915,7 +6915,7 @@ __inline static u8 rc5_custom(struct rc_map_table *key )
 }
 }
 #line 83 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/dvb-usb/dvb-usb.h"
-__inline static u8 rc5_data(struct rc_map_table *key ) 
+ static u8 rc5_data(struct rc_map_table *key ) 
 { u32 __cil_tmp2 ;
 
   {
@@ -6936,7 +6936,7 @@ extern int dvb_usb_generic_rw(struct dvb_usb_device * , u8 * , u16  , u8 * , u16
 #line 467
 extern int dvb_usb_generic_write(struct dvb_usb_device * , u8 * , u16  ) ;
 #line 66 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/frontends/mt352.h"
-__inline static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len ) 
+ static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len ) 
 { int r ;
   int (*__cil_tmp5)(struct dvb_frontend * , u8 const   * , int  ) ;
   unsigned long __cil_tmp6 ;

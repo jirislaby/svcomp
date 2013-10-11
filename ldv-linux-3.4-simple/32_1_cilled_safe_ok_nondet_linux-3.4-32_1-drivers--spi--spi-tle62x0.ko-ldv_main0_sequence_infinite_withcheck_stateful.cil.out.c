@@ -2494,9 +2494,9 @@ struct __anonstruct_232 {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2516,9 +2516,9 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 74
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -2589,10 +2589,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -2606,9 +2606,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -2624,9 +2624,9 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 #line 135 "include/linux/spi/spi.h"
-__inline static void spi_set_drvdata(struct spi_device *spi , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void spi_set_drvdata(struct spi_device *spi , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 135 "include/linux/spi/spi.h"
-__inline static void spi_set_drvdata(struct spi_device *spi , void *data ) 
+ static void spi_set_drvdata(struct spi_device *spi , void *data ) 
 { struct device *__cil_tmp3 ;
 
   {
@@ -2641,9 +2641,9 @@ __inline static void spi_set_drvdata(struct spi_device *spi , void *data )
 }
 }
 #line 140
-__inline static void *spi_get_drvdata(struct spi_device *spi )  __attribute__((__no_instrument_function__)) ;
+ static void *spi_get_drvdata(struct spi_device *spi )  __attribute__((__no_instrument_function__)) ;
 #line 140 "include/linux/spi/spi.h"
-__inline static void *spi_get_drvdata(struct spi_device *spi ) 
+ static void *spi_get_drvdata(struct spi_device *spi ) 
 { void *tmp___7 ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -2664,9 +2664,9 @@ __inline static void *spi_get_drvdata(struct spi_device *spi )
 #line 191
 extern int spi_register_driver(struct spi_driver *sdrv ) ;
 #line 198
-__inline static void spi_unregister_driver(struct spi_driver *sdrv )  __attribute__((__no_instrument_function__)) ;
+ static void spi_unregister_driver(struct spi_driver *sdrv )  __attribute__((__no_instrument_function__)) ;
 #line 198 "include/linux/spi/spi.h"
-__inline static void spi_unregister_driver(struct spi_driver *sdrv ) 
+ static void spi_unregister_driver(struct spi_driver *sdrv ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct device_driver *__cil_tmp4 ;
@@ -2692,9 +2692,9 @@ __inline static void spi_unregister_driver(struct spi_driver *sdrv )
 }
 }
 #line 573
-__inline static void spi_message_init(struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
+ static void spi_message_init(struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
 #line 573 "include/linux/spi/spi.h"
-__inline static void spi_message_init(struct spi_message *m ) 
+ static void spi_message_init(struct spi_message *m ) 
 { void *__cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
 
@@ -2714,9 +2714,9 @@ __inline static void spi_message_init(struct spi_message *m )
 }
 }
 #line 579
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m )  __attribute__((__no_instrument_function__)) ;
 #line 579 "include/linux/spi/spi.h"
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -2742,9 +2742,9 @@ __inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_me
 #line 630
 extern int spi_sync(struct spi_device *spi , struct spi_message *message ) ;
 #line 645
-__inline static int spi_write(struct spi_device *spi , void const   *buf , size_t len )  __attribute__((__no_instrument_function__)) ;
+ static int spi_write(struct spi_device *spi , void const   *buf , size_t len )  __attribute__((__no_instrument_function__)) ;
 #line 645 "include/linux/spi/spi.h"
-__inline static int spi_write(struct spi_device *spi , void const   *buf , size_t len ) 
+ static int spi_write(struct spi_device *spi , void const   *buf , size_t len ) 
 { struct spi_transfer t ;
   struct spi_message m ;
   int tmp___7 ;
@@ -2823,15 +2823,15 @@ __inline static int spi_write(struct spi_device *spi , void const   *buf , size_
 #line 40 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/16730/dscv_tempdir/dscv/ri/32_1/drivers/spi/spi-tle62x0.c.common.c"
 static int to_gpio_num(struct device_attribute *attr ) ;
 #line 56
-__inline static int tle62x0_write(struct tle62x0_state *st )  __attribute__((__no_instrument_function__)) ;
+ static int tle62x0_write(struct tle62x0_state *st )  __attribute__((__no_instrument_function__)) ;
 #line 56 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/16730/dscv_tempdir/dscv/ri/32_1/drivers/spi/spi-tle62x0.c.common.c"
 static struct _ddebug  __attribute__((__aligned__(8))) descriptor  __attribute__((__used__,
 __section__("__verbose")))  =    {"spi_tle62x0", "tle62x0_write", "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/16730/dscv_tempdir/dscv/ri/32_1/drivers/spi/spi-tle62x0.c.common.c",
     "buff %02x,%02x,%02x\n", 57U, 1U};
 #line 42
-__inline static int tle62x0_write(struct tle62x0_state *st )  __attribute__((__no_instrument_function__)) ;
+ static int tle62x0_write(struct tle62x0_state *st )  __attribute__((__no_instrument_function__)) ;
 #line 42 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/16730/dscv_tempdir/dscv/ri/32_1/drivers/spi/spi-tle62x0.c.common.c"
-__inline static int tle62x0_write(struct tle62x0_state *st ) 
+ static int tle62x0_write(struct tle62x0_state *st ) 
 { unsigned char *buff ;
   unsigned int gpio_state ;
   long tmp___7 ;
@@ -3022,9 +3022,9 @@ __inline static int tle62x0_write(struct tle62x0_state *st )
 }
 }
 #line 62
-__inline static int tle62x0_read(struct tle62x0_state *st )  __attribute__((__no_instrument_function__)) ;
+ static int tle62x0_read(struct tle62x0_state *st )  __attribute__((__no_instrument_function__)) ;
 #line 62 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/16730/dscv_tempdir/dscv/ri/32_1/drivers/spi/spi-tle62x0.c.common.c"
-__inline static int tle62x0_read(struct tle62x0_state *st ) 
+ static int tle62x0_read(struct tle62x0_state *st ) 
 { unsigned char *txbuff ;
   struct spi_transfer xfer ;
   struct spi_message msg ;

@@ -1969,7 +1969,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 98 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void clear_bit(int nr , unsigned long volatile   *addr ) 
+ static void clear_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -1982,7 +1982,7 @@ __inline static void clear_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 195 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -2001,7 +2001,7 @@ extern int printk(char const   *  , ...) ;
 #line 192 "include/linux/kernel.h"
 extern void might_fault(void) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2010,7 +2010,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2038,7 +2038,7 @@ extern void _raw_spin_lock(raw_spinlock_t * ) ;
 #line 39
 extern void _raw_spin_unlock(raw_spinlock_t * ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -2047,7 +2047,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 283 "include/linux/spinlock.h"
-__inline static void ldv_spin_lock_1(spinlock_t *lock ) 
+ static void ldv_spin_lock_1(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -2062,9 +2062,9 @@ __inline static void ldv_spin_lock_1(spinlock_t *lock )
 }
 }
 #line 283
-__inline static void spin_lock(spinlock_t *lock ) ;
+ static void spin_lock(spinlock_t *lock ) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_5(spinlock_t *lock ) 
+ static void ldv_spin_unlock_5(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -2079,7 +2079,7 @@ __inline static void ldv_spin_unlock_5(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock ) ;
+ static void spin_unlock(spinlock_t *lock ) ;
 #line 137 "include/linux/ioport.h"
 extern struct resource ioport_resource ;
 #line 181
@@ -2088,7 +2088,7 @@ extern struct resource *__request_region(struct resource * , resource_size_t  , 
 #line 192
 extern void __release_region(struct resource * , resource_size_t  , resource_size_t  ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -2099,7 +2099,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -2138,7 +2138,7 @@ extern void platform_device_unregister(struct platform_device * ) ;
 #line 65
 extern struct platform_device *platform_device_register_full(struct platform_device_info  const  * ) ;
 #line 82 "include/linux/platform_device.h"
-__inline static struct platform_device *platform_device_register_resndata(struct device *parent ,
+ static struct platform_device *platform_device_register_resndata(struct device *parent ,
                                                                           char const   *name ,
                                                                           int id ,
                                                                           struct resource  const  *res ,
@@ -2201,7 +2201,7 @@ __inline static struct platform_device *platform_device_register_resndata(struct
 }
 }
 #line 123 "include/linux/platform_device.h"
-__inline static struct platform_device *platform_device_register_simple(char const   *name ,
+ static struct platform_device *platform_device_register_simple(char const   *name ,
                                                                         int id , struct resource  const  *res ,
                                                                         unsigned int num ) 
 { struct platform_device *tmp ;
@@ -2229,7 +2229,7 @@ extern void platform_driver_unregister(struct platform_driver * ) ;
 #line 40 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_to_user(void * , void const   * , unsigned int  ) ;
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
+ static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
 { unsigned long tmp ;
 
   {
@@ -2263,7 +2263,7 @@ static int timeout  =    60;
 #line 98 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17362/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/sch311x_wdt.c.p"
 static bool nowayout  =    (bool )1;
 #line 108 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17362/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/sch311x_wdt.c.p"
-__inline static void sch311x_sio_enter(int sio_config_port ) 
+ static void sch311x_sio_enter(int sio_config_port ) 
 { 
 
   {
@@ -2276,7 +2276,7 @@ __inline static void sch311x_sio_enter(int sio_config_port )
 }
 }
 #line 113 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17362/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/sch311x_wdt.c.p"
-__inline static void sch311x_sio_exit(int sio_config_port ) 
+ static void sch311x_sio_exit(int sio_config_port ) 
 { 
 
   {
@@ -2289,7 +2289,7 @@ __inline static void sch311x_sio_exit(int sio_config_port )
 }
 }
 #line 118 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17362/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/sch311x_wdt.c.p"
-__inline static int sch311x_sio_inb(int sio_config_port , int reg ) 
+ static int sch311x_sio_inb(int sio_config_port , int reg ) 
 { unsigned char tmp ;
   unsigned char __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -2316,7 +2316,7 @@ __inline static int sch311x_sio_inb(int sio_config_port , int reg )
 }
 }
 #line 124 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17362/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/sch311x_wdt.c.p"
-__inline static void sch311x_sio_outb(int sio_config_port , int reg , int val ) 
+ static void sch311x_sio_outb(int sio_config_port , int reg , int val ) 
 { unsigned char __cil_tmp4 ;
   int __cil_tmp5 ;
   unsigned char __cil_tmp6 ;
@@ -4822,7 +4822,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1048 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17362/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/sch311x_wdt.c.p"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { 
 
   {
@@ -4837,7 +4837,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 1090 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17362/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/sch311x_wdt.c.p"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { 
 
   {

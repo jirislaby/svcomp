@@ -855,7 +855,7 @@ char const   *__utac__get_this_argtype(int i , struct JoinPoint *this )
 #line 688 "/usr/include/stdio.h"
 extern int puts(char const   *__s ) ;
 #line 11 "DecryptForward_spec.c"
-__inline void __utac_acc__DecryptForward_spec__1(int msg ) 
+ void __utac_acc__DecryptForward_spec__1(int msg ) 
 { int tmp ;
 
   {

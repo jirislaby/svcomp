@@ -2463,10 +2463,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -2480,9 +2480,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -2503,9 +2503,9 @@ extern int _cond_resched(void) ;
 extern int mtd_read(struct mtd_info *mtd , loff_t from , size_t len , size_t *retlen ,
                     u_char *buf ) ;
 #line 259
-__inline static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops )  __attribute__((__no_instrument_function__)) ;
+ static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops )  __attribute__((__no_instrument_function__)) ;
 #line 259 "include/linux/mtd/mtd.h"
-__inline static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops ) 
+ static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops ) 
 { size_t tmp___7 ;
   int tmp___8 ;
   unsigned long __cil_tmp6 ;
@@ -2564,9 +2564,9 @@ __inline static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd
 }
 }
 #line 268
-__inline static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops )  __attribute__((__no_instrument_function__)) ;
+ static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/mtd/mtd.h"
-__inline static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops ) 
+ static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops ) 
 { size_t tmp___7 ;
   int tmp___8 ;
   unsigned long __cil_tmp6 ;
@@ -2646,9 +2646,9 @@ __inline static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_
 }
 }
 #line 390
-__inline static int mtd_is_bitflip(int err )  __attribute__((__no_instrument_function__)) ;
+ static int mtd_is_bitflip(int err )  __attribute__((__no_instrument_function__)) ;
 #line 390 "include/linux/mtd/mtd.h"
-__inline static int mtd_is_bitflip(int err ) 
+ static int mtd_is_bitflip(int err ) 
 { 
 
   {
@@ -5300,7 +5300,7 @@ static int nrbits(unsigned int val , int bitcount )
 }
 }
 #line 486
-__inline static u16 INFTL_findwriteunit(struct INFTLrecord *inftl , unsigned int block )  __attribute__((__no_instrument_function__)) ;
+ static u16 INFTL_findwriteunit(struct INFTLrecord *inftl , unsigned int block )  __attribute__((__no_instrument_function__)) ;
 #line 486 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5496/dscv_tempdir/dscv/ri/32_1/drivers/mtd/inftlcore.c.common.c"
 static struct _ddebug  __attribute__((__aligned__(8))) descriptor___8  __attribute__((__used__,
 __section__("__verbose")))  =    {"inftl", "INFTL_findwriteunit", "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5496/dscv_tempdir/dscv/ri/32_1/drivers/mtd/inftlcore.c.common.c",
@@ -5315,9 +5315,9 @@ __section__("__verbose")))  =    {"inftl", "INFTL_findwriteunit", "/home/zakharo
     "INFTL: using desperate==1 to find free EUN to accommodate write to VUC %d\n",
     559U, 0U};
 #line 474
-__inline static u16 INFTL_findwriteunit(struct INFTLrecord *inftl , unsigned int block )  __attribute__((__no_instrument_function__)) ;
+ static u16 INFTL_findwriteunit(struct INFTLrecord *inftl , unsigned int block )  __attribute__((__no_instrument_function__)) ;
 #line 474 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5496/dscv_tempdir/dscv/ri/32_1/drivers/mtd/inftlcore.c.common.c"
-__inline static u16 INFTL_findwriteunit(struct INFTLrecord *inftl , unsigned int block ) 
+ static u16 INFTL_findwriteunit(struct INFTLrecord *inftl , unsigned int block ) 
 { unsigned int thisVUC ;
   unsigned int thisEUN ;
   unsigned int writeEUN ;
@@ -8668,9 +8668,9 @@ long s__builtin_expect(long val , long res )
 #line 34 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern void *__memcpy(void *to , void const   *from , size_t len ) ;
 #line 243 "include/linux/slab.h"
-__inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kmalloc_array(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 243 "include/linux/slab.h"
-__inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
+ static void *kmalloc_array(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned long __cil_tmp5 ;
   size_t __cil_tmp6 ;
@@ -8703,9 +8703,9 @@ __inline static void *kmalloc_array(size_t n , size_t size , gfp_t flags )
 }
 }
 #line 256
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kcalloc(size_t n , size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 256 "include/linux/slab.h"
-__inline static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
+ static void *kcalloc(size_t n , size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp5 ;
 

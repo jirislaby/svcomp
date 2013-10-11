@@ -410,7 +410,7 @@ extern struct cs5535_mfgpt_timer *cs5535_mfgpt_alloc_timer(int  , int  ) ;
 #line 224
 extern void cs5535_mfgpt_free_timer(struct cs5535_mfgpt_timer * ) ;
 #line 226 "include/linux/cs5535.h"
-__inline static int cs5535_mfgpt_setup_irq(struct cs5535_mfgpt_timer *timer , int cmp ,
+ static int cs5535_mfgpt_setup_irq(struct cs5535_mfgpt_timer *timer , int cmp ,
                                            int *irq ) 
 { int tmp ;
 
@@ -424,7 +424,7 @@ __inline static int cs5535_mfgpt_setup_irq(struct cs5535_mfgpt_timer *timer , in
 }
 }
 #line 232 "include/linux/cs5535.h"
-__inline static int cs5535_mfgpt_release_irq(struct cs5535_mfgpt_timer *timer , int cmp ,
+ static int cs5535_mfgpt_release_irq(struct cs5535_mfgpt_timer *timer , int cmp ,
                                              int *irq ) 
 { int tmp ;
 
@@ -438,7 +438,7 @@ __inline static int cs5535_mfgpt_release_irq(struct cs5535_mfgpt_timer *timer , 
 }
 }
 #line 121 "include/linux/clockchips.h"
-__inline static unsigned long div_sc(unsigned long ticks , unsigned long nsec , int shift ) 
+ static unsigned long div_sc(unsigned long ticks , unsigned long nsec , int shift ) 
 { uint64_t tmp ;
   uint32_t __base ;
   uint32_t __rem ;

@@ -2374,7 +2374,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8228/dscv_tempdir/dscv/ri/43_1a/drivers/media/video/videobuf-vmalloc.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2384,7 +2384,7 @@ void ldv_check_alloc_nonatomic(void) ;
 #line 14
 struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 167 "include/media/videobuf-core.h"
-__inline static void videobuf_queue_lock(struct videobuf_queue *q ) 
+ static void videobuf_queue_lock(struct videobuf_queue *q ) 
 { struct mutex *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2424,7 +2424,7 @@ __inline static void videobuf_queue_lock(struct videobuf_queue *q )
 }
 }
 #line 173 "include/media/videobuf-core.h"
-__inline static void videobuf_queue_unlock(struct videobuf_queue *q ) 
+ static void videobuf_queue_unlock(struct videobuf_queue *q ) 
 { struct mutex *__cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4329,7 +4329,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1001 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8228/dscv_tempdir/dscv/ri/43_1a/drivers/media/video/videobuf-vmalloc.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

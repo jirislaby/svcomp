@@ -5371,7 +5371,7 @@ struct __anonstruct_capi_send_handler_table_202 {
 # 1 "<compiler builtins>"
 
 # 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )
+ static void INIT_LIST_HEAD(struct list_head *list )
 {
 
   {
@@ -5386,7 +5386,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 # 47 "include/linux/list.h"
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 # 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head )
+ static void list_add(struct list_head *new , struct list_head *head )
 {
 
   {
@@ -5401,7 +5401,7 @@ __inline static void list_add(struct list_head *new , struct list_head *head )
 # 112 "include/linux/list.h"
 extern void list_del(struct list_head * ) ;
 # 195 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int test_and_set_bit(int nr , unsigned long volatile *addr )
+ static int test_and_set_bit(int nr , unsigned long volatile *addr )
 { int oldbit ;
 
   {
@@ -5419,7 +5419,7 @@ extern void __bad_percpu_size(void) ;
 # 10 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 # 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void)
+ static struct task_struct *get_current(void)
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -5476,7 +5476,7 @@ extern void _raw_spin_unlock(raw_spinlock_t * ) ;
 # 43 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long ) ;
 # 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 {
 
   {
@@ -5485,7 +5485,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 # 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock )
+ static void spin_lock(spinlock_t *lock )
 {
 
   {
@@ -5498,7 +5498,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 # 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock )
+ static void spin_unlock(spinlock_t *lock )
 {
 
   {
@@ -5511,7 +5511,7 @@ __inline static void spin_unlock(spinlock_t *lock )
 }
 }
 # 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
 {
 
   {
@@ -5548,7 +5548,7 @@ extern unsigned long msecs_to_jiffies(unsigned int const ) ;
 # 91 "include/linux/timer.h"
 extern void init_timer_key(struct timer_list * , char const * , struct lock_class_key * ) ;
 # 166 "include/linux/timer.h"
-__inline static void setup_timer_key(struct timer_list *timer , char const *name ,
+ static void setup_timer_key(struct timer_list *timer , char const *name ,
                                      struct lock_class_key *key , void (*function)(unsigned long ) ,
                                      unsigned long data )
 {
@@ -5575,9 +5575,9 @@ extern int del_timer_sync(struct timer_list * ) ;
 # 830 "include/linux/rcupdate.h"
 extern void kfree(void const * ) ;
 # 537 "include/linux/module.h"
-__inline static int ldv_try_module_get_1(struct module *module ) ;
+ static int ldv_try_module_get_1(struct module *module ) ;
 # 541 "include/linux/module.h"
-__inline static int ldv_try_module_get_1(struct module *module ) ;
+ static int ldv_try_module_get_1(struct module *module ) ;
 # 547 "include/linux/module.h"
 void ldv_module_put_3(struct module *ldv_func_arg1 ) ;
 # 551 "include/linux/module.h"
@@ -5599,7 +5599,7 @@ extern void schedule(void) ;
 # 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t , gfp_t ) ;
 # 255 "include/linux/slub_def.h"
-__inline static void *kmalloc(size_t size , gfp_t flags )
+ static void *kmalloc(size_t size , gfp_t flags )
 { void *tmp___2 ;
 
   {
@@ -5616,7 +5616,7 @@ extern int dev_err(struct device const * , char const * , ...) ;
 # 491 "include/linux/skbuff.h"
 extern void consume_skb(struct sk_buff * ) ;
 # 858 "include/linux/skbuff.h"
-__inline static void __skb_queue_head_init(struct sk_buff_head *list )
+ static void __skb_queue_head_init(struct sk_buff_head *list )
 { struct sk_buff *tmp ;
 
   {
@@ -5633,7 +5633,7 @@ __inline static void __skb_queue_head_init(struct sk_buff_head *list )
 }
 }
 # 872 "include/linux/skbuff.h"
-__inline static void skb_queue_head_init(struct sk_buff_head *list )
+ static void skb_queue_head_init(struct sk_buff_head *list )
 { struct lock_class_key __key ;
 
   {
@@ -5654,7 +5654,7 @@ extern struct sk_buff *skb_dequeue(struct sk_buff_head * ) ;
 # 540 "include/linux/interrupt.h"
 extern void __tasklet_schedule(struct tasklet_struct * ) ;
 # 542 "include/linux/interrupt.h"
-__inline static void tasklet_schedule(struct tasklet_struct *t )
+ static void tasklet_schedule(struct tasklet_struct *t )
 { int tmp ;
 
   {
@@ -5748,7 +5748,7 @@ struct event_t *gigaset_add_event(struct cardstate *cs , struct at_state_t *at_s
 # 764 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/isdn/gigaset/gigaset.h"
 int gigaset_enterconfigmode(struct cardstate *cs ) ;
 # 767 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/isdn/gigaset/gigaset.h"
-__inline static void gigaset_schedule_event(struct cardstate *cs )
+ static void gigaset_schedule_event(struct cardstate *cs )
 { unsigned long flags ;
   raw_spinlock_t *tmp ;
 
@@ -9275,7 +9275,7 @@ void ldv_check_final_state(void)
 }
 }
 # 1392 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/gigaset/gigaset.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/20/dscv_tempdir/dscv/ri/08_1/drivers/isdn/gigaset/common.c.p"
-__inline static int ldv_try_module_get_1(struct module *module )
+ static int ldv_try_module_get_1(struct module *module )
 { int tmp ;
 
   {
@@ -9316,7 +9316,7 @@ void ldv_module_put_4(struct module *ldv_func_arg1 )
 # 1 "<compiler builtins>"
 
 # 309 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int constant_test_bit(unsigned int nr , unsigned long const volatile *addr )
+ static int constant_test_bit(unsigned int nr , unsigned long const volatile *addr )
 {
 
   {
@@ -9331,7 +9331,7 @@ extern void might_fault(void) ;
 # 34 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/string_64.h"
 extern void *__memcpy(void * , void const * , size_t ) ;
 # 32 "include/linux/err.h"
-__inline static long IS_ERR(void const *ptr )
+ static long IS_ERR(void const *ptr )
 { long tmp ;
 
   {
@@ -9344,7 +9344,7 @@ __inline static long IS_ERR(void const *ptr )
 }
 }
 # 93 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v )
+ static void atomic_inc(atomic_t *v )
 {
 
   {
@@ -9357,7 +9357,7 @@ __inline static void atomic_inc(atomic_t *v )
 # 99 "include/linux/module.h"
 extern struct module __this_module ;
 # 537 "include/linux/module.h"
-__inline static int ldv_try_module_get_1(struct module *module ) ;
+ static int ldv_try_module_get_1(struct module *module ) ;
 # 543 "include/linux/module.h"
 void ldv_module_put_2(struct module *ldv_func_arg1 ) ;
 # 40 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
@@ -9365,7 +9365,7 @@ extern unsigned long _copy_to_user(void * , void const * , unsigned int ) ;
 # 42 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_from_user(void * , void const * , unsigned int ) ;
 # 46 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long copy_from_user(void *to , void const *from , unsigned long n )
+ static unsigned long copy_from_user(void *to , void const *from , unsigned long n )
 { int sz ;
   unsigned long tmp ;
   int __ret_warn_on ;
@@ -9429,7 +9429,7 @@ __inline static unsigned long copy_from_user(void *to , void const *from , unsig
 }
 }
 # 63 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const *src , unsigned int size )
+ static int copy_to_user(void *dst , void const *src , unsigned int size )
 { unsigned long tmp ;
 
   {
@@ -9448,7 +9448,7 @@ extern int dev_set_drvdata(struct device * , void * ) ;
 # 799 "include/linux/device.h"
 extern int dev_warn(struct device const * , char const * , ...) ;
 # 530 "include/linux/interrupt.h"
-__inline static void tasklet_unlock_wait(struct tasklet_struct *t )
+ static void tasklet_unlock_wait(struct tasklet_struct *t )
 { int tmp ;
 
   {
@@ -9476,7 +9476,7 @@ __inline static void tasklet_unlock_wait(struct tasklet_struct *t )
 }
 }
 # 571 "include/linux/interrupt.h"
-__inline static void tasklet_disable_nosync(struct tasklet_struct *t )
+ static void tasklet_disable_nosync(struct tasklet_struct *t )
 {
 
   {
@@ -9491,7 +9491,7 @@ __inline static void tasklet_disable_nosync(struct tasklet_struct *t )
 }
 }
 # 577 "include/linux/interrupt.h"
-__inline static void tasklet_disable(struct tasklet_struct *t )
+ static void tasklet_disable(struct tasklet_struct *t )
 {
 
   {
@@ -9533,7 +9533,7 @@ void gigaset_if_receive(struct cardstate *cs , unsigned char *buffer , size_t le
 extern int tty_insert_flip_string_fixed_flag(struct tty_struct * , unsigned char const * ,
                                              char , size_t ) ;
 # 23 "include/linux/tty_flip.h"
-__inline static int tty_insert_flip_string(struct tty_struct *tty , unsigned char const *chars ,
+ static int tty_insert_flip_string(struct tty_struct *tty , unsigned char const *chars ,
                                            size_t size )
 { int tmp ;
 
@@ -12205,7 +12205,7 @@ void gigaset_init_dev_sysfs(struct cardstate *cs )
 }
 }
 # 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head const *head )
+ static int list_empty(struct list_head const *head )
 {
 
   {
@@ -13200,7 +13200,7 @@ static void disconnect(struct at_state_t **at_state_p )
 }
 }
 # 654 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/gigaset/gigaset.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/20/dscv_tempdir/dscv/ri/08_1/drivers/isdn/gigaset/ev-layer.c.p"
-__inline static struct at_state_t *get_free_channel(struct cardstate *cs , int cid )
+ static struct at_state_t *get_free_channel(struct cardstate *cs , int cid )
 { unsigned long flags ;
   int i ;
   struct at_state_t *ret ;
@@ -16724,7 +16724,7 @@ extern void warn_slowpath_null(char const * , int const ) ;
 # 1034 "include/linux/skbuff.h"
 extern void skb_queue_tail(struct sk_buff_head * , struct sk_buff * ) ;
 # 1093 "include/linux/skbuff.h"
-__inline static int skb_is_nonlinear(struct sk_buff const *skb )
+ static int skb_is_nonlinear(struct sk_buff const *skb )
 {
 
   {
@@ -16733,7 +16733,7 @@ __inline static int skb_is_nonlinear(struct sk_buff const *skb )
 }
 }
 # 1131 "include/linux/skbuff.h"
-__inline static unsigned char *skb_tail_pointer(struct sk_buff const *skb )
+ static unsigned char *skb_tail_pointer(struct sk_buff const *skb )
 {
 
   {
@@ -16742,7 +16742,7 @@ __inline static unsigned char *skb_tail_pointer(struct sk_buff const *skb )
 }
 }
 # 1136 "include/linux/skbuff.h"
-__inline static void skb_reset_tail_pointer(struct sk_buff *skb )
+ static void skb_reset_tail_pointer(struct sk_buff *skb )
 {
 
   {
@@ -16753,7 +16753,7 @@ __inline static void skb_reset_tail_pointer(struct sk_buff *skb )
 }
 }
 # 1141 "include/linux/skbuff.h"
-__inline static void skb_set_tail_pointer(struct sk_buff *skb , int const offset )
+ static void skb_set_tail_pointer(struct sk_buff *skb , int const offset )
 {
 
   {
@@ -16770,7 +16770,7 @@ __inline static void skb_set_tail_pointer(struct sk_buff *skb , int const offset
 # 1167 "include/linux/skbuff.h"
 extern unsigned char *skb_put(struct sk_buff * , unsigned int ) ;
 # 1168 "include/linux/skbuff.h"
-__inline static unsigned char *__skb_put(struct sk_buff *skb , unsigned int len )
+ static unsigned char *__skb_put(struct sk_buff *skb , unsigned int len )
 { unsigned char *tmp ;
   unsigned char *tmp___0 ;
   int tmp___1 ;
@@ -16807,7 +16807,7 @@ __inline static unsigned char *__skb_put(struct sk_buff *skb , unsigned int len 
 }
 }
 # 1253 "include/linux/skbuff.h"
-__inline static void skb_reserve(struct sk_buff *skb , int len )
+ static void skb_reserve(struct sk_buff *skb , int len )
 {
 
   {
@@ -16820,7 +16820,7 @@ __inline static void skb_reserve(struct sk_buff *skb , int len )
 }
 }
 # 1298 "include/linux/skbuff.h"
-__inline static unsigned char *skb_mac_header(struct sk_buff const *skb )
+ static unsigned char *skb_mac_header(struct sk_buff const *skb )
 {
 
   {
@@ -16829,7 +16829,7 @@ __inline static unsigned char *skb_mac_header(struct sk_buff const *skb )
 }
 }
 # 1308 "include/linux/skbuff.h"
-__inline static void skb_reset_mac_header(struct sk_buff *skb )
+ static void skb_reset_mac_header(struct sk_buff *skb )
 {
 
   {
@@ -16840,7 +16840,7 @@ __inline static void skb_reset_mac_header(struct sk_buff *skb )
 }
 }
 # 1448 "include/linux/skbuff.h"
-__inline static void __skb_trim(struct sk_buff *skb , unsigned int len )
+ static void __skb_trim(struct sk_buff *skb , unsigned int len )
 { int __ret_warn_on ;
   long tmp ;
   int tmp___0 ;
@@ -16896,7 +16896,7 @@ extern void dev_kfree_skb_any(struct sk_buff * ) ;
 # 6 "include/linux/crc-ccitt.h"
 extern u16 const crc_ccitt_table[256U] ;
 # 10 "include/linux/crc-ccitt.h"
-__inline static u16 crc_ccitt_byte(u16 crc , u8 const c )
+ static u16 crc_ccitt_byte(u16 crc , u8 const c )
 {
 
   {
@@ -16913,7 +16913,7 @@ void gigaset_skb_rcvd(struct bc_state *bcs , struct sk_buff *skb ) ;
 # 676 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/isdn/gigaset/gigaset.h"
 void gigaset_isdn_rcv_err(struct bc_state *bcs ) ;
 # 793 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/isdn/gigaset/gigaset.h"
-__inline static struct sk_buff *gigaset_new_rx_skb(struct bc_state *bcs )
+ static struct sk_buff *gigaset_new_rx_skb(struct bc_state *bcs )
 { struct cardstate *cs ;
   unsigned short hw_hdr_len ;
 
@@ -16951,7 +16951,7 @@ __inline static struct sk_buff *gigaset_new_rx_skb(struct bc_state *bcs )
 # 6 "include/linux/bitrev.h"
 extern u8 const byte_rev_table[256U] ;
 # 8 "include/linux/bitrev.h"
-__inline static u8 bitrev8(u8 byte )
+ static u8 bitrev8(u8 byte )
 {
 
   {
@@ -16960,7 +16960,7 @@ __inline static u8 bitrev8(u8 byte )
 }
 }
 # 32 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/gigaset/gigaset.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/20/dscv_tempdir/dscv/ri/08_1/drivers/isdn/gigaset/asyncdata.c.p"
-__inline static int muststuff(unsigned char c )
+ static int muststuff(unsigned char c )
 {
 
   {
@@ -18275,7 +18275,7 @@ extern char *strcpy(char * , char const * ) ;
 # 27 "include/linux/string.h"
 extern char *strncpy(char * , char const * , __kernel_size_t ) ;
 # 35 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i )
+ static void atomic_set(atomic_t *v , int i )
 {
 
   {
@@ -18286,7 +18286,7 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 # 173 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_add_return(int i , atomic_t *v )
+ static int atomic_add_return(int i , atomic_t *v )
 { int __i ;
 
   {
@@ -18300,7 +18300,7 @@ __inline static int atomic_add_return(int i , atomic_t *v )
 }
 }
 # 205 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_sub_return(int i , atomic_t *v )
+ static int atomic_sub_return(int i , atomic_t *v )
 { int tmp ;
 
   {
@@ -18313,7 +18313,7 @@ __inline static int atomic_sub_return(int i , atomic_t *v )
 }
 }
 # 80 "include/linux/kobject.h"
-__inline static char const *kobject_name(struct kobject const *kobj )
+ static char const *kobject_name(struct kobject const *kobj )
 {
 
   {
@@ -18322,7 +18322,7 @@ __inline static char const *kobject_name(struct kobject const *kobj )
 }
 }
 # 45 "include/linux/ctype.h"
-__inline static unsigned char __toupper(unsigned char c )
+ static unsigned char __toupper(unsigned char c )
 {
 
   {
@@ -18338,7 +18338,7 @@ __inline static unsigned char __toupper(unsigned char c )
 }
 }
 # 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )
+ static void *kzalloc(size_t size , gfp_t flags )
 { void *tmp ;
 
   {
@@ -18351,7 +18351,7 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 # 608 "include/linux/device.h"
-__inline static char const *dev_name(struct device const *dev )
+ static char const *dev_name(struct device const *dev )
 { char const *tmp ;
 
   {
@@ -18377,7 +18377,7 @@ extern int _dev_info(struct device const * , char const * , ...) ;
 # 493 "include/linux/skbuff.h"
 extern struct sk_buff *__alloc_skb(unsigned int , gfp_t , int , int ) ;
 # 495 "include/linux/skbuff.h"
-__inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )
+ static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )
 { struct sk_buff *tmp ;
 
   {
@@ -18396,7 +18396,7 @@ extern unsigned char *skb_pull(struct sk_buff * , unsigned int ) ;
 # 1198 "include/linux/skbuff.h"
 extern unsigned char *__pskb_pull_tail(struct sk_buff * , int ) ;
 # 1720 "include/linux/skbuff.h"
-__inline static int __skb_linearize(struct sk_buff *skb )
+ static int __skb_linearize(struct sk_buff *skb )
 { int tmp___0 ;
   unsigned char *tmp___1 ;
 
@@ -18418,7 +18418,7 @@ __inline static int __skb_linearize(struct sk_buff *skb )
 }
 }
 # 1732 "include/linux/skbuff.h"
-__inline static int skb_linearize(struct sk_buff *skb )
+ static int skb_linearize(struct sk_buff *skb )
 { int tmp___0 ;
   int tmp___1 ;
   int tmp___2 ;
@@ -18445,7 +18445,7 @@ __inline static int skb_linearize(struct sk_buff *skb )
 }
 }
 # 278 "include/linux/proc_fs.h"
-__inline static struct proc_inode *PROC_I(struct inode const *inode )
+ static struct proc_inode *PROC_I(struct inode const *inode )
 { struct inode const *__mptr ;
 
   {
@@ -18456,7 +18456,7 @@ __inline static struct proc_inode *PROC_I(struct inode const *inode )
 }
 }
 # 283 "include/linux/proc_fs.h"
-__inline static struct proc_dir_entry *PDE(struct inode const *inode )
+ static struct proc_dir_entry *PDE(struct inode const *inode )
 { struct proc_inode *tmp ;
 
   {
@@ -18495,7 +18495,7 @@ extern void register_capi_driver(struct capi_driver * ) ;
 # 101 "include/linux/isdn/capilli.h"
 extern void unregister_capi_driver(struct capi_driver * ) ;
 # 33 "include/linux/isdn/capiutil.h"
-__inline static void capimsg_setu8(void *m , int off , __u8 val )
+ static void capimsg_setu8(void *m , int off , __u8 val )
 {
 
   {
@@ -18506,7 +18506,7 @@ __inline static void capimsg_setu8(void *m , int off , __u8 val )
 }
 }
 # 38 "include/linux/isdn/capiutil.h"
-__inline static void capimsg_setu16(void *m , int off , __u16 val )
+ static void capimsg_setu16(void *m , int off , __u16 val )
 {
 
   {
@@ -18519,7 +18519,7 @@ __inline static void capimsg_setu16(void *m , int off , __u16 val )
 }
 }
 # 44 "include/linux/isdn/capiutil.h"
-__inline static void capimsg_setu32(void *m , int off , __u32 val )
+ static void capimsg_setu32(void *m , int off , __u32 val )
 {
 
   {
@@ -18548,7 +18548,7 @@ extern void cdebbuf_free(_cdebbuf * ) ;
 # 194 "include/linux/isdn/capiutil.h"
 extern _cdebbuf *capi_cmsg2str(_cmsg * ) ;
 # 199 "include/linux/isdn/capiutil.h"
-__inline static void capi_cmsg_answer(_cmsg *cmsg )
+ static void capi_cmsg_answer(_cmsg *cmsg )
 {
 
   {
@@ -18591,7 +18591,7 @@ static struct __anonstruct_cip2bchlc_198 cip2bchlc[29U] =
         {(u8 *)"9190A5", (u8 *)"916001"},
         {(u8 *)"8890", (u8 *)"916002"}};
 # 173 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/gigaset/gigaset.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/20/dscv_tempdir/dscv/ri/08_1/drivers/isdn/gigaset/capi.c.p"
-__inline static void ignore_cstruct_param(struct cardstate *cs , _cstruct param ,
+ static void ignore_cstruct_param(struct cardstate *cs , _cstruct param ,
                                           char *msgname , char *paramname )
 {
 
@@ -18726,7 +18726,7 @@ static void decode_ie(u8 *in , char *out )
 }
 }
 # 217 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/gigaset/gigaset.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/20/dscv_tempdir/dscv/ri/08_1/drivers/isdn/gigaset/capi.c.p"
-__inline static struct gigaset_capi_appl *get_appl(struct gigaset_capi_ctr *iif ,
+ static struct gigaset_capi_appl *get_appl(struct gigaset_capi_ctr *iif ,
                                                    u16 appl )
 { struct gigaset_capi_appl *ap ;
   struct list_head const *__mptr ;
@@ -18766,7 +18766,7 @@ __inline static struct gigaset_capi_appl *get_appl(struct gigaset_capi_ctr *iif 
 }
 }
 # 230 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/gigaset/gigaset.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/20/dscv_tempdir/dscv/ri/08_1/drivers/isdn/gigaset/capi.c.p"
-__inline static void dump_cmsg(enum debuglevel level , char const *tag , _cmsg *p )
+ static void dump_cmsg(enum debuglevel level , char const *tag , _cmsg *p )
 { _cdebbuf *cdb ;
   long tmp ;
   char *tmp___0 ;
@@ -18827,7 +18827,7 @@ __inline static void dump_cmsg(enum debuglevel level , char const *tag , _cmsg *
 }
 }
 # 249 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/gigaset/gigaset.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/20/dscv_tempdir/dscv/ri/08_1/drivers/isdn/gigaset/capi.c.p"
-__inline static void dump_rawmsg(enum debuglevel level , char const *tag , unsigned char *data )
+ static void dump_rawmsg(enum debuglevel level , char const *tag , unsigned char *data )
 { char *dbgline ;
   int i ;
   int l ;
@@ -20530,7 +20530,7 @@ static void gigaset_register_appl(struct capi_ctr *ctr , u16 appl , capi_registe
 }
 }
 # 1021 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/gigaset/gigaset.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/20/dscv_tempdir/dscv/ri/08_1/drivers/isdn/gigaset/capi.c.p"
-__inline static void remove_appl_from_channel(struct bc_state *bcs , struct gigaset_capi_appl *ap )
+ static void remove_appl_from_channel(struct bc_state *bcs , struct gigaset_capi_appl *ap )
 { struct cardstate *cs ;
   struct gigaset_capi_appl *bcap ;
   unsigned long flags ;
@@ -22969,7 +22969,7 @@ static struct __anonstruct_capi_send_handler_table_202 capi_send_handler_table[2
         {(u16 )65408U, & do_nothing},
         {(u16 )65411U, & do_nothing}};
 # 2158 "/anthill/stuff/tacas-comp/work/current--X--drivers/isdn/gigaset/gigaset.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/20/dscv_tempdir/dscv/ri/08_1/drivers/isdn/gigaset/capi.c.p"
-__inline static capi_send_handler_t lookup_capi_send_handler(u16 const cmd )
+ static capi_send_handler_t lookup_capi_send_handler(u16 const cmd )
 { size_t i ;
 
   {

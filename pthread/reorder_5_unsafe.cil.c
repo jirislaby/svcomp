@@ -73,16 +73,16 @@ extern int fprintf(FILE * __restrict  __stream , char const   * __restrict  __fo
 extern  __attribute__((__nothrow__)) int sscanf(char const   * __restrict  __s , char const   * __restrict  __format 
                                                 , ...) ;
 #line 30 "/usr/include/sys/sysmacros.h"
-__inline extern  __attribute__((__nothrow__)) unsigned int gnu_dev_major(unsigned long long __dev ) ;
+ extern  __attribute__((__nothrow__)) unsigned int gnu_dev_major(unsigned long long __dev ) ;
 #line 33
-__inline extern  __attribute__((__nothrow__)) unsigned int gnu_dev_minor(unsigned long long __dev ) ;
+ extern  __attribute__((__nothrow__)) unsigned int gnu_dev_minor(unsigned long long __dev ) ;
 #line 36
-__inline extern  __attribute__((__nothrow__)) unsigned long long gnu_dev_makedev(unsigned int __major ,
+ extern  __attribute__((__nothrow__)) unsigned long long gnu_dev_makedev(unsigned int __major ,
                                                                                  unsigned int __minor ) ;
 #line 41
-__inline extern  __attribute__((__nothrow__)) unsigned int gnu_dev_major(unsigned long long __dev ) ;
+ extern  __attribute__((__nothrow__)) unsigned int gnu_dev_major(unsigned long long __dev ) ;
 #line 41 "/usr/include/sys/sysmacros.h"
-__inline extern unsigned int gnu_dev_major(unsigned long long __dev ) 
+ extern unsigned int gnu_dev_major(unsigned long long __dev ) 
 { unsigned long long __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -113,9 +113,9 @@ __inline extern unsigned int gnu_dev_major(unsigned long long __dev )
 }
 }
 #line 47
-__inline extern  __attribute__((__nothrow__)) unsigned int gnu_dev_minor(unsigned long long __dev ) ;
+ extern  __attribute__((__nothrow__)) unsigned int gnu_dev_minor(unsigned long long __dev ) ;
 #line 47 "/usr/include/sys/sysmacros.h"
-__inline extern unsigned int gnu_dev_minor(unsigned long long __dev ) 
+ extern unsigned int gnu_dev_minor(unsigned long long __dev ) 
 { unsigned long long __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -143,10 +143,10 @@ __inline extern unsigned int gnu_dev_minor(unsigned long long __dev )
 }
 }
 #line 53
-__inline extern  __attribute__((__nothrow__)) unsigned long long gnu_dev_makedev(unsigned int __major ,
+ extern  __attribute__((__nothrow__)) unsigned long long gnu_dev_makedev(unsigned int __major ,
                                                                                  unsigned int __minor ) ;
 #line 53 "/usr/include/sys/sysmacros.h"
-__inline extern unsigned long long gnu_dev_makedev(unsigned int __major , unsigned int __minor ) 
+ extern unsigned long long gnu_dev_makedev(unsigned int __major , unsigned int __minor ) 
 { unsigned int __cil_tmp3 ;
   unsigned long long __cil_tmp4 ;
   unsigned long long __cil_tmp5 ;

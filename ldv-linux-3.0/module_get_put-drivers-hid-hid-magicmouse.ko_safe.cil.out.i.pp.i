@@ -3869,7 +3869,7 @@ struct magicmouse_sc {
    int single_touch_id ;
 };
 # 82 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile *addr )
+ static void __set_bit(int nr , unsigned long volatile *addr )
 {
 
   {
@@ -3880,7 +3880,7 @@ __inline static void __set_bit(int nr , unsigned long volatile *addr )
 }
 }
 # 309 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int constant_test_bit(unsigned int nr , unsigned long const volatile *addr )
+ static int constant_test_bit(unsigned int nr , unsigned long const volatile *addr )
 {
 
   {
@@ -3915,7 +3915,7 @@ extern int dev_err(struct device const * , char const * , ...) ;
 # 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t , gfp_t ) ;
 # 255 "include/linux/slub_def.h"
-__inline static void *kmalloc(size_t size , gfp_t flags )
+ static void *kmalloc(size_t size , gfp_t flags )
 { void *tmp___2 ;
 
   {
@@ -3928,7 +3928,7 @@ __inline static void *kmalloc(size_t size , gfp_t flags )
 }
 }
 # 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )
+ static void *kzalloc(size_t size , gfp_t flags )
 { void *tmp ;
 
   {
@@ -3943,7 +3943,7 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 # 1471 "include/linux/input.h"
 extern void input_event(struct input_dev * , unsigned int , unsigned int , int ) ;
 # 1474 "include/linux/input.h"
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value )
 {
 
@@ -3957,7 +3957,7 @@ __inline static void input_report_key(struct input_dev *dev , unsigned int code 
 }
 }
 # 1479 "include/linux/input.h"
-__inline static void input_report_rel(struct input_dev *dev , unsigned int code ,
+ static void input_report_rel(struct input_dev *dev , unsigned int code ,
                                       int value )
 {
 
@@ -3971,7 +3971,7 @@ __inline static void input_report_rel(struct input_dev *dev , unsigned int code 
 }
 }
 # 1484 "include/linux/input.h"
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value )
 {
 
@@ -3985,7 +3985,7 @@ __inline static void input_report_abs(struct input_dev *dev , unsigned int code 
 }
 }
 # 1499 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev )
+ static void input_sync(struct input_dev *dev )
 {
 
   {
@@ -3998,7 +3998,7 @@ __inline static void input_sync(struct input_dev *dev )
 }
 }
 # 1504 "include/linux/input.h"
-__inline static void input_mt_sync(struct input_dev *dev )
+ static void input_mt_sync(struct input_dev *dev )
 {
 
   {
@@ -4011,7 +4011,7 @@ __inline static void input_mt_sync(struct input_dev *dev )
 }
 }
 # 1521 "include/linux/input.h"
-__inline static void input_set_events_per_packet(struct input_dev *dev , int n_events )
+ static void input_set_events_per_packet(struct input_dev *dev , int n_events )
 {
 
   {
@@ -4025,7 +4025,7 @@ __inline static void input_set_events_per_packet(struct input_dev *dev , int n_e
 extern void input_set_abs_params(struct input_dev * , unsigned int , int , int ,
                                  int , int ) ;
 # 522 "include/linux/hid.h"
-__inline static void *hid_get_drvdata(struct hid_device *hdev )
+ static void *hid_get_drvdata(struct hid_device *hdev )
 { void *tmp ;
 
   {
@@ -4038,7 +4038,7 @@ __inline static void *hid_get_drvdata(struct hid_device *hdev )
 }
 }
 # 527 "include/linux/hid.h"
-__inline static void hid_set_drvdata(struct hid_device *hdev , void *data )
+ static void hid_set_drvdata(struct hid_device *hdev , void *data )
 {
 
   {
@@ -4053,7 +4053,7 @@ __inline static void hid_set_drvdata(struct hid_device *hdev , void *data )
 # 694 "include/linux/hid.h"
 extern int __hid_register_driver(struct hid_driver * , struct module * , char const * ) ;
 # 696 "include/linux/hid.h"
-__inline static int hid_register_driver(struct hid_driver *driver )
+ static int hid_register_driver(struct hid_driver *driver )
 { int tmp ;
 
   {
@@ -4075,7 +4075,7 @@ extern int hid_connect(struct hid_device * , unsigned int ) ;
 # 716 "include/linux/hid.h"
 extern void hid_disconnect(struct hid_device * ) ;
 # 780 "include/linux/hid.h"
-__inline static int hid_parse(struct hid_device *hdev )
+ static int hid_parse(struct hid_device *hdev )
 { int ret ;
 
   {
@@ -4102,7 +4102,7 @@ __inline static int hid_parse(struct hid_device *hdev )
 }
 }
 # 804 "include/linux/hid.h"
-__inline static int hid_hw_start(struct hid_device *hdev , unsigned int connect_mask )
+ static int hid_hw_start(struct hid_device *hdev , unsigned int connect_mask )
 { int ret ;
   int tmp ;
 
@@ -4143,7 +4143,7 @@ __inline static int hid_hw_start(struct hid_device *hdev , unsigned int connect_
 }
 }
 # 824 "include/linux/hid.h"
-__inline static void hid_hw_stop(struct hid_device *hdev )
+ static void hid_hw_stop(struct hid_device *hdev )
 {
 
   {

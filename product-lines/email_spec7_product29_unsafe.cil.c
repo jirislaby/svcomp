@@ -1353,7 +1353,7 @@ void test(void)
 #line 9 "Email.h"
 int isReadable(int msg ) ;
 #line 10 "EncryptVerify_spec.c"
-__inline void __utac_acc__EncryptVerify_spec__1(int msg ) 
+ void __utac_acc__EncryptVerify_spec__1(int msg ) 
 { int tmp ;
 
   {

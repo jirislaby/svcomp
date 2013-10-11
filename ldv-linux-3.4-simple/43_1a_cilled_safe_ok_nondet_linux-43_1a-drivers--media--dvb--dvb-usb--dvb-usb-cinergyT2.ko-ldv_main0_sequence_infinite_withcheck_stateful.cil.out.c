@@ -8044,7 +8044,7 @@ extern void *__memcpy(void * , void const   * , size_t  ) ;
 #line 161 "include/linux/slab.h"
 extern void kfree(void const   * ) ;
 #line 353
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8592/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/dvb-usb/cinergyT2-fe.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 58 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8592/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/dvb-usb/cinergyT2-fe.c.p"
@@ -9753,7 +9753,7 @@ void ldv_main1_sequence_infinite_withcheck_stateful(void)
 }
 }
 #line 822 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8592/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/dvb-usb/cinergyT2-fe.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

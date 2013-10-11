@@ -364,9 +364,9 @@ struct kmem_cache {
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 97 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 97 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -421,9 +421,9 @@ extern int queue_delayed_work(struct workqueue_struct *wq , struct delayed_work 
 #line 376
 extern void flush_workqueue(struct workqueue_struct *wq ) ;
 #line 410
-__inline static bool cancel_delayed_work(struct delayed_work *work )  __attribute__((__no_instrument_function__)) ;
+ static bool cancel_delayed_work(struct delayed_work *work )  __attribute__((__no_instrument_function__)) ;
 #line 410 "include/linux/workqueue.h"
-__inline static bool cancel_delayed_work(struct delayed_work *work ) 
+ static bool cancel_delayed_work(struct delayed_work *work ) 
 { bool ret ;
   int tmp ;
   unsigned long __cil_tmp4 ;
@@ -480,10 +480,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 

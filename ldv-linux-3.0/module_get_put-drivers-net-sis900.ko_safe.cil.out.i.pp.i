@@ -5416,7 +5416,7 @@ struct sis900_private {
 # 1 "<compiler builtins>"
 
 # 60 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void set_bit(unsigned int nr , unsigned long volatile *addr )
+ static void set_bit(unsigned int nr , unsigned long volatile *addr )
 {
 
   {
@@ -5427,7 +5427,7 @@ __inline static void set_bit(unsigned int nr , unsigned long volatile *addr )
 }
 }
 # 98 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void clear_bit(int nr , unsigned long volatile *addr )
+ static void clear_bit(int nr , unsigned long volatile *addr )
 {
 
   {
@@ -5438,7 +5438,7 @@ __inline static void clear_bit(int nr , unsigned long volatile *addr )
 }
 }
 # 246 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int test_and_clear_bit(int nr , unsigned long volatile *addr )
+ static int test_and_clear_bit(int nr , unsigned long volatile *addr )
 { int oldbit ;
 
   {
@@ -5450,7 +5450,7 @@ __inline static int test_and_clear_bit(int nr , unsigned long volatile *addr )
 }
 }
 # 309 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int constant_test_bit(unsigned int nr , unsigned long const volatile *addr )
+ static int constant_test_bit(unsigned int nr , unsigned long const volatile *addr )
 {
 
   {
@@ -5471,7 +5471,7 @@ extern void *__memcpy(void * , void const * , size_t ) ;
 # 62 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/string_64.h"
 extern char *strcpy(char * , char const * ) ;
 # 851 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static unsigned long arch_local_save_flags(void)
+ static unsigned long arch_local_save_flags(void)
 { unsigned long __ret ;
   unsigned long __edi ;
   unsigned long __esi ;
@@ -5518,7 +5518,7 @@ __inline static unsigned long arch_local_save_flags(void)
 }
 }
 # 154 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/irqflags.h"
-__inline static int arch_irqs_disabled_flags(unsigned long flags )
+ static int arch_irqs_disabled_flags(unsigned long flags )
 {
 
   {
@@ -5541,7 +5541,7 @@ extern void _raw_spin_unlock_irq(raw_spinlock_t * ) ;
 # 43 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long ) ;
 # 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 {
 
   {
@@ -5550,7 +5550,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 # 283 "include/linux/spinlock.h"
-__inline static void spin_lock(spinlock_t *lock )
+ static void spin_lock(spinlock_t *lock )
 {
 
   {
@@ -5563,7 +5563,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 # 308 "include/linux/spinlock.h"
-__inline static void spin_lock_irq(spinlock_t *lock )
+ static void spin_lock_irq(spinlock_t *lock )
 {
 
   {
@@ -5576,7 +5576,7 @@ __inline static void spin_lock_irq(spinlock_t *lock )
 }
 }
 # 323 "include/linux/spinlock.h"
-__inline static void spin_unlock(spinlock_t *lock )
+ static void spin_unlock(spinlock_t *lock )
 {
 
   {
@@ -5589,7 +5589,7 @@ __inline static void spin_unlock(spinlock_t *lock )
 }
 }
 # 333 "include/linux/spinlock.h"
-__inline static void spin_unlock_irq(spinlock_t *lock )
+ static void spin_unlock_irq(spinlock_t *lock )
 {
 
   {
@@ -5602,7 +5602,7 @@ __inline static void spin_unlock_irq(spinlock_t *lock )
 }
 }
 # 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
 {
 
   {
@@ -5623,7 +5623,7 @@ extern int del_timer(struct timer_list * ) ;
 # 275 "include/linux/timer.h"
 extern void add_timer(struct timer_list * ) ;
 # 310 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port )
+ static void outb(unsigned char value , int port )
 {
 
   {
@@ -5634,7 +5634,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 # 310 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port )
+ static unsigned char inb(int port )
 { unsigned char value ;
 
   {
@@ -5645,7 +5645,7 @@ __inline static unsigned char inb(int port )
 }
 }
 # 311 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static unsigned short inw(int port )
+ static unsigned short inw(int port )
 { unsigned short value ;
 
   {
@@ -5656,7 +5656,7 @@ __inline static unsigned short inw(int port )
 }
 }
 # 312 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void outl(unsigned int value , int port )
+ static void outl(unsigned int value , int port )
 {
 
   {
@@ -5667,7 +5667,7 @@ __inline static void outl(unsigned int value , int port )
 }
 }
 # 312 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static unsigned int inl(int port )
+ static unsigned int inl(int port )
 { unsigned int value ;
 
   {
@@ -5680,7 +5680,7 @@ __inline static unsigned int inl(int port )
 # 830 "include/linux/rcupdate.h"
 extern void kfree(void const * ) ;
 # 80 "include/linux/kobject.h"
-__inline static char const *kobject_name(struct kobject const *kobj )
+ static char const *kobject_name(struct kobject const *kobj )
 {
 
   {
@@ -5705,7 +5705,7 @@ extern void yield(void) ;
 # 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t , gfp_t ) ;
 # 255 "include/linux/slub_def.h"
-__inline static void *kmalloc(size_t size , gfp_t flags )
+ static void *kmalloc(size_t size , gfp_t flags )
 { void *tmp___2 ;
 
   {
@@ -5722,7 +5722,7 @@ extern int request_threaded_irq(unsigned int , irqreturn_t (*)(int , void * ) ,
                                 irqreturn_t (*)(int , void * ) , unsigned long ,
                                 char const * , void * ) ;
 # 129 "include/linux/interrupt.h"
-__inline static int request_irq(unsigned int irq , irqreturn_t (*handler)(int , void * ) ,
+ static int request_irq(unsigned int irq , irqreturn_t (*handler)(int , void * ) ,
                                 unsigned long flags , char const *name , void *dev )
 { int tmp ;
 
@@ -5743,7 +5743,7 @@ extern void disable_irq(unsigned int ) ;
 # 210 "include/linux/interrupt.h"
 extern void enable_irq(unsigned int ) ;
 # 608 "include/linux/device.h"
-__inline static char const *dev_name(struct device const *dev )
+ static char const *dev_name(struct device const *dev )
 { char const *tmp ;
 
   {
@@ -5779,7 +5779,7 @@ extern int pci_bus_write_config_byte(struct pci_bus * , unsigned int , int , u8 
 # 733 "include/linux/pci.h"
 extern int pci_bus_write_config_dword(struct pci_bus * , unsigned int , int , u32 ) ;
 # 737 "include/linux/pci.h"
-__inline static int pci_read_config_byte(struct pci_dev *dev , int where , u8 *val )
+ static int pci_read_config_byte(struct pci_dev *dev , int where , u8 *val )
 { int tmp ;
 
   {
@@ -5792,7 +5792,7 @@ __inline static int pci_read_config_byte(struct pci_dev *dev , int where , u8 *v
 }
 }
 # 745 "include/linux/pci.h"
-__inline static int pci_read_config_dword(struct pci_dev *dev , int where , u32 *val )
+ static int pci_read_config_dword(struct pci_dev *dev , int where , u32 *val )
 { int tmp ;
 
   {
@@ -5805,7 +5805,7 @@ __inline static int pci_read_config_dword(struct pci_dev *dev , int where , u32 
 }
 }
 # 750 "include/linux/pci.h"
-__inline static int pci_write_config_byte(struct pci_dev *dev , int where , u8 val )
+ static int pci_write_config_byte(struct pci_dev *dev , int where , u8 val )
 { int tmp ;
 
   {
@@ -5818,7 +5818,7 @@ __inline static int pci_write_config_byte(struct pci_dev *dev , int where , u8 v
 }
 }
 # 758 "include/linux/pci.h"
-__inline static int pci_write_config_dword(struct pci_dev *dev , int where , u32 val )
+ static int pci_write_config_dword(struct pci_dev *dev , int where , u32 val )
 { int tmp ;
 
   {
@@ -5849,7 +5849,7 @@ extern int __pci_register_driver(struct pci_driver * , struct module * , char co
 # 925 "include/linux/pci.h"
 extern void pci_unregister_driver(struct pci_driver * ) ;
 # 80 "include/linux/dma-mapping.h"
-__inline static int valid_dma_direction(int dma_direction )
+ static int valid_dma_direction(int dma_direction )
 { int tmp ;
 
   {
@@ -5876,7 +5876,7 @@ __inline static int valid_dma_direction(int dma_direction )
 }
 }
 # 87 "include/linux/dma-mapping.h"
-__inline static int is_device_dma_capable(struct device *dev )
+ static int is_device_dma_capable(struct device *dev )
 { int tmp ;
 
   {
@@ -5899,7 +5899,7 @@ __inline static int is_device_dma_capable(struct device *dev )
 }
 }
 # 131 "include/linux/kmemcheck.h"
-__inline static void kmemcheck_mark_initialized(void *address , unsigned int n )
+ static void kmemcheck_mark_initialized(void *address , unsigned int n )
 {
 
   {
@@ -5922,7 +5922,7 @@ extern struct device x86_dma_fallback_dev ;
 # 29 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
 extern struct dma_map_ops *dma_ops ;
 # 31 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
-__inline static struct dma_map_ops *get_dma_ops(struct device *dev )
+ static struct dma_map_ops *get_dma_ops(struct device *dev )
 { long tmp ;
 
   {
@@ -5947,7 +5947,7 @@ __inline static struct dma_map_ops *get_dma_ops(struct device *dev )
 }
 }
 # 9 "include/asm-generic/dma-mapping-common.h"
-__inline static dma_addr_t dma_map_single_attrs(struct device *dev , void *ptr , size_t size ,
+ static dma_addr_t dma_map_single_attrs(struct device *dev , void *ptr , size_t size ,
                                                 enum dma_data_direction dir , struct dma_attrs *attrs )
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
@@ -5998,7 +5998,7 @@ __inline static dma_addr_t dma_map_single_attrs(struct device *dev , void *ptr ,
 }
 }
 # 28 "include/asm-generic/dma-mapping-common.h"
-__inline static void dma_unmap_single_attrs(struct device *dev , dma_addr_t addr ,
+ static void dma_unmap_single_attrs(struct device *dev , dma_addr_t addr ,
                                             size_t size , enum dma_data_direction dir ,
                                             struct dma_attrs *attrs )
 { struct dma_map_ops *ops ;
@@ -6051,7 +6051,7 @@ __inline static void dma_unmap_single_attrs(struct device *dev , dma_addr_t addr
 # 59 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
 extern int dma_set_mask(struct device * , u64 ) ;
 # 89 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
-__inline static unsigned long dma_alloc_coherent_mask(struct device *dev , gfp_t gfp )
+ static unsigned long dma_alloc_coherent_mask(struct device *dev , gfp_t gfp )
 { unsigned long dma_mask ;
 
   {
@@ -6077,7 +6077,7 @@ __inline static unsigned long dma_alloc_coherent_mask(struct device *dev , gfp_t
 }
 }
 # 101 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
-__inline static gfp_t dma_alloc_coherent_gfp_flags(struct device *dev , gfp_t gfp )
+ static gfp_t dma_alloc_coherent_gfp_flags(struct device *dev , gfp_t gfp )
 { unsigned long dma_mask ;
   unsigned long tmp ;
 
@@ -6112,7 +6112,7 @@ __inline static gfp_t dma_alloc_coherent_gfp_flags(struct device *dev , gfp_t gf
 }
 }
 # 115 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
-__inline static void *dma_alloc_coherent(struct device *dev , size_t size , dma_addr_t *dma_handle ,
+ static void *dma_alloc_coherent(struct device *dev , size_t size , dma_addr_t *dma_handle ,
                                          gfp_t gfp )
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
@@ -6170,7 +6170,7 @@ __inline static void *dma_alloc_coherent(struct device *dev , size_t size , dma_
 }
 }
 # 142 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/dma-mapping.h"
-__inline static void dma_free_coherent(struct device *dev , size_t size , void *vaddr ,
+ static void dma_free_coherent(struct device *dev , size_t size , void *vaddr ,
                                        dma_addr_t bus )
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
@@ -6226,7 +6226,7 @@ __inline static void dma_free_coherent(struct device *dev , size_t size , void *
 }
 }
 # 16 "include/asm-generic/pci-dma-compat.h"
-__inline static void *pci_alloc_consistent(struct pci_dev *hwdev , size_t size , dma_addr_t *dma_handle )
+ static void *pci_alloc_consistent(struct pci_dev *hwdev , size_t size , dma_addr_t *dma_handle )
 { struct device *tmp ;
   void *tmp___0 ;
 
@@ -6248,7 +6248,7 @@ __inline static void *pci_alloc_consistent(struct pci_dev *hwdev , size_t size ,
 }
 }
 # 23 "include/asm-generic/pci-dma-compat.h"
-__inline static void pci_free_consistent(struct pci_dev *hwdev , size_t size , void *vaddr ,
+ static void pci_free_consistent(struct pci_dev *hwdev , size_t size , void *vaddr ,
                                          dma_addr_t dma_handle )
 { struct device *tmp ;
 
@@ -6270,7 +6270,7 @@ __inline static void pci_free_consistent(struct pci_dev *hwdev , size_t size , v
 }
 }
 # 30 "include/asm-generic/pci-dma-compat.h"
-__inline static dma_addr_t pci_map_single(struct pci_dev *hwdev , void *ptr , size_t size ,
+ static dma_addr_t pci_map_single(struct pci_dev *hwdev , void *ptr , size_t size ,
                                           int direction )
 { struct device *tmp ;
   dma_addr_t tmp___0 ;
@@ -6294,7 +6294,7 @@ __inline static dma_addr_t pci_map_single(struct pci_dev *hwdev , void *ptr , si
 }
 }
 # 36 "include/asm-generic/pci-dma-compat.h"
-__inline static void pci_unmap_single(struct pci_dev *hwdev , dma_addr_t dma_addr ,
+ static void pci_unmap_single(struct pci_dev *hwdev , dma_addr_t dma_addr ,
                                       size_t size , int direction )
 { struct device *tmp ;
 
@@ -6317,7 +6317,7 @@ __inline static void pci_unmap_single(struct pci_dev *hwdev , dma_addr_t dma_add
 }
 }
 # 105 "include/asm-generic/pci-dma-compat.h"
-__inline static int pci_set_dma_mask(struct pci_dev *dev , u64 mask )
+ static int pci_set_dma_mask(struct pci_dev *dev , u64 mask )
 { int tmp ;
 
   {
@@ -6330,7 +6330,7 @@ __inline static int pci_set_dma_mask(struct pci_dev *dev , u64 mask )
 }
 }
 # 1316 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev )
+ static void *pci_get_drvdata(struct pci_dev *pdev )
 { void *tmp ;
 
   {
@@ -6343,7 +6343,7 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 # 1321 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data )
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data )
 {
 
   {
@@ -6356,7 +6356,7 @@ __inline static void pci_set_drvdata(struct pci_dev *pdev , void *data )
 }
 }
 # 1329 "include/linux/pci.h"
-__inline static char const *pci_name(struct pci_dev const *pdev )
+ static char const *pci_name(struct pci_dev const *pdev )
 { char const *tmp ;
 
   {
@@ -6379,7 +6379,7 @@ extern struct sk_buff *dev_alloc_skb(unsigned int ) ;
 # 16 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/delay.h"
 extern void __const_udelay(unsigned long ) ;
 # 1410 "include/linux/netdevice.h"
-__inline static struct netdev_queue *netdev_get_tx_queue(struct net_device const *dev ,
+ static struct netdev_queue *netdev_get_tx_queue(struct net_device const *dev ,
                                                          unsigned int index )
 {
 
@@ -6389,7 +6389,7 @@ __inline static struct netdev_queue *netdev_get_tx_queue(struct net_device const
 }
 }
 # 1481 "include/linux/netdevice.h"
-__inline static void *netdev_priv(struct net_device const *dev )
+ static void *netdev_priv(struct net_device const *dev )
 {
 
   {
@@ -6404,7 +6404,7 @@ extern int netpoll_trap(void) ;
 # 1788 "include/linux/netdevice.h"
 extern void __netif_schedule(struct Qdisc * ) ;
 # 1804 "include/linux/netdevice.h"
-__inline static void netif_tx_start_queue(struct netdev_queue *dev_queue )
+ static void netif_tx_start_queue(struct netdev_queue *dev_queue )
 {
 
   {
@@ -6417,7 +6417,7 @@ __inline static void netif_tx_start_queue(struct netdev_queue *dev_queue )
 }
 }
 # 1815 "include/linux/netdevice.h"
-__inline static void netif_start_queue(struct net_device *dev )
+ static void netif_start_queue(struct net_device *dev )
 { struct netdev_queue *tmp ;
 
   {
@@ -6432,7 +6432,7 @@ __inline static void netif_start_queue(struct net_device *dev )
 }
 }
 # 1830 "include/linux/netdevice.h"
-__inline static void netif_tx_wake_queue(struct netdev_queue *dev_queue )
+ static void netif_tx_wake_queue(struct netdev_queue *dev_queue )
 { int tmp ;
   int tmp___0 ;
 
@@ -6470,7 +6470,7 @@ __inline static void netif_tx_wake_queue(struct netdev_queue *dev_queue )
 }
 }
 # 1849 "include/linux/netdevice.h"
-__inline static void netif_wake_queue(struct net_device *dev )
+ static void netif_wake_queue(struct net_device *dev )
 { struct netdev_queue *tmp ;
 
   {
@@ -6485,7 +6485,7 @@ __inline static void netif_wake_queue(struct net_device *dev )
 }
 }
 # 1864 "include/linux/netdevice.h"
-__inline static void netif_tx_stop_queue(struct netdev_queue *dev_queue )
+ static void netif_tx_stop_queue(struct netdev_queue *dev_queue )
 { int __ret_warn_on ;
   long tmp ;
   long tmp___0 ;
@@ -6530,7 +6530,7 @@ __inline static void netif_tx_stop_queue(struct netdev_queue *dev_queue )
 }
 }
 # 1880 "include/linux/netdevice.h"
-__inline static void netif_stop_queue(struct net_device *dev )
+ static void netif_stop_queue(struct net_device *dev )
 { struct netdev_queue *tmp ;
 
   {
@@ -6545,7 +6545,7 @@ __inline static void netif_stop_queue(struct net_device *dev )
 }
 }
 # 1895 "include/linux/netdevice.h"
-__inline static int netif_tx_queue_stopped(struct netdev_queue const *dev_queue )
+ static int netif_tx_queue_stopped(struct netdev_queue const *dev_queue )
 { int tmp ;
 
   {
@@ -6558,7 +6558,7 @@ __inline static int netif_tx_queue_stopped(struct netdev_queue const *dev_queue 
 }
 }
 # 1906 "include/linux/netdevice.h"
-__inline static int netif_queue_stopped(struct net_device const *dev )
+ static int netif_queue_stopped(struct net_device const *dev )
 { struct netdev_queue *tmp ;
   int tmp___0 ;
 
@@ -6574,7 +6574,7 @@ __inline static int netif_queue_stopped(struct net_device const *dev )
 }
 }
 # 1922 "include/linux/netdevice.h"
-__inline static int netif_running(struct net_device const *dev )
+ static int netif_running(struct net_device const *dev )
 { int tmp ;
 
   {
@@ -6591,7 +6591,7 @@ extern void dev_kfree_skb_irq(struct sk_buff * ) ;
 # 2064 "include/linux/netdevice.h"
 extern int netif_rx(struct sk_buff * ) ;
 # 2158 "include/linux/netdevice.h"
-__inline static int netif_carrier_ok(struct net_device const *dev )
+ static int netif_carrier_ok(struct net_device const *dev )
 { int tmp ;
 
   {
@@ -6624,7 +6624,7 @@ extern int mii_ethtool_gset(struct mii_if_info * , struct ethtool_cmd * ) ;
 # 174 "include/linux/mii.h"
 extern int mii_ethtool_sset(struct mii_if_info * , struct ethtool_cmd * ) ;
 # 185 "include/linux/mii.h"
-__inline static struct mii_ioctl_data *if_mii(struct ifreq *rq )
+ static struct mii_ioctl_data *if_mii(struct ifreq *rq )
 {
 
   {
@@ -6643,7 +6643,7 @@ extern int eth_validate_addr(struct net_device * ) ;
 # 51 "include/linux/etherdevice.h"
 extern struct net_device *alloc_etherdev_mqs(int , unsigned int , unsigned int ) ;
 # 62 "include/linux/etherdevice.h"
-__inline static int is_zero_ether_addr(u8 const *addr )
+ static int is_zero_ether_addr(u8 const *addr )
 {
 
   {
@@ -6652,7 +6652,7 @@ __inline static int is_zero_ether_addr(u8 const *addr )
 }
 }
 # 74 "include/linux/etherdevice.h"
-__inline static int is_multicast_ether_addr(u8 const *addr )
+ static int is_multicast_ether_addr(u8 const *addr )
 {
 
   {
@@ -6661,7 +6661,7 @@ __inline static int is_multicast_ether_addr(u8 const *addr )
 }
 }
 # 121 "include/linux/etherdevice.h"
-__inline static int is_valid_ether_addr(u8 const *addr )
+ static int is_valid_ether_addr(u8 const *addr )
 { int tmp ;
   int tmp___0 ;
   int tmp___1 ;
@@ -6694,7 +6694,7 @@ __inline static int is_valid_ether_addr(u8 const *addr )
 }
 }
 # 135 "include/linux/etherdevice.h"
-__inline static void random_ether_addr(u8 *addr )
+ static void random_ether_addr(u8 *addr )
 {
 
   {
@@ -6796,7 +6796,7 @@ static int sis900_close(struct net_device *net_dev ) ;
 # 232 "/anthill/stuff/tacas-comp/work/current--X--drivers/net/sis900.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/net/sis900.c.p"
 static int mii_ioctl(struct net_device *net_dev , struct ifreq *rq , int cmd ) ;
 # 233 "/anthill/stuff/tacas-comp/work/current--X--drivers/net/sis900.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/net/sis900.c.p"
-__inline static u16 sis900_mcast_bitnr(u8 *addr , u8 revision ) ;
+ static u16 sis900_mcast_bitnr(u8 *addr , u8 revision ) ;
 # 234 "/anthill/stuff/tacas-comp/work/current--X--drivers/net/sis900.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/net/sis900.c.p"
 static void set_rx_mode(struct net_device *net_dev ) ;
 # 235 "/anthill/stuff/tacas-comp/work/current--X--drivers/net/sis900.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/net/sis900.c.p"
@@ -10967,7 +10967,7 @@ static int sis900_set_config(struct net_device *dev , struct ifmap *map )
 }
 }
 # 2267 "/anthill/stuff/tacas-comp/work/current--X--drivers/net/sis900.ko--X--bulklinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/net/sis900.c.p"
-__inline static u16 sis900_mcast_bitnr(u8 *addr , u8 revision )
+ static u16 sis900_mcast_bitnr(u8 *addr , u8 revision )
 { u32 crc ;
   u32 tmp ;
   u32 tmp___0 ;

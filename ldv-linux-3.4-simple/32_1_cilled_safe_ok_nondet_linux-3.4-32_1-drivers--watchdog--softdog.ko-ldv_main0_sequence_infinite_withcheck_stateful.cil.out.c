@@ -496,10 +496,10 @@ struct watchdog_device {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -556,9 +556,9 @@ int init_module(void) ;
 #line 68
 void cleanup_module(void) ;
 #line 132 "include/linux/watchdog.h"
-__inline static void watchdog_set_nowayout(struct watchdog_device *wdd , bool nowayout )  __attribute__((__no_instrument_function__)) ;
+ static void watchdog_set_nowayout(struct watchdog_device *wdd , bool nowayout )  __attribute__((__no_instrument_function__)) ;
 #line 132 "include/linux/watchdog.h"
-__inline static void watchdog_set_nowayout(struct watchdog_device *wdd , bool nowayout ) 
+ static void watchdog_set_nowayout(struct watchdog_device *wdd , bool nowayout ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long *__cil_tmp5 ;

@@ -5388,9 +5388,9 @@ extern int dev_queue_xmit(struct sk_buff *skb ) ;
 #line 2106
 extern void dev_kfree_skb_any(struct sk_buff *skb ) ;
 #line 119 "include/linux/if_team.h"
-__inline static struct hlist_head *team_port_index_hash(struct team *team , int port_index )  __attribute__((__no_instrument_function__)) ;
+ static struct hlist_head *team_port_index_hash(struct team *team , int port_index )  __attribute__((__no_instrument_function__)) ;
 #line 119 "include/linux/if_team.h"
-__inline static struct hlist_head *team_port_index_hash(struct team *team , int port_index ) 
+ static struct hlist_head *team_port_index_hash(struct team *team , int port_index ) 
 { int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -5421,9 +5421,9 @@ __inline static struct hlist_head *team_port_index_hash(struct team *team , int 
 }
 }
 #line 137
-__inline static struct team_port *team_get_port_by_index_rcu(struct team *team , int port_index )  __attribute__((__no_instrument_function__)) ;
+ static struct team_port *team_get_port_by_index_rcu(struct team *team , int port_index )  __attribute__((__no_instrument_function__)) ;
 #line 137 "include/linux/if_team.h"
-__inline static struct team_port *team_get_port_by_index_rcu(struct team *team , int port_index ) 
+ static struct team_port *team_get_port_by_index_rcu(struct team *team , int port_index ) 
 { struct hlist_node *p ;
   struct team_port *port ;
   struct hlist_head *head ;

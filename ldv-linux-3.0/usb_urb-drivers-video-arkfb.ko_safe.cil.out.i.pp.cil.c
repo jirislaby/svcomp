@@ -5584,7 +5584,7 @@ extern void *memset(void *s , int c , size_t n ) ;
 #line 62
 extern char *strcpy(char *dest , char const   *src ) ;
 #line 339 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/paravirt.h"
-__inline static void slow_down_io(void) 
+ static void slow_down_io(void) 
 { 
 
   {
@@ -5603,7 +5603,7 @@ extern void mutex_lock_nested(struct mutex *lock , unsigned int subclass ) ;
 #line 169
 extern void mutex_unlock(struct mutex *lock ) ;
 #line 55 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr ) 
+ static unsigned char readb(void const volatile   *addr ) 
 { unsigned char ret ;
   unsigned char volatile   *__cil_tmp3 ;
 
@@ -5619,7 +5619,7 @@ __inline static unsigned char readb(void const volatile   *addr )
 }
 }
 #line 63 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void writeb(unsigned char val , void volatile   *addr ) 
+ static void writeb(unsigned char val , void volatile   *addr ) 
 { unsigned char volatile   *__cil_tmp3 ;
 
   {
@@ -5634,7 +5634,7 @@ __inline static void writeb(unsigned char val , void volatile   *addr )
 }
 }
 #line 64 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void writew(unsigned short val , void volatile   *addr ) 
+ static void writew(unsigned short val , void volatile   *addr ) 
 { unsigned short volatile   *__cil_tmp3 ;
 
   {
@@ -5649,7 +5649,7 @@ __inline static void writew(unsigned short val , void volatile   *addr )
 }
 }
 #line 67 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void __writeb(unsigned char val , void volatile   *addr ) 
+ static void __writeb(unsigned char val , void volatile   *addr ) 
 { unsigned char volatile   *__cil_tmp3 ;
 
   {
@@ -5664,7 +5664,7 @@ __inline static void __writeb(unsigned char val , void volatile   *addr )
 }
 }
 #line 69 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void __writel(unsigned int val , void volatile   *addr ) 
+ static void __writel(unsigned int val , void volatile   *addr ) 
 { unsigned int volatile   *__cil_tmp3 ;
 
   {
@@ -5683,7 +5683,7 @@ extern void *pci_iomap(struct pci_dev *dev , int bar , unsigned long max ) ;
 #line 70
 extern void pci_iounmap(struct pci_dev *dev , void * ) ;
 #line 204 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void memset_io(void volatile   *addr , unsigned char val , size_t count ) 
+ static void memset_io(void volatile   *addr , unsigned char val , size_t count ) 
 { void *__cil_tmp4 ;
   int __cil_tmp5 ;
 
@@ -5701,7 +5701,7 @@ __inline static void memset_io(void volatile   *addr , unsigned char val , size_
 }
 }
 #line 310 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -5716,7 +5716,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 310 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -5731,7 +5731,7 @@ __inline static unsigned char inb(int port )
 }
 }
 #line 310 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void outb_p(unsigned char value , int port ) 
+ static void outb_p(unsigned char value , int port ) 
 { 
 
   {
@@ -5746,7 +5746,7 @@ __inline static void outb_p(unsigned char value , int port )
 }
 }
 #line 310 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static unsigned char inb_p(int port ) 
+ static unsigned char inb_p(int port ) 
 { unsigned char value ;
   unsigned char tmp ;
 
@@ -5764,7 +5764,7 @@ __inline static unsigned char inb_p(int port )
 }
 }
 #line 311 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/io.h"
-__inline static void outw(unsigned short value , int port ) 
+ static void outw(unsigned short value , int port ) 
 { 
 
   {
@@ -5781,7 +5781,7 @@ __inline static void outw(unsigned short value , int port )
 #line 830 "include/linux/rcupdate.h"
 extern void kfree(void const   * ) ;
 #line 80 "include/linux/kobject.h"
-__inline static char const   *kobject_name(struct kobject  const  *kobj ) 
+ static char const   *kobject_name(struct kobject  const  *kobj ) 
 { char const   *__cil_tmp2 ;
 
   {
@@ -5804,7 +5804,7 @@ void cleanup_module(void) ;
 #line 99
 extern struct module __this_module ;
 #line 608 "include/linux/device.h"
-__inline static char const   *dev_name(struct device  const  *dev ) 
+ static char const   *dev_name(struct device  const  *dev ) 
 { char const   *tmp ;
   char const   *__cil_tmp3 ;
   struct kobject  const  *__cil_tmp4 ;
@@ -5842,7 +5842,7 @@ extern int _dev_info(struct device  const  *dev , char const   *fmt  , ...) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -5856,7 +5856,7 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -5899,7 +5899,7 @@ extern int fb_find_mode(struct fb_var_screeninfo *var , struct fb_info *info , c
 extern int pci_bus_read_config_word(struct pci_bus *bus , unsigned int devfn , int where ,
                                     u16 *val ) ;
 #line 741 "include/linux/pci.h"
-__inline static int pci_read_config_word(struct pci_dev *dev , int where , u16 *val ) 
+ static int pci_read_config_word(struct pci_dev *dev , int where , u16 *val ) 
 { int tmp___7 ;
   struct pci_bus *__cil_tmp5 ;
   unsigned int __cil_tmp6 ;
@@ -5943,7 +5943,7 @@ extern int __attribute__((__warn_unused_result__))  __pci_register_driver(struct
 #line 925
 extern void pci_unregister_driver(struct pci_driver *dev ) ;
 #line 25 "include/asm-generic/pci.h"
-__inline static void pcibios_bus_to_resource(struct pci_dev *dev , struct resource *res ,
+ static void pcibios_bus_to_resource(struct pci_dev *dev , struct resource *res ,
                                              struct pci_bus_region *region ) 
 { 
 
@@ -5957,7 +5957,7 @@ __inline static void pcibios_bus_to_resource(struct pci_dev *dev , struct resour
 }
 }
 #line 1316 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp___7 ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -5976,7 +5976,7 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1321 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
 { struct device *__cil_tmp3 ;
 
   {
@@ -5991,7 +5991,7 @@ __inline static void pci_set_drvdata(struct pci_dev *pdev , void *data )
 }
 }
 #line 1329 "include/linux/pci.h"
-__inline static char const   *pci_name(struct pci_dev  const  *pdev ) 
+ static char const   *pci_name(struct pci_dev  const  *pdev ) 
 { char const   *tmp___7 ;
   struct device  const  *__cil_tmp3 ;
 
@@ -6011,7 +6011,7 @@ extern int save_vga(struct vgastate *state ) ;
 #line 218
 extern int restore_vga(struct vgastate *state ) ;
 #line 224 "include/video/vga.h"
-__inline static unsigned char vga_io_r(unsigned short port ) 
+ static unsigned char vga_io_r(unsigned short port ) 
 { unsigned char tmp___7 ;
   int __cil_tmp3 ;
 
@@ -6027,7 +6027,7 @@ __inline static unsigned char vga_io_r(unsigned short port )
 }
 }
 #line 229 "include/video/vga.h"
-__inline static void vga_io_w(unsigned short port , unsigned char val ) 
+ static void vga_io_w(unsigned short port , unsigned char val ) 
 { int __cil_tmp3 ;
 
   {
@@ -6042,7 +6042,7 @@ __inline static void vga_io_w(unsigned short port , unsigned char val )
 }
 }
 #line 234 "include/video/vga.h"
-__inline static void vga_io_w_fast(unsigned short port , unsigned char reg , unsigned char val ) 
+ static void vga_io_w_fast(unsigned short port , unsigned char reg , unsigned char val ) 
 { int __cil_tmp4 ;
   int __cil_tmp5 ;
   int __cil_tmp6 ;
@@ -6072,7 +6072,7 @@ __inline static void vga_io_w_fast(unsigned short port , unsigned char reg , uns
 }
 }
 #line 240 "include/video/vga.h"
-__inline static unsigned char vga_mm_r(void *regbase , unsigned short port ) 
+ static unsigned char vga_mm_r(void *regbase , unsigned short port ) 
 { unsigned char tmp___7 ;
   int __cil_tmp4 ;
   void *__cil_tmp5 ;
@@ -6094,7 +6094,7 @@ __inline static unsigned char vga_mm_r(void *regbase , unsigned short port )
 }
 }
 #line 245 "include/video/vga.h"
-__inline static void vga_mm_w(void *regbase , unsigned short port , unsigned char val ) 
+ static void vga_mm_w(void *regbase , unsigned short port , unsigned char val ) 
 { int __cil_tmp4 ;
   void *__cil_tmp5 ;
   void volatile   *__cil_tmp6 ;
@@ -6115,7 +6115,7 @@ __inline static void vga_mm_w(void *regbase , unsigned short port , unsigned cha
 }
 }
 #line 250 "include/video/vga.h"
-__inline static void vga_mm_w_fast(void *regbase , unsigned short port , unsigned char reg ,
+ static void vga_mm_w_fast(void *regbase , unsigned short port , unsigned char reg ,
                                    unsigned char val ) 
 { int __cil_tmp5 ;
   int __cil_tmp6 ;
@@ -6152,7 +6152,7 @@ __inline static void vga_mm_w_fast(void *regbase , unsigned short port , unsigne
 }
 }
 #line 256 "include/video/vga.h"
-__inline static unsigned char vga_r(void *regbase , unsigned short port ) 
+ static unsigned char vga_r(void *regbase , unsigned short port ) 
 { unsigned char tmp___7 ;
   unsigned char tmp___8 ;
 
@@ -6176,7 +6176,7 @@ __inline static unsigned char vga_r(void *regbase , unsigned short port )
 }
 }
 #line 264 "include/video/vga.h"
-__inline static void vga_w(void *regbase , unsigned short port , unsigned char val ) 
+ static void vga_w(void *regbase , unsigned short port , unsigned char val ) 
 { 
 
   {
@@ -6197,7 +6197,7 @@ __inline static void vga_w(void *regbase , unsigned short port , unsigned char v
 }
 }
 #line 273 "include/video/vga.h"
-__inline static void vga_w_fast(void *regbase , unsigned short port , unsigned char reg ,
+ static void vga_w_fast(void *regbase , unsigned short port , unsigned char reg ,
                                 unsigned char val ) 
 { 
 
@@ -6219,7 +6219,7 @@ __inline static void vga_w_fast(void *regbase , unsigned short port , unsigned c
 }
 }
 #line 287 "include/video/vga.h"
-__inline static unsigned char vga_rcrt(void *regbase , unsigned char reg ) 
+ static unsigned char vga_rcrt(void *regbase , unsigned char reg ) 
 { unsigned char tmp___7 ;
 
   {
@@ -6234,7 +6234,7 @@ __inline static unsigned char vga_rcrt(void *regbase , unsigned char reg )
 }
 }
 #line 293 "include/video/vga.h"
-__inline static void vga_wcrt(void *regbase , unsigned char reg , unsigned char val ) 
+ static void vga_wcrt(void *regbase , unsigned char reg , unsigned char val ) 
 { 
 
   {
@@ -6247,7 +6247,7 @@ __inline static void vga_wcrt(void *regbase , unsigned char reg , unsigned char 
 }
 }
 #line 340 "include/video/vga.h"
-__inline static unsigned char vga_rseq(void *regbase , unsigned char reg ) 
+ static unsigned char vga_rseq(void *regbase , unsigned char reg ) 
 { unsigned char tmp___7 ;
 
   {
@@ -6262,7 +6262,7 @@ __inline static unsigned char vga_rseq(void *regbase , unsigned char reg )
 }
 }
 #line 346 "include/video/vga.h"
-__inline static void vga_wseq(void *regbase , unsigned char reg , unsigned char val ) 
+ static void vga_wseq(void *regbase , unsigned char reg , unsigned char val ) 
 { 
 
   {
@@ -6275,7 +6275,7 @@ __inline static void vga_wseq(void *regbase , unsigned char reg , unsigned char 
 }
 }
 #line 398 "include/video/vga.h"
-__inline static void vga_wgfx(void *regbase , unsigned char reg , unsigned char val ) 
+ static void vga_wgfx(void *regbase , unsigned char reg , unsigned char val ) 
 { 
 
   {
@@ -6288,7 +6288,7 @@ __inline static void vga_wgfx(void *regbase , unsigned char reg , unsigned char 
 }
 }
 #line 79 "include/linux/svga.h"
-__inline static void svga_wseq_mask(void *regbase , u8 index , u8 data , u8 mask ) 
+ static void svga_wseq_mask(void *regbase , u8 index , u8 data , u8 mask ) 
 { unsigned char tmp___7 ;
   int __cil_tmp6 ;
   int __cil_tmp7 ;
@@ -6330,7 +6330,7 @@ __inline static void svga_wseq_mask(void *regbase , u8 index , u8 data , u8 mask
 }
 }
 #line 86 "include/linux/svga.h"
-__inline static void svga_wcrt_mask(void *regbase , u8 index , u8 data , u8 mask ) 
+ static void svga_wcrt_mask(void *regbase , u8 index , u8 data , u8 mask ) 
 { unsigned char tmp___7 ;
   int __cil_tmp6 ;
   int __cil_tmp7 ;
@@ -6372,7 +6372,7 @@ __inline static void svga_wcrt_mask(void *regbase , u8 index , u8 data , u8 mask
 }
 }
 #line 91 "include/linux/svga.h"
-__inline static int svga_primary_device(struct pci_dev *dev ) 
+ static int svga_primary_device(struct pci_dev *dev ) 
 { u16 flags ;
   int __cil_tmp3 ;
 
@@ -7023,7 +7023,7 @@ static void arkfb_tilecursor(struct fb_info *info , struct fb_tilecursor *cursor
 static struct fb_tile_ops arkfb_tile_ops  =    {& arkfb_settile, & svga_tilecopy, & svga_tilefill, & svga_tileblit, & arkfb_tilecursor,
     & svga_get_tilemax};
 #line 183 "/anthill/stuff/tacas-comp/work/current--X--drivers/video/arkfb.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/video/arkfb.c.common.c"
-__inline static u32 expand_color(u32 c ) 
+ static u32 expand_color(u32 c ) 
 { unsigned int __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -7390,7 +7390,7 @@ static void arkfb_iplan_fillrect(struct fb_info *info , struct fb_fillrect  cons
 }
 }
 #line 240 "/anthill/stuff/tacas-comp/work/current--X--drivers/video/arkfb.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/video/arkfb.c.common.c"
-__inline static u32 expand_pixel(u32 c ) 
+ static u32 expand_pixel(u32 c ) 
 { unsigned int __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -7806,7 +7806,7 @@ static void arkfb_fillrect(struct fb_info *info , struct fb_fillrect  const  *re
 }
 }
 #line 348 "/anthill/stuff/tacas-comp/work/current--X--drivers/video/arkfb.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/video/arkfb.c.common.c"
-__inline static void dac_write_reg(struct dac_info *info , u8 reg , u8 val ) 
+ static void dac_write_reg(struct dac_info *info , u8 reg , u8 val ) 
 { u8 code[2] ;
   void (*__cil_tmp5)(void *data , u8 *code , int count ) ;
   void *__cil_tmp6 ;
@@ -7832,7 +7832,7 @@ __inline static void dac_write_reg(struct dac_info *info , u8 reg , u8 val )
 }
 }
 #line 354 "/anthill/stuff/tacas-comp/work/current--X--drivers/video/arkfb.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/video/arkfb.c.common.c"
-__inline static void dac_write_regs(struct dac_info *info , u8 *code , int count ) 
+ static void dac_write_regs(struct dac_info *info , u8 *code , int count ) 
 { void (*__cil_tmp4)(void *data , u8 *code , int count ) ;
   void *__cil_tmp5 ;
 
@@ -7850,7 +7850,7 @@ __inline static void dac_write_regs(struct dac_info *info , u8 *code , int count
 }
 }
 #line 359 "/anthill/stuff/tacas-comp/work/current--X--drivers/video/arkfb.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/video/arkfb.c.common.c"
-__inline static int dac_set_mode(struct dac_info *info , int mode ) 
+ static int dac_set_mode(struct dac_info *info , int mode ) 
 { int tmp___7 ;
   struct dac_ops *__cil_tmp4 ;
   int (*__cil_tmp5)(struct dac_info *info , int mode ) ;
@@ -7869,7 +7869,7 @@ __inline static int dac_set_mode(struct dac_info *info , int mode )
 }
 }
 #line 364 "/anthill/stuff/tacas-comp/work/current--X--drivers/video/arkfb.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/video/arkfb.c.common.c"
-__inline static int dac_set_freq(struct dac_info *info , int channel , u32 freq ) 
+ static int dac_set_freq(struct dac_info *info , int channel , u32 freq ) 
 { int tmp___7 ;
   struct dac_ops *__cil_tmp5 ;
   int (*__cil_tmp6)(struct dac_info *info , int channel , u32 freq ) ;
@@ -7888,7 +7888,7 @@ __inline static int dac_set_freq(struct dac_info *info , int channel , u32 freq 
 }
 }
 #line 369 "/anthill/stuff/tacas-comp/work/current--X--drivers/video/arkfb.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/video/arkfb.c.common.c"
-__inline static void dac_release(struct dac_info *info ) 
+ static void dac_release(struct dac_info *info ) 
 { struct dac_ops *__cil_tmp2 ;
   void (*__cil_tmp3)(struct dac_info *info ) ;
 

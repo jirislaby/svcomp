@@ -1552,7 +1552,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 98 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void clear_bit(int nr , unsigned long volatile   *addr ) 
+ static void clear_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -1565,7 +1565,7 @@ __inline static void clear_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 195 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -1588,7 +1588,7 @@ extern void _raw_spin_lock(raw_spinlock_t * ) ;
 #line 39
 extern void _raw_spin_unlock(raw_spinlock_t * ) ;
 #line 283 "include/linux/spinlock.h"
-__inline static void ldv_spin_lock_1(spinlock_t *lock ) 
+ static void ldv_spin_lock_1(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -1603,9 +1603,9 @@ __inline static void ldv_spin_lock_1(spinlock_t *lock )
 }
 }
 #line 283
-__inline static void spin_lock(spinlock_t *lock ) ;
+ static void spin_lock(spinlock_t *lock ) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_5(spinlock_t *lock ) 
+ static void ldv_spin_unlock_5(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -1620,7 +1620,7 @@ __inline static void ldv_spin_unlock_5(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock ) ;
+ static void spin_unlock(spinlock_t *lock ) ;
 #line 137 "include/linux/ioport.h"
 extern struct resource ioport_resource ;
 #line 181
@@ -1629,7 +1629,7 @@ extern struct resource *__request_region(struct resource * , resource_size_t  , 
 #line 192
 extern void __release_region(struct resource * , resource_size_t  , resource_size_t  ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -1640,7 +1640,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -1681,7 +1681,7 @@ extern int unregister_reboot_notifier(struct notifier_block * ) ;
 #line 40 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_to_user(void * , void const   * , unsigned int  ) ;
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
+ static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
 { unsigned long tmp ;
 
   {
@@ -1712,7 +1712,7 @@ static spinlock_t io_lock  =    {{{{{0U}}, 3735899821U, 4294967295U, (void *)0xf
 #line 103 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17363/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/smsc37b787_wdt.c.p"
 static bool nowayout  =    (bool )1;
 #line 109 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17363/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/smsc37b787_wdt.c.p"
-__inline static void open_io_config(void) 
+ static void open_io_config(void) 
 { unsigned long __ms ;
   unsigned long tmp ;
 
@@ -1761,7 +1761,7 @@ __inline static void open_io_config(void)
 }
 }
 #line 117 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17363/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/smsc37b787_wdt.c.p"
-__inline static void close_io_config(void) 
+ static void close_io_config(void) 
 { 
 
   {
@@ -1774,7 +1774,7 @@ __inline static void close_io_config(void)
 }
 }
 #line 123 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17363/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/smsc37b787_wdt.c.p"
-__inline static void select_io_device(unsigned char devno ) 
+ static void select_io_device(unsigned char devno ) 
 { int __cil_tmp2 ;
   unsigned char __cil_tmp3 ;
 
@@ -1794,7 +1794,7 @@ __inline static void select_io_device(unsigned char devno )
 }
 }
 #line 130 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17363/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/smsc37b787_wdt.c.p"
-__inline static void write_io_cr(unsigned char reg , unsigned char data ) 
+ static void write_io_cr(unsigned char reg , unsigned char data ) 
 { int __cil_tmp3 ;
   unsigned char __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -1820,7 +1820,7 @@ __inline static void write_io_cr(unsigned char reg , unsigned char data )
 }
 }
 #line 137 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17363/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/smsc37b787_wdt.c.p"
-__inline static char read_io_cr(unsigned char reg ) 
+ static char read_io_cr(unsigned char reg ) 
 { unsigned char tmp ;
   int __cil_tmp3 ;
   unsigned char __cil_tmp4 ;
@@ -1841,7 +1841,7 @@ __inline static char read_io_cr(unsigned char reg )
 }
 }
 #line 145 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17363/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/smsc37b787_wdt.c.p"
-__inline static void gpio_bit12(unsigned char reg ) 
+ static void gpio_bit12(unsigned char reg ) 
 { int __cil_tmp2 ;
   unsigned char __cil_tmp3 ;
 
@@ -1859,7 +1859,7 @@ __inline static void gpio_bit12(unsigned char reg )
 }
 }
 #line 159 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17363/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/smsc37b787_wdt.c.p"
-__inline static void gpio_bit13(unsigned char reg ) 
+ static void gpio_bit13(unsigned char reg ) 
 { int __cil_tmp2 ;
   unsigned char __cil_tmp3 ;
 
@@ -1877,7 +1877,7 @@ __inline static void gpio_bit13(unsigned char reg )
 }
 }
 #line 172 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17363/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/smsc37b787_wdt.c.p"
-__inline static void wdt_timer_units(unsigned char new_units ) 
+ static void wdt_timer_units(unsigned char new_units ) 
 { int __cil_tmp2 ;
   unsigned char __cil_tmp3 ;
 
@@ -1895,7 +1895,7 @@ __inline static void wdt_timer_units(unsigned char new_units )
 }
 }
 #line 182 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17363/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/smsc37b787_wdt.c.p"
-__inline static void wdt_timeout_value(unsigned char new_timeout ) 
+ static void wdt_timeout_value(unsigned char new_timeout ) 
 { int __cil_tmp2 ;
   unsigned char __cil_tmp3 ;
 
@@ -1913,7 +1913,7 @@ __inline static void wdt_timeout_value(unsigned char new_timeout )
 }
 }
 #line 190 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17363/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/smsc37b787_wdt.c.p"
-__inline static void wdt_timer_conf(unsigned char conf ) 
+ static void wdt_timer_conf(unsigned char conf ) 
 { int __cil_tmp2 ;
   unsigned char __cil_tmp3 ;
 
@@ -1931,7 +1931,7 @@ __inline static void wdt_timer_conf(unsigned char conf )
 }
 }
 #line 206 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17363/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/smsc37b787_wdt.c.p"
-__inline static void wdt_timer_ctrl(unsigned char reg ) 
+ static void wdt_timer_ctrl(unsigned char reg ) 
 { int __cil_tmp2 ;
   unsigned char __cil_tmp3 ;
 
@@ -3949,7 +3949,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1116 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17363/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/smsc37b787_wdt.c.p"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { 
 
   {
@@ -3964,7 +3964,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 1158 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17363/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/smsc37b787_wdt.c.p"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { 
 
   {

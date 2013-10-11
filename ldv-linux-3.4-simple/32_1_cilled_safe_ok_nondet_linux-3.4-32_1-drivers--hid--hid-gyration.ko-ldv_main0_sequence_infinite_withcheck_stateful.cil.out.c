@@ -2273,10 +2273,10 @@ struct module {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 59 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
+ static void ( __attribute__((__always_inline__)) set_bit)(unsigned int nr ,
                                                                    unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
@@ -2296,9 +2296,9 @@ __inline static void ( __attribute__((__always_inline__)) set_bit)(unsigned int 
 }
 }
 #line 97
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 97 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -2332,9 +2332,9 @@ int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 extern void input_event(struct input_dev *dev , unsigned int type , unsigned int code ,
                         int value ) ;
 #line 1530
-__inline static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
+ static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {
@@ -2353,10 +2353,10 @@ extern int __attribute__((__warn_unused_result__))  __hid_register_driver(struct
 #line 722
 extern void hid_unregister_driver(struct hid_driver * ) ;
 #line 754
-__inline static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
+ static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
                                    unsigned long **bit , int *max , __u8 type , __u16 c )  __attribute__((__no_instrument_function__)) ;
 #line 754 "include/linux/hid.h"
-__inline static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
+ static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
                                    unsigned long **bit , int *max , __u8 type , __u16 c ) 
 { struct input_dev *input ;
   unsigned long __cil_tmp8 ;
@@ -2491,11 +2491,11 @@ __inline static void hid_map_usage(struct hid_input *hidinput , struct hid_usage
 }
 }
 #line 789
-__inline static void hid_map_usage_clear(struct hid_input *hidinput , struct hid_usage *usage ,
+ static void hid_map_usage_clear(struct hid_input *hidinput , struct hid_usage *usage ,
                                          unsigned long **bit , int *max , __u8 type ,
                                          __u16 c )  __attribute__((__no_instrument_function__)) ;
 #line 789 "include/linux/hid.h"
-__inline static void hid_map_usage_clear(struct hid_input *hidinput , struct hid_usage *usage ,
+ static void hid_map_usage_clear(struct hid_input *hidinput , struct hid_usage *usage ,
                                          unsigned long **bit , int *max , __u8 type ,
                                          __u16 c ) 
 { int __cil_tmp7 ;

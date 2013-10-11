@@ -1248,7 +1248,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5491/dscv_tempdir/dscv/ri/43_1a/drivers/staging/iio/iio_dummy_evgen.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -1265,7 +1265,7 @@ extern void handle_nested_irq(unsigned int  ) ;
 extern void __irq_set_handler(unsigned int  , void (*)(unsigned int  , struct irq_desc * ) ,
                               int  , char const   * ) ;
 #line 449 "include/linux/irq.h"
-__inline static void irq_set_handler(unsigned int irq , void (*handle)(unsigned int  ,
+ static void irq_set_handler(unsigned int irq , void (*handle)(unsigned int  ,
                                                                        struct irq_desc * ) ) 
 { char const   *__cil_tmp3 ;
 
@@ -1285,7 +1285,7 @@ extern void irq_modify_status(unsigned int  , unsigned long  , unsigned long  ) 
 #line 528
 extern int irq_set_chip(unsigned int  , struct irq_chip * ) ;
 #line 541 "include/linux/irq.h"
-__inline static struct irq_chip *irq_data_get_irq_chip(struct irq_data *d ) 
+ static struct irq_chip *irq_data_get_irq_chip(struct irq_data *d ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2373,7 +2373,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 585 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/5491/dscv_tempdir/dscv/ri/43_1a/drivers/staging/iio/iio_dummy_evgen.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

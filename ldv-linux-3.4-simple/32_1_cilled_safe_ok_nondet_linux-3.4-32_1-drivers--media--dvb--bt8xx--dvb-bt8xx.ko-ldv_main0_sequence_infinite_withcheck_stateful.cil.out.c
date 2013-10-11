@@ -7657,10 +7657,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -7674,9 +7674,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -7731,9 +7731,9 @@ extern int bttv_sub_register(struct bttv_sub_driver *drv , char *wanted ) ;
 #line 343
 extern int bttv_sub_unregister(struct bttv_sub_driver *drv ) ;
 #line 66 "drivers/media/dvb/frontends/mt352.h"
-__inline static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len )  __attribute__((__no_instrument_function__)) ;
+ static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len )  __attribute__((__no_instrument_function__)) ;
 #line 66 "drivers/media/dvb/frontends/mt352.h"
-__inline static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len ) 
+ static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len ) 
 { int r ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -7791,9 +7791,9 @@ extern void bt878_start(struct bt878 *bt , u32 controlreg , u32 op_sync_orin , u
 #line 143
 extern void bt878_stop(struct bt878 *bt ) ;
 #line 36 "drivers/media/dvb/frontends/cx24110.h"
-__inline static int cx24110_pll_write(struct dvb_frontend *fe , u32 val )  __attribute__((__no_instrument_function__)) ;
+ static int cx24110_pll_write(struct dvb_frontend *fe , u32 val )  __attribute__((__no_instrument_function__)) ;
 #line 36 "drivers/media/dvb/frontends/cx24110.h"
-__inline static int cx24110_pll_write(struct dvb_frontend *fe , u32 val ) 
+ static int cx24110_pll_write(struct dvb_frontend *fe , u32 val ) 
 { u8 buf[3] ;
   int tmp___7 ;
   unsigned long __cil_tmp5 ;

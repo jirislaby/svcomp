@@ -3932,9 +3932,9 @@ int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 69 "include/linux/i2c.h"
 extern int i2c_transfer(struct i2c_adapter *adap , struct i2c_msg *msgs , int num ) ;
 #line 482
-__inline static int i2c_adapter_id(struct i2c_adapter *adap )  __attribute__((__no_instrument_function__)) ;
+ static int i2c_adapter_id(struct i2c_adapter *adap )  __attribute__((__no_instrument_function__)) ;
 #line 482 "include/linux/i2c.h"
-__inline static int i2c_adapter_id(struct i2c_adapter *adap ) 
+ static int i2c_adapter_id(struct i2c_adapter *adap ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -3954,10 +3954,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -3971,9 +3971,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -3989,10 +3989,10 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 #line 36 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/common/tuners/tuner-i2c.h"
-__inline static int tuner_i2c_xfer_send(struct tuner_i2c_props *props , char *buf ,
+ static int tuner_i2c_xfer_send(struct tuner_i2c_props *props , char *buf ,
                                         int len )  __attribute__((__no_instrument_function__)) ;
 #line 36 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/common/tuners/tuner-i2c.h"
-__inline static int tuner_i2c_xfer_send(struct tuner_i2c_props *props , char *buf ,
+ static int tuner_i2c_xfer_send(struct tuner_i2c_props *props , char *buf ,
                                         int len ) 
 { struct i2c_msg msg ;
   int ret ;
@@ -4051,10 +4051,10 @@ __inline static int tuner_i2c_xfer_send(struct tuner_i2c_props *props , char *bu
 }
 }
 #line 45
-__inline static int tuner_i2c_xfer_recv(struct tuner_i2c_props *props , char *buf ,
+ static int tuner_i2c_xfer_recv(struct tuner_i2c_props *props , char *buf ,
                                         int len )  __attribute__((__no_instrument_function__)) ;
 #line 45 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/common/tuners/tuner-i2c.h"
-__inline static int tuner_i2c_xfer_recv(struct tuner_i2c_props *props , char *buf ,
+ static int tuner_i2c_xfer_recv(struct tuner_i2c_props *props , char *buf ,
                                         int len ) 
 { struct i2c_msg msg ;
   int ret ;

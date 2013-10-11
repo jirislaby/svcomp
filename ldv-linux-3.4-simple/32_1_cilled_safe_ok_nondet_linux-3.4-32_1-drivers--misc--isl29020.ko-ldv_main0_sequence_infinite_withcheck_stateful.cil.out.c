@@ -2516,11 +2516,11 @@ extern int __attribute__((__warn_unused_result__))  _kstrtoul(char const   *s , 
 extern int __attribute__((__warn_unused_result__))  kstrtoull(char const   *s , unsigned int base ,
                                                               unsigned long long *res ) ;
 #line 220
-__inline static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
+ static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
                                                                       unsigned int base ,
                                                                       unsigned long *res )  __attribute__((__no_instrument_function__)) ;
 #line 220 "include/linux/kernel.h"
-__inline static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
+ static int __attribute__((__warn_unused_result__))  kstrtoul(char const   *s ,
                                                                       unsigned int base ,
                                                                       unsigned long *res ) 
 { int tmp ;
@@ -2607,9 +2607,9 @@ extern int __pm_runtime_resume(struct device *dev , int rpmflags ) ;
 #line 36
 extern void pm_runtime_enable(struct device *dev ) ;
 #line 198
-__inline static int pm_runtime_get_sync(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static int pm_runtime_get_sync(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 198 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_get_sync(struct device *dev ) 
+ static int pm_runtime_get_sync(struct device *dev ) 
 { int tmp___7 ;
 
   {
@@ -2622,9 +2622,9 @@ __inline static int pm_runtime_get_sync(struct device *dev )
 }
 }
 #line 214
-__inline static int pm_runtime_put_sync(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static int pm_runtime_put_sync(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 214 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_put_sync(struct device *dev ) 
+ static int pm_runtime_put_sync(struct device *dev ) 
 { int tmp___7 ;
 
   {

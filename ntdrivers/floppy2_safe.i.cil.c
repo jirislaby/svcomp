@@ -2290,7 +2290,7 @@ extern int ( __attribute__((__cdecl__)) swprintf)(wchar_t * , wchar_t const   * 
 #line 834
 #pragma warning(disable:4035)
 #line 835 "C:/NTDDK/inc/ntdef.h"
-__inline ULONGLONG ( __attribute__((__stdcall__)) Int64ShllMod32___0)(ULONGLONG Value ,
+ ULONGLONG ( __attribute__((__stdcall__)) Int64ShllMod32___0)(ULONGLONG Value ,
                                                                       ULONG ShiftCount ) 
 { 
 
@@ -2300,7 +2300,7 @@ __inline ULONGLONG ( __attribute__((__stdcall__)) Int64ShllMod32___0)(ULONGLONG 
 }
 }
 #line 845 "C:/NTDDK/inc/ntdef.h"
-__inline LONGLONG ( __attribute__((__stdcall__)) Int64ShraMod32___0)(LONGLONG Value ,
+ LONGLONG ( __attribute__((__stdcall__)) Int64ShraMod32___0)(LONGLONG Value ,
                                                                      ULONG ShiftCount ) 
 { 
 
@@ -2310,7 +2310,7 @@ __inline LONGLONG ( __attribute__((__stdcall__)) Int64ShraMod32___0)(LONGLONG Va
 }
 }
 #line 855 "C:/NTDDK/inc/ntdef.h"
-__inline ULONGLONG ( __attribute__((__stdcall__)) Int64ShrlMod32___0)(ULONGLONG Value ,
+ ULONGLONG ( __attribute__((__stdcall__)) Int64ShrlMod32___0)(ULONGLONG Value ,
                                                                       ULONG ShiftCount ) 
 { 
 
@@ -2322,7 +2322,7 @@ __inline ULONGLONG ( __attribute__((__stdcall__)) Int64ShrlMod32___0)(ULONGLONG 
 #line 873
 #pragma warning(pop)
 #line 1094 "C:/NTDDK/inc/ntdef.h"
-__inline void ListEntry32To64(PLIST_ENTRY32 l32 , PLIST_ENTRY64 l64 ) 
+ void ListEntry32To64(PLIST_ENTRY32 l32 , PLIST_ENTRY64 l64 ) 
 { ULONG __cil_tmp3 ;
   long __cil_tmp4 ;
   long long __cil_tmp5 ;
@@ -2376,7 +2376,7 @@ __inline void ListEntry32To64(PLIST_ENTRY32 l32 , PLIST_ENTRY64 l64 )
 }
 }
 #line 1105 "C:/NTDDK/inc/ntdef.h"
-__inline void ListEntry64To32(PLIST_ENTRY64 l64 , PLIST_ENTRY32 l32 ) 
+ void ListEntry64To32(PLIST_ENTRY64 l64 , PLIST_ENTRY32 l32 ) 
 { ULONGLONG __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
   unsigned int __cil_tmp5 ;
@@ -2459,7 +2459,7 @@ extern PKTHREAD ( __attribute__((__stdcall__)) KeGetCurrentThread)() ;
                                                                                         void const   *Source2 ,
                                                                                         SIZE_T Length ) ;
 #line 1718 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerAdd)(LARGE_INTEGER Addend1 ,
+ LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerAdd)(LARGE_INTEGER Addend1 ,
                                                                           LARGE_INTEGER Addend2 ) 
 { LARGE_INTEGER Sum ;
 
@@ -2471,7 +2471,7 @@ __inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerAdd)(LARGE_
 }
 }
 #line 1736 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlEnlargedIntegerMultiply)(LONG Multiplicand ,
+ LARGE_INTEGER ( __attribute__((__stdcall__)) RtlEnlargedIntegerMultiply)(LONG Multiplicand ,
                                                                                   LONG Multiplier ) 
 { LARGE_INTEGER Product ;
   unsigned long long __cil_tmp4 ;
@@ -2495,7 +2495,7 @@ __inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlEnlargedIntegerMultiply
 }
 }
 #line 1754 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlEnlargedUnsignedMultiply)(ULONG Multiplicand ,
+ LARGE_INTEGER ( __attribute__((__stdcall__)) RtlEnlargedUnsignedMultiply)(ULONG Multiplicand ,
                                                                                    ULONG Multiplier ) 
 { LARGE_INTEGER Product ;
   unsigned long long __cil_tmp4 ;
@@ -2516,7 +2516,7 @@ __inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlEnlargedUnsignedMultipl
 }
 }
 #line 1772 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline ULONG ( __attribute__((__stdcall__)) RtlEnlargedUnsignedDivide)(ULARGE_INTEGER Dividend ,
+ ULONG ( __attribute__((__stdcall__)) RtlEnlargedUnsignedDivide)(ULARGE_INTEGER Dividend ,
                                                                          ULONG Divisor ,
                                                                          PULONG Remainder ) 
 { ULONG Quotient ;
@@ -2565,7 +2565,7 @@ __inline ULONG ( __attribute__((__stdcall__)) RtlEnlargedUnsignedDivide)(ULARGE_
 }
 }
 #line 1796 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerNegate)(LARGE_INTEGER Subtrahend ) 
+ LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerNegate)(LARGE_INTEGER Subtrahend ) 
 { LARGE_INTEGER Difference ;
 
   {
@@ -2576,7 +2576,7 @@ __inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerNegate)(LAR
 }
 }
 #line 1813 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerSubtract)(LARGE_INTEGER Minuend ,
+ LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerSubtract)(LARGE_INTEGER Minuend ,
                                                                                LARGE_INTEGER Subtrahend ) 
 { LARGE_INTEGER Difference ;
 
@@ -2592,7 +2592,7 @@ __inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerSubtract)(L
 #line 1955
 #pragma warning(disable:4035)
 #line 1960 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlConvertLongToLargeInteger)(LONG SignedInteger ) 
+ LARGE_INTEGER ( __attribute__((__stdcall__)) RtlConvertLongToLargeInteger)(LONG SignedInteger ) 
 { LARGE_INTEGER stub ;
 
   {
@@ -2601,7 +2601,7 @@ __inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlConvertLongToLargeInteg
 }
 }
 #line 1973 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlConvertUlongToLargeInteger)(ULONG UnsignedInteger ) 
+ LARGE_INTEGER ( __attribute__((__stdcall__)) RtlConvertUlongToLargeInteger)(ULONG UnsignedInteger ) 
 { LARGE_INTEGER stub ;
 
   {
@@ -2610,7 +2610,7 @@ __inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlConvertUlongToLargeInte
 }
 }
 #line 1986 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerShiftLeft)(LARGE_INTEGER LargeInteger ,
+ LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerShiftLeft)(LARGE_INTEGER LargeInteger ,
                                                                                 CCHAR ShiftCount ) 
 { LARGE_INTEGER stub ;
 
@@ -2620,7 +2620,7 @@ __inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerShiftLeft)(
 }
 }
 #line 2015 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerShiftRight)(LARGE_INTEGER LargeInteger ,
+ LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerShiftRight)(LARGE_INTEGER LargeInteger ,
                                                                                  CCHAR ShiftCount ) 
 { LARGE_INTEGER stub ;
 
@@ -2630,7 +2630,7 @@ __inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerShiftRight)
 }
 }
 #line 2026 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerArithmeticShift)(LARGE_INTEGER LargeInteger ,
+ LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerArithmeticShift)(LARGE_INTEGER LargeInteger ,
                                                                                       CCHAR ShiftCount ) 
 { LARGE_INTEGER stub ;
 
@@ -2642,7 +2642,7 @@ __inline LARGE_INTEGER ( __attribute__((__stdcall__)) RtlLargeIntegerArithmeticS
 #line 2038
 #pragma warning(pop)
 #line 2796 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline LUID ( __attribute__((__stdcall__)) RtlConvertLongToLuid)(LONG Long ) 
+ LUID ( __attribute__((__stdcall__)) RtlConvertLongToLuid)(LONG Long ) 
 { LUID TempLuid ;
   LARGE_INTEGER TempLi ;
 
@@ -2660,7 +2660,7 @@ __inline LUID ( __attribute__((__stdcall__)) RtlConvertLongToLuid)(LONG Long )
 }
 }
 #line 2811 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline LUID ( __attribute__((__stdcall__)) RtlConvertUlongToLuid)(ULONG Ulong ) 
+ LUID ( __attribute__((__stdcall__)) RtlConvertUlongToLuid)(ULONG Ulong ) 
 { LUID TempLuid ;
 
   {
@@ -2678,7 +2678,7 @@ extern  __attribute__((__dllimport__)) LONG ( __attribute__((__fastcall__)) Inte
 #line 5253
 #pragma warning(disable:4035)
 #line 5271 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline ULONG KeGetCurrentProcessorNumber(void) 
+ ULONG KeGetCurrentProcessorNumber(void) 
 { 
 
   {
@@ -2764,7 +2764,7 @@ extern  __attribute__((__dllimport__)) PSINGLE_LIST_ENTRY ( __attribute__((__fas
                                                                                                                        PSINGLE_LIST_ENTRY ListEntry ,
                                                                                                                        PKSPIN_LOCK Lock ) ;
 #line 10643 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline PVOID ExAllocateFromNPagedLookasideList(PNPAGED_LOOKASIDE_LIST Lookaside ) 
+ PVOID ExAllocateFromNPagedLookasideList(PNPAGED_LOOKASIDE_LIST Lookaside ) 
 { PVOID Entry ;
   PSINGLE_LIST_ENTRY tmp ;
   unsigned int __cil_tmp4 ;
@@ -2930,7 +2930,7 @@ __inline PVOID ExAllocateFromNPagedLookasideList(PNPAGED_LOOKASIDE_LIST Lookasid
 }
 }
 #line 10684 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline void ExFreeToNPagedLookasideList(PNPAGED_LOOKASIDE_LIST Lookaside , PVOID Entry ) 
+ void ExFreeToNPagedLookasideList(PNPAGED_LOOKASIDE_LIST Lookaside , PVOID Entry ) 
 { unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
   unsigned int __cil_tmp5 ;
@@ -3172,7 +3172,7 @@ extern  __attribute__((__dllimport__)) void MmProbeAndLockPages(PMDL MemoryDescr
 extern  __attribute__((__dllimport__)) void IoGetStackLimits(PULONG_PTR LowLimit ,
                                                              PULONG_PTR HighLimit ) ;
 #line 15246 "C:/NTDDK/inc/ddk/ntddk.h"
-__inline ULONG_PTR IoGetRemainingStackSize(void) 
+ ULONG_PTR IoGetRemainingStackSize(void) 
 { ULONG_PTR Top ;
   ULONG_PTR Bottom ;
   ULONG_PTR *__cil_tmp3 ;
@@ -29497,7 +29497,7 @@ void FloppyProcessQueuedRequests(PDISKETTE_EXTENSION DisketteExtension )
 #line 834
 #pragma warning(disable:4035)
 #line 835 "C:/NTDDK/inc/ntdef.h"
-__inline ULONGLONG ( __attribute__((__stdcall__)) Int64ShllMod32___1)(ULONGLONG Value ,
+ ULONGLONG ( __attribute__((__stdcall__)) Int64ShllMod32___1)(ULONGLONG Value ,
                                                                       ULONG ShiftCount ) 
 { 
 
@@ -29507,7 +29507,7 @@ __inline ULONGLONG ( __attribute__((__stdcall__)) Int64ShllMod32___1)(ULONGLONG 
 }
 }
 #line 845 "C:/NTDDK/inc/ntdef.h"
-__inline LONGLONG ( __attribute__((__stdcall__)) Int64ShraMod32___1)(LONGLONG Value ,
+ LONGLONG ( __attribute__((__stdcall__)) Int64ShraMod32___1)(LONGLONG Value ,
                                                                      ULONG ShiftCount ) 
 { 
 
@@ -29517,7 +29517,7 @@ __inline LONGLONG ( __attribute__((__stdcall__)) Int64ShraMod32___1)(LONGLONG Va
 }
 }
 #line 855 "C:/NTDDK/inc/ntdef.h"
-__inline ULONGLONG ( __attribute__((__stdcall__)) Int64ShrlMod32___1)(ULONGLONG Value ,
+ ULONGLONG ( __attribute__((__stdcall__)) Int64ShrlMod32___1)(ULONGLONG Value ,
                                                                       ULONG ShiftCount ) 
 { 
 

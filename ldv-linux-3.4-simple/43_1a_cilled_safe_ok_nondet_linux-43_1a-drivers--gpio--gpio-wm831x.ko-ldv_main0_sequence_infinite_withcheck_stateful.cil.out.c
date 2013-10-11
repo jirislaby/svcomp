@@ -1211,7 +1211,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2767/dscv_tempdir/dscv/ri/43_1a/drivers/gpio/gpio-wm831x.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -1237,7 +1237,7 @@ extern int platform_driver_register(struct platform_driver * ) ;
 #line 175
 extern void platform_driver_unregister(struct platform_driver * ) ;
 #line 183 "include/linux/platform_device.h"
-__inline static void *platform_get_drvdata(struct platform_device  const  *pdev ) 
+ static void *platform_get_drvdata(struct platform_device  const  *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -1259,7 +1259,7 @@ __inline static void *platform_get_drvdata(struct platform_device  const  *pdev 
 }
 }
 #line 188 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
+ static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -1286,7 +1286,7 @@ extern int wm831x_reg_read(struct wm831x * , unsigned short  ) ;
 #line 407
 extern int wm831x_set_bits(struct wm831x * , unsigned short  , unsigned short  , unsigned short  ) ;
 #line 48 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2767/dscv_tempdir/dscv/ri/43_1a/drivers/gpio/gpio-wm831x.c.p"
-__inline static struct wm831x_gpio *to_wm831x_gpio(struct gpio_chip *chip ) 
+ static struct wm831x_gpio *to_wm831x_gpio(struct gpio_chip *chip ) 
 { struct gpio_chip  const  *__mptr ;
   struct wm831x_gpio *__cil_tmp3 ;
 
@@ -2749,7 +2749,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 966 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/2767/dscv_tempdir/dscv/ri/43_1a/drivers/gpio/gpio-wm831x.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

@@ -4592,7 +4592,7 @@ struct scatterlist;
 #line 1
 long __builtin_expect(long  , long  ) ;
 #line 97 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -4611,7 +4611,7 @@ __inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , un
 }
 }
 #line 315 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long const volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -4631,7 +4631,7 @@ extern unsigned long find_next_bit(unsigned long const   *addr , unsigned long s
 #line 35
 extern unsigned long find_first_bit(unsigned long const   *addr , unsigned long size ) ;
 #line 24 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/arch_hweight.h"
-__inline static unsigned int __arch_hweight32(unsigned int w ) 
+ static unsigned int __arch_hweight32(unsigned int w ) 
 { unsigned int res ;
 
   {
@@ -4673,7 +4673,7 @@ __inline static unsigned int __arch_hweight32(unsigned int w )
 }
 }
 #line 35 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/arch_hweight.h"
-__inline static unsigned int __arch_hweight16(unsigned int w ) 
+ static unsigned int __arch_hweight16(unsigned int w ) 
 { unsigned int tmp ;
   unsigned int __cil_tmp3 ;
 
@@ -4689,11 +4689,11 @@ __inline static unsigned int __arch_hweight16(unsigned int w )
 }
 }
 #line 51 "include/linux/log2.h"
-__inline static bool is_power_of_2(unsigned long n )  __attribute__((__const__)) ;
+ static bool is_power_of_2(unsigned long n )  __attribute__((__const__)) ;
 #line 51
-__inline static bool is_power_of_2(unsigned long n )  __attribute__((__const__)) ;
+ static bool is_power_of_2(unsigned long n )  __attribute__((__const__)) ;
 #line 51 "include/linux/log2.h"
-__inline static bool is_power_of_2(unsigned long n ) 
+ static bool is_power_of_2(unsigned long n ) 
 { int tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4728,7 +4728,7 @@ extern int printk(char const   *fmt  , ...) ;
 #line 69 "include/asm-generic/bug.h"
 extern void warn_slowpath_null(char const   *file , int line ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { 
 
   {
@@ -4751,7 +4751,7 @@ extern char *strncpy(char * , char const   * , __kernel_size_t  ) ;
 #line 84
 extern __kernel_size_t strnlen(char const   * , __kernel_size_t  ) ;
 #line 22 "include/linux/err.h"
-__inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
+ static void * __attribute__((__warn_unused_result__)) ERR_PTR(long error ) 
 { 
 
   {
@@ -4760,7 +4760,7 @@ __inline static void * __attribute__((__warn_unused_result__)) ERR_PTR(long erro
 }
 }
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -4769,7 +4769,7 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4814,7 +4814,7 @@ extern unsigned long msecs_to_jiffies(unsigned int m ) ;
 #line 91 "include/linux/timer.h"
 extern void init_timer_key(struct timer_list *timer , char const   *name , struct lock_class_key *key ) ;
 #line 166 "include/linux/timer.h"
-__inline static void setup_timer_key(struct timer_list *timer , char const   *name ,
+ static void setup_timer_key(struct timer_list *timer , char const   *name ,
                                      struct lock_class_key *key , void (*function)(unsigned long  ) ,
                                      unsigned long data ) 
 { 
@@ -4853,7 +4853,7 @@ extern bool cancel_work_sync(struct work_struct *work ) ;
 #line 76 "include/linux/completion.h"
 static struct lock_class_key __key___2  ;
 #line 73 "include/linux/completion.h"
-__inline static void init_completion(struct completion *x ) 
+ static void init_completion(struct completion *x ) 
 { wait_queue_head_t *__cil_tmp2 ;
 
   {
@@ -4901,7 +4901,7 @@ extern void get_random_bytes(void *buf , int nbytes ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -4915,7 +4915,7 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -4936,7 +4936,7 @@ extern void __nand_calculate_ecc(u_char const   *dat , unsigned int eccsize , u_
 extern int __nand_correct_data(u_char *dat , u_char *read_ecc , u_char *calc_ecc ,
                                unsigned int eccsize ) ;
 #line 42 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/mtd/nand/sm_common.h"
-__inline static int sm_sector_valid(struct sm_oob *oob ) 
+ static int sm_sector_valid(struct sm_oob *oob ) 
 { unsigned int tmp___7 ;
   uint8_t __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -4955,7 +4955,7 @@ __inline static int sm_sector_valid(struct sm_oob *oob )
 }
 }
 #line 47 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/mtd/nand/sm_common.h"
-__inline static int sm_block_valid(struct sm_oob *oob ) 
+ static int sm_block_valid(struct sm_oob *oob ) 
 { unsigned int tmp___7 ;
   uint8_t __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -4974,11 +4974,11 @@ __inline static int sm_block_valid(struct sm_oob *oob )
 }
 }
 #line 54
-__inline static int sm_block_erased(struct sm_oob *oob ) ;
+ static int sm_block_erased(struct sm_oob *oob ) ;
 #line 54 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/mtd/nand/sm_common.h"
 static uint32_t const   erased_pattern[4]  = {      (uint32_t const   )4294967295U,      (uint32_t const   )4294967295U,      (uint32_t const   )4294967295U,      (uint32_t const   )4294967295U};
 #line 52 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/mtd/nand/sm_common.h"
-__inline static int sm_block_erased(struct sm_oob *oob ) 
+ static int sm_block_erased(struct sm_oob *oob ) 
 { int tmp___7 ;
   void const   *__cil_tmp3 ;
   uint32_t const   *__cil_tmp4 ;
@@ -5015,7 +5015,7 @@ extern int add_mtd_blktrans_dev(struct mtd_blktrans_dev *dev ) ;
 #line 89
 extern int del_mtd_blktrans_dev(struct mtd_blktrans_dev *dev ) ;
 #line 174 "include/linux/kfifo.h"
-__inline static unsigned int __attribute__((__warn_unused_result__))  __kfifo_uint_must_check_helper(unsigned int val ) 
+ static unsigned int __attribute__((__warn_unused_result__))  __kfifo_uint_must_check_helper(unsigned int val ) 
 { 
 
   {
@@ -5024,7 +5024,7 @@ __inline static unsigned int __attribute__((__warn_unused_result__))  __kfifo_ui
 }
 }
 #line 180 "include/linux/kfifo.h"
-__inline static int __attribute__((__warn_unused_result__))  __kfifo_int_must_check_helper(int val ) 
+ static int __attribute__((__warn_unused_result__))  __kfifo_int_must_check_helper(int val ) 
 { 
 
   {

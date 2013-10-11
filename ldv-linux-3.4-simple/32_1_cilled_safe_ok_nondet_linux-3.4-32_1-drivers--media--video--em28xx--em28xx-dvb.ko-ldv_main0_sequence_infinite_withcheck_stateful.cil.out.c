@@ -8706,10 +8706,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -8723,9 +8723,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -8745,9 +8745,9 @@ extern void __const_udelay(unsigned long xloops ) ;
 #line 46 "include/linux/delay.h"
 extern void msleep(unsigned int msecs ) ;
 #line 32 "include/linux/semaphore.h"
-__inline static void sema_init(struct semaphore *sem , int val )  __attribute__((__no_instrument_function__)) ;
+ static void sema_init(struct semaphore *sem , int val )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/semaphore.h"
-__inline static void sema_init(struct semaphore *sem , int val ) 
+ static void sema_init(struct semaphore *sem , int val ) 
 { struct semaphore __constr_expr_0 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -8883,9 +8883,9 @@ extern void em28xx_unregister_extension(struct em28xx_ops *dev ) ;
 #line 719
 extern int em28xx_tuner_callback(void *ptr , int component , int command , int arg ) ;
 #line 66 "drivers/media/dvb/frontends/mt352.h"
-__inline static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len )  __attribute__((__no_instrument_function__)) ;
+ static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len )  __attribute__((__no_instrument_function__)) ;
 #line 66 "drivers/media/dvb/frontends/mt352.h"
-__inline static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len ) 
+ static int mt352_write(struct dvb_frontend *fe , u8 const   *buf , int len ) 
 { int r ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -9046,9 +9046,9 @@ __aligned__(1)))  =
         (char const   )'n',      (char const   )'u',      (char const   )'m',      (char const   )'b', 
         (char const   )'e',      (char const   )'r',      (char const   )'s',      (char const   )'\000'};
 #line 87
-__inline static void print_err_status(struct em28xx *dev , int packet , int status )  __attribute__((__no_instrument_function__)) ;
+ static void print_err_status(struct em28xx *dev , int packet , int status )  __attribute__((__no_instrument_function__)) ;
 #line 87 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/14505/dscv_tempdir/dscv/ri/32_1/drivers/media/video/em28xx/em28xx-dvb.c.common.c"
-__inline static void print_err_status(struct em28xx *dev , int packet , int status ) 
+ static void print_err_status(struct em28xx *dev , int packet , int status ) 
 { char *errmsg ;
   unsigned int *__cil_tmp5 ;
   unsigned int __cil_tmp6 ;
@@ -9231,9 +9231,9 @@ __inline static void print_err_status(struct em28xx *dev , int packet , int stat
 }
 }
 #line 126
-__inline static int em28xx_dvb_isoc_copy(struct em28xx *dev , struct urb *urb )  __attribute__((__no_instrument_function__)) ;
+ static int em28xx_dvb_isoc_copy(struct em28xx *dev , struct urb *urb )  __attribute__((__no_instrument_function__)) ;
 #line 126 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/14505/dscv_tempdir/dscv/ri/32_1/drivers/media/video/em28xx/em28xx-dvb.c.common.c"
-__inline static int em28xx_dvb_isoc_copy(struct em28xx *dev , struct urb *urb ) 
+ static int em28xx_dvb_isoc_copy(struct em28xx *dev , struct urb *urb ) 
 { int i ;
   int status ;
   unsigned long __cil_tmp5 ;
@@ -20395,9 +20395,9 @@ static int em28xx_dvb_init(struct em28xx *dev )
 }
 }
 #line 1058
-__inline static void prevent_sleep(struct dvb_frontend_ops *ops )  __attribute__((__no_instrument_function__)) ;
+ static void prevent_sleep(struct dvb_frontend_ops *ops )  __attribute__((__no_instrument_function__)) ;
 #line 1058 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/14505/dscv_tempdir/dscv/ri/32_1/drivers/media/video/em28xx/em28xx-dvb.c.common.c"
-__inline static void prevent_sleep(struct dvb_frontend_ops *ops ) 
+ static void prevent_sleep(struct dvb_frontend_ops *ops ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   void *__cil_tmp4 ;

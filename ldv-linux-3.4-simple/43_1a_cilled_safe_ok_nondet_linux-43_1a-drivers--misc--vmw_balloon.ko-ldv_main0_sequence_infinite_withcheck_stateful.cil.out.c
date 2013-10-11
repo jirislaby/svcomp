@@ -3078,7 +3078,7 @@ extern int __dynamic_pr_debug(struct _ddebug * , char const   *  , ...) ;
 #line 147 "include/linux/kernel.h"
 extern void __might_sleep(char const   * , int  , int  ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -3098,7 +3098,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head ) 
+ static void list_add(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -3115,7 +3115,7 @@ __inline static void list_add(struct list_head *new , struct list_head *head )
 #line 112
 extern void list_del(struct list_head * ) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3124,7 +3124,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3153,7 +3153,7 @@ extern void init_timer_key(struct timer_list * , char const   * , struct lock_cl
 #line 295
 extern unsigned long round_jiffies_relative(unsigned long  ) ;
 #line 97 "include/linux/workqueue.h"
-__inline static struct delayed_work *to_delayed_work(struct work_struct *work ) 
+ static struct delayed_work *to_delayed_work(struct work_struct *work ) 
 { struct work_struct  const  *__mptr ;
 
   {
@@ -3175,7 +3175,7 @@ extern bool cancel_delayed_work_sync(struct delayed_work * ) ;
 #line 324 "include/linux/gfp.h"
 extern struct page *alloc_pages_current(gfp_t  , unsigned int  ) ;
 #line 327 "include/linux/gfp.h"
-__inline static struct page *ldv_alloc_pages_11(gfp_t gfp_mask , unsigned int order ) 
+ static struct page *ldv_alloc_pages_11(gfp_t gfp_mask , unsigned int order ) 
 { struct page *tmp ;
 
   {
@@ -3188,7 +3188,7 @@ __inline static struct page *ldv_alloc_pages_11(gfp_t gfp_mask , unsigned int or
 }
 }
 #line 327
-__inline static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) ;
+ static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) ;
 #line 360
 extern void __free_pages(struct page * , unsigned int  ) ;
 #line 26 "include/linux/export.h"
@@ -6609,7 +6609,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1403 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12650/dscv_tempdir/dscv/ri/43_1a/drivers/misc/vmw_balloon.c.p"
-__inline static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) 
+ static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) 
 { struct page *tmp ;
 
   {

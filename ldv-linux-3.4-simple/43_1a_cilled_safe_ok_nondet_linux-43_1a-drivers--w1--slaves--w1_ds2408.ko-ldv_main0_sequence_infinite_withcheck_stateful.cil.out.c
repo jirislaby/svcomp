@@ -1051,7 +1051,7 @@ extern int w1_reset_select_slave(struct w1_slave * ) ;
 #line 219
 extern int w1_reset_resume_command(struct w1_master * ) ;
 #line 222 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/w1/slaves/../w1.h"
-__inline static struct w1_slave *dev_to_w1_slave(struct device *dev ) 
+ static struct w1_slave *dev_to_w1_slave(struct device *dev ) 
 { struct device  const  *__mptr ;
   struct w1_slave *__cil_tmp3 ;
 
@@ -1067,7 +1067,7 @@ __inline static struct w1_slave *dev_to_w1_slave(struct device *dev )
 }
 }
 #line 227 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/w1/slaves/../w1.h"
-__inline static struct w1_slave *kobj_to_w1_slave(struct kobject *kobj ) 
+ static struct w1_slave *kobj_to_w1_slave(struct kobject *kobj ) 
 { struct kobject  const  *__mptr ;
   struct w1_slave *tmp ;
   struct device *__cil_tmp4 ;

@@ -1757,7 +1757,7 @@ extern void d_instantiate(struct dentry * , struct inode * ) ;
 #line 239
 extern void d_rehash(struct dentry * ) ;
 #line 250 "include/linux/dcache.h"
-__inline static void d_add(struct dentry *entry , struct inode *inode ) 
+ static void d_add(struct dentry *entry , struct inode *inode ) 
 { 
 
   {

@@ -4939,9 +4939,9 @@ extern void *memset(void *s , int c , size_t n ) ;
 #line 355 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt_types.h"
 extern struct pv_cpu_ops pv_cpu_ops ;
 #line 349 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt.h"
-__inline static void slow_down_io(void)  __attribute__((__no_instrument_function__)) ;
+ static void slow_down_io(void)  __attribute__((__no_instrument_function__)) ;
 #line 349 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt.h"
-__inline static void slow_down_io(void) 
+ static void slow_down_io(void) 
 { unsigned long __cil_tmp1 ;
   void (*__cil_tmp2)(void) ;
 
@@ -4963,9 +4963,9 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock )  __attribute_
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -4974,9 +4974,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -5012,9 +5012,9 @@ void mutex_unlock(struct mutex *lock ) ;
 #line 170
 int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -5029,9 +5029,9 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308
-__inline static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -5046,9 +5046,9 @@ __inline static unsigned char inb(int port )
 }
 }
 #line 308
-__inline static void outb_p(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outb_p(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb_p(unsigned char value , int port ) 
+ static void outb_p(unsigned char value , int port ) 
 { 
 
   {
@@ -5063,9 +5063,9 @@ __inline static void outb_p(unsigned char value , int port )
 }
 }
 #line 308
-__inline static unsigned char inb_p(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb_p(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb_p(int port ) 
+ static unsigned char inb_p(int port ) 
 { unsigned char value ;
   unsigned char tmp ;
 
@@ -5083,9 +5083,9 @@ __inline static unsigned char inb_p(int port )
 }
 }
 #line 310
-__inline static void outl(unsigned int value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outl(unsigned int value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 310 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outl(unsigned int value , int port ) 
+ static void outl(unsigned int value , int port ) 
 { 
 
   {
@@ -5100,9 +5100,9 @@ __inline static void outl(unsigned int value , int port )
 }
 }
 #line 310
-__inline static unsigned int inl(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int inl(int port )  __attribute__((__no_instrument_function__)) ;
 #line 310 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned int inl(int port ) 
+ static unsigned int inl(int port ) 
 { unsigned int value ;
 
   {
@@ -5117,9 +5117,9 @@ __inline static unsigned int inl(int port )
 }
 }
 #line 310
-__inline static void outl_p(unsigned int value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outl_p(unsigned int value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 310 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outl_p(unsigned int value , int port ) 
+ static void outl_p(unsigned int value , int port ) 
 { 
 
   {
@@ -5134,10 +5134,10 @@ __inline static void outl_p(unsigned int value , int port )
 }
 }
 #line 186 "include/linux/ide.h"
-__inline static void ide_std_init_ports(struct ide_hw *hw , unsigned long io_addr ,
+ static void ide_std_init_ports(struct ide_hw *hw , unsigned long io_addr ,
                                         unsigned long ctl_addr )  __attribute__((__no_instrument_function__)) ;
 #line 186 "include/linux/ide.h"
-__inline static void ide_std_init_ports(struct ide_hw *hw , unsigned long io_addr ,
+ static void ide_std_init_ports(struct ide_hw *hw , unsigned long io_addr ,
                                         unsigned long ctl_addr ) 
 { unsigned int i ;
   unsigned long tmp___7 ;
@@ -5212,9 +5212,9 @@ extern struct ide_timing *ide_timing_find_mode(u8  ) ;
 #line 1492
 extern u16 ide_pio_cycle_time(ide_drive_t * , u8  ) ;
 #line 1531
-__inline static ide_drive_t *ide_get_pair_dev(ide_drive_t *drive )  __attribute__((__no_instrument_function__)) ;
+ static ide_drive_t *ide_get_pair_dev(ide_drive_t *drive )  __attribute__((__no_instrument_function__)) ;
 #line 1531 "include/linux/ide.h"
-__inline static ide_drive_t *ide_get_pair_dev(ide_drive_t *drive ) 
+ static ide_drive_t *ide_get_pair_dev(ide_drive_t *drive ) 
 { ide_drive_t *peer ;
   ide_drive_t *tmp___7 ;
   unsigned long __cil_tmp4 ;
@@ -6276,9 +6276,9 @@ static void display_clocks(unsigned int index )
 }
 }
 #line 450
-__inline static u8 pack_nibbles(u8 upper , u8 lower )  __attribute__((__no_instrument_function__)) ;
+ static u8 pack_nibbles(u8 upper , u8 lower )  __attribute__((__no_instrument_function__)) ;
 #line 450 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/12312/dscv_tempdir/dscv/ri/32_1/drivers/ide/cmd640.c.common.c"
-__inline static u8 pack_nibbles(u8 upper , u8 lower ) 
+ static u8 pack_nibbles(u8 upper , u8 lower ) 
 { int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;

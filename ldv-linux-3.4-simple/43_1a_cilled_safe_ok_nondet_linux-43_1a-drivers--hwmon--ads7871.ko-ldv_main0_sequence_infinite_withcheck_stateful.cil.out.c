@@ -2452,7 +2452,7 @@ extern int __dynamic_dev_dbg(struct _ddebug * , struct device  const  * , char c
 #line 320 "include/linux/kernel.h"
 extern int sprintf(char * , char const   *  , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2472,7 +2472,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -2495,7 +2495,7 @@ __inline static void list_add_tail(struct list_head *new , struct list_head *hea
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern void *memset(void * , int  , size_t  ) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -2504,7 +2504,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -2536,7 +2536,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11029/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/ads7871.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2548,7 +2548,7 @@ struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 793 "include/linux/device.h"
 extern int dev_set_drvdata(struct device * , void * ) ;
 #line 105 "include/linux/spi/spi.h"
-__inline static struct spi_device *to_spi_device(struct device *dev ) 
+ static struct spi_device *to_spi_device(struct device *dev ) 
 { struct device  const  *__mptr ;
   struct spi_device *tmp ;
   struct device *__cil_tmp4 ;
@@ -2579,7 +2579,7 @@ __inline static struct spi_device *to_spi_device(struct device *dev )
 }
 }
 #line 135 "include/linux/spi/spi.h"
-__inline static void spi_set_drvdata(struct spi_device *spi , void *data ) 
+ static void spi_set_drvdata(struct spi_device *spi , void *data ) 
 { struct device *__cil_tmp3 ;
 
   {
@@ -2594,7 +2594,7 @@ __inline static void spi_set_drvdata(struct spi_device *spi , void *data )
 }
 }
 #line 573 "include/linux/spi/spi.h"
-__inline static void spi_message_init(struct spi_message *m ) 
+ static void spi_message_init(struct spi_message *m ) 
 { void *__cil_tmp2 ;
   struct list_head *__cil_tmp3 ;
 
@@ -2614,7 +2614,7 @@ __inline static void spi_message_init(struct spi_message *m )
 }
 }
 #line 580 "include/linux/spi/spi.h"
-__inline static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
+ static void spi_message_add_tail(struct spi_transfer *t , struct spi_message *m ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -2642,7 +2642,7 @@ extern int spi_setup(struct spi_device * ) ;
 #line 630
 extern int spi_sync(struct spi_device * , struct spi_message * ) ;
 #line 646 "include/linux/spi/spi.h"
-__inline static int spi_write(struct spi_device *spi , void const   *buf , size_t len ) 
+ static int spi_write(struct spi_device *spi , void const   *buf , size_t len ) 
 { struct spi_transfer t ;
   struct spi_message m ;
   int tmp ;
@@ -2722,7 +2722,7 @@ __inline static int spi_write(struct spi_device *spi , void const   *buf , size_
 extern int spi_write_then_read(struct spi_device * , void const   * , unsigned int  ,
                                void * , unsigned int  ) ;
 #line 698 "include/linux/spi/spi.h"
-__inline static ssize_t spi_w8r8(struct spi_device *spi , u8 cmd ) 
+ static ssize_t spi_w8r8(struct spi_device *spi , u8 cmd ) 
 { ssize_t status ;
   u8 result ;
   int tmp ;
@@ -2760,7 +2760,7 @@ __inline static ssize_t spi_w8r8(struct spi_device *spi , u8 cmd )
 }
 }
 #line 722 "include/linux/spi/spi.h"
-__inline static ssize_t spi_w8r16(struct spi_device *spi , u8 cmd ) 
+ static ssize_t spi_w8r16(struct spi_device *spi , u8 cmd ) 
 { ssize_t status ;
   u16 result ;
   int tmp ;
@@ -3645,7 +3645,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 676 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11029/dscv_tempdir/dscv/ri/43_1a/drivers/hwmon/ads7871.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

@@ -2474,9 +2474,9 @@ struct __anonstruct_228 {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 82 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void __set_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 82 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile   *addr ) 
+ static void __set_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -2530,10 +2530,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -2547,9 +2547,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -2568,10 +2568,10 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 extern void input_event(struct input_dev *dev , unsigned int type , unsigned int code ,
                         int value ) ;
 #line 1505
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value )  __attribute__((__no_instrument_function__)) ;
 #line 1505 "include/linux/input.h"
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -2590,10 +2590,10 @@ __inline static void input_report_key(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1510
-__inline static void input_report_rel(struct input_dev *dev , unsigned int code ,
+ static void input_report_rel(struct input_dev *dev , unsigned int code ,
                                       int value )  __attribute__((__no_instrument_function__)) ;
 #line 1510 "include/linux/input.h"
-__inline static void input_report_rel(struct input_dev *dev , unsigned int code ,
+ static void input_report_rel(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { 
 
@@ -2607,10 +2607,10 @@ __inline static void input_report_rel(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1515
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value )  __attribute__((__no_instrument_function__)) ;
 #line 1515 "include/linux/input.h"
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { 
 
@@ -2624,9 +2624,9 @@ __inline static void input_report_abs(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1530
-__inline static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
+ static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {
@@ -2644,9 +2644,9 @@ extern void input_set_capability(struct input_dev *dev , unsigned int type , uns
 extern void input_set_abs_params(struct input_dev *dev , unsigned int axis , int min ,
                                  int max , int fuzz , int flat ) ;
 #line 1578
-__inline static int input_abs_get_max(struct input_dev *dev , unsigned int axis )  __attribute__((__no_instrument_function__)) ;
+ static int input_abs_get_max(struct input_dev *dev , unsigned int axis )  __attribute__((__no_instrument_function__)) ;
 #line 1578 "include/linux/input.h"
-__inline static int input_abs_get_max(struct input_dev *dev , unsigned int axis ) 
+ static int input_abs_get_max(struct input_dev *dev , unsigned int axis ) 
 { __s32 tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -2695,9 +2695,9 @@ extern void power_supply_unregister(struct power_supply *psy ) ;
 #line 223
 extern int power_supply_powers(struct power_supply *psy , struct device *dev ) ;
 #line 543 "include/linux/hid.h"
-__inline static void *hid_get_drvdata(struct hid_device *hdev )  __attribute__((__no_instrument_function__)) ;
+ static void *hid_get_drvdata(struct hid_device *hdev )  __attribute__((__no_instrument_function__)) ;
 #line 543 "include/linux/hid.h"
-__inline static void *hid_get_drvdata(struct hid_device *hdev ) 
+ static void *hid_get_drvdata(struct hid_device *hdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2722,9 +2722,9 @@ __inline static void *hid_get_drvdata(struct hid_device *hdev )
 }
 }
 #line 548
-__inline static void hid_set_drvdata(struct hid_device *hdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void hid_set_drvdata(struct hid_device *hdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 548 "include/linux/hid.h"
-__inline static void hid_set_drvdata(struct hid_device *hdev , void *data ) 
+ static void hid_set_drvdata(struct hid_device *hdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2755,9 +2755,9 @@ extern int hid_connect(struct hid_device *hid , unsigned int connect_mask ) ;
 #line 740
 extern void hid_disconnect(struct hid_device *hid ) ;
 #line 806
-__inline static int __attribute__((__warn_unused_result__))  hid_parse(struct hid_device *hdev )  __attribute__((__no_instrument_function__)) ;
+ static int __attribute__((__warn_unused_result__))  hid_parse(struct hid_device *hdev )  __attribute__((__no_instrument_function__)) ;
 #line 806 "include/linux/hid.h"
-__inline static int __attribute__((__warn_unused_result__))  hid_parse(struct hid_device *hdev ) 
+ static int __attribute__((__warn_unused_result__))  hid_parse(struct hid_device *hdev ) 
 { int ret ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2828,10 +2828,10 @@ __inline static int __attribute__((__warn_unused_result__))  hid_parse(struct hi
 }
 }
 #line 830
-__inline static int __attribute__((__warn_unused_result__))  hid_hw_start(struct hid_device *hdev ,
+ static int __attribute__((__warn_unused_result__))  hid_hw_start(struct hid_device *hdev ,
                                                                           unsigned int connect_mask )  __attribute__((__no_instrument_function__)) ;
 #line 830 "include/linux/hid.h"
-__inline static int __attribute__((__warn_unused_result__))  hid_hw_start(struct hid_device *hdev ,
+ static int __attribute__((__warn_unused_result__))  hid_hw_start(struct hid_device *hdev ,
                                                                           unsigned int connect_mask ) 
 { int ret ;
   int tmp ;
@@ -2903,9 +2903,9 @@ __inline static int __attribute__((__warn_unused_result__))  hid_hw_start(struct
 }
 }
 #line 850
-__inline static void hid_hw_stop(struct hid_device *hdev )  __attribute__((__no_instrument_function__)) ;
+ static void hid_hw_stop(struct hid_device *hdev )  __attribute__((__no_instrument_function__)) ;
 #line 850 "include/linux/hid.h"
-__inline static void hid_hw_stop(struct hid_device *hdev ) 
+ static void hid_hw_stop(struct hid_device *hdev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct hid_ll_driver *__cil_tmp4 ;

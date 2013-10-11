@@ -4779,7 +4779,7 @@ extern int snprintf(char * , size_t  , char const   *  , ...) ;
 #line 43 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 350 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
+ static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -4794,7 +4794,7 @@ __inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned lo
 }
 }
 #line 350
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 26 "include/linux/export.h"
 extern struct module __this_module ;
 #line 161 "include/linux/slab.h"
@@ -4804,7 +4804,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1361/dscv_tempdir/dscv/ri/43_1a/drivers/video/matrox/i2c-matroxfb.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -4820,7 +4820,7 @@ extern struct i2c_client *i2c_new_probed_device(struct i2c_adapter * , struct i2
                                                 unsigned short const   * , int (*)(struct i2c_adapter * ,
                                                                                    unsigned short  ) ) ;
 #line 400 "include/linux/i2c.h"
-__inline static void i2c_set_adapdata(struct i2c_adapter *dev , void *data ) 
+ static void i2c_set_adapdata(struct i2c_adapter *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -4929,7 +4929,7 @@ static void matroxfb_set_gpio(struct matrox_fb_info *minfo , int mask , int val 
 }
 }
 #line 78 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1361/dscv_tempdir/dscv/ri/43_1a/drivers/video/matrox/i2c-matroxfb.c.p"
-__inline static void matroxfb_i2c_set(struct matrox_fb_info *minfo , int mask , int state ) 
+ static void matroxfb_i2c_set(struct matrox_fb_info *minfo , int mask , int state ) 
 { int __cil_tmp4 ;
 
   {
@@ -5324,7 +5324,7 @@ static void i2c_bit_bus_del(struct i2c_bit_adapter *b )
 }
 }
 #line 146 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1361/dscv_tempdir/dscv/ri/43_1a/drivers/video/matrox/i2c-matroxfb.c.p"
-__inline static void i2c_maven_done(struct matroxfb_dh_maven_info *minfo2 ) 
+ static void i2c_maven_done(struct matroxfb_dh_maven_info *minfo2 ) 
 { struct i2c_bit_adapter *__cil_tmp2 ;
 
   {
@@ -5339,7 +5339,7 @@ __inline static void i2c_maven_done(struct matroxfb_dh_maven_info *minfo2 )
 }
 }
 #line 150 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1361/dscv_tempdir/dscv/ri/43_1a/drivers/video/matrox/i2c-matroxfb.c.p"
-__inline static void i2c_ddc1_done(struct matroxfb_dh_maven_info *minfo2 ) 
+ static void i2c_ddc1_done(struct matroxfb_dh_maven_info *minfo2 ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct i2c_bit_adapter *__cil_tmp4 ;
@@ -5360,7 +5360,7 @@ __inline static void i2c_ddc1_done(struct matroxfb_dh_maven_info *minfo2 )
 }
 }
 #line 154 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1361/dscv_tempdir/dscv/ri/43_1a/drivers/video/matrox/i2c-matroxfb.c.p"
-__inline static void i2c_ddc2_done(struct matroxfb_dh_maven_info *minfo2 ) 
+ static void i2c_ddc2_done(struct matroxfb_dh_maven_info *minfo2 ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct i2c_bit_adapter *__cil_tmp4 ;
@@ -6237,7 +6237,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 756 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1361/dscv_tempdir/dscv/ri/43_1a/drivers/video/matrox/i2c-matroxfb.c.p"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {
@@ -6267,7 +6267,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 858 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1361/dscv_tempdir/dscv/ri/43_1a/drivers/video/matrox/i2c-matroxfb.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

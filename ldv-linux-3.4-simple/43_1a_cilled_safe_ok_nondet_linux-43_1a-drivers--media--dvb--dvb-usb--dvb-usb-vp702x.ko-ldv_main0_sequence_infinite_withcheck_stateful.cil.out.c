@@ -6627,7 +6627,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -6640,7 +6640,7 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 11 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8568/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/dvb-usb/vp702x.c.p"
 void ldv_check_alloc_flags(gfp_t flags ) ;
 #line 12
@@ -6652,7 +6652,7 @@ extern void *dev_get_drvdata(struct device  const  * ) ;
 #line 46 "include/linux/delay.h"
 extern void msleep(unsigned int  ) ;
 #line 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) 
+ static void *usb_get_intfdata(struct usb_interface *intf ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -6680,7 +6680,7 @@ __inline static void *usb_get_intfdata(struct usb_interface *intf )
 extern int usb_control_msg(struct usb_device * , unsigned int  , __u8  , __u8  , __u16  ,
                            __u16  , void * , __u16  , int  ) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -6723,7 +6723,7 @@ struct sk_buff *ldv___netdev_alloc_skb_25(struct net_device *ldv_func_arg1 , uns
 struct sk_buff *ldv___netdev_alloc_skb_26(struct net_device *ldv_func_arg1 , unsigned int ldv_func_arg2 ,
                                           gfp_t ldv_func_arg3 ) ;
 #line 78 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/dvb-usb/dvb-usb.h"
-__inline static u8 rc5_custom(struct rc_map_table *key ) 
+ static u8 rc5_custom(struct rc_map_table *key ) 
 { u32 __cil_tmp2 ;
   u32 __cil_tmp3 ;
 
@@ -9524,7 +9524,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 853 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8568/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/dvb-usb/vp702x.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {
@@ -9634,7 +9634,7 @@ int ldv_pskb_expand_head_27(struct sk_buff *ldv_func_arg1 , int ldv_func_arg2 , 
 #line 82 "include/linux/jiffies.h"
 extern unsigned long volatile   jiffies ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8568/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/dvb-usb/vp702x-fe.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 57 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8568/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/dvb-usb/vp702x-fe.c.p"
@@ -11994,7 +11994,7 @@ void ldv_main1_sequence_infinite_withcheck_stateful(void)
 }
 }
 #line 927 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8568/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/dvb-usb/vp702x-fe.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

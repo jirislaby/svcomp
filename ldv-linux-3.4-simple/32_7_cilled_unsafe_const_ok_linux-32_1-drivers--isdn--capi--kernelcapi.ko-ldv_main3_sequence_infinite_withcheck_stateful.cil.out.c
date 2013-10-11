@@ -3294,9 +3294,9 @@ enum kobj_ns_type;
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long  volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static int variable_test_bit(int nr , unsigned long  volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 315 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long  volatile   *addr ) 
+ static int variable_test_bit(int nr , unsigned long  volatile   *addr ) 
 { int oldbit ;
   unsigned long *__cil_tmp4 ;
 
@@ -3315,9 +3315,9 @@ extern int ( /* format attribute */  printk)(char    *fmt  , ...) ;
 #line 147 "include/linux/kernel.h"
 extern void __might_sleep(char    *file , int line , int preempt_offset ) ;
 #line 194
-__inline static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
+ static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
 #line 194 "include/linux/kernel.h"
-__inline static void might_fault(void) 
+ static void might_fault(void) 
 { 
 
   {
@@ -3354,9 +3354,9 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task  __attribute__((__section__(".data..percpu"))) ;
 #line 12
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void)  __attribute__((__no_instrument_function__)) ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
+ static struct task_struct *( __attribute__((__always_inline__)) get_current)(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -3461,9 +3461,9 @@ extern void ( /* format attribute */  warn_slowpath_fmt)(char    *file , int    
 #line 220 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
 extern unsigned long kernel_stack  __attribute__((__section__(".data..percpu"))) ;
 #line 222
-__inline static struct thread_info *current_thread_info(void)  __attribute__((__no_instrument_function__)) ;
+ static struct thread_info *current_thread_info(void)  __attribute__((__no_instrument_function__)) ;
 #line 222 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/thread_info.h"
-__inline static struct thread_info *current_thread_info(void) 
+ static struct thread_info *current_thread_info(void) 
 { struct thread_info *ti ;
   unsigned long pfo_ret__ ;
   unsigned long __cil_tmp3 ;
@@ -3573,9 +3573,9 @@ __inline static struct thread_info *current_thread_info(void)
 }
 }
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_ti_thread_flag(struct thread_info *ti , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
+ static int test_ti_thread_flag(struct thread_info *ti , int flag ) 
 { int tmp___0 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;
@@ -3603,9 +3603,9 @@ __inline static int test_ti_thread_flag(struct thread_info *ti , int flag )
 }
 }
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -3625,9 +3625,9 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 74
-__inline static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add_tail(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -3652,9 +3652,9 @@ extern void list_del(struct list_head *entry ) ;
 #line 93 "include/linux/spinlock.h"
 extern void __raw_spin_lock_init(raw_spinlock_t *lock , char    *name , struct lock_class_key *key ) ;
 #line 272
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -3690,9 +3690,9 @@ int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 144 "include/linux/rcupdate.h"
 extern void synchronize_sched(void) ;
 #line 162
-__inline static void __rcu_read_lock(void)  __attribute__((__no_instrument_function__)) ;
+ static void __rcu_read_lock(void)  __attribute__((__no_instrument_function__)) ;
 #line 162 "include/linux/rcupdate.h"
-__inline static void __rcu_read_lock(void) 
+ static void __rcu_read_lock(void) 
 { struct thread_info *tmp ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -3742,9 +3742,9 @@ __inline static void __rcu_read_lock(void)
 }
 }
 #line 167
-__inline static void __rcu_read_unlock(void)  __attribute__((__no_instrument_function__)) ;
+ static void __rcu_read_unlock(void)  __attribute__((__no_instrument_function__)) ;
 #line 167 "include/linux/rcupdate.h"
-__inline static void __rcu_read_unlock(void) 
+ static void __rcu_read_unlock(void) 
 { struct thread_info *tmp ;
   unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
@@ -3814,9 +3814,9 @@ __inline static void __rcu_read_unlock(void)
 }
 }
 #line 172
-__inline static void synchronize_rcu(void)  __attribute__((__no_instrument_function__)) ;
+ static void synchronize_rcu(void)  __attribute__((__no_instrument_function__)) ;
 #line 172 "include/linux/rcupdate.h"
-__inline static void synchronize_rcu(void) 
+ static void synchronize_rcu(void) 
 { 
 
   {
@@ -3829,9 +3829,9 @@ __inline static void synchronize_rcu(void)
 }
 }
 #line 723
-__inline static void rcu_read_lock(void)  __attribute__((__no_instrument_function__)) ;
+ static void rcu_read_lock(void)  __attribute__((__no_instrument_function__)) ;
 #line 723 "include/linux/rcupdate.h"
-__inline static void rcu_read_lock(void) 
+ static void rcu_read_lock(void) 
 { 
 
   {
@@ -3862,9 +3862,9 @@ __inline static void rcu_read_lock(void)
 }
 }
 #line 747
-__inline static void rcu_read_unlock(void)  __attribute__((__no_instrument_function__)) ;
+ static void rcu_read_unlock(void)  __attribute__((__no_instrument_function__)) ;
 #line 747 "include/linux/rcupdate.h"
-__inline static void rcu_read_unlock(void) 
+ static void rcu_read_unlock(void) 
 { 
 
   {
@@ -3922,10 +3922,10 @@ extern void kfree(void    * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -3943,11 +3943,11 @@ extern unsigned long __attribute__((__warn_unused_result__))  _copy_from_user(vo
                                                                               void    *from ,
                                                                               unsigned int len ) ;
 #line 46
-__inline static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
+ static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
                                                                                       void    *from ,
                                                                                       unsigned long n )  __attribute__((__no_instrument_function__)) ;
 #line 46 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
+ static unsigned long __attribute__((__warn_unused_result__))  copy_from_user(void *to ,
                                                                                       void    *from ,
                                                                                       unsigned long n ) 
 { int sz ;
@@ -4051,9 +4051,9 @@ __inline static unsigned long __attribute__((__warn_unused_result__))  copy_from
 #line 560 "include/linux/skbuff.h"
 extern void kfree_skb(struct sk_buff *skb ) ;
 #line 950
-__inline static void __skb_queue_head_init(struct sk_buff_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void __skb_queue_head_init(struct sk_buff_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 950 "include/linux/skbuff.h"
-__inline static void __skb_queue_head_init(struct sk_buff_head *list ) 
+ static void __skb_queue_head_init(struct sk_buff_head *list ) 
 { struct sk_buff *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4084,9 +4084,9 @@ __inline static void __skb_queue_head_init(struct sk_buff_head *list )
 #line 966 "include/linux/skbuff.h"
 static struct lock_class_key __key___2  ;
 #line 964
-__inline static void skb_queue_head_init(struct sk_buff_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void skb_queue_head_init(struct sk_buff_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 964 "include/linux/skbuff.h"
-__inline static void skb_queue_head_init(struct sk_buff_head *list ) 
+ static void skb_queue_head_init(struct sk_buff_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   spinlock_t *__cil_tmp4 ;
@@ -4220,9 +4220,9 @@ extern void remove_proc_entry(char    *name , struct proc_dir_entry *parent ) ;
 #line 362 "include/linux/sched.h"
 extern void schedule(void) ;
 #line 2563
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )  __attribute__((__no_instrument_function__)) ;
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag )  __attribute__((__no_instrument_function__)) ;
 #line 2563 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag ) 
 { int tmp___7 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -4247,9 +4247,9 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 #line 2589
-__inline static int signal_pending(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
+ static int signal_pending(struct task_struct *p )  __attribute__((__no_instrument_function__)) ;
 #line 2589 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p ) 
+ static int signal_pending(struct task_struct *p ) 
 { int tmp___7 ;
   int tmp___8 ;
   long tmp___9 ;
@@ -4376,9 +4376,9 @@ static struct blocking_notifier_head ctr_notifier_list  =    {{0L, {{{(__ticketp
                                                                            & ctr_notifier_list.rwsem.wait_list}},
     (struct notifier_block *)((void *)0)};
 #line 79
-__inline static struct capi_ctr *capi_ctr_get(struct capi_ctr *ctr )  __attribute__((__no_instrument_function__)) ;
+ static struct capi_ctr *capi_ctr_get(struct capi_ctr *ctr )  __attribute__((__no_instrument_function__)) ;
 #line 79 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/3398/dscv_tempdir/dscv/ri/32_1/drivers/isdn/capi/kcapi.c.common.c"
-__inline static struct capi_ctr *capi_ctr_get(struct capi_ctr *ctr ) 
+ static struct capi_ctr *capi_ctr_get(struct capi_ctr *ctr ) 
 { bool tmp___7 ;
   struct module *__cil_tmp3 ;
   void *__cil_tmp4 ;
@@ -4406,9 +4406,9 @@ __inline static struct capi_ctr *capi_ctr_get(struct capi_ctr *ctr )
 }
 }
 #line 87
-__inline static void capi_ctr_put(struct capi_ctr *ctr )  __attribute__((__no_instrument_function__)) ;
+ static void capi_ctr_put(struct capi_ctr *ctr )  __attribute__((__no_instrument_function__)) ;
 #line 87 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/3398/dscv_tempdir/dscv/ri/32_1/drivers/isdn/capi/kcapi.c.common.c"
-__inline static void capi_ctr_put(struct capi_ctr *ctr ) 
+ static void capi_ctr_put(struct capi_ctr *ctr ) 
 { struct module *__cil_tmp2 ;
 
   {
@@ -4423,9 +4423,9 @@ __inline static void capi_ctr_put(struct capi_ctr *ctr )
 }
 }
 #line 95
-__inline static struct capi_ctr *get_capi_ctr_by_nr(u16 contr )  __attribute__((__no_instrument_function__)) ;
+ static struct capi_ctr *get_capi_ctr_by_nr(u16 contr )  __attribute__((__no_instrument_function__)) ;
 #line 95 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/3398/dscv_tempdir/dscv/ri/32_1/drivers/isdn/capi/kcapi.c.common.c"
-__inline static struct capi_ctr *get_capi_ctr_by_nr(u16 contr ) 
+ static struct capi_ctr *get_capi_ctr_by_nr(u16 contr ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   void *__cil_tmp4 ;
@@ -4467,9 +4467,9 @@ __inline static struct capi_ctr *get_capi_ctr_by_nr(u16 contr )
 }
 }
 #line 103
-__inline static struct capi20_appl *__get_capi_appl_by_nr(u16 applid )  __attribute__((__no_instrument_function__)) ;
+ static struct capi20_appl *__get_capi_appl_by_nr(u16 applid )  __attribute__((__no_instrument_function__)) ;
 #line 103 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/3398/dscv_tempdir/dscv/ri/32_1/drivers/isdn/capi/kcapi.c.common.c"
-__inline static struct capi20_appl *__get_capi_appl_by_nr(u16 applid ) 
+ static struct capi20_appl *__get_capi_appl_by_nr(u16 applid ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   void *__cil_tmp4 ;
@@ -4520,9 +4520,9 @@ __inline static struct capi20_appl *__get_capi_appl_by_nr(u16 applid )
 }
 }
 #line 113
-__inline static struct capi20_appl *get_capi_appl_by_nr(u16 applid )  __attribute__((__no_instrument_function__)) ;
+ static struct capi20_appl *get_capi_appl_by_nr(u16 applid )  __attribute__((__no_instrument_function__)) ;
 #line 113 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/3398/dscv_tempdir/dscv/ri/32_1/drivers/isdn/capi/kcapi.c.common.c"
-__inline static struct capi20_appl *get_capi_appl_by_nr(u16 applid ) 
+ static struct capi20_appl *get_capi_appl_by_nr(u16 applid ) 
 { struct capi20_appl *_________p1 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -4592,9 +4592,9 @@ __inline static struct capi20_appl *get_capi_appl_by_nr(u16 applid )
 }
 }
 #line 123
-__inline static int capi_cmd_valid(u8 cmd )  __attribute__((__no_instrument_function__)) ;
+ static int capi_cmd_valid(u8 cmd )  __attribute__((__no_instrument_function__)) ;
 #line 123 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/3398/dscv_tempdir/dscv/ri/32_1/drivers/isdn/capi/kcapi.c.common.c"
-__inline static int capi_cmd_valid(u8 cmd ) 
+ static int capi_cmd_valid(u8 cmd ) 
 { 
 
   {
@@ -4700,9 +4700,9 @@ __inline static int capi_cmd_valid(u8 cmd )
 }
 }
 #line 146
-__inline static int capi_subcmd_valid(u8 subcmd )  __attribute__((__no_instrument_function__)) ;
+ static int capi_subcmd_valid(u8 subcmd )  __attribute__((__no_instrument_function__)) ;
 #line 146 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/3398/dscv_tempdir/dscv/ri/32_1/drivers/isdn/capi/kcapi.c.common.c"
-__inline static int capi_subcmd_valid(u8 subcmd ) 
+ static int capi_subcmd_valid(u8 subcmd ) 
 { 
 
   {
@@ -10854,9 +10854,9 @@ long s__builtin_expect(long val , long res )
 #line 1
 
 #line 195 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int test_and_set_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static int test_and_set_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 195 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -10877,9 +10877,9 @@ __inline static int test_and_set_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 246
-__inline static int test_and_clear_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static int test_and_clear_bit(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 246 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_clear_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -14842,7 +14842,7 @@ static _cdebbuf *bufprint(_cdebbuf *cdb , char *fmt  , ...)
   }
   {
 #line 754
-  __builtin_va_start(f, fmt);
+  va_start(f, fmt);
 #line 755
   __cil_tmp14 = (unsigned long )cdb;
 #line 755
@@ -14872,7 +14872,7 @@ static _cdebbuf *bufprint(_cdebbuf *cdb , char *fmt  , ...)
 #line 756
   n = (size_t )tmp;
 #line 757
-  __builtin_va_end(f);
+  va_end(f);
   }
 #line 758
   if (n >= r) {
@@ -14985,7 +14985,7 @@ static _cdebbuf *bufprint(_cdebbuf *cdb , char *fmt  , ...)
 #line 775
     *((size_t *)__cil_tmp51) = ns;
 #line 776
-    __builtin_va_start(f, fmt);
+    va_start(f, fmt);
 #line 777
     __cil_tmp52 = (unsigned long )cdb;
 #line 777
@@ -15015,7 +15015,7 @@ static _cdebbuf *bufprint(_cdebbuf *cdb , char *fmt  , ...)
 #line 778
     n = (size_t )tmp___1;
 #line 779
-    __builtin_va_end(f);
+    va_end(f);
     }
   } else {
 
@@ -17201,9 +17201,9 @@ void capilib_data_b3_conf(struct list_head *head , u16 applid , u32 ncci , u16 m
 #line 111
 u16 capilib_data_b3_req(struct list_head *head , u16 applid , u32 ncci , u16 msgid ) ;
 #line 31 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/3398/dscv_tempdir/dscv/ri/32_1/drivers/isdn/capi/capilib.c"
-__inline static void mq_init(struct capilib_ncci *np )  __attribute__((__no_instrument_function__)) ;
+ static void mq_init(struct capilib_ncci *np )  __attribute__((__no_instrument_function__)) ;
 #line 31 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/3398/dscv_tempdir/dscv/ri/32_1/drivers/isdn/capi/capilib.c"
-__inline static void mq_init(struct capilib_ncci *np ) 
+ static void mq_init(struct capilib_ncci *np ) 
 { u_int i ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -17353,9 +17353,9 @@ __inline static void mq_init(struct capilib_ncci *np )
 }
 }
 #line 45
-__inline static int mq_enqueue(struct capilib_ncci *np , u16 msgid )  __attribute__((__no_instrument_function__)) ;
+ static int mq_enqueue(struct capilib_ncci *np , u16 msgid )  __attribute__((__no_instrument_function__)) ;
 #line 45 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/3398/dscv_tempdir/dscv/ri/32_1/drivers/isdn/capi/capilib.c"
-__inline static int mq_enqueue(struct capilib_ncci *np , u16 msgid ) 
+ static int mq_enqueue(struct capilib_ncci *np , u16 msgid ) 
 { struct capilib_msgidqueue *mq ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -17484,9 +17484,9 @@ __inline static int mq_enqueue(struct capilib_ncci *np , u16 msgid )
 }
 }
 #line 62
-__inline static int mq_dequeue(struct capilib_ncci *np , u16 msgid )  __attribute__((__no_instrument_function__)) ;
+ static int mq_dequeue(struct capilib_ncci *np , u16 msgid )  __attribute__((__no_instrument_function__)) ;
 #line 62 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/3398/dscv_tempdir/dscv/ri/32_1/drivers/isdn/capi/capilib.c"
-__inline static int mq_dequeue(struct capilib_ncci *np , u16 msgid ) 
+ static int mq_dequeue(struct capilib_ncci *np , u16 msgid ) 
 { struct capilib_msgidqueue **pp ;
   struct capilib_msgidqueue *mq ;
   unsigned long __cil_tmp5 ;
@@ -18382,11 +18382,11 @@ __unused__, __section__("___ksymtab+capilib_data_b3_conf")))  =    {(unsigned lo
 #line 148 "include/linux/proc_fs.h"
 extern struct proc_dir_entry *proc_mkdir(char    * , struct proc_dir_entry * ) ;
 #line 152
-__inline static struct proc_dir_entry *proc_create(char    *name , umode_t mode ,
+ static struct proc_dir_entry *proc_create(char    *name , umode_t mode ,
                                                    struct proc_dir_entry *parent ,
                                                    struct file_operations    *proc_fops )  __attribute__((__no_instrument_function__)) ;
 #line 152 "include/linux/proc_fs.h"
-__inline static struct proc_dir_entry *proc_create(char    *name , umode_t mode ,
+ static struct proc_dir_entry *proc_create(char    *name , umode_t mode ,
                                                    struct proc_dir_entry *parent ,
                                                    struct file_operations    *proc_fops ) 
 { struct proc_dir_entry *tmp ;

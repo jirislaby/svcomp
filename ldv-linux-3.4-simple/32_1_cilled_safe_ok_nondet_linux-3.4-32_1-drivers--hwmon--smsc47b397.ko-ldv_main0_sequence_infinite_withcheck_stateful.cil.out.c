@@ -3530,9 +3530,9 @@ extern int ( /* format attribute */  sprintf)(char *buf , char const   *fmt  , .
 #line 355 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt_types.h"
 extern struct pv_cpu_ops pv_cpu_ops ;
 #line 349 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt.h"
-__inline static void slow_down_io(void)  __attribute__((__no_instrument_function__)) ;
+ static void slow_down_io(void)  __attribute__((__no_instrument_function__)) ;
 #line 349 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/paravirt.h"
-__inline static void slow_down_io(void) 
+ static void slow_down_io(void) 
 { unsigned long __cil_tmp1 ;
   void (*__cil_tmp2)(void) ;
 
@@ -3550,9 +3550,9 @@ __inline static void slow_down_io(void)
 }
 }
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3561,9 +3561,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3615,9 +3615,9 @@ extern void __release_region(struct resource * , resource_size_t  , resource_siz
 #line 82 "include/linux/jiffies.h"
 extern unsigned long volatile   jiffies  __attribute__((__section__(".data"))) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
+ static void outb(unsigned char value , int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -3632,9 +3632,9 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 308
-__inline static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb(int port ) 
+ static unsigned char inb(int port ) 
 { unsigned char value ;
 
   {
@@ -3649,9 +3649,9 @@ __inline static unsigned char inb(int port )
 }
 }
 #line 308
-__inline static unsigned char inb_p(int port )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char inb_p(int port )  __attribute__((__no_instrument_function__)) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char inb_p(int port ) 
+ static unsigned char inb_p(int port ) 
 { unsigned char value ;
   unsigned char tmp ;
 
@@ -3686,10 +3686,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -3703,9 +3703,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -3746,9 +3746,9 @@ extern int platform_driver_register(struct platform_driver * ) ;
 #line 175
 extern void platform_driver_unregister(struct platform_driver * ) ;
 #line 183
-__inline static void *platform_get_drvdata(struct platform_device  const  *pdev )  __attribute__((__no_instrument_function__)) ;
+ static void *platform_get_drvdata(struct platform_device  const  *pdev )  __attribute__((__no_instrument_function__)) ;
 #line 183 "include/linux/platform_device.h"
-__inline static void *platform_get_drvdata(struct platform_device  const  *pdev ) 
+ static void *platform_get_drvdata(struct platform_device  const  *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3770,9 +3770,9 @@ __inline static void *platform_get_drvdata(struct platform_device  const  *pdev 
 }
 }
 #line 188
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void platform_set_drvdata(struct platform_device *pdev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 188 "include/linux/platform_device.h"
-__inline static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
+ static void platform_set_drvdata(struct platform_device *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -3840,9 +3840,9 @@ __aligned__(1)))  =
 #line 49 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6108/dscv_tempdir/dscv/ri/32_1/drivers/hwmon/smsc47b397.c.common.c"
 static struct platform_device *pdev  ;
 #line 58
-__inline static void superio_outb(int reg , int val )  __attribute__((__no_instrument_function__)) ;
+ static void superio_outb(int reg , int val )  __attribute__((__no_instrument_function__)) ;
 #line 58 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6108/dscv_tempdir/dscv/ri/32_1/drivers/hwmon/smsc47b397.c.common.c"
-__inline static void superio_outb(int reg , int val ) 
+ static void superio_outb(int reg , int val ) 
 { unsigned char __cil_tmp3 ;
   unsigned char __cil_tmp4 ;
 
@@ -3862,9 +3862,9 @@ __inline static void superio_outb(int reg , int val )
 }
 }
 #line 64
-__inline static int superio_inb(int reg )  __attribute__((__no_instrument_function__)) ;
+ static int superio_inb(int reg )  __attribute__((__no_instrument_function__)) ;
 #line 64 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6108/dscv_tempdir/dscv/ri/32_1/drivers/hwmon/smsc47b397.c.common.c"
-__inline static int superio_inb(int reg ) 
+ static int superio_inb(int reg ) 
 { unsigned char tmp___7 ;
   unsigned char __cil_tmp3 ;
 
@@ -3882,9 +3882,9 @@ __inline static int superio_inb(int reg )
 }
 }
 #line 71
-__inline static void superio_select(int ld )  __attribute__((__no_instrument_function__)) ;
+ static void superio_select(int ld )  __attribute__((__no_instrument_function__)) ;
 #line 71 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6108/dscv_tempdir/dscv/ri/32_1/drivers/hwmon/smsc47b397.c.common.c"
-__inline static void superio_select(int ld ) 
+ static void superio_select(int ld ) 
 { 
 
   {
@@ -3897,9 +3897,9 @@ __inline static void superio_select(int ld )
 }
 }
 #line 76
-__inline static void superio_enter(void)  __attribute__((__no_instrument_function__)) ;
+ static void superio_enter(void)  __attribute__((__no_instrument_function__)) ;
 #line 76 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6108/dscv_tempdir/dscv/ri/32_1/drivers/hwmon/smsc47b397.c.common.c"
-__inline static void superio_enter(void) 
+ static void superio_enter(void) 
 { 
 
   {
@@ -3912,9 +3912,9 @@ __inline static void superio_enter(void)
 }
 }
 #line 81
-__inline static void superio_exit(void)  __attribute__((__no_instrument_function__)) ;
+ static void superio_exit(void)  __attribute__((__no_instrument_function__)) ;
 #line 81 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/6108/dscv_tempdir/dscv/ri/32_1/drivers/hwmon/smsc47b397.c.common.c"
-__inline static void superio_exit(void) 
+ static void superio_exit(void) 
 { 
 
   {

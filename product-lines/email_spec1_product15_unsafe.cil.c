@@ -3771,7 +3771,7 @@ char const   *__utac__get_this_argtype(int i , struct JoinPoint *this )
 #line 7 "AddressBookEncrypt_spec.c"
 int mail_is_sensitive  =    -1;
 #line 11 "AddressBookEncrypt_spec.c"
-__inline void __utac_acc__AddressBookEncrypt_spec__1(int client , int msg ) 
+ void __utac_acc__AddressBookEncrypt_spec__1(int client , int msg ) 
 { int tmp ;
 
   {

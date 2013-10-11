@@ -2301,9 +2301,9 @@ extern int hid_connect(struct hid_device *hid , unsigned int connect_mask ) ;
 #line 740
 extern void hid_disconnect(struct hid_device *hid ) ;
 #line 806
-__inline static int __attribute__((__warn_unused_result__))  hid_parse(struct hid_device *hdev )  __attribute__((__no_instrument_function__)) ;
+ static int __attribute__((__warn_unused_result__))  hid_parse(struct hid_device *hdev )  __attribute__((__no_instrument_function__)) ;
 #line 806 "include/linux/hid.h"
-__inline static int __attribute__((__warn_unused_result__))  hid_parse(struct hid_device *hdev ) 
+ static int __attribute__((__warn_unused_result__))  hid_parse(struct hid_device *hdev ) 
 { int ret ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2374,10 +2374,10 @@ __inline static int __attribute__((__warn_unused_result__))  hid_parse(struct hi
 }
 }
 #line 830
-__inline static int __attribute__((__warn_unused_result__))  hid_hw_start(struct hid_device *hdev ,
+ static int __attribute__((__warn_unused_result__))  hid_hw_start(struct hid_device *hdev ,
                                                                           unsigned int connect_mask )  __attribute__((__no_instrument_function__)) ;
 #line 830 "include/linux/hid.h"
-__inline static int __attribute__((__warn_unused_result__))  hid_hw_start(struct hid_device *hdev ,
+ static int __attribute__((__warn_unused_result__))  hid_hw_start(struct hid_device *hdev ,
                                                                           unsigned int connect_mask ) 
 { int ret ;
   int tmp ;
@@ -2449,9 +2449,9 @@ __inline static int __attribute__((__warn_unused_result__))  hid_hw_start(struct
 }
 }
 #line 850
-__inline static void hid_hw_stop(struct hid_device *hdev )  __attribute__((__no_instrument_function__)) ;
+ static void hid_hw_stop(struct hid_device *hdev )  __attribute__((__no_instrument_function__)) ;
 #line 850 "include/linux/hid.h"
-__inline static void hid_hw_stop(struct hid_device *hdev ) 
+ static void hid_hw_stop(struct hid_device *hdev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct hid_ll_driver *__cil_tmp4 ;

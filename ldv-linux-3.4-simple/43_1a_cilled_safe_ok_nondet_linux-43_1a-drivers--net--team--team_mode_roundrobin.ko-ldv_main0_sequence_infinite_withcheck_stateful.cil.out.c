@@ -5105,7 +5105,7 @@ extern struct lockdep_map rcu_lock_map ;
 #line 290
 extern int debug_lockdep_rcu_enabled(void) ;
 #line 312 "include/linux/rcupdate.h"
-__inline static int rcu_read_lock_held(void) 
+ static int rcu_read_lock_held(void) 
 { int tmp ;
   int tmp___0 ;
   bool tmp___1 ;
@@ -5200,7 +5200,7 @@ extern int dev_queue_xmit(struct sk_buff * ) ;
 #line 2106
 extern void dev_kfree_skb_any(struct sk_buff * ) ;
 #line 119 "include/linux/if_team.h"
-__inline static struct hlist_head *team_port_index_hash(struct team *team , int port_index ) 
+ static struct hlist_head *team_port_index_hash(struct team *team , int port_index ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -5228,7 +5228,7 @@ __inline static struct hlist_head *team_port_index_hash(struct team *team , int 
 }
 }
 #line 137 "include/linux/if_team.h"
-__inline static struct team_port *team_get_port_by_index_rcu(struct team *team , int port_index ) 
+ static struct team_port *team_get_port_by_index_rcu(struct team *team , int port_index ) 
 { struct hlist_node *p ;
   struct team_port *port ;
   struct hlist_head *head ;

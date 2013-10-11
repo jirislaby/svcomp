@@ -1290,7 +1290,7 @@ void rjhEnableForwarding(void)
 #line 4 "wsllib.h"
 void __automaton_fail(void) ;
 #line 11 "DecryptForward_spec.c"
-__inline void __utac_acc__DecryptForward_spec__1(int msg ) 
+ void __utac_acc__DecryptForward_spec__1(int msg ) 
 { int tmp ;
 
   {

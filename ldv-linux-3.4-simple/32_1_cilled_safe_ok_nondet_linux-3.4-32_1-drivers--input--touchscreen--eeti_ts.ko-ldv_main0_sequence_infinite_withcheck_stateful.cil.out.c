@@ -3747,9 +3747,9 @@ struct eeti_ts_priv {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -3795,9 +3795,9 @@ int init_module(void) ;
 #line 68
 void cleanup_module(void) ;
 #line 70 "include/linux/pm_wakeup.h"
-__inline static bool device_may_wakeup(struct device *dev )  __attribute__((__no_instrument_function__)) ;
+ static bool device_may_wakeup(struct device *dev )  __attribute__((__no_instrument_function__)) ;
 #line 70 "include/linux/pm_wakeup.h"
-__inline static bool device_may_wakeup(struct device *dev ) 
+ static bool device_may_wakeup(struct device *dev ) 
 { int tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3861,9 +3861,9 @@ extern struct input_dev *input_allocate_device(void) ;
 #line 1457
 extern void input_free_device(struct input_dev *dev ) ;
 #line 1470
-__inline static void *input_get_drvdata(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *input_get_drvdata(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1470 "include/linux/input.h"
-__inline static void *input_get_drvdata(struct input_dev *dev ) 
+ static void *input_get_drvdata(struct input_dev *dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3888,9 +3888,9 @@ __inline static void *input_get_drvdata(struct input_dev *dev )
 }
 }
 #line 1475
-__inline static void input_set_drvdata(struct input_dev *dev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void input_set_drvdata(struct input_dev *dev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 1475 "include/linux/input.h"
-__inline static void input_set_drvdata(struct input_dev *dev , void *data ) 
+ static void input_set_drvdata(struct input_dev *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -3918,10 +3918,10 @@ extern void input_unregister_device(struct input_dev * ) ;
 extern void input_event(struct input_dev *dev , unsigned int type , unsigned int code ,
                         int value ) ;
 #line 1505
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value )  __attribute__((__no_instrument_function__)) ;
 #line 1505 "include/linux/input.h"
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -3940,10 +3940,10 @@ __inline static void input_report_key(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1515
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value )  __attribute__((__no_instrument_function__)) ;
 #line 1515 "include/linux/input.h"
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { 
 
@@ -3957,9 +3957,9 @@ __inline static void input_report_abs(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1530
-__inline static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
+ static void input_sync(struct input_dev *dev )  __attribute__((__no_instrument_function__)) ;
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {
@@ -3984,14 +3984,14 @@ extern int __attribute__((__warn_unused_result__))  request_threaded_irq(unsigne
                                                                          char const   *name ,
                                                                          void *dev ) ;
 #line 131
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
                                                                          char const   *name ,
                                                                          void *dev )  __attribute__((__no_instrument_function__)) ;
 #line 131 "include/linux/interrupt.h"
-__inline static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
+ static int __attribute__((__warn_unused_result__))  request_irq(unsigned int irq ,
                                                                          irqreturn_t (*handler)(int  ,
                                                                                                 void * ) ,
                                                                          unsigned long flags ,
@@ -4023,9 +4023,9 @@ extern void enable_irq(unsigned int irq ) ;
 #line 356
 extern int irq_set_irq_wake(unsigned int irq , unsigned int on ) ;
 #line 358
-__inline static int enable_irq_wake(unsigned int irq )  __attribute__((__no_instrument_function__)) ;
+ static int enable_irq_wake(unsigned int irq )  __attribute__((__no_instrument_function__)) ;
 #line 358 "include/linux/interrupt.h"
-__inline static int enable_irq_wake(unsigned int irq ) 
+ static int enable_irq_wake(unsigned int irq ) 
 { int tmp ;
 
   {
@@ -4038,9 +4038,9 @@ __inline static int enable_irq_wake(unsigned int irq )
 }
 }
 #line 363
-__inline static int disable_irq_wake(unsigned int irq )  __attribute__((__no_instrument_function__)) ;
+ static int disable_irq_wake(unsigned int irq )  __attribute__((__no_instrument_function__)) ;
 #line 363 "include/linux/interrupt.h"
-__inline static int disable_irq_wake(unsigned int irq ) 
+ static int disable_irq_wake(unsigned int irq ) 
 { int tmp ;
 
   {
@@ -4055,9 +4055,9 @@ __inline static int disable_irq_wake(unsigned int irq )
 #line 64 "include/linux/i2c.h"
 extern int i2c_master_recv(struct i2c_client  const  *client , char *buf , int count ) ;
 #line 242
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev )  __attribute__((__no_instrument_function__)) ;
 #line 242 "include/linux/i2c.h"
-__inline static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
+ static void *i2c_get_clientdata(struct i2c_client  const  *dev ) 
 { void *tmp___7 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4079,9 +4079,9 @@ __inline static void *i2c_get_clientdata(struct i2c_client  const  *dev )
 }
 }
 #line 247
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 247 "include/linux/i2c.h"
-__inline static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
+ static void i2c_set_clientdata(struct i2c_client *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -4108,9 +4108,9 @@ extern void i2c_del_driver(struct i2c_driver * ) ;
 #line 169 "include/asm-generic/gpio.h"
 extern int __gpio_get_value(unsigned int gpio ) ;
 #line 26 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/gpio.h"
-__inline static int gpio_get_value(unsigned int gpio )  __attribute__((__no_instrument_function__)) ;
+ static int gpio_get_value(unsigned int gpio )  __attribute__((__no_instrument_function__)) ;
 #line 26 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/gpio.h"
-__inline static int gpio_get_value(unsigned int gpio ) 
+ static int gpio_get_value(unsigned int gpio ) 
 { int tmp___7 ;
 
   {
@@ -4123,9 +4123,9 @@ __inline static int gpio_get_value(unsigned int gpio )
 }
 }
 #line 46
-__inline static int irq_to_gpio(unsigned int irq )  __attribute__((__no_instrument_function__)) ;
+ static int irq_to_gpio(unsigned int irq )  __attribute__((__no_instrument_function__)) ;
 #line 46 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/gpio.h"
-__inline static int irq_to_gpio(unsigned int irq ) 
+ static int irq_to_gpio(unsigned int irq ) 
 { 
 
   {
@@ -4138,10 +4138,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -4155,9 +4155,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -4235,9 +4235,9 @@ __aligned__(1)))  =
         (char const   )'i',      (char const   )'n',      (char const   )'a',      (char const   )'t', 
         (char const   )'e',      (char const   )'\000'};
 #line 64
-__inline static int eeti_ts_irq_active(struct eeti_ts_priv *priv )  __attribute__((__no_instrument_function__)) ;
+ static int eeti_ts_irq_active(struct eeti_ts_priv *priv )  __attribute__((__no_instrument_function__)) ;
 #line 64 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/4172/dscv_tempdir/dscv/ri/32_1/drivers/input/touchscreen/eeti_ts.c.common.c"
-__inline static int eeti_ts_irq_active(struct eeti_ts_priv *priv ) 
+ static int eeti_ts_irq_active(struct eeti_ts_priv *priv ) 
 { int tmp___7 ;
   int tmp___8 ;
   unsigned long __cil_tmp4 ;

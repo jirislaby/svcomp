@@ -2576,9 +2576,9 @@ struct DiskOnChip {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 397 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int ffs(int x )  __attribute__((__no_instrument_function__)) ;
+ static int ffs(int x )  __attribute__((__no_instrument_function__)) ;
 #line 397 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int ffs(int x ) 
+ static int ffs(int x ) 
 { int r ;
   long tmp ;
 
@@ -2609,9 +2609,9 @@ void mutex_unlock(struct mutex *lock ) ;
 #line 170
 int atomic_dec_and_mutex_lock(atomic_t *cnt , struct mutex *lock ) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static unsigned char readb(void const volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 53 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned char readb(void const volatile   *addr ) 
+ static unsigned char readb(void const volatile   *addr ) 
 { unsigned char ret ;
   unsigned char volatile   *__cil_tmp3 ;
 
@@ -2627,9 +2627,9 @@ __inline static unsigned char readb(void const volatile   *addr )
 }
 }
 #line 61
-__inline static void writeb(unsigned char val , void volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void writeb(unsigned char val , void volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 61 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void writeb(unsigned char val , void volatile   *addr ) 
+ static void writeb(unsigned char val , void volatile   *addr ) 
 { unsigned char volatile   *__cil_tmp3 ;
 
   {
@@ -2654,10 +2654,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -2887,9 +2887,9 @@ static int _DoC_WaitReady(void *docptr )
 }
 }
 #line 77
-__inline static int DoC_WaitReady(void *docptr )  __attribute__((__no_instrument_function__)) ;
+ static int DoC_WaitReady(void *docptr )  __attribute__((__no_instrument_function__)) ;
 #line 77 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5407/dscv_tempdir/dscv/ri/32_1/drivers/mtd/devices/doc2001plus.c.common.c"
-__inline static int DoC_WaitReady(void *docptr ) 
+ static int DoC_WaitReady(void *docptr ) 
 { int ret ;
   unsigned char tmp___7 ;
   void *__cil_tmp4 ;
@@ -2930,9 +2930,9 @@ __inline static int DoC_WaitReady(void *docptr )
 }
 }
 #line 98
-__inline static void DoC_CheckASIC(void *docptr )  __attribute__((__no_instrument_function__)) ;
+ static void DoC_CheckASIC(void *docptr )  __attribute__((__no_instrument_function__)) ;
 #line 98 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5407/dscv_tempdir/dscv/ri/32_1/drivers/mtd/devices/doc2001plus.c.common.c"
-__inline static void DoC_CheckASIC(void *docptr ) 
+ static void DoC_CheckASIC(void *docptr ) 
 { unsigned char tmp___7 ;
   void *__cil_tmp3 ;
   void const volatile   *__cil_tmp4 ;
@@ -3022,10 +3022,10 @@ static void DoC_Command(void *docptr , unsigned char command , unsigned char xtr
 }
 }
 #line 121
-__inline static void DoC_Address(struct DiskOnChip *doc , int numbytes , unsigned long ofs ,
+ static void DoC_Address(struct DiskOnChip *doc , int numbytes , unsigned long ofs ,
                                  unsigned char xtraflags1 , unsigned char xtraflags2 )  __attribute__((__no_instrument_function__)) ;
 #line 121 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5407/dscv_tempdir/dscv/ri/32_1/drivers/mtd/devices/doc2001plus.c.common.c"
-__inline static void DoC_Address(struct DiskOnChip *doc , int numbytes , unsigned long ofs ,
+ static void DoC_Address(struct DiskOnChip *doc , int numbytes , unsigned long ofs ,
                                  unsigned char xtraflags1 , unsigned char xtraflags2 ) 
 { void *docptr ;
   unsigned long __cil_tmp7 ;
@@ -3461,9 +3461,9 @@ static unsigned int DoC_GetHdrOffset(struct mtd_info *mtd , loff_t *from )
 }
 }
 #line 245
-__inline static void MemReadDOC(void *docptr , unsigned char *buf , int len )  __attribute__((__no_instrument_function__)) ;
+ static void MemReadDOC(void *docptr , unsigned char *buf , int len )  __attribute__((__no_instrument_function__)) ;
 #line 245 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5407/dscv_tempdir/dscv/ri/32_1/drivers/mtd/devices/doc2001plus.c.common.c"
-__inline static void MemReadDOC(void *docptr , unsigned char *buf , int len ) 
+ static void MemReadDOC(void *docptr , unsigned char *buf , int len ) 
 { int i ;
   unsigned char *__cil_tmp5 ;
   int __cil_tmp6 ;
@@ -3506,9 +3506,9 @@ __inline static void MemReadDOC(void *docptr , unsigned char *buf , int len )
 }
 }
 #line 256
-__inline static void MemWriteDOC(void *docptr , unsigned char *buf , int len )  __attribute__((__no_instrument_function__)) ;
+ static void MemWriteDOC(void *docptr , unsigned char *buf , int len )  __attribute__((__no_instrument_function__)) ;
 #line 256 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5407/dscv_tempdir/dscv/ri/32_1/drivers/mtd/devices/doc2001plus.c.common.c"
-__inline static void MemWriteDOC(void *docptr , unsigned char *buf , int len ) 
+ static void MemWriteDOC(void *docptr , unsigned char *buf , int len ) 
 { int i ;
   unsigned char *__cil_tmp5 ;
   unsigned char __cil_tmp6 ;

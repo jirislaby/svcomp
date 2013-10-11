@@ -1030,7 +1030,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 482 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int fls64(__u64 x ) 
+ static int fls64(__u64 x ) 
 { long bitpos ;
   unsigned int __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -1051,7 +1051,7 @@ __inline static int fls64(__u64 x )
 }
 }
 #line 160 "include/linux/bitops.h"
-__inline static unsigned int fls_long(unsigned long l ) 
+ static unsigned int fls_long(unsigned long l ) 
 { int tmp___0 ;
   __u64 __cil_tmp4 ;
 
@@ -1067,7 +1067,7 @@ __inline static unsigned int fls_long(unsigned long l )
 }
 }
 #line 70 "include/linux/log2.h"
-__inline static unsigned long __rounddown_pow_of_two(unsigned long n ) 
+ static unsigned long __rounddown_pow_of_two(unsigned long n ) 
 { unsigned int tmp ;
   unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -1094,7 +1094,7 @@ extern int sprintf(char * , char const   *  , ...) ;
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern void *memset(void * , int  , size_t  ) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -1103,7 +1103,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -1136,7 +1136,7 @@ extern void __release_region(struct resource * , resource_size_t  , resource_siz
 #line 174 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
 extern void *ioremap_nocache(resource_size_t  , unsigned long  ) ;
 #line 182 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *ioremap(resource_size_t offset , unsigned long size ) 
+ static void *ioremap(resource_size_t offset , unsigned long size ) 
 { void *tmp ;
 
   {
@@ -1159,7 +1159,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11317/dscv_tempdir/dscv/ri/43_1a/drivers/char/ramoops.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2375,7 +2375,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 618 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/11317/dscv_tempdir/dscv/ri/43_1a/drivers/char/ramoops.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

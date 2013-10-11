@@ -1785,7 +1785,7 @@ extern int printk(char    *  , ...) ;
 extern int __dynamic_dev_dbg(struct _ddebug * , struct device    * , char    * 
                              , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -1805,7 +1805,7 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head * , struct list_head * , struct list_head * ) ;
 #line 74 "include/linux/list.h"
-__inline static void list_add_tail(struct list_head *new , struct list_head *head ) 
+ static void list_add_tail(struct list_head *new , struct list_head *head ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct list_head *__cil_tmp5 ;
@@ -1828,7 +1828,7 @@ __inline static void list_add_tail(struct list_head *new , struct list_head *hea
 #line 111
 extern void __list_del_entry(struct list_head * ) ;
 #line 142 "include/linux/list.h"
-__inline static void list_del_init(struct list_head *entry ) 
+ static void list_del_init(struct list_head *entry ) 
 { 
 
   {
@@ -1843,7 +1843,7 @@ __inline static void list_del_init(struct list_head *entry )
 }
 }
 #line 186 "include/linux/list.h"
-__inline static int list_empty(struct list_head    *head ) 
+ static int list_empty(struct list_head    *head ) 
 { unsigned long __cil_tmp2 ;
   struct list_head *   __cil_tmp3 ;
   struct list_head    *__cil_tmp4 ;
@@ -1869,7 +1869,7 @@ extern unsigned long __phys_addr(unsigned long  ) ;
 #line 55 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/string_64.h"
 extern void *memset(void * , int  , size_t  ) ;
 #line 651 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/processor.h"
-__inline static void rep_nop(void) 
+ static void rep_nop(void) 
 { 
 
   {
@@ -1880,7 +1880,7 @@ __inline static void rep_nop(void)
 }
 }
 #line 656 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/processor.h"
-__inline static void cpu_relax(void) 
+ static void cpu_relax(void) 
 { 
 
   {
@@ -1904,7 +1904,7 @@ extern void _raw_spin_unlock(raw_spinlock_t * ) ;
 #line 43
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -1913,7 +1913,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 283 "include/linux/spinlock.h"
-__inline static void ldv_spin_lock_1(spinlock_t *lock ) 
+ static void ldv_spin_lock_1(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -1928,9 +1928,9 @@ __inline static void ldv_spin_lock_1(spinlock_t *lock )
 }
 }
 #line 283
-__inline static void spin_lock(spinlock_t *lock ) ;
+ static void spin_lock(spinlock_t *lock ) ;
 #line 323 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_5(spinlock_t *lock ) 
+ static void ldv_spin_unlock_5(spinlock_t *lock ) 
 { struct raw_spinlock *__cil_tmp2 ;
 
   {
@@ -1945,9 +1945,9 @@ __inline static void ldv_spin_unlock_5(spinlock_t *lock )
 }
 }
 #line 323
-__inline static void spin_unlock(spinlock_t *lock ) ;
+ static void spin_unlock(spinlock_t *lock ) ;
 #line 350 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
+ static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -1962,7 +1962,7 @@ __inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned lo
 }
 }
 #line 350
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 138 "include/linux/ioport.h"
 extern struct resource iomem_resource ;
 #line 181
@@ -1975,7 +1975,7 @@ extern void __init_work(struct work_struct * , int  ) ;
 #line 380
 extern int schedule_work(struct work_struct * ) ;
 #line 129 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void *phys_to_virt(phys_addr_t address ) 
+ static void *phys_to_virt(phys_addr_t address ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -2007,7 +2007,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2047,7 +2047,7 @@ extern pci_power_t pci_choose_state(struct pci_dev * , int  ) ;
 #line 843
 extern int __pci_enable_wake(struct pci_dev * , pci_power_t  , bool  , bool  ) ;
 #line 853 "include/linux/pci.h"
-__inline static int pci_enable_wake(struct pci_dev *dev , pci_power_t state , bool enable ) 
+ static int pci_enable_wake(struct pci_dev *dev , pci_power_t state , bool enable ) 
 { int tmp ;
   bool __cil_tmp5 ;
   int __cil_tmp6 ;
@@ -2094,7 +2094,7 @@ void *ldv_dma_pool_alloc_22(struct dma_pool *ldv_func_arg1 , gfp_t ldv_func_arg2
 #line 41
 extern void dma_pool_free(struct dma_pool * , void * , dma_addr_t  ) ;
 #line 60 "include/linux/dma-mapping.h"
-__inline static int valid_dma_direction(int dma_direction ) 
+ static int valid_dma_direction(int dma_direction ) 
 { int tmp ;
 
   {
@@ -2121,7 +2121,7 @@ __inline static int valid_dma_direction(int dma_direction )
 }
 }
 #line 131 "include/linux/kmemcheck.h"
-__inline static void kmemcheck_mark_initialized(void *address , unsigned int n ) 
+ static void kmemcheck_mark_initialized(void *address , unsigned int n ) 
 { 
 
   {
@@ -2138,7 +2138,7 @@ extern void debug_dma_unmap_page(struct device * , dma_addr_t  , size_t  , int  
 #line 29 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/dma-mapping.h"
 extern struct dma_map_ops *dma_ops ;
 #line 31 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/dma-mapping.h"
-__inline static struct dma_map_ops *get_dma_ops(struct device *dev ) 
+ static struct dma_map_ops *get_dma_ops(struct device *dev ) 
 { long tmp ;
   struct device *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2212,7 +2212,7 @@ __inline static struct dma_map_ops *get_dma_ops(struct device *dev )
 }
 }
 #line 10 "include/asm-generic/dma-mapping-common.h"
-__inline static dma_addr_t dma_map_single_attrs(struct device *dev , void *ptr , size_t size ,
+ static dma_addr_t dma_map_single_attrs(struct device *dev , void *ptr , size_t size ,
                                                 enum dma_data_direction dir , struct dma_attrs *attrs ) 
 { struct dma_map_ops *ops ;
   struct dma_map_ops *tmp ;
@@ -2326,7 +2326,7 @@ __inline static dma_addr_t dma_map_single_attrs(struct device *dev , void *ptr ,
 }
 }
 #line 29 "include/asm-generic/dma-mapping-common.h"
-__inline static void dma_unmap_single_attrs(struct device *dev , dma_addr_t addr ,
+ static void dma_unmap_single_attrs(struct device *dev , dma_addr_t addr ,
                                             size_t size , enum dma_data_direction dir ,
                                             struct dma_attrs *attrs ) 
 { struct dma_map_ops *ops ;
@@ -2424,7 +2424,7 @@ __inline static void dma_unmap_single_attrs(struct device *dev , dma_addr_t addr
 }
 }
 #line 1358 "include/linux/pci.h"
-__inline static void *pci_get_drvdata(struct pci_dev *pdev ) 
+ static void *pci_get_drvdata(struct pci_dev *pdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2449,7 +2449,7 @@ __inline static void *pci_get_drvdata(struct pci_dev *pdev )
 }
 }
 #line 1363 "include/linux/pci.h"
-__inline static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
+ static void pci_set_drvdata(struct pci_dev *pdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2478,7 +2478,7 @@ extern int request_threaded_irq(unsigned int  , irqreturn_t (*)(int  , void * ) 
                                 irqreturn_t (*)(int  , void * ) , unsigned long  ,
                                 char    * , void * ) ;
 #line 132 "include/linux/interrupt.h"
-__inline static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
+ static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * ) ,
                                 unsigned long flags , char    *name , void *dev ) 
 { int tmp ;
   irqreturn_t (*__cil_tmp7)(int  , void * ) ;
@@ -2497,7 +2497,7 @@ __inline static int request_irq(unsigned int irq , irqreturn_t (*handler)(int  ,
 #line 184
 extern void free_irq(unsigned int  , void * ) ;
 #line 590 "include/linux/usb/ch9.h"
-__inline static int usb_endpoint_maxp(struct usb_endpoint_descriptor    *epd ) 
+ static int usb_endpoint_maxp(struct usb_endpoint_descriptor    *epd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   __le16    __cil_tmp4 ;
@@ -2520,7 +2520,7 @@ extern int usb_add_gadget_udc(struct device * , struct usb_gadget * ) ;
 #line 891
 extern void usb_del_gadget_udc(struct usb_gadget * ) ;
 #line 39 "include/asm-generic/gpio.h"
-__inline static bool gpio_is_valid(int number ) 
+ static bool gpio_is_valid(int number ) 
 { int tmp ;
 
   {
@@ -2553,7 +2553,7 @@ extern int __gpio_get_value(unsigned int  ) ;
 #line 174
 extern int __gpio_to_irq(unsigned int  ) ;
 #line 26 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/gpio.h"
-__inline static int gpio_get_value(unsigned int gpio ) 
+ static int gpio_get_value(unsigned int gpio ) 
 { int tmp ;
 
   {
@@ -2566,7 +2566,7 @@ __inline static int gpio_get_value(unsigned int gpio )
 }
 }
 #line 41 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/gpio.h"
-__inline static int gpio_to_irq(unsigned int gpio ) 
+ static int gpio_to_irq(unsigned int gpio ) 
 { int tmp ;
 
   {
@@ -2594,7 +2594,7 @@ struct pch_udc_dev *pch_udc  ;
 #line 404 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
 static bool speed_fs  ;
 #line 436 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static u32 pch_udc_readl(struct pch_udc_dev *dev , unsigned long reg ) 
+ static u32 pch_udc_readl(struct pch_udc_dev *dev , unsigned long reg ) 
 { unsigned int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -2619,7 +2619,7 @@ __inline static u32 pch_udc_readl(struct pch_udc_dev *dev , unsigned long reg )
 }
 }
 #line 441 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_writel(struct pch_udc_dev *dev , unsigned long val ,
+ static void pch_udc_writel(struct pch_udc_dev *dev , unsigned long val ,
                                     unsigned long reg ) 
 { u32 __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -2647,7 +2647,7 @@ __inline static void pch_udc_writel(struct pch_udc_dev *dev , unsigned long val 
 }
 }
 #line 447 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_bit_set(struct pch_udc_dev *dev , unsigned long reg ,
+ static void pch_udc_bit_set(struct pch_udc_dev *dev , unsigned long reg ,
                                      unsigned long bitmask ) 
 { u32 tmp ;
   unsigned long __cil_tmp5 ;
@@ -2669,7 +2669,7 @@ __inline static void pch_udc_bit_set(struct pch_udc_dev *dev , unsigned long reg
 }
 }
 #line 454 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_bit_clr(struct pch_udc_dev *dev , unsigned long reg ,
+ static void pch_udc_bit_clr(struct pch_udc_dev *dev , unsigned long reg ,
                                      unsigned long bitmask ) 
 { u32 tmp ;
   unsigned long __cil_tmp5 ;
@@ -2694,7 +2694,7 @@ __inline static void pch_udc_bit_clr(struct pch_udc_dev *dev , unsigned long reg
 }
 }
 #line 461 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static u32 pch_udc_ep_readl(struct pch_udc_ep *ep , unsigned long reg ) 
+ static u32 pch_udc_ep_readl(struct pch_udc_ep *ep , unsigned long reg ) 
 { unsigned int tmp ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -2740,7 +2740,7 @@ __inline static u32 pch_udc_ep_readl(struct pch_udc_ep *ep , unsigned long reg )
 }
 }
 #line 466 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_ep_writel(struct pch_udc_ep *ep , unsigned long val ,
+ static void pch_udc_ep_writel(struct pch_udc_ep *ep , unsigned long val ,
                                        unsigned long reg ) 
 { u32 __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -2789,7 +2789,7 @@ __inline static void pch_udc_ep_writel(struct pch_udc_ep *ep , unsigned long val
 }
 }
 #line 472 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_ep_bit_set(struct pch_udc_ep *ep , unsigned long reg ,
+ static void pch_udc_ep_bit_set(struct pch_udc_ep *ep , unsigned long reg ,
                                         unsigned long bitmask ) 
 { u32 tmp ;
   unsigned long __cil_tmp5 ;
@@ -2811,7 +2811,7 @@ __inline static void pch_udc_ep_bit_set(struct pch_udc_ep *ep , unsigned long re
 }
 }
 #line 479 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_ep_bit_clr(struct pch_udc_ep *ep , unsigned long reg ,
+ static void pch_udc_ep_bit_clr(struct pch_udc_ep *ep , unsigned long reg ,
                                         unsigned long bitmask ) 
 { u32 tmp ;
   unsigned long __cil_tmp5 ;
@@ -2965,7 +2965,7 @@ static u32 pch_udc_read_csr(struct pch_udc_dev *dev , unsigned int ep )
 }
 }
 #line 539 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_rmt_wakeup(struct pch_udc_dev *dev ) 
+ static void pch_udc_rmt_wakeup(struct pch_udc_dev *dev ) 
 { unsigned long __ms ;
   unsigned long tmp ;
 
@@ -3014,7 +3014,7 @@ __inline static void pch_udc_rmt_wakeup(struct pch_udc_dev *dev )
 }
 }
 #line 551 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static int pch_udc_get_frame(struct pch_udc_dev *dev ) 
+ static int pch_udc_get_frame(struct pch_udc_dev *dev ) 
 { u32 frame ;
   u32 tmp ;
   u32 __cil_tmp4 ;
@@ -3035,7 +3035,7 @@ __inline static int pch_udc_get_frame(struct pch_udc_dev *dev )
 }
 }
 #line 561 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_clear_selfpowered(struct pch_udc_dev *dev ) 
+ static void pch_udc_clear_selfpowered(struct pch_udc_dev *dev ) 
 { 
 
   {
@@ -3048,7 +3048,7 @@ __inline static void pch_udc_clear_selfpowered(struct pch_udc_dev *dev )
 }
 }
 #line 570 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_set_selfpowered(struct pch_udc_dev *dev ) 
+ static void pch_udc_set_selfpowered(struct pch_udc_dev *dev ) 
 { 
 
   {
@@ -3061,7 +3061,7 @@ __inline static void pch_udc_set_selfpowered(struct pch_udc_dev *dev )
 }
 }
 #line 579 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_set_disconnect(struct pch_udc_dev *dev ) 
+ static void pch_udc_set_disconnect(struct pch_udc_dev *dev ) 
 { 
 
   {
@@ -3182,7 +3182,7 @@ static void pch_udc_reconnect(struct pch_udc_dev *dev )
 }
 }
 #line 628 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_vbus_session(struct pch_udc_dev *dev , int is_active ) 
+ static void pch_udc_vbus_session(struct pch_udc_dev *dev , int is_active ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct usb_gadget_driver *__cil_tmp5 ;
@@ -3360,7 +3360,7 @@ static void pch_udc_ep_set_stall(struct pch_udc_ep *ep )
 }
 }
 #line 663 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_ep_clear_stall(struct pch_udc_ep *ep ) 
+ static void pch_udc_ep_clear_stall(struct pch_udc_ep *ep ) 
 { 
 
   {
@@ -3375,7 +3375,7 @@ __inline static void pch_udc_ep_clear_stall(struct pch_udc_ep *ep )
 }
 }
 #line 676 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_ep_set_trfr_type(struct pch_udc_ep *ep , u8 type ) 
+ static void pch_udc_ep_set_trfr_type(struct pch_udc_ep *ep , u8 type ) 
 { int __cil_tmp3 ;
   int __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -3475,7 +3475,7 @@ static void pch_udc_ep_set_maxpkt(struct pch_udc_ep *ep , u32 pkt_size )
 }
 }
 #line 720 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_ep_set_subptr(struct pch_udc_ep *ep , u32 addr ) 
+ static void pch_udc_ep_set_subptr(struct pch_udc_ep *ep , u32 addr ) 
 { unsigned long __cil_tmp3 ;
 
   {
@@ -3490,7 +3490,7 @@ __inline static void pch_udc_ep_set_subptr(struct pch_udc_ep *ep , u32 addr )
 }
 }
 #line 730 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_ep_set_ddptr(struct pch_udc_ep *ep , u32 addr ) 
+ static void pch_udc_ep_set_ddptr(struct pch_udc_ep *ep , u32 addr ) 
 { unsigned long __cil_tmp3 ;
 
   {
@@ -3505,7 +3505,7 @@ __inline static void pch_udc_ep_set_ddptr(struct pch_udc_ep *ep , u32 addr )
 }
 }
 #line 739 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_ep_set_pd(struct pch_udc_ep *ep ) 
+ static void pch_udc_ep_set_pd(struct pch_udc_ep *ep ) 
 { 
 
   {
@@ -3518,7 +3518,7 @@ __inline static void pch_udc_ep_set_pd(struct pch_udc_ep *ep )
 }
 }
 #line 748 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_ep_set_rrdy(struct pch_udc_ep *ep ) 
+ static void pch_udc_ep_set_rrdy(struct pch_udc_ep *ep ) 
 { 
 
   {
@@ -3531,7 +3531,7 @@ __inline static void pch_udc_ep_set_rrdy(struct pch_udc_ep *ep )
 }
 }
 #line 757 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_ep_clear_rrdy(struct pch_udc_ep *ep ) 
+ static void pch_udc_ep_clear_rrdy(struct pch_udc_ep *ep ) 
 { 
 
   {
@@ -3544,7 +3544,7 @@ __inline static void pch_udc_ep_clear_rrdy(struct pch_udc_ep *ep )
 }
 }
 #line 770 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_set_dma(struct pch_udc_dev *dev , int dir ) 
+ static void pch_udc_set_dma(struct pch_udc_dev *dev , int dir ) 
 { 
 
   {
@@ -3569,7 +3569,7 @@ __inline static void pch_udc_set_dma(struct pch_udc_dev *dev , int dir )
 }
 }
 #line 786 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_clear_dma(struct pch_udc_dev *dev , int dir ) 
+ static void pch_udc_clear_dma(struct pch_udc_dev *dev , int dir ) 
 { 
 
   {
@@ -3594,7 +3594,7 @@ __inline static void pch_udc_clear_dma(struct pch_udc_dev *dev , int dir )
 }
 }
 #line 799 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_set_csr_done(struct pch_udc_dev *dev ) 
+ static void pch_udc_set_csr_done(struct pch_udc_dev *dev ) 
 { 
 
   {
@@ -3607,7 +3607,7 @@ __inline static void pch_udc_set_csr_done(struct pch_udc_dev *dev )
 }
 }
 #line 809 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_disable_interrupts(struct pch_udc_dev *dev , u32 mask ) 
+ static void pch_udc_disable_interrupts(struct pch_udc_dev *dev , u32 mask ) 
 { unsigned long __cil_tmp3 ;
 
   {
@@ -3622,7 +3622,7 @@ __inline static void pch_udc_disable_interrupts(struct pch_udc_dev *dev , u32 ma
 }
 }
 #line 820 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_enable_interrupts(struct pch_udc_dev *dev , u32 mask ) 
+ static void pch_udc_enable_interrupts(struct pch_udc_dev *dev , u32 mask ) 
 { unsigned long __cil_tmp3 ;
 
   {
@@ -3637,7 +3637,7 @@ __inline static void pch_udc_enable_interrupts(struct pch_udc_dev *dev , u32 mas
 }
 }
 #line 831 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_disable_ep_interrupts(struct pch_udc_dev *dev , u32 mask ) 
+ static void pch_udc_disable_ep_interrupts(struct pch_udc_dev *dev , u32 mask ) 
 { unsigned long __cil_tmp3 ;
 
   {
@@ -3652,7 +3652,7 @@ __inline static void pch_udc_disable_ep_interrupts(struct pch_udc_dev *dev , u32
 }
 }
 #line 842 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_enable_ep_interrupts(struct pch_udc_dev *dev , u32 mask ) 
+ static void pch_udc_enable_ep_interrupts(struct pch_udc_dev *dev , u32 mask ) 
 { unsigned long __cil_tmp3 ;
 
   {
@@ -3667,7 +3667,7 @@ __inline static void pch_udc_enable_ep_interrupts(struct pch_udc_dev *dev , u32 
 }
 }
 #line 853 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static u32 pch_udc_read_device_interrupts(struct pch_udc_dev *dev ) 
+ static u32 pch_udc_read_device_interrupts(struct pch_udc_dev *dev ) 
 { u32 tmp ;
 
   {
@@ -3680,7 +3680,7 @@ __inline static u32 pch_udc_read_device_interrupts(struct pch_udc_dev *dev )
 }
 }
 #line 863 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_write_device_interrupts(struct pch_udc_dev *dev , u32 val ) 
+ static void pch_udc_write_device_interrupts(struct pch_udc_dev *dev , u32 val ) 
 { unsigned long __cil_tmp3 ;
 
   {
@@ -3695,7 +3695,7 @@ __inline static void pch_udc_write_device_interrupts(struct pch_udc_dev *dev , u
 }
 }
 #line 874 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static u32 pch_udc_read_ep_interrupts(struct pch_udc_dev *dev ) 
+ static u32 pch_udc_read_ep_interrupts(struct pch_udc_dev *dev ) 
 { u32 tmp ;
 
   {
@@ -3708,7 +3708,7 @@ __inline static u32 pch_udc_read_ep_interrupts(struct pch_udc_dev *dev )
 }
 }
 #line 884 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_write_ep_interrupts(struct pch_udc_dev *dev , u32 val ) 
+ static void pch_udc_write_ep_interrupts(struct pch_udc_dev *dev , u32 val ) 
 { unsigned long __cil_tmp3 ;
 
   {
@@ -3723,7 +3723,7 @@ __inline static void pch_udc_write_ep_interrupts(struct pch_udc_dev *dev , u32 v
 }
 }
 #line 895 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static u32 pch_udc_read_device_status(struct pch_udc_dev *dev ) 
+ static u32 pch_udc_read_device_status(struct pch_udc_dev *dev ) 
 { u32 tmp ;
 
   {
@@ -3736,7 +3736,7 @@ __inline static u32 pch_udc_read_device_status(struct pch_udc_dev *dev )
 }
 }
 #line 905 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static u32 pch_udc_read_ep_control(struct pch_udc_ep *ep ) 
+ static u32 pch_udc_read_ep_control(struct pch_udc_ep *ep ) 
 { u32 tmp ;
 
   {
@@ -3749,7 +3749,7 @@ __inline static u32 pch_udc_read_ep_control(struct pch_udc_ep *ep )
 }
 }
 #line 915 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_clear_ep_control(struct pch_udc_ep *ep ) 
+ static void pch_udc_clear_ep_control(struct pch_udc_ep *ep ) 
 { 
 
   {
@@ -3758,7 +3758,7 @@ __inline static void pch_udc_clear_ep_control(struct pch_udc_ep *ep )
 }
 }
 #line 925 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static u32 pch_udc_read_ep_status(struct pch_udc_ep *ep ) 
+ static u32 pch_udc_read_ep_status(struct pch_udc_ep *ep ) 
 { u32 tmp ;
 
   {
@@ -3771,7 +3771,7 @@ __inline static u32 pch_udc_read_ep_status(struct pch_udc_ep *ep )
 }
 }
 #line 935 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_clear_ep_status(struct pch_udc_ep *ep , u32 stat ) 
+ static void pch_udc_clear_ep_status(struct pch_udc_ep *ep , u32 stat ) 
 { 
 
   {
@@ -3780,7 +3780,7 @@ __inline static void pch_udc_clear_ep_status(struct pch_udc_ep *ep , u32 stat )
 }
 }
 #line 946 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void pch_udc_ep_set_nak(struct pch_udc_ep *ep ) 
+ static void pch_udc_ep_set_nak(struct pch_udc_ep *ep ) 
 { 
 
   {
@@ -19173,7 +19173,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 11643 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void spin_lock(spinlock_t *lock ) 
+ static void spin_lock(spinlock_t *lock ) 
 { 
 
   {
@@ -19188,7 +19188,7 @@ __inline static void spin_lock(spinlock_t *lock )
 }
 }
 #line 11685 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void spin_unlock(spinlock_t *lock ) 
+ static void spin_unlock(spinlock_t *lock ) 
 { 
 
   {
@@ -19203,7 +19203,7 @@ __inline static void spin_unlock(spinlock_t *lock )
 }
 }
 #line 11715 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {
@@ -19233,7 +19233,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 11817 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/1983/dscv_tempdir/dscv/ri/43_1a/drivers/usb/gadget/pch_udc.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

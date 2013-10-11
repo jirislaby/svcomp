@@ -3843,7 +3843,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/9517/dscv_tempdir/dscv/ri/43_1a/drivers/media/common/tuners/max2165.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -3857,7 +3857,7 @@ extern void __const_udelay(unsigned long  ) ;
 #line 69 "include/linux/i2c.h"
 extern int i2c_transfer(struct i2c_adapter * , struct i2c_msg * , int  ) ;
 #line 482 "include/linux/i2c.h"
-__inline static int i2c_adapter_id(struct i2c_adapter *adap ) 
+ static int i2c_adapter_id(struct i2c_adapter *adap ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -6796,7 +6796,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1004 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/9517/dscv_tempdir/dscv/ri/43_1a/drivers/media/common/tuners/max2165.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

@@ -2484,7 +2484,7 @@ int ldv_spin_trylock(void) ;
 #line 218 "include/linux/kernel.h"
 extern int kstrtoull(char const   * , unsigned int  , unsigned long long * ) ;
 #line 220 "include/linux/kernel.h"
-__inline static int kstrtoul(char const   *s , unsigned int base , unsigned long *res ) 
+ static int kstrtoul(char const   *s , unsigned int base , unsigned long *res ) 
 { int tmp ;
   unsigned long long *__cil_tmp6 ;
 
@@ -2536,7 +2536,7 @@ extern int __pm_runtime_resume(struct device * , int  ) ;
 #line 36
 extern void pm_runtime_enable(struct device * ) ;
 #line 198 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_get_sync(struct device *dev ) 
+ static int pm_runtime_get_sync(struct device *dev ) 
 { int tmp ;
 
   {
@@ -2549,7 +2549,7 @@ __inline static int pm_runtime_get_sync(struct device *dev )
 }
 }
 #line 214 "include/linux/pm_runtime.h"
-__inline static int pm_runtime_put_sync(struct device *dev ) 
+ static int pm_runtime_put_sync(struct device *dev ) 
 { int tmp ;
 
   {

@@ -839,7 +839,7 @@ void __automaton_fail(void) ;
 #line 688 "/usr/include/stdio.h"
 extern int puts(char const   *__s ) ;
 #line 11 "DecryptAutoResponder_spec.c"
-__inline void __utac_acc__DecryptAutoResponder_spec__1(int client , int msg ) 
+ void __utac_acc__DecryptAutoResponder_spec__1(int client , int msg ) 
 { int tmp ;
 
   {

@@ -4247,7 +4247,7 @@ static void edd_release(struct kobject *kobj )
 #line 649 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4515/dscv_tempdir/dscv/ri/43_1a/drivers/firmware/edd.c.p"
 static struct kset *edd_kset  ;
 #line 709 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4515/dscv_tempdir/dscv/ri/43_1a/drivers/firmware/edd.c.p"
-__inline static void edd_device_unregister(struct edd_device *edev ) 
+ static void edd_device_unregister(struct edd_device *edev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct kobject *__cil_tmp4 ;
@@ -4268,7 +4268,7 @@ __inline static void edd_device_unregister(struct edd_device *edev )
 }
 }
 #line 749 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4515/dscv_tempdir/dscv/ri/43_1a/drivers/firmware/edd.c.p"
-__inline static int edd_num_devices(void) 
+ static int edd_num_devices(void) 
 { unsigned char __max1 ;
   unsigned char __min1 ;
   unsigned char __min2 ;

@@ -5447,9 +5447,9 @@ extern int mdiobus_read(struct mii_bus *bus , int addr , u32 regnum ) ;
 #line 145
 extern int mdiobus_write(struct mii_bus *bus , int addr , u32 regnum , u16 val ) ;
 #line 460
-__inline static int phy_read(struct phy_device *phydev , u32 regnum )  __attribute__((__no_instrument_function__)) ;
+ static int phy_read(struct phy_device *phydev , u32 regnum )  __attribute__((__no_instrument_function__)) ;
 #line 460 "include/linux/phy.h"
-__inline static int phy_read(struct phy_device *phydev , u32 regnum ) 
+ static int phy_read(struct phy_device *phydev , u32 regnum ) 
 { int tmp___7 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -5480,9 +5480,9 @@ __inline static int phy_read(struct phy_device *phydev , u32 regnum )
 }
 }
 #line 475
-__inline static int phy_write(struct phy_device *phydev , u32 regnum , u16 val )  __attribute__((__no_instrument_function__)) ;
+ static int phy_write(struct phy_device *phydev , u32 regnum , u16 val )  __attribute__((__no_instrument_function__)) ;
 #line 475 "include/linux/phy.h"
-__inline static int phy_write(struct phy_device *phydev , u32 regnum , u16 val ) 
+ static int phy_write(struct phy_device *phydev , u32 regnum , u16 val ) 
 { int tmp___7 ;
   unsigned long __cil_tmp5 ;
   unsigned long __cil_tmp6 ;

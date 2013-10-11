@@ -8557,7 +8557,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/7454/dscv_tempdir/dscv/ri/43_1a/drivers/media/video/cx231xx/cx231xx-dvb.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -8567,7 +8567,7 @@ void ldv_check_alloc_nonatomic(void) ;
 #line 14
 struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 482 "include/linux/i2c.h"
-__inline static int i2c_adapter_id(struct i2c_adapter *adap ) 
+ static int i2c_adapter_id(struct i2c_adapter *adap ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -8790,7 +8790,7 @@ static struct mb86a20s_config  const  pv_mb86a20s_config  =    {(u8 )16U, (bool 
 static struct tda18271_config pv_tda18271_config  =    {& mb86a20s_tda18271_config, 0, (enum tda18271_i2c_gate )2, 0, (enum tda18271_small_i2c )3,
     (unsigned char)0, 0U};
 #line 169 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/7454/dscv_tempdir/dscv/ri/43_1a/drivers/media/video/cx231xx/cx231xx-dvb.c.p"
-__inline static void print_err_status(struct cx231xx *dev , int packet , int status ) 
+ static void print_err_status(struct cx231xx *dev , int packet , int status ) 
 { char *errmsg ;
   unsigned int *__cil_tmp5 ;
   unsigned int __cil_tmp6 ;
@@ -8938,7 +8938,7 @@ __inline static void print_err_status(struct cx231xx *dev , int packet , int sta
 }
 }
 #line 207 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/7454/dscv_tempdir/dscv/ri/43_1a/drivers/media/video/cx231xx/cx231xx-dvb.c.p"
-__inline static int dvb_isoc_copy(struct cx231xx *dev , struct urb *urb ) 
+ static int dvb_isoc_copy(struct cx231xx *dev , struct urb *urb ) 
 { int i ;
   int status ;
   struct cx231xx *__cil_tmp5 ;
@@ -9195,7 +9195,7 @@ __inline static int dvb_isoc_copy(struct cx231xx *dev , struct urb *urb )
 }
 }
 #line 241 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/7454/dscv_tempdir/dscv/ri/43_1a/drivers/media/video/cx231xx/cx231xx-dvb.c.p"
-__inline static int dvb_bulk_copy(struct cx231xx *dev , struct urb *urb ) 
+ static int dvb_bulk_copy(struct cx231xx *dev , struct urb *urb ) 
 { struct cx231xx *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -13874,7 +13874,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1258 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/7454/dscv_tempdir/dscv/ri/43_1a/drivers/media/video/cx231xx/cx231xx-dvb.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

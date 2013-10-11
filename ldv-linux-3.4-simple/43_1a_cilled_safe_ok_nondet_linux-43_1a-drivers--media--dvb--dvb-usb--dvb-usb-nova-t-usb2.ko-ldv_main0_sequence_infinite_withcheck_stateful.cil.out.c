@@ -6847,7 +6847,7 @@ struct sk_buff *ldv___netdev_alloc_skb_25(struct net_device *ldv_func_arg1 , uns
 struct sk_buff *ldv___netdev_alloc_skb_26(struct net_device *ldv_func_arg1 , unsigned int ldv_func_arg2 ,
                                           gfp_t ldv_func_arg3 ) ;
 #line 78 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/dvb-usb/dvb-usb.h"
-__inline static u8 rc5_custom(struct rc_map_table *key ) 
+ static u8 rc5_custom(struct rc_map_table *key ) 
 { u32 __cil_tmp2 ;
   u32 __cil_tmp3 ;
 
@@ -6863,7 +6863,7 @@ __inline static u8 rc5_custom(struct rc_map_table *key )
 }
 }
 #line 83 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/dvb-usb/dvb-usb.h"
-__inline static u8 rc5_data(struct rc_map_table *key ) 
+ static u8 rc5_data(struct rc_map_table *key ) 
 { u32 __cil_tmp2 ;
 
   {

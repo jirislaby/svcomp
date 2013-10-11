@@ -3121,9 +3121,9 @@ extern int ( /* format attribute */  __dynamic_pr_debug)(struct _ddebug *descrip
 #line 147 "include/linux/kernel.h"
 extern void __might_sleep(char const   *file , int line , int preempt_offset ) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3132,9 +3132,9 @@ __inline static long __attribute__((__warn_unused_result__))  PTR_ERR(void const
 }
 }
 #line 32
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr )  __attribute__((__no_instrument_function__)) ;
 #line 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
+ static long __attribute__((__warn_unused_result__))  IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3162,9 +3162,9 @@ __inline static long __attribute__((__warn_unused_result__))  IS_ERR(void const 
 }
 }
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
+ static void INIT_LIST_HEAD(struct list_head *list )  __attribute__((__no_instrument_function__)) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -3184,9 +3184,9 @@ __inline static void INIT_LIST_HEAD(struct list_head *list )
 #line 47
 extern void __list_add(struct list_head *new , struct list_head *prev , struct list_head *next ) ;
 #line 60
-__inline static void list_add(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
+ static void list_add(struct list_head *new , struct list_head *head )  __attribute__((__no_instrument_function__)) ;
 #line 60 "include/linux/list.h"
-__inline static void list_add(struct list_head *new , struct list_head *head ) 
+ static void list_add(struct list_head *new , struct list_head *head ) 
 { struct list_head *__cil_tmp3 ;
 
   {
@@ -3219,9 +3219,9 @@ extern void init_timer_key(struct timer_list *timer , char const   *name , struc
 #line 295
 extern unsigned long round_jiffies_relative(unsigned long j ) ;
 #line 97 "include/linux/workqueue.h"
-__inline static struct delayed_work *to_delayed_work(struct work_struct *work )  __attribute__((__no_instrument_function__)) ;
+ static struct delayed_work *to_delayed_work(struct work_struct *work )  __attribute__((__no_instrument_function__)) ;
 #line 97 "include/linux/workqueue.h"
-__inline static struct delayed_work *to_delayed_work(struct work_struct *work ) 
+ static struct delayed_work *to_delayed_work(struct work_struct *work ) 
 { struct work_struct  const  *__mptr ;
   struct delayed_work *__cil_tmp3 ;
   struct work_struct *__cil_tmp4 ;
@@ -3260,9 +3260,9 @@ extern bool cancel_delayed_work_sync(struct delayed_work *dwork ) ;
 #line 324 "include/linux/gfp.h"
 extern struct page *alloc_pages_current(gfp_t gfp_mask , unsigned int order ) ;
 #line 326
-__inline static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order )  __attribute__((__no_instrument_function__)) ;
+ static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order )  __attribute__((__no_instrument_function__)) ;
 #line 326 "include/linux/gfp.h"
-__inline static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) 
+ static struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) 
 { struct page *tmp ;
 
   {

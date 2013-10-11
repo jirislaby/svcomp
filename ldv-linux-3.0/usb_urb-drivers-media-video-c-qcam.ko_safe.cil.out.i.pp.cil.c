@@ -5940,7 +5940,7 @@ extern size_t strlcpy(char * , char const   * , size_t  ) ;
 #line 217 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/thread_info.h"
 extern unsigned long kernel_stack  __attribute__((__section__(".data..percpu"))) ;
 #line 219 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/thread_info.h"
-__inline static struct thread_info *current_thread_info(void) 
+ static struct thread_info *current_thread_info(void) 
 { struct thread_info *ti ;
   unsigned long pfo_ret__ ;
   int __cil_tmp3 ;
@@ -6085,7 +6085,7 @@ extern unsigned long msecs_to_jiffies(unsigned int m ) ;
 #line 830 "include/linux/rcupdate.h"
 extern void kfree(void const   * ) ;
 #line 80 "include/linux/kobject.h"
-__inline static char const   *kobject_name(struct kobject  const  *kobj ) 
+ static char const   *kobject_name(struct kobject  const  *kobj ) 
 { char const   *__cil_tmp2 ;
 
   {
@@ -6116,7 +6116,7 @@ extern unsigned long msleep_interruptible(unsigned int msecs ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -6130,7 +6130,7 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -6173,7 +6173,7 @@ extern unsigned long __attribute__((__warn_unused_result__))  copy_user_generic_
                                                                                          void const   *from ,
                                                                                          unsigned int len ) ;
 #line 24 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_user_generic)(void *to ,
+ static unsigned long __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_user_generic)(void *to ,
                                                                                                                                void const   *from ,
                                                                                                                                unsigned int len ) 
 { unsigned int ret ;
@@ -6217,7 +6217,7 @@ __inline static unsigned long __attribute__((__warn_unused_result__))  ( __attri
 }
 }
 #line 114 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) __copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) __copy_to_user)(void *dst ,
                                                                                                                   void const   *src ,
                                                                                                                   unsigned int size ) 
 { int ret ;
@@ -6678,7 +6678,7 @@ __inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__
 }
 }
 #line 608 "include/linux/device.h"
-__inline static char const   *dev_name(struct device  const  *dev ) 
+ static char const   *dev_name(struct device  const  *dev ) 
 { char const   *tmp___7 ;
   char const   *__cil_tmp3 ;
   struct kobject  const  *__cil_tmp4 ;
@@ -6716,7 +6716,7 @@ extern int __attribute__((__warn_unused_result__))  __video_register_device(stru
                                                                             int warn_if_nr_in_use ,
                                                                             struct module *owner ) ;
 #line 143 "include/media/v4l2-dev.h"
-__inline static int __attribute__((__warn_unused_result__))  video_register_device(struct video_device *vdev ,
+ static int __attribute__((__warn_unused_result__))  video_register_device(struct video_device *vdev ,
                                                                                    int type ,
                                                                                    int nr ) 
 { int tmp___7 ;
@@ -6750,7 +6750,7 @@ extern void video_unregister_device(struct video_device *vdev ) ;
 #line 171
 extern void video_device_release_empty(struct video_device *vdev ) ;
 #line 174 "include/media/v4l2-dev.h"
-__inline static void *video_get_drvdata(struct video_device *vdev ) 
+ static void *video_get_drvdata(struct video_device *vdev ) 
 { void *tmp___7 ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -6769,7 +6769,7 @@ __inline static void *video_get_drvdata(struct video_device *vdev )
 }
 }
 #line 179 "include/media/v4l2-dev.h"
-__inline static void video_set_drvdata(struct video_device *vdev , void *data ) 
+ static void video_set_drvdata(struct video_device *vdev , void *data ) 
 { struct device *__cil_tmp3 ;
 
   {
@@ -6786,7 +6786,7 @@ __inline static void video_set_drvdata(struct video_device *vdev , void *data )
 #line 184
 extern struct video_device *video_devdata(struct file *file ) ;
 #line 188 "include/media/v4l2-dev.h"
-__inline static void *video_drvdata(struct file *file ) 
+ static void *video_drvdata(struct file *file ) 
 { struct video_device *tmp___7 ;
   void *tmp___8 ;
 
@@ -6802,7 +6802,7 @@ __inline static void *video_drvdata(struct file *file )
 }
 }
 #line 193 "include/media/v4l2-dev.h"
-__inline static char const   *video_device_node_name(struct video_device *vdev ) 
+ static char const   *video_device_node_name(struct video_device *vdev ) 
 { char const   *tmp___7 ;
   struct device *__cil_tmp3 ;
   struct device  const  *__cil_tmp4 ;
@@ -6965,7 +6965,7 @@ static struct qcam *qcams[4]  ;
 #line 90 "/anthill/stuff/tacas-comp/work/current--X--drivers/media/video/c-qcam.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/media/video/c-qcam.c.common.c"
 static unsigned int num_cams  ;
 #line 92 "/anthill/stuff/tacas-comp/work/current--X--drivers/media/video/c-qcam.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/media/video/c-qcam.c.common.c"
-__inline static void qcam_set_ack(struct qcam *qcam , unsigned int i ) 
+ static void qcam_set_ack(struct qcam *qcam , unsigned int i ) 
 { int tmp___7 ;
   struct parport *__cil_tmp4 ;
   struct parport_operations *__cil_tmp5 ;
@@ -7001,7 +7001,7 @@ __inline static void qcam_set_ack(struct qcam *qcam , unsigned int i )
 }
 }
 #line 99 "/anthill/stuff/tacas-comp/work/current--X--drivers/media/video/c-qcam.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/media/video/c-qcam.c.common.c"
-__inline static unsigned int qcam_ready1(struct qcam *qcam ) 
+ static unsigned int qcam_ready1(struct qcam *qcam ) 
 { int tmp___8 ;
   unsigned char tmp___9 ;
   struct parport *__cil_tmp4 ;
@@ -7040,7 +7040,7 @@ __inline static unsigned int qcam_ready1(struct qcam *qcam )
 }
 }
 #line 104 "/anthill/stuff/tacas-comp/work/current--X--drivers/media/video/c-qcam.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/media/video/c-qcam.c.common.c"
-__inline static unsigned int qcam_ready2(struct qcam *qcam ) 
+ static unsigned int qcam_ready2(struct qcam *qcam ) 
 { int tmp___8 ;
   unsigned char tmp___9 ;
   struct parport *__cil_tmp4 ;
@@ -7556,7 +7556,7 @@ static int qcam_write_data(struct qcam *qcam , unsigned int data )
 }
 }
 #line 192 "/anthill/stuff/tacas-comp/work/current--X--drivers/media/video/c-qcam.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/media/video/c-qcam.c.common.c"
-__inline static int qcam_set(struct qcam *qcam , unsigned int cmd , unsigned int data ) 
+ static int qcam_set(struct qcam *qcam , unsigned int cmd , unsigned int data ) 
 { int tmp___7 ;
   int tmp___8 ;
 
@@ -7588,7 +7588,7 @@ __inline static int qcam_set(struct qcam *qcam , unsigned int cmd , unsigned int
 }
 }
 #line 201 "/anthill/stuff/tacas-comp/work/current--X--drivers/media/video/c-qcam.ko--X--bulklinux-3.0.1--X--68_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/68_1/drivers/media/video/c-qcam.c.common.c"
-__inline static int qcam_get(struct qcam *qcam , unsigned int cmd ) 
+ static int qcam_get(struct qcam *qcam , unsigned int cmd ) 
 { int tmp___7 ;
   int tmp___8 ;
 

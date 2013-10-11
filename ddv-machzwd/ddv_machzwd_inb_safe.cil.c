@@ -617,7 +617,7 @@ void __VERIFIER_assert(int phi , char *txt ) ;
 #line 12 "/ddverify-2010-04-30/models/seq1/include/ddverify/ddverify.h"
 int current_execution_context  ;
 #line 32 "/ddverify-2010-04-30/models/seq1/include/ddverify/ddverify.h"
-__inline static int assert_context_process(void) 
+ static int assert_context_process(void) 
 { 
 
   {
@@ -634,47 +634,47 @@ int call_ddv(void) ;
 #line 7 "/ddverify-2010-04-30/models/seq1/include/linux/jiffies.h"
 unsigned long jiffies  ;
 #line 26 "/ddverify-2010-04-30/models/seq1/include/linux/timer.h"
-__inline void init_timer(struct timer_list *timer ) ;
+ void init_timer(struct timer_list *timer ) ;
 #line 27
-__inline void add_timer_on(struct timer_list *timer , int cpu ) ;
+ void add_timer_on(struct timer_list *timer , int cpu ) ;
 #line 28
-__inline void add_timer(struct timer_list *timer ) ;
+ void add_timer(struct timer_list *timer ) ;
 #line 29
-__inline int del_timer(struct timer_list *timer ) ;
+ int del_timer(struct timer_list *timer ) ;
 #line 30
-__inline int mod_timer(struct timer_list *timer , unsigned long expires ) ;
+ int mod_timer(struct timer_list *timer , unsigned long expires ) ;
 #line 9 "/ddverify-2010-04-30/models/seq1/include/linux/spinlock.h"
-__inline void spin_lock_init(spinlock_t *lock ) ;
+ void spin_lock_init(spinlock_t *lock ) ;
 #line 10
-__inline void spin_lock(spinlock_t *lock ) ;
+ void spin_lock(spinlock_t *lock ) ;
 #line 11
-__inline void spin_lock_irqsave(spinlock_t *lock , unsigned long flags ) ;
+ void spin_lock_irqsave(spinlock_t *lock , unsigned long flags ) ;
 #line 12
-__inline void spin_lock_irq(spinlock_t *lock ) ;
+ void spin_lock_irq(spinlock_t *lock ) ;
 #line 13
-__inline void spin_lock_bh(spinlock_t *lock ) ;
+ void spin_lock_bh(spinlock_t *lock ) ;
 #line 15
-__inline void spin_unlock(spinlock_t *lock ) ;
+ void spin_unlock(spinlock_t *lock ) ;
 #line 16
-__inline void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 17
-__inline void spin_unlock_irq(spinlock_t *lock ) ;
+ void spin_unlock_irq(spinlock_t *lock ) ;
 #line 18
-__inline void spin_unlock_bh(spinlock_t *lock ) ;
+ void spin_unlock_bh(spinlock_t *lock ) ;
 #line 62 "/ddverify-2010-04-30/models/seq1/include/linux/wait.h"
-__inline void init_waitqueue_head(wait_queue_head_t *q ) ;
+ void init_waitqueue_head(wait_queue_head_t *q ) ;
 #line 69
-__inline void wake_up(wait_queue_head_t *q ) ;
+ void wake_up(wait_queue_head_t *q ) ;
 #line 71
-__inline void wake_up_all(wait_queue_head_t *q ) ;
+ void wake_up_all(wait_queue_head_t *q ) ;
 #line 73
-__inline void wake_up_interruptible(wait_queue_head_t *q ) ;
+ void wake_up_interruptible(wait_queue_head_t *q ) ;
 #line 86
-__inline void sleep_on(wait_queue_head_t *q ) ;
+ void sleep_on(wait_queue_head_t *q ) ;
 #line 88
-__inline void interruptible_sleep_on(wait_queue_head_t *q ) ;
+ void interruptible_sleep_on(wait_queue_head_t *q ) ;
 #line 186 "/ddverify-2010-04-30/models/seq1/include/ddverify/pthread.h"
-__inline extern int pthread_mutex_init(pthread_mutex_t *__mutex , pthread_mutexattr_t const   *__mutex_attr ) 
+ extern int pthread_mutex_init(pthread_mutex_t *__mutex , pthread_mutexattr_t const   *__mutex_attr ) 
 { pthread_mutex_t i ;
 
   {
@@ -687,7 +687,7 @@ __inline extern int pthread_mutex_init(pthread_mutex_t *__mutex , pthread_mutexa
 }
 }
 #line 194 "/ddverify-2010-04-30/models/seq1/include/ddverify/pthread.h"
-__inline extern int pthread_mutex_destroy(pthread_mutex_t *__mutex ) 
+ extern int pthread_mutex_destroy(pthread_mutex_t *__mutex ) 
 { 
 
   {
@@ -700,7 +700,7 @@ void __VERIFIER_atomic_begin(void) ;
 #line 201
 void __VERIFIER_atomic_end(void) ;
 #line 203 "/ddverify-2010-04-30/models/seq1/include/ddverify/pthread.h"
-__inline extern int pthread_mutex_lock(pthread_mutex_t *__mutex ) 
+ extern int pthread_mutex_lock(pthread_mutex_t *__mutex ) 
 { _Bool __cil_tmp2 ;
   int __cil_tmp3 ;
 
@@ -724,7 +724,7 @@ __inline extern int pthread_mutex_lock(pthread_mutex_t *__mutex )
 }
 }
 #line 213 "/ddverify-2010-04-30/models/seq1/include/ddverify/pthread.h"
-__inline extern int pthread_mutex_unlock(pthread_mutex_t *__mutex ) 
+ extern int pthread_mutex_unlock(pthread_mutex_t *__mutex ) 
 { 
 
   {
@@ -763,15 +763,15 @@ sector_t __VERIFIER_nondet_sector_t(void) ;
 #line 28
 char *__VERIFIER_nondet_pchar(void) ;
 #line 55 "/ddverify-2010-04-30/models/seq1/include/linux/gfp.h"
-__inline unsigned long __get_free_pages(gfp_t gfp_mask , unsigned int order ) ;
+ unsigned long __get_free_pages(gfp_t gfp_mask , unsigned int order ) ;
 #line 57
-__inline unsigned long __get_free_page(gfp_t gfp_mask ) ;
+ unsigned long __get_free_page(gfp_t gfp_mask ) ;
 #line 59
-__inline unsigned long get_zeroed_page(gfp_t gfp_mask ) ;
+ unsigned long get_zeroed_page(gfp_t gfp_mask ) ;
 #line 70
-__inline struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) ;
+ struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) ;
 #line 72
-__inline struct page *alloc_page(gfp_t gfp_mask ) ;
+ struct page *alloc_page(gfp_t gfp_mask ) ;
 #line 8 "/ddverify-2010-04-30/models/seq1/include/linux/slab.h"
 void kfree(void const   *addr ) ;
 #line 10
@@ -795,28 +795,28 @@ int misc_register(struct miscdevice *misc ) ;
 #line 41
 int misc_deregister(struct miscdevice *misc ) ;
 #line 23 "/ddverify-2010-04-30/models/seq1/include/asm/semaphore.h"
-__inline void sema_init(struct semaphore *sem , int val ) ;
+ void sema_init(struct semaphore *sem , int val ) ;
 #line 25
-__inline void init_MUTEX(struct semaphore *sem ) ;
+ void init_MUTEX(struct semaphore *sem ) ;
 #line 27
-__inline void init_MUTEX_LOCKED(struct semaphore *sem ) ;
+ void init_MUTEX_LOCKED(struct semaphore *sem ) ;
 #line 29
-__inline void down(struct semaphore *sem ) ;
+ void down(struct semaphore *sem ) ;
 #line 31
-__inline int down_interruptible(struct semaphore *sem ) ;
+ int down_interruptible(struct semaphore *sem ) ;
 #line 33
-__inline int down_trylock(struct semaphore *sem ) ;
+ int down_trylock(struct semaphore *sem ) ;
 #line 35
-__inline void up(struct semaphore *sem ) ;
+ void up(struct semaphore *sem ) ;
 #line 195 "/ddverify-2010-04-30/models/seq1/include/linux/fs.h"
-__inline int alloc_chrdev_region(dev_t *dev , unsigned int baseminor , unsigned int count ,
+ int alloc_chrdev_region(dev_t *dev , unsigned int baseminor , unsigned int count ,
                                  char const   *name ) ;
 #line 196
-__inline int register_chrdev_region(dev_t from , unsigned int count , char const   *name ) ;
+ int register_chrdev_region(dev_t from , unsigned int count , char const   *name ) ;
 #line 199
-__inline int register_chrdev(unsigned int major , char const   *name , struct file_operations *fops ) ;
+ int register_chrdev(unsigned int major , char const   *name , struct file_operations *fops ) ;
 #line 200
-__inline int unregister_chrdev(unsigned int major , char const   *name ) ;
+ int unregister_chrdev(unsigned int major , char const   *name ) ;
 #line 207
 int register_blkdev(unsigned int major , char const   *name ) ;
 #line 208
@@ -826,10 +826,10 @@ loff_t no_llseek(struct file *file , loff_t offset , int origin ) ;
 #line 233
 int nonseekable_open(struct inode *inode , struct file *filp ) ;
 #line 90 "/ddverify-2010-04-30/models/seq1/include/linux/ioport.h"
-__inline struct resource *request_region(unsigned long start , unsigned long len ,
+ struct resource *request_region(unsigned long start , unsigned long len ,
                                          char const   *name ) ;
 #line 92
-__inline void release_region(unsigned long start , unsigned long len ) ;
+ void release_region(unsigned long start , unsigned long len ) ;
 #line 96
 struct resource *request_mem_region(unsigned long start , unsigned long len , char const   *name ) ;
 #line 98
@@ -839,41 +839,41 @@ int register_reboot_notifier(struct notifier_block *dummy ) ;
 #line 41
 int unregister_reboot_notifier(struct notifier_block *dummy ) ;
 #line 14 "/ddverify-2010-04-30/models/seq1/include/asm/io.h"
-__inline unsigned char inb(unsigned int port ) ;
+ unsigned char inb(unsigned int port ) ;
 #line 15
-__inline void outb(unsigned char byte , unsigned int port ) ;
+ void outb(unsigned char byte , unsigned int port ) ;
 #line 16
-__inline unsigned short inw(unsigned int port ) ;
+ unsigned short inw(unsigned int port ) ;
 #line 17
-__inline void outw(unsigned short word , unsigned int port ) ;
+ void outw(unsigned short word , unsigned int port ) ;
 #line 18
-__inline unsigned int inl(unsigned int port ) ;
+ unsigned int inl(unsigned int port ) ;
 #line 19
-__inline void outl(unsigned int doubleword , unsigned int port ) ;
+ void outl(unsigned int doubleword , unsigned int port ) ;
 #line 23
-__inline unsigned char inb_p(unsigned int port ) ;
+ unsigned char inb_p(unsigned int port ) ;
 #line 24
-__inline void outb_p(unsigned char byte , unsigned int port ) ;
+ void outb_p(unsigned char byte , unsigned int port ) ;
 #line 25
-__inline unsigned short inw_p(unsigned int port ) ;
+ unsigned short inw_p(unsigned int port ) ;
 #line 26
-__inline void outw_p(unsigned short word , unsigned int port ) ;
+ void outw_p(unsigned short word , unsigned int port ) ;
 #line 27
-__inline unsigned int inl_p(unsigned int port ) ;
+ unsigned int inl_p(unsigned int port ) ;
 #line 28
-__inline void outl_p(unsigned int doubleword , unsigned int port ) ;
+ void outl_p(unsigned int doubleword , unsigned int port ) ;
 #line 41 "/ddverify-2010-04-30/models/seq1/include/asm/uaccess.h"
-__inline int __get_user(int size , void *ptr ) ;
+ int __get_user(int size , void *ptr ) ;
 #line 43
-__inline int get_user(int size , void *ptr ) ;
+ int get_user(int size , void *ptr ) ;
 #line 46
-__inline int __put_user(int size , void *ptr ) ;
+ int __put_user(int size , void *ptr ) ;
 #line 48
-__inline int put_user(int size , void *ptr ) ;
+ int put_user(int size , void *ptr ) ;
 #line 51
-__inline unsigned long copy_to_user(void *to , void const   *from , unsigned long n ) ;
+ unsigned long copy_to_user(void *to , void const   *from , unsigned long n ) ;
 #line 53
-__inline unsigned long copy_from_user(void *to , void *from , unsigned long n ) ;
+ unsigned long copy_from_user(void *to , void *from , unsigned long n ) ;
 #line 84 "machzwd.c"
 static unsigned short zf_readw(unsigned char port ) 
 { unsigned short tmp ;
@@ -989,7 +989,7 @@ static struct timer_list zf_timer  ;
 #line 127 "machzwd.c"
 static unsigned long next_heartbeat  =    0UL;
 #line 146 "machzwd.c"
-__inline static void zf_set_status(unsigned char new ) 
+ static void zf_set_status(unsigned char new ) 
 { 
 
   {
@@ -1004,7 +1004,7 @@ __inline static void zf_set_status(unsigned char new )
 }
 }
 #line 154 "machzwd.c"
-__inline static unsigned short zf_get_control(void) 
+ static unsigned short zf_get_control(void) 
 { unsigned short tmp ;
 
   {
@@ -1017,7 +1017,7 @@ __inline static unsigned short zf_get_control(void)
 }
 }
 #line 159 "machzwd.c"
-__inline static void zf_set_control(unsigned short new ) 
+ static void zf_set_control(unsigned short new ) 
 { 
 
   {
@@ -1032,7 +1032,7 @@ __inline static void zf_set_control(unsigned short new )
 }
 }
 #line 170 "machzwd.c"
-__inline static void zf_set_timer(unsigned short new , unsigned char n ) 
+ static void zf_set_timer(unsigned short new , unsigned char n ) 
 { int tmp ;
   int __cil_tmp4 ;
   unsigned char __cil_tmp5 ;
@@ -1798,13 +1798,13 @@ int main(void)
 }
 }
 #line 11 "/ddverify-2010-04-30/models/seq1/include/linux/cdev.h"
-__inline void cdev_init(struct cdev *cdev , struct file_operations *fops ) ;
+ void cdev_init(struct cdev *cdev , struct file_operations *fops ) ;
 #line 13
-__inline struct cdev *cdev_alloc(void) ;
+ struct cdev *cdev_alloc(void) ;
 #line 17
-__inline int cdev_add(struct cdev *p , dev_t dev , unsigned int count ) ;
+ int cdev_add(struct cdev *p , dev_t dev , unsigned int count ) ;
 #line 19
-__inline void cdev_del(struct cdev *p ) ;
+ void cdev_del(struct cdev *p ) ;
 #line 12 "/ddverify-2010-04-30/models/seq1/include/ddverify/fixed_cdev.h"
 struct cdev fixed_cdev[1]  ;
 #line 13 "/ddverify-2010-04-30/models/seq1/include/ddverify/fixed_cdev.h"
@@ -1822,17 +1822,17 @@ void del_gendisk(struct gendisk *gp ) ;
 #line 37
 struct gendisk *alloc_disk(int minors ) ;
 #line 46 "/ddverify-2010-04-30/models/seq1/include/linux/workqueue.h"
-__inline int schedule_work(struct work_struct *work ) ;
+ int schedule_work(struct work_struct *work ) ;
 #line 32 "/ddverify-2010-04-30/models/seq1/include/linux/mutex.h"
-__inline void mutex_init(struct mutex *lock ) ;
+ void mutex_init(struct mutex *lock ) ;
 #line 34
-__inline void mutex_lock(struct mutex *lock ) ;
+ void mutex_lock(struct mutex *lock ) ;
 #line 36
-__inline void mutex_unlock(struct mutex *lock ) ;
+ void mutex_unlock(struct mutex *lock ) ;
 #line 50 "/ddverify-2010-04-30/models/seq1/include/linux/interrupt.h"
-__inline void tasklet_schedule(struct tasklet_struct *t ) ;
+ void tasklet_schedule(struct tasklet_struct *t ) ;
 #line 65
-__inline void tasklet_init(struct tasklet_struct *t , void (*func)(unsigned long  ) ,
+ void tasklet_init(struct tasklet_struct *t , void (*func)(unsigned long  ) ,
                            unsigned long data ) ;
 #line 75
 int request_irq(unsigned int irq , irqreturn_t (*handler)(int  , void * , struct pt_regs * ) ,
@@ -1862,21 +1862,21 @@ struct ddv_genhd genhd_registered[10]  ;
 #line 27
 void call_genhd_functions(void) ;
 #line 87 "/ddverify-2010-04-30/models/seq1/include/linux/pci.h"
-__inline struct pci_dev *pci_get_class(unsigned int class , struct pci_dev *from ) ;
+ struct pci_dev *pci_get_class(unsigned int class , struct pci_dev *from ) ;
 #line 141
-__inline int pci_register_driver(struct pci_driver *driver ) ;
+ int pci_register_driver(struct pci_driver *driver ) ;
 #line 143
-__inline void pci_unregister_driver(struct pci_driver *driver ) ;
+ void pci_unregister_driver(struct pci_driver *driver ) ;
 #line 145
-__inline int pci_enable_device(struct pci_dev *dev ) ;
+ int pci_enable_device(struct pci_dev *dev ) ;
 #line 152
-__inline int pci_request_regions(struct pci_dev *pdev , char const   *res_name ) ;
+ int pci_request_regions(struct pci_dev *pdev , char const   *res_name ) ;
 #line 154
-__inline void pci_release_regions(struct pci_dev *pdev ) ;
+ void pci_release_regions(struct pci_dev *pdev ) ;
 #line 156
-__inline int pci_request_region(struct pci_dev *pdev , int bar , char const   *res_name ) ;
+ int pci_request_region(struct pci_dev *pdev , int bar , char const   *res_name ) ;
 #line 158
-__inline void pci_release_region(struct pci_dev *pdev , int bar ) ;
+ void pci_release_region(struct pci_dev *pdev , int bar ) ;
 #line 14 "/ddverify-2010-04-30/models/seq1/include/ddverify/pci.h"
 struct ddv_pci_driver registered_pci_driver  ;
 #line 16
@@ -1904,7 +1904,7 @@ void call_timer_functions(void) ;
 #line 8 "/ddverify-2010-04-30/models/seq1/include/ddverify/workqueue.h"
 struct work_struct *shared_workqueue[10]  ;
 #line 10
-__inline void call_shared_workqueue_functions(void) ;
+ void call_shared_workqueue_functions(void) ;
 #line 7 "/ddverify-2010-04-30/models/seq1/include/linux/smp_lock.h"
 spinlock_t kernel_lock  ;
 #line 26 "concatenated.c"
@@ -3208,7 +3208,7 @@ void call_timer_functions(void)
 }
 }
 #line 523 "concatenated.c"
-__inline int pci_enable_device(struct pci_dev *dev ) 
+ int pci_enable_device(struct pci_dev *dev ) 
 { int i ;
   unsigned int tmp ;
   unsigned short tmp___0 ;
@@ -3254,7 +3254,7 @@ __inline int pci_enable_device(struct pci_dev *dev )
 }
 }
 #line 534 "concatenated.c"
-__inline struct pci_dev *pci_get_class(unsigned int class , struct pci_dev *from ) 
+ struct pci_dev *pci_get_class(unsigned int class , struct pci_dev *from ) 
 { void *tmp ;
   int tmp___0 ;
   void *__cil_tmp5 ;
@@ -3320,7 +3320,7 @@ __inline struct pci_dev *pci_get_class(unsigned int class , struct pci_dev *from
 }
 }
 #line 552 "concatenated.c"
-__inline int pci_register_driver(struct pci_driver *driver ) 
+ int pci_register_driver(struct pci_driver *driver ) 
 { int tmp ;
   unsigned long __cil_tmp3 ;
 
@@ -3348,7 +3348,7 @@ __inline int pci_register_driver(struct pci_driver *driver )
 }
 }
 #line 565 "concatenated.c"
-__inline void pci_unregister_driver(struct pci_driver *driver ) 
+ void pci_unregister_driver(struct pci_driver *driver ) 
 { void *__cil_tmp2 ;
 
   {
@@ -3363,7 +3363,7 @@ __inline void pci_unregister_driver(struct pci_driver *driver )
 }
 }
 #line 571 "concatenated.c"
-__inline void pci_release_region(struct pci_dev *pdev , int bar ) 
+ void pci_release_region(struct pci_dev *pdev , int bar ) 
 { unsigned long tmp ;
   unsigned long tmp___0 ;
   unsigned long tmp___1 ;
@@ -3549,7 +3549,7 @@ __inline void pci_release_region(struct pci_dev *pdev , int bar )
 }
 }
 #line 583 "concatenated.c"
-__inline int pci_request_region(struct pci_dev *pdev , int bar , char const   *res_name ) 
+ int pci_request_region(struct pci_dev *pdev , int bar , char const   *res_name ) 
 { unsigned long tmp ;
   unsigned long tmp___0 ;
   struct resource *tmp___1 ;
@@ -3751,7 +3751,7 @@ __inline int pci_request_region(struct pci_dev *pdev , int bar , char const   *r
 }
 }
 #line 602 "concatenated.c"
-__inline void pci_release_regions(struct pci_dev *pdev ) 
+ void pci_release_regions(struct pci_dev *pdev ) 
 { int i ;
 
   {
@@ -3781,7 +3781,7 @@ __inline void pci_release_regions(struct pci_dev *pdev )
 }
 }
 #line 610 "concatenated.c"
-__inline int pci_request_regions(struct pci_dev *pdev , char const   *res_name ) 
+ int pci_request_regions(struct pci_dev *pdev , char const   *res_name ) 
 { int i ;
   int tmp ;
 
@@ -3840,7 +3840,7 @@ __inline int pci_request_regions(struct pci_dev *pdev , char const   *res_name )
 }
 }
 #line 629 "concatenated.c"
-__inline int __get_user(int size , void *ptr ) 
+ int __get_user(int size , void *ptr ) 
 { int tmp ;
 
   {
@@ -3855,7 +3855,7 @@ __inline int __get_user(int size , void *ptr )
 }
 }
 #line 637 "concatenated.c"
-__inline int get_user(int size , void *ptr ) 
+ int get_user(int size , void *ptr ) 
 { int tmp ;
 
   {
@@ -3870,7 +3870,7 @@ __inline int get_user(int size , void *ptr )
 }
 }
 #line 645 "concatenated.c"
-__inline int __put_user(int size , void *ptr ) 
+ int __put_user(int size , void *ptr ) 
 { int tmp ;
 
   {
@@ -3885,7 +3885,7 @@ __inline int __put_user(int size , void *ptr )
 }
 }
 #line 653 "concatenated.c"
-__inline int put_user(int size , void *ptr ) 
+ int put_user(int size , void *ptr ) 
 { int tmp ;
 
   {
@@ -3900,7 +3900,7 @@ __inline int put_user(int size , void *ptr )
 }
 }
 #line 661 "concatenated.c"
-__inline unsigned long copy_to_user(void *to , void const   *from , unsigned long n ) 
+ unsigned long copy_to_user(void *to , void const   *from , unsigned long n ) 
 { unsigned long tmp ;
 
   {
@@ -3915,7 +3915,7 @@ __inline unsigned long copy_to_user(void *to , void const   *from , unsigned lon
 }
 }
 #line 669 "concatenated.c"
-__inline unsigned long copy_from_user(void *to , void *from , unsigned long n ) 
+ unsigned long copy_from_user(void *to , void *from , unsigned long n ) 
 { unsigned long tmp ;
 
   {
@@ -4447,7 +4447,7 @@ void tty_set_operations(struct tty_driver *driver , struct tty_operations  const
 }
 }
 #line 890 "concatenated.c"
-__inline int alloc_chrdev_region(dev_t *dev , unsigned int baseminor , unsigned int count ,
+ int alloc_chrdev_region(dev_t *dev , unsigned int baseminor , unsigned int count ,
                                  char const   *name ) 
 { int major ;
   int return_value ;
@@ -4504,7 +4504,7 @@ __inline int alloc_chrdev_region(dev_t *dev , unsigned int baseminor , unsigned 
 }
 }
 #line 904 "concatenated.c"
-__inline int register_chrdev_region(dev_t from , unsigned int count , char const   *name ) 
+ int register_chrdev_region(dev_t from , unsigned int count , char const   *name ) 
 { int return_value ;
   int tmp ;
   int tmp___0 ;
@@ -4539,7 +4539,7 @@ __inline int register_chrdev_region(dev_t from , unsigned int count , char const
 }
 }
 #line 914 "concatenated.c"
-__inline int register_chrdev(unsigned int major , char const   *name , struct file_operations *fops ) 
+ int register_chrdev(unsigned int major , char const   *name , struct file_operations *fops ) 
 { struct cdev *cdev ;
   int err ;
   int tmp ;
@@ -4581,7 +4581,7 @@ __inline int register_chrdev(unsigned int major , char const   *name , struct fi
 }
 }
 #line 937 "concatenated.c"
-__inline int unregister_chrdev(unsigned int major , char const   *name ) 
+ int unregister_chrdev(unsigned int major , char const   *name ) 
 { 
 
   {
@@ -4590,7 +4590,7 @@ __inline int unregister_chrdev(unsigned int major , char const   *name )
 }
 }
 #line 942 "concatenated.c"
-__inline struct cdev *cdev_alloc(void) 
+ struct cdev *cdev_alloc(void) 
 { int tmp ;
 
   {
@@ -4610,7 +4610,7 @@ __inline struct cdev *cdev_alloc(void)
 }
 }
 #line 949 "concatenated.c"
-__inline void cdev_init(struct cdev *cdev , struct file_operations *fops ) 
+ void cdev_init(struct cdev *cdev , struct file_operations *fops ) 
 { 
 
   {
@@ -4621,7 +4621,7 @@ __inline void cdev_init(struct cdev *cdev , struct file_operations *fops )
 }
 }
 #line 954 "concatenated.c"
-__inline int cdev_add(struct cdev *p , dev_t dev , unsigned int count ) 
+ int cdev_add(struct cdev *p , dev_t dev , unsigned int count ) 
 { int return_value ;
   int tmp ;
   int tmp___0 ;
@@ -4692,7 +4692,7 @@ __inline int cdev_add(struct cdev *p , dev_t dev , unsigned int count )
 }
 }
 #line 979 "concatenated.c"
-__inline void cdev_del(struct cdev *p ) 
+ void cdev_del(struct cdev *p ) 
 { int i ;
   int __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4740,7 +4740,7 @@ __inline void cdev_del(struct cdev *p )
 }
 }
 #line 994 "concatenated.c"
-__inline void mutex_init(struct mutex *lock ) 
+ void mutex_init(struct mutex *lock ) 
 { 
 
   {
@@ -4753,7 +4753,7 @@ __inline void mutex_init(struct mutex *lock )
 }
 }
 #line 1004 "concatenated.c"
-__inline void mutex_lock(struct mutex *lock ) 
+ void mutex_lock(struct mutex *lock ) 
 { 
 
   {
@@ -4772,7 +4772,7 @@ __inline void mutex_lock(struct mutex *lock )
 }
 }
 #line 1017 "concatenated.c"
-__inline void mutex_unlock(struct mutex *lock ) 
+ void mutex_unlock(struct mutex *lock ) 
 { 
 
   {
@@ -4791,7 +4791,7 @@ int ddv_ioport_request_start  ;
 #line 1032 "concatenated.c"
 int ddv_ioport_request_len  ;
 #line 1034 "concatenated.c"
-__inline struct resource *request_region(unsigned long start , unsigned long len ,
+ struct resource *request_region(unsigned long start , unsigned long len ,
                                          char const   *name ) 
 { struct resource *resource ;
   void *tmp ;
@@ -4815,7 +4815,7 @@ __inline struct resource *request_region(unsigned long start , unsigned long len
 }
 }
 #line 1048 "concatenated.c"
-__inline void release_region(unsigned long start , unsigned long len ) 
+ void release_region(unsigned long start , unsigned long len ) 
 { unsigned int i ;
 
   {
@@ -4830,7 +4830,7 @@ __inline void release_region(unsigned long start , unsigned long len )
 }
 }
 #line 1060 "concatenated.c"
-__inline unsigned char inb(unsigned int port ) 
+ unsigned char inb(unsigned int port ) 
 { int tmp ;
   unsigned char tmp___0 ;
   unsigned int __cil_tmp4 ;
@@ -4876,7 +4876,7 @@ __inline unsigned char inb(unsigned int port )
 }
 }
 #line 1068 "concatenated.c"
-__inline void outb(unsigned char byte , unsigned int port ) 
+ void outb(unsigned char byte , unsigned int port ) 
 { 
 
   {
@@ -4885,7 +4885,7 @@ __inline void outb(unsigned char byte , unsigned int port )
 }
 }
 #line 1072 "concatenated.c"
-__inline unsigned short inw(unsigned int port ) 
+ unsigned short inw(unsigned int port ) 
 { unsigned short tmp ;
 
   {
@@ -4898,7 +4898,7 @@ __inline unsigned short inw(unsigned int port )
 }
 }
 #line 1077 "concatenated.c"
-__inline void outw(unsigned short word , unsigned int port ) 
+ void outw(unsigned short word , unsigned int port ) 
 { 
 
   {
@@ -4907,7 +4907,7 @@ __inline void outw(unsigned short word , unsigned int port )
 }
 }
 #line 1081 "concatenated.c"
-__inline unsigned int inl(unsigned int port ) 
+ unsigned int inl(unsigned int port ) 
 { unsigned int tmp ;
 
   {
@@ -4920,7 +4920,7 @@ __inline unsigned int inl(unsigned int port )
 }
 }
 #line 1086 "concatenated.c"
-__inline void outl(unsigned int doubleword , unsigned int port ) 
+ void outl(unsigned int doubleword , unsigned int port ) 
 { 
 
   {
@@ -4929,7 +4929,7 @@ __inline void outl(unsigned int doubleword , unsigned int port )
 }
 }
 #line 1090 "concatenated.c"
-__inline unsigned char inb_p(unsigned int port ) 
+ unsigned char inb_p(unsigned int port ) 
 { unsigned char tmp ;
 
   {
@@ -4942,7 +4942,7 @@ __inline unsigned char inb_p(unsigned int port )
 }
 }
 #line 1095 "concatenated.c"
-__inline void outb_p(unsigned char byte , unsigned int port ) 
+ void outb_p(unsigned char byte , unsigned int port ) 
 { 
 
   {
@@ -4951,7 +4951,7 @@ __inline void outb_p(unsigned char byte , unsigned int port )
 }
 }
 #line 1099 "concatenated.c"
-__inline unsigned short inw_p(unsigned int port ) 
+ unsigned short inw_p(unsigned int port ) 
 { unsigned short tmp ;
 
   {
@@ -4964,7 +4964,7 @@ __inline unsigned short inw_p(unsigned int port )
 }
 }
 #line 1104 "concatenated.c"
-__inline void outw_p(unsigned short word , unsigned int port ) 
+ void outw_p(unsigned short word , unsigned int port ) 
 { 
 
   {
@@ -4973,7 +4973,7 @@ __inline void outw_p(unsigned short word , unsigned int port )
 }
 }
 #line 1108 "concatenated.c"
-__inline unsigned int inl_p(unsigned int port ) 
+ unsigned int inl_p(unsigned int port ) 
 { unsigned int tmp ;
 
   {
@@ -4986,7 +4986,7 @@ __inline unsigned int inl_p(unsigned int port )
 }
 }
 #line 1113 "concatenated.c"
-__inline void outl_p(unsigned int doubleword , unsigned int port ) 
+ void outl_p(unsigned int doubleword , unsigned int port ) 
 { 
 
   {
@@ -5023,7 +5023,7 @@ long schedule_timeout(long timeout )
 }
 }
 #line 1139 "concatenated.c"
-__inline void sema_init(struct semaphore *sem , int val ) 
+ void sema_init(struct semaphore *sem , int val ) 
 { 
 
   {
@@ -5036,7 +5036,7 @@ __inline void sema_init(struct semaphore *sem , int val )
 }
 }
 #line 1145 "concatenated.c"
-__inline void init_MUTEX(struct semaphore *sem ) 
+ void init_MUTEX(struct semaphore *sem ) 
 { 
 
   {
@@ -5049,7 +5049,7 @@ __inline void init_MUTEX(struct semaphore *sem )
 }
 }
 #line 1151 "concatenated.c"
-__inline void init_MUTEX_LOCKED(struct semaphore *sem ) 
+ void init_MUTEX_LOCKED(struct semaphore *sem ) 
 { 
 
   {
@@ -5062,7 +5062,7 @@ __inline void init_MUTEX_LOCKED(struct semaphore *sem )
 }
 }
 #line 1157 "concatenated.c"
-__inline void down(struct semaphore *sem ) 
+ void down(struct semaphore *sem ) 
 { 
 
   {
@@ -5081,7 +5081,7 @@ __inline void down(struct semaphore *sem )
 }
 }
 #line 1170 "concatenated.c"
-__inline int down_interruptible(struct semaphore *sem ) 
+ int down_interruptible(struct semaphore *sem ) 
 { int tmp ;
 
   {
@@ -5110,7 +5110,7 @@ __inline int down_interruptible(struct semaphore *sem )
 }
 }
 #line 1189 "concatenated.c"
-__inline int down_trylock(struct semaphore *sem ) 
+ int down_trylock(struct semaphore *sem ) 
 { int __cil_tmp2 ;
 
   {
@@ -5143,7 +5143,7 @@ __inline int down_trylock(struct semaphore *sem )
 }
 }
 #line 1211 "concatenated.c"
-__inline void up(struct semaphore *sem ) 
+ void up(struct semaphore *sem ) 
 { 
 
   {
@@ -5158,7 +5158,7 @@ __inline void up(struct semaphore *sem )
 }
 }
 #line 1223 "concatenated.c"
-__inline void tasklet_schedule(struct tasklet_struct *t ) 
+ void tasklet_schedule(struct tasklet_struct *t ) 
 { int i ;
   int next_free ;
   void *__cil_tmp4 ;
@@ -5240,7 +5240,7 @@ __inline void tasklet_schedule(struct tasklet_struct *t )
 }
 }
 #line 1250 "concatenated.c"
-__inline void tasklet_init(struct tasklet_struct *t , void (*func)(unsigned long  ) ,
+ void tasklet_init(struct tasklet_struct *t , void (*func)(unsigned long  ) ,
                            unsigned long data ) 
 { 
 
@@ -5258,7 +5258,7 @@ __inline void tasklet_init(struct tasklet_struct *t , void (*func)(unsigned long
 }
 }
 #line 1262 "concatenated.c"
-__inline void spin_lock_init(spinlock_t *lock ) 
+ void spin_lock_init(spinlock_t *lock ) 
 { 
 
   {
@@ -5271,7 +5271,7 @@ __inline void spin_lock_init(spinlock_t *lock )
 }
 }
 #line 1268 "concatenated.c"
-__inline void spin_lock(spinlock_t *lock ) 
+ void spin_lock(spinlock_t *lock ) 
 { 
 
   {
@@ -5288,7 +5288,7 @@ __inline void spin_lock(spinlock_t *lock )
 }
 }
 #line 1280 "concatenated.c"
-__inline void spin_lock_irqsave(spinlock_t *lock , unsigned long flags ) 
+ void spin_lock_irqsave(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {
@@ -5305,7 +5305,7 @@ __inline void spin_lock_irqsave(spinlock_t *lock , unsigned long flags )
 }
 }
 #line 1292 "concatenated.c"
-__inline void spin_lock_irq(spinlock_t *lock ) 
+ void spin_lock_irq(spinlock_t *lock ) 
 { 
 
   {
@@ -5322,7 +5322,7 @@ __inline void spin_lock_irq(spinlock_t *lock )
 }
 }
 #line 1304 "concatenated.c"
-__inline void spin_lock_bh(spinlock_t *lock ) 
+ void spin_lock_bh(spinlock_t *lock ) 
 { 
 
   {
@@ -5339,7 +5339,7 @@ __inline void spin_lock_bh(spinlock_t *lock )
 }
 }
 #line 1316 "concatenated.c"
-__inline void spin_unlock(spinlock_t *lock ) 
+ void spin_unlock(spinlock_t *lock ) 
 { 
 
   {
@@ -5350,7 +5350,7 @@ __inline void spin_unlock(spinlock_t *lock )
 }
 }
 #line 1325 "concatenated.c"
-__inline void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {
@@ -5361,7 +5361,7 @@ __inline void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
 }
 }
 #line 1334 "concatenated.c"
-__inline void spin_unlock_irq(spinlock_t *lock ) 
+ void spin_unlock_irq(spinlock_t *lock ) 
 { 
 
   {
@@ -5372,7 +5372,7 @@ __inline void spin_unlock_irq(spinlock_t *lock )
 }
 }
 #line 1343 "concatenated.c"
-__inline void spin_unlock_bh(spinlock_t *lock ) 
+ void spin_unlock_bh(spinlock_t *lock ) 
 { 
 
   {
@@ -5383,7 +5383,7 @@ __inline void spin_unlock_bh(spinlock_t *lock )
 }
 }
 #line 1354 "concatenated.c"
-__inline void init_timer(struct timer_list *timer ) 
+ void init_timer(struct timer_list *timer ) 
 { int __cil_tmp2 ;
   int __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -5415,7 +5415,7 @@ __inline void init_timer(struct timer_list *timer )
 }
 }
 #line 1365 "concatenated.c"
-__inline void add_timer(struct timer_list *timer ) 
+ void add_timer(struct timer_list *timer ) 
 { 
 
   {
@@ -5426,7 +5426,7 @@ __inline void add_timer(struct timer_list *timer )
 }
 }
 #line 1374 "concatenated.c"
-__inline void add_timer_on(struct timer_list *timer , int cpu ) 
+ void add_timer_on(struct timer_list *timer , int cpu ) 
 { 
 
   {
@@ -5439,7 +5439,7 @@ __inline void add_timer_on(struct timer_list *timer , int cpu )
 }
 }
 #line 1380 "concatenated.c"
-__inline int del_timer(struct timer_list *timer ) 
+ int del_timer(struct timer_list *timer ) 
 { 
 
   {
@@ -5450,7 +5450,7 @@ __inline int del_timer(struct timer_list *timer )
 }
 }
 #line 1385 "concatenated.c"
-__inline int mod_timer(struct timer_list *timer , unsigned long expires ) 
+ int mod_timer(struct timer_list *timer , unsigned long expires ) 
 { 
 
   {
@@ -5463,7 +5463,7 @@ __inline int mod_timer(struct timer_list *timer , unsigned long expires )
 }
 }
 #line 1396 "concatenated.c"
-__inline void init_waitqueue_head(wait_queue_head_t *q ) 
+ void init_waitqueue_head(wait_queue_head_t *q ) 
 { 
 
   {
@@ -5474,7 +5474,7 @@ __inline void init_waitqueue_head(wait_queue_head_t *q )
 }
 }
 #line 1401 "concatenated.c"
-__inline void wake_up(wait_queue_head_t *q ) 
+ void wake_up(wait_queue_head_t *q ) 
 { 
 
   {
@@ -5483,7 +5483,7 @@ __inline void wake_up(wait_queue_head_t *q )
 }
 }
 #line 1409 "concatenated.c"
-__inline void wake_up_all(wait_queue_head_t *q ) 
+ void wake_up_all(wait_queue_head_t *q ) 
 { 
 
   {
@@ -5492,7 +5492,7 @@ __inline void wake_up_all(wait_queue_head_t *q )
 }
 }
 #line 1417 "concatenated.c"
-__inline void wake_up_interruptible(wait_queue_head_t *q ) 
+ void wake_up_interruptible(wait_queue_head_t *q ) 
 { 
 
   {
@@ -5501,7 +5501,7 @@ __inline void wake_up_interruptible(wait_queue_head_t *q )
 }
 }
 #line 1425 "concatenated.c"
-__inline void sleep_on(wait_queue_head_t *q ) 
+ void sleep_on(wait_queue_head_t *q ) 
 { 
 
   {
@@ -5510,7 +5510,7 @@ __inline void sleep_on(wait_queue_head_t *q )
 }
 }
 #line 1433 "concatenated.c"
-__inline void interruptible_sleep_on(wait_queue_head_t *q ) 
+ void interruptible_sleep_on(wait_queue_head_t *q ) 
 { 
 
   {
@@ -5519,7 +5519,7 @@ __inline void interruptible_sleep_on(wait_queue_head_t *q )
 }
 }
 #line 1444 "concatenated.c"
-__inline int schedule_work(struct work_struct *work ) 
+ int schedule_work(struct work_struct *work ) 
 { int i ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5580,7 +5580,7 @@ __inline int schedule_work(struct work_struct *work )
 }
 }
 #line 1469 "concatenated.c"
-__inline void call_shared_workqueue_functions(void) 
+ void call_shared_workqueue_functions(void) 
 { unsigned short i ;
   unsigned short tmp ;
   int __cil_tmp3 ;
@@ -5674,7 +5674,7 @@ void free_irq(unsigned int irq , void *dev_id )
 }
 }
 #line 1504 "concatenated.c"
-__inline unsigned long __get_free_pages(gfp_t gfp_mask , unsigned int order ) 
+ unsigned long __get_free_pages(gfp_t gfp_mask , unsigned int order ) 
 { 
 
   {
@@ -5692,7 +5692,7 @@ __inline unsigned long __get_free_pages(gfp_t gfp_mask , unsigned int order )
 }
 }
 #line 1512 "concatenated.c"
-__inline unsigned long __get_free_page(gfp_t gfp_mask ) 
+ unsigned long __get_free_page(gfp_t gfp_mask ) 
 { 
 
   {
@@ -5710,7 +5710,7 @@ __inline unsigned long __get_free_page(gfp_t gfp_mask )
 }
 }
 #line 1520 "concatenated.c"
-__inline unsigned long get_zeroed_page(gfp_t gfp_mask ) 
+ unsigned long get_zeroed_page(gfp_t gfp_mask ) 
 { 
 
   {
@@ -5728,7 +5728,7 @@ __inline unsigned long get_zeroed_page(gfp_t gfp_mask )
 }
 }
 #line 1537 "concatenated.c"
-__inline struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) 
+ struct page *alloc_pages(gfp_t gfp_mask , unsigned int order ) 
 { 
 
   {
@@ -5746,7 +5746,7 @@ __inline struct page *alloc_pages(gfp_t gfp_mask , unsigned int order )
 }
 }
 #line 1545 "concatenated.c"
-__inline struct page *alloc_page(gfp_t gfp_mask ) 
+ struct page *alloc_page(gfp_t gfp_mask ) 
 { 
 
   {

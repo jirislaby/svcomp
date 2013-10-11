@@ -3612,9 +3612,9 @@ extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 #line 147 "include/linux/kernel.h"
 extern void __might_sleep(char const   *file , int line , int preempt_offset ) ;
 #line 194
-__inline static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
+ static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
 #line 194 "include/linux/kernel.h"
-__inline static void might_fault(void) 
+ static void might_fault(void) 
 { 
 
   {
@@ -3663,10 +3663,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -3680,9 +3680,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -3702,11 +3702,11 @@ extern unsigned long __attribute__((__warn_unused_result__))  _copy_to_user(void
                                                                             void const   *from ,
                                                                             unsigned int len ) ;
 #line 62
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void const   *src ,
                                                                                                                 unsigned int size )  __attribute__((__no_instrument_function__)) ;
 #line 62 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void const   *src ,
                                                                                                                 unsigned int size ) 
 { unsigned long tmp___7 ;
@@ -3725,10 +3725,10 @@ __inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__
 #line 92 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/iio/buffer.h"
 extern void iio_buffer_init(struct iio_buffer *buffer ) ;
 #line 100
-__inline static void __iio_update_buffer(struct iio_buffer *buffer , int bytes_per_datum ,
+ static void __iio_update_buffer(struct iio_buffer *buffer , int bytes_per_datum ,
                                          int length )  __attribute__((__no_instrument_function__)) ;
 #line 100 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/staging/iio/buffer.h"
-__inline static void __iio_update_buffer(struct iio_buffer *buffer , int bytes_per_datum ,
+ static void __iio_update_buffer(struct iio_buffer *buffer , int bytes_per_datum ,
                                          int length ) 
 { unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -3763,10 +3763,10 @@ struct iio_buffer *iio_sw_rb_allocate(struct iio_dev *indio_dev ) ;
 #line 29
 void iio_sw_rb_free(struct iio_buffer *r ) ;
 #line 45 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/2048/dscv_tempdir/dscv/ri/32_1/drivers/staging/iio/ring_sw.c.common.c"
-__inline static int __iio_allocate_sw_ring_buffer(struct iio_sw_ring_buffer *ring ,
+ static int __iio_allocate_sw_ring_buffer(struct iio_sw_ring_buffer *ring ,
                                                   int bytes_per_datum , int length )  __attribute__((__no_instrument_function__)) ;
 #line 45 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/2048/dscv_tempdir/dscv/ri/32_1/drivers/staging/iio/ring_sw.c.common.c"
-__inline static int __iio_allocate_sw_ring_buffer(struct iio_sw_ring_buffer *ring ,
+ static int __iio_allocate_sw_ring_buffer(struct iio_sw_ring_buffer *ring ,
                                                   int bytes_per_datum , int length ) 
 { void *tmp___7 ;
   int tmp___8 ;
@@ -3873,9 +3873,9 @@ __inline static int __iio_allocate_sw_ring_buffer(struct iio_sw_ring_buffer *rin
 }
 }
 #line 58
-__inline static void __iio_free_sw_ring_buffer(struct iio_sw_ring_buffer *ring )  __attribute__((__no_instrument_function__)) ;
+ static void __iio_free_sw_ring_buffer(struct iio_sw_ring_buffer *ring )  __attribute__((__no_instrument_function__)) ;
 #line 58 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/2048/dscv_tempdir/dscv/ri/32_1/drivers/staging/iio/ring_sw.c.common.c"
-__inline static void __iio_free_sw_ring_buffer(struct iio_sw_ring_buffer *ring ) 
+ static void __iio_free_sw_ring_buffer(struct iio_sw_ring_buffer *ring ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned char *__cil_tmp4 ;

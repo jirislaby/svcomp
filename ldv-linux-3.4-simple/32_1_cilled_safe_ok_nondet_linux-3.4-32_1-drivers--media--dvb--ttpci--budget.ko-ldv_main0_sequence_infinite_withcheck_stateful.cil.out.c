@@ -7786,10 +7786,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___10 ;
 
@@ -7826,9 +7826,9 @@ extern int ttpci_budget_deinit(struct budget *budget ) ;
 #line 117
 extern void ttpci_budget_irq10_handler(struct saa7146_dev *dev , u32 *isr ) ;
 #line 110 "drivers/media/dvb/frontends/stv0299.h"
-__inline static int stv0299_writereg(struct dvb_frontend *fe , u8 reg , u8 val )  __attribute__((__no_instrument_function__)) ;
+ static int stv0299_writereg(struct dvb_frontend *fe , u8 reg , u8 val )  __attribute__((__no_instrument_function__)) ;
 #line 110 "drivers/media/dvb/frontends/stv0299.h"
-__inline static int stv0299_writereg(struct dvb_frontend *fe , u8 reg , u8 val ) 
+ static int stv0299_writereg(struct dvb_frontend *fe , u8 reg , u8 val ) 
 { int r ;
   u8 buf[2] ;
   unsigned long __cil_tmp6 ;

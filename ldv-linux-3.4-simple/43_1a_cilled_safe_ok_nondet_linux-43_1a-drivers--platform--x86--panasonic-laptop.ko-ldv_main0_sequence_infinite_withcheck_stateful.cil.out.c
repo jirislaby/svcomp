@@ -3869,7 +3869,7 @@ extern void *memset(void * , int  , size_t  ) ;
 #line 62
 extern char *strcpy(char * , char const   * ) ;
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -3878,7 +3878,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -3912,7 +3912,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12329/dscv_tempdir/dscv/ri/43_1a/drivers/platform/x86/panasonic-laptop.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -3930,7 +3930,7 @@ extern struct backlight_device *backlight_device_register(char const   * , struc
 #line 117
 extern void backlight_device_unregister(struct backlight_device * ) ;
 #line 123 "include/linux/backlight.h"
-__inline static void *bl_get_data(struct backlight_device *bl_dev ) 
+ static void *bl_get_data(struct backlight_device *bl_dev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -3961,7 +3961,7 @@ extern acpi_status acpi_evaluate_object(acpi_handle  , acpi_string  , struct acp
 extern acpi_status acpi_evaluate_integer(acpi_handle  , acpi_string  , struct acpi_object_list * ,
                                          unsigned long long * ) ;
 #line 279 "include/acpi/acpi_bus.h"
-__inline static void *acpi_driver_data(struct acpi_device *d ) 
+ static void *acpi_driver_data(struct acpi_device *d ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -4152,7 +4152,7 @@ static int acpi_pcc_write_sset(struct pcc_acpi *pcc , int func , int val )
 }
 }
 #line 269 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12329/dscv_tempdir/dscv/ri/43_1a/drivers/platform/x86/panasonic-laptop.c.p"
-__inline static int acpi_pcc_get_sqty(struct acpi_device *device ) 
+ static int acpi_pcc_get_sqty(struct acpi_device *device ) 
 { unsigned long long s ;
   acpi_status status ;
   unsigned long __cil_tmp4 ;
@@ -6288,7 +6288,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1375 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12329/dscv_tempdir/dscv/ri/43_1a/drivers/platform/x86/panasonic-laptop.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

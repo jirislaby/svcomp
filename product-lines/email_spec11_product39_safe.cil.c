@@ -594,7 +594,7 @@ void __automaton_fail(void) ;
 #line 9 "Email.h"
 int isReadable(int msg ) ;
 #line 11 "DecryptAutoResponder_spec.c"
-__inline void __utac_acc__DecryptAutoResponder_spec__1(int client , int msg ) 
+ void __utac_acc__DecryptAutoResponder_spec__1(int client , int msg ) 
 { int tmp ;
 
   {

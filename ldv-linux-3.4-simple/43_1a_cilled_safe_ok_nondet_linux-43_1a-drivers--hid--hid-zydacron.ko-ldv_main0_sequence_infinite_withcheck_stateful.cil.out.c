@@ -2282,7 +2282,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 98 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void clear_bit(int nr , unsigned long volatile   *addr ) 
+ static void clear_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -2305,7 +2305,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4869/dscv_tempdir/dscv/ri/43_1a/drivers/hid/hid-zydacron.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2325,7 +2325,7 @@ extern int _dev_info(struct device  const  * , char const   *  , ...) ;
 #line 1502 "include/linux/input.h"
 extern void input_event(struct input_dev * , unsigned int  , unsigned int  , int  ) ;
 #line 543 "include/linux/hid.h"
-__inline static void *hid_get_drvdata(struct hid_device *hdev ) 
+ static void *hid_get_drvdata(struct hid_device *hdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2350,7 +2350,7 @@ __inline static void *hid_get_drvdata(struct hid_device *hdev )
 }
 }
 #line 548 "include/linux/hid.h"
-__inline static void hid_set_drvdata(struct hid_device *hdev , void *data ) 
+ static void hid_set_drvdata(struct hid_device *hdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2381,7 +2381,7 @@ extern int hid_connect(struct hid_device * , unsigned int  ) ;
 #line 740
 extern void hid_disconnect(struct hid_device * ) ;
 #line 754 "include/linux/hid.h"
-__inline static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
+ static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
                                    unsigned long **bit , int *max , __u8 type , __u16 c ) 
 { struct input_dev *input ;
   unsigned long __cil_tmp8 ;
@@ -2505,7 +2505,7 @@ __inline static void hid_map_usage(struct hid_input *hidinput , struct hid_usage
 }
 }
 #line 789 "include/linux/hid.h"
-__inline static void hid_map_usage_clear(struct hid_input *hidinput , struct hid_usage *usage ,
+ static void hid_map_usage_clear(struct hid_input *hidinput , struct hid_usage *usage ,
                                          unsigned long **bit , int *max , __u8 type ,
                                          __u16 c ) 
 { int __cil_tmp7 ;
@@ -2542,7 +2542,7 @@ __inline static void hid_map_usage_clear(struct hid_input *hidinput , struct hid
 }
 }
 #line 806 "include/linux/hid.h"
-__inline static int hid_parse(struct hid_device *hdev ) 
+ static int hid_parse(struct hid_device *hdev ) 
 { int ret ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2616,7 +2616,7 @@ __inline static int hid_parse(struct hid_device *hdev )
 }
 }
 #line 830 "include/linux/hid.h"
-__inline static int hid_hw_start(struct hid_device *hdev , unsigned int connect_mask ) 
+ static int hid_hw_start(struct hid_device *hdev , unsigned int connect_mask ) 
 { int ret ;
   int tmp ;
   unsigned long __cil_tmp5 ;
@@ -2687,7 +2687,7 @@ __inline static int hid_hw_start(struct hid_device *hdev , unsigned int connect_
 }
 }
 #line 850 "include/linux/hid.h"
-__inline static void hid_hw_stop(struct hid_device *hdev ) 
+ static void hid_hw_stop(struct hid_device *hdev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct hid_ll_driver *__cil_tmp4 ;
@@ -3991,7 +3991,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 752 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4869/dscv_tempdir/dscv/ri/43_1a/drivers/hid/hid-zydacron.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

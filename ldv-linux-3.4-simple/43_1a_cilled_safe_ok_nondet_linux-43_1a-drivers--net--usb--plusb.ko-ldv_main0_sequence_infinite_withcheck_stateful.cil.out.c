@@ -5522,7 +5522,7 @@ struct sk_buff *ldv___netdev_alloc_skb_26(struct net_device *ldv_func_arg1 , uns
 extern int usb_control_msg(struct usb_device * , unsigned int  , __u8  , __u8  , __u16  ,
                            __u16  , void * , __u16  , int  ) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -5544,7 +5544,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 87 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12747/dscv_tempdir/dscv/ri/43_1a/drivers/net/usb/plusb.c.p"
-__inline static int pl_vendor_req(struct usbnet *dev , u8 req , u8 val , u8 index ) 
+ static int pl_vendor_req(struct usbnet *dev , u8 req , u8 val , u8 index ) 
 { unsigned int tmp ;
   int tmp___0 ;
   struct usb_device *__cil_tmp7 ;
@@ -5597,7 +5597,7 @@ __inline static int pl_vendor_req(struct usbnet *dev , u8 req , u8 val , u8 inde
 }
 }
 #line 105 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/12747/dscv_tempdir/dscv/ri/43_1a/drivers/net/usb/plusb.c.p"
-__inline static int pl_set_QuickLink_features(struct usbnet *dev , int val ) 
+ static int pl_set_QuickLink_features(struct usbnet *dev , int val ) 
 { int tmp ;
   u8 __cil_tmp4 ;
   unsigned char __cil_tmp5 ;

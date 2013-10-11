@@ -5392,7 +5392,7 @@ struct btmrvl_debugfs_data {
 # 1 "<compiler builtins>"
 
 # 60 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static void set_bit(unsigned int nr , unsigned long volatile *addr )
+ static void set_bit(unsigned int nr , unsigned long volatile *addr )
 {
 
   {
@@ -5403,7 +5403,7 @@ __inline static void set_bit(unsigned int nr , unsigned long volatile *addr )
 }
 }
 # 246 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int test_and_clear_bit(int nr , unsigned long volatile *addr )
+ static int test_and_clear_bit(int nr , unsigned long volatile *addr )
 { int oldbit ;
 
   {
@@ -5415,7 +5415,7 @@ __inline static int test_and_clear_bit(int nr , unsigned long volatile *addr )
 }
 }
 # 309 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int constant_test_bit(unsigned int nr , unsigned long const volatile *addr )
+ static int constant_test_bit(unsigned int nr , unsigned long const volatile *addr )
 {
 
   {
@@ -5424,7 +5424,7 @@ __inline static int constant_test_bit(unsigned int nr , unsigned long const vola
 }
 }
 # 315 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/bitops.h"
-__inline static int variable_test_bit(int nr , unsigned long const volatile *addr )
+ static int variable_test_bit(int nr , unsigned long const volatile *addr )
 { int oldbit ;
 
   {
@@ -5446,7 +5446,7 @@ extern void __bad_percpu_size(void) ;
 # 10 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 # 12 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void)
+ static struct task_struct *get_current(void)
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -5493,7 +5493,7 @@ __inline static struct task_struct *get_current(void)
 # 11 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/cmpxchg_64.h"
 extern void __xchg_wrong_size(void) ;
 # 32 "include/linux/err.h"
-__inline static long IS_ERR(void const *ptr )
+ static long IS_ERR(void const *ptr )
 { long tmp ;
 
   {
@@ -5506,7 +5506,7 @@ __inline static long IS_ERR(void const *ptr )
 }
 }
 # 82 "include/linux/thread_info.h"
-__inline static int test_ti_thread_flag(struct thread_info *ti , int flag )
+ static int test_ti_thread_flag(struct thread_info *ti , int flag )
 { int tmp ;
 
   {
@@ -5525,7 +5525,7 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t * ) ;
 # 43 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long ) ;
 # 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 {
 
   {
@@ -5534,7 +5534,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 # 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
 {
 
   {
@@ -5551,7 +5551,7 @@ extern int default_wake_function(wait_queue_t * , unsigned int , int , void * ) 
 # 80 "include/linux/wait.h"
 extern void __init_waitqueue_head(wait_queue_head_t * , struct lock_class_key * ) ;
 # 98 "include/linux/wait.h"
-__inline static void init_waitqueue_entry(wait_queue_t *q , struct task_struct *p )
+ static void init_waitqueue_entry(wait_queue_t *q , struct task_struct *p )
 {
 
   {
@@ -5598,7 +5598,7 @@ void ldv_module_put_and_exit(void) ;
 # 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t , gfp_t ) ;
 # 255 "include/linux/slub_def.h"
-__inline static void *kmalloc(size_t size , gfp_t flags )
+ static void *kmalloc(size_t size , gfp_t flags )
 { void *tmp___2 ;
 
   {
@@ -5611,7 +5611,7 @@ __inline static void *kmalloc(size_t size , gfp_t flags )
 }
 }
 # 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )
+ static void *kzalloc(size_t size , gfp_t flags )
 { void *tmp ;
 
   {
@@ -5628,7 +5628,7 @@ extern void kfree_skb(struct sk_buff * ) ;
 # 493 "include/linux/skbuff.h"
 extern struct sk_buff *__alloc_skb(unsigned int , gfp_t , int , int ) ;
 # 495 "include/linux/skbuff.h"
-__inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )
+ static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )
 { struct sk_buff *tmp ;
 
   {
@@ -5643,7 +5643,7 @@ __inline static struct sk_buff *alloc_skb(unsigned int size , gfp_t priority )
 # 519 "include/linux/skbuff.h"
 extern struct sk_buff *skb_realloc_headroom(struct sk_buff * , unsigned int ) ;
 # 593 "include/linux/skbuff.h"
-__inline static int skb_queue_empty(struct sk_buff_head const *list )
+ static int skb_queue_empty(struct sk_buff_head const *list )
 {
 
   {
@@ -5652,7 +5652,7 @@ __inline static int skb_queue_empty(struct sk_buff_head const *list )
 }
 }
 # 858 "include/linux/skbuff.h"
-__inline static void __skb_queue_head_init(struct sk_buff_head *list )
+ static void __skb_queue_head_init(struct sk_buff_head *list )
 { struct sk_buff *tmp ;
 
   {
@@ -5669,7 +5669,7 @@ __inline static void __skb_queue_head_init(struct sk_buff_head *list )
 }
 }
 # 872 "include/linux/skbuff.h"
-__inline static void skb_queue_head_init(struct sk_buff_head *list )
+ static void skb_queue_head_init(struct sk_buff_head *list )
 { struct lock_class_key __key ;
 
   {
@@ -5696,7 +5696,7 @@ extern unsigned char *skb_put(struct sk_buff * , unsigned int ) ;
 # 1177 "include/linux/skbuff.h"
 extern unsigned char *skb_push(struct sk_buff * , unsigned int ) ;
 # 1229 "include/linux/skbuff.h"
-__inline static unsigned int skb_headroom(struct sk_buff const *skb )
+ static unsigned int skb_headroom(struct sk_buff const *skb )
 {
 
   {
@@ -5705,7 +5705,7 @@ __inline static unsigned int skb_headroom(struct sk_buff const *skb )
 }
 }
 # 1253 "include/linux/skbuff.h"
-__inline static void skb_reserve(struct sk_buff *skb , int len )
+ static void skb_reserve(struct sk_buff *skb , int len )
 {
 
   {
@@ -5726,7 +5726,7 @@ extern void schedule(void) ;
 # 2112 "include/linux/sched.h"
 extern int wake_up_process(struct task_struct * ) ;
 # 2441 "include/linux/sched.h"
-__inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
+ static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 { int tmp ;
 
   {
@@ -5739,7 +5739,7 @@ __inline static int test_tsk_thread_flag(struct task_struct *tsk , int flag )
 }
 }
 # 2467 "include/linux/sched.h"
-__inline static int signal_pending(struct task_struct *p )
+ static int signal_pending(struct task_struct *p )
 { int tmp ;
   long tmp___0 ;
 
@@ -5755,7 +5755,7 @@ __inline static int signal_pending(struct task_struct *p )
 }
 }
 # 156 "include/net/bluetooth/bluetooth.h"
-__inline static struct sk_buff *bt_skb_alloc(unsigned int len , gfp_t how )
+ static struct sk_buff *bt_skb_alloc(unsigned int len , gfp_t how )
 { struct sk_buff *skb ;
 
   {
@@ -8178,7 +8178,7 @@ extern void might_fault(void) ;
 # 196 "include/linux/kernel.h"
 extern int kstrtoll(char const * , unsigned int , long long * ) ;
 # 210 "include/linux/kernel.h"
-__inline static int kstrtol(char const *s , unsigned int base , long *res )
+ static int kstrtol(char const *s , unsigned int base , long *res )
 { int tmp ;
 
   {
@@ -8209,7 +8209,7 @@ extern void debugfs_remove(struct dentry * ) ;
 # 42 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_from_user(void * , void const * , unsigned int ) ;
 # 46 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/uaccess_64.h"
-__inline static unsigned long copy_from_user(void *to , void const *from , unsigned long n )
+ static unsigned long copy_from_user(void *to , void const *from , unsigned long n )
 { int sz ;
   unsigned long tmp ;
   int __ret_warn_on ;

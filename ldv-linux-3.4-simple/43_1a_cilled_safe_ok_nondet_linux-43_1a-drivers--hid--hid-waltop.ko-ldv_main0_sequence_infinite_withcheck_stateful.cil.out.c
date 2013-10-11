@@ -2290,7 +2290,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4867/dscv_tempdir/dscv/ri/43_1a/drivers/hid/hid-waltop.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2306,7 +2306,7 @@ extern int dev_set_drvdata(struct device * , void * ) ;
 #line 892
 extern int dev_err(struct device  const  * , char const   *  , ...) ;
 #line 543 "include/linux/hid.h"
-__inline static void *hid_get_drvdata(struct hid_device *hdev ) 
+ static void *hid_get_drvdata(struct hid_device *hdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2331,7 +2331,7 @@ __inline static void *hid_get_drvdata(struct hid_device *hdev )
 }
 }
 #line 548 "include/linux/hid.h"
-__inline static void hid_set_drvdata(struct hid_device *hdev , void *data ) 
+ static void hid_set_drvdata(struct hid_device *hdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2360,7 +2360,7 @@ extern int hid_connect(struct hid_device * , unsigned int  ) ;
 #line 740
 extern void hid_disconnect(struct hid_device * ) ;
 #line 806 "include/linux/hid.h"
-__inline static int hid_parse(struct hid_device *hdev ) 
+ static int hid_parse(struct hid_device *hdev ) 
 { int ret ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2434,7 +2434,7 @@ __inline static int hid_parse(struct hid_device *hdev )
 }
 }
 #line 830 "include/linux/hid.h"
-__inline static int hid_hw_start(struct hid_device *hdev , unsigned int connect_mask ) 
+ static int hid_hw_start(struct hid_device *hdev , unsigned int connect_mask ) 
 { int ret ;
   int tmp ;
   unsigned long __cil_tmp5 ;
@@ -2505,7 +2505,7 @@ __inline static int hid_hw_start(struct hid_device *hdev , unsigned int connect_
 }
 }
 #line 850 "include/linux/hid.h"
-__inline static void hid_hw_stop(struct hid_device *hdev ) 
+ static void hid_hw_stop(struct hid_device *hdev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct hid_ll_driver *__cil_tmp4 ;
@@ -3542,7 +3542,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1193 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4867/dscv_tempdir/dscv/ri/43_1a/drivers/hid/hid-waltop.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

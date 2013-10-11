@@ -7691,7 +7691,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 60 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
+ static void set_bit(unsigned int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -7716,7 +7716,7 @@ extern int sprintf(char * , char const   *  , ...) ;
 #line 323
 extern int snprintf(char * , size_t  , char const   *  , ...) ;
 #line 24 "include/linux/list.h"
-__inline static void INIT_LIST_HEAD(struct list_head *list ) 
+ static void INIT_LIST_HEAD(struct list_head *list ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -7738,7 +7738,7 @@ extern void __bad_percpu_size(void) ;
 #line 10 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
 extern struct task_struct *current_task ;
 #line 12 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/current.h"
-__inline static struct task_struct *get_current(void) 
+ static struct task_struct *get_current(void) 
 { struct task_struct *pfo_ret__ ;
 
   {
@@ -7813,7 +7813,7 @@ extern int strncmp(char const   * , char const   * , __kernel_size_t  ) ;
 #line 75
 extern char *strstr(char const   * , char const   * ) ;
 #line 22 "include/linux/err.h"
-__inline static void *ERR_PTR(long error ) 
+ static void *ERR_PTR(long error ) 
 { 
 
   {
@@ -7822,7 +7822,7 @@ __inline static void *ERR_PTR(long error )
 }
 }
 #line 27 "include/linux/err.h"
-__inline static long PTR_ERR(void const   *ptr ) 
+ static long PTR_ERR(void const   *ptr ) 
 { 
 
   {
@@ -7831,7 +7831,7 @@ __inline static long PTR_ERR(void const   *ptr )
 }
 }
 #line 32 "include/linux/err.h"
-__inline static long IS_ERR(void const   *ptr ) 
+ static long IS_ERR(void const   *ptr ) 
 { long tmp ;
   unsigned long __cil_tmp3 ;
   int __cil_tmp4 ;
@@ -7853,7 +7853,7 @@ __inline static long IS_ERR(void const   *ptr )
 }
 }
 #line 23 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const   *v ) 
+ static int atomic_read(atomic_t const   *v ) 
 { int const   *__cil_tmp2 ;
   int volatile   *__cil_tmp3 ;
   int volatile   __cil_tmp4 ;
@@ -7872,7 +7872,7 @@ __inline static int atomic_read(atomic_t const   *v )
 }
 }
 #line 35 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i ) 
+ static void atomic_set(atomic_t *v , int i ) 
 { 
 
   {
@@ -7883,7 +7883,7 @@ __inline static void atomic_set(atomic_t *v , int i )
 }
 }
 #line 93 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_inc(atomic_t *v ) 
+ static void atomic_inc(atomic_t *v ) 
 { 
 
   {
@@ -7894,7 +7894,7 @@ __inline static void atomic_inc(atomic_t *v )
 }
 }
 #line 105 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/atomic.h"
-__inline static void atomic_dec(atomic_t *v ) 
+ static void atomic_dec(atomic_t *v ) 
 { 
 
   {
@@ -7949,9 +7949,9 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 227
 void *ldv_kmem_cache_alloc_28(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 339 "include/linux/slab.h"
-__inline static void *kmem_cache_zalloc(struct kmem_cache *k , gfp_t flags ) ;
+ static void *kmem_cache_zalloc(struct kmem_cache *k , gfp_t flags ) ;
 #line 353
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4643/dscv_tempdir/dscv/ri/43_1a/drivers/target/loopback/tcm_loop.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -7961,7 +7961,7 @@ void ldv_check_alloc_nonatomic(void) ;
 #line 14
 struct page *ldv_check_alloc_flags_and_return_some_page(gfp_t flags ) ;
 #line 69 "include/linux/configfs.h"
-__inline static char *config_item_name(struct config_item *item ) 
+ static char *config_item_name(struct config_item *item ) 
 { 
 
   {
@@ -7970,7 +7970,7 @@ __inline static char *config_item_name(struct config_item *item )
 }
 }
 #line 737 "include/linux/mm.h"
-__inline static void *lowmem_page_address(struct page  const  *page ) 
+ static void *lowmem_page_address(struct page  const  *page ) 
 { long __cil_tmp2 ;
   long __cil_tmp3 ;
   long __cil_tmp4 ;
@@ -8001,7 +8001,7 @@ __inline static void *lowmem_page_address(struct page  const  *page )
 }
 }
 #line 95 "include/linux/scatterlist.h"
-__inline static struct page *sg_page(struct scatterlist *sg ) 
+ static struct page *sg_page(struct scatterlist *sg ) 
 { long tmp ;
   long tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -8102,7 +8102,7 @@ extern struct device *__root_device_register(char const   * , struct module * ) 
 #line 808
 extern void root_device_unregister(struct device * ) ;
 #line 49 "include/linux/highmem.h"
-__inline static void *kmap(struct page *page ) 
+ static void *kmap(struct page *page ) 
 { void *tmp ;
   struct page  const  *__cil_tmp3 ;
 
@@ -8120,7 +8120,7 @@ __inline static void *kmap(struct page *page )
 }
 }
 #line 55 "include/linux/highmem.h"
-__inline static void kunmap(struct page *page ) 
+ static void kunmap(struct page *page ) 
 { 
 
   {
@@ -8129,7 +8129,7 @@ __inline static void kunmap(struct page *page )
 }
 }
 #line 163 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_sg_count(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -8151,7 +8151,7 @@ __inline static unsigned int scsi_sg_count(struct scsi_cmnd *cmd )
 }
 }
 #line 168 "include/scsi/scsi_cmnd.h"
-__inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
+ static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
 
@@ -8167,7 +8167,7 @@ __inline static struct scatterlist *scsi_sglist(struct scsi_cmnd *cmd )
 }
 }
 #line 173 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -8186,7 +8186,7 @@ __inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )
 }
 }
 #line 178 "include/scsi/scsi_cmnd.h"
-__inline static void scsi_set_resid(struct scsi_cmnd *cmd , int resid ) 
+ static void scsi_set_resid(struct scsi_cmnd *cmd , int resid ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -8205,7 +8205,7 @@ __inline static void scsi_set_resid(struct scsi_cmnd *cmd , int resid )
 }
 }
 #line 191 "include/scsi/scsi_cmnd.h"
-__inline static int scsi_bidi_cmnd(struct scsi_cmnd *cmd ) 
+ static int scsi_bidi_cmnd(struct scsi_cmnd *cmd ) 
 { int tmp ;
   struct request *__cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -8295,7 +8295,7 @@ __inline static int scsi_bidi_cmnd(struct scsi_cmnd *cmd )
 }
 }
 #line 197 "include/scsi/scsi_cmnd.h"
-__inline static struct scsi_data_buffer *scsi_in(struct scsi_cmnd *cmd ) 
+ static struct scsi_data_buffer *scsi_in(struct scsi_cmnd *cmd ) 
 { struct scsi_data_buffer *tmp___0 ;
   int tmp___1 ;
   unsigned long __cil_tmp5 ;
@@ -8350,7 +8350,7 @@ __inline static struct scsi_data_buffer *scsi_in(struct scsi_cmnd *cmd )
 }
 }
 #line 304 "include/scsi/scsi_cmnd.h"
-__inline static void set_host_byte(struct scsi_cmnd *cmd , char status ) 
+ static void set_host_byte(struct scsi_cmnd *cmd , char status ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -8393,7 +8393,7 @@ __inline static void set_host_byte(struct scsi_cmnd *cmd , char status )
 }
 }
 #line 309 "include/scsi/scsi_cmnd.h"
-__inline static void set_driver_byte(struct scsi_cmnd *cmd , char status ) 
+ static void set_driver_byte(struct scsi_cmnd *cmd , char status ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -8440,7 +8440,7 @@ extern void scsi_adjust_queue_depth(struct scsi_device * , int  , int  ) ;
 #line 343
 extern int scsi_track_queue_full(struct scsi_device * , int  ) ;
 #line 750 "include/scsi/scsi_host.h"
-__inline static void *shost_priv(struct Scsi_Host *shost ) 
+ static void *shost_priv(struct Scsi_Host *shost ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long (*__cil_tmp4)[0U] ;
@@ -8467,7 +8467,7 @@ extern void scsi_remove_host(struct Scsi_Host * ) ;
 #line 786
 extern void scsi_host_put(struct Scsi_Host * ) ;
 #line 793 "include/scsi/scsi_host.h"
-__inline static int scsi_add_host(struct Scsi_Host *host , struct device *dev ) 
+ static int scsi_add_host(struct Scsi_Host *host , struct device *dev ) 
 { int tmp ;
 
   {
@@ -8480,7 +8480,7 @@ __inline static int scsi_add_host(struct Scsi_Host *host , struct device *dev )
 }
 }
 #line 27 "include/scsi/scsi_tcq.h"
-__inline static int scsi_get_tag_type(struct scsi_device *sdev ) 
+ static int scsi_get_tag_type(struct scsi_device *sdev ) 
 { unsigned char *__cil_tmp2 ;
   unsigned char *__cil_tmp3 ;
   unsigned char __cil_tmp4 ;
@@ -15395,7 +15395,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 2064 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4643/dscv_tempdir/dscv/ri/43_1a/drivers/target/loopback/tcm_loop.c.p"
-__inline static void *kmem_cache_zalloc(struct kmem_cache *k , gfp_t flags ) 
+ static void *kmem_cache_zalloc(struct kmem_cache *k , gfp_t flags ) 
 { void *tmp ;
 
   {
@@ -15425,7 +15425,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 2085 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4643/dscv_tempdir/dscv/ri/43_1a/drivers/target/loopback/tcm_loop.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

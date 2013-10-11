@@ -3848,9 +3848,9 @@ struct module {
 #line 1 "<compiler builtins>"
 long __builtin_expect(long val , long res ) ;
 #line 97 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr )  __attribute__((__no_instrument_function__)) ;
 #line 97 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
+ static void ( __attribute__((__always_inline__)) clear_bit)(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -3899,10 +3899,10 @@ extern void hid_unregister_driver(struct hid_driver * ) ;
 #line 739
 extern int hid_connect(struct hid_device *hid , unsigned int connect_mask ) ;
 #line 754
-__inline static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
+ static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
                                    unsigned long **bit , int *max , __u8 type , __u16 c )  __attribute__((__no_instrument_function__)) ;
 #line 754 "include/linux/hid.h"
-__inline static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
+ static void hid_map_usage(struct hid_input *hidinput , struct hid_usage *usage ,
                                    unsigned long **bit , int *max , __u8 type , __u16 c ) 
 { struct input_dev *input ;
   unsigned long __cil_tmp8 ;
@@ -4037,11 +4037,11 @@ __inline static void hid_map_usage(struct hid_input *hidinput , struct hid_usage
 }
 }
 #line 789
-__inline static void hid_map_usage_clear(struct hid_input *hidinput , struct hid_usage *usage ,
+ static void hid_map_usage_clear(struct hid_input *hidinput , struct hid_usage *usage ,
                                          unsigned long **bit , int *max , __u8 type ,
                                          __u16 c )  __attribute__((__no_instrument_function__)) ;
 #line 789 "include/linux/hid.h"
-__inline static void hid_map_usage_clear(struct hid_input *hidinput , struct hid_usage *usage ,
+ static void hid_map_usage_clear(struct hid_input *hidinput , struct hid_usage *usage ,
                                          unsigned long **bit , int *max , __u8 type ,
                                          __u16 c ) 
 { int __cil_tmp7 ;
@@ -4066,9 +4066,9 @@ __inline static void hid_map_usage_clear(struct hid_input *hidinput , struct hid
 }
 }
 #line 806
-__inline static int __attribute__((__warn_unused_result__))  hid_parse(struct hid_device *hdev )  __attribute__((__no_instrument_function__)) ;
+ static int __attribute__((__warn_unused_result__))  hid_parse(struct hid_device *hdev )  __attribute__((__no_instrument_function__)) ;
 #line 806 "include/linux/hid.h"
-__inline static int __attribute__((__warn_unused_result__))  hid_parse(struct hid_device *hdev ) 
+ static int __attribute__((__warn_unused_result__))  hid_parse(struct hid_device *hdev ) 
 { int ret ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -4139,10 +4139,10 @@ __inline static int __attribute__((__warn_unused_result__))  hid_parse(struct hi
 }
 }
 #line 830
-__inline static int __attribute__((__warn_unused_result__))  hid_hw_start(struct hid_device *hdev ,
+ static int __attribute__((__warn_unused_result__))  hid_hw_start(struct hid_device *hdev ,
                                                                           unsigned int connect_mask )  __attribute__((__no_instrument_function__)) ;
 #line 830 "include/linux/hid.h"
-__inline static int __attribute__((__warn_unused_result__))  hid_hw_start(struct hid_device *hdev ,
+ static int __attribute__((__warn_unused_result__))  hid_hw_start(struct hid_device *hdev ,
                                                                           unsigned int connect_mask ) 
 { int ret ;
   int tmp___7 ;
@@ -4220,9 +4220,9 @@ int init_module(void) ;
 #line 68
 void cleanup_module(void) ;
 #line 58 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/225/dscv_tempdir/dscv/ri/32_1/drivers/hid/hid-samsung.c.common.c"
-__inline static void samsung_irda_dev_trace(struct hid_device *hdev , unsigned int rsize )  __attribute__((__no_instrument_function__)) ;
+ static void samsung_irda_dev_trace(struct hid_device *hdev , unsigned int rsize )  __attribute__((__no_instrument_function__)) ;
 #line 58 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/225/dscv_tempdir/dscv/ri/32_1/drivers/hid/hid-samsung.c.common.c"
-__inline static void samsung_irda_dev_trace(struct hid_device *hdev , unsigned int rsize ) 
+ static void samsung_irda_dev_trace(struct hid_device *hdev , unsigned int rsize ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;

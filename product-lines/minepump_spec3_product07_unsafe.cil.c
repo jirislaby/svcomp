@@ -792,7 +792,7 @@ int isMethaneLevelCritical(void) ;
 #line 12
 int getWaterLevel(void) ;
 #line 11 "Specification3_spec.c"
-__inline void __utac_acc__Specification3_spec__1(void) 
+ void __utac_acc__Specification3_spec__1(void) 
 { int tmp ;
   int tmp___0 ;
   int tmp___1 ;

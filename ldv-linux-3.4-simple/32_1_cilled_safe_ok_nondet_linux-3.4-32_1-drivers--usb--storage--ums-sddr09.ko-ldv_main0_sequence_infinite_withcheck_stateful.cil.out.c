@@ -5043,10 +5043,10 @@ struct sddr09_card_info {
 #line 1
 long __builtin_expect(long val , long res ) ;
 #line 7 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/swab.h"
-__inline static __u32 __arch_swab32(__u32 val )  __attribute__((__no_instrument_function__,
+ static __u32 __arch_swab32(__u32 val )  __attribute__((__no_instrument_function__,
 __const__)) ;
 #line 7 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/swab.h"
-__inline static __u32 __arch_swab32(__u32 val ) 
+ static __u32 __arch_swab32(__u32 val ) 
 { 
 
   {
@@ -5057,10 +5057,10 @@ __inline static __u32 __arch_swab32(__u32 val )
 }
 }
 #line 55 "include/linux/swab.h"
-__inline static __u32 __fswab32(__u32 val )  __attribute__((__no_instrument_function__,
+ static __u32 __fswab32(__u32 val )  __attribute__((__no_instrument_function__,
 __const__)) ;
 #line 55 "include/linux/swab.h"
-__inline static __u32 __fswab32(__u32 val ) 
+ static __u32 __fswab32(__u32 val ) 
 { __u32 tmp ;
 
   {
@@ -5105,10 +5105,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -5122,9 +5122,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -5140,9 +5140,9 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 #line 173 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd )  __attribute__((__no_instrument_function__)) ;
 #line 173 "include/scsi/scsi_cmnd.h"
-__inline static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
+ static unsigned int scsi_bufflen(struct scsi_cmnd *cmd ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -5295,9 +5295,9 @@ static struct us_unusual_dev sddr09_unusual_dev_list[6]  = {      {"Microtech", 
       "ImageMate SDDR-09", (__u8 )6, (__u8 )129, & usb_stor_sddr09_init}, 
         {"Microtech", "CameraMate (DPCM_USB)", (__u8 )6, (__u8 )240, (int (*)(struct us_data * ))((void *)0)}};
 #line 136
-__inline static char *nand_flash_manufacturer(int manuf_id )  __attribute__((__no_instrument_function__)) ;
+ static char *nand_flash_manufacturer(int manuf_id )  __attribute__((__no_instrument_function__)) ;
 #line 136 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/7667/dscv_tempdir/dscv/ri/32_1/drivers/usb/storage/sddr09.c.common.c"
-__inline static char *nand_flash_manufacturer(int manuf_id ) 
+ static char *nand_flash_manufacturer(int manuf_id ) 
 { 
 
   {

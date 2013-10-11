@@ -3485,9 +3485,9 @@ extern int ( /* format attribute */  printk)(char const   *fmt  , ...) ;
 #line 147 "include/linux/kernel.h"
 extern void __might_sleep(char const   *file , int line , int preempt_offset ) ;
 #line 194
-__inline static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
+ static void might_fault(void)  __attribute__((__no_instrument_function__)) ;
 #line 194 "include/linux/kernel.h"
-__inline static void might_fault(void) 
+ static void might_fault(void) 
 { 
 
   {
@@ -3549,11 +3549,11 @@ extern unsigned long __attribute__((__warn_unused_result__))  _copy_to_user(void
                                                                             void const   *from ,
                                                                             unsigned int len ) ;
 #line 62
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void const   *src ,
                                                                                                                 unsigned int size )  __attribute__((__no_instrument_function__)) ;
 #line 62 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
+ static int __attribute__((__warn_unused_result__))  ( __attribute__((__always_inline__)) copy_to_user)(void *dst ,
                                                                                                                 void const   *src ,
                                                                                                                 unsigned int size ) 
 { unsigned long tmp___7 ;
@@ -3572,9 +3572,9 @@ __inline static int __attribute__((__warn_unused_result__))  ( __attribute__((__
 #line 166 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
 extern struct uv_hub_info_s __uv_hub_info  __attribute__((__section__(".data..percpu"))) ;
 #line 179
-__inline static int is_uv1_hub(void)  __attribute__((__no_instrument_function__)) ;
+ static int is_uv1_hub(void)  __attribute__((__no_instrument_function__)) ;
 #line 179 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static int is_uv1_hub(void) 
+ static int is_uv1_hub(void) 
 { unsigned long tcp_ptr__ ;
   void const   *__vpp_verify ;
   void *__cil_tmp3 ;
@@ -3626,9 +3626,9 @@ __inline static int is_uv1_hub(void)
 }
 }
 #line 444
-__inline static unsigned long *uv_local_mmr_address(unsigned long offset )  __attribute__((__no_instrument_function__)) ;
+ static unsigned long *uv_local_mmr_address(unsigned long offset )  __attribute__((__no_instrument_function__)) ;
 #line 444 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static unsigned long *uv_local_mmr_address(unsigned long offset ) 
+ static unsigned long *uv_local_mmr_address(unsigned long offset ) 
 { unsigned long tmp___8 ;
   int tmp___9 ;
   unsigned long __cil_tmp5 ;
@@ -3661,9 +3661,9 @@ __inline static unsigned long *uv_local_mmr_address(unsigned long offset )
 }
 }
 #line 487
-__inline static int uv_blade_processor_id(void)  __attribute__((__no_instrument_function__)) ;
+ static int uv_blade_processor_id(void)  __attribute__((__no_instrument_function__)) ;
 #line 487 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static int uv_blade_processor_id(void) 
+ static int uv_blade_processor_id(void) 
 { unsigned long tcp_ptr__ ;
   void const   *__vpp_verify ;
   void *__cil_tmp3 ;
@@ -3712,9 +3712,9 @@ __inline static int uv_blade_processor_id(void)
 }
 }
 #line 603
-__inline static int uv_get_min_hub_revision_id(void)  __attribute__((__no_instrument_function__)) ;
+ static int uv_get_min_hub_revision_id(void)  __attribute__((__no_instrument_function__)) ;
 #line 603 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static int uv_get_min_hub_revision_id(void) 
+ static int uv_get_min_hub_revision_id(void) 
 { unsigned long tcp_ptr__ ;
   void const   *__vpp_verify ;
   void *__cil_tmp3 ;

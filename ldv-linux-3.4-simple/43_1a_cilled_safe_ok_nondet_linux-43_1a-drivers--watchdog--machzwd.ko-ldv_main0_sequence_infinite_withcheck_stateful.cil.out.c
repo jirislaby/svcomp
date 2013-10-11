@@ -1564,7 +1564,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 98 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void clear_bit(int nr , unsigned long volatile   *addr ) 
+ static void clear_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -1577,7 +1577,7 @@ __inline static void clear_bit(int nr , unsigned long volatile   *addr )
 }
 }
 #line 195 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
+ static int test_and_set_bit(int nr , unsigned long volatile   *addr ) 
 { int oldbit ;
   long volatile   *__cil_tmp4 ;
 
@@ -1598,7 +1598,7 @@ extern void might_fault(void) ;
 #line 43 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t * , unsigned long  ) ;
 #line 350 "include/linux/spinlock.h"
-__inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
+ static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -1613,7 +1613,7 @@ __inline static void ldv_spin_unlock_irqrestore_8(spinlock_t *lock , unsigned lo
 }
 }
 #line 350
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) ;
 #line 137 "include/linux/ioport.h"
 extern struct resource ioport_resource ;
 #line 181
@@ -1632,7 +1632,7 @@ extern int mod_timer(struct timer_list * , unsigned long  ) ;
 #line 280
 extern int del_timer_sync(struct timer_list * ) ;
 #line 308 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outb(unsigned char value , int port ) 
+ static void outb(unsigned char value , int port ) 
 { 
 
   {
@@ -1643,7 +1643,7 @@ __inline static void outb(unsigned char value , int port )
 }
 }
 #line 309 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static void outw(unsigned short value , int port ) 
+ static void outw(unsigned short value , int port ) 
 { 
 
   {
@@ -1654,7 +1654,7 @@ __inline static void outw(unsigned short value , int port )
 }
 }
 #line 309 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/io.h"
-__inline static unsigned short inw(int port ) 
+ static unsigned short inw(int port ) 
 { unsigned short value ;
 
   {
@@ -1693,7 +1693,7 @@ extern int unregister_reboot_notifier(struct notifier_block * ) ;
 #line 40 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
 extern unsigned long _copy_to_user(void * , void const   * , unsigned int  ) ;
 #line 63 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uaccess_64.h"
-__inline static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
+ static int copy_to_user(void *dst , void const   *src , unsigned int size ) 
 { unsigned long tmp ;
 
   {
@@ -1768,7 +1768,7 @@ static struct timer_list zf_timer  =
 #line 147 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17351/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/machzwd.c.p"
 static unsigned long next_heartbeat  ;
 #line 167 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17351/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/machzwd.c.p"
-__inline static void zf_set_status(unsigned char new ) 
+ static void zf_set_status(unsigned char new ) 
 { int __cil_tmp2 ;
   unsigned char __cil_tmp3 ;
 
@@ -1788,7 +1788,7 @@ __inline static void zf_set_status(unsigned char new )
 }
 }
 #line 175 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17351/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/machzwd.c.p"
-__inline static unsigned short zf_get_control(void) 
+ static unsigned short zf_get_control(void) 
 { unsigned short tmp ;
 
   {
@@ -1801,7 +1801,7 @@ __inline static unsigned short zf_get_control(void)
 }
 }
 #line 180 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17351/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/machzwd.c.p"
-__inline static void zf_set_control(unsigned short new ) 
+ static void zf_set_control(unsigned short new ) 
 { int __cil_tmp2 ;
   unsigned short __cil_tmp3 ;
 
@@ -1821,7 +1821,7 @@ __inline static void zf_set_control(unsigned short new )
 }
 }
 #line 191 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17351/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/machzwd.c.p"
-__inline static void zf_set_timer(unsigned short new , unsigned char n ) 
+ static void zf_set_timer(unsigned short new , unsigned char n ) 
 { int tmp ;
   int __cil_tmp4 ;
   unsigned short __cil_tmp5 ;
@@ -3083,7 +3083,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1277 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/17351/dscv_tempdir/dscv/ri/43_1a/drivers/watchdog/machzwd.c.p"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { 
 
   {

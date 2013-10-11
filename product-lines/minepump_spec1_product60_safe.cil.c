@@ -361,7 +361,7 @@ void __automaton_fail(void) ;
 #line 10 "MinePump.h"
 int isPumpRunning(void) ;
 #line 11 "Specification1_spec.c"
-__inline void __utac_acc__Specification1_spec__1(void) 
+ void __utac_acc__Specification1_spec__1(void) 
 { int tmp ;
   int tmp___0 ;
 

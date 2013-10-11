@@ -3968,10 +3968,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -3985,9 +3985,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -4006,9 +4006,9 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 extern int mtd_read(struct mtd_info *mtd , loff_t from , size_t len , size_t *retlen ,
                     u_char *buf ) ;
 #line 259
-__inline static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops )  __attribute__((__no_instrument_function__)) ;
+ static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops )  __attribute__((__no_instrument_function__)) ;
 #line 259 "include/linux/mtd/mtd.h"
-__inline static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops ) 
+ static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd_oob_ops *ops ) 
 { size_t tmp___7 ;
   int tmp___8 ;
   unsigned long __cil_tmp6 ;
@@ -4067,9 +4067,9 @@ __inline static int mtd_read_oob(struct mtd_info *mtd , loff_t from , struct mtd
 }
 }
 #line 268
-__inline static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops )  __attribute__((__no_instrument_function__)) ;
+ static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/mtd/mtd.h"
-__inline static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops ) 
+ static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_oob_ops *ops ) 
 { size_t tmp___7 ;
   int tmp___8 ;
   unsigned long __cil_tmp6 ;
@@ -4149,9 +4149,9 @@ __inline static int mtd_write_oob(struct mtd_info *mtd , loff_t to , struct mtd_
 }
 }
 #line 390
-__inline static int mtd_is_bitflip(int err )  __attribute__((__no_instrument_function__)) ;
+ static int mtd_is_bitflip(int err )  __attribute__((__no_instrument_function__)) ;
 #line 390 "include/linux/mtd/mtd.h"
-__inline static int mtd_is_bitflip(int err ) 
+ static int mtd_is_bitflip(int err ) 
 { 
 
   {
@@ -7263,7 +7263,7 @@ static u16 NFTL_makefreeblock(struct NFTLrecord *nftl , unsigned int pendingbloc
 }
 }
 #line 569
-__inline static u16 NFTL_findwriteunit(struct NFTLrecord *nftl , unsigned int block )  __attribute__((__no_instrument_function__)) ;
+ static u16 NFTL_findwriteunit(struct NFTLrecord *nftl , unsigned int block )  __attribute__((__no_instrument_function__)) ;
 #line 569 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5495/dscv_tempdir/dscv/ri/32_1/drivers/mtd/nftlcore.c.common.c"
 static struct _ddebug  __attribute__((__aligned__(8))) descriptor___8  __attribute__((__used__,
 __section__("__verbose")))  =    {"nftl", "NFTL_findwriteunit", "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5495/dscv_tempdir/dscv/ri/32_1/drivers/mtd/nftlcore.c.common.c",
@@ -7274,9 +7274,9 @@ __section__("__verbose")))  =    {"nftl", "NFTL_findwriteunit", "/home/zakharov/
     "Using desperate==1 to find free EUN to accommodate write to VUC %d\n", 622U,
     0U};
 #line 536
-__inline static u16 NFTL_findwriteunit(struct NFTLrecord *nftl , unsigned int block )  __attribute__((__no_instrument_function__)) ;
+ static u16 NFTL_findwriteunit(struct NFTLrecord *nftl , unsigned int block )  __attribute__((__no_instrument_function__)) ;
 #line 536 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/5495/dscv_tempdir/dscv/ri/32_1/drivers/mtd/nftlcore.c.common.c"
-__inline static u16 NFTL_findwriteunit(struct NFTLrecord *nftl , unsigned int block ) 
+ static u16 NFTL_findwriteunit(struct NFTLrecord *nftl , unsigned int block ) 
 { u16 lastEUN ;
   u16 thisVUC ;
   struct mtd_info *mtd ;

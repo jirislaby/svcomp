@@ -3840,7 +3840,7 @@ extern void __init_waitqueue_head(wait_queue_head_t *q , struct lock_class_key *
 #line 76 "include/linux/completion.h"
 static struct lock_class_key __key  ;
 #line 73 "include/linux/completion.h"
-__inline static void init_completion(struct completion *x ) 
+ static void init_completion(struct completion *x ) 
 { wait_queue_head_t *__cil_tmp2 ;
 
   {
@@ -4773,7 +4773,7 @@ extern void release_firmware(struct firmware  const  *fw ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -7086,7 +7086,7 @@ int i1480_phy_fw_upload(struct i1480 *i1480 )
 #line 76 "include/linux/completion.h"
 static struct lock_class_key __key___2  ;
 #line 73 "include/linux/completion.h"
-__inline static void init_completion___0(struct completion *x ) 
+ static void init_completion___0(struct completion *x ) 
 { wait_queue_head_t *__cil_tmp2 ;
 
   {
@@ -7124,7 +7124,7 @@ extern struct module __this_module ;
 #line 706 "include/linux/device.h"
 extern int dev_set_drvdata(struct device *dev , void *data ) ;
 #line 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) 
 { struct device *__cil_tmp3 ;
 
   {
@@ -7143,7 +7143,7 @@ extern struct usb_interface *usb_get_intf(struct usb_interface *intf ) ;
 #line 202
 extern void usb_put_intf(struct usb_interface *intf ) ;
 #line 497 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf ) 
 { struct device  const  *__mptr ;
   struct device *__cil_tmp3 ;
   struct usb_device *__cil_tmp4 ;
@@ -7182,7 +7182,7 @@ extern int usb_reset_device(struct usb_device *dev ) ;
 #line 929
 extern int usb_register_driver(struct usb_driver * , struct module * , char const   * ) ;
 #line 931 "include/linux/usb.h"
-__inline static int usb_register(struct usb_driver *driver ) 
+ static int usb_register(struct usb_driver *driver ) 
 { int tmp___7 ;
 
   {
@@ -7197,7 +7197,7 @@ __inline static int usb_register(struct usb_driver *driver )
 #line 935
 extern void usb_deregister(struct usb_driver * ) ;
 #line 1309 "include/linux/usb.h"
-__inline static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
+ static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
                                       void *transfer_buffer , int buffer_length ,
                                       void (*complete_fn)(struct urb * ) , void *context ,
                                       int interval ) 
@@ -7268,7 +7268,7 @@ extern int usb_control_msg(struct usb_device *dev , unsigned int pipe , __u8 req
 #line 1422
 extern int usb_set_interface(struct usb_device *dev , int ifnum , int alternate ) ;
 #line 1526 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -7290,7 +7290,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 #line 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp___7 ;
   unsigned int __cil_tmp4 ;
 
@@ -7306,7 +7306,7 @@ __inline static void *kzalloc(size_t size , gfp_t flags )
 }
 }
 #line 134 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/drivers/uwb/i1480/dfu/i1480-dfu.h"
-__inline static void i1480_init(struct i1480 *i1480 ) 
+ static void i1480_init(struct i1480 *i1480 ) 
 { struct completion *__cil_tmp2 ;
 
   {

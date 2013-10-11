@@ -2420,7 +2420,7 @@ void ldv_spin_unlock(void) ;
 #line 4
 int ldv_spin_trylock(void) ;
 #line 82 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/bitops.h"
-__inline static void __set_bit(int nr , unsigned long volatile   *addr ) 
+ static void __set_bit(int nr , unsigned long volatile   *addr ) 
 { long volatile   *__cil_tmp3 ;
 
   {
@@ -2451,7 +2451,7 @@ extern void *kmem_cache_alloc(struct kmem_cache * , gfp_t  ) ;
 #line 223
 void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_arg2 ) ;
 #line 353 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4866/dscv_tempdir/dscv/ri/43_1a/drivers/hid/hid-wacom.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 11
@@ -2475,7 +2475,7 @@ extern int dev_warn(struct device  const  * , char const   *  , ...) ;
 #line 1502 "include/linux/input.h"
 extern void input_event(struct input_dev * , unsigned int  , unsigned int  , int  ) ;
 #line 1505 "include/linux/input.h"
-__inline static void input_report_key(struct input_dev *dev , unsigned int code ,
+ static void input_report_key(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { int __cil_tmp4 ;
 
@@ -2491,7 +2491,7 @@ __inline static void input_report_key(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1510 "include/linux/input.h"
-__inline static void input_report_rel(struct input_dev *dev , unsigned int code ,
+ static void input_report_rel(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { 
 
@@ -2505,7 +2505,7 @@ __inline static void input_report_rel(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1515 "include/linux/input.h"
-__inline static void input_report_abs(struct input_dev *dev , unsigned int code ,
+ static void input_report_abs(struct input_dev *dev , unsigned int code ,
                                       int value ) 
 { 
 
@@ -2519,7 +2519,7 @@ __inline static void input_report_abs(struct input_dev *dev , unsigned int code 
 }
 }
 #line 1530 "include/linux/input.h"
-__inline static void input_sync(struct input_dev *dev ) 
+ static void input_sync(struct input_dev *dev ) 
 { 
 
   {
@@ -2537,7 +2537,7 @@ extern void input_set_capability(struct input_dev * , unsigned int  , unsigned i
 extern void input_set_abs_params(struct input_dev * , unsigned int  , int  , int  ,
                                  int  , int  ) ;
 #line 1578 "include/linux/input.h"
-__inline static int input_abs_get_max(struct input_dev *dev , unsigned int axis ) 
+ static int input_abs_get_max(struct input_dev *dev , unsigned int axis ) 
 { int tmp ;
   struct input_absinfo *__cil_tmp4 ;
   unsigned long __cil_tmp5 ;
@@ -2601,7 +2601,7 @@ extern void power_supply_unregister(struct power_supply * ) ;
 #line 223
 extern int power_supply_powers(struct power_supply * , struct device * ) ;
 #line 543 "include/linux/hid.h"
-__inline static void *hid_get_drvdata(struct hid_device *hdev ) 
+ static void *hid_get_drvdata(struct hid_device *hdev ) 
 { void *tmp ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2626,7 +2626,7 @@ __inline static void *hid_get_drvdata(struct hid_device *hdev )
 }
 }
 #line 548 "include/linux/hid.h"
-__inline static void hid_set_drvdata(struct hid_device *hdev , void *data ) 
+ static void hid_set_drvdata(struct hid_device *hdev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -2655,7 +2655,7 @@ extern int hid_connect(struct hid_device * , unsigned int  ) ;
 #line 740
 extern void hid_disconnect(struct hid_device * ) ;
 #line 806 "include/linux/hid.h"
-__inline static int hid_parse(struct hid_device *hdev ) 
+ static int hid_parse(struct hid_device *hdev ) 
 { int ret ;
   unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
@@ -2729,7 +2729,7 @@ __inline static int hid_parse(struct hid_device *hdev )
 }
 }
 #line 830 "include/linux/hid.h"
-__inline static int hid_hw_start(struct hid_device *hdev , unsigned int connect_mask ) 
+ static int hid_hw_start(struct hid_device *hdev , unsigned int connect_mask ) 
 { int ret ;
   int tmp ;
   unsigned long __cil_tmp5 ;
@@ -2800,7 +2800,7 @@ __inline static int hid_hw_start(struct hid_device *hdev , unsigned int connect_
 }
 }
 #line 850 "include/linux/hid.h"
-__inline static void hid_hw_stop(struct hid_device *hdev ) 
+ static void hid_hw_stop(struct hid_device *hdev ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct hid_ll_driver *__cil_tmp4 ;
@@ -6524,7 +6524,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 }
 }
 #line 1346 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/4866/dscv_tempdir/dscv/ri/43_1a/drivers/hid/hid-wacom.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

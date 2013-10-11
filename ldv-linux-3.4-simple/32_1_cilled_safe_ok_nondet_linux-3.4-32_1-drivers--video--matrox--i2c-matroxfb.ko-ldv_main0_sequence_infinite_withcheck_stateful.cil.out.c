@@ -4982,9 +4982,9 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock )  __attribute_
 #line 42
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags )  __attribute__((__section__(".spinlock.text"))) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )  __attribute__((__no_instrument_function__)) ;
 #line 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock ) 
 { 
 
   {
@@ -4993,9 +4993,9 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 #line 338
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )  __attribute__((__no_instrument_function__)) ;
 #line 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags ) 
 { struct raw_spinlock *__cil_tmp5 ;
 
   {
@@ -5041,10 +5041,10 @@ extern void kfree(void const   * ) ;
 #line 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 #line 268
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags ) 
 { void *tmp___2 ;
 
@@ -5058,9 +5058,9 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
+ static void *kzalloc(size_t size , gfp_t flags )  __attribute__((__no_instrument_function__)) ;
 #line 349 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
   unsigned int __cil_tmp4 ;
 
@@ -5083,9 +5083,9 @@ extern struct i2c_client *i2c_new_probed_device(struct i2c_adapter *adap , struc
                                                 int (*probe)(struct i2c_adapter * ,
                                                              unsigned short addr ) ) ;
 #line 400
-__inline static void i2c_set_adapdata(struct i2c_adapter *dev , void *data )  __attribute__((__no_instrument_function__)) ;
+ static void i2c_set_adapdata(struct i2c_adapter *dev , void *data )  __attribute__((__no_instrument_function__)) ;
 #line 400 "include/linux/i2c.h"
-__inline static void i2c_set_adapdata(struct i2c_adapter *dev , void *data ) 
+ static void i2c_set_adapdata(struct i2c_adapter *dev , void *data ) 
 { unsigned long __cil_tmp3 ;
   unsigned long __cil_tmp4 ;
   struct device *__cil_tmp5 ;
@@ -5258,9 +5258,9 @@ static void matroxfb_set_gpio(struct matrox_fb_info *minfo , int mask , int val 
 }
 }
 #line 64
-__inline static void matroxfb_i2c_set(struct matrox_fb_info *minfo , int mask , int state )  __attribute__((__no_instrument_function__)) ;
+ static void matroxfb_i2c_set(struct matrox_fb_info *minfo , int mask , int state )  __attribute__((__no_instrument_function__)) ;
 #line 64 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/17004/dscv_tempdir/dscv/ri/32_1/drivers/video/matrox/i2c-matroxfb.c.common.c"
-__inline static void matroxfb_i2c_set(struct matrox_fb_info *minfo , int mask , int state ) 
+ static void matroxfb_i2c_set(struct matrox_fb_info *minfo , int mask , int state ) 
 { int __cil_tmp4 ;
 
   {
@@ -5667,9 +5667,9 @@ static void i2c_bit_bus_del(struct i2c_bit_adapter *b )
 }
 }
 #line 132
-__inline static void i2c_maven_done(struct matroxfb_dh_maven_info *minfo2 )  __attribute__((__no_instrument_function__)) ;
+ static void i2c_maven_done(struct matroxfb_dh_maven_info *minfo2 )  __attribute__((__no_instrument_function__)) ;
 #line 132 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/17004/dscv_tempdir/dscv/ri/32_1/drivers/video/matrox/i2c-matroxfb.c.common.c"
-__inline static void i2c_maven_done(struct matroxfb_dh_maven_info *minfo2 ) 
+ static void i2c_maven_done(struct matroxfb_dh_maven_info *minfo2 ) 
 { struct i2c_bit_adapter *__cil_tmp2 ;
 
   {
@@ -5684,9 +5684,9 @@ __inline static void i2c_maven_done(struct matroxfb_dh_maven_info *minfo2 )
 }
 }
 #line 136
-__inline static void i2c_ddc1_done(struct matroxfb_dh_maven_info *minfo2 )  __attribute__((__no_instrument_function__)) ;
+ static void i2c_ddc1_done(struct matroxfb_dh_maven_info *minfo2 )  __attribute__((__no_instrument_function__)) ;
 #line 136 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/17004/dscv_tempdir/dscv/ri/32_1/drivers/video/matrox/i2c-matroxfb.c.common.c"
-__inline static void i2c_ddc1_done(struct matroxfb_dh_maven_info *minfo2 ) 
+ static void i2c_ddc1_done(struct matroxfb_dh_maven_info *minfo2 ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct i2c_bit_adapter *__cil_tmp4 ;
@@ -5707,9 +5707,9 @@ __inline static void i2c_ddc1_done(struct matroxfb_dh_maven_info *minfo2 )
 }
 }
 #line 140
-__inline static void i2c_ddc2_done(struct matroxfb_dh_maven_info *minfo2 )  __attribute__((__no_instrument_function__)) ;
+ static void i2c_ddc2_done(struct matroxfb_dh_maven_info *minfo2 )  __attribute__((__no_instrument_function__)) ;
 #line 140 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--32_1--X--cpachecker/linux-3.4/csd_deg_dscv/17004/dscv_tempdir/dscv/ri/32_1/drivers/video/matrox/i2c-matroxfb.c.common.c"
-__inline static void i2c_ddc2_done(struct matroxfb_dh_maven_info *minfo2 ) 
+ static void i2c_ddc2_done(struct matroxfb_dh_maven_info *minfo2 ) 
 { unsigned long __cil_tmp2 ;
   unsigned long __cil_tmp3 ;
   struct i2c_bit_adapter *__cil_tmp4 ;

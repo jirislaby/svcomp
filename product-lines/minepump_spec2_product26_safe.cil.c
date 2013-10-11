@@ -105,7 +105,7 @@ int isMethaneLevelCritical(void) ;
 #line 7 "Specification2_spec.c"
 int methAndRunningLastTime  ;
 #line 11 "Specification2_spec.c"
-__inline void __utac_acc__Specification2_spec__1(void) 
+ void __utac_acc__Specification2_spec__1(void) 
 { 
 
   {
@@ -116,7 +116,7 @@ __inline void __utac_acc__Specification2_spec__1(void)
 }
 }
 #line 17 "Specification2_spec.c"
-__inline void __utac_acc__Specification2_spec__2(void) 
+ void __utac_acc__Specification2_spec__2(void) 
 { int tmp ;
   int tmp___0 ;
 

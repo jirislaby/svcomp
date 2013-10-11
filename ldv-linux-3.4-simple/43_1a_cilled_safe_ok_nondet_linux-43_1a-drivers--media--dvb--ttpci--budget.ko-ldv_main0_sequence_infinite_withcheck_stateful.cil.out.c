@@ -7417,7 +7417,7 @@ void *ldv_kmem_cache_alloc_16(struct kmem_cache *ldv_func_arg1 , gfp_t ldv_func_
 #line 225
 extern void *__kmalloc(size_t  , gfp_t  ) ;
 #line 268 "include/linux/slub_def.h"
-__inline static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
+ static void *ldv_kmalloc_12(size_t size , gfp_t flags ) 
 { void *tmp___2 ;
 
   {
@@ -7430,7 +7430,7 @@ __inline static void *ldv_kmalloc_12(size_t size , gfp_t flags )
 }
 }
 #line 268
-__inline static void *kmalloc(size_t size , gfp_t flags ) ;
+ static void *kmalloc(size_t size , gfp_t flags ) ;
 #line 11 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8262/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/ttpci/budget.c.p"
 void ldv_check_alloc_flags(gfp_t flags ) ;
 #line 12
@@ -7490,7 +7490,7 @@ extern int ttpci_budget_deinit(struct budget * ) ;
 #line 117
 extern void ttpci_budget_irq10_handler(struct saa7146_dev * , u32 * ) ;
 #line 110 "drivers/media/dvb/frontends/stv0299.h"
-__inline static int stv0299_writereg(struct dvb_frontend *fe , u8 reg , u8 val ) 
+ static int stv0299_writereg(struct dvb_frontend *fe , u8 reg , u8 val ) 
 { int r ;
   u8 buf[2U] ;
   unsigned long __cil_tmp6 ;
@@ -15298,7 +15298,7 @@ int ldv_spin_trylock(void)
 }
 }
 #line 1159 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8262/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/ttpci/budget.c.p"
-__inline static void *kmalloc(size_t size , gfp_t flags ) 
+ static void *kmalloc(size_t size , gfp_t flags ) 
 { 
 
   {

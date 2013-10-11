@@ -2906,7 +2906,7 @@ extern int dev_err(struct device  const  * , char const   *  , ...) ;
 #line 166 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
 extern struct uv_hub_info_s __uv_hub_info ;
 #line 294 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static unsigned long uv_soc_phys_ram_to_gpa(unsigned long paddr ) 
+ static unsigned long uv_soc_phys_ram_to_gpa(unsigned long paddr ) 
 { unsigned long tcp_ptr__ ;
   void const   *__vpp_verify ;
   unsigned long tcp_ptr_____0 ;
@@ -3084,7 +3084,7 @@ __inline static unsigned long uv_soc_phys_ram_to_gpa(unsigned long paddr )
 }
 }
 #line 306 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static unsigned long uv_gpa(void *v ) 
+ static unsigned long uv_gpa(void *v ) 
 { unsigned long tmp ;
   unsigned long tmp___0 ;
   unsigned long __cil_tmp4 ;
@@ -3103,7 +3103,7 @@ __inline static unsigned long uv_gpa(void *v )
 }
 }
 #line 313 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static int uv_gpa_in_mmr_space(unsigned long gpa ) 
+ static int uv_gpa_in_mmr_space(unsigned long gpa ) 
 { unsigned long __cil_tmp2 ;
 
   {
@@ -3116,7 +3116,7 @@ __inline static int uv_gpa_in_mmr_space(unsigned long gpa )
 }
 }
 #line 319 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static unsigned long uv_gpa_to_soc_phys_ram(unsigned long gpa ) 
+ static unsigned long uv_gpa_to_soc_phys_ram(unsigned long gpa ) 
 { unsigned long paddr ;
   unsigned long remap_base ;
   unsigned long tcp_ptr__ ;
@@ -3306,7 +3306,7 @@ extern struct uv_blade_info *uv_blade_info ;
 #line 483
 extern short *uv_cpu_to_blade ;
 #line 499 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static int uv_cpu_to_blade_id(int cpu ) 
+ static int uv_cpu_to_blade_id(int cpu ) 
 { unsigned long __cil_tmp2 ;
   short *__cil_tmp3 ;
   short __cil_tmp4 ;
@@ -3325,7 +3325,7 @@ __inline static int uv_cpu_to_blade_id(int cpu )
 }
 }
 #line 535 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/arch/x86/include/asm/uv/uv_hub.h"
-__inline static int uv_cpu_to_pnode(int cpu ) 
+ static int uv_cpu_to_pnode(int cpu ) 
 { int tmp ;
   unsigned long __cil_tmp3 ;
   struct uv_blade_info *__cil_tmp4 ;

@@ -4155,7 +4155,7 @@ extern void *__memcpy(void *to , void const *from , size_t len ) ;
 # 62 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/string_64.h"
 extern char *strcpy(char *dest , char const *src ) ;
 # 27 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__)) PTR_ERR(void const *ptr )
+ static long __attribute__((__warn_unused_result__)) PTR_ERR(void const *ptr )
 {
 
   {
@@ -4164,7 +4164,7 @@ __inline static long __attribute__((__warn_unused_result__)) PTR_ERR(void const 
 }
 }
 # 32 "include/linux/err.h"
-__inline static long __attribute__((__warn_unused_result__)) IS_ERR(void const *ptr )
+ static long __attribute__((__warn_unused_result__)) IS_ERR(void const *ptr )
 { long tmp ;
 
   {
@@ -4178,7 +4178,7 @@ __inline static long __attribute__((__warn_unused_result__)) IS_ERR(void const *
 }
 }
 # 23 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static int atomic_read(atomic_t const *v )
+ static int atomic_read(atomic_t const *v )
 {
 
   {
@@ -4187,7 +4187,7 @@ __inline static int atomic_read(atomic_t const *v )
 }
 }
 # 35 "/anthill/stuff/tacas-comp/inst/current/envs/linux-3.0.1/linux-3.0.1/arch/x86/include/asm/atomic.h"
-__inline static void atomic_set(atomic_t *v , int i )
+ static void atomic_set(atomic_t *v , int i )
 {
 
   {
@@ -4204,7 +4204,7 @@ extern unsigned long _raw_spin_lock_irqsave(raw_spinlock_t *lock ) __attribute__
 # 42 "include/linux/spinlock_api_smp.h"
 extern void _raw_spin_unlock_irqrestore(raw_spinlock_t *lock , unsigned long flags ) __attribute__((__section__(".spinlock.text"))) ;
 # 272 "include/linux/spinlock.h"
-__inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
+ static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 {
 
   {
@@ -4213,7 +4213,7 @@ __inline static raw_spinlock_t *spinlock_check(spinlock_t *lock )
 }
 }
 # 338 "include/linux/spinlock.h"
-__inline static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
+ static void spin_unlock_irqrestore(spinlock_t *lock , unsigned long flags )
 {
 
   {
@@ -4248,7 +4248,7 @@ extern void mutex_unlock(struct mutex *lock ) ;
 # 76 "include/linux/completion.h"
 static struct lock_class_key __key___2 ;
 # 73 "include/linux/completion.h"
-__inline static void init_completion(struct completion *x )
+ static void init_completion(struct completion *x )
 {
 
   {
@@ -4291,7 +4291,7 @@ extern struct module __this_module ;
 # 221 "include/linux/slub_def.h"
 extern void *__kmalloc(size_t size , gfp_t flags ) ;
 # 255 "include/linux/slub_def.h"
-__inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
+ static void *( __attribute__((__always_inline__)) kmalloc)(size_t size ,
                                                                     gfp_t flags )
 { void *tmp___2 ;
 
@@ -4305,7 +4305,7 @@ __inline static void *( __attribute__((__always_inline__)) kmalloc)(size_t size 
 }
 }
 # 318 "include/linux/slab.h"
-__inline static void *kzalloc(size_t size , gfp_t flags )
+ static void *kzalloc(size_t size , gfp_t flags )
 { void *tmp ;
 
   {
@@ -4329,7 +4329,7 @@ extern int dev_warn(struct device const *dev , char const *fmt , ...) ;
 # 803 "include/linux/device.h"
 extern int _dev_info(struct device const *dev , char const *fmt , ...) ;
 # 891 "include/linux/fs.h"
-__inline static unsigned int iminor(struct inode const *inode )
+ static unsigned int iminor(struct inode const *inode )
 {
 
   {
@@ -4340,11 +4340,11 @@ __inline static unsigned int iminor(struct inode const *inode )
 # 2336 "include/linux/fs.h"
 extern loff_t noop_llseek(struct file *file , loff_t offset , int origin ) ;
 # 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) __attribute__((__ldv_model__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf ) __attribute__((__ldv_model__)) ;
 # 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf ) __attribute__((__ldv_model__)) ;
+ static void *usb_get_intfdata(struct usb_interface *intf ) __attribute__((__ldv_model__)) ;
 # 191 "include/linux/usb.h"
-__inline static void *usb_get_intfdata(struct usb_interface *intf )
+ static void *usb_get_intfdata(struct usb_interface *intf )
 { void *tmp___7 ;
 
   {
@@ -4357,11 +4357,11 @@ __inline static void *usb_get_intfdata(struct usb_interface *intf )
 }
 }
 # 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) __attribute__((__ldv_model__)) ;
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) __attribute__((__ldv_model__)) ;
 # 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data ) __attribute__((__ldv_model__)) ;
+ static void usb_set_intfdata(struct usb_interface *intf , void *data ) __attribute__((__ldv_model__)) ;
 # 196 "include/linux/usb.h"
-__inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
+ static void usb_set_intfdata(struct usb_interface *intf , void *data )
 {
 
   {
@@ -4374,7 +4374,7 @@ __inline static void usb_set_intfdata(struct usb_interface *intf , void *data )
 }
 }
 # 497 "include/linux/usb.h"
-__inline static struct usb_device *interface_to_usbdev(struct usb_interface *intf )
+ static struct usb_device *interface_to_usbdev(struct usb_interface *intf )
 { struct device const *__mptr ;
 
   {
@@ -4394,7 +4394,7 @@ extern struct usb_interface *usb_find_interface(struct usb_driver *drv , int min
 # 929 "include/linux/usb.h"
 extern int usb_register_driver(struct usb_driver * , struct module * , char const * ) ;
 # 931 "include/linux/usb.h"
-__inline static int usb_register(struct usb_driver *driver )
+ static int usb_register(struct usb_driver *driver )
 { int tmp___7 ;
 
   {
@@ -4413,7 +4413,7 @@ extern int usb_register_dev(struct usb_interface *intf , struct usb_class_driver
 # 943 "include/linux/usb.h"
 extern void usb_deregister_dev(struct usb_interface *intf , struct usb_class_driver *class_driver ) ;
 # 1309 "include/linux/usb.h"
-__inline static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
+ static void usb_fill_int_urb(struct urb *urb , struct usb_device *dev , unsigned int pipe ,
                                       void *transfer_buffer , int buffer_length ,
                                       void (*complete_fn)(struct urb * ) , void *context ,
                                       int interval )
@@ -4465,7 +4465,7 @@ void *usb_alloc_coherent(struct usb_device *dev , size_t size , gfp_t mem_flags 
 # 1379 "include/linux/usb.h"
 void usb_free_coherent(struct usb_device *dev , size_t size , void *addr , dma_addr_t dma ) __attribute__((__ldv_model__)) ;
 # 1526 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint )
 {
 
   {
@@ -4474,7 +4474,7 @@ __inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int
 }
 }
 # 180 "include/linux/kfifo.h"
-__inline static int __attribute__((__warn_unused_result__)) __kfifo_int_must_check_helper(int val )
+ static int __attribute__((__warn_unused_result__)) __kfifo_int_must_check_helper(int val )
 {
 
   {
@@ -4497,7 +4497,7 @@ static struct lock_class_key __key___7 ;
 # 55 "include/media/lirc_dev.h"
 static struct lock_class_key __key___8 ;
 # 48 "include/media/lirc_dev.h"
-__inline static int lirc_buffer_init(struct lirc_buffer *buf , unsigned int chunk_size ,
+ static int lirc_buffer_init(struct lirc_buffer *buf , unsigned int chunk_size ,
                                      unsigned int size )
 { int ret ;
   struct kfifo *__tmp ;
@@ -4589,7 +4589,7 @@ __inline static int lirc_buffer_init(struct lirc_buffer *buf , unsigned int chun
 }
 }
 # 65 "include/media/lirc_dev.h"
-__inline static void lirc_buffer_free(struct lirc_buffer *buf )
+ static void lirc_buffer_free(struct lirc_buffer *buf )
 { struct kfifo *__tmp ;
   struct __kfifo *__kfifo ;
   int __ret_warn_on ;
@@ -4640,7 +4640,7 @@ __inline static void lirc_buffer_free(struct lirc_buffer *buf )
 }
 }
 # 114 "include/media/lirc_dev.h"
-__inline static unsigned int lirc_buffer_write(struct lirc_buffer *buf , unsigned char *orig )
+ static unsigned int lirc_buffer_write(struct lirc_buffer *buf , unsigned char *orig )
 { unsigned int ret ;
   unsigned long __flags ;
   unsigned int __ret ;

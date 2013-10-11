@@ -6098,7 +6098,7 @@ extern int __request_module(bool  , char const   *  , ...) ;
 #line 99 "include/linux/module.h"
 extern struct module __this_module ;
 #line 537
-__inline static int ldv_try_module_get_1(struct module *module ) ;
+ static int ldv_try_module_get_1(struct module *module ) ;
 #line 543
 void ldv_module_put_2(struct module *ldv_func_arg1 ) ;
 #line 3 "/anthill/stuff/tacas-comp/work/current--X--drivers/net/pppox.ko--X--aerrlinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/net/pppox.c.p"
@@ -6122,7 +6122,7 @@ extern int ppp_channel_index(struct ppp_channel * ) ;
 #line 1042 "include/net/sock.h"
 extern void lock_sock_nested(struct sock * , int  ) ;
 #line 1044 "include/net/sock.h"
-__inline static void lock_sock(struct sock *sk ) 
+ static void lock_sock(struct sock *sk ) 
 { 
 
   {
@@ -6137,7 +6137,7 @@ __inline static void lock_sock(struct sock *sk )
 #line 1049
 extern void release_sock(struct sock * ) ;
 #line 188 "include/linux/if_pppox.h"
-__inline static struct pppox_sock *pppox_sk(struct sock *sk ) 
+ static struct pppox_sock *pppox_sk(struct sock *sk ) 
 { 
 
   {
@@ -6812,7 +6812,7 @@ void ldv_check_final_state(void)
 }
 }
 #line 361 "/anthill/stuff/tacas-comp/work/current--X--drivers/net/pppox.ko--X--aerrlinux-3.0.1--X--08_1/linux-3.0.1/csd_deg_dscv/11/dscv_tempdir/dscv/ri/08_1/drivers/net/pppox.c.p"
-__inline static int ldv_try_module_get_1(struct module *module ) 
+ static int ldv_try_module_get_1(struct module *module ) 
 { int tmp ;
 
   {

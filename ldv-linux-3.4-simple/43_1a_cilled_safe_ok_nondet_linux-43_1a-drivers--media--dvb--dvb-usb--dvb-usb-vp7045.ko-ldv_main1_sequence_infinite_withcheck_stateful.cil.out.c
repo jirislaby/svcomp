@@ -6605,7 +6605,7 @@ extern void msleep(unsigned int  ) ;
 extern int usb_control_msg(struct usb_device * , unsigned int  , __u8  , __u8  , __u16  ,
                            __u16  , void * , __u16  , int  ) ;
 #line 1567 "include/linux/usb.h"
-__inline static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
+ static unsigned int __create_pipe(struct usb_device *dev , unsigned int endpoint ) 
 { unsigned int __cil_tmp3 ;
   int __cil_tmp4 ;
   int __cil_tmp5 ;
@@ -6648,7 +6648,7 @@ struct sk_buff *ldv___netdev_alloc_skb_25(struct net_device *ldv_func_arg1 , uns
 struct sk_buff *ldv___netdev_alloc_skb_26(struct net_device *ldv_func_arg1 , unsigned int ldv_func_arg2 ,
                                           gfp_t ldv_func_arg3 ) ;
 #line 83 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/dvb-usb/dvb-usb.h"
-__inline static u8 rc5_data(struct rc_map_table *key ) 
+ static u8 rc5_data(struct rc_map_table *key ) 
 { u32 __cil_tmp2 ;
 
   {
@@ -8568,7 +8568,7 @@ extern void *__memcpy(void * , void const   * , size_t  ) ;
 #line 161 "include/linux/slab.h"
 extern void kfree(void const   * ) ;
 #line 353
-__inline static void *kzalloc(size_t size , gfp_t flags ) ;
+ static void *kzalloc(size_t size , gfp_t flags ) ;
 #line 10 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8567/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/dvb-usb/vp7045-fe.c.p"
 extern void *__VERIFIER_nondet_pointer(void) ;
 #line 44 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8567/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/dvb-usb/vp7045-fe.c.p"
@@ -9722,7 +9722,7 @@ void main(void)
 }
 }
 #line 658 "/home/zakharov/launch/work/current--X--drivers/--X--defaultlinux-3.4--X--43_1a--X--cpachecker/linux-3.4/csd_deg_dscv/8567/dscv_tempdir/dscv/ri/43_1a/drivers/media/dvb/dvb-usb/vp7045-fe.c.p"
-__inline static void *kzalloc(size_t size , gfp_t flags ) 
+ static void *kzalloc(size_t size , gfp_t flags ) 
 { void *tmp ;
 
   {

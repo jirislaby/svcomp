@@ -7205,9 +7205,9 @@ int init_module(void) ;
 #line 68
 void cleanup_module(void) ;
 #line 78 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/dvb-usb/dvb-usb.h"
-__inline static u8 rc5_custom(struct rc_map_table *key )  __attribute__((__no_instrument_function__)) ;
+ static u8 rc5_custom(struct rc_map_table *key )  __attribute__((__no_instrument_function__)) ;
 #line 78 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/dvb-usb/dvb-usb.h"
-__inline static u8 rc5_custom(struct rc_map_table *key ) 
+ static u8 rc5_custom(struct rc_map_table *key ) 
 { u32 __cil_tmp2 ;
   u32 __cil_tmp3 ;
   unsigned int __cil_tmp4 ;
@@ -7226,9 +7226,9 @@ __inline static u8 rc5_custom(struct rc_map_table *key )
 }
 }
 #line 83
-__inline static u8 rc5_data(struct rc_map_table *key )  __attribute__((__no_instrument_function__)) ;
+ static u8 rc5_data(struct rc_map_table *key )  __attribute__((__no_instrument_function__)) ;
 #line 83 "/home/zakharov/launch/inst/current/envs/linux-3.4/linux-3.4/drivers/media/dvb/dvb-usb/dvb-usb.h"
-__inline static u8 rc5_data(struct rc_map_table *key ) 
+ static u8 rc5_data(struct rc_map_table *key ) 
 { u32 __cil_tmp2 ;
   unsigned int __cil_tmp3 ;
 
