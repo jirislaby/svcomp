@@ -1636,7 +1636,7 @@ int ssl3_connect(SSL *s )
 
   }
   return (ret);
-  ERROR:
+  ERROR: assert(0);
   goto ERROR;
 }
 }

@@ -32,7 +32,7 @@ void errorFn(void)
 
   {
   goto ERROR;
-  ERROR: 
+  ERROR:  assert(0);
 #line 60
   return;
 }

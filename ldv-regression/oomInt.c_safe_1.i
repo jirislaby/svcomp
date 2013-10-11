@@ -7,7 +7,7 @@
 
 void __blast_assert()
 {
- ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
 }
 # 3 "files/oomInt.c" 2
 # 17 "files/oomInt.c"

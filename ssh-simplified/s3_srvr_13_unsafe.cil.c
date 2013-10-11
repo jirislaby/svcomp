@@ -872,7 +872,7 @@ s__s3__tmp__reuse_message = __VERIFIER_nondet_int();
   }
 #line 681
   return (ret);
-  ERROR: 
+  ERROR:  assert(0);
 #line 683
   return (-1);
 }

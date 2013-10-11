@@ -6,7 +6,7 @@ void err(void)
 { 
 
   {
-  ERROR: 
+  ERROR:  assert(0);
 #line 13
   goto ERROR;
 }

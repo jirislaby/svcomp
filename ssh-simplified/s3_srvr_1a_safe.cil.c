@@ -211,6 +211,6 @@ int main() {
 
   end:
   return (-1);
-  ERROR:
+  ERROR: assert(0);
   return (-1);
 }

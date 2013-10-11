@@ -226,7 +226,7 @@ int main()
     }
   out:
     return 0;
-  ERROR:
+  ERROR: assert(0);
     return 0;  
 }
 

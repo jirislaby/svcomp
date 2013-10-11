@@ -2245,7 +2245,7 @@ void errorFn(void)
 { 
 
   {
-  ERROR: 
+  ERROR:  assert(0);
   goto ERROR;
 }
 }

@@ -15,7 +15,7 @@
 
 
 void err()
-{ ERROR: goto ERROR; }
+{ ERROR: assert(0); goto ERROR; }
 
 
 int * return_self (int * p)

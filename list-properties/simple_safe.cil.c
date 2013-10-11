@@ -174,7 +174,7 @@ int main(void)
     __cil_tmp24 = *((int *)p);
 #line 34
     if (__cil_tmp24 != 1) {
-      ERROR: 
+      ERROR:  assert(0);
       goto ERROR;
     } else {
 

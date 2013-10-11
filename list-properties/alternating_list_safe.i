@@ -657,7 +657,7 @@ int main() {
     p = p->n;
   }
   return 0;
-  ERROR:
+  ERROR: assert(0);
     printf("Alternation violation found.\n");
     return 1;
 }

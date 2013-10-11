@@ -9,7 +9,7 @@
   {
  if (i == 0)
  {
-  ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
  }
   }
 # 20 "files/oomInt.c"

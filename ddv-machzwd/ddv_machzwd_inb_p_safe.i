@@ -11,7 +11,7 @@
 # 1 "/ddverify-2010-04-30/models/seq1/include/ddverify/ddverify.h" 1
 
 void __VERIFIER_assume(int expression) { if (!expression) { LOOP: goto LOOP; }; return; }
-void __VERIFIER_assert(int expression, char* x) { if (!expression) { ERROR: goto ERROR; }; return; }
+void __VERIFIER_assert(int expression, char* x) { assert(expression); }
 
 enum __bool { false, true };
 

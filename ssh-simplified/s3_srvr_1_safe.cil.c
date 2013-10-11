@@ -852,7 +852,7 @@ int ssl3_accept(int initial_state )
 }
 
 void ERR(){
-   ERROR:
+   ERROR: assert(0);
    printf("error");
    return;
 }

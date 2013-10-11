@@ -675,5 +675,5 @@ int main() {
     p = p->n;
   }
   return 0;
-  ERROR: return 1;
+ERROR: assert(0); return 1;
 }

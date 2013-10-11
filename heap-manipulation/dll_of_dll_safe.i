@@ -616,7 +616,7 @@ extern int getloadavg (double __loadavg[], int __nelem)
 
 extern int __VERIFIER_nondet_int(void);
 static void fail(void) {
-ERROR:
+ERROR: assert(0);
     goto ERROR;
 }
 struct slave_item {

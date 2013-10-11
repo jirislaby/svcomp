@@ -32,7 +32,7 @@ static void fail(void)
 { 
 
   {
-  ERROR: 
+  ERROR:  assert(0);
   goto ERROR;
 }
 }

@@ -1780,7 +1780,7 @@ extern int getloadavg (double __loadavg[], int __nelem)
 
 void __blast_assert()
 {
- ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
 }
 # 4 "files/alt_test.c" 2
 

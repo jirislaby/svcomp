@@ -6,7 +6,7 @@
 
 void __blast_assert()
 {
- ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
 }
 # 2 "files/1_3.c" 2
 # 1 "files/1_3.h" 1

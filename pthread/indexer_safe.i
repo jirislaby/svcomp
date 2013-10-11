@@ -2178,7 +2178,7 @@ void * thread_routine(void * arg)
 
     if (h<0)
     {
-      ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
       ;
     }
 

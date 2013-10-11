@@ -608,7 +608,7 @@ int ssl3_connect(void)
   }
   __retres60 = ret;
   goto return_label;
-  ERROR: 
+  ERROR:  assert(0);
   {
   }
   __retres60 = -1;

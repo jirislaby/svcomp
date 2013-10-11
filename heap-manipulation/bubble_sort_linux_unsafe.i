@@ -900,7 +900,7 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ , __leaf__)
 
 extern int __VERIFIER_nondet_int(void);
 static void fail(void) {
-ERROR:
+ERROR: assert(0);
     goto ERROR;
 }
 struct list_head {

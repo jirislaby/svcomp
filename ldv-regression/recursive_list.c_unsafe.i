@@ -8,7 +8,7 @@ typedef unsigned int size_t;
 extern  __attribute__((__nothrow__)) void *malloc(size_t __size ) __attribute__((__malloc__));
 
 void err()
-{ ERROR: goto ERROR; }
+{ ERROR: assert(0); goto ERROR; }
 
 struct list {
  int n;

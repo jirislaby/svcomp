@@ -476,7 +476,7 @@ void *t2(void *arg )
 #line 116
         if (tmp___0 == __cil_tmp8) {
           goto ERROR;
-          ERROR: ;
+          ERROR: ; assert(0);
         } else {
 
         }
@@ -550,7 +550,7 @@ int main(void)
 #line 139
   if (tmp___0 == -1) {
     goto ERROR;
-    ERROR: ;
+    ERROR: ; assert(0);
   } else {
 
   }

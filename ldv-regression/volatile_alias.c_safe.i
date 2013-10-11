@@ -13,7 +13,7 @@ int main()
         p = &a;
         a = a - 4;
         if (*p != 0){
-                ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
         }
         return 0;
 }

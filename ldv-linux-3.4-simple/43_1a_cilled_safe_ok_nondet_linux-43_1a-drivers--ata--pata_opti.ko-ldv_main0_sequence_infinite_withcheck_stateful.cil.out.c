@@ -5929,7 +5929,7 @@ void ldv_blast_assert(void)
 { 
 
   {
-  ERROR: ;
+  ERROR: ; assert(0);
 #line 6
   goto ERROR;
 }

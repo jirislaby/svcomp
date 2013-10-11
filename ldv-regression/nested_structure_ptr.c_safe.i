@@ -10,7 +10,7 @@
 
 void __blast_assert()
 {
- ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
 }
 # 6 "files/nested_structure_ptr.c" 2
 

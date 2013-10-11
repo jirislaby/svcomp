@@ -13,7 +13,7 @@
 
 
 void err()
-{ ERROR: goto ERROR; }
+{ ERROR: assert(0); goto ERROR; }
 
 void mutex_lock(int *a)
 {

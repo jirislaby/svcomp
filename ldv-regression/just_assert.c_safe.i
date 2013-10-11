@@ -7,7 +7,7 @@
 int main()
 {
  if (2+2 == 5){
-  ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
  }
  return 0;
 }

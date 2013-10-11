@@ -212,7 +212,7 @@ int main(void)
   }
 #line 56
   return (0);
-  ERROR: 
+  ERROR:  assert(0);
   {
 #line 59
   printf("Alternation violation found.\n");

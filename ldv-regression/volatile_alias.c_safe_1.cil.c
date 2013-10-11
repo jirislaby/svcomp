@@ -21,7 +21,7 @@ int main(void)
   __cil_tmp3 = *p;
 #line 19
   if (__cil_tmp3 != 0) {
-    ERROR: 
+    ERROR:  assert(0);
 #line 20
     goto ERROR;
   } else {

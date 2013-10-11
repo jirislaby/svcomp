@@ -12,7 +12,7 @@
 
 
 void err()
-{ ERROR: goto ERROR; }
+{ ERROR: assert(0); goto ERROR; }
 
 struct mutex {
  int is_locked;

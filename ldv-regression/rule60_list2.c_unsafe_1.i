@@ -6,7 +6,7 @@
 
 void __blast_assert()
 {
- ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
 }
 # 2 "files/rule60_list2.c" 2
 # 1 "/usr/include/malloc.h" 1 3 4

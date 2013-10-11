@@ -1,7 +1,7 @@
 extern unsigned short __VERIFIER_nondet_ushort(void);
 void __VERIFIER_assert(int cond) {
   if (!(cond)) {
-    ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
   }
   return;
 }

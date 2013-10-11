@@ -1760,7 +1760,7 @@ int ssl3_accept(SSL *s )
 
   }
   return (ret);
-  ERROR: 
+  ERROR:  assert(0);
   goto ERROR;
 }
 }

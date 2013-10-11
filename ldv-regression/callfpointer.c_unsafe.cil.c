@@ -21,7 +21,7 @@ void h(int i )
   {
 #line 10
   if (i == 1) {
-    ERROR: 
+    ERROR:  assert(0);
 #line 11
     goto ERROR;
   } else {

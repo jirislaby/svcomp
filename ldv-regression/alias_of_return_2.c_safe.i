@@ -8,7 +8,7 @@
 
 
 void err()
-{ ERROR: goto ERROR; }
+{ ERROR: assert(0); goto ERROR; }
 
 int __VERIFIER_nondet_int();
 

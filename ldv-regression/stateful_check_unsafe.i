@@ -1,5 +1,5 @@
 void __blast_assert(void) {
-ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
 }
 
 

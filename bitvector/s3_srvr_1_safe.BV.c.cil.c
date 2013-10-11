@@ -665,7 +665,7 @@ int ssl3_accept(int initial_state )
   }
   __retres67 = ret;
   goto return_label;
-  ERROR: 
+  ERROR:  assert(0);
   {
   }
   __retres67 = -1;

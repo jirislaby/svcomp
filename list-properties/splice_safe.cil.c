@@ -318,7 +318,7 @@ int main(void)
   }
 #line 79
   return (0);
-  ERROR: 
+  ERROR:  assert(0);
 #line 81
   return (1);
 }

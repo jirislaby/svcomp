@@ -929,7 +929,7 @@ int ssl3_accept(int initial_state )
   }
 #line 733
   return (ret);
-  ERROR: 
+  ERROR:  assert(0);
 #line 735
   return (-1);
 }

@@ -648,6 +648,6 @@ int main() {
   while (p->h == 2)
     p = p->n;
   if(p->h != 3)
-    ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
   return 0;
 }

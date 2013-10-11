@@ -2068,7 +2068,7 @@ int main()
 
   if (num!=1)
   {
-    ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
     ;
   }
 

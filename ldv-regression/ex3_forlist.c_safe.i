@@ -6,7 +6,7 @@
 
 void __blast_assert()
 {
- ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
 }
 # 2 "files/ex3_forlist.c" 2
 # 10 "files/ex3_forlist.c"

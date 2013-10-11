@@ -1784,7 +1784,7 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__));
 
 void __blast_assert()
 {
- ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
 }
 # 4 "files/test_overflow.c" 2
 

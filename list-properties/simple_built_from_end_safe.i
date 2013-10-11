@@ -634,7 +634,7 @@ int main() {
   }
   while (p!=0) {
     if (p->h != 1) {
- ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
     }
     p = p->n;
   }

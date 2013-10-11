@@ -1346,7 +1346,7 @@ void *funcB(void *param) {
     pthread_mutex_unlock(data2Lock);
     if (t2 != (t1 + 1)) {
         fprintf(stderr, "Bug found!\n");
- ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
           ;
     }
     return ((void *)0);

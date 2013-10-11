@@ -952,7 +952,7 @@ extern void __malloc_check_init (void) __attribute__ ((__nothrow__));
 
 void __blast_assert()
 {
- ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
 }
 # 3 "files/test_address.c" 2
 

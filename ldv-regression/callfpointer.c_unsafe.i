@@ -13,7 +13,7 @@ void f(void g(int)) {
 
 void h(int i) {
  if(i==1) {
-  ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
  } else {
 
  }

@@ -6,7 +6,7 @@
 
 void __blast_assert()
 {
- ERROR: goto ERROR;
+{ ERROR: assert(0); goto ERROR; }
 }
 # 2 "files/rule57_ebda_blast.c" 2
 

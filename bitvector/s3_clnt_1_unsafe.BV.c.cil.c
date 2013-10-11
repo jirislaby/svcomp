@@ -613,7 +613,7 @@ int ssl3_connect(void)
   }
   __retres62 = ret;
   goto return_label;
-  ERROR: 
+  ERROR:  assert(0);
   {
   }
   __retres62 = -1;

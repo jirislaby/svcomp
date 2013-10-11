@@ -12,7 +12,7 @@ void __blast_assert(void)
 { 
 
   {
-  ERROR: 
+  ERROR:  assert(0);
 #line 4
   goto ERROR;
 }

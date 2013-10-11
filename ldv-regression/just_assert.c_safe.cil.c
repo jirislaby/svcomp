@@ -8,7 +8,7 @@ int main(void)
   {
 #line 4
   if (0) {
-    ERROR: 
+    ERROR:  assert(0);
 #line 5
     goto ERROR;
   } else {

@@ -603,7 +603,7 @@ void *checkThread(void *param )
       fprintf(__cil_tmp2, __cil_tmp3);
       }
       goto ERROR;
-      ERROR: ;
+      ERROR: ; assert(0);
     }
   }
 #line 86

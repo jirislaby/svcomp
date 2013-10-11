@@ -5968,7 +5968,7 @@ void __VERIFIER_assert(int phi , char *txt )
   {
 #line 1634
   if (! phi) {
-    ERROR: 
+    ERROR:  assert(0);
     goto ERROR;
   } else {
 

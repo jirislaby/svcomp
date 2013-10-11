@@ -202,7 +202,7 @@ void main(void)
   __cil_tmp25 = *((int *)p);
 #line 52
   if (__cil_tmp25 != 3) {
-    ERROR: 
+    ERROR:  assert(0);
     goto ERROR;
   } else {
 

@@ -653,14 +653,14 @@ void __VERIFIER_atomic_take_snapshot(int *readerstart1, int *readerstart2) {
 void __VERIFIER_atomic_check_progress1(int readerstart1) {
   if (__VERIFIER_nondet_int()) {
     __VERIFIER_assume(readerstart1 == 1 && readerprogress1 == 1);
-    if (!(0)) ERROR: goto ERROR;;
+if (!(0)) { ERROR: assert(0); goto ERROR; }
   }
   return;
 }
 void __VERIFIER_atomic_check_progress2(int readerstart2) {
   if (__VERIFIER_nondet_int()) {
     __VERIFIER_assume(readerstart2 == 1 && readerprogress2 == 1);
-    if (!(0)) ERROR: goto ERROR;;
+if (!(0)) { ERROR: assert(0); goto ERROR; }
   }
   return;
 }

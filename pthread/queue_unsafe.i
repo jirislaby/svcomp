@@ -1018,7 +1018,7 @@ void *t1(void *arg)
     pthread_mutex_unlock(&m);
   }
   return ((void *)0);
-  ERROR:
+  ERROR: assert(0);
     ;
 }
 void *t2(void *arg)
@@ -1031,7 +1031,7 @@ void *t2(void *arg)
     {
       if (!dequeue(&queue)==stored_elements[i]) {
         goto ERROR;
-        ERROR:
+        ERROR: assert(0);
           ;
       }
       dequeue_flag=(0);
@@ -1049,7 +1049,7 @@ int main(void)
   init(&queue);
   if (!empty(&queue)==(-1)) {
     goto ERROR;
-    ERROR:
+    ERROR: assert(0);
       ;
   }
   pthread_mutex_init(&m, 0);

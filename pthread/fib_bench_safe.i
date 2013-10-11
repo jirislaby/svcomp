@@ -655,7 +655,7 @@ main(int argc, char **argv)
   pthread_create(&id2, ((void *)0), t2, ((void *)0));
   if (i > 144 || j > 144) {
     goto ERROR;
-    ERROR:
+    ERROR: assert(0);
       ;
   }
   return 0;
